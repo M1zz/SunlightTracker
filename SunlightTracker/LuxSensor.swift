@@ -89,8 +89,8 @@ class LuxSensor: NSObject, ObservableObject {
             let session = AVCaptureSession()
             session.sessionPreset = .low  // 조도만 필요하므로 최저 해상도
             
-            // 후면 카메라 사용 (조도 측정에 더 정확)
-            guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
+            // 전면 카메라 사용 (화면을 보면서 자연스럽게 측정)
+            guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front) else {
                 DispatchQueue.main.async {
                     self.errorMessage = "카메라를 사용할 수 없습니다."
                 }
