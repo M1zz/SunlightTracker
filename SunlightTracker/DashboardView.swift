@@ -5,48 +5,64 @@ struct DashboardView: View {
     @ObservedObject var weatherService: WeatherService
     @State private var showManualEntry = false
     @State private var manualMinutes: Double = 15
-    
+    @State private var hasAutoStarted = false
+
     private var currentSessionMinutes: Int {
         guard let session = manager.currentSession else { return 0 }
         return max(Int(Date().timeIntervalSince(session.startTime) / 60), 0)
     }
-    
+
     private var displayMinutes: Int {
-        manager.todayRecord.totalMinutes + (manager.isSunlightDetected ? currentSessionMinutes : 0)
+        if manager.isConfirmedOutdoor {
+            return manager.todayRecord.totalMinutes + manager.confirmedElapsedMinutes
+        }
+        return manager.todayRecord.totalMinutes + (manager.isSunlightDetected ? currentSessionMinutes : 0)
     }
-    
+
     private var displayProgress: Double {
         guard manager.todayRecord.goalMinutes > 0 else { return 0 }
         return min(Double(displayMinutes) / Double(manager.todayRecord.goalMinutes), 1.0)
     }
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
                 headerSection
-                
-                // 실시간 조도 모니터
-                if manager.isTracking {
+
+                // 실시간 조도 모니터 (센서 감지 단계에서만)
+                if manager.trackingPhase == .detecting {
                     luxMonitorSection
                 }
-                
+
                 sunProgressSection
-                trackingButton
-                
+
+                // 확인 후 트래킹 중 - 경과 시간 & 종료 버튼
+                if manager.trackingPhase == .confirmed {
+                    confirmedTrackingSection
+                }
+
+                // 건강 조언 카드
+                healthAdviceCard
+
+                // 감지 단계 또는 대기 상태 버튼
+                if manager.trackingPhase != .confirmed {
+                    trackingButton
+                }
+
                 // 수동 입력
                 manualEntryButton
-                
+
                 todayStatsSection
-                
+
                 if let sunTimes = manager.sunTimes {
                     sunTimesSection(sunTimes)
                 }
-                
+
                 // 오늘 세션 목록
                 if !manager.todayRecord.sessions.isEmpty {
                     todaySessionsSection
                 }
-                
+
                 weeklyPreviewSection
             }
             .padding(.horizontal, 20)
@@ -56,17 +72,22 @@ struct DashboardView: View {
         .onAppear {
             weatherService.fetchSimulatedWeather()
             manager.requestLocation()
+            // 앱 시작 시 자동으로 조도 센서 시작
+            if !hasAutoStarted && manager.trackingPhase == .idle {
+                manager.startTracking()
+                hasAutoStarted = true
+            }
         }
         .sheet(isPresented: $showManualEntry) {
             manualEntrySheet
         }
     }
-    
+
     // MARK: - Header
     private var headerSection: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("오늘의 일조량")
+                Text("나의 해바라기")
                     .font(.title2.bold())
                 Text(Date().shortDateString)
                     .font(.subheadline)
@@ -77,7 +98,7 @@ struct DashboardView: View {
                 HStack(spacing: 4) {
                     Image(systemName: "flame.fill")
                         .foregroundColor(.orange)
-                    Text("\(manager.streakCount)일")
+                    Text("\(manager.streakCount)일 연속")
                         .font(.subheadline.bold())
                         .foregroundColor(.orange)
                 }
@@ -89,7 +110,7 @@ struct DashboardView: View {
         }
         .padding(.top, 10)
     }
-    
+
     // MARK: - 실시간 조도 모니터
     private var luxMonitorSection: some View {
         VStack(spacing: 12) {
@@ -97,8 +118,7 @@ struct DashboardView: View {
                 Text("실시간 조도")
                     .font(.headline)
                 Spacer()
-                
-                // 상태 인디케이터
+
                 HStack(spacing: 6) {
                     Circle()
                         .fill(manager.isSunlightDetected ? Color.green : Color.gray)
@@ -109,9 +129,8 @@ struct DashboardView: View {
                         .foregroundColor(manager.isSunlightDetected ? .green : .secondary)
                 }
             }
-            
+
             HStack(alignment: .bottom, spacing: 16) {
-                // 현재 Lux
                 VStack(alignment: .leading, spacing: 4) {
                     Text(manager.luxSensor.lightLevel.emoji)
                         .font(.system(size: 36))
@@ -122,21 +141,20 @@ struct DashboardView: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
-                
+
                 Spacer()
-                
-                // 조도 바
+
                 VStack(alignment: .trailing, spacing: 8) {
                     Text(manager.luxSensor.lightLevel.rawValue)
                         .font(.subheadline.bold())
                         .foregroundColor(luxColor(manager.luxSensor.currentLux))
-                    
+
                     LuxBarView(
                         currentLux: manager.luxSensor.currentLux,
                         threshold: manager.settings.outdoorThresholdLux
                     )
                     .frame(height: 40)
-                    
+
                     HStack {
                         Text("실내")
                             .font(.system(size: 9))
@@ -153,8 +171,7 @@ struct DashboardView: View {
                 }
                 .frame(maxWidth: .infinity)
             }
-            
-            // 세션 진행 중 표시
+
             if manager.isSunlightDetected, let session = manager.currentSession {
                 HStack {
                     Image(systemName: "record.circle")
@@ -183,16 +200,15 @@ struct DashboardView: View {
                 )
         )
     }
-    
-    // MARK: - Sun Progress
+
+    // MARK: - Sun Progress (Sunflower)
     private var sunProgressSection: some View {
         VStack(spacing: 16) {
             SunAnimationView(
                 progress: displayProgress,
-                isTracking: manager.isSunlightDetected
+                isTracking: manager.isSunlightDetected || manager.isConfirmedOutdoor
             )
-            .frame(height: 240)
-            
+
             HStack(spacing: 4) {
                 Text("\(displayMinutes)")
                     .font(.system(size: 42, weight: .bold, design: .rounded))
@@ -201,44 +217,179 @@ struct DashboardView: View {
                     .font(.title3)
                     .foregroundColor(.secondary)
             }
-            
+
             if manager.todayRecord.goalAchieved {
-                Label("목표 달성! 🎉", systemImage: "checkmark.circle.fill")
+                Label("만개 달성!", systemImage: "checkmark.circle.fill")
                     .font(.headline)
                     .foregroundColor(.green)
             }
         }
         .padding(.vertical, 10)
     }
-    
-    // MARK: - Tracking Button
+
+    // MARK: - Health Advice Card
+    private var healthAdviceCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            if let achieved = manager.currentAdvice(for: displayMinutes) {
+                // 달성한 효과
+                HStack(spacing: 10) {
+                    Image(systemName: achieved.icon)
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 40, height: 40)
+                        .background(Circle().fill(Color.green))
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("\(displayMinutes)분 달성!")
+                            .font(.caption.bold())
+                            .foregroundColor(.green)
+                        Text(achieved.title)
+                            .font(.subheadline.bold())
+                    }
+                }
+
+                Text(achieved.description)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .lineLimit(3)
+            }
+
+            if let next = manager.nextMilestoneAdvice(for: displayMinutes) {
+                Divider()
+
+                HStack(spacing: 10) {
+                    Image(systemName: next.advice.icon)
+                        .font(.title3)
+                        .foregroundColor(.orange)
+                        .frame(width: 32, height: 32)
+                        .background(Circle().fill(Color.orange.opacity(0.15)))
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        HStack(spacing: 4) {
+                            Text("\(next.remainingMinutes)분 후")
+                                .font(.caption.bold())
+                                .foregroundColor(.orange)
+                            Text(next.advice.category.rawValue)
+                                .font(.system(size: 10))
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 6)
+                                .padding(.vertical, 1)
+                                .background(Capsule().fill(Color.orange.opacity(0.7)))
+                        }
+                        Text(next.advice.title)
+                            .font(.caption)
+                            .foregroundColor(.primary)
+                    }
+
+                    Spacer()
+                }
+            }
+
+            // 동기부여 메시지
+            Text(manager.motivationalMessage)
+                .font(.footnote)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 12)
+                .background(
+                    LinearGradient(
+                        colors: [Color(red: 0.3, green: 0.7, blue: 0.2), Color(red: 0.9, green: 0.8, blue: 0.1)],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                    .cornerRadius(10)
+                )
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color(.secondarySystemGroupedBackground))
+        )
+    }
+
+    // MARK: - Confirmed Tracking Section (센서 꺼짐, 타이머 진행 중)
+    private var confirmedTrackingSection: some View {
+        VStack(spacing: 16) {
+            HStack(spacing: 8) {
+                Circle()
+                    .fill(Color.green)
+                    .frame(width: 10, height: 10)
+                    .modifier(PulseModifier())
+                Text("햇빛 트래킹 중")
+                    .font(.headline)
+                    .foregroundColor(Color(red: 0.3, green: 0.65, blue: 0.2))
+                Spacer()
+                Text("\(manager.confirmedElapsedMinutes)분 경과")
+                    .font(.subheadline.bold())
+                    .foregroundColor(.primary)
+            }
+
+            Text("조도 센서가 꺼져 배터리를 절약하고 있어요. 실내로 돌아오면 아래 버튼을 눌러주세요.")
+                .font(.caption)
+                .foregroundColor(.secondary)
+
+            Button(action: {
+                manager.finishTracking()
+            }) {
+                HStack(spacing: 8) {
+                    Image(systemName: "stop.circle.fill")
+                        .font(.title3)
+                    Text("트래킹 종료")
+                        .font(.headline)
+                }
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(
+                    LinearGradient(
+                        colors: [Color(red: 0.3, green: 0.65, blue: 0.2), .orange],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                    .cornerRadius(12)
+                )
+            }
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color(.secondarySystemGroupedBackground))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.green.opacity(0.4), lineWidth: 2)
+                )
+        )
+    }
+
+    // MARK: - Tracking Button (감지 or 대기 상태)
     private var trackingButton: some View {
         Button(action: {
-            if manager.isTracking {
-                manager.stopTracking()
+            if manager.trackingPhase == .detecting {
+                manager.cancelDetecting()
             } else {
                 manager.startTracking()
             }
         }) {
             HStack(spacing: 12) {
-                Image(systemName: manager.isTracking ? "stop.circle.fill" : "camera.metering.spot")
+                Image(systemName: manager.trackingPhase == .detecting ? "stop.circle.fill" : "camera.metering.spot")
                     .font(.title2)
-                
+
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(manager.isTracking ? "조도 센서 중지" : "조도 센서 시작")
+                    Text(manager.trackingPhase == .detecting ? "감지 중지" : "조도 센서 시작")
                         .font(.headline)
-                    Text(manager.isTracking ?
-                         (manager.isSunlightDetected ? "☀️ 햇빛 감지 중 - 자동 기록" : "📡 조도 모니터링 중...") :
+                    Text(manager.trackingPhase == .detecting ?
+                         "해바라기가 햇빛을 기다리고 있어요..." :
                          "카메라로 주변 밝기를 측정합니다")
                         .font(.caption)
                         .opacity(0.8)
                 }
-                
+
                 Spacer()
-                
-                if manager.isTracking {
+
+                if manager.trackingPhase == .detecting {
                     Circle()
-                        .fill(manager.isSunlightDetected ? Color.green : Color.white.opacity(0.5))
+                        .fill(Color.white.opacity(0.5))
                         .frame(width: 10, height: 10)
                         .modifier(PulseModifier())
                 }
@@ -248,17 +399,15 @@ struct DashboardView: View {
             .foregroundColor(.white)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(manager.isTracking ?
-                          (manager.isSunlightDetected ?
-                           LinearGradient(colors: [.orange, .red], startPoint: .leading, endPoint: .trailing) :
-                           LinearGradient(colors: [.blue, .purple], startPoint: .leading, endPoint: .trailing)) :
-                          LinearGradient(colors: [.orange, .yellow], startPoint: .leading, endPoint: .trailing)
+                    .fill(manager.trackingPhase == .detecting ?
+                          LinearGradient(colors: [.blue, .purple], startPoint: .leading, endPoint: .trailing) :
+                          LinearGradient(colors: [.orange, Color(red: 1.0, green: 0.85, blue: 0.1)], startPoint: .leading, endPoint: .trailing)
                     )
             )
-            .shadow(color: (manager.isTracking ? Color.blue : Color.orange).opacity(0.3), radius: 8, y: 4)
+            .shadow(color: (manager.trackingPhase == .detecting ? Color.blue : Color.orange).opacity(0.3), radius: 8, y: 4)
         }
     }
-    
+
     // MARK: - Manual Entry
     private var manualEntryButton: some View {
         Button(action: { showManualEntry = true }) {
@@ -270,7 +419,7 @@ struct DashboardView: View {
             .foregroundColor(.orange)
         }
     }
-    
+
     private var manualEntrySheet: some View {
         NavigationStack {
             VStack(spacing: 24) {
@@ -278,15 +427,15 @@ struct DashboardView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
-                
+
                 VStack(spacing: 8) {
                     Text("\(Int(manualMinutes))분")
                         .font(.system(size: 48, weight: .bold, design: .rounded))
                         .foregroundColor(.orange)
-                    
+
                     Slider(value: $manualMinutes, in: 5...120, step: 5)
                         .tint(.orange)
-                    
+
                     HStack {
                         Text("5분").font(.caption2).foregroundColor(.secondary)
                         Spacer()
@@ -294,7 +443,7 @@ struct DashboardView: View {
                     }
                 }
                 .padding(.horizontal)
-                
+
                 Button(action: {
                     manager.addManualSession(minutes: Int(manualMinutes))
                     showManualEntry = false
@@ -308,7 +457,7 @@ struct DashboardView: View {
                         .cornerRadius(12)
                 }
                 .padding(.horizontal)
-                
+
                 Spacer()
             }
             .padding(.top, 20)
@@ -322,7 +471,7 @@ struct DashboardView: View {
         }
         .presentationDetents([.medium])
     }
-    
+
     // MARK: - Today Stats
     private var todayStatsSection: some View {
         HStack(spacing: 12) {
@@ -332,7 +481,7 @@ struct DashboardView: View {
             StatCard(icon: "number", title: "세션", value: "\(manager.todayRecord.sessions.count)회", color: .purple)
         }
     }
-    
+
     // MARK: - Sun Times
     private func sunTimesSection(_ sunTimes: SunTimes) -> some View {
         HStack(spacing: 0) {
@@ -342,18 +491,18 @@ struct DashboardView: View {
                 Text(sunTimes.sunrise.timeString).font(.subheadline.bold())
             }
             .frame(maxWidth: .infinity)
-            
+
             Rectangle().fill(Color.gray.opacity(0.2)).frame(width: 1, height: 50)
-            
+
             VStack(spacing: 6) {
                 Image(systemName: "sun.max.fill").font(.title2).foregroundColor(.yellow)
                 Text("일조시간").font(.caption).foregroundColor(.secondary)
                 Text(sunTimes.daylightDescription).font(.subheadline.bold())
             }
             .frame(maxWidth: .infinity)
-            
+
             Rectangle().fill(Color.gray.opacity(0.2)).frame(width: 1, height: 50)
-            
+
             VStack(spacing: 6) {
                 Image(systemName: "sunset.fill").font(.title2).foregroundColor(.red)
                 Text("일몰").font(.caption).foregroundColor(.secondary)
@@ -365,20 +514,20 @@ struct DashboardView: View {
         .background(Color(.secondarySystemGroupedBackground))
         .cornerRadius(16)
     }
-    
+
     // MARK: - Today Sessions
     private var todaySessionsSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("오늘의 세션")
                 .font(.headline)
-            
+
             ForEach(manager.todayRecord.sessions) { session in
                 HStack(spacing: 12) {
                     Image(systemName: session.autoDetected ? "camera.metering.spot" : "hand.tap")
                         .font(.caption)
                         .foregroundColor(session.autoDetected ? .orange : .blue)
                         .frame(width: 24)
-                    
+
                     VStack(alignment: .leading, spacing: 2) {
                         HStack {
                             Text(session.startTime.shortTimeString)
@@ -389,7 +538,7 @@ struct DashboardView: View {
                                 .foregroundColor(.secondary)
                         }
                         .font(.subheadline)
-                        
+
                         HStack(spacing: 8) {
                             Text(session.luxDescription)
                                 .font(.caption)
@@ -402,7 +551,7 @@ struct DashboardView: View {
                                 .foregroundColor(.orange)
                         }
                     }
-                    
+
                     Spacer()
                 }
                 .padding(10)
@@ -414,32 +563,44 @@ struct DashboardView: View {
         .background(Color(.secondarySystemGroupedBackground))
         .cornerRadius(16)
     }
-    
-    // MARK: - Weekly Preview
+
+    // MARK: - Weekly Preview (Sunflower themed)
     private var weeklyPreviewSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("이번 주")
                 .font(.headline)
-            
+
             HStack(spacing: 8) {
                 ForEach(manager.getLast7DaysData(), id: \.0) { day, minutes, avgLux in
                     VStack(spacing: 6) {
+                        // 해바라기 아이콘 (목표 달성 시)
+                        if minutes >= manager.settings.dailyGoalMinutes {
+                            Image(systemName: "leaf.circle.fill")
+                                .font(.system(size: 18))
+                                .foregroundColor(Color(red: 0.3, green: 0.7, blue: 0.2))
+                        } else {
+                            Image(systemName: "leaf.circle")
+                                .font(.system(size: 18))
+                                .foregroundColor(.gray.opacity(0.4))
+                        }
+
                         ZStack(alignment: .bottom) {
                             RoundedRectangle(cornerRadius: 4)
                                 .fill(Color.gray.opacity(0.1))
-                                .frame(width: 32, height: 80)
-                            
+                                .frame(width: 32, height: 60)
+
                             RoundedRectangle(cornerRadius: 4)
                                 .fill(
                                     minutes >= manager.settings.dailyGoalMinutes ?
-                                    Color.orange : Color.orange.opacity(0.5)
+                                    LinearGradient(colors: [Color(red: 0.3, green: 0.7, blue: 0.2), Color(red: 1.0, green: 0.85, blue: 0.1)], startPoint: .bottom, endPoint: .top) :
+                                    LinearGradient(colors: [Color(red: 0.3, green: 0.7, blue: 0.2).opacity(0.4), Color(red: 1.0, green: 0.85, blue: 0.1).opacity(0.4)], startPoint: .bottom, endPoint: .top)
                                 )
                                 .frame(
                                     width: 32,
-                                    height: max(4, CGFloat(min(minutes, manager.settings.dailyGoalMinutes)) / CGFloat(max(manager.settings.dailyGoalMinutes, 1)) * 80)
+                                    height: max(4, CGFloat(min(minutes, manager.settings.dailyGoalMinutes)) / CGFloat(max(manager.settings.dailyGoalMinutes, 1)) * 60)
                                 )
                         }
-                        
+
                         Text(day)
                             .font(.caption2)
                             .foregroundColor(.secondary)
@@ -447,9 +608,11 @@ struct DashboardView: View {
                     .frame(maxWidth: .infinity)
                 }
             }
-            
+
             HStack {
-                Rectangle().fill(Color.orange.opacity(0.5)).frame(width: 12, height: 3)
+                Circle()
+                    .fill(Color(red: 0.3, green: 0.7, blue: 0.2))
+                    .frame(width: 8, height: 8)
                 Text("목표: \(manager.settings.dailyGoalMinutes)분")
                     .font(.caption2).foregroundColor(.secondary)
                 Spacer()
@@ -462,7 +625,7 @@ struct DashboardView: View {
         .background(Color(.secondarySystemGroupedBackground))
         .cornerRadius(16)
     }
-    
+
     // MARK: - Helpers
     private func luxColor(_ lux: Double) -> Color {
         switch lux {
@@ -479,22 +642,20 @@ struct DashboardView: View {
 struct LuxBarView: View {
     let currentLux: Double
     let threshold: Double
-    
+
     private var fillRatio: Double {
-        // Log scale: 0 lux = 0, 100000 lux = 1.0
         guard currentLux > 0 else { return 0 }
-        return min(log10(currentLux) / 5.0, 1.0) // log10(100000) = 5
+        return min(log10(currentLux) / 5.0, 1.0)
     }
-    
+
     private var thresholdRatio: Double {
         guard threshold > 0 else { return 0 }
         return min(log10(threshold) / 5.0, 1.0)
     }
-    
+
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .leading) {
-                // Background
                 RoundedRectangle(cornerRadius: 6)
                     .fill(
                         LinearGradient(
@@ -503,8 +664,7 @@ struct LuxBarView: View {
                             endPoint: .trailing
                         )
                     )
-                
-                // Fill
+
                 RoundedRectangle(cornerRadius: 6)
                     .fill(
                         LinearGradient(
@@ -515,8 +675,7 @@ struct LuxBarView: View {
                     )
                     .frame(width: geo.size.width * fillRatio)
                     .animation(.easeInOut(duration: 0.3), value: fillRatio)
-                
-                // Threshold line
+
                 Rectangle()
                     .fill(Color.orange)
                     .frame(width: 2, height: geo.size.height + 8)
@@ -532,7 +691,7 @@ struct StatCard: View {
     let title: String
     let value: String
     let color: Color
-    
+
     var body: some View {
         VStack(spacing: 8) {
             Image(systemName: icon).font(.title3).foregroundColor(color)
@@ -549,7 +708,7 @@ struct StatCard: View {
 // MARK: - Pulse Modifier
 struct PulseModifier: ViewModifier {
     @State private var isPulsing = false
-    
+
     func body(content: Content) -> some View {
         content
             .scaleEffect(isPulsing ? 1.3 : 1.0)

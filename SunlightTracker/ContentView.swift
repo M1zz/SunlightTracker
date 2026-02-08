@@ -9,7 +9,7 @@ struct ContentView: View {
         TabView {
             DashboardView(manager: manager, weatherService: weatherService)
                 .tabItem {
-                    Label("오늘", systemImage: "sun.max.fill")
+                    Label("오늘", systemImage: "leaf.fill")
                 }
             
             HistoryView(manager: manager)

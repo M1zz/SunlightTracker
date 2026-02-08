@@ -59,10 +59,10 @@ struct HistoryView: View {
     // MARK: - Summary
     private var summarySection: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-            SummaryCard2(title: "총 일조량", value: "\(totalMinutes)분", icon: "sun.max.fill", color: .orange)
+            SummaryCard2(title: "총 일조량", value: "\(totalMinutes)분", icon: "leaf.fill", color: Color(red: 0.3, green: 0.7, blue: 0.2))
             SummaryCard2(title: "일평균", value: "\(Int(averageMinutes))분", icon: "chart.bar.fill", color: .blue)
             SummaryCard2(title: "목표 달성", value: "\(goalDays)일", icon: "checkmark.seal.fill", color: .green)
-            SummaryCard2(title: "평균 최고조도", value: avgPeakLux.luxFormatted + " lx", icon: "light.max", color: .yellow)
+            SummaryCard2(title: "평균 최고조도", value: avgPeakLux.luxFormatted + " lx", icon: "light.max", color: Color(red: 1.0, green: 0.85, blue: 0.1))
         }
         .padding(.horizontal, 20)
     }
@@ -84,27 +84,31 @@ struct HistoryView: View {
                     HStack(alignment: .bottom, spacing: 6) {
                         ForEach(data, id: \.date) { item in
                             VStack(spacing: 4) {
-                                // 조도 표시
-                                if item.peakLux > 0 {
+                                // 목표 달성 시 해바라기 아이콘
+                                if item.minutes >= manager.settings.dailyGoalMinutes {
+                                    Image(systemName: "leaf.circle.fill")
+                                        .font(.system(size: 10))
+                                        .foregroundColor(Color(red: 0.3, green: 0.7, blue: 0.2))
+                                } else if item.peakLux > 0 {
                                     Text(item.peakLux.luxFormatted)
                                         .font(.system(size: 8))
                                         .foregroundColor(.orange.opacity(0.7))
                                 }
-                                
+
                                 Text("\(item.minutes)")
                                     .font(.system(size: 9))
                                     .foregroundColor(.secondary)
-                                
+
                                 RoundedRectangle(cornerRadius: 4)
                                     .fill(
                                         item.minutes >= manager.settings.dailyGoalMinutes ?
-                                        Color.orange : Color.orange.opacity(0.4)
+                                        Color(red: 0.3, green: 0.7, blue: 0.2) : Color(red: 0.3, green: 0.7, blue: 0.2).opacity(0.4)
                                     )
                                     .frame(
                                         width: 24,
                                         height: max(4, CGFloat(item.minutes) / CGFloat(max(manager.settings.dailyGoalMinutes, 1)) * 100)
                                     )
-                                
+
                                 Text(item.dayLabel)
                                     .font(.system(size: 9))
                                     .foregroundColor(.secondary)
@@ -229,8 +233,8 @@ struct DayRecordRow: View {
                     Spacer()
                     
                     if record.goalAchieved {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundColor(.green).font(.caption)
+                        Image(systemName: "leaf.circle.fill")
+                            .foregroundColor(Color(red: 0.3, green: 0.7, blue: 0.2)).font(.caption)
                     }
                     Text("\(record.sessions.count)세션").font(.caption).foregroundColor(.secondary)
                 }
@@ -240,7 +244,7 @@ struct DayRecordRow: View {
                         RoundedRectangle(cornerRadius: 3)
                             .fill(Color.gray.opacity(0.1)).frame(height: 6)
                         RoundedRectangle(cornerRadius: 3)
-                            .fill(record.goalAchieved ? Color.orange : Color.orange.opacity(0.5))
+                            .fill(record.goalAchieved ? Color(red: 0.3, green: 0.7, blue: 0.2) : Color(red: 0.3, green: 0.7, blue: 0.2).opacity(0.5))
                             .frame(width: geo.size.width * record.goalProgress, height: 6)
                     }
                 }

@@ -152,6 +152,23 @@ struct AppSettings: Codable {
     )
 }
 
+// MARK: - 건강 조언 모델
+struct SunlightHealthAdvice {
+    let minuteThreshold: Int
+    let title: String
+    let description: String
+    let icon: String
+    let category: Category
+
+    enum Category: String {
+        case sleep = "수면"
+        case mood = "기분"
+        case stress = "스트레스"
+        case health = "건강"
+        case vitamin = "비타민D"
+    }
+}
+
 // MARK: - Extensions
 extension Date {
     var startOfDay: Date { Calendar.current.startOfDay(for: self) }
