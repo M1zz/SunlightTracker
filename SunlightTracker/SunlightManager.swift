@@ -13,6 +13,7 @@ class SunlightManager: NSObject, ObservableObject {
     @Published var isSunlightDetected = false   // 현재 햇빛 감지 중
     @Published var isConfirmedOutdoor = false   // 햇빛 확인 완료, 센서 꺼짐, 타이머 트래킹 중
     @Published var confirmedElapsedMinutes: Int = 0  // 확인 후 경과 시간 (분)
+    @Published var lastKnownLux: Double = 0         // 확인 시점 조도 (게이지 표시용)
     @Published var currentSession: SunlightSession?
     @Published var sunTimes: SunTimes?
     @Published var settings: AppSettings
@@ -124,6 +125,7 @@ class SunlightManager: NSObject, ObservableObject {
         sunlightStartTime = Date()
         isSunlightDetected = true
         isConfirmedOutdoor = true
+        lastKnownLux = initialLux
 
         // 센서 끄기 (배터리 절약)
         luxSensor.stopSensing()

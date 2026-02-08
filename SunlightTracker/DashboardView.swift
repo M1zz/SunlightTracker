@@ -29,9 +29,9 @@ struct DashboardView: View {
             VStack(spacing: 20) {
                 headerSection
 
-                // 실시간 조도 모니터 (센서 감지 단계에서만)
-                if manager.trackingPhase == .detecting {
-                    luxMonitorSection
+                // 조도 게이지 (감지 중 또는 확인 후 트래킹 중)
+                if manager.trackingPhase == .detecting || manager.trackingPhase == .confirmed {
+                    luxGaugeSection
                 }
 
                 sunProgressSection
@@ -112,24 +112,43 @@ struct DashboardView: View {
     }
 
     // MARK: - 조도 배터리 게이지
-    private var luxMonitorSection: some View {
+    private var displayLux: Double {
+        manager.isConfirmedOutdoor ? manager.lastKnownLux : manager.luxSensor.currentLux
+    }
+
+    private var displayLightLevel: String {
+        if manager.isConfirmedOutdoor {
+            if manager.lastKnownLux >= 10000 { return "강한 햇빛" }
+            if manager.lastKnownLux >= 1000 { return "햇빛" }
+            return "실외"
+        }
+        return manager.luxSensor.lightLevel.rawValue
+    }
+
+    private var batteryColor: Color {
+        if displayLux >= manager.settings.outdoorThresholdLux { return Color(red: 0.3, green: 0.7, blue: 0.2) }
+        if displayLux >= 50 { return .orange }
+        return .gray
+    }
+
+    private var luxGaugeSection: some View {
         VStack(spacing: 10) {
             HStack {
-                Image(systemName: "sun.max.fill")
+                Image(systemName: manager.isConfirmedOutdoor ? "checkmark.circle.fill" : "sun.max.fill")
                     .foregroundColor(batteryColor)
                     .font(.subheadline)
-                Text(manager.luxSensor.lightLevel.rawValue)
+                Text(displayLightLevel)
                     .font(.subheadline.bold())
                     .foregroundColor(batteryColor)
                 Spacer()
-                Text("\(Int(manager.luxSensor.currentLux)) Lux")
+                Text("\(Int(displayLux)) Lux")
                     .font(.caption)
                     .foregroundColor(.secondary)
             }
 
             // 배터리 게이지
             LuxBatteryView(
-                lux: manager.luxSensor.currentLux,
+                lux: displayLux,
                 threshold: manager.settings.outdoorThresholdLux
             )
             .frame(height: 28)
@@ -153,13 +172,6 @@ struct DashboardView: View {
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color(.secondarySystemGroupedBackground))
         )
-    }
-
-    private var batteryColor: Color {
-        let lux = manager.luxSensor.currentLux
-        if lux >= manager.settings.outdoorThresholdLux { return Color(red: 0.3, green: 0.7, blue: 0.2) }
-        if lux >= 50 { return .orange }
-        return .gray
     }
 
     // MARK: - Sun Progress (Sunflower)
