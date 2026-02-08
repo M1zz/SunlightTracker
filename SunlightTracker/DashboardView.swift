@@ -111,94 +111,55 @@ struct DashboardView: View {
         .padding(.top, 10)
     }
 
-    // MARK: - 실시간 조도 모니터
+    // MARK: - 조도 배터리 게이지
     private var luxMonitorSection: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 10) {
             HStack {
-                Text("실시간 조도")
-                    .font(.headline)
+                Image(systemName: "sun.max.fill")
+                    .foregroundColor(batteryColor)
+                    .font(.subheadline)
+                Text(manager.luxSensor.lightLevel.rawValue)
+                    .font(.subheadline.bold())
+                    .foregroundColor(batteryColor)
                 Spacer()
-
-                HStack(spacing: 6) {
-                    Circle()
-                        .fill(manager.isSunlightDetected ? Color.green : Color.gray)
-                        .frame(width: 8, height: 8)
-                        .modifier(PulseModifier())
-                    Text(manager.isSunlightDetected ? "햇빛 감지 중" : "대기 중")
-                        .font(.caption)
-                        .foregroundColor(manager.isSunlightDetected ? .green : .secondary)
-                }
+                Text("\(Int(manager.luxSensor.currentLux)) Lux")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
             }
 
-            HStack(alignment: .bottom, spacing: 16) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(manager.luxSensor.lightLevel.emoji)
-                        .font(.system(size: 36))
-                    Text("\(Int(manager.luxSensor.currentLux))")
-                        .font(.system(size: 40, weight: .bold, design: .rounded))
-                        .foregroundColor(luxColor(manager.luxSensor.currentLux))
-                    Text("Lux")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
+            // 배터리 게이지
+            LuxBatteryView(
+                lux: manager.luxSensor.currentLux,
+                threshold: manager.settings.outdoorThresholdLux
+            )
+            .frame(height: 28)
 
+            HStack {
+                Text("실내")
+                    .font(.system(size: 10))
+                    .foregroundColor(.secondary)
                 Spacer()
-
-                VStack(alignment: .trailing, spacing: 8) {
-                    Text(manager.luxSensor.lightLevel.rawValue)
-                        .font(.subheadline.bold())
-                        .foregroundColor(luxColor(manager.luxSensor.currentLux))
-
-                    LuxBarView(
-                        currentLux: manager.luxSensor.currentLux,
-                        threshold: manager.settings.outdoorThresholdLux
-                    )
-                    .frame(height: 40)
-
-                    HStack {
-                        Text("실내")
-                            .font(.system(size: 9))
-                            .foregroundColor(.secondary)
-                        Spacer()
-                        Text("기준 \(Int(manager.settings.outdoorThresholdLux))")
-                            .font(.system(size: 9))
-                            .foregroundColor(.orange)
-                        Spacer()
-                        Text("강한 햇빛")
-                            .font(.system(size: 9))
-                            .foregroundColor(.secondary)
-                    }
-                }
-                .frame(maxWidth: .infinity)
-            }
-
-            if manager.isSunlightDetected, let session = manager.currentSession {
-                HStack {
-                    Image(systemName: "record.circle")
-                        .foregroundColor(.red)
-                        .font(.caption)
-                    Text("세션 진행: \(currentSessionMinutes)분 경과")
-                        .font(.caption.bold())
-                    Spacer()
-                    Text("평균 \(Int(session.luxSamples.isEmpty ? 0 : session.luxSamples.reduce(0,+) / Double(session.luxSamples.count))) Lux")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-                .padding(.top, 4)
+                Text("기준")
+                    .font(.system(size: 10))
+                    .foregroundColor(.orange)
+                Spacer()
+                Text("햇빛")
+                    .font(.system(size: 10))
+                    .foregroundColor(.secondary)
             }
         }
-        .padding(16)
+        .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: 14)
                 .fill(Color(.secondarySystemGroupedBackground))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(
-                            manager.isSunlightDetected ? Color.orange.opacity(0.5) : Color.clear,
-                            lineWidth: 2
-                        )
-                )
         )
+    }
+
+    private var batteryColor: Color {
+        let lux = manager.luxSensor.currentLux
+        if lux >= manager.settings.outdoorThresholdLux { return Color(red: 0.3, green: 0.7, blue: 0.2) }
+        if lux >= 50 { return .orange }
+        return .gray
     }
 
     // MARK: - Sun Progress (Sunflower)
@@ -638,14 +599,14 @@ struct DashboardView: View {
     }
 }
 
-// MARK: - Lux Bar View
-struct LuxBarView: View {
-    let currentLux: Double
+// MARK: - Lux Battery View
+struct LuxBatteryView: View {
+    let lux: Double
     let threshold: Double
 
     private var fillRatio: Double {
-        guard currentLux > 0 else { return 0 }
-        return min(log10(currentLux) / 5.0, 1.0)
+        guard lux > 0 else { return 0 }
+        return min(log10(lux) / 5.0, 1.0) // log10(100000) = 5
     }
 
     private var thresholdRatio: Double {
@@ -653,33 +614,42 @@ struct LuxBarView: View {
         return min(log10(threshold) / 5.0, 1.0)
     }
 
+    private var fillColor: LinearGradient {
+        if lux >= threshold {
+            return LinearGradient(colors: [Color(red: 0.3, green: 0.7, blue: 0.2), Color(red: 0.5, green: 0.85, blue: 0.3)], startPoint: .leading, endPoint: .trailing)
+        }
+        return LinearGradient(colors: [.orange.opacity(0.6), .orange], startPoint: .leading, endPoint: .trailing)
+    }
+
     var body: some View {
         GeometryReader { geo in
-            ZStack(alignment: .leading) {
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(
-                        LinearGradient(
-                            colors: [.gray.opacity(0.2), .yellow.opacity(0.2), .orange.opacity(0.3), .red.opacity(0.3)],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
+            HStack(spacing: 2) {
+                // 배터리 본체
+                ZStack(alignment: .leading) {
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray.opacity(0.3), lineWidth: 1.5)
 
-                RoundedRectangle(cornerRadius: 6)
-                    .fill(
-                        LinearGradient(
-                            colors: [.yellow, .orange, .red],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .frame(width: geo.size.width * fillRatio)
-                    .animation(.easeInOut(duration: 0.3), value: fillRatio)
+                    RoundedRectangle(cornerRadius: 4)
+                        .fill(Color.gray.opacity(0.08))
 
-                Rectangle()
-                    .fill(Color.orange)
-                    .frame(width: 2, height: geo.size.height + 8)
-                    .offset(x: geo.size.width * thresholdRatio - 1)
+                    // 채워진 부분
+                    RoundedRectangle(cornerRadius: 4)
+                        .fill(fillColor)
+                        .padding(2)
+                        .frame(width: max(0, (geo.size.width - 8) * fillRatio))
+                        .animation(.easeInOut(duration: 1.5), value: fillRatio)
+
+                    // 기준선
+                    Rectangle()
+                        .fill(Color.orange.opacity(0.8))
+                        .frame(width: 1.5, height: geo.size.height - 4)
+                        .offset(x: (geo.size.width - 8) * thresholdRatio)
+                }
+
+                // 배터리 단자
+                RoundedRectangle(cornerRadius: 2)
+                    .fill(Color.gray.opacity(0.3))
+                    .frame(width: 4, height: geo.size.height * 0.45)
             }
         }
     }

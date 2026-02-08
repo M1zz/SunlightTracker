@@ -24,7 +24,7 @@ class LuxSensor: NSObject, ObservableObject {
     private var videoOutput: AVCaptureVideoDataOutput?
     private let sessionQueue = DispatchQueue(label: "com.sunlighttracker.luxsensor")
     private var luxHistory: [Double] = []
-    private let maxHistoryCount = 10  // 이동 평균용
+    private let maxHistoryCount = 30  // 이동 평균용 (느리게 변화)
     
     enum LightLevel: String {
         case dark = "어두움"
