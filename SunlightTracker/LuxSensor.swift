@@ -35,6 +35,8 @@ class LuxSensor: NSObject, ObservableObject {
     private var stableReadingsCount = 0  // 안정적인 읽기 횟수
     private let stableThreshold = 20  // 20번 연속 변동 없으면 idle 모드 (약 10초)
     private let luxChangeThreshold: Double = 50  // 50 lux 이상 변화하면 "변화 있음"으로 간주
+    private var sensorStartTime: Date?  // 센서 시작 시간
+    private let initialActiveSeconds: Double = 20  // 최초 활성 유지 시간 (초)
     
     enum LightLevel: String {
         case dark = "어두움"
@@ -93,6 +95,7 @@ class LuxSensor: NSObject, ObservableObject {
                 self?.lastLuxValue = 0
                 self?.stableReadingsCount = 0
                 self?.framesToSkip = 15  // 다시 시작할 때 빠른 모드로
+                self?.sensorStartTime = nil  // 시작 시간 초기화
             }
         }
     }
@@ -132,10 +135,11 @@ class LuxSensor: NSObject, ObservableObject {
                 self.videoOutput = output
                 
                 session.startRunning()
-                
+
                 DispatchQueue.main.async {
                     self.isActive = true
                     self.errorMessage = nil
+                    self.sensorStartTime = Date()  // 센서 시작 시간 기록
                 }
             } catch {
                 DispatchQueue.main.async {
@@ -225,21 +229,31 @@ extension LuxSensor: AVCaptureVideoDataOutputSampleBufferDelegate {
         // EMA로 부드러운 값 계산
         let lux = smoothedLux(rawLux)
 
-        // 변동량 감지
-        let luxChange = abs(lux - lastLuxValue)
-        lastLuxValue = lux
+        // 최초 20초 경과 확인
+        let elapsedSeconds = sensorStartTime.map { Date().timeIntervalSince($0) } ?? 0
+        let isInitialPeriod = elapsedSeconds < initialActiveSeconds
 
-        if luxChange < luxChangeThreshold {
-            // 변동 없음
-            stableReadingsCount += 1
+        // 변동량 감지 (최초 20초 이후부터만)
+        if !isInitialPeriod {
+            let luxChange = abs(lux - lastLuxValue)
+            lastLuxValue = lux
 
-            // 20번 연속 안정적이면 idle 모드 (10초에 1번 체크)
-            if stableReadingsCount >= stableThreshold {
-                framesToSkip = 300  // 10초 (30fps × 10초)
+            if luxChange < luxChangeThreshold {
+                // 변동 없음
+                stableReadingsCount += 1
+
+                // 20번 연속 안정적이면 idle 모드 (10초에 1번 체크)
+                if stableReadingsCount >= stableThreshold {
+                    framesToSkip = 300  // 10초 (30fps × 10초)
+                }
+            } else {
+                // 변동 감지됨 - 다시 빠른 모드로
+                stableReadingsCount = 0
+                framesToSkip = 15  // 0.5초마다
             }
         } else {
-            // 변동 감지됨 - 다시 빠른 모드로
-            stableReadingsCount = 0
+            // 최초 20초는 항상 빠른 모드 유지
+            lastLuxValue = lux
             framesToSkip = 15  // 0.5초마다
         }
 
