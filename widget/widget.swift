@@ -188,14 +188,14 @@ struct TodayProgressWidgetView: View {
     }
 
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 12) {
             Spacer(minLength: 0)
 
             // 원형 진행도
             ZStack {
                 Circle()
                     .stroke(Color.gray.opacity(0.2), lineWidth: 12)
-                    .frame(width: 90, height: 90)
+                    .frame(width: 95, height: 95)
 
                 Circle()
                     .trim(from: 0, to: progress)
@@ -203,12 +203,12 @@ struct TodayProgressWidgetView: View {
                         progress >= 1.0 ? Color.green : Color.orange,
                         style: StrokeStyle(lineWidth: 12, lineCap: .round)
                     )
-                    .frame(width: 90, height: 90)
+                    .frame(width: 95, height: 95)
                     .rotationEffect(.degrees(-90))
 
                 VStack(spacing: 2) {
                     Text("\(Int(progress * 100))%")
-                        .font(.system(size: 24, weight: .bold))
+                        .font(.system(size: 28, weight: .bold))
                         .foregroundColor(progress >= 1.0 ? .green : .orange)
 
                     if progress >= 1.0 {
@@ -218,20 +218,18 @@ struct TodayProgressWidgetView: View {
                     }
                 }
             }
+            .padding(.vertical, 8)
 
             // 시간 정보
             Text("\(entry.widgetData.todayMinutes) / \(entry.widgetData.goalMinutes)분")
-                .font(.caption)
+                .font(.caption.bold())
                 .foregroundColor(.secondary)
-
-            Text("오늘의 햇빛")
-                .font(.caption2.bold())
-                .foregroundColor(.primary)
 
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
+        .padding(.horizontal, 12)
+        .padding(.vertical, 8)
         .containerBackground(.fill.tertiary, for: .widget)
     }
 }
