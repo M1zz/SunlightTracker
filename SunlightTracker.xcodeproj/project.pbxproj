@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1EAE8C2F39771100CB151B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1EAE8B2F39771100CB151B /* WidgetKit.framework */; };
+		9C1EAE8E2F39771100CB151B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1EAE8D2F39771100CB151B /* SwiftUI.framework */; };
+		9C1EAE9F2F39771200CB151B /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C1EAE892F39771100CB151B /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C1EB0EC2F397AC900CB151B /* SharedWidgetTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1EB0EB2F397AC900CB151B /* SharedWidgetTypes.swift */; };
+		9C1EB1052F398A1500CB151B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1EB1042F398A1500CB151B /* CalendarView.swift */; };
 		AA000001 /* SunlightTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000010 /* SunlightTrackerApp.swift */; };
 		AA000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000011 /* ContentView.swift */; };
 		AA000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000012 /* Assets.xcassets */; };
@@ -21,7 +26,38 @@
 		AA00000C /* LuxSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001B /* LuxSensor.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C1EAE9D2F39771200CB151B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA000070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C1EAE882F39771100CB151B;
+			remoteInfo = widgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C1EAEA02F39771200CB151B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9C1EAE9F2F39771200CB151B /* widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9C1EAE892F39771100CB151B /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1EAE8B2F39771100CB151B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9C1EAE8D2F39771100CB151B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		9C1EAEA52F39773000CB151B /* SunlightTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SunlightTracker.entitlements; sourceTree = "<group>"; };
+		9C1EAEA62F39773C00CB151B /* widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtension.entitlements; sourceTree = "<group>"; };
+		9C1EB0EB2F397AC900CB151B /* SharedWidgetTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWidgetTypes.swift; sourceTree = "<group>"; };
+		9C1EB1042F398A1500CB151B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		AA000010 /* SunlightTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunlightTrackerApp.swift; sourceTree = "<group>"; };
 		AA000011 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA000012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,7 +75,30 @@
 		AA000022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9C1EAEA32F39771200CB151B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9C1EAE882F39771100CB151B /* widgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9C1EAE8F2F39771100CB151B /* widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (9C1EAEA32F39771200CB151B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = widget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		9C1EAE862F39771100CB151B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1EAE8E2F39771100CB151B /* SwiftUI.framework in Frameworks */,
+				9C1EAE8C2F39771100CB151B /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA000030 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +109,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C1EAE8A2F39771100CB151B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C1EAE8B2F39771100CB151B /* WidgetKit.framework */,
+				9C1EAE8D2F39771100CB151B /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA000040 = {
 			isa = PBXGroup;
 			children = (
+				9C1EAEA62F39773C00CB151B /* widgetExtension.entitlements */,
 				AA000041 /* SunlightTracker */,
+				9C1EAE8F2F39771100CB151B /* widget */,
+				9C1EAE8A2F39771100CB151B /* Frameworks */,
 				AA000042 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +132,9 @@
 		AA000041 /* SunlightTracker */ = {
 			isa = PBXGroup;
 			children = (
+				9C1EB1042F398A1500CB151B /* CalendarView.swift */,
+				9C1EB0EB2F397AC900CB151B /* SharedWidgetTypes.swift */,
+				9C1EAEA52F39773000CB151B /* SunlightTracker.entitlements */,
 				AA000010 /* SunlightTrackerApp.swift */,
 				AA000011 /* ContentView.swift */,
 				AA000014 /* Models.swift */,
@@ -83,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				AA000020 /* SunlightTracker.app */,
+				9C1EAE892F39771100CB151B /* widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +173,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9C1EAE882F39771100CB151B /* widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C1EAEA42F39771200CB151B /* Build configuration list for PBXNativeTarget "widgetExtension" */;
+			buildPhases = (
+				9C1EAE852F39771100CB151B /* Sources */,
+				9C1EAE862F39771100CB151B /* Frameworks */,
+				9C1EAE872F39771100CB151B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9C1EAE8F2F39771100CB151B /* widget */,
+			);
+			name = widgetExtension;
+			packageProductDependencies = (
+			);
+			productName = widgetExtension;
+			productReference = 9C1EAE892F39771100CB151B /* widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AA000050 /* SunlightTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA000060 /* Build configuration list for PBXNativeTarget "SunlightTracker" */;
@@ -105,10 +202,12 @@
 				AA000051 /* Sources */,
 				AA000030 /* Frameworks */,
 				AA000052 /* Resources */,
+				9C1EAEA02F39771200CB151B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9C1EAE9E2F39771200CB151B /* PBXTargetDependency */,
 			);
 			name = SunlightTracker;
 			productName = SunlightTracker;
@@ -122,9 +221,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					9C1EAE882F39771100CB151B = {
+						CreatedOnToolsVersion = 26.2;
+					};
 					AA000050 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -145,11 +247,19 @@
 			projectRoot = "";
 			targets = (
 				AA000050 /* SunlightTracker */,
+				9C1EAE882F39771100CB151B /* widgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9C1EAE872F39771100CB151B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA000052 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +271,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9C1EAE852F39771100CB151B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA000051 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -171,6 +288,8 @@
 				AA000005 /* Models.swift in Sources */,
 				AA000006 /* DashboardView.swift in Sources */,
 				AA000007 /* HistoryView.swift in Sources */,
+				9C1EB1052F398A1500CB151B /* CalendarView.swift in Sources */,
+				9C1EB0EC2F397AC900CB151B /* SharedWidgetTypes.swift in Sources */,
 				AA000008 /* SettingsView.swift in Sources */,
 				AA000009 /* SunAnimationView.swift in Sources */,
 				AA00000A /* WeatherService.swift in Sources */,
@@ -181,7 +300,79 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C1EAE9E2F39771200CB151B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C1EAE882F39771100CB151B /* widgetExtension */;
+			targetProxy = 9C1EAE9D2F39771200CB151B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9C1EAEA12F39771200CB151B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C1EAEA22F39771200CB151B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		AA000080 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -306,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SunlightTracker/SunlightTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SunlightTracker/Preview Content\"";
@@ -326,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -342,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SunlightTracker/SunlightTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SunlightTracker/Preview Content\"";
@@ -362,7 +555,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -376,6 +569,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C1EAEA42F39771200CB151B /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1EAEA12F39771200CB151B /* Debug */,
+				9C1EAEA22F39771200CB151B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AA000060 /* Build configuration list for PBXNativeTarget "SunlightTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

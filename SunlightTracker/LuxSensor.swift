@@ -1,7 +1,7 @@
 import Foundation
 import AVFoundation
 import Combine
-import UIKit
+import SwiftUI
 
 /// 아이폰의 전면 카메라를 활용해 주변 조도(Lux)를 실시간 측정하는 센서
 /// iOS에서 직접적인 Ambient Light Sensor API는 비공개이므로,
@@ -24,7 +24,17 @@ class LuxSensor: NSObject, ObservableObject {
     private var videoOutput: AVCaptureVideoDataOutput?
     private let sessionQueue = DispatchQueue(label: "com.sunlighttracker.luxsensor")
     private var luxHistory: [Double] = []
-    private let maxHistoryCount = 30  // 이동 평균용 (느리게 변화)
+    private let maxHistoryCount = 5  // 이동 평균용 (반응성과 부드러움 균형)
+    private var frameCounter = 0
+    private var framesToSkip = 15  // 0.5초마다 업데이트 (30fps 기준), 동적 조정됨
+    private var smoothedValue: Double = 0  // EMA용 이전 값
+    private let smoothingFactor: Double = 0.3  // 0에 가까울수록 더 부드러움
+
+    // 스마트 센싱
+    private var lastLuxValue: Double = 0
+    private var stableReadingsCount = 0  // 안정적인 읽기 횟수
+    private let stableThreshold = 20  // 20번 연속 변동 없으면 idle 모드 (약 10초)
+    private let luxChangeThreshold: Double = 50  // 50 lux 이상 변화하면 "변화 있음"으로 간주
     
     enum LightLevel: String {
         case dark = "어두움"
@@ -77,6 +87,12 @@ class LuxSensor: NSObject, ObservableObject {
             self?.captureSession?.stopRunning()
             DispatchQueue.main.async {
                 self?.isActive = false
+                self?.frameCounter = 0
+                self?.smoothedValue = 0
+                self?.luxHistory.removeAll()
+                self?.lastLuxValue = 0
+                self?.stableReadingsCount = 0
+                self?.framesToSkip = 15  // 다시 시작할 때 빠른 모드로
             }
         }
     }
@@ -176,13 +192,19 @@ class LuxSensor: NSObject, ObservableObject {
         }
     }
     
-    /// 이동평균으로 안정적인 Lux 값 계산
+    /// 지수 이동 평균 (EMA)으로 부드러운 Lux 값 계산
+    /// EMA = α * newValue + (1 - α) * previousEMA
+    /// α가 작을수록 더 부드럽게 변화
     private func smoothedLux(_ newLux: Double) -> Double {
-        luxHistory.append(newLux)
-        if luxHistory.count > maxHistoryCount {
-            luxHistory.removeFirst()
+        // 첫 값은 그대로 사용
+        if smoothedValue == 0 {
+            smoothedValue = newLux
+            return newLux
         }
-        return luxHistory.reduce(0, +) / Double(luxHistory.count)
+
+        // 지수 이동 평균 계산
+        smoothedValue = smoothingFactor * newLux + (1 - smoothingFactor) * smoothedValue
+        return smoothedValue
     }
 }
 
@@ -193,17 +215,44 @@ extension LuxSensor: AVCaptureVideoDataOutputSampleBufferDelegate {
         didOutput sampleBuffer: CMSampleBuffer,
         from connection: AVCaptureConnection
     ) {
-        // 프레임마다 계산하면 과도하므로 5프레임에 1번만
-        // (실제로는 output의 프레임레이트를 낮추는 것도 가능)
+        // 프레임 스킵: 동적 조정 (변동 없으면 1분에 1번)
+        frameCounter += 1
+        guard frameCounter >= framesToSkip else { return }
+        frameCounter = 0
+
         guard let rawLux = calculateLux(from: sampleBuffer) else { return }
-        
+
+        // EMA로 부드러운 값 계산
         let lux = smoothedLux(rawLux)
-        
+
+        // 변동량 감지
+        let luxChange = abs(lux - lastLuxValue)
+        lastLuxValue = lux
+
+        if luxChange < luxChangeThreshold {
+            // 변동 없음
+            stableReadingsCount += 1
+
+            // 20번 연속 안정적이면 idle 모드 (10초에 1번 체크)
+            if stableReadingsCount >= stableThreshold {
+                framesToSkip = 300  // 10초 (30fps × 10초)
+            }
+        } else {
+            // 변동 감지됨 - 다시 빠른 모드로
+            stableReadingsCount = 0
+            framesToSkip = 15  // 0.5초마다
+        }
+
+        // UI 업데이트는 애니메이션과 함께
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.currentLux = lux
-            self.lightLevel = self.classifyLightLevel(lux)
-            self.isSunlight = lux >= self.outdoorThresholdLux
+
+            // 0.4초 애니메이션으로 부드럽게 전환
+            withAnimation(.easeInOut(duration: 0.4)) {
+                self.currentLux = lux
+                self.lightLevel = self.classifyLightLevel(lux)
+                self.isSunlight = lux >= self.outdoorThresholdLux
+            }
         }
     }
 }

@@ -154,12 +154,20 @@ struct SettingsView: View {
                 
                 Section {
                     HStack {
+                        Text("앱 이름")
+                        Spacer()
+                        Text(AppConfig.appName).foregroundColor(.secondary)
+                    }
+
+                    HStack {
                         Text("버전")
                         Spacer()
-                        Text("3.0.0").foregroundColor(.secondary)
+                        Text(AppConfig.fullVersion).foregroundColor(.secondary)
                     }
                 } header: {
-                    Label("정보", systemImage: "info")
+                    Label("정보", systemImage: "info.circle")
+                } footer: {
+                    Text("하루 \(AppConfig.recommendedDailyMinutes)분, \(AppConfig.recommendedSessions.lowerBound)-\(AppConfig.recommendedSessions.upperBound)번 나누어 받는 것이 가장 효과적입니다. 오전 \(AppConfig.optimalStartHour)시~오후 \(AppConfig.optimalEndHour)시 사이가 비타민 D 합성에 최적입니다.")
                 }
             }
             .navigationTitle("설정")

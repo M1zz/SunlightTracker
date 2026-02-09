@@ -2,6 +2,8 @@ import Foundation
 import SwiftUI
 import CoreLocation
 import Combine
+import ActivityKit
+import WidgetKit
 
 @MainActor
 class SunlightManager: NSObject, ObservableObject {
@@ -19,6 +21,9 @@ class SunlightManager: NSObject, ObservableObject {
     @Published var settings: AppSettings
     @Published var streakCount: Int = 0
     @Published var locationAuthorized = false
+    @Published var batteryStatus: BatteryStatus = BatteryStatus()
+    @Published var sunflowerHealth: SunflowerHealth = SunflowerHealth()
+    @Published var estimatedBatteryGain: Double = 0  // 트래킹 중 예상 획득량 (UI용)
     
     // Lux Sensor
     let luxSensor = LuxSensor()
@@ -31,6 +36,8 @@ class SunlightManager: NSObject, ObservableObject {
     private let userDefaults = UserDefaults.standard
     private let recordsKey = "sunlight_records_v2"
     private let settingsKey = "app_settings_v2"
+    private let batteryKey = "battery_status"
+    private let healthKey = "sunflower_health"
     
     // 자동 트래킹 상태
     private var sunlightStartTime: Date?       // 햇빛 감지 시작 시간
@@ -39,6 +46,8 @@ class SunlightManager: NSObject, ObservableObject {
     private let activationThreshold = 3        // 3회 연속 감지 시 세션 시작 (~30초)
     private let deactivationThreshold = 6      // 6회 연속 미감지 시 세션 종료
     private var elapsedTimer: Timer?           // 확인 후 경과 시간 타이머
+    private var healthUpdateTimer: Timer?      // 해바라기 건강도 업데이트 타이머
+    private var currentActivity: Activity<SunlightTrackingAttributes>?
     
     // MARK: - Init
     override init() {
@@ -60,9 +69,11 @@ class SunlightManager: NSObject, ObservableObject {
         
         loadRecords()
         loadTodayRecord()
+        loadStatus()
         calculateStreak()
         calculateSunTimes()
         setupLuxObserving()
+        startHealthUpdateTimer()
     }
     
     // MARK: - Lux Sensor Observation
@@ -136,37 +147,55 @@ class SunlightManager: NSObject, ObservableObject {
             Task { @MainActor [weak self] in
                 guard let self, let session = self.currentSession else { return }
                 self.confirmedElapsedMinutes = max(Int(Date().timeIntervalSince(session.startTime) / 60), 0)
+                self.updateEstimatedBatteryGain()
+                self.updateLiveActivity()
+                self.updateWidgetData()
             }
         }
+
+        // 라이브 액티비티 시작
+        startLiveActivity()
+        updateWidgetData()
     }
     
     private func endSunlightSession() {
         guard var session = currentSession else { return }
         session.endTime = Date()
-        
+
         // 평균 조도 계산
         if !session.luxSamples.isEmpty {
             session.averageLux = session.luxSamples.reduce(0, +) / Double(session.luxSamples.count)
         }
-        
+
         let duration = session.durationMinutes
         if duration >= 1 { // 최소 1분 이상인 세션만 기록
+            // 배터리 충전
+            let batteryEarned = calculateChargeAmount(minutes: duration, averageLux: session.averageLux)
+            session.batteryEarned = batteryEarned
+            chargeBattery(amount: batteryEarned)
+
             todayRecord.totalMinutes += duration
             todayRecord.sessions.append(session)
-            
+
             // 전체 평균 조도 업데이트
             let allSamples = todayRecord.sessions.flatMap(\.luxSamples)
             if !allSamples.isEmpty {
                 todayRecord.averageLux = allSamples.reduce(0, +) / Double(allSamples.count)
             }
-            
+
             saveRecords()
+            saveStatus()
             calculateStreak()
         }
-        
+
         currentSession = nil
         isSunlightDetected = false
         sunlightStartTime = nil
+        estimatedBatteryGain = 0
+
+        // 라이브 액티비티 종료
+        endLiveActivity()
+        updateWidgetData()
     }
     
     // MARK: - Tracking Control
@@ -364,31 +393,123 @@ class SunlightManager: NSObject, ObservableObject {
     }
 
     var motivationalMessage: String {
-        let minutes = todayRecord.totalMinutes
-        if minutes == 0 {
-            return "오늘의 해바라기에게 햇빛을 선물해주세요"
+        let health = sunflowerHealth.currentEnergy
+        let battery = batteryStatus.chargedAmount
+
+        if health < 20 {
+            return "해바라기가 위험해요! 지금 배터리를 전달하세요!"
         }
-        if let next = nextMilestoneAdvice(for: minutes) {
-            switch next.advice.category {
-            case .sleep:
-                return "\(next.remainingMinutes)분만 더 쐬면 수면이 좋아질 수 있어요!"
-            case .mood:
-                return "\(next.remainingMinutes)분 후면 세로토닌이 분비돼요!"
-            case .stress:
-                return "\(next.remainingMinutes)분만 더! 스트레스가 줄어들어요"
-            case .health:
-                return "\(next.remainingMinutes)분 더 나가면 건강에 큰 도움이 돼요"
-            case .vitamin:
-                return "\(next.remainingMinutes)분만 더 쐬면 비타민D가 생성돼요!"
+        if health < 50 && battery >= 20 {
+            return "해바라기가 시들어가고 있어요. 배터리를 전달해주세요"
+        }
+        if battery >= 50 {
+            return "충분한 배터리를 모았어요! 해바라기에게 전달해주세요"
+        }
+        if isTracking {
+            return "햇빛을 받아 배터리를 충전하는 중이에요"
+        }
+        return "햇빛을 받아 배터리를 충전하세요"
+    }
+
+    // MARK: - Battery & Health Management
+
+    /// 배터리 충전량 계산
+    private func calculateChargeAmount(minutes: Int, averageLux: Double) -> Double {
+        // 공식: (분 × lux / 3000) capped at 100
+        return min(100, Double(minutes) * averageLux / 3000.0)
+    }
+
+    /// 배터리 충전
+    private func chargeBattery(amount: Double) {
+        batteryStatus.chargedAmount = min(100, batteryStatus.chargedAmount + amount)
+        batteryStatus.lastChargeTime = Date()
+    }
+
+    /// 실시간 예상 충전량 업데이트 (UI 표시용)
+    func updateEstimatedBatteryGain() {
+        guard let session = currentSession else {
+            estimatedBatteryGain = 0
+            return
+        }
+        let elapsed = Int(Date().timeIntervalSince(session.startTime) / 60)
+        estimatedBatteryGain = calculateChargeAmount(
+            minutes: elapsed,
+            averageLux: session.averageLux > 0 ? session.averageLux : lastKnownLux
+        )
+    }
+
+    /// 해바라기 에너지 업데이트 (시들음)
+    func updateSunflowerHealth() {
+        let now = Date()
+        let elapsed = now.timeIntervalSince(sunflowerHealth.lastUpdateTime)
+        let hoursElapsed = elapsed / 3600.0
+
+        // 에너지 감소 계산
+        let energyLost = sunflowerHealth.decayRatePerHour * hoursElapsed
+        sunflowerHealth.currentEnergy = max(0, sunflowerHealth.currentEnergy - energyLost)
+        sunflowerHealth.lastUpdateTime = now
+
+        saveStatus()
+    }
+
+    /// 해바라기 건강도 타이머 시작
+    private func startHealthUpdateTimer() {
+        healthUpdateTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+            Task { @MainActor [weak self] in
+                self?.updateSunflowerHealth()
             }
         }
-        if todayRecord.goalAchieved {
-            return "해바라기가 활짝 피었어요! 오늘도 건강한 하루!"
-        }
-        return "잘 하고 있어요! 해바라기가 자라고 있어요"
+    }
+
+    /// 배터리를 해바라기에 전달
+    func transferBattery(amount: Double) {
+        guard amount > 0, amount <= batteryStatus.chargedAmount else { return }
+
+        // 배터리 차감
+        batteryStatus.chargedAmount -= amount
+
+        // 해바라기 에너지 증가
+        sunflowerHealth.currentEnergy = min(100, sunflowerHealth.currentEnergy + amount)
+        sunflowerHealth.lastUpdateTime = Date()
+
+        saveStatus()
+        updateWidgetData()
+    }
+
+    /// 전체 배터리 전달
+    func transferAllBattery() {
+        transferBattery(amount: batteryStatus.chargedAmount)
     }
 
     // MARK: - Persistence
+    private func loadStatus() {
+        if let data = userDefaults.data(forKey: batteryKey),
+           let battery = try? JSONDecoder().decode(BatteryStatus.self, from: data) {
+            batteryStatus = battery
+        } else {
+            batteryStatus = BatteryStatus()
+        }
+
+        if let data = userDefaults.data(forKey: healthKey),
+           let health = try? JSONDecoder().decode(SunflowerHealth.self, from: data) {
+            sunflowerHealth = health
+        } else {
+            sunflowerHealth = SunflowerHealth()
+        }
+
+        // 앱 재시작 시 시간 경과만큼 에너지 감소
+        updateSunflowerHealth()
+    }
+
+    private func saveStatus() {
+        if let data = try? JSONEncoder().encode(batteryStatus) {
+            userDefaults.set(data, forKey: batteryKey)
+        }
+        if let data = try? JSONEncoder().encode(sunflowerHealth) {
+            userDefaults.set(data, forKey: healthKey)
+        }
+    }
+
     private func loadRecords() {
         guard let data = userDefaults.data(forKey: recordsKey),
               let records = try? JSONDecoder().decode([SunlightRecord].self, from: data) else {
@@ -466,7 +587,7 @@ class SunlightManager: NSObject, ObservableObject {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
         formatter.dateFormat = "E"
-        
+
         for i in (0..<7).reversed() {
             let date = calendar.date(byAdding: .day, value: -i, to: Date()) ?? Date()
             let dayStr = formatter.string(from: date)
@@ -477,7 +598,131 @@ class SunlightManager: NSObject, ObservableObject {
         }
         return data
     }
-    
+
+    // MARK: - Mood & Note
+    func updateMood(for date: Date, mood: DailyMood) {
+        if let index = weeklyRecords.firstIndex(where: { Calendar.current.isDate($0.date, inSameDayAs: date) }) {
+            weeklyRecords[index].mood = mood
+        } else {
+            var newRecord = SunlightRecord(date: date.startOfDay, goalMinutes: settings.dailyGoalMinutes)
+            newRecord.mood = mood
+            weeklyRecords.append(newRecord)
+        }
+
+        if Calendar.current.isDateInToday(date) {
+            todayRecord.mood = mood
+        }
+
+        saveRecords()
+    }
+
+    func updateNote(for date: Date, note: String?) {
+        if let index = weeklyRecords.firstIndex(where: { Calendar.current.isDate($0.date, inSameDayAs: date) }) {
+            weeklyRecords[index].note = note
+        } else {
+            var newRecord = SunlightRecord(date: date.startOfDay, goalMinutes: settings.dailyGoalMinutes)
+            newRecord.note = note
+            weeklyRecords.append(newRecord)
+        }
+
+        if Calendar.current.isDateInToday(date) {
+            todayRecord.note = note
+        }
+
+        saveRecords()
+    }
+
+    func getRandomHealthTip() -> HealthTip {
+        HealthTip.allTips.randomElement() ?? HealthTip.allTips[0]
+    }
+
+    // MARK: - Widget Integration
+    private func updateWidgetData() {
+        let widgetData = WidgetData(
+            batteryPercentage: batteryStatus.chargedAmount,
+            lastChargeTime: batteryStatus.lastChargeTime,
+            sunflowerEnergy: sunflowerHealth.currentEnergy,
+            healthState: sunflowerHealth.healthState.rawValue,
+            todayMinutes: todayRecord.totalMinutes,
+            goalMinutes: settings.dailyGoalMinutes,
+            lastUpdate: Date(),
+            isTracking: isTracking,
+            isConfirmedOutdoor: isConfirmedOutdoor,
+            currentLux: isConfirmedOutdoor ? lastKnownLux : luxSensor.currentLux,
+            estimatedBatteryGain: estimatedBatteryGain,
+            confirmedElapsedMinutes: confirmedElapsedMinutes
+        )
+
+        SharedDataManager.shared.saveWidgetData(widgetData)
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+
+    // MARK: - Live Activity Integration
+    private func startLiveActivity() {
+        #if canImport(ActivityKit)
+        guard ActivityAuthorizationInfo().areActivitiesEnabled else { return }
+
+        let attributes = SunlightTrackingAttributes(
+            sessionStartTime: Date(),
+            initialEnergy: sunflowerHealth.currentEnergy
+        )
+
+        let initialState = SunlightTrackingAttributes.ContentState(
+            elapsedMinutes: 0,
+            currentLux: lastKnownLux,
+            estimatedBatteryGain: 0,
+            sunflowerEnergy: sunflowerHealth.currentEnergy,
+            lastUpdate: Date()
+        )
+
+        do {
+            let content = ActivityContent(state: initialState, staleDate: nil)
+            currentActivity = try Activity.request(attributes: attributes, content: content)
+        } catch {
+            print("Failed to start Live Activity: \(error)")
+        }
+        #endif
+    }
+
+    private func updateLiveActivity() {
+        #if canImport(ActivityKit)
+        guard let activity = currentActivity else { return }
+
+        let updatedState = SunlightTrackingAttributes.ContentState(
+            elapsedMinutes: confirmedElapsedMinutes,
+            currentLux: lastKnownLux,
+            estimatedBatteryGain: estimatedBatteryGain,
+            sunflowerEnergy: sunflowerHealth.currentEnergy,
+            lastUpdate: Date()
+        )
+
+        Task {
+            let content = ActivityContent(state: updatedState, staleDate: nil)
+            await activity.update(content)
+        }
+        #endif
+    }
+
+    private func endLiveActivity() {
+        #if canImport(ActivityKit)
+        guard let activity = currentActivity else { return }
+
+        let finalState = SunlightTrackingAttributes.ContentState(
+            elapsedMinutes: confirmedElapsedMinutes,
+            currentLux: lastKnownLux,
+            estimatedBatteryGain: estimatedBatteryGain,
+            sunflowerEnergy: sunflowerHealth.currentEnergy,
+            lastUpdate: Date()
+        )
+
+        Task {
+            let content = ActivityContent(state: finalState, staleDate: nil)
+            await activity.end(content, dismissalPolicy: .immediate)
+            currentActivity = nil
+        }
+        #endif
+    }
+
 }
 
 // MARK: - CLLocationManagerDelegate

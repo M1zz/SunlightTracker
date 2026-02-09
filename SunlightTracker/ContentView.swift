@@ -16,6 +16,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("기록", systemImage: "chart.bar.fill")
                 }
+
+            CalendarView(manager: manager)
+                .tabItem {
+                    Label("캘린더", systemImage: "calendar")
+                }
             
             SettingsView(manager: manager, notificationManager: notificationManager)
                 .tabItem {

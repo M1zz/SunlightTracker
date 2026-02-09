@@ -1,32 +1,69 @@
 import SwiftUI
 
 struct SunAnimationView: View {
-    let progress: Double
+    let health: Double  // 0~100
     let isTracking: Bool
     @State private var swayAngle: Double = 0
     @State private var sparkleOpacity: Double = 0
+    @State private var auraScale1: CGFloat = 1.0
+    @State private var auraScale2: CGFloat = 1.0
+    @State private var auraScale3: CGFloat = 1.0
+    @State private var auraOpacity: Double = 0.0
 
-    private var clampedProgress: Double { min(max(progress, 0), 1.0) }
-
-    // 꽃잎 개수: progress에 비례 (0개 ~ 12개)
-    private var petalCount: Int {
-        Int(clampedProgress * 12)
+    private var healthState: SunflowerHealth.HealthState {
+        if health >= 80 { return .thriving }
+        if health >= 50 { return .healthy }
+        if health >= 20 { return .wilting }
+        return .critical
     }
 
-    // 꽃잎 크기
-    private var petalLength: CGFloat {
-        guard clampedProgress > 0 else { return 0 }
-        return 12 + clampedProgress * 20
+    // 꽃잎 각도 (시들면 아래로 처짐)
+    private var petalDroop: Double {
+        switch healthState {
+        case .thriving: return 0
+        case .healthy: return 15
+        case .wilting: return 30
+        case .critical: return 45
+        }
     }
 
-    // 얼굴 색상
+    // 얼굴 색상 (시들면 어두워짐)
     private var faceColor: Color {
-        if clampedProgress >= 1.0 { return .orange }
-        if clampedProgress >= 0.5 { return Color(red: 1.0, green: 0.8, blue: 0.2) }
-        return Color(red: 1.0, green: 0.9, blue: 0.4)
+        switch healthState {
+        case .thriving: return .orange
+        case .healthy: return Color(red: 1.0, green: 0.8, blue: 0.2)
+        case .wilting: return Color(red: 0.8, green: 0.6, blue: 0.2)
+        case .critical: return Color(red: 0.5, green: 0.4, blue: 0.2)
+        }
     }
 
-    private var isFullBloom: Bool { clampedProgress >= 1.0 }
+    // 꽃잎 색상
+    private var petalColor: LinearGradient {
+        switch healthState {
+        case .thriving:
+            return LinearGradient(
+                colors: [Color(red: 1.0, green: 0.85, blue: 0.1), Color(red: 1.0, green: 0.7, blue: 0.0)],
+                startPoint: .top, endPoint: .bottom
+            )
+        case .healthy:
+            return LinearGradient(
+                colors: [Color(red: 1.0, green: 0.8, blue: 0.2), Color(red: 1.0, green: 0.65, blue: 0.1)],
+                startPoint: .top, endPoint: .bottom
+            )
+        case .wilting:
+            return LinearGradient(
+                colors: [Color(red: 0.8, green: 0.6, blue: 0.2), Color(red: 0.7, green: 0.5, blue: 0.1)],
+                startPoint: .top, endPoint: .bottom
+            )
+        case .critical:
+            return LinearGradient(
+                colors: [Color(red: 0.6, green: 0.4, blue: 0.2), Color(red: 0.5, green: 0.3, blue: 0.1)],
+                startPoint: .top, endPoint: .bottom
+            )
+        }
+    }
+
+    private var isFullBloom: Bool { healthState == .thriving }
 
     var body: some View {
         ZStack {
@@ -40,28 +77,77 @@ struct SunAnimationView: View {
                 endPoint: .bottom
             )
 
+            // 태양 오라 (트래킹 중일 때만)
+            if isTracking {
+                ZStack {
+                    // 오라 1 (가장 큰 원)
+                    Circle()
+                        .fill(
+                            RadialGradient(
+                                colors: [
+                                    Color.yellow.opacity(0.4),
+                                    Color.orange.opacity(0.2),
+                                    Color.clear
+                                ],
+                                center: .center,
+                                startRadius: 0,
+                                endRadius: 80
+                            )
+                        )
+                        .frame(width: 160, height: 160)
+                        .scaleEffect(auraScale1)
+                        .opacity(auraOpacity * 0.6)
+
+                    // 오라 2 (중간 원)
+                    Circle()
+                        .fill(
+                            RadialGradient(
+                                colors: [
+                                    Color.yellow.opacity(0.5),
+                                    Color.orange.opacity(0.3),
+                                    Color.clear
+                                ],
+                                center: .center,
+                                startRadius: 0,
+                                endRadius: 60
+                            )
+                        )
+                        .frame(width: 120, height: 120)
+                        .scaleEffect(auraScale2)
+                        .opacity(auraOpacity * 0.7)
+
+                    // 오라 3 (작은 원)
+                    Circle()
+                        .fill(
+                            RadialGradient(
+                                colors: [
+                                    Color.yellow.opacity(0.6),
+                                    Color.orange.opacity(0.4),
+                                    Color.clear
+                                ],
+                                center: .center,
+                                startRadius: 0,
+                                endRadius: 45
+                            )
+                        )
+                        .frame(width: 90, height: 90)
+                        .scaleEffect(auraScale3)
+                        .opacity(auraOpacity * 0.8)
+                }
+                .blur(radius: 8)
+                .transition(.opacity)
+            }
+
             // 해바라기 (얼굴 + 꽃잎)
             ZStack {
-                // 꽃잎
+                // 꽃잎 (12개 고정, 각도와 색상 변경)
                 ForEach(0..<12, id: \.self) { i in
-                    if i < petalCount {
-                        PetalShape()
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        Color(red: 1.0, green: 0.85, blue: 0.1),
-                                        Color(red: 1.0, green: 0.7, blue: 0.0)
-                                    ],
-                                    startPoint: .top,
-                                    endPoint: .bottom
-                                )
-                            )
-                            .frame(width: 16, height: petalLength)
-                            .offset(y: -52)
-                            .rotationEffect(.degrees(Double(i) * 30))
-                            .transition(.scale.combined(with: .opacity))
-                            .animation(.easeOut(duration: 0.5).delay(Double(i) * 0.04), value: petalCount)
-                    }
+                    PetalShape()
+                        .fill(petalColor)
+                        .frame(width: 16, height: 32)
+                        .offset(y: -52)
+                        .rotationEffect(.degrees(Double(i) * 30 + petalDroop))
+                        .animation(.easeInOut(duration: 0.8), value: petalDroop)
                 }
 
                 // 얼굴 원
@@ -77,26 +163,62 @@ struct SunAnimationView: View {
                     .frame(width: 80, height: 80)
                     .shadow(color: faceColor.opacity(0.4), radius: isTracking ? 12 : 6)
 
-                // 눈 + 입
+                // 눈 + 입 + 썬글라스
                 VStack(spacing: 6) {
-                    HStack(spacing: 16) {
-                        Circle().fill(Color.white).frame(width: 8, height: 8)
-                        Circle().fill(Color.white).frame(width: 8, height: 8)
-                    }
+                    ZStack {
+                        // 기본 눈 (썬글라스 없을 때만 보임)
+                        if !isTracking {
+                            HStack(spacing: 16) {
+                                Circle().fill(Color.white).frame(width: 8, height: 8)
+                                Circle().fill(Color.white).frame(width: 8, height: 8)
+                            }
+                        }
 
-                    if isFullBloom {
-                        // 활짝 웃는 입
+                        // 썬글라스 (트래킹 중일 때)
+                        if isTracking {
+                            HStack(spacing: 4) {
+                                // 왼쪽 렌즈
+                                Ellipse()
+                                    .fill(Color.black.opacity(0.85))
+                                    .frame(width: 14, height: 10)
+                                    .overlay(
+                                        Ellipse()
+                                            .stroke(Color.white.opacity(0.3), lineWidth: 0.5)
+                                    )
+
+                                // 브릿지
+                                Rectangle()
+                                    .fill(Color.black)
+                                    .frame(width: 4, height: 2)
+
+                                // 오른쪽 렌즈
+                                Ellipse()
+                                    .fill(Color.black.opacity(0.85))
+                                    .frame(width: 14, height: 10)
+                                    .overlay(
+                                        Ellipse()
+                                            .stroke(Color.white.opacity(0.3), lineWidth: 0.5)
+                                    )
+                            }
+                            .transition(.scale.combined(with: .opacity))
+                        }
+                    }
+                    .animation(.spring(duration: 0.4), value: isTracking)
+
+                    if healthState == .thriving || healthState == .healthy {
+                        // 웃는 입
                         Arc(startAngle: .degrees(0), endAngle: .degrees(180), clockwise: false)
                             .stroke(Color.white, lineWidth: 2.5)
                             .frame(width: 22, height: 11)
                     } else {
-                        // 살짝 미소
-                        Arc(startAngle: .degrees(0), endAngle: .degrees(180), clockwise: false)
+                        // 슬픈 입
+                        Arc(startAngle: .degrees(180), endAngle: .degrees(0), clockwise: false)
                             .stroke(Color.white, lineWidth: 2)
                             .frame(width: 16, height: 8)
                     }
                 }
                 .offset(y: -2)
+                .animation(.easeInOut(duration: 0.5), value: healthState)
 
                 // 만개 시 씨앗 패턴 (중심부 테두리)
                 if isFullBloom {
@@ -120,10 +242,10 @@ struct SunAnimationView: View {
                 }
             }
 
-            // 진행률 텍스트
+            // 건강도 텍스트
             VStack {
                 Spacer()
-                Text("\(Int(clampedProgress * 100))%")
+                Text("\(Int(health))%")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                     .padding(.horizontal, 12)
@@ -136,14 +258,19 @@ struct SunAnimationView: View {
         .frame(width: 240, height: 240)
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .onAppear {
-            if isTracking { startSwayAnimation() }
+            if isTracking {
+                startSwayAnimation()
+                startAuraAnimation()
+            }
             if isFullBloom { startSparkle() }
         }
         .onChange(of: isTracking) { _, newValue in
             if newValue {
                 startSwayAnimation()
+                startAuraAnimation()
             } else {
                 withAnimation(.easeOut(duration: 0.5)) { swayAngle = 0 }
+                stopAuraAnimation()
             }
         }
         .onChange(of: isFullBloom) { _, newValue in
@@ -160,6 +287,37 @@ struct SunAnimationView: View {
     private func startSparkle() {
         withAnimation(.easeInOut(duration: 1.2).repeatForever(autoreverses: true)) {
             sparkleOpacity = 1.0
+        }
+    }
+
+    private func startAuraAnimation() {
+        // 페이드 인
+        withAnimation(.easeIn(duration: 0.5)) {
+            auraOpacity = 1.0
+        }
+
+        // 오라 1 - 느린 펄스
+        withAnimation(.easeInOut(duration: 2.5).repeatForever(autoreverses: true)) {
+            auraScale1 = 1.2
+        }
+
+        // 오라 2 - 중간 속도
+        withAnimation(.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
+            auraScale2 = 1.3
+        }
+
+        // 오라 3 - 빠른 펄스
+        withAnimation(.easeInOut(duration: 1.5).repeatForever(autoreverses: true)) {
+            auraScale3 = 1.4
+        }
+    }
+
+    private func stopAuraAnimation() {
+        withAnimation(.easeOut(duration: 0.5)) {
+            auraOpacity = 0.0
+            auraScale1 = 1.0
+            auraScale2 = 1.0
+            auraScale3 = 1.0
         }
     }
 }
@@ -204,8 +362,8 @@ struct PetalShape: Shape {
 
 #Preview {
     HStack(spacing: 12) {
-        SunAnimationView(progress: 0.0, isTracking: false)
-        SunAnimationView(progress: 0.5, isTracking: true)
-        SunAnimationView(progress: 1.0, isTracking: false)
+        SunAnimationView(health: 10, isTracking: false)
+        SunAnimationView(health: 50, isTracking: true)
+        SunAnimationView(health: 100, isTracking: false)
     }
 }
