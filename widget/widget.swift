@@ -188,7 +188,7 @@ struct TodayProgressWidgetView: View {
     }
 
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 6) {
             Spacer(minLength: 0)
 
             // 원형 진행도
@@ -218,7 +218,7 @@ struct TodayProgressWidgetView: View {
                     }
                 }
             }
-            .padding(.vertical, 8)
+            .padding(.vertical, 4)
 
             // 시간 정보
             Text("\(entry.widgetData.todayMinutes) / \(entry.widgetData.goalMinutes)분")
