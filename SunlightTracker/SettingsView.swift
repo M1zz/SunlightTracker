@@ -99,6 +99,18 @@ struct SettingsView: View {
                     Label("조도 참고표", systemImage: "lightbulb")
                 }
                 
+                // 소셜 기능
+                Section {
+                    Toggle(isOn: $manager.settings.nearbyActivityEnabled) {
+                        Label("함께 트래킹", systemImage: "person.2.fill")
+                    }
+                    .tint(.purple)
+                } header: {
+                    Label("소셜", systemImage: "person.2")
+                } footer: {
+                    Text("근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 해바라기 꽃잎이 알록달록하게 물듭니다. 활동이 끝나면 7분에 걸쳐 원래 색으로 돌아옵니다.")
+                }
+
                 // Notification Section
                 Section {
                     Toggle(isOn: $manager.settings.reminderEnabled) {
@@ -175,6 +187,7 @@ struct SettingsView: View {
             .onChange(of: manager.settings.outdoorThresholdLux) { _, _ in manager.saveSettings() }
             .onChange(of: manager.settings.sunlightThresholdLux) { _, _ in manager.saveSettings() }
             .onChange(of: manager.settings.autoTrackingEnabled) { _, _ in manager.saveSettings() }
+            .onChange(of: manager.settings.nearbyActivityEnabled) { _, _ in manager.saveSettings() }
             .onChange(of: manager.settings.reminderEnabled) { _, newValue in
                 if newValue {
                     notificationManager.requestAuthorization()

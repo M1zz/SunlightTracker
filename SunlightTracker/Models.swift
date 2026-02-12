@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 // MARK: - 일조량 기록 모델
 struct SunlightRecord: Identifiable, Codable {
@@ -202,7 +203,8 @@ struct AppSettings: Codable {
     var sunlightThresholdLux: Double
     var outdoorThresholdLux: Double
     var samplingIntervalSeconds: Int
-    
+    var nearbyActivityEnabled: Bool
+
     static let `default` = AppSettings(
         dailyGoalMinutes: 30,
         reminderEnabled: true,
@@ -212,7 +214,8 @@ struct AppSettings: Codable {
         autoTrackingEnabled: true,
         sunlightThresholdLux: 1000,
         outdoorThresholdLux: 300,
-        samplingIntervalSeconds: 10
+        samplingIntervalSeconds: 10,
+        nearbyActivityEnabled: true
     )
 }
 
@@ -278,6 +281,124 @@ struct HealthTip: Identifiable {
         HealthTip(category: .immune, title: "항염 효과", description: "햇빛은 염증성 사이토카인 수치를 낮춰 만성 염증을 줄입니다. 자가면역 질환 증상 완화에도 도움이 됩니다.", icon: "waveform.path.ecg", color: "#16A085"),
         HealthTip(category: .immune, title: "항산화 효과", description: "적절한 햇빛 노출은 체내 항산화 시스템을 강화합니다. 이는 세포 손상을 줄이고 노화를 늦추는데 기여합니다.", icon: "leaf.arrow.triangle.circlepath", color: "#27AE60")
     ]
+}
+
+// MARK: - Nearby Activity: RGB 색상
+struct RGBColor: Equatable, Codable {
+    let r: Double
+    let g: Double
+    let b: Double
+
+    var color: Color { Color(red: r, green: g, blue: b) }
+
+    static let yellowTop = RGBColor(r: 1.0, g: 0.85, b: 0.1)
+    static let yellowBottom = RGBColor(r: 1.0, g: 0.7, b: 0.0)
+
+    func lerp(to other: RGBColor, t: Double) -> RGBColor {
+        let t = max(0, min(1, t))
+        return RGBColor(
+            r: r + (other.r - r) * t,
+            g: g + (other.g - g) * t,
+            b: b + (other.b - b) * t
+        )
+    }
+}
+
+// MARK: - 꽃잎 색상 상태
+struct PetalColorState: Equatable {
+    let gradients: [(top: RGBColor, bottom: RGBColor)]
+    let blendFactor: Double
+
+    static func == (lhs: PetalColorState, rhs: PetalColorState) -> Bool {
+        guard lhs.gradients.count == rhs.gradients.count else { return false }
+        for i in 0..<lhs.gradients.count {
+            if lhs.gradients[i].top != rhs.gradients[i].top ||
+               lhs.gradients[i].bottom != rhs.gradients[i].bottom { return false }
+        }
+        return lhs.blendFactor == rhs.blendFactor
+    }
+
+    static let defaultYellow: PetalColorState = {
+        let grad = (top: RGBColor.yellowTop, bottom: RGBColor.yellowBottom)
+        return PetalColorState(gradients: Array(repeating: grad, count: 12), blendFactor: 0)
+    }()
+}
+
+// MARK: - 공유 색상 테마
+struct SharedColorTheme: Equatable {
+    let baseHue: Double
+    let isLocalVariantA: Bool
+
+    init(seed: UInt64, isLocalVariantA: Bool) {
+        var rng = SeedableRNG(seed: seed)
+        self.baseHue = Double(rng.next() % 1000) / 1000.0
+        self.isLocalVariantA = isLocalVariantA
+    }
+
+    func petalGradients() -> [(top: RGBColor, bottom: RGBColor)] {
+        var rng = SeedableRNG(seed: UInt64(baseHue * 100000))
+        let variantOffset: Double = isLocalVariantA ? 0.03 : -0.03
+
+        return (0..<12).map { _ in
+            let hueShift = Double(Int(rng.next() % 150)) / 1000.0 - 0.075
+            let hue = (baseHue + hueShift + variantOffset).truncatingRemainder(dividingBy: 1.0)
+            let positiveHue = hue < 0 ? hue + 1.0 : hue
+
+            let satTop = 0.75 + Double(rng.next() % 100) / 1000.0
+            let briTop = 0.85 + Double(rng.next() % 100) / 1000.0
+            let satBot = 0.80 + Double(rng.next() % 50) / 1000.0
+            let briBot = 0.70 + Double(rng.next() % 100) / 1000.0
+
+            let top = Self.hsbToRGB(h: positiveHue, s: satTop, b: briTop)
+            let bottom = Self.hsbToRGB(h: positiveHue, s: satBot, b: briBot)
+            return (top: top, bottom: bottom)
+        }
+    }
+
+    private static func hsbToRGB(h: Double, s: Double, b: Double) -> RGBColor {
+        let c = b * s
+        let x = c * (1 - abs((h * 6).truncatingRemainder(dividingBy: 2) - 1))
+        let m = b - c
+        let (r1, g1, b1): (Double, Double, Double)
+        switch h * 6 {
+        case 0..<1: (r1, g1, b1) = (c, x, 0)
+        case 1..<2: (r1, g1, b1) = (x, c, 0)
+        case 2..<3: (r1, g1, b1) = (0, c, x)
+        case 3..<4: (r1, g1, b1) = (0, x, c)
+        case 4..<5: (r1, g1, b1) = (x, 0, c)
+        default:    (r1, g1, b1) = (c, 0, x)
+        }
+        return RGBColor(r: r1 + m, g: g1 + m, b: b1 + m)
+    }
+}
+
+// MARK: - 피어 메시지
+struct PeerMessage: Codable {
+    enum MessageType: String, Codable {
+        case trackingState
+        case discoveryToken
+        case colorSeed
+    }
+    let type: MessageType
+    let trackingPhase: String?
+    let tokenData: Data?
+    let colorSeed: UInt64?
+}
+
+// MARK: - 시드 기반 난수 생성기 (xorshift64)
+struct SeedableRNG {
+    private var state: UInt64
+
+    init(seed: UInt64) {
+        self.state = seed == 0 ? 1 : seed
+    }
+
+    mutating func next() -> UInt64 {
+        state ^= state << 13
+        state ^= state >> 7
+        state ^= state << 17
+        return state
+    }
 }
 
 // MARK: - Extensions

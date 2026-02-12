@@ -3,6 +3,7 @@ import SwiftUI
 struct SunAnimationView: View {
     let health: Double  // 0~100
     let isTracking: Bool
+    var petalColorState: PetalColorState = .defaultYellow
     @State private var swayAngle: Double = 0
     @State private var sparkleOpacity: Double = 0
     @State private var auraScale1: CGFloat = 1.0
@@ -64,6 +65,19 @@ struct SunAnimationView: View {
     }
 
     private var isFullBloom: Bool { healthState == .thriving }
+
+    // 개별 꽃잎 그라데이션 (공유 활동 시 알록달록, 평소엔 건강 기반)
+    private func petalGradient(for index: Int) -> LinearGradient {
+        guard petalColorState.blendFactor > 0,
+              index < petalColorState.gradients.count else {
+            return petalColor
+        }
+        let grad = petalColorState.gradients[index]
+        return LinearGradient(
+            colors: [grad.top.color, grad.bottom.color],
+            startPoint: .top, endPoint: .bottom
+        )
+    }
 
     var body: some View {
         ZStack {
@@ -143,11 +157,12 @@ struct SunAnimationView: View {
                 // 꽃잎 (12개 고정, 각도와 색상 변경)
                 ForEach(0..<12, id: \.self) { i in
                     PetalShape()
-                        .fill(petalColor)
+                        .fill(petalGradient(for: i))
                         .frame(width: 16, height: 32)
                         .offset(y: -52)
                         .rotationEffect(.degrees(Double(i) * 30 + petalDroop))
                         .animation(.easeInOut(duration: 0.8), value: petalDroop)
+                        .animation(.easeInOut(duration: 1.5), value: petalColorState.blendFactor)
                 }
 
                 // 얼굴 원

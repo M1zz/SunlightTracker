@@ -25,6 +25,10 @@ class SunlightManager: NSObject, ObservableObject {
     @Published var sunflowerHealth: SunflowerHealth = SunflowerHealth()
     @Published var estimatedBatteryGain: Double = 0  // 트래킹 중 예상 획득량 (UI용)
     
+    // Nearby Activity
+    let nearbyManager = NearbyActivityManager()
+    @Published var petalColorState: PetalColorState = .defaultYellow
+
     // Lux Sensor
     let luxSensor = LuxSensor()
     
@@ -48,6 +52,10 @@ class SunlightManager: NSObject, ObservableObject {
     private var elapsedTimer: Timer?           // 확인 후 경과 시간 타이머
     private var healthUpdateTimer: Timer?      // 해바라기 건강도 업데이트 타이머
     private var currentActivity: Activity<SunlightTrackingAttributes>?
+    private var fadeBackTimer: Timer?
+    private var fadeBackStartTime: Date?
+    private var lastColorfulGradients: [(top: RGBColor, bottom: RGBColor)]?
+    private let fadeBackDuration: TimeInterval = 420 // 7분
     
     // MARK: - Init
     override init() {
@@ -73,6 +81,7 @@ class SunlightManager: NSObject, ObservableObject {
         calculateStreak()
         calculateSunTimes()
         setupLuxObserving()
+        setupNearbyObserving()
         startHealthUpdateTimer()
     }
     
@@ -87,6 +96,79 @@ class SunlightManager: NSObject, ObservableObject {
             .store(in: &cancellables)
     }
     
+    // MARK: - Nearby Activity Observation
+    private func setupNearbyObserving() {
+        nearbyManager.$isSharedActivityActive
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] active in
+                guard let self else { return }
+                if active {
+                    self.fadeBackTimer?.invalidate()
+                    self.fadeBackTimer = nil
+                    if let theme = self.nearbyManager.sharedColorTheme {
+                        self.applySharedColors(theme)
+                    }
+                } else if self.petalColorState.blendFactor > 0 {
+                    self.startFadeBack()
+                }
+            }
+            .store(in: &cancellables)
+
+        nearbyManager.$sharedColorTheme
+            .receive(on: DispatchQueue.main)
+            .compactMap { $0 }
+            .sink { [weak self] theme in
+                guard let self, self.nearbyManager.isSharedActivityActive else { return }
+                self.applySharedColors(theme)
+            }
+            .store(in: &cancellables)
+    }
+
+    private func applySharedColors(_ theme: SharedColorTheme) {
+        let colorful = theme.petalGradients()
+        lastColorfulGradients = colorful
+        petalColorState = PetalColorState(gradients: colorful, blendFactor: 1.0)
+    }
+
+    private func startFadeBack() {
+        guard let colorful = lastColorfulGradients else {
+            petalColorState = .defaultYellow
+            return
+        }
+
+        fadeBackStartTime = Date()
+        fadeBackTimer?.invalidate()
+        fadeBackTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
+            Task { @MainActor [weak self] in
+                guard let self, let start = self.fadeBackStartTime else {
+                    timer.invalidate()
+                    return
+                }
+                let elapsed = Date().timeIntervalSince(start)
+                let t = min(elapsed / self.fadeBackDuration, 1.0)
+                // easeOutCubic: 초반 느리고 후반 빠르게
+                let eased = 1.0 - pow(1.0 - t, 3)
+                let blend = 1.0 - eased
+
+                if blend <= 0.01 {
+                    self.petalColorState = .defaultYellow
+                    self.lastColorfulGradients = nil
+                    self.fadeBackStartTime = nil
+                    timer.invalidate()
+                    self.fadeBackTimer = nil
+                    return
+                }
+
+                let blended = colorful.map { grad in
+                    let top = grad.top.lerp(to: .yellowTop, t: eased)
+                    let bottom = grad.bottom.lerp(to: .yellowBottom, t: eased)
+                    return (top: top, bottom: bottom)
+                }
+                self.petalColorState = PetalColorState(gradients: blended, blendFactor: blend)
+            }
+        }
+    }
+
     /// 조도 업데이트 처리 - 햇빛 감지 후 확인
     private func handleLuxUpdate(_ lux: Double) {
         guard isTracking, !isConfirmedOutdoor else { return }
@@ -156,6 +238,11 @@ class SunlightManager: NSObject, ObservableObject {
         // 라이브 액티비티 시작
         startLiveActivity()
         updateWidgetData()
+
+        // Nearby: confirmed 상태 전파
+        if settings.nearbyActivityEnabled {
+            nearbyManager.updateTrackingPhase("confirmed")
+        }
     }
     
     private func endSunlightSession() {
@@ -211,6 +298,11 @@ class SunlightManager: NSObject, ObservableObject {
         luxSensor.sunlightThresholdLux = settings.sunlightThresholdLux
         luxSensor.outdoorThresholdLux = settings.outdoorThresholdLux
         luxSensor.startSensing()
+
+        if settings.nearbyActivityEnabled {
+            nearbyManager.startDiscovery()
+            nearbyManager.updateTrackingPhase("detecting")
+        }
     }
 
     /// 센서 감지 단계 취소 (아직 확인 전)
@@ -238,6 +330,10 @@ class SunlightManager: NSObject, ObservableObject {
         // 세션 종료 및 저장
         endSunlightSession()
 
+        // Nearby: idle 상태 전파 및 정리
+        nearbyManager.updateTrackingPhase("idle")
+        nearbyManager.stopDiscovery()
+
         // 상태 초기화
         isTracking = false
         isConfirmedOutdoor = false
@@ -259,6 +355,11 @@ class SunlightManager: NSObject, ObservableObject {
         }
 
         luxSensor.stopSensing()
+
+        // Nearby: idle 상태 전파 및 정리
+        nearbyManager.updateTrackingPhase("idle")
+        nearbyManager.stopDiscovery()
+
         isTracking = false
         isConfirmedOutdoor = false
         isSunlightDetected = false

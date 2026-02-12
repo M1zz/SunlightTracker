@@ -24,6 +24,7 @@
 		AA00000A /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000019 /* WeatherService.swift */; };
 		AA00000B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001A /* NotificationManager.swift */; };
 		AA00000C /* LuxSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001B /* LuxSensor.swift */; };
+		AA00000D /* NearbyActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001C /* NearbyActivityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		AA000019 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		AA00001A /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AA00001B /* LuxSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxSensor.swift; sourceTree = "<group>"; };
+		AA00001C /* NearbyActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyActivityManager.swift; sourceTree = "<group>"; };
 		AA000020 /* SunlightTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunlightTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA000021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA000022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				AA000019 /* WeatherService.swift */,
 				AA00001A /* NotificationManager.swift */,
 				AA00001B /* LuxSensor.swift */,
+				AA00001C /* NearbyActivityManager.swift */,
 				AA000015 /* DashboardView.swift */,
 				AA000016 /* HistoryView.swift */,
 				AA000017 /* SettingsView.swift */,
@@ -295,6 +298,7 @@
 				AA00000A /* WeatherService.swift in Sources */,
 				AA00000B /* NotificationManager.swift in Sources */,
 				AA00000C /* LuxSensor.swift in Sources */,
+				AA00000D /* NearbyActivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

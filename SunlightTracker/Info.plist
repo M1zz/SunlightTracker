@@ -8,5 +8,13 @@
 	<array>
 		<string>com.sunlighttracker.refresh</string>
 	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>주변 친구를 찾아 함께 햇빛 트래킹을 하기 위해 로컬 네트워크 접근이 필요합니다.</string>
+	<key>NSNearbyInteractionUsageDescription</key>
+	<string>가까이 있는 친구와 함께 햇빛 트래킹 활동을 하기 위해 사용됩니다.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_suntracker-ni._tcp</string>
+	</array>
 </dict>
 </plist>

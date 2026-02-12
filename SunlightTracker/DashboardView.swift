@@ -33,6 +33,14 @@ struct DashboardView: View {
                 // 해바라기 상태
                 sunProgressSection
 
+                // 함께 트래킹 배지
+                if manager.nearbyManager.isSharedActivityActive {
+                    NearbyActivityBadge(
+                        peerCount: manager.nearbyManager.connectedPeerCount,
+                        distance: manager.nearbyManager.nearbyPeerDistance
+                    )
+                }
+
                 // 조도 게이지 (감지 중 또는 확인 후 트래킹 중)
                 if manager.trackingPhase == .detecting || manager.trackingPhase == .confirmed {
                     luxGaugeSection
@@ -261,7 +269,8 @@ struct DashboardView: View {
                 VStack(spacing: 8) {
                     SunAnimationView(
                         health: manager.sunflowerHealth.currentEnergy,
-                        isTracking: manager.isSunlightDetected || manager.isConfirmedOutdoor
+                        isTracking: manager.isSunlightDetected || manager.isConfirmedOutdoor,
+                        petalColorState: manager.petalColorState
                     )
                     .frame(height: 280)
                     .scaleEffect(isSunflowerPressed ? 1.15 : 1.2)
@@ -1275,6 +1284,53 @@ struct Diamond: Shape {
         path.closeSubpath()
 
         return path
+    }
+}
+
+// MARK: - Nearby Activity Badge
+struct NearbyActivityBadge: View {
+    let peerCount: Int
+    let distance: Float?
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "person.2.fill")
+                .font(.title3)
+                .foregroundColor(.purple)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text("함께 트래킹 중!")
+                    .font(.headline)
+                    .foregroundColor(.purple)
+                HStack(spacing: 4) {
+                    Text("\(peerCount)명과 함께")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    if let dist = distance {
+                        Text("(\(String(format: "%.1f", dist))m)")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }
+
+            Spacer()
+
+            Circle()
+                .fill(Color.purple)
+                .frame(width: 10, height: 10)
+                .modifier(PulseModifier())
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.purple.opacity(0.1))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.purple.opacity(0.3), lineWidth: 1.5)
+                )
+        )
+        .transition(.scale.combined(with: .opacity))
     }
 }
 
