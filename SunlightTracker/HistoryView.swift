@@ -36,24 +36,21 @@ struct HistoryView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: 20) {
-                    Picker("기간", selection: $selectedPeriod) {
-                        ForEach(Period.allCases, id: \.self) { Text($0.rawValue).tag($0) }
-                    }
-                    .pickerStyle(.segmented)
-                    .padding(.horizontal, 20)
-                    
-                    summarySection
-                    chartSection
-                    dailyRecordsSection
+        ScrollView {
+            VStack(spacing: 20) {
+                Picker("기간", selection: $selectedPeriod) {
+                    ForEach(Period.allCases, id: \.self) { Text($0.rawValue).tag($0) }
                 }
-                .padding(.bottom, 30)
+                .pickerStyle(.segmented)
+                .padding(.horizontal, 20)
+
+                summarySection
+                chartSection
+                dailyRecordsSection
             }
-            .background(Color(.systemGroupedBackground))
-            .navigationTitle("기록")
+            .padding(.bottom, 30)
         }
+        .background(Color(.systemGroupedBackground))
     }
     
     // MARK: - Summary

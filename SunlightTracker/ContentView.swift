@@ -12,16 +12,16 @@ struct ContentView: View {
                     Label("오늘", systemImage: "leaf.fill")
                 }
             
-            HistoryView(manager: manager)
+            RecordsView(manager: manager)
                 .tabItem {
-                    Label("통계", systemImage: "chart.bar.fill")
+                    Label("기록", systemImage: "calendar")
                 }
 
-            CalendarView(manager: manager)
+            FriendsView(manager: manager)
                 .tabItem {
-                    Label("캘린더", systemImage: "calendar")
+                    Label("친구", systemImage: "person.2.fill")
                 }
-            
+
             SettingsView(manager: manager, notificationManager: notificationManager)
                 .tabItem {
                     Label("설정", systemImage: "gearshape.fill")

@@ -25,6 +25,9 @@
 		AA00000B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001A /* NotificationManager.swift */; };
 		AA00000C /* LuxSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001B /* LuxSensor.swift */; };
 		AA00000D /* NearbyActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001C /* NearbyActivityManager.swift */; };
+		AA00000E /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001D /* AppConfig.swift */; };
+		AA00000F /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001E /* RecordsView.swift */; };
+		AA0000F0 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000F1 /* FriendsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		AA00001A /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AA00001B /* LuxSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxSensor.swift; sourceTree = "<group>"; };
 		AA00001C /* NearbyActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyActivityManager.swift; sourceTree = "<group>"; };
+		AA00001D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		AA00001E /* RecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsView.swift; sourceTree = "<group>"; };
+		AA0000F1 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		AA000020 /* SunlightTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunlightTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA000021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA000022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 				9C1EB0EB2F397AC900CB151B /* SharedWidgetTypes.swift */,
 				9C1EAEA52F39773000CB151B /* SunlightTracker.entitlements */,
 				AA000010 /* SunlightTrackerApp.swift */,
+				AA00001D /* AppConfig.swift */,
+				AA00001E /* RecordsView.swift */,
+				AA0000F1 /* FriendsView.swift */,
 				AA000011 /* ContentView.swift */,
 				AA000014 /* Models.swift */,
 				AA000013 /* SunlightManager.swift */,
@@ -299,6 +308,9 @@
 				AA00000B /* NotificationManager.swift in Sources */,
 				AA00000C /* LuxSensor.swift in Sources */,
 				AA00000D /* NearbyActivityManager.swift in Sources */,
+				AA00000E /* AppConfig.swift in Sources */,
+				AA00000F /* RecordsView.swift in Sources */,
+				AA0000F0 /* FriendsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +336,7 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,7 +368,7 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,7 +521,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SunlightTracker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "일조량 트래커";
+				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다.";
@@ -546,7 +558,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SunlightTracker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "일조량 트래커";
+				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다.";
