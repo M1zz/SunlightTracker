@@ -14,7 +14,7 @@ struct ContentView: View {
             
             HistoryView(manager: manager)
                 .tabItem {
-                    Label("기록", systemImage: "chart.bar.fill")
+                    Label("통계", systemImage: "chart.bar.fill")
                 }
 
             CalendarView(manager: manager)

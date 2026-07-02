@@ -28,10 +28,16 @@ struct DashboardView: View {
     }
 
     var body: some View {
+        NavigationStack {
         ScrollView {
             VStack(spacing: 20) {
                 // 해바라기 상태
                 sunProgressSection
+
+                // 트래킹 시작/중지 버튼 (확인 전 단계) - 핵심 액션, 상단 배치
+                if manager.trackingPhase != .confirmed {
+                    trackingButton
+                }
 
                 // 함께 트래킹 배지
                 if manager.nearbyManager.isSharedActivityActive {
@@ -46,31 +52,21 @@ struct DashboardView: View {
                     luxGaugeSection
                 }
 
-                // 배터리 상태
-                batterySection
-
                 // 확인 후 트래킹 중 - 경과 시간 & 종료 버튼
                 if manager.trackingPhase == .confirmed {
                     confirmedTrackingSection
                 }
 
-                // 배터리 전달 버튼
+                // 배터리 상태 + 전달 버튼 (함께 묶음)
+                batterySection
                 if manager.batteryStatus.chargedAmount > 0 {
                     batteryTransferButton
                 }
 
+                todayStatsSection
+
                 // 건강 조언 카드
                 healthAdviceCard
-
-                // 감지 단계 또는 대기 상태 버튼
-                if manager.trackingPhase != .confirmed {
-                    trackingButton
-                }
-
-                // 수동 입력
-                manualEntryButton
-
-                todayStatsSection
 
                 if let sunTimes = manager.sunTimes {
                     sunTimesSection(sunTimes)
@@ -82,11 +78,16 @@ struct DashboardView: View {
                 }
 
                 weeklyPreviewSection
+
+                // 수동 입력 (보조 액션, 하단 배치)
+                manualEntryButton
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 30)
         }
         .background(Color(.systemGroupedBackground))
+        .navigationTitle("햇빛바라기")
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             weatherService.fetchSimulatedWeather()
             manager.requestLocation()
@@ -102,6 +103,7 @@ struct DashboardView: View {
         .sheet(isPresented: $showBatteryTransfer) {
             batteryTransferSheet
         }
+        } // NavigationStack
     }
 
     // MARK: - 조도 배터리 게이지
@@ -813,12 +815,23 @@ struct DashboardView: View {
     // MARK: - Manual Entry
     private var manualEntryButton: some View {
         Button(action: { showManualEntry = true }) {
-            HStack {
+            HStack(spacing: 8) {
                 Image(systemName: "plus.circle")
-                Text("수동으로 시간 추가")
+                    .font(.subheadline)
+                Text("야외 활동 시간 수동 추가")
                     .font(.subheadline)
             }
             .foregroundColor(.orange)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 14)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color.orange.opacity(0.1))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color.orange.opacity(0.3), lineWidth: 1)
+                    )
+            )
         }
     }
 
