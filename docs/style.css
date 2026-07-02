@@ -1,0 +1,117 @@
+:root {
+  --yellow: #ffd11a;
+  --orange: #ff9500;
+  --brown: #6b4221;
+  --bg: #fffdf5;
+  --card: #ffffff;
+  --text: #3d2e1e;
+  --muted: #8a7a66;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+header.hero {
+  text-align: center;
+  padding: 40px 0 24px;
+}
+
+header.hero .emoji { font-size: 64px; }
+
+header.hero h1 {
+  font-size: 28px;
+  color: var(--brown);
+  margin-top: 8px;
+}
+
+header.hero p.tagline {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+nav.top {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 32px;
+  flex-wrap: wrap;
+}
+
+nav.top a {
+  text-decoration: none;
+  color: var(--brown);
+  background: #fff3c4;
+  border: 1.5px solid #f0d98c;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav.top a:hover { background: #ffe98f; }
+
+.card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(107, 66, 33, 0.08);
+}
+
+h2 {
+  font-size: 20px;
+  color: var(--brown);
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--brown);
+  margin: 20px 0 6px;
+}
+
+p, li { font-size: 15px; }
+
+ul { padding-left: 20px; margin: 8px 0; }
+
+.muted { color: var(--muted); font-size: 13px; }
+
+a.link { color: var(--orange); font-weight: 600; }
+
+.faq-q { font-weight: 700; color: var(--brown); margin-top: 18px; }
+.faq-a { margin-top: 4px; }
+
+.badge {
+  display: inline-block;
+  background: #e8f6e0;
+  color: #3a7d2c;
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #eee0c8; padding: 8px 10px; font-size: 14px; text-align: left; }
+th { background: #fff8e0; color: var(--brown); }
