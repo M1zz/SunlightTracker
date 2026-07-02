@@ -24,6 +24,7 @@
 - [✓] 15분 목표로 하루 생존 가능하도록 조정
 
 ## 최근 작업 이력
+- [✓] GitHub Pages 배포 (main:/docs): 소개/개인정보 처리방침/지원 페이지 + README 작성, https://m1zz.github.io/SunlightTracker/
 - [✓] 처음 만나는 친구는 수락 후 함께 트래킹: 신규 상대 감지 시 "같이 받기 💛/다음에" 확인 알림, 수락해야 물듦·기록 시작. 기존 친구는 자동 연결, 거절 시 세션 동안 다시 안 물음 (pendingFriendRequest / approve / decline)
 - [✓] 크래시 수정: 배터리 전달 시트 Slider — 충전량이 1% 미만(0.4% 등)일 때 range(0...0.4) < step(1)로 SwiftUI precondition 크래시. step 제거 + 시트 오픈 시점 범위 스냅샷(transferMax)으로 수정, 1% 미만 소수점 표기 추가
 - [✓] 꽃잎 물듦 3일 유지: 페이드 7분 → 3일(선형), UserDefaults 영속화로 앱 재시작에도 이어서 빠짐 (SunlightManager.restorePetalFade)
