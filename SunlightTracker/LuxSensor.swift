@@ -33,10 +33,11 @@ class LuxSensor: NSObject, ObservableObject {
     // 스마트 센싱
     private var lastLuxValue: Double = 0
     private var stableReadingsCount = 0  // 안정적인 읽기 횟수
-    private let stableThreshold = 20  // 20번 연속 변동 없으면 idle 모드 (약 10초)
+    private let stableThreshold = 20  // 20번 연속 변동 없으면 저빈도 모드
     private let luxChangeThreshold: Double = 50  // 50 lux 이상 변화하면 "변화 있음"으로 간주
     private var sensorStartTime: Date?  // 센서 시작 시간
     private let initialActiveSeconds: Double = 20  // 최초 활성 유지 시간 (초)
+    private let maxFramesToSkip = 60  // 안정 시에도 최대 2초 간격 (30fps × 2초)
     
     enum LightLevel: String {
         case dark = "어두움"
@@ -242,9 +243,9 @@ extension LuxSensor: AVCaptureVideoDataOutputSampleBufferDelegate {
                 // 변동 없음
                 stableReadingsCount += 1
 
-                // 20번 연속 안정적이면 idle 모드 (10초에 1번 체크)
+                // 안정적이면 저빈도 모드 (최대 2초에 1번)
                 if stableReadingsCount >= stableThreshold {
-                    framesToSkip = 300  // 10초 (30fps × 10초)
+                    framesToSkip = maxFramesToSkip
                 }
             } else {
                 // 변동 감지됨 - 다시 빠른 모드로

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73C0858EBA499FE5C258728E /* SunlightTrackerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B632C360CBC57F352D1D8 /* SunlightTrackerSpec.swift */; };
+		8A7741622BF11C70E02E5E63 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4BAA4ECC8E5CD0DD6E97762E /* LeeoKit */; };
 		9C1EAE8C2F39771100CB151B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1EAE8B2F39771100CB151B /* WidgetKit.framework */; };
 		9C1EAE8E2F39771100CB151B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1EAE8D2F39771100CB151B /* SwiftUI.framework */; };
 		9C1EAE9F2F39771200CB151B /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C1EAE892F39771100CB151B /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -52,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		192B632C360CBC57F352D1D8 /* SunlightTrackerSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightTrackerSpec.swift; sourceTree = "<group>"; };
 		9C1EAE892F39771100CB151B /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1EAE8B2F39771100CB151B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9C1EAE8D2F39771100CB151B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -78,7 +81,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9C1EAEA32F39771200CB151B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		9C1EAEA32F39771200CB151B /* Exceptions for "widget" folder in "widgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -88,7 +91,18 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9C1EAE8F2F39771100CB151B /* widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (9C1EAEA32F39771200CB151B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = widget; sourceTree = "<group>"; };
+		9C1EAE8F2F39771100CB151B /* widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9C1EAEA32F39771200CB151B /* Exceptions for "widget" folder in "widgetExtension" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A7741622BF11C70E02E5E63 /* LeeoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +167,7 @@
 				AA000012 /* Assets.xcassets */,
 				AA000021 /* Info.plist */,
 				AA000043 /* Preview Content */,
+				192B632C360CBC57F352D1D8 /* SunlightTrackerSpec.swift */,
 			);
 			path = SunlightTracker;
 			sourceTree = "<group>";
@@ -192,8 +208,6 @@
 				9C1EAE8F2F39771100CB151B /* widget */,
 			);
 			name = widgetExtension;
-			packageProductDependencies = (
-			);
 			productName = widgetExtension;
 			productReference = 9C1EAE892F39771100CB151B /* widgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -213,6 +227,9 @@
 				9C1EAE9E2F39771200CB151B /* PBXTargetDependency */,
 			);
 			name = SunlightTracker;
+			packageProductDependencies = (
+				4BAA4ECC8E5CD0DD6E97762E /* LeeoKit */,
+			);
 			productName = SunlightTracker;
 			productReference = AA000020 /* SunlightTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +262,9 @@
 				ko,
 			);
 			mainGroup = AA000040;
+			packageReferences = (
+				C4162191F09A9470E1D42AC0 /* XCLocalSwiftPackageReference "LeeoKit" */,
+			);
 			productRefGroup = AA000042 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,6 +319,7 @@
 				AA00000B /* NotificationManager.swift in Sources */,
 				AA00000C /* LuxSensor.swift in Sources */,
 				AA00000D /* NearbyActivityManager.swift in Sources */,
+				73C0858EBA499FE5C258728E /* SunlightTrackerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +622,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C4162191F09A9470E1D42AC0 /* XCLocalSwiftPackageReference "LeeoKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../LeeoKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4BAA4ECC8E5CD0DD6E97762E /* LeeoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4162191F09A9470E1D42AC0 /* XCLocalSwiftPackageReference "LeeoKit" */;
+			productName = LeeoKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA000070 /* Project object */;
 }

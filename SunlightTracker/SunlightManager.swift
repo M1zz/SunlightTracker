@@ -83,6 +83,9 @@ class SunlightManager: NSObject, ObservableObject {
         setupLuxObserving()
         setupNearbyObserving()
         startHealthUpdateTimer()
+
+        // 앱 시작 시 조도 센서 자동 활성화
+        startLuxSensor()
     }
     
     // MARK: - Lux Sensor Observation
@@ -169,33 +172,52 @@ class SunlightManager: NSObject, ObservableObject {
         }
     }
 
-    /// 조도 업데이트 처리 - 햇빛 감지 후 확인
+    /// 조도 업데이트 처리 - 앱 실행 중 항상 추적
     private func handleLuxUpdate(_ lux: Double) {
-        guard isTracking, !isConfirmedOutdoor else { return }
+        // 트래킹 상태와 무관하게 조도 기록은 항상 수행
+        recordLuxReading(lux)
 
-        let isBright = lux >= settings.outdoorThresholdLux
+        guard isTracking else { return }
 
-        if isBright {
-            consecutiveSunlightCount += 1
-            consecutiveDarkCount = 0
+        // 확인 후에도 실시간 조도 업데이트
+        if isConfirmedOutdoor {
+            lastKnownLux = lux
 
-            // 연속 밝음 감지 (~30초) → 햇빛 확인, 센서 끄고 타이머 전환
-            if consecutiveSunlightCount >= activationThreshold && currentSession == nil {
-                confirmAndStartTracking(initialLux: lux)
-            }
-
-            // 확인 전 세션 샘플 추가
+            // 세션 샘플 추가
             if var session = currentSession {
                 session.luxSamples.append(lux)
                 session.peakLux = max(session.peakLux, lux)
+                session.averageLux = session.luxSamples.reduce(0, +) / Double(session.luxSamples.count)
                 currentSession = session
             }
         } else {
-            consecutiveDarkCount += 1
-            consecutiveSunlightCount = 0
+            let isBright = lux >= settings.outdoorThresholdLux
+
+            if isBright {
+                consecutiveSunlightCount += 1
+                consecutiveDarkCount = 0
+
+                // 연속 밝음 감지 → 햇빛 확인, 타이머 전환
+                if consecutiveSunlightCount >= activationThreshold && currentSession == nil {
+                    confirmAndStartTracking(initialLux: lux)
+                }
+
+                // 확인 전 세션 샘플 추가
+                if var session = currentSession {
+                    session.luxSamples.append(lux)
+                    session.peakLux = max(session.peakLux, lux)
+                    currentSession = session
+                }
+            } else {
+                consecutiveDarkCount += 1
+                consecutiveSunlightCount = 0
+            }
         }
 
-        // 조도 기록 저장
+    }
+
+    /// 조도 기록 저장 - 트래킹 상태와 무관하게 항상 호출
+    private func recordLuxReading(_ lux: Double) {
         let reading = LuxReading(lux: lux, lightLevel: luxSensor.lightLevel.rawValue)
         todayRecord.luxReadings.append(reading)
 
@@ -206,7 +228,7 @@ class SunlightManager: NSObject, ObservableObject {
 
     // MARK: - Session Management
 
-    /// 햇빛 확인 완료 → 센서 끄고 타이머 기반 트래킹 시작
+    /// 햇빛 확인 완료 → 센서 유지한 채 타이머 기반 트래킹 시작
     private func confirmAndStartTracking(initialLux: Double) {
         let session = SunlightSession(
             averageLux: initialLux,
@@ -220,8 +242,7 @@ class SunlightManager: NSObject, ObservableObject {
         isConfirmedOutdoor = true
         lastKnownLux = initialLux
 
-        // 센서 끄기 (배터리 절약)
-        luxSensor.stopSensing()
+        // 센서는 계속 유지 (실시간 조도 추적)
 
         // 경과 시간 타이머 시작 (30초마다 업데이트)
         confirmedElapsedMinutes = 0
@@ -285,9 +306,36 @@ class SunlightManager: NSObject, ObservableObject {
         updateWidgetData()
     }
     
+    // MARK: - Lux Sensor Lifecycle (앱 실행 중 항상 활성)
+
+    /// 조도 센서 시작 - 앱이 포그라운드에 있는 동안 항상 활성
+    func startLuxSensor() {
+        guard !luxSensor.isActive else { return }
+        luxSensor.sunlightThresholdLux = settings.sunlightThresholdLux
+        luxSensor.outdoorThresholdLux = settings.outdoorThresholdLux
+        luxSensor.startSensing()
+    }
+
+    /// 조도 센서 정지 - 백그라운드 진입 시
+    func stopLuxSensor() {
+        luxSensor.stopSensing()
+    }
+
+    /// 앱 scenePhase 변경 처리
+    func handleScenePhaseChange(_ phase: ScenePhase) {
+        switch phase {
+        case .active:
+            startLuxSensor()
+        case .inactive, .background:
+            stopLuxSensor()
+        @unknown default:
+            break
+        }
+    }
+
     // MARK: - Tracking Control
 
-    /// 센서 활성화 (조도 측정 시작) - 앱 시작 시 자동 호출
+    /// 트래킹 활성화 (햇빛 감지 시작)
     func startTracking() {
         guard !isTracking else { return }
         isTracking = true
@@ -295,9 +343,9 @@ class SunlightManager: NSObject, ObservableObject {
         confirmedElapsedMinutes = 0
         consecutiveSunlightCount = 0
         consecutiveDarkCount = 0
-        luxSensor.sunlightThresholdLux = settings.sunlightThresholdLux
-        luxSensor.outdoorThresholdLux = settings.outdoorThresholdLux
-        luxSensor.startSensing()
+
+        // 센서가 이미 켜져 있지 않으면 시작
+        startLuxSensor()
 
         if settings.nearbyActivityEnabled {
             nearbyManager.startDiscovery()
@@ -305,10 +353,9 @@ class SunlightManager: NSObject, ObservableObject {
         }
     }
 
-    /// 센서 감지 단계 취소 (아직 확인 전)
+    /// 센서 감지 단계 취소 (아직 확인 전, 센서는 유지)
     func cancelDetecting() {
         guard isTracking, !isConfirmedOutdoor else { return }
-        luxSensor.stopSensing()
         isTracking = false
         isSunlightDetected = false
         consecutiveSunlightCount = 0
@@ -330,6 +377,8 @@ class SunlightManager: NSObject, ObservableObject {
         // 세션 종료 및 저장
         endSunlightSession()
 
+        // 센서는 계속 유지 (앱 실행 중 항상 활성)
+
         // Nearby: idle 상태 전파 및 정리
         nearbyManager.updateTrackingPhase("idle")
         nearbyManager.stopDiscovery()
@@ -343,7 +392,7 @@ class SunlightManager: NSObject, ObservableObject {
         consecutiveDarkCount = 0
     }
 
-    /// 내부 센서 비활성화 (레거시 호환)
+    /// 내부 트래킹 비활성화 (센서는 유지)
     func stopTracking() {
         guard isTracking else { return }
 
@@ -354,7 +403,7 @@ class SunlightManager: NSObject, ObservableObject {
             endSunlightSession()
         }
 
-        luxSensor.stopSensing()
+        // 센서는 계속 유지 (앱 실행 중 항상 활성)
 
         // Nearby: idle 상태 전파 및 정리
         nearbyManager.updateTrackingPhase("idle")
@@ -749,7 +798,7 @@ class SunlightManager: NSObject, ObservableObject {
             lastUpdate: Date(),
             isTracking: isTracking,
             isConfirmedOutdoor: isConfirmedOutdoor,
-            currentLux: isConfirmedOutdoor ? lastKnownLux : luxSensor.currentLux,
+            currentLux: luxSensor.isActive ? luxSensor.currentLux : lastKnownLux,
             estimatedBatteryGain: estimatedBatteryGain,
             confirmedElapsedMinutes: confirmedElapsedMinutes
         )

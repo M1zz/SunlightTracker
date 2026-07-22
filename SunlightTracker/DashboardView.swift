@@ -90,7 +90,8 @@ struct DashboardView: View {
         .onAppear {
             weatherService.fetchSimulatedWeather()
             manager.requestLocation()
-            // 앱 시작 시 자동으로 조도 센서 시작
+            // 센서는 SunlightManager init에서 자동 시작됨
+            // 트래킹(햇빛 감지)은 사용자가 시작하거나 자동 감지로 전환
             if !hasAutoStarted && manager.trackingPhase == .idle {
                 manager.startTracking()
                 hasAutoStarted = true

@@ -4,14 +4,15 @@ struct ContentView: View {
     @StateObject private var manager = SunlightManager()
     @StateObject private var weatherService = WeatherService()
     @StateObject private var notificationManager = NotificationManager.shared
-    
+    @Environment(\.scenePhase) private var scenePhase
+
     var body: some View {
         TabView {
             DashboardView(manager: manager, weatherService: weatherService)
                 .tabItem {
                     Label("오늘", systemImage: "leaf.fill")
                 }
-            
+
             HistoryView(manager: manager)
                 .tabItem {
                     Label("기록", systemImage: "chart.bar.fill")
@@ -21,13 +22,16 @@ struct ContentView: View {
                 .tabItem {
                     Label("캘린더", systemImage: "calendar")
                 }
-            
+
             SettingsView(manager: manager, notificationManager: notificationManager)
                 .tabItem {
                     Label("설정", systemImage: "gearshape.fill")
                 }
         }
         .tint(.orange)
+        .onChange(of: scenePhase) { _, newPhase in
+            manager.handleScenePhaseChange(newPhase)
+        }
     }
 }
 

@@ -1,4 +1,5 @@
 import SwiftUI
+import LeeoKit
 
 struct SettingsView: View {
     @ObservedObject var manager: SunlightManager
@@ -151,6 +152,13 @@ struct SettingsView: View {
                     Label("햇빛의 건강 효과", systemImage: "heart.text.square")
                 } footer: {
                     Text("출처: Huberman Lab, BMC Public Health 2025, PMC, Anderson 2024, University of Southampton 연구")
+                }
+
+                // 지원
+                Section {
+                    LeeoSupportSection<SunlightTrackerSpec>()
+                } header: {
+                    Label("지원", systemImage: "heart.text.square")
                 }
 
                 // Data Section
