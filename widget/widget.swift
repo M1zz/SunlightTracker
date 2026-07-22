@@ -451,12 +451,21 @@ struct MiniSunflowerView: View {
 
     private var faceColor: Color {
         switch healthState {
-        case "thriving": return Color(red: 0.4, green: 0.25, blue: 0.0)
-        case "healthy": return Color(red: 0.35, green: 0.22, blue: 0.0)
-        case "wilting": return Color(red: 0.3, green: 0.2, blue: 0.1)
-        case "critical": return Color(red: 0.25, green: 0.18, blue: 0.12)
-        default: return .brown
+        case "thriving": return Color(red: 1.0, green: 0.82, blue: 0.15)
+        case "healthy": return Color(red: 0.97, green: 0.76, blue: 0.2)
+        case "wilting": return Color(red: 0.8, green: 0.62, blue: 0.25)
+        case "critical": return Color(red: 0.55, green: 0.44, blue: 0.24)
+        default: return .yellow
         }
+    }
+
+    // 진갈색 테두리/눈/입 (로고 스타일)
+    private var outlineColor: Color {
+        Color(red: 0.42, green: 0.26, blue: 0.13)
+    }
+
+    private var isHappy: Bool {
+        healthState == "thriving" || healthState == "healthy"
     }
 
     private var petalDroop: Double {
@@ -480,12 +489,55 @@ struct MiniSunflowerView: View {
                     .rotationEffect(.degrees(Double(index) * 45))
             }
 
-            // 중앙 얼굴
-            Circle()
-                .fill(faceColor)
-                .frame(width: size * 0.42, height: size * 0.42)
+            // 중앙 얼굴 (귀여운 캐릭터 - 노란 얼굴 + 진갈색 테두리)
+            ZStack {
+                Circle()
+                    .fill(faceColor)
+                    .overlay(
+                        Circle().strokeBorder(outlineColor, lineWidth: size * 0.028)
+                    )
+
+                // 눈
+                HStack(spacing: size * 0.08) {
+                    Circle().fill(outlineColor)
+                        .frame(width: size * 0.045, height: size * 0.045)
+                    Circle().fill(outlineColor)
+                        .frame(width: size * 0.045, height: size * 0.045)
+                }
+                .offset(y: -size * 0.03)
+
+                // 입 (웃음/시무룩)
+                MiniMouth(happy: isHappy)
+                    .stroke(outlineColor, style: StrokeStyle(lineWidth: size * 0.02, lineCap: .round))
+                    .frame(width: size * 0.1, height: size * 0.05)
+                    .offset(y: size * 0.07)
+            }
+            .frame(width: size * 0.42, height: size * 0.42)
         }
         .frame(width: size, height: size)
+    }
+}
+
+// 미니 해바라기 입 모양 (웃음/시무룩 아치)
+struct MiniMouth: Shape {
+    let happy: Bool
+
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        if happy {
+            path.move(to: CGPoint(x: 0, y: 0))
+            path.addQuadCurve(
+                to: CGPoint(x: rect.width, y: 0),
+                control: CGPoint(x: rect.width / 2, y: rect.height * 2)
+            )
+        } else {
+            path.move(to: CGPoint(x: 0, y: rect.height))
+            path.addQuadCurve(
+                to: CGPoint(x: rect.width, y: rect.height),
+                control: CGPoint(x: rect.width / 2, y: -rect.height)
+            )
+        }
+        return path
     }
 }
 

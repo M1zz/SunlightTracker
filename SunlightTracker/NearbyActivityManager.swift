@@ -14,6 +14,15 @@ class NearbyActivityManager: NSObject, ObservableObject {
     @Published var sharedColorTheme: SharedColorTheme?
     @Published var connectedPeerCount = 0
     @Published var nearbyPeerDistance: Float?
+    @Published var friends: [FriendRecord] = []
+    @Published var connectedPeerNames: [String] = []
+    @Published var pendingFriendRequest: String?   // 처음 만나는 친구 (수락 대기 중인 이름)
+
+    // 함께한 친구 기록
+    private var recordedThisActivity = Set<String>()
+    private var sessionApproved = Set<String>()    // 이번 세션에서 수락한 새 친구
+    private var sessionDeclined = Set<String>()    // 이번 세션에서 거절한 상대 (다시 안 물어봄)
+    private let friendsKey = "friend_records_v1"
 
     // MARK: - MultipeerConnectivity
     private let serviceType = "suntracker-ni"
@@ -35,6 +44,7 @@ class NearbyActivityManager: NSObject, ObservableObject {
     override init() {
         self.myPeerID = MCPeerID(displayName: UIDevice.current.name)
         super.init()
+        loadFriends()
     }
 
     // MARK: - Discovery Control
@@ -66,8 +76,12 @@ class NearbyActivityManager: NSObject, ObservableObject {
         isSharedActivityActive = false
         sharedColorTheme = nil
         connectedPeerCount = 0
+        connectedPeerNames = []
         nearbyPeerDistance = nil
         colorSeed = nil
+        pendingFriendRequest = nil
+        sessionApproved.removeAll()
+        sessionDeclined.removeAll()
     }
 
     // MARK: - Tracking State
@@ -109,16 +123,87 @@ class NearbyActivityManager: NSObject, ObservableObject {
     // MARK: - Shared Activity Evaluation
 
     private func evaluateSharedActivity() {
-        let peerConfirmed = peerTrackingPhases.values.contains("confirmed")
         let localConfirmed = localTrackingPhase == "confirmed"
-        let newActive = localConfirmed && peerConfirmed
+        let confirmedPeerNames = peerTrackingPhases
+            .filter { $0.value == "confirmed" }
+            .map { $0.key.displayName }
+
+        // 처음 만나는 상대(친구 아님 + 아직 수락/거절 안 함)가 있으면 먼저 물어봄
+        if localConfirmed,
+           pendingFriendRequest == nil,
+           let newcomer = confirmedPeerNames.first(where: {
+               !isKnownFriend($0) && !sessionApproved.contains($0) && !sessionDeclined.contains($0)
+           }) {
+            pendingFriendRequest = newcomer
+        }
+
+        // 이미 친구거나 이번에 수락한 상대만 함께 트래킹에 참여
+        let eligible = confirmedPeerNames.filter { isKnownFriend($0) || sessionApproved.contains($0) }
+        let newActive = localConfirmed && !eligible.isEmpty
 
         if newActive && !isSharedActivityActive {
             isSharedActivityActive = true
             negotiateColorSeed()
+            recordEncounters()
         } else if !newActive && isSharedActivityActive {
             isSharedActivityActive = false
+            recordedThisActivity.removeAll()
         }
+    }
+
+    private func isKnownFriend(_ name: String) -> Bool {
+        friends.contains { $0.name == name }
+    }
+
+    /// 처음 만나는 친구 수락 → 함께 트래킹 시작
+    func approvePendingFriend() {
+        guard let name = pendingFriendRequest else { return }
+        sessionApproved.insert(name)
+        pendingFriendRequest = nil
+        evaluateSharedActivity()
+    }
+
+    /// 거절 → 이번 세션 동안 다시 묻지 않음 (기록도 안 남음)
+    func declinePendingFriend() {
+        guard let name = pendingFriendRequest else { return }
+        sessionDeclined.insert(name)
+        pendingFriendRequest = nil
+        evaluateSharedActivity()
+    }
+
+    // MARK: - Friends (함께한 기록)
+
+    /// 함께 트래킹이 성사되면 연결된 친구를 기록 (같은 세션 중복 방지)
+    private func recordEncounters() {
+        guard let session else { return }
+        var changed = false
+        for peer in session.connectedPeers {
+            let name = peer.displayName
+            // 친구이거나 수락한 상대만 기록 (거절/대기 중인 상대는 제외)
+            guard isKnownFriend(name) || sessionApproved.contains(name) else { continue }
+            guard !recordedThisActivity.contains(name) else { continue }
+            recordedThisActivity.insert(name)
+
+            if let idx = friends.firstIndex(where: { $0.name == name }) {
+                friends[idx].meetCount += 1
+                friends[idx].lastMet = Date()
+            } else {
+                friends.append(FriendRecord(name: name, meetCount: 1, lastMet: Date()))
+            }
+            changed = true
+        }
+        if changed { saveFriends() }
+    }
+
+    private func loadFriends() {
+        guard let data = UserDefaults.standard.data(forKey: friendsKey),
+              let saved = try? JSONDecoder().decode([FriendRecord].self, from: data) else { return }
+        friends = saved
+    }
+
+    private func saveFriends() {
+        guard let data = try? JSONEncoder().encode(friends) else { return }
+        UserDefaults.standard.set(data, forKey: friendsKey)
     }
 
     private func negotiateColorSeed() {
@@ -200,6 +285,7 @@ extension NearbyActivityManager: MCSessionDelegate {
     nonisolated func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         Task { @MainActor in
             self.connectedPeerCount = session.connectedPeers.count
+            self.connectedPeerNames = session.connectedPeers.map(\.displayName)
 
             switch state {
             case .connected:
@@ -288,3 +374,11 @@ extension NearbyActivityManager: NISessionDelegate {
     nonisolated func sessionSuspensionEnded(_ session: NISession) {}
 }
 #endif
+
+// MARK: - 함께한 친구 기록 모델
+struct FriendRecord: Codable, Identifiable {
+    var id: String { name }
+    let name: String
+    var meetCount: Int
+    var lastMet: Date
+}

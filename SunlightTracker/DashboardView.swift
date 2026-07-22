@@ -8,7 +8,8 @@ struct DashboardView: View {
     @State private var hasAutoStarted = false
     @State private var showBatteryTransfer = false
     @State private var transferAmount: Double = 0
-    @State private var currentTip: HealthTip = HealthTip.allTips.randomElement()!
+    @State private var transferMax: Double = 1   // 시트 오픈 시점 스냅샷 (라이브 변경으로 인한 Slider 범위 붕괴 방지)
+    @State private var sensingPulse = false
 
     private var currentSessionMinutes: Int {
         guard let session = manager.currentSession else { return 0 }
@@ -28,65 +29,46 @@ struct DashboardView: View {
     }
 
     var body: some View {
+        NavigationStack {
         ScrollView {
-            VStack(spacing: 20) {
-                // 해바라기 상태
+            VStack(spacing: 16) {
+                // 해바라기 (히어로)
                 sunProgressSection
 
                 // 함께 트래킹 배지
                 if manager.nearbyManager.isSharedActivityActive {
                     NearbyActivityBadge(
+                        friendName: manager.nearbyManager.connectedPeerNames.first,
                         peerCount: manager.nearbyManager.connectedPeerCount,
                         distance: manager.nearbyManager.nearbyPeerDistance
                     )
                 }
 
-                // 조도 게이지 (감지 중 또는 확인 후 트래킹 중)
-                if manager.trackingPhase == .detecting || manager.trackingPhase == .confirmed {
-                    luxGaugeSection
-                }
+                // 오늘 햇빛 진행도 (컴팩트)
+                todayProgressCard
 
-                // 배터리 상태
-                batterySection
-
-                // 확인 후 트래킹 중 - 경과 시간 & 종료 버튼
+                // 트래킹: 진행 중 카드 or 시작 버튼
                 if manager.trackingPhase == .confirmed {
-                    confirmedTrackingSection
-                }
-
-                // 배터리 전달 버튼
-                if manager.batteryStatus.chargedAmount > 0 {
-                    batteryTransferButton
-                }
-
-                // 건강 조언 카드
-                healthAdviceCard
-
-                // 감지 단계 또는 대기 상태 버튼
-                if manager.trackingPhase != .confirmed {
+                    trackingCard
+                } else {
                     trackingButton
+                    if manager.trackingPhase == .detecting {
+                        compactLuxCard
+                    }
                 }
 
-                // 수동 입력
+                // 배터리 (전달 버튼 내장)
+                batteryCard
+
+                // 수동 입력 (보조 액션)
                 manualEntryButton
-
-                todayStatsSection
-
-                if let sunTimes = manager.sunTimes {
-                    sunTimesSection(sunTimes)
-                }
-
-                // 오늘 세션 목록
-                if !manager.todayRecord.sessions.isEmpty {
-                    todaySessionsSection
-                }
-
-                weeklyPreviewSection
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 30)
         }
         .background(Color(.systemGroupedBackground))
+        .navigationTitle(AppConfig.appName)
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             weatherService.fetchSimulatedWeather()
             manager.requestLocation()
@@ -96,6 +78,8 @@ struct DashboardView: View {
                 manager.startTracking()
                 hasAutoStarted = true
             }
+            // 확인 후 트래킹 중이면 화면 진입 시 즉시 재측정
+            manager.refreshLuxReading()
         }
         .sheet(isPresented: $showManualEntry) {
             manualEntrySheet
@@ -103,6 +87,20 @@ struct DashboardView: View {
         .sheet(isPresented: $showBatteryTransfer) {
             batteryTransferSheet
         }
+        // 처음 만나는 친구와 함께 받기 전 확인
+        .alert(
+            "\u{1F33B} \(manager.nearbyManager.pendingFriendRequest ?? "친구")이(가) 옆에서 햇빛을 받고 있어요!",
+            isPresented: Binding(
+                get: { manager.nearbyManager.pendingFriendRequest != nil },
+                set: { if !$0 { manager.nearbyManager.declinePendingFriend() } }
+            )
+        ) {
+            Button("같이 받기 \u{1F49B}") { manager.nearbyManager.approvePendingFriend() }
+            Button("다음에", role: .cancel) { manager.nearbyManager.declinePendingFriend() }
+        } message: {
+            Text("같이 받으면 꽃잎이 알록달록 물들고, 친구 탭에 함께한 기록이 남아요.")
+        }
+        } // NavigationStack
     }
 
     // MARK: - 조도 배터리 게이지
@@ -125,127 +123,209 @@ struct DashboardView: View {
         return .gray
     }
 
-    private var luxGaugeSection: some View {
-        VStack(spacing: 12) {
-            HStack {
-                Image(systemName: manager.isConfirmedOutdoor ? "checkmark.circle.fill" : "sun.max.fill")
-                    .foregroundColor(batteryColor)
+    private var luxEmoji: String {
+        switch displayLux {
+        case ..<50: return "\u{1F319}"
+        case 50..<300: return "\u{1F4A1}"
+        case 300..<1000: return "\u{26C5}"
+        case 1000..<10000: return "\u{2600}\u{FE0F}"
+        default: return "\u{1F506}"
+        }
+    }
+
+    // 지금 밝기 카드 (감지 중)
+    private var compactLuxCard: some View {
+        HStack(spacing: 10) {
+            Text(luxEmoji)
+                .font(.title3)
+            VStack(alignment: .leading, spacing: 2) {
                 Text(displayLightLevel)
-                    .font(.headline)
+                    .font(.subheadline.weight(.bold))
                     .foregroundColor(batteryColor)
-                Spacer()
                 Text("\(displayLux.luxFormatted) Lux")
-                    .font(.title3.bold())
-                    .foregroundColor(batteryColor)
+                    .font(.system(.caption, design: .rounded))
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+            sensingBadge
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
+    }
+
+    // 측정 상태 배지 (측정 중 펄스 / 쉬는 중)
+    private var sensingBadge: some View {
+        Group {
+            if manager.luxSensor.isActive {
+                HStack(spacing: 5) {
+                    Circle()
+                        .fill(Color.green)
+                        .frame(width: 7, height: 7)
+                        .opacity(sensingPulse ? 1.0 : 0.3)
+                        .animation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true), value: sensingPulse)
+                        .onAppear { sensingPulse = true }
+                        .onDisappear { sensingPulse = false }
+                    Text("측정 중")
+                        .font(.caption2.weight(.semibold))
+                        .foregroundColor(.green)
+                }
+            } else {
+                Text("잠시 쉬는 중 \u{1F4A4}")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
+            }
+        }
+    }
+
+    // MARK: - 오늘 햇빛 진행도 (컴팩트)
+    private var todayProgressCard: some View {
+        VStack(spacing: 10) {
+            HStack {
+                Text("\u{2600}\u{FE0F} 오늘의 햇빛")
+                    .font(.subheadline.weight(.bold))
+                Spacer()
+                if displayProgress >= 1.0 {
+                    Text("목표 달성! \u{1F389}")
+                        .font(.system(.subheadline, design: .rounded).weight(.bold))
+                        .foregroundColor(.green)
+                } else {
+                    Text("\(displayMinutes) / \(manager.settings.dailyGoalMinutes)분")
+                        .font(.system(.subheadline, design: .rounded).weight(.bold))
+                        .foregroundColor(.orange)
+                }
             }
 
-            // 조도 바 게이지
-            VStack(spacing: 8) {
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        // 배경 바 (3단계 그라데이션)
-                        LinearGradient(
-                            colors: [
-                                Color.green.opacity(0.3),
-                                Color.orange.opacity(0.3),
-                                Color.red.opacity(0.3)
-                            ],
-                            startPoint: .leading,
-                            endPoint: .trailing
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color.orange.opacity(0.12))
+                    Capsule()
+                        .fill(
+                            LinearGradient(
+                                colors: displayProgress >= 1.0 ?
+                                    [Color(red: 0.4, green: 0.75, blue: 0.25), .green] :
+                                    [.yellow, .orange],
+                                startPoint: .leading, endPoint: .trailing
+                            )
                         )
-                        .frame(height: 32)
-                        .cornerRadius(16)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color.gray.opacity(0.2), lineWidth: 1)
-                        )
+                        .frame(width: max(12, geo.size.width * displayProgress))
+                        .animation(.easeInOut(duration: 0.8), value: displayProgress)
+                }
+            }
+            .frame(height: 12)
+        }
+        .padding(16)
+        .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
+    }
 
-                        // 구간 구분선
-                        HStack(spacing: 0) {
-                            Spacer()
-                                .frame(width: geo.size.width * 0.33)
-                            Rectangle()
-                                .fill(Color.white.opacity(0.5))
-                                .frame(width: 2, height: 32)
-                            Spacer()
-                                .frame(width: geo.size.width * 0.34)
-                            Rectangle()
-                                .fill(Color.white.opacity(0.5))
-                                .frame(width: 2, height: 32)
-                            Spacer()
-                        }
+    // MARK: - 트래킹 진행 중 카드
+    private var trackingCard: some View {
+        VStack(spacing: 14) {
+            HStack(spacing: 8) {
+                Circle()
+                    .fill(Color.green)
+                    .frame(width: 10, height: 10)
+                    .modifier(PulseModifier())
+                Text("햇빛 받는 중 \u{1F31E}")
+                    .font(.headline)
+                    .foregroundColor(Color(red: 0.3, green: 0.65, blue: 0.2))
+                Spacer()
+                Text("\(manager.confirmedElapsedMinutes)분")
+                    .font(.system(.title3, design: .rounded).weight(.bold))
+            }
 
-                        // 현재 조도 인디케이터 (다이아몬드)
-                        let position = luxToPosition(displayLux, totalWidth: geo.size.width)
-                        ZStack {
-                            // 그림자
-                            Diamond()
-                                .fill(Color.black.opacity(0.2))
-                                .frame(width: 20, height: 20)
-                                .offset(x: position, y: 2)
-
-                            // 메인 다이아몬드
-                            Diamond()
-                                .fill(batteryColor)
-                                .frame(width: 18, height: 18)
-                                .overlay(
-                                    Diamond()
-                                        .stroke(Color.white, lineWidth: 2)
-                                        .frame(width: 18, height: 18)
-                                )
-                                .offset(x: position)
-                                .animation(.spring(response: 0.6, dampingFraction: 0.8), value: displayLux)
-                        }
+            HStack {
+                HStack(spacing: 6) {
+                    Text(luxEmoji)
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(displayLightLevel)
+                            .font(.caption.weight(.semibold))
+                        Text("\(displayLux.luxFormatted) Lux")
+                            .font(.system(.caption2, design: .rounded))
+                            .foregroundColor(.secondary)
                     }
                 }
-                .frame(height: 32)
+                Spacer()
+                sensingBadge
+                Spacer()
+                HStack(spacing: 4) {
+                    Text("\u{26A1}")
+                    Text("+\(Int(manager.estimatedBatteryGain))%")
+                        .font(.system(.subheadline, design: .rounded).weight(.bold))
+                        .foregroundColor(.green)
+                }
+            }
+            .padding(12)
+            .background(RoundedRectangle(cornerRadius: 14).fill(Color.green.opacity(0.08)))
 
-                // 레이블
-                HStack(spacing: 0) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("실내")
-                            .font(.system(size: 10, weight: .semibold))
-                            .foregroundColor(.green)
-                        Text("0-300")
-                            .font(.system(size: 8))
-                            .foregroundColor(.secondary)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                    VStack(spacing: 2) {
-                        Text("실외")
-                            .font(.system(size: 10, weight: .semibold))
-                            .foregroundColor(.orange)
-                        Text("300-1k")
-                            .font(.system(size: 8))
-                            .foregroundColor(.secondary)
-                    }
+            Button(action: {
+                withAnimation(.spring(duration: 0.3)) { manager.finishTracking() }
+            }) {
+                Text("오늘은 그만 받기")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
-
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text("햇빛")
-                            .font(.system(size: 10, weight: .semibold))
-                            .foregroundColor(.red)
-                        Text("1k+")
-                            .font(.system(size: 8))
-                            .foregroundColor(.secondary)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                }
+                    .padding(.vertical, 12)
+                    .background(Capsule().fill(Color(red: 0.3, green: 0.7, blue: 0.2)))
             }
         }
         .padding(16)
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: 20)
                 .fill(Color(.secondarySystemGroupedBackground))
+                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.green.opacity(0.35), lineWidth: 1.5))
         )
     }
 
-    // 조도 값을 바 위치로 변환
-    private func luxToPosition(_ lux: Double, totalWidth: Double) -> Double {
-        let maxLux = 10000.0
-        let ratio = min(lux / maxLux, 1.0)
-        return (totalWidth - 18) * ratio // 18은 다이아몬드 크기
+    // MARK: - 배터리 카드 (전달 버튼 내장)
+    private var batteryCard: some View {
+        VStack(spacing: 12) {
+            HStack {
+                Text("\u{26A1} 모은 햇빛")
+                    .font(.subheadline.weight(.bold))
+                Spacer()
+                Text(formattedPercent(manager.batteryStatus.chargedAmount) + "%")
+                    .font(.system(.title3, design: .rounded).weight(.bold))
+                    .foregroundColor(.green)
+            }
+
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color.green.opacity(0.12))
+                    Capsule()
+                        .fill(LinearGradient(
+                            colors: [Color(red: 0.5, green: 0.85, blue: 0.3), .green],
+                            startPoint: .leading, endPoint: .trailing
+                        ))
+                        .frame(width: manager.batteryStatus.chargedAmount > 0 ?
+                               max(12, geo.size.width * manager.batteryStatus.chargedAmount / 100) : 0)
+                        .animation(.easeInOut(duration: 0.3), value: manager.batteryStatus.chargedAmount)
+                }
+            }
+            .frame(height: 12)
+
+            if manager.batteryStatus.chargedAmount > 0 {
+                Button(action: {
+                    transferAmount = manager.batteryStatus.chargedAmount
+                    transferMax = max(manager.batteryStatus.chargedAmount, 0.1)
+                    showBatteryTransfer = true
+                }) {
+                    Text("\u{1F33B} 해바라기에게 주기")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 12)
+                        .background(Capsule().fill(LinearGradient(
+                            colors: [Color(red: 0.3, green: 0.7, blue: 0.2), .green],
+                            startPoint: .leading, endPoint: .trailing
+                        )))
+                }
+            }
+        }
+        .padding(16)
+        .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
     }
 
     // MARK: - Sun Progress (Sunflower)
@@ -271,7 +351,9 @@ struct DashboardView: View {
                     SunAnimationView(
                         health: manager.sunflowerHealth.currentEnergy,
                         isTracking: manager.isSunlightDetected || manager.isConfirmedOutdoor,
-                        petalColorState: manager.petalColorState
+                        petalColorState: manager.petalColorState,
+                        friendName: manager.nearbyManager.isSharedActivityActive ?
+                            manager.nearbyManager.connectedPeerNames.first : nil
                     )
                     .frame(height: 280)
                     .scaleEffect(isSunflowerPressed ? 1.15 : 1.2)
@@ -357,31 +439,29 @@ struct DashboardView: View {
                 }
             }
 
-            // 해바라기 상태 표시
-            HStack(spacing: 8) {
-                Image(systemName: healthIcon)
-                    .foregroundColor(healthColor)
+            // 해바라기 상태 (귀여운 캡슐)
+            HStack(spacing: 6) {
+                Text(healthEmoji)
                 Text(manager.sunflowerHealth.healthState.rawValue)
-                    .font(.headline)
-                Spacer()
-                Text("에너지: \(Int(manager.sunflowerHealth.currentEnergy))%")
-                    .font(.subheadline)
+                    .font(.subheadline.weight(.bold))
+                    .foregroundColor(healthColor)
+                Text("에너지 \(Int(manager.sunflowerHealth.currentEnergy))%")
+                    .font(.system(.subheadline, design: .rounded))
                     .foregroundColor(.secondary)
             }
-            .padding(12)
-            .frame(maxWidth: .infinity)
-            .background(RoundedRectangle(cornerRadius: 12).fill(healthColor.opacity(0.1)))
             .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+            .background(Capsule().fill(healthColor.opacity(0.12)))
         }
         .padding(.vertical, 8)
     }
 
-    private var healthIcon: String {
+    private var healthEmoji: String {
         switch manager.sunflowerHealth.healthState {
-        case .thriving: return "sparkles"
-        case .healthy: return "leaf.fill"
-        case .wilting: return "exclamationmark.triangle.fill"
-        case .critical: return "exclamationmark.octagon.fill"
+        case .thriving: return "\u{2728}"
+        case .healthy: return "\u{1F331}"
+        case .wilting: return "\u{1F622}"
+        case .critical: return "\u{1F940}"
         }
     }
 
@@ -394,118 +474,10 @@ struct DashboardView: View {
         }
     }
 
-    // MARK: - Battery Section
-    private var batterySection: some View {
-        VStack(spacing: 12) {
-            HStack {
-                Image(systemName: "bolt.fill")
-                    .foregroundColor(.green)
-                Text("충전된 배터리")
-                    .font(.headline)
-                Spacer()
-                Text("\(Int(manager.batteryStatus.chargedAmount))%")
-                    .font(.title2.bold())
-                    .foregroundColor(.green)
-            }
-
-            // 5등분 배터리 세그먼트
-            HStack(spacing: 6) {
-                ForEach(0..<5, id: \.self) { index in
-                    let segmentThreshold = Double((index + 1) * 20)
-                    let isFilled = manager.batteryStatus.chargedAmount >= segmentThreshold - 10
-
-                    if index == 4 {
-                        // 마지막 칸 - 배터리 팁 모양
-                        HStack(spacing: 0) {
-                            RoundedRectangle(cornerRadius: 6)
-                                .fill(isFilled ?
-                                    LinearGradient(
-                                        colors: [.green, Color(red: 0.5, green: 0.85, blue: 0.3)],
-                                        startPoint: .bottom, endPoint: .top
-                                    ) :
-                                    LinearGradient(
-                                        colors: [Color.gray.opacity(0.2), Color.gray.opacity(0.2)],
-                                        startPoint: .bottom, endPoint: .top
-                                    )
-                                )
-                                .frame(height: 40)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 6)
-                                        .stroke(Color.green.opacity(0.3), lineWidth: 1)
-                                )
-
-                            // 배터리 팁
-                            RoundedRectangle(cornerRadius: 3)
-                                .fill(isFilled ? Color.green : Color.gray.opacity(0.3))
-                                .frame(width: 4, height: 20)
-                                .padding(.leading, 2)
-                        }
-                        .animation(.easeInOut(duration: 0.3), value: manager.batteryStatus.chargedAmount)
-                    } else {
-                        // 일반 칸
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(isFilled ?
-                                LinearGradient(
-                                    colors: [.green, Color(red: 0.5, green: 0.85, blue: 0.3)],
-                                    startPoint: .bottom, endPoint: .top
-                                ) :
-                                LinearGradient(
-                                    colors: [Color.gray.opacity(0.2), Color.gray.opacity(0.2)],
-                                    startPoint: .bottom, endPoint: .top
-                                )
-                            )
-                            .frame(height: 40)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 6)
-                                    .stroke(Color.green.opacity(0.3), lineWidth: 1)
-                            )
-                            .animation(.easeInOut(duration: 0.3), value: manager.batteryStatus.chargedAmount)
-                    }
-                }
-            }
-        }
-        .padding(16)
-        .background(RoundedRectangle(cornerRadius: 16).fill(Color(.secondarySystemGroupedBackground)))
-    }
-
-    // MARK: - Battery Transfer Button
-    private var batteryTransferButton: some View {
-        Button(action: {
-            transferAmount = manager.batteryStatus.chargedAmount
-            showBatteryTransfer = true
-        }) {
-            HStack(spacing: 12) {
-                Image(systemName: "arrow.right.circle.fill")
-                    .font(.title2)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("배터리 전달하기")
-                        .font(.headline)
-                    Text("해바라기에게 에너지를 전달하세요")
-                        .font(.caption)
-                        .opacity(0.8)
-                }
-
-                Spacer()
-
-                Text("\(Int(manager.batteryStatus.chargedAmount))%")
-                    .font(.title3.bold())
-                    .foregroundColor(.white.opacity(0.9))
-            }
-            .padding(.horizontal, 24)
-            .padding(.vertical, 16)
-            .foregroundColor(.white)
-            .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(LinearGradient(
-                        colors: [Color(red: 0.3, green: 0.7, blue: 0.2), .green],
-                        startPoint: .leading, endPoint: .trailing
-                    ))
-            )
-            .shadow(color: Color.green.opacity(0.3), radius: 8, y: 4)
-        }
-        .disabled(manager.batteryStatus.chargedAmount <= 0)
-        .opacity(manager.batteryStatus.chargedAmount > 0 ? 1.0 : 0.5)
+    /// 1% 미만은 소수점 한 자리로 표기 (0.4% 등)
+    private func formattedPercent(_ value: Double) -> String {
+        if value > 0 && value < 1 { return String(format: "%.1f", value) }
+        return "\(Int(value))"
     }
 
     // MARK: - Battery Transfer Sheet
@@ -547,23 +519,23 @@ struct DashboardView: View {
                     .background(Color(.tertiarySystemGroupedBackground))
                     .cornerRadius(12)
 
-                    Text("전달량: \(Int(transferAmount))%")
+                    Text("전달량: \(formattedPercent(transferAmount))%")
                         .font(.system(size: 48, weight: .bold, design: .rounded))
                         .foregroundColor(.green)
 
-                    Slider(value: $transferAmount, in: 0...manager.batteryStatus.chargedAmount, step: 1)
+                    Slider(value: $transferAmount, in: 0...transferMax)
                         .tint(.green)
 
                     HStack {
                         Text("0%").font(.caption2).foregroundColor(.secondary)
                         Spacer()
                         Button("전체") {
-                            transferAmount = manager.batteryStatus.chargedAmount
+                            transferAmount = transferMax
                         }
                         .font(.caption.bold())
                         .foregroundColor(.green)
                         Spacer()
-                        Text("\(Int(manager.batteryStatus.chargedAmount))%").font(.caption2).foregroundColor(.secondary)
+                        Text(formattedPercent(transferMax) + "%").font(.caption2).foregroundColor(.secondary)
                     }
                 }
                 .padding(.horizontal)
@@ -597,174 +569,6 @@ struct DashboardView: View {
         .presentationDetents([.medium, .large])
     }
 
-    // MARK: - Health Advice Card
-    private var healthAdviceCard: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            // 랜덤 건강 팁
-            VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 8) {
-                    Image(systemName: "lightbulb.fill")
-                        .foregroundColor(.orange)
-                        .font(.caption)
-                    Text("오늘의 건강 팁")
-                        .font(.caption.bold())
-                        .foregroundColor(.orange)
-
-                    Spacer()
-
-                    Button(action: {
-                        currentTip = manager.getRandomHealthTip()
-                    }) {
-                        Image(systemName: "arrow.clockwise")
-                            .font(.caption)
-                            .foregroundColor(.blue)
-                    }
-                }
-
-                HStack(spacing: 12) {
-                    Image(systemName: currentTip.icon)
-                        .font(.title2)
-                        .foregroundColor(Color(hex: currentTip.color) ?? .blue)
-                        .frame(width: 44, height: 44)
-                        .background(Circle().fill((Color(hex: currentTip.color) ?? .blue).opacity(0.15)))
-
-                    VStack(alignment: .leading, spacing: 4) {
-                        HStack(spacing: 6) {
-                            Text(currentTip.category.rawValue)
-                                .font(.system(size: 10))
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 2)
-                                .background(Capsule().fill(Color(hex: currentTip.color) ?? .blue))
-
-                            Text(currentTip.title)
-                                .font(.subheadline.bold())
-                                .foregroundColor(.primary)
-                        }
-                    }
-                }
-
-                Text(currentTip.description)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .lineLimit(4)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-
-            if let achieved = manager.currentAdvice(for: displayMinutes) {
-                Divider()
-
-                // 달성한 효과
-                HStack(spacing: 10) {
-                    Image(systemName: achieved.icon)
-                        .font(.title3)
-                        .foregroundColor(.white)
-                        .frame(width: 36, height: 36)
-                        .background(Circle().fill(Color.green))
-
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("\(displayMinutes)분 달성!")
-                            .font(.caption.bold())
-                            .foregroundColor(.green)
-                        Text(achieved.title)
-                            .font(.caption)
-                    }
-                }
-
-                Text(achieved.description)
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-                    .lineLimit(2)
-            }
-
-            if let next = manager.nextMilestoneAdvice(for: displayMinutes) {
-                HStack(spacing: 10) {
-                    Image(systemName: next.advice.icon)
-                        .font(.caption)
-                        .foregroundColor(.orange)
-                        .frame(width: 24, height: 24)
-                        .background(Circle().fill(Color.orange.opacity(0.15)))
-
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("\(next.remainingMinutes)분 후")
-                            .font(.caption2.bold())
-                            .foregroundColor(.orange)
-                        Text(next.advice.title)
-                            .font(.caption2)
-                            .foregroundColor(.secondary)
-                    }
-
-                    Spacer()
-                }
-            }
-
-            // 동기부여 메시지
-            Text(manager.motivationalMessage)
-                .font(.caption)
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 8)
-                .padding(.horizontal, 12)
-                .background(
-                    LinearGradient(
-                        colors: [Color(red: 0.3, green: 0.7, blue: 0.2), Color(red: 0.9, green: 0.8, blue: 0.1)],
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    )
-                    .cornerRadius(10)
-                )
-        }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(.secondarySystemGroupedBackground))
-        )
-    }
-
-    // MARK: - Confirmed Tracking Section (센서 꺼짐, 타이머 진행 중)
-    private var confirmedTrackingSection: some View {
-        VStack(spacing: 12) {
-            // 트래킹 상태
-            HStack(spacing: 8) {
-                Circle()
-                    .fill(Color.green)
-                    .frame(width: 10, height: 10)
-                    .modifier(PulseModifier())
-                Text("햇빛 트래킹 중")
-                    .font(.headline)
-                    .foregroundColor(Color(red: 0.3, green: 0.65, blue: 0.2))
-                Spacer()
-                Text("\(manager.confirmedElapsedMinutes)분 경과")
-                    .font(.subheadline.bold())
-                    .foregroundColor(.primary)
-            }
-
-            // 실시간 충전 예상량
-            HStack {
-                Image(systemName: "bolt.fill")
-                    .foregroundColor(.yellow)
-                Text("예상 충전량:")
-                    .font(.subheadline)
-                Spacer()
-                Text("+\(Int(manager.estimatedBatteryGain))%")
-                    .font(.headline.bold())
-                    .foregroundColor(.green)
-            }
-            .padding(12)
-            .background(Color.green.opacity(0.1))
-            .cornerRadius(10)
-        }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(.secondarySystemGroupedBackground))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.green.opacity(0.4), lineWidth: 2)
-                )
-        )
-    }
-
     // MARK: - Tracking Button (감지 or 대기 상태)
     private var trackingButton: some View {
         Button(action: {
@@ -774,37 +578,29 @@ struct DashboardView: View {
                 manager.startTracking()
             }
         }) {
-            HStack(spacing: 12) {
-                Image(systemName: manager.trackingPhase == .detecting ? "stop.circle.fill" : "camera.metering.spot")
-                    .font(.title2)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(manager.trackingPhase == .detecting ? "감지 중지" : "조도 센서 시작")
-                        .font(.headline)
-                    Text(manager.trackingPhase == .detecting ?
-                         "해바라기가 햇빛을 기다리고 있어요..." :
-                         "카메라로 주변 밝기를 측정합니다")
-                        .font(.caption)
-                        .opacity(0.8)
-                }
-
-                Spacer()
-
+            HStack(spacing: 10) {
                 if manager.trackingPhase == .detecting {
                     Circle()
-                        .fill(Color.white.opacity(0.5))
+                        .fill(Color.white.opacity(0.7))
                         .frame(width: 10, height: 10)
                         .modifier(PulseModifier())
+                    Text("햇빛 찾는 중... 탭하면 중지")
+                        .font(.headline)
+                } else {
+                    Text("\u{2600}\u{FE0F}")
+                        .font(.title3)
+                    Text("햇빛 받으러 가기")
+                        .font(.headline)
                 }
             }
-            .padding(.horizontal, 24)
+            .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .foregroundColor(.white)
             .background(
-                RoundedRectangle(cornerRadius: 16)
+                Capsule()
                     .fill(manager.trackingPhase == .detecting ?
-                          LinearGradient(colors: [.blue, .purple], startPoint: .leading, endPoint: .trailing) :
-                          LinearGradient(colors: [.orange, Color(red: 1.0, green: 0.85, blue: 0.1)], startPoint: .leading, endPoint: .trailing)
+                          LinearGradient(colors: [.blue, .cyan], startPoint: .leading, endPoint: .trailing) :
+                          LinearGradient(colors: [.orange, Color(red: 1.0, green: 0.75, blue: 0.1)], startPoint: .leading, endPoint: .trailing)
                     )
             )
             .shadow(color: (manager.trackingPhase == .detecting ? Color.blue : Color.orange).opacity(0.3), radius: 8, y: 4)
@@ -814,12 +610,14 @@ struct DashboardView: View {
     // MARK: - Manual Entry
     private var manualEntryButton: some View {
         Button(action: { showManualEntry = true }) {
-            HStack {
-                Image(systemName: "plus.circle")
-                Text("수동으로 시간 추가")
-                    .font(.subheadline)
+            HStack(spacing: 6) {
+                Image(systemName: "plus.circle.fill")
+                    .font(.footnote)
+                Text("야외 시간 직접 추가")
+                    .font(.footnote.weight(.medium))
             }
-            .foregroundColor(.orange)
+            .foregroundColor(.secondary)
+            .padding(.vertical, 8)
         }
     }
 
@@ -875,234 +673,7 @@ struct DashboardView: View {
         .presentationDetents([.medium])
     }
 
-    // MARK: - Today Stats
-    private var todayStatsSection: some View {
-        VStack(spacing: 12) {
-            // 햇빛 시간 반원 레이더 게이지
-            VStack(spacing: 16) {
-                HStack {
-                    Image(systemName: "sun.max.fill")
-                        .foregroundColor(.orange)
-                    Text("오늘의 햇빛")
-                        .font(.headline)
-                    Spacer()
-                    Text("\(displayMinutes) / \(manager.settings.dailyGoalMinutes)분")
-                        .font(.subheadline.bold())
-                        .foregroundColor(displayProgress >= 1.0 ? .green : .orange)
-                }
-
-                // 반원 레이더 게이지
-                ZStack {
-                    // 배경 반원 (회색)
-                    SemicircleShape()
-                        .stroke(Color.gray.opacity(0.2), lineWidth: 20)
-                        .frame(height: 120)
-
-                    // 진행도 반원
-                    SemicircleShape()
-                        .trim(from: 0, to: min(displayProgress, 1.0))
-                        .stroke(
-                            LinearGradient(
-                                colors: displayProgress >= 1.0 ?
-                                    [.green, Color(red: 0.3, green: 0.7, blue: 0.2)] :
-                                    [.orange, .yellow],
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            ),
-                            style: StrokeStyle(lineWidth: 20, lineCap: .round)
-                        )
-                        .frame(height: 120)
-                        .rotationEffect(.degrees(-90))
-                        .animation(.easeInOut(duration: 0.8), value: displayProgress)
-
-                    // 중앙 텍스트
-                    VStack(spacing: 4) {
-                        Text("\(Int(displayProgress * 100))%")
-                            .font(.system(size: 36, weight: .bold))
-                            .foregroundColor(displayProgress >= 1.0 ? .green : .orange)
-
-                        if displayProgress >= 1.0 {
-                            HStack(spacing: 4) {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .font(.caption)
-                                Text("달성!")
-                                    .font(.caption.bold())
-                            }
-                            .foregroundColor(.green)
-                        }
-                    }
-                    .offset(y: 20)
-                }
-                .padding(.vertical, 10)
-            }
-            .padding(16)
-            .background(Color(.secondarySystemGroupedBackground))
-            .cornerRadius(16)
-
-            // 추가 통계
-            HStack(spacing: 12) {
-                StatCard(icon: "light.max", title: "최고 조도",
-                         value: manager.todayRecord.peakLux.luxFormatted + " lx", color: .yellow)
-                StatCard(icon: "number", title: "세션", value: "\(manager.todayRecord.sessions.count)회", color: .purple)
-            }
-        }
-    }
-
-    // MARK: - Sun Times
-    private func sunTimesSection(_ sunTimes: SunTimes) -> some View {
-        HStack(spacing: 0) {
-            VStack(spacing: 6) {
-                Image(systemName: "sunrise.fill").font(.title2).foregroundColor(.orange)
-                Text("일출").font(.caption).foregroundColor(.secondary)
-                Text(sunTimes.sunrise.timeString).font(.subheadline.bold())
-            }
-            .frame(maxWidth: .infinity)
-
-            Rectangle().fill(Color.gray.opacity(0.2)).frame(width: 1, height: 50)
-
-            VStack(spacing: 6) {
-                Image(systemName: "sun.max.fill").font(.title2).foregroundColor(.yellow)
-                Text("일조시간").font(.caption).foregroundColor(.secondary)
-                Text(sunTimes.daylightDescription).font(.subheadline.bold())
-            }
-            .frame(maxWidth: .infinity)
-
-            Rectangle().fill(Color.gray.opacity(0.2)).frame(width: 1, height: 50)
-
-            VStack(spacing: 6) {
-                Image(systemName: "sunset.fill").font(.title2).foregroundColor(.red)
-                Text("일몰").font(.caption).foregroundColor(.secondary)
-                Text(sunTimes.sunset.timeString).font(.subheadline.bold())
-            }
-            .frame(maxWidth: .infinity)
-        }
-        .padding(.vertical, 16)
-        .background(Color(.secondarySystemGroupedBackground))
-        .cornerRadius(16)
-    }
-
-    // MARK: - Today Sessions
-    private var todaySessionsSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("오늘의 세션")
-                .font(.headline)
-
-            ForEach(manager.todayRecord.sessions) { session in
-                HStack(spacing: 12) {
-                    Image(systemName: session.autoDetected ? "camera.metering.spot" : "hand.tap")
-                        .font(.caption)
-                        .foregroundColor(session.autoDetected ? .orange : .blue)
-                        .frame(width: 24)
-
-                    VStack(alignment: .leading, spacing: 2) {
-                        HStack {
-                            Text(session.startTime.shortTimeString)
-                            if let end = session.endTime {
-                                Text("→ \(end.shortTimeString)")
-                            }
-                            Text("(\(session.durationMinutes)분)")
-                                .foregroundColor(.secondary)
-                        }
-                        .font(.subheadline)
-
-                        HStack(spacing: 8) {
-                            Text(session.luxDescription)
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("평균 \(Int(session.averageLux)) lx")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("최고 \(Int(session.peakLux)) lx")
-                                .font(.caption)
-                                .foregroundColor(.orange)
-                        }
-                    }
-
-                    Spacer()
-                }
-                .padding(10)
-                .background(Color(.tertiarySystemGroupedBackground))
-                .cornerRadius(10)
-            }
-        }
-        .padding(16)
-        .background(Color(.secondarySystemGroupedBackground))
-        .cornerRadius(16)
-    }
-
-    // MARK: - Weekly Preview (Sunflower themed)
-    private var weeklyPreviewSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("이번 주")
-                .font(.headline)
-
-            HStack(spacing: 8) {
-                ForEach(manager.getLast7DaysData(), id: \.0) { day, minutes, avgLux in
-                    VStack(spacing: 6) {
-                        // 해바라기 아이콘 (목표 달성 시)
-                        if minutes >= manager.settings.dailyGoalMinutes {
-                            Image(systemName: "leaf.circle.fill")
-                                .font(.system(size: 18))
-                                .foregroundColor(Color(red: 0.3, green: 0.7, blue: 0.2))
-                        } else {
-                            Image(systemName: "leaf.circle")
-                                .font(.system(size: 18))
-                                .foregroundColor(.gray.opacity(0.4))
-                        }
-
-                        ZStack(alignment: .bottom) {
-                            RoundedRectangle(cornerRadius: 4)
-                                .fill(Color.gray.opacity(0.1))
-                                .frame(width: 32, height: 60)
-
-                            RoundedRectangle(cornerRadius: 4)
-                                .fill(
-                                    minutes >= manager.settings.dailyGoalMinutes ?
-                                    LinearGradient(colors: [Color(red: 0.3, green: 0.7, blue: 0.2), Color(red: 1.0, green: 0.85, blue: 0.1)], startPoint: .bottom, endPoint: .top) :
-                                    LinearGradient(colors: [Color(red: 0.3, green: 0.7, blue: 0.2).opacity(0.4), Color(red: 1.0, green: 0.85, blue: 0.1).opacity(0.4)], startPoint: .bottom, endPoint: .top)
-                                )
-                                .frame(
-                                    width: 32,
-                                    height: max(4, CGFloat(min(minutes, manager.settings.dailyGoalMinutes)) / CGFloat(max(manager.settings.dailyGoalMinutes, 1)) * 60)
-                                )
-                        }
-
-                        Text(day)
-                            .font(.caption2)
-                            .foregroundColor(.secondary)
-                    }
-                    .frame(maxWidth: .infinity)
-                }
-            }
-
-            HStack {
-                Circle()
-                    .fill(Color(red: 0.3, green: 0.7, blue: 0.2))
-                    .frame(width: 8, height: 8)
-                Text("목표: \(manager.settings.dailyGoalMinutes)분")
-                    .font(.caption2).foregroundColor(.secondary)
-                Spacer()
-                let summary = manager.getWeeklySummary()
-                Text("주간 평균 \(Int(summary.averageMinutes))분")
-                    .font(.caption2).foregroundColor(.secondary)
-            }
-        }
-        .padding(16)
-        .background(Color(.secondarySystemGroupedBackground))
-        .cornerRadius(16)
-    }
-
     // MARK: - Helpers
-    private func luxColor(_ lux: Double) -> Color {
-        switch lux {
-        case ..<50: return .gray
-        case 50..<300: return .yellow
-        case 300..<1000: return .cyan
-        case 1000..<10000: return .orange
-        default: return .red
-        }
-    }
-
     private func startFloatingTipTimer() {
         // 트래킹 중이 아니거나 이미 더블탭 사용한 적 있으면 타이머 시작 안함
         guard manager.isConfirmedOutdoor, !hasUsedDoubleTap else { return }
@@ -1142,82 +713,6 @@ struct DashboardView: View {
     }
 }
 
-// MARK: - Lux Battery View
-struct LuxBatteryView: View {
-    let lux: Double
-    let threshold: Double
-
-    private var fillRatio: Double {
-        guard lux > 0 else { return 0 }
-        return min(log10(lux) / 5.0, 1.0) // log10(100000) = 5
-    }
-
-    private var thresholdRatio: Double {
-        guard threshold > 0 else { return 0 }
-        return min(log10(threshold) / 5.0, 1.0)
-    }
-
-    private var fillColor: LinearGradient {
-        if lux >= threshold {
-            return LinearGradient(colors: [Color(red: 0.3, green: 0.7, blue: 0.2), Color(red: 0.5, green: 0.85, blue: 0.3)], startPoint: .leading, endPoint: .trailing)
-        }
-        return LinearGradient(colors: [.orange.opacity(0.6), .orange], startPoint: .leading, endPoint: .trailing)
-    }
-
-    var body: some View {
-        GeometryReader { geo in
-            HStack(spacing: 2) {
-                // 배터리 본체
-                ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.gray.opacity(0.3), lineWidth: 1.5)
-
-                    RoundedRectangle(cornerRadius: 4)
-                        .fill(Color.gray.opacity(0.08))
-
-                    // 채워진 부분
-                    RoundedRectangle(cornerRadius: 4)
-                        .fill(fillColor)
-                        .padding(2)
-                        .frame(width: max(0, (geo.size.width - 8) * fillRatio))
-                        .animation(.easeInOut(duration: 1.5), value: fillRatio)
-
-                    // 기준선
-                    Rectangle()
-                        .fill(Color.orange.opacity(0.8))
-                        .frame(width: 1.5, height: geo.size.height - 4)
-                        .offset(x: (geo.size.width - 8) * thresholdRatio)
-                }
-
-                // 배터리 단자
-                RoundedRectangle(cornerRadius: 2)
-                    .fill(Color.gray.opacity(0.3))
-                    .frame(width: 4, height: geo.size.height * 0.45)
-            }
-        }
-    }
-}
-
-// MARK: - StatCard
-struct StatCard: View {
-    let icon: String
-    let title: String
-    let value: String
-    let color: Color
-
-    var body: some View {
-        VStack(spacing: 8) {
-            Image(systemName: icon).font(.title3).foregroundColor(color)
-            Text(title).font(.caption).foregroundColor(.secondary)
-            Text(value).font(.headline)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 14)
-        .background(Color(.secondarySystemGroupedBackground))
-        .cornerRadius(12)
-    }
-}
-
 // MARK: - Pulse Modifier
 struct PulseModifier: ViewModifier {
     @State private var isPulsing = false
@@ -1231,104 +726,51 @@ struct PulseModifier: ViewModifier {
     }
 }
 
-// MARK: - Semicircle Shape
-struct SemicircleShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let center = CGPoint(x: rect.midX, y: rect.maxY)
-        let radius = rect.width / 2
-
-        path.addArc(
-            center: center,
-            radius: radius,
-            startAngle: .degrees(180),
-            endAngle: .degrees(0),
-            clockwise: false
-        )
-
-        return path
-    }
-}
-
-// MARK: - Wiper Shape (와이퍼/바늘)
-struct WiperShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-
-        // 바늘 모양 (삼각형 + 직사각형)
-        let width = rect.width
-        let height = rect.height
-
-        // 뾰족한 끝
-        path.move(to: CGPoint(x: width / 2, y: 0))
-        path.addLine(to: CGPoint(x: width, y: height * 0.2))
-        path.addLine(to: CGPoint(x: width, y: height))
-        path.addLine(to: CGPoint(x: 0, y: height))
-        path.addLine(to: CGPoint(x: 0, y: height * 0.2))
-        path.closeSubpath()
-
-        return path
-    }
-}
-
-// MARK: - Diamond Shape (다이아몬드 인디케이터)
-struct Diamond: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let width = rect.width
-        let height = rect.height
-
-        path.move(to: CGPoint(x: width / 2, y: 0))
-        path.addLine(to: CGPoint(x: width, y: height / 2))
-        path.addLine(to: CGPoint(x: width / 2, y: height))
-        path.addLine(to: CGPoint(x: 0, y: height / 2))
-        path.closeSubpath()
-
-        return path
-    }
-}
-
 // MARK: - Nearby Activity Badge
 struct NearbyActivityBadge: View {
+    var friendName: String? = nil
     let peerCount: Int
     let distance: Float?
 
+    private var title: String {
+        if let friendName, peerCount <= 1 {
+            return "\(friendName)이(가) 옆에서 같이 받는 중!"
+        }
+        return "\(peerCount)명이랑 같이 받는 중!"
+    }
+
     var body: some View {
-        HStack(spacing: 12) {
-            Image(systemName: "person.2.fill")
-                .font(.title3)
-                .foregroundColor(.purple)
+        HStack(spacing: 10) {
+            Text("\u{1F33B}\u{1F49B}\u{1F33B}")
+                .font(.subheadline)
 
             VStack(alignment: .leading, spacing: 2) {
-                Text("함께 트래킹 중!")
-                    .font(.headline)
-                    .foregroundColor(.purple)
-                HStack(spacing: 4) {
-                    Text("\(peerCount)명과 함께")
+                Text(title)
+                    .font(.subheadline.weight(.bold))
+                    .foregroundColor(Color(red: 0.85, green: 0.5, blue: 0.1))
+                    .lineLimit(1)
+                if let dist = distance {
+                    Text(String(format: "바로 옆 %.1fm \u{1F31E}", dist))
                         .font(.caption)
                         .foregroundColor(.secondary)
-                    if let dist = distance {
-                        Text("(\(String(format: "%.1f", dist))m)")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
                 }
             }
 
             Spacer()
 
             Circle()
-                .fill(Color.purple)
-                .frame(width: 10, height: 10)
+                .fill(Color.orange)
+                .frame(width: 9, height: 9)
                 .modifier(PulseModifier())
         }
-        .padding(16)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
         .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color.purple.opacity(0.1))
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.yellow.opacity(0.18))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.purple.opacity(0.3), lineWidth: 1.5)
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.orange.opacity(0.35), lineWidth: 1.5)
                 )
         )
         .transition(.scale.combined(with: .opacity))

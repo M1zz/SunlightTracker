@@ -33,26 +33,23 @@ struct CalendarView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: 20) {
-                    // 월 네비게이션
-                    monthNavigation
+        ScrollView {
+            VStack(spacing: 20) {
+                // 월 네비게이션
+                monthNavigation
 
-                    // 캘린더
-                    calendarGrid
+                // 캘린더
+                calendarGrid
 
-                    // 선택된 날짜 상세 정보
-                    selectedDayDetail
+                // 선택된 날짜 상세 정보
+                selectedDayDetail
 
-                    // 월간 요약 통계
-                    monthSummary
-                }
-                .padding(.bottom, 30)
+                // 월간 요약 통계
+                monthSummary
             }
-            .background(Color(.systemGroupedBackground))
-            .navigationTitle("캘린더")
+            .padding(.bottom, 30)
         }
+        .background(Color(.systemGroupedBackground))
         .sheet(isPresented: $showingMoodNote) {
             MoodNoteSheet(manager: manager, date: selectedDate, isPresented: $showingMoodNote)
         }

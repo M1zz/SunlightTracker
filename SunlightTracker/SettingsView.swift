@@ -109,7 +109,7 @@ struct SettingsView: View {
                 } header: {
                     Label("소셜", systemImage: "person.2")
                 } footer: {
-                    Text("근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 해바라기 꽃잎이 알록달록하게 물듭니다. 활동이 끝나면 7분에 걸쳐 원래 색으로 돌아옵니다.")
+                    Text("근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 해바라기 꽃잎이 알록달록하게 물들고, 친구 탭에 함께한 기록이 쌓입니다. 물든 색은 3일에 걸쳐 서서히 원래 색으로 돌아옵니다.")
                 }
 
                 // Notification Section
@@ -176,13 +176,13 @@ struct SettingsView: View {
                     HStack {
                         Text("앱 이름")
                         Spacer()
-                        Text("햇빛바라기").foregroundColor(.secondary)
+                        Text(AppConfig.appName).foregroundColor(.secondary)
                     }
 
                     HStack {
                         Text("버전")
                         Spacer()
-                        Text("1.0.0 (1)").foregroundColor(.secondary)
+                        Text(AppConfig.fullVersion).foregroundColor(.secondary)
                     }
                 } header: {
                     Label("정보", systemImage: "info.circle")

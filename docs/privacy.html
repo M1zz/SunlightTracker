@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보 처리방침 · 햇빛바라기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="emoji">🌻</div>
+      <h1>개인정보 처리방침</h1>
+      <p class="tagline">햇빛바라기 (SunlightTracker)</p>
+    </header>
+
+    <nav class="top">
+      <a href="index.html">홈</a>
+      <a href="support.html">지원 · 문의</a>
+    </nav>
+
+    <div class="card">
+      <span class="badge">요약: 수집하는 개인정보가 없습니다</span>
+      <p>
+        햇빛바라기는 <strong>서버가 없는 앱</strong>입니다. 앱이 다루는 모든 데이터(햇빛 기록, 해바라기 상태,
+        기분/메모, 친구 기록)는 <strong>사용자의 기기 안에만 저장</strong>되며, 개발자를 포함한 그 누구에게도
+        전송되지 않습니다. 광고, 추적, 분석 도구(SDK)도 사용하지 않습니다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>1. 기기 권한별 사용 목적</h2>
+      <table>
+        <tr><th>권한</th><th>사용 목적</th><th>데이터 처리</th></tr>
+        <tr>
+          <td>카메라</td>
+          <td>주변 밝기(조도) 추정으로 햇빛 자동 감지</td>
+          <td>노출/ISO 메타데이터만 사용. <strong>사진·영상을 저장하거나 전송하지 않습니다.</strong></td>
+        </tr>
+        <tr>
+          <td>위치 (사용 중에만)</td>
+          <td>일출/일몰 시간 계산</td>
+          <td>기기 내 계산에만 사용. 저장·전송하지 않습니다.</td>
+        </tr>
+        <tr>
+          <td>로컬 네트워크 · Nearby Interaction</td>
+          <td>근처 친구와 "함께 트래킹" 연결 및 거리 표시</td>
+          <td>상대 기기 이름과 함께한 횟수를 <strong>내 기기에만</strong> 저장합니다. 인터넷을 거치지 않는 근거리 통신입니다.</td>
+        </tr>
+        <tr>
+          <td>알림</td>
+          <td>해바라기 상태 알림, 리마인더</td>
+          <td>기기 내 로컬 알림만 사용합니다.</td>
+        </tr>
+      </table>
+      <p class="muted">모든 권한은 선택 사항이며, 거부해도 수동 기록 등 기본 기능을 사용할 수 있습니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. 저장되는 데이터</h2>
+      <ul>
+        <li>햇빛 기록 (날짜, 시간, 조도 측정값)</li>
+        <li>해바라기 상태 · 배터리 충전량</li>
+        <li>사용자가 입력한 기분 이모지와 메모</li>
+        <li>함께 트래킹한 친구의 기기 이름, 만난 횟수, 마지막 만남 날짜</li>
+        <li>앱 설정 (목표 시간, 알림 설정 등)</li>
+      </ul>
+      <p>
+        위 데이터는 모두 iOS의 앱 저장소(UserDefaults)에 보관되며,
+        <strong>앱을 삭제하면 함께 삭제됩니다.</strong>
+        앱 안의 <em>설정 → 데이터 초기화</em>로도 전부 지울 수 있습니다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>3. 제3자 제공 · 국외 이전</h2>
+      <p>해당 없음. 어떤 데이터도 수집하지 않으므로 제3자에게 제공하거나 국외로 이전하는 일이 없습니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>4. 아동의 개인정보</h2>
+      <p>본 앱은 개인정보를 수집하지 않으므로 아동의 개인정보도 수집하지 않습니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. 방침 변경</h2>
+      <p>
+        방침이 변경되는 경우 이 페이지를 통해 공지합니다. 중요한 변경(데이터 수집 시작 등)이 있다면
+        앱 업데이트 노트에도 함께 안내합니다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>6. 문의</h2>
+      <p>
+        개인정보 관련 문의: <a class="link" href="mailto:mizzking75@gmail.com">mizzking75@gmail.com</a>
+      </p>
+    </div>
+
+    <footer>
+      시행일: 2026년 7월 3일 · © 2026 햇빛바라기
+    </footer>
+  </div>
+</body>
+</html>

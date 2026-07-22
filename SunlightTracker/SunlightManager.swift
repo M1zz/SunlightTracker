@@ -13,9 +13,9 @@ class SunlightManager: NSObject, ObservableObject {
     @Published var weeklyRecords: [SunlightRecord] = []
     @Published var isTracking = false           // 트래킹 활성화 여부 (센서 or 확인 후)
     @Published var isSunlightDetected = false   // 현재 햇빛 감지 중
-    @Published var isConfirmedOutdoor = false   // 햇빛 확인 완료, 센서 꺼짐, 타이머 트래킹 중
+    @Published var isConfirmedOutdoor = false   // 햇빛 확인 완료, 타이머 트래킹 중 (센서는 주기 재측정)
     @Published var confirmedElapsedMinutes: Int = 0  // 확인 후 경과 시간 (분)
-    @Published var lastKnownLux: Double = 0         // 확인 시점 조도 (게이지 표시용)
+    @Published var lastKnownLux: Double = 0         // 최근 측정 조도 (게이지 표시용, 재측정 시 갱신)
     @Published var currentSession: SunlightSession?
     @Published var sunTimes: SunTimes?
     @Published var settings: AppSettings
@@ -51,11 +51,27 @@ class SunlightManager: NSObject, ObservableObject {
     private let deactivationThreshold = 6      // 6회 연속 미감지 시 세션 종료
     private var elapsedTimer: Timer?           // 확인 후 경과 시간 타이머
     private var healthUpdateTimer: Timer?      // 해바라기 건강도 업데이트 타이머
+
+    // 확인 후 센서 주기 재측정 (실시간 추적 피드백 + 세션 조도 정확도)
+    private var postConfirmSensorTimer: Timer? // 확인 후 센서 유지 종료 타이머
+    private var resenseCycleTimer: Timer?      // 주기적 재측정 사이클 타이머
+    private var resenseStopTimer: Timer?       // 재측정 버스트 종료 타이머
+    private let postConfirmSensingSeconds: TimeInterval = 90   // 확인 후 센서 유지 시간
+    private let resenseIntervalSeconds: TimeInterval = 120     // 재측정 주기
+    private let resenseBurstSeconds: TimeInterval = 20         // 재측정 1회 지속 시간
     private var currentActivity: Activity<SunlightTrackingAttributes>?
     private var fadeBackTimer: Timer?
     private var fadeBackStartTime: Date?
     private var lastColorfulGradients: [(top: RGBColor, bottom: RGBColor)]?
-    private let fadeBackDuration: TimeInterval = 420 // 7분
+    private let fadeBackDuration: TimeInterval = 60 * 60 * 24 * 3 // 3일 동안 서서히 빠짐
+    private let petalFadeKey = "petal_fade_state_v1"
+
+    /// 꽃잎 물듦 영속화용 (앱 재시작에도 3일 페이드 유지)
+    private struct PetalFadePersisted: Codable {
+        let tops: [RGBColor]
+        let bottoms: [RGBColor]
+        let fadeStart: Date?   // nil이면 아직 함께 트래킹 중에 저장된 것
+    }
     
     // MARK: - Init
     override init() {
@@ -83,9 +99,7 @@ class SunlightManager: NSObject, ObservableObject {
         setupLuxObserving()
         setupNearbyObserving()
         startHealthUpdateTimer()
-
-        // 앱 시작 시 조도 센서 자동 활성화
-        startLuxSensor()
+        restorePetalFade()
     }
     
     // MARK: - Lux Sensor Observation
@@ -95,6 +109,14 @@ class SunlightManager: NSObject, ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] lux in
                 self?.handleLuxUpdate(lux)
+            }
+            .store(in: &cancellables)
+
+        // 센서 활성 상태 변화를 뷰에 전파 (측정 중 인디케이터 갱신용)
+        luxSensor.$isActive
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.objectWillChange.send()
             }
             .store(in: &cancellables)
     }
@@ -131,93 +153,128 @@ class SunlightManager: NSObject, ObservableObject {
         let colorful = theme.petalGradients()
         lastColorfulGradients = colorful
         petalColorState = PetalColorState(gradients: colorful, blendFactor: 1.0)
+        // 함께 트래킹 중 앱이 종료돼도 물듦이 유지되도록 저장
+        savePetalFade(gradients: colorful, start: nil)
     }
 
-    private func startFadeBack() {
+    private func startFadeBack(from start: Date = Date()) {
         guard let colorful = lastColorfulGradients else {
             petalColorState = .defaultYellow
             return
         }
 
-        fadeBackStartTime = Date()
+        fadeBackStartTime = start
+        savePetalFade(gradients: colorful, start: start)
+
         fadeBackTimer?.invalidate()
-        fadeBackTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
+        applyFadeTick(colorful: colorful)  // 즉시 1회 반영
+
+        // 3일에 걸친 페이드라 1분 간격이면 충분히 부드러움
+        fadeBackTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
             Task { @MainActor [weak self] in
-                guard let self, let start = self.fadeBackStartTime else {
-                    timer.invalidate()
-                    return
-                }
-                let elapsed = Date().timeIntervalSince(start)
-                let t = min(elapsed / self.fadeBackDuration, 1.0)
-                // easeOutCubic: 초반 느리고 후반 빠르게
-                let eased = 1.0 - pow(1.0 - t, 3)
-                let blend = 1.0 - eased
-
-                if blend <= 0.01 {
-                    self.petalColorState = .defaultYellow
-                    self.lastColorfulGradients = nil
-                    self.fadeBackStartTime = nil
-                    timer.invalidate()
-                    self.fadeBackTimer = nil
-                    return
-                }
-
-                let blended = colorful.map { grad in
-                    let top = grad.top.lerp(to: .yellowTop, t: eased)
-                    let bottom = grad.bottom.lerp(to: .yellowBottom, t: eased)
-                    return (top: top, bottom: bottom)
-                }
-                self.petalColorState = PetalColorState(gradients: blended, blendFactor: blend)
+                guard let self, let colorful = self.lastColorfulGradients else { return }
+                self.applyFadeTick(colorful: colorful)
             }
         }
     }
 
-    /// 조도 업데이트 처리 - 앱 실행 중 항상 추적
-    private func handleLuxUpdate(_ lux: Double) {
-        // 트래킹 상태와 무관하게 조도 기록은 항상 수행
-        recordLuxReading(lux)
+    /// 경과 시간에 따라 꽃잎 색을 노란색으로 보간 (선형: 3일 내내 고르게 빠짐)
+    private func applyFadeTick(colorful: [(top: RGBColor, bottom: RGBColor)]) {
+        guard let start = fadeBackStartTime else { return }
+        let elapsed = Date().timeIntervalSince(start)
+        let eased = min(max(elapsed / fadeBackDuration, 0), 1.0)
+        let blend = 1.0 - eased
 
+        if blend <= 0.005 {
+            petalColorState = .defaultYellow
+            lastColorfulGradients = nil
+            fadeBackStartTime = nil
+            fadeBackTimer?.invalidate()
+            fadeBackTimer = nil
+            clearPetalFade()
+            return
+        }
+
+        let blended = colorful.map { grad in
+            let top = grad.top.lerp(to: .yellowTop, t: eased)
+            let bottom = grad.bottom.lerp(to: .yellowBottom, t: eased)
+            return (top: top, bottom: bottom)
+        }
+        petalColorState = PetalColorState(gradients: blended, blendFactor: blend)
+    }
+
+    // MARK: - 꽃잎 물듦 영속화
+
+    private func savePetalFade(gradients: [(top: RGBColor, bottom: RGBColor)], start: Date?) {
+        let persisted = PetalFadePersisted(
+            tops: gradients.map(\.top),
+            bottoms: gradients.map(\.bottom),
+            fadeStart: start
+        )
+        guard let data = try? JSONEncoder().encode(persisted) else { return }
+        userDefaults.set(data, forKey: petalFadeKey)
+    }
+
+    private func clearPetalFade() {
+        userDefaults.removeObject(forKey: petalFadeKey)
+    }
+
+    /// 앱 재시작 시 물듦 상태 복원 (3일 페이드 이어서 진행)
+    private func restorePetalFade() {
+        guard let data = userDefaults.data(forKey: petalFadeKey),
+              let saved = try? JSONDecoder().decode(PetalFadePersisted.self, from: data) else { return }
+
+        let gradients = zip(saved.tops, saved.bottoms).map { (top: $0, bottom: $1) }
+        guard !gradients.isEmpty else {
+            clearPetalFade()
+            return
+        }
+
+        // 함께 트래킹 중에 종료됐다면 지금부터 빠지기 시작
+        let start = saved.fadeStart ?? Date()
+
+        guard Date().timeIntervalSince(start) < fadeBackDuration else {
+            clearPetalFade()
+            return
+        }
+
+        lastColorfulGradients = gradients
+        startFadeBack(from: start)
+    }
+
+    /// 조도 업데이트 처리 - 햇빛 감지 후 확인
+    private func handleLuxUpdate(_ lux: Double) {
         guard isTracking else { return }
 
-        // 확인 후에도 실시간 조도 업데이트
+        // 확인 후 재측정 중이면 표시값/세션 샘플 갱신
         if isConfirmedOutdoor {
-            lastKnownLux = lux
+            handleConfirmedLuxUpdate(lux)
+            return
+        }
 
-            // 세션 샘플 추가
+        let isBright = lux >= settings.outdoorThresholdLux
+
+        if isBright {
+            consecutiveSunlightCount += 1
+            consecutiveDarkCount = 0
+
+            // 연속 밝음 감지 (~30초) → 햇빛 확인, 센서 끄고 타이머 전환
+            if consecutiveSunlightCount >= activationThreshold && currentSession == nil {
+                confirmAndStartTracking(initialLux: lux)
+            }
+
+            // 확인 전 세션 샘플 추가
             if var session = currentSession {
                 session.luxSamples.append(lux)
                 session.peakLux = max(session.peakLux, lux)
-                session.averageLux = session.luxSamples.reduce(0, +) / Double(session.luxSamples.count)
                 currentSession = session
             }
         } else {
-            let isBright = lux >= settings.outdoorThresholdLux
-
-            if isBright {
-                consecutiveSunlightCount += 1
-                consecutiveDarkCount = 0
-
-                // 연속 밝음 감지 → 햇빛 확인, 타이머 전환
-                if consecutiveSunlightCount >= activationThreshold && currentSession == nil {
-                    confirmAndStartTracking(initialLux: lux)
-                }
-
-                // 확인 전 세션 샘플 추가
-                if var session = currentSession {
-                    session.luxSamples.append(lux)
-                    session.peakLux = max(session.peakLux, lux)
-                    currentSession = session
-                }
-            } else {
-                consecutiveDarkCount += 1
-                consecutiveSunlightCount = 0
-            }
+            consecutiveDarkCount += 1
+            consecutiveSunlightCount = 0
         }
 
-    }
-
-    /// 조도 기록 저장 - 트래킹 상태와 무관하게 항상 호출
-    private func recordLuxReading(_ lux: Double) {
+        // 조도 기록 저장
         let reading = LuxReading(lux: lux, lightLevel: luxSensor.lightLevel.rawValue)
         todayRecord.luxReadings.append(reading)
 
@@ -226,9 +283,26 @@ class SunlightManager: NSObject, ObservableObject {
         }
     }
 
+    /// 확인 후 재측정 조도 처리 - 게이지 실시간 갱신 + 세션 데이터 보강
+    private func handleConfirmedLuxUpdate(_ lux: Double) {
+        lastKnownLux = lux
+
+        let reading = LuxReading(lux: lux, lightLevel: luxSensor.lightLevel.rawValue)
+        todayRecord.luxReadings.append(reading)
+        if lux > todayRecord.peakLux {
+            todayRecord.peakLux = lux
+        }
+
+        // 어두운 값(주머니 속 등)은 세션 평균을 왜곡하므로 밝은 샘플만 추가
+        guard lux >= settings.outdoorThresholdLux, var session = currentSession else { return }
+        session.luxSamples.append(lux)
+        session.peakLux = max(session.peakLux, lux)
+        currentSession = session
+    }
+
     // MARK: - Session Management
 
-    /// 햇빛 확인 완료 → 센서 유지한 채 타이머 기반 트래킹 시작
+    /// 햇빛 확인 완료 → 센서 끄고 타이머 기반 트래킹 시작
     private func confirmAndStartTracking(initialLux: Double) {
         let session = SunlightSession(
             averageLux: initialLux,
@@ -242,7 +316,9 @@ class SunlightManager: NSObject, ObservableObject {
         isConfirmedOutdoor = true
         lastKnownLux = initialLux
 
-        // 센서는 계속 유지 (실시간 조도 추적)
+        // 센서를 바로 끄지 않고 90초간 유지 → 이후 주기적 재측정 모드로 전환
+        // (실시간 조도 피드백을 유지하면서 배터리 소모는 듀티 사이클로 제한)
+        schedulePostConfirmSensing()
 
         // 경과 시간 타이머 시작 (30초마다 업데이트)
         confirmedElapsedMinutes = 0
@@ -265,7 +341,61 @@ class SunlightManager: NSObject, ObservableObject {
             nearbyManager.updateTrackingPhase("confirmed")
         }
     }
-    
+
+    // MARK: - 확인 후 센서 주기 재측정
+
+    /// 확인 후 센서를 일정 시간 유지하고, 이후 주기 재측정 사이클로 전환
+    private func schedulePostConfirmSensing() {
+        postConfirmSensorTimer?.invalidate()
+        postConfirmSensorTimer = Timer.scheduledTimer(withTimeInterval: postConfirmSensingSeconds, repeats: false) { [weak self] _ in
+            Task { @MainActor [weak self] in
+                guard let self, self.isConfirmedOutdoor else { return }
+                self.luxSensor.stopSensing()
+                self.startResenseCycle()
+            }
+        }
+    }
+
+    /// 주기적으로 센서를 짧게 켜서 조도를 재측정
+    private func startResenseCycle() {
+        resenseCycleTimer?.invalidate()
+        resenseCycleTimer = Timer.scheduledTimer(withTimeInterval: resenseIntervalSeconds, repeats: true) { [weak self] _ in
+            Task { @MainActor [weak self] in
+                self?.beginResenseBurst()
+            }
+        }
+    }
+
+    /// 재측정 버스트 시작 (일정 시간 후 자동 종료)
+    private func beginResenseBurst() {
+        guard isConfirmedOutdoor else { return }
+        luxSensor.startSensing()
+
+        resenseStopTimer?.invalidate()
+        resenseStopTimer = Timer.scheduledTimer(withTimeInterval: resenseBurstSeconds, repeats: false) { [weak self] _ in
+            Task { @MainActor [weak self] in
+                guard let self, self.isConfirmedOutdoor else { return }
+                self.luxSensor.stopSensing()
+            }
+        }
+    }
+
+    /// 사용자가 화면을 볼 때 즉시 재측정 (확인 후 단계에서 호출)
+    func refreshLuxReading() {
+        guard isConfirmedOutdoor, !luxSensor.isActive else { return }
+        beginResenseBurst()
+    }
+
+    /// 재측정 관련 타이머 정리
+    private func stopResenseCycle() {
+        postConfirmSensorTimer?.invalidate()
+        postConfirmSensorTimer = nil
+        resenseCycleTimer?.invalidate()
+        resenseCycleTimer = nil
+        resenseStopTimer?.invalidate()
+        resenseStopTimer = nil
+    }
+
     private func endSunlightSession() {
         guard var session = currentSession else { return }
         session.endTime = Date()
@@ -306,36 +436,9 @@ class SunlightManager: NSObject, ObservableObject {
         updateWidgetData()
     }
     
-    // MARK: - Lux Sensor Lifecycle (앱 실행 중 항상 활성)
-
-    /// 조도 센서 시작 - 앱이 포그라운드에 있는 동안 항상 활성
-    func startLuxSensor() {
-        guard !luxSensor.isActive else { return }
-        luxSensor.sunlightThresholdLux = settings.sunlightThresholdLux
-        luxSensor.outdoorThresholdLux = settings.outdoorThresholdLux
-        luxSensor.startSensing()
-    }
-
-    /// 조도 센서 정지 - 백그라운드 진입 시
-    func stopLuxSensor() {
-        luxSensor.stopSensing()
-    }
-
-    /// 앱 scenePhase 변경 처리
-    func handleScenePhaseChange(_ phase: ScenePhase) {
-        switch phase {
-        case .active:
-            startLuxSensor()
-        case .inactive, .background:
-            stopLuxSensor()
-        @unknown default:
-            break
-        }
-    }
-
     // MARK: - Tracking Control
 
-    /// 트래킹 활성화 (햇빛 감지 시작)
+    /// 센서 활성화 (조도 측정 시작) - 앱 시작 시 자동 호출
     func startTracking() {
         guard !isTracking else { return }
         isTracking = true
@@ -343,9 +446,9 @@ class SunlightManager: NSObject, ObservableObject {
         confirmedElapsedMinutes = 0
         consecutiveSunlightCount = 0
         consecutiveDarkCount = 0
-
-        // 센서가 이미 켜져 있지 않으면 시작
-        startLuxSensor()
+        luxSensor.sunlightThresholdLux = settings.sunlightThresholdLux
+        luxSensor.outdoorThresholdLux = settings.outdoorThresholdLux
+        luxSensor.startSensing()
 
         if settings.nearbyActivityEnabled {
             nearbyManager.startDiscovery()
@@ -353,9 +456,10 @@ class SunlightManager: NSObject, ObservableObject {
         }
     }
 
-    /// 센서 감지 단계 취소 (아직 확인 전, 센서는 유지)
+    /// 센서 감지 단계 취소 (아직 확인 전)
     func cancelDetecting() {
         guard isTracking, !isConfirmedOutdoor else { return }
+        luxSensor.stopSensing()
         isTracking = false
         isSunlightDetected = false
         consecutiveSunlightCount = 0
@@ -374,10 +478,12 @@ class SunlightManager: NSObject, ObservableObject {
         elapsedTimer?.invalidate()
         elapsedTimer = nil
 
+        // 재측정 사이클 정리 및 센서 끄기
+        stopResenseCycle()
+        luxSensor.stopSensing()
+
         // 세션 종료 및 저장
         endSunlightSession()
-
-        // 센서는 계속 유지 (앱 실행 중 항상 활성)
 
         // Nearby: idle 상태 전파 및 정리
         nearbyManager.updateTrackingPhase("idle")
@@ -392,18 +498,19 @@ class SunlightManager: NSObject, ObservableObject {
         consecutiveDarkCount = 0
     }
 
-    /// 내부 트래킹 비활성화 (센서는 유지)
+    /// 내부 센서 비활성화 (레거시 호환)
     func stopTracking() {
         guard isTracking else { return }
 
         elapsedTimer?.invalidate()
         elapsedTimer = nil
+        stopResenseCycle()
 
         if currentSession != nil {
             endSunlightSession()
         }
 
-        // 센서는 계속 유지 (앱 실행 중 항상 활성)
+        luxSensor.stopSensing()
 
         // Nearby: idle 상태 전파 및 정리
         nearbyManager.updateTrackingPhase("idle")
@@ -798,7 +905,7 @@ class SunlightManager: NSObject, ObservableObject {
             lastUpdate: Date(),
             isTracking: isTracking,
             isConfirmedOutdoor: isConfirmedOutdoor,
-            currentLux: luxSensor.isActive ? luxSensor.currentLux : lastKnownLux,
+            currentLux: isConfirmedOutdoor ? lastKnownLux : luxSensor.currentLux,
             estimatedBatteryGain: estimatedBatteryGain,
             confirmedElapsedMinutes: confirmedElapsedMinutes
         )
