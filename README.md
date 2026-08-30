@@ -37,4 +37,4 @@ xcodebuild -project SunlightTracker.xcodeproj -scheme SunlightTracker \
 
 ## 문의
 
-mizzking75@gmail.com · [GitHub Issues](https://github.com/M1zz/SunlightTracker/issues)
+leeo@kakao.com · [GitHub Issues](https://github.com/M1zz/SunlightTracker/issues)
