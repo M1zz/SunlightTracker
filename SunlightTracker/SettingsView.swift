@@ -157,6 +157,7 @@ struct SettingsView: View {
                 // 지원
                 Section {
                     LeeoSupportSection<SunlightTrackerSpec>()
+                    NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
                 } header: {
                     Label("지원", systemImage: "heart.text.square")
                 }

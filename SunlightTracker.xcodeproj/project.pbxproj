@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C6C29C557C56E9AFAA210D2 /* SunlightTrackerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20443605DAE908C006A57059 /* SunlightTrackerSpec.swift */; };
+		605D7E6696B14E0F91898ED7 /* SunlightTrackerRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C778FAAFE428C90B8F5B8 /* SunlightTrackerRoadmap.swift */; };
 		9C1EAE8C2F39771100CB151B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1EAE8B2F39771100CB151B /* WidgetKit.framework */; };
 		9C1EAE8E2F39771100CB151B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1EAE8D2F39771100CB151B /* SwiftUI.framework */; };
 		9C1EAE9F2F39771200CB151B /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C1EAE892F39771100CB151B /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		20443605DAE908C006A57059 /* SunlightTrackerSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightTrackerSpec.swift; sourceTree = "<group>"; };
+		795C778FAAFE428C90B8F5B8 /* SunlightTrackerRoadmap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightTrackerRoadmap.swift; sourceTree = "<group>"; };
 		9C1EAE892F39771100CB151B /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1EAE8B2F39771100CB151B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9C1EAE8D2F39771100CB151B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -177,6 +179,7 @@
 				AA000021 /* Info.plist */,
 				AA000043 /* Preview Content */,
 				20443605DAE908C006A57059 /* SunlightTrackerSpec.swift */,
+				795C778FAAFE428C90B8F5B8 /* SunlightTrackerRoadmap.swift */,
 			);
 			path = SunlightTracker;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				AA00000F /* RecordsView.swift in Sources */,
 				AA0000F0 /* FriendsView.swift in Sources */,
 				5C6C29C557C56E9AFAA210D2 /* SunlightTrackerSpec.swift in Sources */,
+				605D7E6696B14E0F91898ED7 /* SunlightTrackerRoadmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,7 +645,7 @@
 			repositoryURL = "https://github.com/M1zz/LeeoKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.16.1;
+				minimumVersion = 3.20.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
