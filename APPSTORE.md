@@ -626,3 +626,744 @@ Notifiche
 Scegli l'orario in cui ricevere il promemoria per uscire al sole e ricevi un avviso quando raggiungi l'obiettivo.
 
 Nessun server: le tue registrazioni e le tue note restano solo sul tuo dispositivo.
+
+## pt-BR
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Diário do Sol
+
+### 부제
+
+Seu girassol cresce com a luz
+
+### 키워드
+
+serotonina,vitaminaD,humor,bemestar,fotossíntese,luminosidade,caminhada,widget,hábito,rotina,saúde
+
+### 프로모션 텍스트
+
+Já tomou sol hoje? Saia de casa e o app soma seu tempo de sol sozinho. Com esse sol, você faz crescer o seu próprio girassol.
+
+### 설명
+
+Um pouquinho de sol por dia faz seu girassol crescer.
+O Sunny Sunflower mede e registra o tempo que você passa ao sol e usa esse sol para cuidar do seu girassol.
+
+Deixe o app aberto e saia de casa: ele mede a luz do ambiente pelos dados de exposição da câmera frontal. Quando a luz se mantém tão forte quanto a do ar livre, seu tempo de sol vai sendo somado automaticamente. O app não tira nem guarda nenhuma foto.
+
+Cuide do girassol
+Quanto mais sol você toma, mais a bateria carrega. Entregue o sol que juntou ao girassol e ele fica viçoso. Se você ficar um tempo sem cuidar dele, ele vai murchando aos poucos.
+
+Meta diária
+Defina uma meta de 10 a 120 minutos por dia e veja de relance quanto já cumpriu hoje. Ficou ao ar livre e esqueceu de registrar? Você pode somar esse tempo manualmente.
+
+Calendário e estatísticas
+Anote em cada dia o tempo de sol, um emoji de humor e uma notinha. Depois, acompanhe sua evolução nas estatísticas semanais e mensais.
+
+Com amigos
+Tome sol pertinho de um amigo e as pétalas ganham cores. Os momentos em que vocês ficaram juntos ficam guardados na aba Amigos.
+
+Widgets e acompanhamento ao vivo
+Veja o sol de hoje e como está o girassol direto na tela de início, na tela bloqueada e na Dynamic Island.
+
+Lembretes
+Escolha o horário em que o app avisa que é hora de sair para tomar sol, e receba um aviso quando bater a meta.
+
+Sem servidor. Seus registros de sol e suas notas ficam guardados somente no seu aparelho.
+
+## th
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+ทานตะวันชอบแดด: บันทึกแดด
+
+### 부제
+
+รับแสงเท่าไร ก็โตเท่านั้น
+
+### 키워드
+
+เซโรโทนิน,วิตามินดี,อาบแดด,สุขภาพจิต,เดินเล่น,วิดเจ็ต,ปฏิทิน,นิสัย,ซึมเศร้า,นอนหลับ,เพื่อน,เป้าหมาย
+
+### 프로모션 텍스트
+
+วันนี้ได้รับแดดพอหรือยัง? ออกไปข้างนอกแล้วแอปจะสะสมเวลารับแดดให้เอง แล้วใช้แดดนั้นดูแลต้นทานตะวันของคุณให้เติบโต
+
+### 설명
+
+รับแดดวันละนิด เลี้ยงทานตะวันของคุณให้โต
+ทานตะวันชอบแดดช่วยวัดและบันทึกเวลาที่คุณรับแดดนอกบ้าน แล้วใช้แดดนั้นดูแลต้นทานตะวันต้นน้อย
+
+เปิดแอปค้างไว้แล้วออกไปข้างนอก แอปจะวัดความสว่างรอบตัวจากข้อมูลการรับแสงของกล้องหน้า เมื่อแสงสว่างเทียบเท่ากลางแจ้งต่อเนื่อง เวลารับแดดจะสะสมให้เองโดยอัตโนมัติ แอปไม่ถ่ายและไม่เก็บรูปภาพใด ๆ
+
+เลี้ยงทานตะวัน
+ยิ่งรับแดดมาก แบตเตอรี่ก็ยิ่งชาร์จเต็ม เมื่อส่งแดดที่สะสมไว้ให้ทานตะวัน ต้นไม้ก็จะสดชื่นขึ้น แต่ถ้าไม่ดูแลนาน ๆ ทานตะวันจะค่อย ๆ เหี่ยวเฉาลง
+
+เป้าหมายรายวัน
+ตั้งเป้าหมายได้ตั้งแต่ 10 ถึง 120 นาทีต่อวัน และดูได้ในพริบตาว่าวันนี้ทำได้เท่าไรแล้ว หากอยู่นอกบ้านแต่ลืมบันทึก ก็เพิ่มเวลาเองได้
+
+ปฏิทินและสถิติ
+เก็บเวลารับแดด อีโมจิอารมณ์ และโน้ตสั้น ๆ ของแต่ละวัน แล้วดูแนวโน้มผ่านสถิติรายสัปดาห์และรายเดือน
+
+รับแดดกับเพื่อน
+เมื่อรับแดดใกล้ ๆ กับเพื่อน กลีบดอกจะเปลี่ยนเป็นสีสันสดใส และบันทึกที่ทำด้วยกันจะสะสมไว้ในแท็บเพื่อน
+
+วิดเจ็ตและสถานะแบบเรียลไทม์
+ดูแดดวันนี้และสุขภาพของทานตะวันได้ทันทีจากวิดเจ็ตหน้าจอโฮมและหน้าจอล็อก รวมถึง Dynamic Island
+
+การแจ้งเตือน
+เตือนให้ออกไปรับแดดตามเวลาที่คุณต้องการ และแจ้งเมื่อทำถึงเป้าหมายแล้ว
+
+แอปนี้ไม่มีเซิร์ฟเวอร์ บันทึกแดดและโน้ตทั้งหมดเก็บไว้ในอุปกรณ์ของคุณเท่านั้น
+
+## vi
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Nhật ký nắng
+
+### 부제
+
+Chăm hoa hướng dương mỗi ngày
+
+### 키워드
+
+vitamin D,serotonin,ánh sáng,UV,sức khỏe,tâm trạng,đi bộ,ngoài trời,giấc ngủ,trầm cảm,widget,lịch
+
+### 프로모션 텍스트
+
+Hôm nay bạn đã đón đủ nắng chưa? Cứ ra ngoài, app tự gom thời gian nắng giúp bạn, rồi dùng nắng ấy để nuôi bông hoa hướng dương của riêng mình.
+
+### 설명
+
+Mỗi ngày một chút nắng, nuôi lớn hoa hướng dương của bạn.
+Sunny Sunflower đo thời gian bạn đón nắng ngoài trời, rồi dùng chính chỗ nắng ấy để chăm một bông hoa hướng dương.
+
+Cứ mở app rồi ra ngoài, ứng dụng sẽ dùng thông tin phơi sáng của camera trước để đo độ sáng xung quanh. Khi ánh sáng đủ sáng như ngoài trời, thời gian nắng sẽ tự động được cộng dồn. Ứng dụng không chụp và không lưu bất kỳ bức ảnh nào.
+
+Nuôi hoa hướng dương
+Càng đón nắng, pin càng đầy. Tặng phần nắng đã gom cho hoa hướng dương, hoa sẽ tươi tắn trở lại. Nếu bạn lâu ngày không chăm, hoa sẽ héo dần.
+
+Mục tiêu mỗi ngày
+Đặt mục tiêu từ 10 đến 120 phút và xem hôm nay mình đã được bao nhiêu chỉ trong một cái nhìn. Lỡ ra ngoài mà quên ghi, bạn có thể tự cộng thêm thời gian.
+
+Lịch và thống kê
+Mỗi ngày bạn có thể lưu thời gian nắng, một emoji tâm trạng và vài dòng ghi chú. Thống kê theo tuần và theo tháng giúp bạn nhìn lại cả hành trình.
+
+Đi cùng bạn bè
+Khi tắm nắng gần bạn bè, cánh hoa sẽ nhuộm nhiều sắc màu và những lần gặp gỡ được lưu lại ở tab Bạn bè.
+
+Widget và theo dõi trực tiếp
+Xem ngay nắng hôm nay và tình trạng hoa hướng dương ngay trên widget màn hình chính, màn hình khóa và Dynamic Island.
+
+Thông báo
+Nhắc bạn ra ngoài đón nắng vào giờ bạn chọn, và báo cho bạn khi đã đạt mục tiêu.
+
+Ứng dụng không dùng máy chủ. Mọi ghi chép nắng và ghi chú của bạn chỉ được lưu ngay trên thiết bị.
+
+## cs
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Záznam slunce
+
+### 부제
+
+Vypěstuj si vlastní slunečnici
+
+### 키워드
+
+vitaminD,sluníčkování,deprese,nálada,spánek,procházka,rutina,návyk,zdraví,widget,kalendář,serotonin
+
+### 프로모션 텍스트
+
+Máš dnes dost slunce? Aplikace venku sama sčítá čas na slunci a ty z něj pěstuješ svou vlastní slunečnici.
+
+### 설명
+
+Každý den trochu slunce a tvoje slunečnice roste.
+Sunny Sunflower měří, kolik času strávíš na slunci, a z nasbíraného slunce pěstuje tvou vlastní slunečnici.
+
+Stačí mít aplikaci otevřenou a vyrazit ven. Podle údajů o expozici z kamery pozná, jak je okolo světlo. Když světlo venku vydrží, čas na slunci se sám načítá. Žádné fotky se nepořizují ani neukládají.
+
+Pěstování slunečnice
+Čím víc slunce, tím víc se nabíjí baterie. Když nasbírané slunce věnuješ slunečnici, hned je svěžejší. A když se o ni delší dobu nestaráš, pomalu vadne.
+
+Denní cíl
+Nastav si cíl od 10 do 120 minut a na první pohled uvidíš, kolik už máš splněno. Čas venku, který se neměřil, doplníš ručně.
+
+Kalendář a statistiky
+Ke každému dni si můžeš uložit čas na slunci, náladu v podobě emoji i krátkou poznámku. Týdenní a měsíční statistiky ukážou, jak se ti daří.
+
+S kamarády
+Když se slunís vedle kamaráda, okvětní lístky se zbarví do pestrých barev a společné chvíle se ukládají na kartě Kamarádi.
+
+Widgety a aktuální přehled
+Dnešní slunce a stav slunečnice uvidíš hned na widgetech na domovské obrazovce i na zamčené obrazovce a také v Dynamic Island.
+
+Oznámení
+V čas, který si vybereš, ti aplikace připomene, že je čas vyrazit na slunce. A když splníš cíl, dá ti vědět.
+
+Aplikace nepoužívá žádný server. Záznamy slunce i poznámky zůstávají jen v tvém zařízení.
+
+## da
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Solskinslog
+
+### 부제
+
+Gro din egen solsikke med sol
+
+### 키워드
+
+sollys,solbad,serotonin,vitamind,dagslys,udendørs,humør,trivsel,rutine,kalender,vinterdepression
+
+### 프로모션 텍스트
+
+Har du fået sol i dag? Gå ud, så samler appen din soltid helt af sig selv, og med den sol kan du passe og pleje din helt egen solsikke.
+
+### 설명
+
+En lille portion sol hver dag får din solsikke til at gro.
+Sunny Sunflower måler og registrerer den tid, du er i solen, og bruger den til at passe din egen solsikke.
+
+Lad appen være åben, og gå ud. Appen aflæser lysstyrken omkring dig ud fra kameraets eksponeringsdata. Så snart lyset er stærkt nok til at være udendørs, samler din soltid sig automatisk. Der bliver hverken taget eller gemt billeder.
+
+Gro din solsikke
+Jo mere sol du får, jo mere lader dit batteri op. Giv den opsamlede sol til solsikken, så bliver den frisk igen. Hvis du glemmer den i lang tid, begynder den langsomt at visne.
+
+Dagligt mål
+Vælg et dagligt mål fra 10 til 120 minutter, og se med et blik, hvor langt du er. Har du været udenfor uden at få det registreret, kan du selv lægge tiden til.
+
+Kalender og statistik
+Gem dagens soltid sammen med et humørsmiley og et kort notat. Med ugentlig og månedlig statistik kan du følge udviklingen.
+
+Sammen med venner
+Når du soler dig sammen med en ven i nærheden, får solsikkens blomsterblade farver, og jeres tid sammen bliver samlet under Venner.
+
+Widgets og live-overblik
+Se dagens sol og solsikkens tilstand direkte på startskærmen og låseskærmen eller i Dynamic Island.
+
+Påmindelser
+Få en venlig påmindelse på det tidspunkt, du selv vælger, om at komme ud i solen, og få besked, når du har nået dit mål.
+
+Her er ingen server. Dine solregistreringer og notater bliver kun gemt på din egen enhed.
+
+## el
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Ηλιοτρόπιο: Ημερολόγιο Ήλιου
+
+### 부제
+
+Μεγαλώνει όσο λιάζεσαι
+
+### 키워드
+
+σεροτονίνη,διάθεση,ηλιοφάνεια,ηλιοθεραπεία,βιταμίνηD,περπάτημα,άγχος,κατάθλιψη,ρουτίνα,υγεία,ύπνος
+
+### 프로모션 텍스트
+
+Πήρες σήμερα αρκετό ήλιο; Βγες έξω και η εφαρμογή μετράει μόνη της τον χρόνο σου στον ήλιο. Με αυτόν τον ήλιο μεγαλώνει το δικό σου ηλιοτρόπιο.
+
+### 설명
+
+Λίγος ήλιος κάθε μέρα, ένα ηλιοτρόπιο που μεγαλώνει.
+Το Ηλιοτρόπιο μετράει και καταγράφει τον χρόνο που περνάς στον ήλιο, και με αυτόν τον ήλιο φροντίζεις το δικό σου ηλιοτρόπιο.
+
+Άνοιξε την εφαρμογή και βγες έξω. Η κάμερα διαβάζει τα δεδομένα έκθεσης για να μετρήσει τη φωτεινότητα γύρω σου. Όταν το φως παραμένει τόσο έντονο όσο έξω, ο χρόνος σου στον ήλιο προστίθεται αυτόματα. Δεν τραβιέται και δεν αποθηκεύεται καμία φωτογραφία.
+
+Μεγάλωσε το ηλιοτρόπιό σου
+Όσο λιάζεσαι, φορτίζει η μπαταρία. Όταν δώσεις τον ήλιο που μάζεψες στο ηλιοτρόπιο, αυτό ανθίζει. Αν το αφήσεις για καιρό, μαραίνεται σιγά σιγά.
+
+Ημερήσιος στόχος
+Ορίζεις στόχο από 10 έως 120 λεπτά και βλέπεις με μια ματιά πόσο έχεις συμπληρώσει σήμερα. Αν ήσουν έξω και δεν πρόλαβες να καταγράψεις, μπορείς να προσθέσεις τον χρόνο μόνος σου.
+
+Ημερολόγιο και στατιστικά
+Κράτα για κάθε μέρα τον χρόνο στον ήλιο, ένα emoji διάθεσης και μια σύντομη σημείωση. Με τα εβδομαδιαία και μηνιαία στατιστικά βλέπεις πώς πηγαίνεις.
+
+Μαζί με φίλους
+Όταν λιάζεσαι κοντά σε φίλο, τα πέταλα παίρνουν χρώματα και οι κοινές στιγμές αποθηκεύονται στην καρτέλα Φίλοι.
+
+Widget και ζωντανή εικόνα
+Δες τον σημερινό ήλιο και την κατάσταση του ηλιοτρόπιου κατευθείαν από widget στην αρχική οθόνη, στην οθόνη κλειδώματος και στο Dynamic Island.
+
+Ειδοποιήσεις
+Η εφαρμογή σού θυμίζει την ώρα που διαλέγεις να βγεις στον ήλιο και σε ειδοποιεί όταν πετύχεις τον στόχο σου.
+
+Δεν υπάρχει διακομιστής. Οι καταγραφές και οι σημειώσεις σου μένουν μόνο στη συσκευή σου.
+
+## fi
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Aurinkoloki
+
+### 부제
+
+Kasvata oma auringonkukkasi
+
+### 키워드
+
+aurinko,auringonvalo,d-vitamiini,serotoniini,mieliala,kaamos,hyvinvointi,ulkoilu,kävely,rutiini,valo
+
+### 프로모션 텍스트
+
+Saitko tänään tarpeeksi aurinkoa? Kun lähdet ulos, aurinkoaika kertyy itsestään, ja sillä kasvatat oman auringonkukkasi.
+
+### 설명
+
+Hetki auringossa päivässä kasvattaa auringonkukkaasi.
+Sunny Sunflower mittaa, kuinka kauan olet ulkona auringonvalossa, ja käyttää kerätyn valon auringonkukkasi hoitamiseen.
+
+Avaa sovellus ja lähde ulos. Puhelimen kamera lukee valotustiedoista ympäristön kirkkauden, ja kun valo pysyy ulkotilan tasolla, aurinkoaika kertyy itsestään. Kuvia ei oteta eikä tallenneta.
+
+Auringonkukan kasvatus
+Mitä enemmän saat aurinkoa, sitä enemmän akku latautuu. Kun annat kerätyn valon auringonkukalle, se piristyy ja kukoistaa. Jos kukka jää pitkäksi aikaa ilman hoitoa, se alkaa vähitellen kuihtua.
+
+Päivätavoite
+Valitse päivätavoite 10 ja 120 minuutin väliltä ja näe yhdellä silmäyksellä, paljonko on jo koossa. Jos olit ulkona mutta mittaus jäi päälle laittamatta, voit lisätä ajan käsin.
+
+Kalenteri ja tilastot
+Tallenna jokaiselle päivälle aurinkoaika, mielialaemoji ja pieni muistiinpano. Viikko- ja kuukausitilastoista näet, miten tottumuksesi kehittyvät.
+
+Yhdessä ystävien kanssa
+Kun otat aurinkoa lähellä olevan ystävän kanssa, terälehdet värjäytyvät kirjaviksi ja yhteiset hetket kertyvät Ystävät-välilehdelle.
+
+Widgetit ja reaaliaikainen tilanne
+Näet päivän auringon ja auringonkukan vointi kotinäytön ja lukitusnäytön widgeteistä sekä Dynamic Islandista.
+
+Ilmoitukset
+Sovellus muistuttaa sinua lähtemään ulos valitsemanasi aikana ja kertoo, kun päivätavoite täyttyy.
+
+Sovellus ei käytä palvelinta. Aurinkokirjaukset ja muistiinpanot tallentuvat vain laitteellesi.
+
+## id
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Catat Jemur
+
+### 부제
+
+Tumbuhkan bunga matahari-mu
+
+### 키워드
+
+sinar,cahaya,serotonin,vitamin,mood,mental,kebiasaan,widget,kalender,lux,teman,tidur,sehat,surya,uv
+
+### 프로모션 텍스트
+
+Sudah cukup kena matahari hari ini? Begitu kamu keluar, waktu berjemur terkumpul otomatis, dan sinarnya bikin bunga matahari kesayanganmu tumbuh.
+
+### 설명
+
+Sehari sedikit sinar matahari, buat bunga mataharimu tumbuh.
+Sunny Sunflower mencatat berapa lama kamu berjemur di luar, lalu memakai sinar itu untuk merawat bunga matahari virtualmu.
+
+Buka aplikasinya, lalu keluar rumah. Kamera membaca data eksposur untuk mengukur kecerahan sekitar. Begitu cahayanya seterang di luar ruangan, waktu berjemurmu terkumpul otomatis. Aplikasi tidak mengambil maupun menyimpan foto.
+
+Rawat bunga matahari
+Makin banyak sinar yang kamu dapat, makin penuh baterainya. Berikan sinar yang terkumpul ke bunga mataharimu, dan ia akan kembali segar. Kalau lama tidak dirawat, bunganya pelan-pelan layu.
+
+Target harian
+Tentukan target harian dari 10 sampai 120 menit, lalu pantau progresnya sekilas. Lupa mencatat waktu saat di luar? Kamu bisa menambahkannya sendiri.
+
+Kalender dan statistik
+Simpan waktu berjemur, emoji mood, dan catatan singkat untuk tiap hari. Lihat perkembanganmu lewat statistik mingguan dan bulanan.
+
+Bareng teman
+Berjemur bareng teman yang ada di dekatmu, dan kelopak bunga akan berwarna-warni. Catatan kebersamaan pun tersimpan di tab Teman.
+
+Widget dan info langsung
+Cek sinar hari ini dan kondisi bunga matahari langsung dari widget layar utama, widget layar kunci, atau Dynamic Island.
+
+Notifikasi
+Dapatkan pengingat untuk keluar berjemur di waktu yang kamu pilih, dan kabar saat target hari ini tercapai.
+
+Tanpa server. Semua catatan sinar matahari dan memo tersimpan hanya di perangkatmu.
+
+## nb
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Sollogg
+
+### 부제
+
+Voks en solsikke med dagslys
+
+### 키워드
+
+serotonin,d-vitamin,humør,utendørs,gåtur,vaner,rutine,helse,søvn,widget,kalender,solbading,mosjon
+
+### 프로모션 텍스트
+
+Har du fått nok sol i dag? Gå ut, så samler appen sollyset for deg, og med det lyset vokser din egen solsikke.
+
+### 설명
+
+Litt sol hver dag får solsikken din til å vokse.
+Sunny Sunflower måler hvor lenge du er ute i sola, logger tiden og bruker sollyset til å ta vare på solsikken din.
+
+Åpne appen og gå ut, så måler kameraet lysstyrken rundt deg ut fra eksponeringsdata. Så lenge lyset er like sterkt som utendørs, samles soltiden automatisk. Appen tar og lagrer aldri bilder.
+
+Dyrk solsikken
+Jo mer sol du får, jo mer lades batteriet. Gir du det samlede sollyset til solsikken, blir den frisk og fin. Hvis du ikke steller den på en stund, begynner den langsomt å visne.
+
+Dagsmål
+Velg et dagsmål fra 10 til 120 minutter og se med et blikk hvor langt du har kommet. Har du vært ute uten å logge det, kan du legge til tiden selv.
+
+Kalender og statistikk
+Lagre soltid, et humør-emoji og en kort tanke for hver dag, og følg utviklingen i ukentlig og månedlig statistikk.
+
+Sammen med venner
+Når du soler deg sammen med en venn i nærheten, får kronbladene fine farger, og turene dere har tatt sammen, samles i vennefanen.
+
+Widgets og sanntidsvisning
+Se dagens sol og solsikkens tilstand rett fra widgets på hjem- og låseskjermen og fra Dynamic Island.
+
+Varsler
+Få en påminnelse når du vil om å gå ut i solen, og et varsel når du har nådd målet.
+
+Appen bruker ingen server. Sollogg og notater lagres bare på enheten din.
+
+## nl
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Zonlogboek
+
+### 부제
+
+Laat je zonnebloem groeien
+
+### 키워드
+
+zonlicht,daglicht,vitamineD,serotonine,stemming,winterdip,buiten,zonnebaden,kalender,routine,mentaal
+
+### 프로모션 텍스트
+
+Heb je vandaag genoeg zon gehad? Ga naar buiten: de app houdt je zonlicht automatisch bij en met die zon laat je jouw eigen zonnebloem groeien.
+
+### 설명
+
+Een handvol zon per dag laat jouw zonnebloem groeien.
+Sunny Sunflower houdt bij hoe lang je buiten in het zonlicht bent en je zorgt met die zon voor je eigen zonnebloem.
+
+Open de app en ga naar buiten: de camera meet de helderheid om je heen. Blijft het licht zo fel als buiten, dan loopt je zonnetijd vanzelf op. Er worden geen foto's gemaakt of bewaard.
+
+Je zonnebloem laten groeien
+Hoe meer zon je krijgt, hoe verder je batterij oplaadt. Geef de verzamelde zon aan je zonnebloem en hij knapt weer helemaal op. Verwaarloos je hem een tijdje, dan gaat hij langzaam hangen.
+
+Je dagdoel
+Kies een dagdoel van 10 tot 120 minuten en zie in één oogopslag hoever je vandaag bent. Was je buiten, maar is het niet vastgelegd? Dan tel je de tijd er gewoon zelf bij op.
+
+Kalender en statistieken
+Noteer bij elke dag je zonnetijd, een stemmingsemoji en een korte notitie. In de week- en maandstatistieken zie je hoe het verloopt.
+
+Samen met vrienden
+Zonnen met een vriend vlakbij? Dan kleuren je bloemblaadjes vrolijk en komt jullie moment in het tabblad Vrienden te staan.
+
+Widgets en live status
+Met widgets op je beginscherm en toegangsscherm en in het Dynamic Island zie je meteen je zonlicht van vandaag en hoe het met je zonnebloem gaat.
+
+Herinneringen
+Op een tijdstip naar keuze krijg je een seintje om de zon op te zoeken, en een melding zodra je je doel hebt gehaald.
+
+Er is geen server: je zonlichtgegevens en notities blijven helemaal op je eigen toestel.
+
+## pl
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Czas słońca
+
+### 부제
+
+Hoduj własnego słonecznika
+
+### 키워드
+
+serotonina,nastrój,opalanie,spacer,sen,jasność,luksomierz,uv,widżet,kalendarz,nawyk,zdrowie,relaks
+
+### 프로모션 텍스트
+
+Czy dziś było już dość słońca? Wyjdź na dwór, a aplikacja sama zliczy czas spędzony w słońcu. Dzięki niemu wyhodujesz własnego, wyjątkowego słonecznika.
+
+### 설명
+
+Garść słońca każdego dnia i Twój własny słonecznik.
+Sunny Sunflower mierzy i zapisuje czas, który spędzasz na słońcu, a zebrane promienie zamienia w opiekę nad słonecznikiem.
+
+Otwórz aplikację i wyjdź na dwór. Na podstawie danych o ekspozycji aparatu sprawdza ona jasność otoczenia. Gdy światło jest tak mocne jak na dworze, czas na słońcu zlicza się sam. Nie robimy zdjęć ani niczego nie zapisujemy z aparatu.
+
+Hodowla słonecznika
+Im więcej słońca łapiesz, tym bardziej ładuje się bateria. Przekaż zebrane słońce słonecznikowi, a znów będzie świeży i zdrowy. Jeśli długo o nim zapominasz, powoli zaczyna więdnąć.
+
+Cel dzienny
+Ustaw cel od 10 do 120 minut i zobacz na jednym ekranie, ile już masz. Jeśli czas na dworze umknął pomiarowi, możesz dodać go ręcznie.
+
+Kalendarz i statystyki
+Przy każdym dniu zapisz czas na słońcu, emoji nastroju i krótką notatkę. Statystyki tygodniowe i miesięczne pokażą Ci, jak to wszystko się układa.
+
+Razem ze znajomymi
+Gdy łapiesz słońce razem ze znajomym w pobliżu, płatki słonecznika mienią się kolorami, a wspólne chwile zapisują się w zakładce Znajomi.
+
+Widżety i bieżący podgląd
+Widżety na ekranie głównym i ekranie blokady oraz Dynamic Island pokazują od razu, ile słońca masz dziś i jak się miewa słonecznik.
+
+Powiadomienia
+O wybranej godzinie przypomnimy Ci, by wyjść na słońce, a gdy osiągniesz cel, damy Ci znać.
+
+To aplikacja bez serwera. Wszystkie zapisy o słońcu i notatki są przechowywane wyłącznie na Twoim urządzeniu.
+
+## sv
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Sollogg
+
+### 부제
+
+Odla din solros med solljus
+
+### 키워드
+
+d-vitamin,serotonin,solbad,soltimmar,utomhus,promenad,humör,välmående,rutin,kalender,widget,hälsa
+
+### 프로모션 텍스트
+
+Har du fått lite sol i dag? När du går ut samlar appen ihop dina soltimmar åt dig, och med dem låter du din alldeles egna solros växa.
+
+### 설명
+
+En stund i solen varje dag får din solros att växa.
+Sunny Sunflower håller koll på hur länge du varit ute i solen och låter dig ge solen vidare till din solros.
+
+Öppna appen och gå ut, så mäter den ljusstyrkan runt omkring dig med hjälp av kamerans exponeringsdata. När ljuset är lika starkt som utomhus byggs dina soltimmar upp av sig själva. Appen tar inga foton och sparar inga bilder.
+
+Odla din solros
+Ju mer sol du får, desto mer laddas batteriet. Ge den insamlade solen till solrosen så blir den pigg och fräsch. Om du inte tar hand om den på ett tag börjar den sakta vissna.
+
+Dagligt mål
+Sätt ett dagligt mål mellan 10 och 120 minuter och se med en blick hur långt du kommit i dag. Var du ute utan att få med det? Då lägger du bara till tiden själv.
+
+Kalender och statistik
+Spara dagens soltid tillsammans med ett humör-emoji och en kort anteckning. Följ utvecklingen i statistik för vecka och månad.
+
+Sola med vänner
+Solar du tillsammans med en vän som är i närheten färgas kronbladen i fina färger, och ert sällskap samlas under fliken Vänner.
+
+Widgetar och live-status
+Se dagens sol och hur solrosen mår direkt i widgetar på hemskärmen och låsskärmen samt i Dynamic Island.
+
+Aviseringar
+Välj en tid då appen ska påminna dig om att gå ut i solen, och få en avisering när du nått ditt mål.
+
+Appen har ingen server. All din solloggning och alla dina anteckningar sparas bara på din enhet.
+
+## tr
+
+### 지원 URL
+
+https://m1zz.github.io/SunlightTracker/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/SunlightTracker/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/SunlightTracker/
+
+### 이름
+
+Sunny Sunflower: Güneş Günlüğü
+
+### 부제
+
+Aldığın kadar büyüyen ayçiçeği
+
+### 키워드
+
+vitamin,serotonin,mutluluk,yürüyüş,dışarı,widget,takvim,alışkanlık,hatırlatıcı,depresyon,motivasyon
+
+### 프로모션 텍스트
+
+Bugün yeterince güneş aldın mı? Dışarı çıkınca güneşte geçirdiğin süreyi kendiliğinden toplar, o güneşle kendi ayçiçeğini büyütürsün.
+
+### 설명
+
+Günde bir avuç güneş, ayçiçeğin için.
+Sunny Sunflower, dışarıda güneşte geçirdiğin süreyi ölçüp kaydeder ve bu güneşle ayçiçeğine bakmanı sağlar.
+
+Uygulamayı açık bırakıp dışarı çıkman yeterli. Kameranın pozlama bilgisinden ortam parlaklığı ölçülür. Dışarıdaki kadar güçlü ışık sürdükçe güneş süren kendiliğinden birikir. Fotoğraf çekilmez, hiçbir şey saklanmaz.
+
+Ayçiçeği Büyütme
+Güneş aldıkça pilin dolar. Biriktirdiğin güneşi ayçiçeğine verince capcanlı olur. Bir süre ilgilenmezsen yavaş yavaş solmaya başlar.
+
+Günlük Hedef
+Günlük hedefini 10 ile 120 dakika arasında belirle, bugün ne kadarını tamamladığını tek bakışta gör. Dışarıdaydın ama kaydedemedin mi? O süreyi elle ekleyebilirsin.
+
+Takvim ve İstatistik
+Her güne güneş süreni, ruh halini yansıtan bir emojiyi ve kısa bir not ekle. Haftalık ve aylık istatistiklerle gidişatına göz at.
+
+Arkadaşlarla Birlikte
+Yakınındaki bir arkadaşınla birlikte güneşlenirsen yapraklar rengârenk olur, ortak kayıtların Arkadaşlar sekmesinde birikir.
+
+Widget'lar ve Canlı Durum
+Ana ekran ve kilit ekranı widget'ları ile Dynamic Island'dan bugünkü güneşini ve ayçiçeğinin durumunu hemen gör.
+
+Bildirimler
+Seçtiğin saatte güneşe çıkmanı hatırlatır, hedefini tamamlayınca da haber verir.
+
+Uygulamanın sunucusu yok. Güneş kayıtların ve notların yalnızca cihazında saklanır.

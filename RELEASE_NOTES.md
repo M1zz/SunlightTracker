@@ -70,3 +70,81 @@ Donne ton avis et ta note dans Réglages
 Apri l'app e il sole si rileva subito
 Misuriamo più spesso: dati più precisi
 Da Impostazioni mandi pareri e stelle
+
+### 앱스토어 (Português (Brasil) · pt-BR)
+
+Ao abrir o app, a detecção de sol começa
+Mais medições de luz, registros precisos
+Envie sugestões e dê nota nos Ajustes
+
+### 앱스토어 (ไทย · th)
+
+เปิดแอปแล้วเริ่มตรวจจับแดดให้ทันที
+วัดความสว่างถี่ขึ้น บันทึกแม่นยำกว่าเดิม
+ส่งความเห็นและให้ดาวได้จากหน้าตั้งค่า
+
+### 앱스토어 (Tiếng Việt · vi)
+
+Mở app là bắt đầu đo nắng ngay
+Đo sáng thường xuyên nên chính xác hơn
+Gửi góp ý và chấm sao ngay trong Cài đặt
+
+### 앱스토어 (Čeština · cs)
+
+Slunce se začne měřit hned po otevření
+Častější kontrola jasu zpřesnila záznamy
+V nastavení pošleš nápad a dáš hodnocení
+
+### 앱스토어 (Dansk · da)
+
+Måling starter, når du åbner appen
+Lyset tjekkes oftere for bedre præcision
+Giv feedback og stjerner i Indstillinger
+
+### 앱스토어 (Ελληνικά · el)
+
+Ανίχνευση ήλιου μόλις ανοίξεις την app
+Ελέγχουμε τη φωτεινότητα πιο συχνά
+Στείλε σχόλια και αστέρια στις Ρυθμίσεις
+
+### 앱스토어 (Suomi · fi)
+
+Aurinkoseuranta alkaa heti avattaessa
+Kirjaukset ovat nyt tarkempia
+Anna palaute ja tähdet asetuksissa
+
+### 앱스토어 (Bahasa Indonesia · id)
+
+Buka aplikasi, sinar langsung terdeteksi
+Cahaya dicek lebih sering, lebih akurat
+Kirim masukan & bintang dari Pengaturan
+
+### 앱스토어 (Norsk bokmål · nb)
+
+Lysmåling starter når du åpner appen
+Oftere lyssjekk gir mer presis logg
+Gi tilbakemelding og stjerner i appen
+
+### 앱스토어 (Nederlands · nl)
+
+De zonmeting start zodra je de app opent
+Vaker meten, dus nauwkeuriger bijhouden
+Geef feedback en sterren in Instellingen
+
+### 앱스토어 (Polski · pl)
+
+Aplikacja od razu zaczyna szukać słońca
+Zapis jest dokładniejszy dzięki pomiarom
+Opinię i ocenę wyślesz z Ustawień
+
+### 앱스토어 (Svenska · sv)
+
+Solmätningen startar direkt i appen
+Ljuset mäts oftare för exaktare logg
+Ge feedback och betyg i inställningarna
+
+### 앱스토어 (Türkçe · tr)
+
+Uygulamayı açar açmaz güneşi algılar
+Işık daha sık ölçülür, kayıtlar netleşti
+Ayarlardan görüş ve puan gönderebilirsin

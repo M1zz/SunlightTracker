@@ -4,10 +4,28 @@
     "CFBundleDisplayName" : {
       "comment" : "App display name on the home screen (CFBundleDisplayName). Short (<=15 chars ideal)",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sunny Sunflower"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ηλιοτρόπιο"
           }
         },
         "en" : {
@@ -28,7 +46,19 @@
             "value" : "Sunny Sunflower"
           }
         },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sunny Sunflower"
@@ -52,10 +82,58 @@
             "value" : "햇빛바라기"
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подсолнушек"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทานตะวันชอบแดด"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
           }
         },
         "zh-Hans" : {
@@ -75,10 +153,28 @@
     "NSCameraUsageDescription" : {
       "comment" : "iOS camera permission prompt (NSCameraUsageDescription) — the camera is only used to read ambient brightness via exposure data; no photos are taken or stored",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Měří jas okolí a podle něj automaticky pozná a zapíše, kolik slunce opravdu dostáváš."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen aflæser omgivelsernes lysstyrke for automatisk at registrere din soltid. Der tages eller gemmes ingen billeder."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Die Kamera misst nur die Umgebungshelligkeit, um echtes Sonnenlicht automatisch zu erkennen und festzuhalten. Es werden keine Fotos aufgenommen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η κάμερα μετράει τη φωτεινότητα του χώρου, ώστε να εντοπίζεται και να καταγράφεται αυτόματα η έκθεσή σου στον ήλιο."
           }
         },
         "en" : {
@@ -99,10 +195,22 @@
             "value" : "La cámara se usa solo para medir la luz ambiental y detectar y registrar automáticamente tu exposición al sol. No se toman ni se guardan fotos."
           }
         },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamera mittaa ympäristön kirkkautta, jotta sovellus tunnistaa ja kirjaa auringonvalossa vietetyn ajan automaattisesti."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "L’app mesure la luminosité ambiante pour détecter et enregistrer automatiquement ton exposition réelle au soleil."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamera dipakai untuk mengukur kecerahan sekitar (tanpa mengambil foto) agar paparan sinar matahari terdeteksi dan tercatat otomatis."
           }
         },
         "it" : {
@@ -123,10 +231,58 @@
             "value" : "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kameraet brukes bare til å måle lysstyrken rundt deg, slik at appen automatisk kan oppdage og logge sol. Ingen bilder tas eller lagres."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Met de camera meet de app alleen de helderheid van je omgeving (lux), zodat je zonlicht automatisch wordt herkend en vastgelegd."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprawdzamy jasność otoczenia, by automatycznie wykrywać i zapisywać Twój czas na słońcu. Aparat służy tylko do pomiaru światła, nie robimy ani nie zapisujemy zdjęć."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mede a luz do ambiente para detectar e registrar automaticamente sua exposição ao sol."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Измеряет яркость вокруг, чтобы автоматически определять и записывать время на солнце."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kameran mäter ljusstyrkan i omgivningen så att appen automatiskt kan känna av och logga hur länge du solar. Inga foton tas eller sparas."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แอปใช้กล้องวัดความสว่างรอบตัวเพื่อตรวจจับและบันทึกการรับแดดจริงโดยอัตโนมัติ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ortamın parlaklığını (ışık düzeyini) ölçerek güneşte geçirdiğin süreyi otomatik algılar ve kaydeder."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower dùng camera để đo độ sáng xung quanh, từ đó tự động nhận biết và ghi lại thời gian bạn tiếp xúc với ánh nắng. Ứng dụng không chụp hay lưu ảnh."
           }
         },
         "zh-Hans" : {
@@ -146,10 +302,28 @@
     "NSLocationWhenInUseUsageDescription" : {
       "comment" : "iOS location permission prompt (NSLocationWhenInUseUsageDescription)",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poloha je potřeba k výpočtu východu a západu slunce a k přesnému sledování slunění."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din position bruges til at beregne solopgang og solnedgang og til at registrere din solskinstid mere præcist."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dein Standort wird benötigt, um Sonnenaufgang und -untergang zu berechnen und deine Sonnenzeit genau zu erfassen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η τοποθεσία χρειάζεται για τον υπολογισμό της ανατολής και της δύσης και για ακριβή καταγραφή της ηλιοφάνειας."
           }
         },
         "en" : {
@@ -170,10 +344,22 @@
             "value" : "Necesitamos tu ubicación para calcular la hora del amanecer y el atardecer y registrar con precisión tu exposición al sol."
           }
         },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sijaintia tarvitaan auringonnousun ja -laskun ajankohtien laskemiseen sekä auringonvalon tarkkaan seurantaan."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "La position sert à calculer l’heure du lever et du coucher du soleil et à suivre précisément ton ensoleillement."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lokasi dibutuhkan untuk menghitung waktu matahari terbit/terbenam dan melacak sinar matahari dengan akurat."
           }
         },
         "it" : {
@@ -194,10 +380,58 @@
             "value" : "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다."
           }
         },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posisjonen din brukes til å beregne soloppgang og solnedgang og til å følge solnivået nøyaktig."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je locatie is nodig om zonsopkomst en zonsondergang te berekenen en je zonlicht nauwkeurig bij te houden."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lokalizacja jest potrzebna do obliczania godzin wschodu i zachodu słońca oraz do dokładnego śledzenia czasu na słońcu."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Precisamos da sua localização para calcular o nascer e o pôr do sol e acompanhar o tempo de sol com precisão."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Местоположение нужно, чтобы рассчитывать время восхода и заката и точнее отслеживать солнце."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din plats behövs för att beräkna soluppgång och solnedgång och för att logga solljuset exakt."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ต้องใช้ตำแหน่งที่ตั้งเพื่อคำนวณเวลาพระอาทิตย์ขึ้น/ตก และติดตามปริมาณแดดให้แม่นยำ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gün doğumu/batımı saatlerini hesaplamak ve güneş süreni doğru takip etmek için konum bilgisine ihtiyaç var."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower cần vị trí của bạn để tính giờ mặt trời mọc/lặn và theo dõi thời gian nắng chính xác hơn."
           }
         },
         "zh-Hans" : {

@@ -287,6 +287,19 @@
 				de,
 				fr,
 				it,
+				"pt-BR",
+				th,
+				vi,
+				cs,
+				da,
+				el,
+				fi,
+				id,
+				nb,
+				nl,
+				pl,
+				sv,
+				tr,
 			);
 			mainGroup = AA000040;
 			packageReferences = (
