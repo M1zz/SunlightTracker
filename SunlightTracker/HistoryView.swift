@@ -39,7 +39,7 @@ struct HistoryView: View {
         ScrollView {
             VStack(spacing: 20) {
                 Picker("기간", selection: $selectedPeriod) {
-                    ForEach(Period.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(Period.allCases, id: \.self) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
                 }
                 .pickerStyle(.segmented)
                 .padding(.horizontal, 20)
@@ -56,10 +56,10 @@ struct HistoryView: View {
     // MARK: - Summary
     private var summarySection: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-            SummaryCard2(title: "총 일조량", value: "\(totalMinutes)분", icon: "leaf.fill", color: Color(red: 0.3, green: 0.7, blue: 0.2))
-            SummaryCard2(title: "일평균", value: "\(Int(averageMinutes))분", icon: "chart.bar.fill", color: .blue)
-            SummaryCard2(title: "목표 달성", value: "\(goalDays)일", icon: "checkmark.seal.fill", color: .green)
-            SummaryCard2(title: "평균 최고조도", value: avgPeakLux.luxFormatted + " lx", icon: "light.max", color: Color(red: 1.0, green: 0.85, blue: 0.1))
+            SummaryCard2(title: String(localized: "총 일조량"), value: String(localized: "\(totalMinutes)분"), icon: "leaf.fill", color: Color(red: 0.3, green: 0.7, blue: 0.2))
+            SummaryCard2(title: String(localized: "일평균"), value: String(localized: "\(Int(averageMinutes))분"), icon: "chart.bar.fill", color: .blue)
+            SummaryCard2(title: String(localized: "목표 달성"), value: String(localized: "\(goalDays)일"), icon: "checkmark.seal.fill", color: .green)
+            SummaryCard2(title: String(localized: "평균 최고조도"), value: avgPeakLux.luxFormatted + " lx", icon: "light.max", color: Color(red: 1.0, green: 0.85, blue: 0.1))
         }
         .padding(.horizontal, 20)
     }
@@ -156,7 +156,7 @@ struct HistoryView: View {
     private func getChartData() -> [ChartItem] {
         let calendar = Calendar.current
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.locale = Locale.current
         formatter.dateFormat = "d"
         
         let days = selectedPeriod == .week ? 7 : 30

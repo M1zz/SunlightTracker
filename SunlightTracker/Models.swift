@@ -50,11 +50,11 @@ enum DailyMood: String, Codable, CaseIterable {
 
     var description: String {
         switch self {
-        case .veryHappy: return "매우 좋음"
-        case .happy: return "좋음"
-        case .neutral: return "보통"
-        case .sad: return "안 좋음"
-        case .verySad: return "매우 안 좋음"
+        case .veryHappy: return String(localized: "매우 좋음")
+        case .happy: return String(localized: "좋음")
+        case .neutral: return String(localized: "보통")
+        case .sad: return String(localized: "안 좋음")
+        case .verySad: return String(localized: "매우 안 좋음")
         }
     }
 }
@@ -93,10 +93,10 @@ struct SunlightSession: Identifiable, Codable {
     }
 
     var luxDescription: String {
-        if averageLux >= 10000 { return "강한 햇빛" }
-        if averageLux >= 1000 { return "햇빛" }
-        if averageLux >= 300 { return "실외/흐림" }
-        return "약한 빛"
+        if averageLux >= 10000 { return String(localized: "강한 햇빛") }
+        if averageLux >= 1000 { return String(localized: "햇빛") }
+        if averageLux >= 300 { return String(localized: "실외/흐림") }
+        return String(localized: "약한 빛")
     }
 
     init(id: UUID = UUID(), startTime: Date = Date(), endTime: Date? = nil,
@@ -188,7 +188,7 @@ struct SunTimes {
     var daylightDescription: String {
         let hours = Int(daylightHours)
         let minutes = Int((daylightHours - Double(hours)) * 60)
-        return "\(hours)시간 \(minutes)분"
+        return String(localized: "\(hours)시간 \(minutes)분")
     }
 }
 
@@ -255,31 +255,31 @@ struct HealthTip: Identifiable {
 
     static let allTips: [HealthTip] = [
         // 정신건강
-        HealthTip(category: .mental, title: "우울증 예방", description: "햇빛은 세로토닌 분비를 촉진하여 우울증 증상을 완화합니다. 매일 30분 이상의 햇빛 노출은 계절성 우울증(SAD) 치료에 효과적입니다.", icon: "brain.head.profile", color: "#4A90E2"),
-        HealthTip(category: .mental, title: "기분 개선", description: "자연광 노출은 기분을 조절하는 신경전달물질을 활성화합니다. 15-20분의 햇빛만으로도 긍정적인 감정 변화를 경험할 수 있습니다.", icon: "face.smiling", color: "#F5A623"),
-        HealthTip(category: .mental, title: "스트레스 감소", description: "햇빛은 코르티솔(스트레스 호르몬) 수치를 25% 낮춰줍니다. 점심시간 햇빛 산책은 오후 업무 스트레스를 줄이는데 도움이 됩니다.", icon: "heart.text.square", color: "#50E3C2"),
-        HealthTip(category: .mental, title: "집중력 향상", description: "자연광은 인지 기능과 집중력을 향상시킵니다. 실내에서 일할 때도 창가 자리를 선택하면 업무 효율이 15% 증가합니다.", icon: "lightbulb.fill", color: "#FFD700"),
+        HealthTip(category: .mental, title: String(localized: "우울증 예방"), description: String(localized: "햇빛은 세로토닌 분비를 촉진하여 우울증 증상을 완화합니다. 매일 30분 이상의 햇빛 노출은 계절성 우울증(SAD) 치료에 효과적입니다."), icon: "brain.head.profile", color: "#4A90E2"),
+        HealthTip(category: .mental, title: String(localized: "기분 개선"), description: String(localized: "자연광 노출은 기분을 조절하는 신경전달물질을 활성화합니다. 15-20분의 햇빛만으로도 긍정적인 감정 변화를 경험할 수 있습니다."), icon: "face.smiling", color: "#F5A623"),
+        HealthTip(category: .mental, title: String(localized: "스트레스 감소"), description: String(localized: "햇빛은 코르티솔(스트레스 호르몬) 수치를 25% 낮춰줍니다. 점심시간 햇빛 산책은 오후 업무 스트레스를 줄이는데 도움이 됩니다."), icon: "heart.text.square", color: "#50E3C2"),
+        HealthTip(category: .mental, title: String(localized: "집중력 향상"), description: String(localized: "자연광은 인지 기능과 집중력을 향상시킵니다. 실내에서 일할 때도 창가 자리를 선택하면 업무 효율이 15% 증가합니다."), icon: "lightbulb.fill", color: "#FFD700"),
 
         // 육체건강
-        HealthTip(category: .physical, title: "뼈 건강", description: "햇빛으로 생성되는 비타민D는 칼슘 흡수를 돕습니다. 주 3-4회, 팔다리를 노출한 채 15분 햇빛을 쬐면 충분한 비타민D를 얻을 수 있습니다.", icon: "figure.walk", color: "#8B572A"),
-        HealthTip(category: .physical, title: "혈압 조절", description: "햇빛은 혈관을 확장시켜 혈압을 낮춰줍니다. 60분의 햇빛 노출은 수축기 혈압을 11% 감소시키는 효과가 있습니다.", icon: "heart.circle", color: "#E74C3C"),
-        HealthTip(category: .physical, title: "근육 기능", description: "비타민D는 근육 기능과 회복에 필수적입니다. 운동 전후 햇빛 노출은 근육통을 줄이고 회복 속도를 높입니다.", icon: "figure.strengthtraining.traditional", color: "#9B59B6"),
-        HealthTip(category: .physical, title: "피부 건강", description: "적절한 햇빛 노출은 여드름, 건선 등 피부 질환 개선에 도움이 됩니다. 단, 자외선 차단제 사용과 함께 적절한 시간(아침/저녁) 선택이 중요합니다.", icon: "sparkles", color: "#FF69B4"),
+        HealthTip(category: .physical, title: String(localized: "뼈 건강"), description: String(localized: "햇빛으로 생성되는 비타민D는 칼슘 흡수를 돕습니다. 주 3-4회, 팔다리를 노출한 채 15분 햇빛을 쬐면 충분한 비타민D를 얻을 수 있습니다."), icon: "figure.walk", color: "#8B572A"),
+        HealthTip(category: .physical, title: String(localized: "혈압 조절"), description: String(localized: "햇빛은 혈관을 확장시켜 혈압을 낮춰줍니다. 60분의 햇빛 노출은 수축기 혈압을 11% 감소시키는 효과가 있습니다."), icon: "heart.circle", color: "#E74C3C"),
+        HealthTip(category: .physical, title: String(localized: "근육 기능"), description: String(localized: "비타민D는 근육 기능과 회복에 필수적입니다. 운동 전후 햇빛 노출은 근육통을 줄이고 회복 속도를 높입니다."), icon: "figure.strengthtraining.traditional", color: "#9B59B6"),
+        HealthTip(category: .physical, title: String(localized: "피부 건강"), description: String(localized: "적절한 햇빛 노출은 여드름, 건선 등 피부 질환 개선에 도움이 됩니다. 단, 자외선 차단제 사용과 함께 적절한 시간(아침/저녁) 선택이 중요합니다."), icon: "sparkles", color: "#FF69B4"),
 
         // 비타민D
-        HealthTip(category: .vitamin, title: "비타민D 합성", description: "피부가 UVB 광선에 노출되면 비타민D가 생성됩니다. 손, 팔, 다리를 노출한 상태로 15-30분이면 하루 필요량을 충족할 수 있습니다.", icon: "sun.max.fill", color: "#FDB813"),
-        HealthTip(category: .vitamin, title: "면역력 강화", description: "비타민D는 면역세포를 활성화하여 감염 예방에 도움을 줍니다. 충분한 비타민D 수치는 감기와 독감 발생률을 40% 낮춥니다.", icon: "shield.fill", color: "#3498DB"),
-        HealthTip(category: .vitamin, title: "만성질환 예방", description: "비타민D 결핍은 심혈관 질환, 당뇨병, 일부 암과 연관이 있습니다. 규칙적인 햇빛 노출로 만성질환 위험을 줄일 수 있습니다.", icon: "cross.case.fill", color: "#E67E22"),
+        HealthTip(category: .vitamin, title: String(localized: "비타민D 합성"), description: String(localized: "피부가 UVB 광선에 노출되면 비타민D가 생성됩니다. 손, 팔, 다리를 노출한 상태로 15-30분이면 하루 필요량을 충족할 수 있습니다."), icon: "sun.max.fill", color: "#FDB813"),
+        HealthTip(category: .vitamin, title: String(localized: "면역력 강화"), description: String(localized: "비타민D는 면역세포를 활성화하여 감염 예방에 도움을 줍니다. 충분한 비타민D 수치는 감기와 독감 발생률을 40% 낮춥니다."), icon: "shield.fill", color: "#3498DB"),
+        HealthTip(category: .vitamin, title: String(localized: "만성질환 예방"), description: String(localized: "비타민D 결핍은 심혈관 질환, 당뇨병, 일부 암과 연관이 있습니다. 규칙적인 햇빛 노출로 만성질환 위험을 줄일 수 있습니다."), icon: "cross.case.fill", color: "#E67E22"),
 
         // 수면
-        HealthTip(category: .sleep, title: "체내 시계 동기화", description: "아침 햇빛은 생체리듬을 조절하는 멜라토닌 분비를 억제합니다. 기상 후 10분 햇빛 노출로 밤에 더 잘 잘 수 있습니다.", icon: "moon.zzz", color: "#34495E"),
-        HealthTip(category: .sleep, title: "수면 시간 증가", description: "30분의 자연광 노출은 수면 시작 시간을 23분 앞당깁니다. 불면증 환자는 60분 햇빛 노출로 수면시간이 51분 증가합니다.", icon: "bed.double.fill", color: "#5DADE2"),
-        HealthTip(category: .sleep, title: "수면의 질 향상", description: "햇빛은 깊은 수면(REM 수면) 비율을 높여줍니다. 낮에 충분한 햇빛을 받으면 야간 수면의 질이 30% 향상됩니다.", icon: "powersleep", color: "#1ABC9C"),
+        HealthTip(category: .sleep, title: String(localized: "체내 시계 동기화"), description: String(localized: "아침 햇빛은 생체리듬을 조절하는 멜라토닌 분비를 억제합니다. 기상 후 10분 햇빛 노출로 밤에 더 잘 잘 수 있습니다."), icon: "moon.zzz", color: "#34495E"),
+        HealthTip(category: .sleep, title: String(localized: "수면 시간 증가"), description: String(localized: "30분의 자연광 노출은 수면 시작 시간을 23분 앞당깁니다. 불면증 환자는 60분 햇빛 노출로 수면시간이 51분 증가합니다."), icon: "bed.double.fill", color: "#5DADE2"),
+        HealthTip(category: .sleep, title: String(localized: "수면의 질 향상"), description: String(localized: "햇빛은 깊은 수면(REM 수면) 비율을 높여줍니다. 낮에 충분한 햇빛을 받으면 야간 수면의 질이 30% 향상됩니다."), icon: "powersleep", color: "#1ABC9C"),
 
         // 면역력
-        HealthTip(category: .immune, title: "백혈구 활성화", description: "햇빛은 T세포와 같은 면역세포를 활성화합니다. 규칙적인 햇빛 노출로 면역 반응 속도가 빨라집니다.", icon: "drop.fill", color: "#C0392B"),
-        HealthTip(category: .immune, title: "항염 효과", description: "햇빛은 염증성 사이토카인 수치를 낮춰 만성 염증을 줄입니다. 자가면역 질환 증상 완화에도 도움이 됩니다.", icon: "waveform.path.ecg", color: "#16A085"),
-        HealthTip(category: .immune, title: "항산화 효과", description: "적절한 햇빛 노출은 체내 항산화 시스템을 강화합니다. 이는 세포 손상을 줄이고 노화를 늦추는데 기여합니다.", icon: "leaf.arrow.triangle.circlepath", color: "#27AE60")
+        HealthTip(category: .immune, title: String(localized: "백혈구 활성화"), description: String(localized: "햇빛은 T세포와 같은 면역세포를 활성화합니다. 규칙적인 햇빛 노출로 면역 반응 속도가 빨라집니다."), icon: "drop.fill", color: "#C0392B"),
+        HealthTip(category: .immune, title: String(localized: "항염 효과"), description: String(localized: "햇빛은 염증성 사이토카인 수치를 낮춰 만성 염증을 줄입니다. 자가면역 질환 증상 완화에도 도움이 됩니다."), icon: "waveform.path.ecg", color: "#16A085"),
+        HealthTip(category: .immune, title: String(localized: "항산화 효과"), description: String(localized: "적절한 햇빛 노출은 체내 항산화 시스템을 강화합니다. 이는 세포 손상을 줄이고 노화를 늦추는데 기여합니다."), icon: "leaf.arrow.triangle.circlepath", color: "#27AE60")
     ]
 }
 
@@ -408,15 +408,15 @@ extension Date {
     
     var shortDateString: String {
         let f = DateFormatter()
-        f.locale = Locale(identifier: "ko_KR")
+        f.locale = Locale.current
         f.dateFormat = "M/d (E)"
         return f.string(from: self)
     }
     
     var timeString: String {
         let f = DateFormatter()
-        f.locale = Locale(identifier: "ko_KR")
-        f.dateFormat = "a h:mm"
+        f.locale = Locale.current
+        f.setLocalizedDateFormatFromTemplate("jmm")
         return f.string(from: self)
     }
     

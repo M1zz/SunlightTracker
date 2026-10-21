@@ -598,43 +598,43 @@ class SunlightManager: NSObject, ObservableObject {
     let healthAdvices: [SunlightHealthAdvice] = [
         SunlightHealthAdvice(
             minuteThreshold: 10,
-            title: "체내 시계 동기화 시작",
-            description: "10분의 자연광으로 체내 시계가 동기화되기 시작하고, 피부에서 비타민D 생성이 시작됩니다.",
+            title: String(localized: "체내 시계 동기화 시작"),
+            description: String(localized: "10분의 자연광으로 체내 시계가 동기화되기 시작하고, 피부에서 비타민D 생성이 시작됩니다."),
             icon: "clock.arrow.circlepath",
             category: .vitamin
         ),
         SunlightHealthAdvice(
             minuteThreshold: 15,
-            title: "세로토닌 분비 활성화",
-            description: "15분의 햇빛 노출로 세로토닌 수치가 상승하여 기분이 개선되기 시작합니다.",
+            title: String(localized: "세로토닌 분비 활성화"),
+            description: String(localized: "15분의 햇빛 노출로 세로토닌 수치가 상승하여 기분이 개선되기 시작합니다."),
             icon: "brain.head.profile",
             category: .mood
         ),
         SunlightHealthAdvice(
             minuteThreshold: 20,
-            title: "기분 개선 효과 측정 가능",
-            description: "20분 이상의 햇빛 노출 시 임상적으로 측정 가능한 수준의 기분 개선이 나타납니다.",
+            title: String(localized: "기분 개선 효과 측정 가능"),
+            description: String(localized: "20분 이상의 햇빛 노출 시 임상적으로 측정 가능한 수준의 기분 개선이 나타납니다."),
             icon: "face.smiling",
             category: .mood
         ),
         SunlightHealthAdvice(
             minuteThreshold: 30,
-            title: "수면 질 향상 & 스트레스 감소",
-            description: "30분의 자연광은 수면 시간을 23분 앞당기고, 코르티솔 수치를 25% 감소시킵니다. 계절성 우울증(SAD) 치료 표준량입니다.",
+            title: String(localized: "수면 질 향상 & 스트레스 감소"),
+            description: String(localized: "30분의 자연광은 수면 시간을 23분 앞당기고, 코르티솔 수치를 25% 감소시킵니다. 계절성 우울증(SAD) 치료 표준량입니다."),
             icon: "moon.zzz",
             category: .sleep
         ),
         SunlightHealthAdvice(
             minuteThreshold: 45,
-            title: "우울증 치료 최적 효과",
-            description: "45분의 햇빛 노출은 우울증 치료에 최적의 효과를 보입니다. 20분 대비 현저한 증상 개선이 관찰됩니다.",
+            title: String(localized: "우울증 치료 최적 효과"),
+            description: String(localized: "45분의 햇빛 노출은 우울증 치료에 최적의 효과를 보입니다. 20분 대비 현저한 증상 개선이 관찰됩니다."),
             icon: "heart.fill",
             category: .health
         ),
         SunlightHealthAdvice(
             minuteThreshold: 60,
-            title: "수면 & 혈압 대폭 개선",
-            description: "60분의 자연광 노출은 불면증 환자의 수면시간을 51분 증가시키고, 혈압을 11% 감소시킵니다.",
+            title: String(localized: "수면 & 혈압 대폭 개선"),
+            description: String(localized: "60분의 자연광 노출은 불면증 환자의 수면시간을 51분 증가시키고, 혈압을 11% 감소시킵니다."),
             icon: "bed.double.fill",
             category: .sleep
         )
@@ -654,18 +654,18 @@ class SunlightManager: NSObject, ObservableObject {
         let battery = batteryStatus.chargedAmount
 
         if health < 20 {
-            return "해바라기가 위험해요! 지금 배터리를 전달하세요!"
+            return String(localized: "해바라기가 위험해요! 지금 배터리를 전달하세요!")
         }
         if health < 50 && battery >= 20 {
-            return "해바라기가 시들어가고 있어요. 배터리를 전달해주세요"
+            return String(localized: "해바라기가 시들어가고 있어요. 배터리를 전달해주세요")
         }
         if battery >= 50 {
-            return "충분한 배터리를 모았어요! 해바라기에게 전달해주세요"
+            return String(localized: "충분한 배터리를 모았어요! 해바라기에게 전달해주세요")
         }
         if isTracking {
-            return "햇빛을 받아 배터리를 충전하는 중이에요"
+            return String(localized: "햇빛을 받아 배터리를 충전하는 중이에요")
         }
-        return "햇빛을 받아 배터리를 충전하세요"
+        return String(localized: "햇빛을 받아 배터리를 충전하세요")
     }
 
     // MARK: - Battery & Health Management
@@ -842,7 +842,7 @@ class SunlightManager: NSObject, ObservableObject {
         let calendar = Calendar.current
         var data: [(String, Int, Double)] = []
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.locale = Locale.current
         formatter.dateFormat = "E"
 
         for i in (0..<7).reversed() {

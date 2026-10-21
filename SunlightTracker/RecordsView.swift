@@ -14,7 +14,7 @@ struct RecordsView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 Picker("보기", selection: $mode) {
-                    ForEach(RecordMode.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(RecordMode.allCases, id: \.self) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
                 }
                 .pickerStyle(.segmented)
                 .padding(.horizontal, 20)

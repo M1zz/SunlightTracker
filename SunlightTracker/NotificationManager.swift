@@ -16,8 +16,8 @@ class NotificationManager: ObservableObject {
     
     func scheduleReminder(at time: Date) {
         let content = UNMutableNotificationContent()
-        content.title = "🌻 해바라기가 시들어가고 있어요!"
-        content.body = "햇빛을 쐬러 나가볼까요? 15분이면 세로토닌이 분비되기 시작해요."
+        content.title = String(localized: "🌻 해바라기가 시들어가고 있어요!")
+        content.body = String(localized: "햇빛을 쐬러 나가볼까요? 15분이면 세로토닌이 분비되기 시작해요.")
         content.sound = .default
         
         let calendar = Calendar.current
@@ -35,8 +35,8 @@ class NotificationManager: ObservableObject {
     
     func scheduleGoalAchieved(minutes: Int) {
         let content = UNMutableNotificationContent()
-        content.title = "🌻 해바라기가 활짝 폈어요!"
-        content.body = "오늘 \(minutes)분의 햇빛으로 수면의 질이 좋아질 거예요. 대단해요!"
+        content.title = String(localized: "🌻 해바라기가 활짝 폈어요!")
+        content.body = String(localized: "오늘 \(minutes)분의 햇빛으로 수면의 질이 좋아질 거예요. 대단해요!")
         content.sound = .default
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)

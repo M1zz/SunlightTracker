@@ -77,7 +77,7 @@ class LuxSensor: NSObject, ObservableObject {
         AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
             guard granted else {
                 DispatchQueue.main.async {
-                    self?.errorMessage = "카메라 권한이 필요합니다. 설정에서 허용해주세요."
+                    self?.errorMessage = String(localized: "카메라 권한이 필요합니다. 설정에서 허용해주세요.")
                 }
                 return
             }
@@ -112,7 +112,7 @@ class LuxSensor: NSObject, ObservableObject {
             // 전면 카메라 사용 (화면을 보면서 자연스럽게 측정)
             guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front) else {
                 DispatchQueue.main.async {
-                    self.errorMessage = "카메라를 사용할 수 없습니다."
+                    self.errorMessage = String(localized: "카메라를 사용할 수 없습니다.")
                 }
                 return
             }
@@ -144,7 +144,7 @@ class LuxSensor: NSObject, ObservableObject {
                 }
             } catch {
                 DispatchQueue.main.async {
-                    self.errorMessage = "카메라 초기화 실패: \(error.localizedDescription)"
+                    self.errorMessage = String(localized: "카메라 초기화 실패: \(error.localizedDescription)")
                 }
             }
         }

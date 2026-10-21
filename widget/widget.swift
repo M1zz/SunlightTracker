@@ -85,11 +85,11 @@ struct SunflowerWidgetView: View {
 
     private var healthStateText: String {
         switch entry.widgetData.healthState {
-        case "thriving": return "싱싱함"
-        case "healthy": return "건강함"
-        case "wilting": return "시들어감"
-        case "critical": return "위험"
-        default: return "건강함"
+        case "thriving": return String(localized: "싱싱함")
+        case "healthy": return String(localized: "건강함")
+        case "wilting": return String(localized: "시들어감")
+        case "critical": return String(localized: "위험")
+        default: return String(localized: "건강함")
         }
     }
 
@@ -168,12 +168,12 @@ struct BatteryWidgetView: View {
         let hours = Int(interval / 3600)
 
         if hours < 1 {
-            return "방금 충전"
+            return String(localized: "방금 충전")
         } else if hours < 24 {
-            return "\(hours)시간 전"
+            return String(localized: "\(hours)시간 전")
         } else {
             let days = hours / 24
-            return "\(days)일 전"
+            return String(localized: "\(days)일 전")
         }
     }
 }
@@ -403,11 +403,11 @@ struct DashboardWidgetView: View {
 
     private var healthStateText: String {
         switch entry.widgetData.healthState {
-        case "thriving": return "싱싱함"
-        case "healthy": return "건강함"
-        case "wilting": return "시들어감"
-        case "critical": return "위험"
-        default: return "건강함"
+        case "thriving": return String(localized: "싱싱함")
+        case "healthy": return String(localized: "건강함")
+        case "wilting": return String(localized: "시들어감")
+        case "critical": return String(localized: "위험")
+        default: return String(localized: "건강함")
         }
     }
 

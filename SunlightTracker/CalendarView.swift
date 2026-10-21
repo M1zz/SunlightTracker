@@ -10,8 +10,8 @@ struct CalendarView: View {
 
     private var monthYearString: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "yyyy년 M월"
+        formatter.locale = Locale.current
+        formatter.setLocalizedDateFormatFromTemplate("yyyyMMMM")
         return formatter.string(from: currentMonth)
     }
 
@@ -87,7 +87,7 @@ struct CalendarView: View {
         VStack(spacing: 12) {
             // 요일 헤더
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 8) {
-                ForEach(["월", "화", "수", "목", "금", "토", "일"], id: \.self) { day in
+                ForEach([String(localized: "월"), String(localized: "화"), String(localized: "수"), String(localized: "목"), String(localized: "금"), String(localized: "토"), String(localized: "일")], id: \.self) { day in
                     Text(day)
                         .font(.caption.bold())
                         .foregroundColor(.secondary)
@@ -149,7 +149,7 @@ struct CalendarView: View {
                 }) {
                     HStack(spacing: 4) {
                         Image(systemName: "square.and.pencil")
-                        Text(record?.mood != nil || record?.note != nil ? "수정" : "기록")
+                        Text(record?.mood != nil || record?.note != nil ? String(localized: "수정") : String(localized: "기록"))
                     }
                     .font(.caption)
                     .foregroundColor(.blue)
@@ -275,10 +275,10 @@ struct CalendarView: View {
                 .font(.headline)
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                SummaryCard2(title: "총 일조량", value: "\(totalMinutes)분", icon: "sun.max.fill", color: .orange)
-                SummaryCard2(title: "일평균", value: "\(Int(avgMinutes))분", icon: "chart.bar.fill", color: .blue)
-                SummaryCard2(title: "목표 달성", value: "\(goalDays)일", icon: "checkmark.seal.fill", color: .green)
-                SummaryCard2(title: "기록 일수", value: "\(monthRecords.count)일", icon: "calendar", color: .purple)
+                SummaryCard2(title: String(localized: "총 일조량"), value: String(localized: "\(totalMinutes)분"), icon: "sun.max.fill", color: .orange)
+                SummaryCard2(title: String(localized: "일평균"), value: String(localized: "\(Int(avgMinutes))분"), icon: "chart.bar.fill", color: .blue)
+                SummaryCard2(title: String(localized: "목표 달성"), value: String(localized: "\(goalDays)일"), icon: "checkmark.seal.fill", color: .green)
+                SummaryCard2(title: String(localized: "기록 일수"), value: String(localized: "\(monthRecords.count)일"), icon: "calendar", color: .purple)
             }
         }
         .padding(.horizontal, 20)

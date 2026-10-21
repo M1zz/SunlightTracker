@@ -31,6 +31,7 @@
 		AA00000F /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001E /* RecordsView.swift */; };
 		AA0000F0 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000F1 /* FriendsView.swift */; };
 		AA285CF8DD6B476F9EE186A9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FBEC8A6BFB4656D628631923 /* Localizable.xcstrings */; };
+		B1A0C0DE0000000000000002 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B1A0C0DE0000000000000001 /* InfoPlist.xcstrings */; };
 		FBC45F3A312118C10E40AC1F /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB03F15BDBFF968BF42A9E33 /* LeeoKit */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		AA000022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA0000F1 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		FBEC8A6BFB4656D628631923 /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B1A0C0DE0000000000000001 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -183,6 +185,7 @@
 				20443605DAE908C006A57059 /* SunlightTrackerSpec.swift */,
 				795C778FAAFE428C90B8F5B8 /* SunlightTrackerRoadmap.swift */,
 				FBEC8A6BFB4656D628631923 /* Localizable.xcstrings */,
+				B1A0C0DE0000000000000001 /* InfoPlist.xcstrings */,
 			);
 			path = SunlightTracker;
 			sourceTree = "<group>";
@@ -275,6 +278,15 @@
 				en,
 				Base,
 				ko,
+				"en-GB",
+				"zh-Hans",
+				"zh-Hant",
+				ja,
+				ru,
+				es,
+				de,
+				fr,
+				it,
 			);
 			mainGroup = AA000040;
 			packageReferences = (
@@ -304,6 +316,7 @@
 			files = (
 				AA000003 /* Assets.xcassets in Resources */,
 				AA285CF8DD6B476F9EE186A9 /* Localizable.xcstrings in Resources */,
+				B1A0C0DE0000000000000002 /* InfoPlist.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

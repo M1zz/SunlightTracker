@@ -90,12 +90,12 @@ struct SettingsView: View {
                 
                 // Lux 참고표
                 Section {
-                    LuxReferenceRow(level: "어두운 실내", range: "< 50 Lux", emoji: "🌑")
-                    LuxReferenceRow(level: "일반 실내", range: "50 ~ 300 Lux", emoji: "💡")
-                    LuxReferenceRow(level: "흐린 날 / 그늘", range: "300 ~ 1,000 Lux", emoji: "☁️")
-                    LuxReferenceRow(level: "실외 (맑음)", range: "1,000 ~ 10,000 Lux", emoji: "⛅")
-                    LuxReferenceRow(level: "직사광선", range: "10,000 ~ 50,000 Lux", emoji: "☀️")
-                    LuxReferenceRow(level: "한여름 정오", range: "50,000+ Lux", emoji: "🔆")
+                    LuxReferenceRow(level: String(localized: "어두운 실내"), range: "< 50 Lux", emoji: "🌑")
+                    LuxReferenceRow(level: String(localized: "일반 실내"), range: "50 ~ 300 Lux", emoji: "💡")
+                    LuxReferenceRow(level: String(localized: "흐린 날 / 그늘"), range: "300 ~ 1,000 Lux", emoji: "☁️")
+                    LuxReferenceRow(level: String(localized: "실외 (맑음)"), range: "1,000 ~ 10,000 Lux", emoji: "⛅")
+                    LuxReferenceRow(level: String(localized: "직사광선"), range: "10,000 ~ 50,000 Lux", emoji: "☀️")
+                    LuxReferenceRow(level: String(localized: "한여름 정오"), range: "50,000+ Lux", emoji: "🔆")
                 } header: {
                     Label("조도 참고표", systemImage: "lightbulb")
                 }
@@ -133,21 +133,21 @@ struct SettingsView: View {
                 
                 // Info Section
                 Section {
-                    InfoRow(title: "카메라 기반 측정", detail: "후면 카메라의 ISO/노출 데이터로 주변 조도(Lux)를 추정합니다")
-                    InfoRow(title: "자동 세션 감지", detail: "기준 이상 조도가 3회 연속 감지되면 세션이 자동 시작됩니다")
-                    InfoRow(title: "배터리 절약", detail: "최저 해상도 카메라를 사용하여 배터리 소모를 최소화합니다")
-                    InfoRow(title: "정확도", detail: "카메라 기반 추정값으로, 전문 조도계와 차이가 있을 수 있습니다")
+                    InfoRow(title: String(localized: "카메라 기반 측정"), detail: String(localized: "후면 카메라의 ISO/노출 데이터로 주변 조도(Lux)를 추정합니다"))
+                    InfoRow(title: String(localized: "자동 세션 감지"), detail: String(localized: "기준 이상 조도가 3회 연속 감지되면 세션이 자동 시작됩니다"))
+                    InfoRow(title: String(localized: "배터리 절약"), detail: String(localized: "최저 해상도 카메라를 사용하여 배터리 소모를 최소화합니다"))
+                    InfoRow(title: String(localized: "정확도"), detail: String(localized: "카메라 기반 추정값으로, 전문 조도계와 차이가 있을 수 있습니다"))
                 } header: {
                     Label("작동 원리", systemImage: "questionmark.circle")
                 }
                 
                 // 건강 효과 참고
                 Section {
-                    InfoRow(title: "10분 - 체내 시계 동기화", detail: "자연광이 체내 시계를 조절하고 비타민D 생성이 시작됩니다")
-                    InfoRow(title: "15분 - 세로토닌 활성화", detail: "뇌에서 세로토닌 분비가 증가하여 기분이 개선됩니다")
-                    InfoRow(title: "30분 - 수면 & 스트레스", detail: "수면 시간 23분 단축, 코르티솔 25% 감소 효과")
-                    InfoRow(title: "45분 - 우울증 최적 치료", detail: "우울증 증상 개선에 가장 효과적인 노출 시간입니다")
-                    InfoRow(title: "60분 - 수면 대폭 개선", detail: "불면증 환자 수면시간 51분 증가, 혈압 11% 감소")
+                    InfoRow(title: String(localized: "10분 - 체내 시계 동기화"), detail: String(localized: "자연광이 체내 시계를 조절하고 비타민D 생성이 시작됩니다"))
+                    InfoRow(title: String(localized: "15분 - 세로토닌 활성화"), detail: String(localized: "뇌에서 세로토닌 분비가 증가하여 기분이 개선됩니다"))
+                    InfoRow(title: String(localized: "30분 - 수면 & 스트레스"), detail: String(localized: "수면 시간 23분 단축, 코르티솔 25% 감소 효과"))
+                    InfoRow(title: String(localized: "45분 - 우울증 최적 치료"), detail: String(localized: "우울증 증상 개선에 가장 효과적인 노출 시간입니다"))
+                    InfoRow(title: String(localized: "60분 - 수면 대폭 개선"), detail: String(localized: "불면증 환자 수면시간 51분 증가, 혈압 11% 감소"))
                 } header: {
                     Label("햇빛의 건강 효과", systemImage: "heart.text.square")
                 } footer: {

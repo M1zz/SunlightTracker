@@ -1,0 +1,219 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "App display name on the home screen (CFBundleDisplayName). Short (<=15 chars ideal)",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ひなたひまわり"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "햇빛바라기"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подсолнушек"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向阳小葵"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向陽小葵"
+          }
+        }
+      }
+    },
+    "NSCameraUsageDescription" : {
+      "comment" : "iOS camera permission prompt (NSCameraUsageDescription) — the camera is only used to read ambient brightness via exposure data; no photos are taken or stored",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Kamera misst nur die Umgebungshelligkeit, um echtes Sonnenlicht automatisch zu erkennen und festzuhalten. Es werden keine Fotos aufgenommen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower reads the brightness around you through the camera to detect and log your real sun exposure automatically. No photos are taken or saved."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Measures the brightness around you to detect and log your real sunlight exposure automatically."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La cámara se usa solo para medir la luz ambiental y detectar y registrar automáticamente tu exposición al sol. No se toman ni se guardan fotos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’app mesure la luminosité ambiante pour détecter et enregistrer automatiquement ton exposition réelle au soleil."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La fotocamera serve solo a misurare la luce dell'ambiente per rilevare e registrare in automatico il tempo passato al sole. Non scatta né salva foto."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "周囲の明るさ(照度)を測り、実際に日ざしを浴びた時間を自動で検出して記録します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Измеряет яркость вокруг, чтобы автоматически определять и записывать время на солнце."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通过测量周围的亮度（照度），自动识别并记录你实际晒到太阳的时间。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "測量周圍的亮度（照度），自動偵測並記錄實際曬太陽的時間。"
+          }
+        }
+      }
+    },
+    "NSLocationWhenInUseUsageDescription" : {
+      "comment" : "iOS location permission prompt (NSLocationWhenInUseUsageDescription)",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Standort wird benötigt, um Sonnenaufgang und -untergang zu berechnen und deine Sonnenzeit genau zu erfassen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your location is used to work out sunrise and sunset times and to track your sunlight more accurately."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your location is needed to work out sunrise and sunset times and to track sunlight accurately."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Necesitamos tu ubicación para calcular la hora del amanecer y el atardecer y registrar con precisión tu exposición al sol."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La position sert à calculer l’heure du lever et du coucher du soleil et à suivre précisément ton ensoleillement."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La posizione serve per calcolare alba e tramonto e tenere traccia del sole in modo più preciso."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日の出・日の入り時刻の計算と、正確な日照時間の記録のために位置情報を使用します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Местоположение нужно, чтобы рассчитывать время восхода и заката и точнее отслеживать солнце."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要获取位置信息，以计算日出日落时间并准确记录日照时长。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要使用位置資訊，以計算日出／日落時間並精準追蹤日照量。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

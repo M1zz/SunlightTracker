@@ -46,7 +46,7 @@ struct FriendsView: View {
                     .font(.subheadline.weight(.bold))
                     .foregroundColor(Color(red: 0.3, green: 0.65, blue: 0.2))
                 if let distance = manager.nearbyManager.nearbyPeerDistance {
-                    Text(String(format: "약 %.1fm 옆에 있어요", distance))
+                    Text("약 \(distance, specifier: "%.1f")m 옆에 있어요")
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
@@ -230,8 +230,8 @@ struct FriendGraphView: View {
 extension Date {
     var friendDateString: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일"
+        formatter.locale = Locale.current
+        formatter.setLocalizedDateFormatFromTemplate("MMMMd")
         return formatter.string(from: self)
     }
 }

@@ -89,7 +89,7 @@ struct DashboardView: View {
         }
         // 처음 만나는 친구와 함께 받기 전 확인
         .alert(
-            "\u{1F33B} \(manager.nearbyManager.pendingFriendRequest ?? "친구")이(가) 옆에서 햇빛을 받고 있어요!",
+            "\u{1F33B} \(manager.nearbyManager.pendingFriendRequest ?? String(localized: "친구"))이(가) 옆에서 햇빛을 받고 있어요!",
             isPresented: Binding(
                 get: { manager.nearbyManager.pendingFriendRequest != nil },
                 set: { if !$0 { manager.nearbyManager.declinePendingFriend() } }
@@ -110,11 +110,11 @@ struct DashboardView: View {
 
     private var displayLightLevel: String {
         if manager.isConfirmedOutdoor {
-            if manager.lastKnownLux >= 10000 { return "강한 햇빛" }
-            if manager.lastKnownLux >= 1000 { return "햇빛" }
-            return "실외"
+            if manager.lastKnownLux >= 10000 { return String(localized: "강한 햇빛") }
+            if manager.lastKnownLux >= 1000 { return String(localized: "햇빛") }
+            return String(localized: "실외")
         }
-        return manager.luxSensor.lightLevel.rawValue
+        return String(localized: String.LocalizationValue(manager.luxSensor.lightLevel.rawValue))
     }
 
     private var batteryColor: Color {
@@ -335,12 +335,12 @@ struct DashboardView: View {
     @AppStorage("hasUsedDoubleTapToFinish") private var hasUsedDoubleTap = false
 
     private let floatingTips = [
-        "햇빛 충전을 다 했으면 나를 더블탭해서 오늘의 일광욕을 마치자! 🌻",
-        "실내로 돌아왔다면 해바라기를 더블탭해봐요 👆👆",
-        "충분히 받았다면 나를 더블탭! 😊",
-        "목표 달성했어? 그럼 나를 두 번 터치해서 끝내자! 🎯",
-        "오늘의 일광욕을 마치려면 나를 더블탭! ☀️",
-        "이제 그만 들어가도 괜찮아. 나를 두 번 눌러줘! 🏠"
+        String(localized: "햇빛 충전을 다 했으면 나를 더블탭해서 오늘의 일광욕을 마치자! 🌻"),
+        String(localized: "실내로 돌아왔다면 해바라기를 더블탭해봐요 👆👆"),
+        String(localized: "충분히 받았다면 나를 더블탭! 😊"),
+        String(localized: "목표 달성했어? 그럼 나를 두 번 터치해서 끝내자! 🎯"),
+        String(localized: "오늘의 일광욕을 마치려면 나를 더블탭! ☀️"),
+        String(localized: "이제 그만 들어가도 괜찮아. 나를 두 번 눌러줘! 🏠")
     ]
 
     private var sunProgressSection: some View {
@@ -442,7 +442,7 @@ struct DashboardView: View {
             // 해바라기 상태 (귀여운 캡슐)
             HStack(spacing: 6) {
                 Text(healthEmoji)
-                Text(manager.sunflowerHealth.healthState.rawValue)
+                Text(LocalizedStringKey(manager.sunflowerHealth.healthState.rawValue))
                     .font(.subheadline.weight(.bold))
                     .foregroundColor(healthColor)
                 Text("에너지 \(Int(manager.sunflowerHealth.currentEnergy))%")
@@ -734,9 +734,9 @@ struct NearbyActivityBadge: View {
 
     private var title: String {
         if let friendName, peerCount <= 1 {
-            return "\(friendName)이(가) 옆에서 같이 받는 중!"
+            return String(localized: "\(friendName)이(가) 옆에서 같이 받는 중!")
         }
-        return "\(peerCount)명이랑 같이 받는 중!"
+        return String(localized: "\(peerCount)명이랑 같이 받는 중!")
     }
 
     var body: some View {
@@ -750,7 +750,7 @@ struct NearbyActivityBadge: View {
                     .foregroundColor(Color(red: 0.85, green: 0.5, blue: 0.1))
                     .lineLimit(1)
                 if let dist = distance {
-                    Text(String(format: "바로 옆 %.1fm \u{1F31E}", dist))
+                    Text("바로 옆 \(dist, specifier: "%.1f")m \u{1F31E}")
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
