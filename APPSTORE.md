@@ -61,15 +61,15 @@ https://m1zz.github.io/SunlightTracker/
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/en/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/en/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/en/
 
 ### 이름
 
@@ -118,15 +118,15 @@ There's no server involved. Your sunlight history and notes stay on your device 
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/en/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/en/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/en/
 
 ### 이름
 
@@ -175,15 +175,15 @@ There's no server involved. Your sunlight history and notes stay on your device 
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/zh-Hans/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/zh-Hans/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/zh-Hans/
 
 ### 이름
 
@@ -232,15 +232,15 @@ https://m1zz.github.io/SunlightTracker/
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/zh-Hant/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/zh-Hant/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/zh-Hant/
 
 ### 이름
 
@@ -289,15 +289,15 @@ https://m1zz.github.io/SunlightTracker/
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/ja/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/ja/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/ja/
 
 ### 이름
 
@@ -346,15 +346,15 @@ https://m1zz.github.io/SunlightTracker/
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/ru/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/ru/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/ru/
 
 ### 이름
 
@@ -403,15 +403,15 @@ https://m1zz.github.io/SunlightTracker/
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/es/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/es/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/es/
 
 ### 이름
 
@@ -460,15 +460,15 @@ Esta app no usa ningún servidor. Tus registros de sol y tus notas se guardan so
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/de/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/de/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/de/
 
 ### 이름
 
@@ -517,15 +517,15 @@ Ganz ohne Server: Deine Sonnenzeiten und Notizen bleiben ausschließlich auf dei
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/fr/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/fr/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/fr/
 
 ### 이름
 
@@ -574,15 +574,15 @@ Pas de serveur : tes données de soleil et tes notes restent uniquement sur ton
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/it/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/it/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/it/
 
 ### 이름
 
@@ -631,15 +631,15 @@ Nessun server: le tue registrazioni e le tue note restano solo sul tuo dispositi
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/pt-BR/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/pt-BR/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/pt-BR/
 
 ### 이름
 
@@ -688,15 +688,15 @@ Sem servidor. Seus registros de sol e suas notas ficam guardados somente no seu 
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/th/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/th/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/th/
 
 ### 이름
 
@@ -745,15 +745,15 @@ https://m1zz.github.io/SunlightTracker/
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/vi/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/vi/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/vi/
 
 ### 이름
 
@@ -802,15 +802,15 @@ Nhắc bạn ra ngoài đón nắng vào giờ bạn chọn, và báo cho bạn 
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/cs/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/cs/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/cs/
 
 ### 이름
 
@@ -859,15 +859,15 @@ Aplikace nepoužívá žádný server. Záznamy slunce i poznámky zůstávají 
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/da/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/da/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/da/
 
 ### 이름
 
@@ -916,15 +916,15 @@ Her er ingen server. Dine solregistreringer og notater bliver kun gemt på din e
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/el/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/el/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/el/
 
 ### 이름
 
@@ -973,15 +973,15 @@ Widget και ζωντανή εικόνα
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/fi/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/fi/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/fi/
 
 ### 이름
 
@@ -1030,15 +1030,15 @@ Sovellus ei käytä palvelinta. Aurinkokirjaukset ja muistiinpanot tallentuvat v
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/id/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/id/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/id/
 
 ### 이름
 
@@ -1087,15 +1087,15 @@ Tanpa server. Semua catatan sinar matahari dan memo tersimpan hanya di perangkat
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/nb/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/nb/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/nb/
 
 ### 이름
 
@@ -1144,15 +1144,15 @@ Appen bruker ingen server. Sollogg og notater lagres bare på enheten din.
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/nl/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/nl/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/nl/
 
 ### 이름
 
@@ -1201,15 +1201,15 @@ Er is geen server: je zonlichtgegevens en notities blijven helemaal op je eigen 
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/pl/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/pl/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/pl/
 
 ### 이름
 
@@ -1258,15 +1258,15 @@ To aplikacja bez serwera. Wszystkie zapisy o słońcu i notatki są przechowywan
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/sv/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/sv/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/sv/
 
 ### 이름
 
@@ -1315,15 +1315,15 @@ Appen har ingen server. All din solloggning och alla dina anteckningar sparas ba
 
 ### 지원 URL
 
-https://m1zz.github.io/SunlightTracker/support.html
+https://m1zz.github.io/SunlightTracker/tr/support.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/SunlightTracker/privacy.html
+https://m1zz.github.io/SunlightTracker/tr/privacy.html
 
 ### 마케팅 URL
 
-https://m1zz.github.io/SunlightTracker/
+https://m1zz.github.io/SunlightTracker/tr/
 
 ### 이름
 

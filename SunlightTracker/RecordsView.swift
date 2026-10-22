@@ -3,7 +3,14 @@ import SwiftUI
 /// 캘린더 + 통계를 하나로 합친 기록 탭
 struct RecordsView: View {
     @ObservedObject var manager: SunlightManager
-    @State private var mode: RecordMode = .calendar
+    /// 스토어 스크린샷용: Debug 빌드에서만 `-ScreenshotRecordMode stats` 로 통계부터 연다.
+    @State private var mode: RecordMode = {
+        #if DEBUG
+        return UserDefaults.standard.string(forKey: "ScreenshotRecordMode") == "stats" ? .stats : .calendar
+        #else
+        return .calendar
+        #endif
+    }()
 
     enum RecordMode: String, CaseIterable {
         case calendar = "📅 캘린더"
@@ -30,7 +37,7 @@ struct RecordsView: View {
                 }
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("기록")
+            .navigationTitle(String(localized: "tab.records", defaultValue: "기록"))
             .navigationBarTitleDisplayMode(.inline)
         }
     }

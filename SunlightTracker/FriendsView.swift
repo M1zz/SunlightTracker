@@ -31,7 +31,7 @@ struct FriendsView: View {
                 .padding(.bottom, 30)
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("친구")
+            .navigationTitle(String(localized: "tab.friends", defaultValue: "친구"))
             .navigationBarTitleDisplayMode(.inline)
         }
     }

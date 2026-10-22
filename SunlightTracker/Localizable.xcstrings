@@ -3130,151 +3130,151 @@
         }
       }
     },
-    "30분의 자연광은 수면 시간을 23분 앞당기고, 코르티솔 수치를 25%% 감소시킵니다. 계절성 우울증(SAD) 치료 표준량입니다." : {
-      "comment" : "SunlightManager.swift:623",
+    "30분의 자연광은 수면 시간을 23분 앞당기고, 코르티솔 수치를 25% 감소시킵니다. 계절성 우울증(SAD) 치료 표준량입니다." : {
+      "comment" : "SunlightManager.swift:623 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minut přirozeného světla zkrátí usínání o 23 minut a sníží kortizol o 25%%. Je to standardní dávka při léčbě sezónní deprese (SAD)."
+            "value" : "30 minut přirozeného světla zkrátí usínání o 23 minut a sníží kortizol o 25%. Je to standardní dávka při léčbě sezónní deprese (SAD)."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minutters naturligt lys får dig til at falde i søvn 23 minutter tidligere og sænker kortisol med 25%%. Det er standarddosen ved behandling af sæsonbetinget depression (SAD)."
+            "value" : "30 minutters naturligt lys får dig til at falde i søvn 23 minutter tidligere og sænker kortisol med 25%. Det er standarddosen ved behandling af sæsonbetinget depression (SAD)."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 Minuten natürliches Licht lassen dich 23 Minuten früher einschlafen und senken den Cortisolspiegel um 25%%. Das ist die Standarddosis bei saisonaler Depression (SAD)."
+            "value" : "30 Minuten natürliches Licht lassen dich 23 Minuten früher einschlafen und senken den Cortisolspiegel um 25%. Das ist die Standarddosis bei saisonaler Depression (SAD)."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 λεπτά φυσικού φωτός φέρνουν τον ύπνο 23 λεπτά νωρίτερα και μειώνουν την κορτιζόλη κατά 25%%. Είναι η στάνταρ δόση για την εποχική κατάθλιψη (SAD)."
+            "value" : "30 λεπτά φυσικού φωτός φέρνουν τον ύπνο 23 λεπτά νωρίτερα και μειώνουν την κορτιζόλη κατά 25%. Είναι η στάνταρ δόση για την εποχική κατάθλιψη (SAD)."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minutes of natural light brings sleep onset 23 minutes earlier and lowers cortisol by 25%%. It’s the standard dose for treating seasonal affective disorder (SAD)."
+            "value" : "30 minutes of natural light brings sleep onset 23 minutes earlier and lowers cortisol by 25%. It’s the standard dose for treating seasonal affective disorder (SAD)."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minutes of natural light brings sleep forward by 23 minutes and lowers cortisol by 25%%. It’s the standard dose for treating seasonal affective disorder (SAD)."
+            "value" : "30 minutes of natural light brings sleep forward by 23 minutes and lowers cortisol by 25%. It’s the standard dose for treating seasonal affective disorder (SAD)."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minutos de luz natural adelantan 23 minutos la hora de dormir y reducen el cortisol un 25%%. Es la dosis estándar para tratar la depresión estacional (TAE)."
+            "value" : "30 minutos de luz natural adelantan 23 minutos la hora de dormir y reducen el cortisol un 25%. Es la dosis estándar para tratar la depresión estacional (TAE)."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minuuttia luonnonvaloa aikaistaa nukahtamista 23 minuutilla ja laskee kortisolia 25 %%. Se on kausittaisen masennuksen (SAD) hoidon vakioannos."
+            "value" : "30 minuuttia luonnonvaloa aikaistaa nukahtamista 23 minuutilla ja laskee kortisolia 25 %. Se on kausittaisen masennuksen (SAD) hoidon vakioannos."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 min de lumière naturelle avancent l’endormissement de 23 min et réduisent le cortisol de 25 %%. C’est la dose de référence contre la dépression saisonnière (SAD)."
+            "value" : "30 min de lumière naturelle avancent l’endormissement de 23 min et réduisent le cortisol de 25 %. C’est la dose de référence contre la dépression saisonnière (SAD)."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cahaya alami 30 menit membuat waktu mulai tidur 23 menit lebih awal dan menurunkan kortisol 25%%. Ini takaran standar untuk penanganan depresi musiman (SAD)."
+            "value" : "Cahaya alami 30 menit membuat waktu mulai tidur 23 menit lebih awal dan menurunkan kortisol 25%. Ini takaran standar untuk penanganan depresi musiman (SAD)."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minuti di luce naturale anticipano l'addormentamento di 23 minuti e riducono il cortisolo del 25%%. È la dose standard per la depressione stagionale (SAD)."
+            "value" : "30 minuti di luce naturale anticipano l'addormentamento di 23 minuti e riducono il cortisolo del 25%. È la dose standard per la depressione stagionale (SAD)."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30分の自然光で、寝つく時間が23分早まり、コルチゾールの値が25%%下がります。季節性うつ(SAD)の治療の標準量です。"
+            "value" : "30分の自然光で、寝つく時間が23分早まり、コルチゾールの値が25%下がります。季節性うつ(SAD)の治療の標準量です。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30분의 자연광은 수면 시간을 23분 앞당기고, 코르티솔 수치를 25%% 감소시킵니다. 계절성 우울증(SAD) 치료 표준량입니다."
+            "value" : "30분의 자연광은 수면 시간을 23분 앞당기고, 코르티솔 수치를 25% 감소시킵니다. 계절성 우울증(SAD) 치료 표준량입니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minutter med naturlig lys gjør at du sovner 23 minutter tidligere og senker kortisolet med 25%%. Det er standarddosen ved årstidsbetinget depresjon (SAD)."
+            "value" : "30 minutter med naturlig lys gjør at du sovner 23 minutter tidligere og senker kortisolet med 25%. Det er standarddosen ved årstidsbetinget depresjon (SAD)."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minuten natuurlijk licht laten je 23 minuten eerder in slaap vallen en verlagen je cortisol met 25%%. Dit is de standaarddosis bij een winterdepressie (SAD)."
+            "value" : "30 minuten natuurlijk licht laten je 23 minuten eerder in slaap vallen en verlagen je cortisol met 25%. Dit is de standaarddosis bij een winterdepressie (SAD)."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minut naturalnego światła przyspiesza zasypianie o 23 minuty i obniża kortyzol o 25%%. To standardowa dawka w leczeniu depresji sezonowej (SAD)."
+            "value" : "30 minut naturalnego światła przyspiesza zasypianie o 23 minuty i obniża kortyzol o 25%. To standardowa dawka w leczeniu depresji sezonowej (SAD)."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minutos de luz natural adiantam o sono em 23 minutos e reduzem o cortisol em 25%%. É a dose padrão para tratar a depressão sazonal (SAD)."
+            "value" : "30 minutos de luz natural adiantam o sono em 23 minutos e reduzem o cortisol em 25%. É a dose padrão para tratar a depressão sazonal (SAD)."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 минут естественного света сдвигают засыпание на 23 минуты раньше и снижают кортизол на 25%%. Это стандартная доза при сезонной депрессии (SAD)."
+            "value" : "30 минут естественного света сдвигают засыпание на 23 минуты раньше и снижают кортизол на 25%. Это стандартная доза при сезонной депрессии (SAD)."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 minuter naturligt ljus får dig att somna 23 minuter tidigare och sänker kortisolet med 25%%. Det är standarddosen vid säsongsberoende depression (SAD)."
+            "value" : "30 minuter naturligt ljus får dig att somna 23 minuter tidigare och sänker kortisolet med 25%. Det är standarddosen vid säsongsberoende depression (SAD)."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "แสงธรรมชาติ 30 นาทีช่วยให้หลับเร็วขึ้น 23 นาที และลดคอร์ติซอลลง 25%% เป็นปริมาณมาตรฐานในการรักษาภาวะซึมเศร้าตามฤดูกาล (SAD)"
+            "value" : "แสงธรรมชาติ 30 นาทีช่วยให้หลับเร็วขึ้น 23 นาที และลดคอร์ติซอลลง 25% เป็นปริมาณมาตรฐานในการรักษาภาวะซึมเศร้าตามฤดูกาล (SAD)"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 dakikalık doğal ışık uykuya dalmayı 23 dakika öne çeker ve kortizol düzeyini %%25 düşürür. Mevsimsel depresyon (SAD) tedavisindeki standart süredir."
+            "value" : "30 dakikalık doğal ışık uykuya dalmayı 23 dakika öne çeker ve kortizol düzeyini %25 düşürür. Mevsimsel depresyon (SAD) tedavisindeki standart süredir."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30 phút ánh sáng tự nhiên giúp vào giấc sớm hơn 23 phút và giảm 25%% cortisol. Đây là liều chuẩn trong điều trị trầm cảm theo mùa (SAD)."
+            "value" : "30 phút ánh sáng tự nhiên giúp vào giấc sớm hơn 23 phút và giảm 25% cortisol. Đây là liều chuẩn trong điều trị trầm cảm theo mùa (SAD)."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "30分钟的自然光可使入睡时间提前23分钟，皮质醇水平下降25%%，也是季节性抑郁（SAD）治疗的标准用量。"
+            "value" : "30分钟的自然光可使入睡时间提前23分钟，皮质醇水平下降25%，也是季节性抑郁（SAD）治疗的标准用量。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "曬 30 分鐘自然光，入睡時間可提早 23 分鐘，皮質醇濃度也會降低 25%%。這也是季節性憂鬱症（SAD）治療的標準曝曬量。"
+            "value" : "曬 30 分鐘自然光，入睡時間可提早 23 分鐘，皮質醇濃度也會降低 25%。這也是季節性憂鬱症（SAD）治療的標準曝曬量。"
           }
         }
       }
@@ -3875,151 +3875,151 @@
         }
       }
     },
-    "60분의 자연광 노출은 불면증 환자의 수면시간을 51분 증가시키고, 혈압을 11%% 감소시킵니다." : {
-      "comment" : "SunlightManager.swift:637",
+    "60분의 자연광 노출은 불면증 환자의 수면시간을 51분 증가시키고, 혈압을 11% 감소시킵니다." : {
+      "comment" : "SunlightManager.swift:637 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minut přirozeného světla prodlouží lidem s nespavostí spánek o 51 minut a sníží krevní tlak o 11%%."
+            "value" : "60 minut přirozeného světla prodlouží lidem s nespavostí spánek o 51 minut a sníží krevní tlak o 11%."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minutters naturligt lys giver personer med søvnløshed 51 minutters mere søvn og sænker blodtrykket med 11%%."
+            "value" : "60 minutters naturligt lys giver personer med søvnløshed 51 minutters mere søvn og sænker blodtrykket med 11%."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 Minuten natürliches Licht verlängern bei Schlafstörungen die Schlafdauer um 51 Minuten und senken den Blutdruck um 11%%."
+            "value" : "60 Minuten natürliches Licht verlängern bei Schlafstörungen die Schlafdauer um 51 Minuten und senken den Blutdruck um 11%."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 λεπτά φυσικού φωτός αυξάνουν τον ύπνο των ατόμων με αϋπνία κατά 51 λεπτά και μειώνουν την πίεση κατά 11%%."
+            "value" : "60 λεπτά φυσικού φωτός αυξάνουν τον ύπνο των ατόμων με αϋπνία κατά 51 λεπτά και μειώνουν την πίεση κατά 11%."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minutes of natural light adds 51 minutes of sleep for people with insomnia and lowers blood pressure by 11%%."
+            "value" : "60 minutes of natural light adds 51 minutes of sleep for people with insomnia and lowers blood pressure by 11%."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minutes of natural light adds 51 minutes of sleep for people with insomnia and lowers blood pressure by 11%%."
+            "value" : "60 minutes of natural light adds 51 minutes of sleep for people with insomnia and lowers blood pressure by 11%."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minutos de luz natural aumentan 51 minutos el tiempo de sueño en personas con insomnio y reducen la presión arterial un 11%%."
+            "value" : "60 minutos de luz natural aumentan 51 minutos el tiempo de sueño en personas con insomnio y reducen la presión arterial un 11%."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minuuttia luonnonvaloa pidentää unettomien untaa 51 minuutilla ja laskee verenpainetta 11 %%."
+            "value" : "60 minuuttia luonnonvaloa pidentää unettomien untaa 51 minuutilla ja laskee verenpainetta 11 %."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 min de lumière naturelle allongent le sommeil des insomniaques de 51 min et réduisent la tension de 11 %%."
+            "value" : "60 min de lumière naturelle allongent le sommeil des insomniaques de 51 min et réduisent la tension de 11 %."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paparan cahaya alami 60 menit menambah durasi tidur penderita insomnia 51 menit dan menurunkan tekanan darah 11%%."
+            "value" : "Paparan cahaya alami 60 menit menambah durasi tidur penderita insomnia 51 menit dan menurunkan tekanan darah 11%."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minuti di luce naturale fanno dormire 51 minuti in più chi soffre di insonnia e abbassano la pressione dell'11%%."
+            "value" : "60 minuti di luce naturale fanno dormire 51 minuti in più chi soffre di insonnia e abbassano la pressione dell'11%."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60分の自然光で、不眠症の方の睡眠時間が51分増え、血圧が11%%下がります。"
+            "value" : "60分の自然光で、不眠症の方の睡眠時間が51分増え、血圧が11%下がります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60분의 자연광 노출은 불면증 환자의 수면시간을 51분 증가시키고, 혈압을 11%% 감소시킵니다."
+            "value" : "60분의 자연광 노출은 불면증 환자의 수면시간을 51분 증가시키고, 혈압을 11% 감소시킵니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minutter med naturlig lys gir 51 minutter mer søvn ved søvnløshet og senker blodtrykket med 11%%."
+            "value" : "60 minutter med naturlig lys gir 51 minutter mer søvn ved søvnløshet og senker blodtrykket med 11%."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minuten natuurlijk licht verlengen de slaaptijd bij slapeloosheid met 51 minuten en verlagen de bloeddruk met 11%%."
+            "value" : "60 minuten natuurlijk licht verlengen de slaaptijd bij slapeloosheid met 51 minuten en verlagen de bloeddruk met 11%."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minut naturalnego światła wydłuża sen osób z bezsennością o 51 minut i obniża ciśnienie krwi o 11%%."
+            "value" : "60 minut naturalnego światła wydłuża sen osób z bezsennością o 51 minut i obniża ciśnienie krwi o 11%."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minutos de luz natural aumentam em 51 minutos o sono de quem tem insônia e reduzem a pressão arterial em 11%%."
+            "value" : "60 minutos de luz natural aumentam em 51 minutos o sono de quem tem insônia e reduzem a pressão arterial em 11%."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 минут естественного света увеличивают сон при бессоннице на 51 минуту и снижают давление на 11%%."
+            "value" : "60 минут естественного света увеличивают сон при бессоннице на 51 минуту и снижают давление на 11%."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 minuter naturligt ljus ger 51 minuter mer sömn vid sömnlöshet och sänker blodtrycket med 11%%."
+            "value" : "60 minuter naturligt ljus ger 51 minuter mer sömn vid sömnlöshet och sänker blodtrycket med 11%."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "การรับแสงธรรมชาติ 60 นาทีช่วยให้ผู้ที่นอนไม่หลับนอนนานขึ้น 51 นาที และลดความดันโลหิตลง 11%%"
+            "value" : "การรับแสงธรรมชาติ 60 นาทีช่วยให้ผู้ที่นอนไม่หลับนอนนานขึ้น 51 นาที และลดความดันโลหิตลง 11%"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 dakikalık doğal ışık, uykusuzluk çekenlerde uyku süresini 51 dakika uzatır ve tansiyonu %%11 azaltır."
+            "value" : "60 dakikalık doğal ışık, uykusuzluk çekenlerde uyku süresini 51 dakika uzatır ve tansiyonu %11 azaltır."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60 phút tiếp xúc ánh sáng tự nhiên giúp người mất ngủ ngủ thêm 51 phút và giảm huyết áp 11%%."
+            "value" : "60 phút tiếp xúc ánh sáng tự nhiên giúp người mất ngủ ngủ thêm 51 phút và giảm huyết áp 11%."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "60分钟的自然光照射，可使失眠者的睡眠时间增加51分钟，血压下降11%%。"
+            "value" : "60分钟的自然光照射，可使失眠者的睡眠时间增加51分钟，血压下降11%。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "曬 60 分鐘自然光，可讓失眠者的睡眠時間增加 51 分鐘，並使血壓下降 11%%。"
+            "value" : "曬 60 分鐘自然光，可讓失眠者的睡眠時間增加 51 分鐘，並使血壓下降 11%。"
           }
         }
       }
@@ -4765,6 +4765,306 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "VoiceOver 更好用"
+          }
+        }
+      }
+    },
+    "tab.friends" : {
+      "comment" : "친구 탭 이름과 제목 (여러 명)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přátelé"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Venner"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Freunde"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φίλοι"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Friends"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Friends"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amigos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ystävät"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amis"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teman"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amici"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "友だち"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "친구"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Venner"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vrienden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Znajomi"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amigos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Друзья"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vänner"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพื่อน"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arkadaşlar"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn bè"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好友"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好友"
+          }
+        }
+      }
+    },
+    "tab.records" : {
+      "comment" : "기록 탭 이름과 제목 (캘린더 · 통계)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historie"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historik"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verlauf"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ιστορικό"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historia"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riwayat"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cronologia"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記録"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기록"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historikk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschiedenis"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historia"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Histórico"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "История"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historik"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึก"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geçmiş"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhật ký"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记录"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紀錄"
           }
         }
       }
@@ -12964,151 +13264,151 @@
         }
       }
     },
-    "불면증 환자 수면시간 51분 증가, 혈압 11%% 감소" : {
-      "comment" : "SettingsView.swift:150",
+    "불면증 환자 수면시간 51분 증가, 혈압 11% 감소" : {
+      "comment" : "SettingsView.swift:150 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "U lidí s nespavostí spánek delší o 51 min, tlak nižší o 11%%"
+            "value" : "U lidí s nespavostí spánek delší o 51 min, tlak nižší o 11%"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Søvnløse får 51 minutters mere søvn, blodtrykket falder 11%%"
+            "value" : "Søvnløse får 51 minutters mere søvn, blodtrykket falder 11%"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bei Schlafstörungen 51 Min. mehr Schlaf, Blutdruck um 11%% niedriger"
+            "value" : "Bei Schlafstörungen 51 Min. mehr Schlaf, Blutdruck um 11% niedriger"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Άτομα με αϋπνία κοιμούνται 51 λεπτά περισσότερο, πίεση μειωμένη κατά 11%%"
+            "value" : "Άτομα με αϋπνία κοιμούνται 51 λεπτά περισσότερο, πίεση μειωμένη κατά 11%"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "51 more minutes of sleep for people with insomnia, 11%% lower blood pressure"
+            "value" : "51 more minutes of sleep for people with insomnia, 11% lower blood pressure"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "51 more minutes of sleep for people with insomnia, 11%% lower blood pressure"
+            "value" : "51 more minutes of sleep for people with insomnia, 11% lower blood pressure"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Con insomnio, +51 min de sueño; presión arterial −11%%"
+            "value" : "Con insomnio, +51 min de sueño; presión arterial −11%"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Unettomilla uni pitenee 51 min, verenpaine laskee 11 %%"
+            "value" : "Unettomilla uni pitenee 51 min, verenpaine laskee 11 %"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sommeil des insomniaques +51 min, tension -11 %%"
+            "value" : "Sommeil des insomniaques +51 min, tension -11 %"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Durasi tidur penderita insomnia bertambah 51 menit, tekanan darah turun 11%%"
+            "value" : "Durasi tidur penderita insomnia bertambah 51 menit, tekanan darah turun 11%"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Insonnia: +51 min di sonno; pressione: -11%%"
+            "value" : "Insonnia: +51 min di sonno; pressione: -11%"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "不眠症の方の睡眠時間が51分増加、血圧が11%%低下"
+            "value" : "不眠症の方の睡眠時間が51分増加、血圧が11%低下"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "불면증 환자 수면시간 51분 증가, 혈압 11%% 감소"
+            "value" : "불면증 환자 수면시간 51분 증가, 혈압 11% 감소"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "51 minutter mer søvn ved søvnløshet, 11%% lavere blodtrykk"
+            "value" : "51 minutter mer søvn ved søvnløshet, 11% lavere blodtrykk"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Slaaptijd bij slapeloosheid +51 min, bloeddruk -11%%"
+            "value" : "Slaaptijd bij slapeloosheid +51 min, bloeddruk -11%"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bezsenność: sen dłuższy o 51 min, ciśnienie niższe o 11%%"
+            "value" : "Bezsenność: sen dłuższy o 51 min, ciśnienie niższe o 11%"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quem tem insônia dorme 51 min a mais; pressão arterial 11%% menor"
+            "value" : "Quem tem insônia dorme 51 min a mais; pressão arterial 11% menor"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сон при бессоннице дольше на 51 минуту, давление ниже на 11%%"
+            "value" : "Сон при бессоннице дольше на 51 минуту, давление ниже на 11%"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "51 min längre sömn vid sömnlöshet, 11%% lägre blodtryck"
+            "value" : "51 min längre sömn vid sömnlöshet, 11% lägre blodtryck"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ผู้ที่นอนไม่หลับนอนนานขึ้น 51 นาที ความดันลดลง 11%%"
+            "value" : "ผู้ที่นอนไม่หลับนอนนานขึ้น 51 นาที ความดันลดลง 11%"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uykusuzlukta uyku süresi 51 dk artar, tansiyon %%11 azalır"
+            "value" : "Uykusuzlukta uyku süresi 51 dk artar, tansiyon %11 azalır"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Người mất ngủ ngủ thêm 51 phút, huyết áp giảm 11%%"
+            "value" : "Người mất ngủ ngủ thêm 51 phút, huyết áp giảm 11%"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "失眠者睡眠时间增加51分钟，血压下降11%%"
+            "value" : "失眠者睡眠时间增加51分钟，血压下降11%"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "失眠者睡眠時間增加 51 分鐘，血壓下降 11%%"
+            "value" : "失眠者睡眠時間增加 51 分鐘，血壓下降 11%"
           }
         }
       }
@@ -13709,151 +14009,151 @@
         }
       }
     },
-    "비타민D는 면역세포를 활성화하여 감염 예방에 도움을 줍니다. 충분한 비타민D 수치는 감기와 독감 발생률을 40%% 낮춥니다." : {
-      "comment" : "Models.swift:271",
+    "비타민D는 면역세포를 활성화하여 감염 예방에 도움을 줍니다. 충분한 비타민D 수치는 감기와 독감 발생률을 40% 낮춥니다." : {
+      "comment" : "Models.swift:271 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitamin D aktivuje imunitní buňky a pomáhá předcházet infekcím. Dostatečná hladina vitaminu D snižuje výskyt nachlazení a chřipky o 40%%."
+            "value" : "Vitamin D aktivuje imunitní buňky a pomáhá předcházet infekcím. Dostatečná hladina vitaminu D snižuje výskyt nachlazení a chřipky o 40%."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "D-vitamin aktiverer immuncellerne og hjælper med at forebygge infektioner. Et tilstrækkeligt D-vitaminniveau sænker forekomsten af forkølelse og influenza med 40%%."
+            "value" : "D-vitamin aktiverer immuncellerne og hjælper med at forebygge infektioner. Et tilstrækkeligt D-vitaminniveau sænker forekomsten af forkølelse og influenza med 40%."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitamin D aktiviert Immunzellen und hilft, Infektionen vorzubeugen. Ein ausreichender Vitamin-D-Spiegel senkt die Häufigkeit von Erkältungen und Grippe um 40%%."
+            "value" : "Vitamin D aktiviert Immunzellen und hilft, Infektionen vorzubeugen. Ein ausreichender Vitamin-D-Spiegel senkt die Häufigkeit von Erkältungen und Grippe um 40%."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Η βιταμίνη D ενεργοποιεί τα ανοσοκύτταρα και βοηθά στην πρόληψη λοιμώξεων. Επαρκή επίπεδα βιταμίνης D μειώνουν τη συχνότητα κρυολογήματος και γρίπης κατά 40%%."
+            "value" : "Η βιταμίνη D ενεργοποιεί τα ανοσοκύτταρα και βοηθά στην πρόληψη λοιμώξεων. Επαρκή επίπεδα βιταμίνης D μειώνουν τη συχνότητα κρυολογήματος και γρίπης κατά 40%."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitamin D activates immune cells and helps protect against infection. Healthy vitamin D levels lower the rate of colds and flu by 40%%."
+            "value" : "Vitamin D activates immune cells and helps protect against infection. Healthy vitamin D levels lower the rate of colds and flu by 40%."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitamin D activates immune cells and helps protect against infection. Healthy vitamin D levels lower the rate of colds and flu by 40%%."
+            "value" : "Vitamin D activates immune cells and helps protect against infection. Healthy vitamin D levels lower the rate of colds and flu by 40%."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La vitamina D activa las células inmunitarias y ayuda a prevenir infecciones. Con niveles suficientes, los resfriados y la gripe se reducen un 40%%."
+            "value" : "La vitamina D activa las células inmunitarias y ayuda a prevenir infecciones. Con niveles suficientes, los resfriados y la gripe se reducen un 40%."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "D-vitamiini aktivoi immuunisoluja ja auttaa torjumaan infektioita. Riittävä D-vitamiinitaso vähentää flunssan ja influenssan esiintyvyyttä 40 %%."
+            "value" : "D-vitamiini aktivoi immuunisoluja ja auttaa torjumaan infektioita. Riittävä D-vitamiinitaso vähentää flunssan ja influenssan esiintyvyyttä 40 %."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La vitamine D active les cellules immunitaires et aide à prévenir les infections. Un bon taux de vitamine D réduit de 40 %% l’incidence du rhume et de la grippe."
+            "value" : "La vitamine D active les cellules immunitaires et aide à prévenir les infections. Un bon taux de vitamine D réduit de 40 % l’incidence du rhume et de la grippe."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitamin D mengaktifkan sel imun sehingga membantu mencegah infeksi. Kadar vitamin D yang cukup menurunkan kejadian flu dan pilek hingga 40%%."
+            "value" : "Vitamin D mengaktifkan sel imun sehingga membantu mencegah infeksi. Kadar vitamin D yang cukup menurunkan kejadian flu dan pilek hingga 40%."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La vitamina D attiva le cellule immunitarie e aiuta a prevenire le infezioni. Livelli adeguati di vitamina D riducono del 40%% l'incidenza di raffreddore e influenza."
+            "value" : "La vitamina D attiva le cellule immunitarie e aiuta a prevenire le infezioni. Livelli adeguati di vitamina D riducono del 40% l'incidenza di raffreddore e influenza."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ビタミンDは免疫細胞を活性化し、感染症の予防に役立ちます。ビタミンDが十分だと、風邪やインフルエンザの発症率が40%%下がります。"
+            "value" : "ビタミンDは免疫細胞を活性化し、感染症の予防に役立ちます。ビタミンDが十分だと、風邪やインフルエンザの発症率が40%下がります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "비타민D는 면역세포를 활성화하여 감염 예방에 도움을 줍니다. 충분한 비타민D 수치는 감기와 독감 발생률을 40%% 낮춥니다."
+            "value" : "비타민D는 면역세포를 활성화하여 감염 예방에 도움을 줍니다. 충분한 비타민D 수치는 감기와 독감 발생률을 40% 낮춥니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitamin D aktiverer immuncellene og hjelper mot infeksjoner. Nok vitamin D senker forekomsten av forkjølelse og influensa med 40%%."
+            "value" : "Vitamin D aktiverer immuncellene og hjelper mot infeksjoner. Nok vitamin D senker forekomsten av forkjølelse og influensa med 40%."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitamine D activeert afweercellen en helpt infecties voorkomen. Een goede vitamine D-spiegel verlaagt de kans op verkoudheid en griep met 40%%."
+            "value" : "Vitamine D activeert afweercellen en helpt infecties voorkomen. Een goede vitamine D-spiegel verlaagt de kans op verkoudheid en griep met 40%."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Witamina D aktywuje komórki odpornościowe i pomaga chronić przed infekcjami. Odpowiedni jej poziom obniża zachorowalność na przeziębienie i grypę o 40%%."
+            "value" : "Witamina D aktywuje komórki odpornościowe i pomaga chronić przed infekcjami. Odpowiedni jej poziom obniża zachorowalność na przeziębienie i grypę o 40%."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A vitamina D ativa as células de defesa e ajuda a prevenir infecções. Níveis adequados de vitamina D reduzem a incidência de resfriado e gripe em 40%%."
+            "value" : "A vitamina D ativa as células de defesa e ajuda a prevenir infecções. Níveis adequados de vitamina D reduzem a incidência de resfriado e gripe em 40%."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Витамин D активирует иммунные клетки и помогает предотвращать инфекции. Достаточный уровень витамина D снижает частоту простуды и гриппа на 40%%."
+            "value" : "Витамин D активирует иммунные клетки и помогает предотвращать инфекции. Достаточный уровень витамина D снижает частоту простуды и гриппа на 40%."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "D-vitamin aktiverar immunceller och hjälper till att förebygga infektioner. Tillräckliga D-vitaminnivåer sänker risken för förkylning och influensa med 40%%."
+            "value" : "D-vitamin aktiverar immunceller och hjälper till att förebygga infektioner. Tillräckliga D-vitaminnivåer sänker risken för förkylning och influensa med 40%."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "วิตามินดีกระตุ้นเซลล์ภูมิคุ้มกันและช่วยป้องกันการติดเชื้อ ระดับวิตามินดีที่เพียงพอช่วยลดโอกาสเป็นหวัดและไข้หวัดใหญ่ลง 40%%"
+            "value" : "วิตามินดีกระตุ้นเซลล์ภูมิคุ้มกันและช่วยป้องกันการติดเชื้อ ระดับวิตามินดีที่เพียงพอช่วยลดโอกาสเป็นหวัดและไข้หวัดใหญ่ลง 40%"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "D vitamini bağışıklık hücrelerini harekete geçirerek enfeksiyonlardan korunmaya yardımcı olur. Yeterli D vitamini düzeyi, soğuk algınlığı ve grip görülme oranını %%40 düşürür."
+            "value" : "D vitamini bağışıklık hücrelerini harekete geçirerek enfeksiyonlardan korunmaya yardımcı olur. Yeterli D vitamini düzeyi, soğuk algınlığı ve grip görülme oranını %40 düşürür."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitamin D kích hoạt tế bào miễn dịch, giúp phòng ngừa nhiễm trùng. Đủ vitamin D làm giảm 40%% tỷ lệ mắc cảm lạnh và cúm."
+            "value" : "Vitamin D kích hoạt tế bào miễn dịch, giúp phòng ngừa nhiễm trùng. Đủ vitamin D làm giảm 40% tỷ lệ mắc cảm lạnh và cúm."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "维生素D能激活免疫细胞，帮助预防感染。维生素D水平充足，可使感冒和流感的发生率降低40%%。"
+            "value" : "维生素D能激活免疫细胞，帮助预防感染。维生素D水平充足，可使感冒和流感的发生率降低40%。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "維生素 D 能活化免疫細胞，幫助預防感染。維生素 D 濃度充足，感冒與流感的發生率可降低 40%%。"
+            "value" : "維生素 D 能活化免疫細胞，幫助預防感染。維生素 D 濃度充足，感冒與流感的發生率可降低 40%。"
           }
         }
       }
@@ -15497,151 +15797,151 @@
         }
       }
     },
-    "수면 시간 23분 단축, 코르티솔 25%% 감소 효과" : {
-      "comment" : "SettingsView.swift:148",
+    "수면 시간 23분 단축, 코르티솔 25% 감소 효과" : {
+      "comment" : "SettingsView.swift:148 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Usínání o 23 min dřív, kortizol nižší o 25%%"
+            "value" : "Usínání o 23 min dřív, kortizol nižší o 25%"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Man falder i søvn 23 minutter tidligere, og kortisol falder 25%%"
+            "value" : "Man falder i søvn 23 minutter tidligere, og kortisol falder 25%"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einschlafen 23 Min. früher, Cortisol um 25%% niedriger"
+            "value" : "Einschlafen 23 Min. früher, Cortisol um 25% niedriger"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ύπνος 23 λεπτά νωρίτερα, κορτιζόλη μειωμένη κατά 25%%"
+            "value" : "Ύπνος 23 λεπτά νωρίτερα, κορτιζόλη μειωμένη κατά 25%"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fall asleep 23 minutes sooner, with 25%% lower cortisol"
+            "value" : "Fall asleep 23 minutes sooner, with 25% lower cortisol"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fall asleep 23 minutes sooner, cortisol down 25%%"
+            "value" : "Fall asleep 23 minutes sooner, cortisol down 25%"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Te duermes 23 min antes y el cortisol baja un 25%%"
+            "value" : "Te duermes 23 min antes y el cortisol baja un 25%"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nukahtaminen 23 min nopeammin, kortisoli laskee 25 %%"
+            "value" : "Nukahtaminen 23 min nopeammin, kortisoli laskee 25 %"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Endormissement 23 min plus tôt, cortisol -25 %%"
+            "value" : "Endormissement 23 min plus tôt, cortisol -25 %"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Waktu mulai tidur 23 menit lebih cepat, kortisol turun 25%%"
+            "value" : "Waktu mulai tidur 23 menit lebih cepat, kortisol turun 25%"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Addormentamento 23 min prima, cortisolo -25%%"
+            "value" : "Addormentamento 23 min prima, cortisolo -25%"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "寝つきが23分早まり、コルチゾールが25%%低下"
+            "value" : "寝つきが23分早まり、コルチゾールが25%低下"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "수면 시간 23분 단축, 코르티솔 25%% 감소 효과"
+            "value" : "수면 시간 23분 단축, 코르티솔 25% 감소 효과"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sovner 23 minutter tidligere, 25%% lavere kortisol"
+            "value" : "Sovner 23 minutter tidligere, 25% lavere kortisol"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "23 minuten eerder in slaap, cortisol -25%%"
+            "value" : "23 minuten eerder in slaap, cortisol -25%"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zasypianie szybsze o 23 min, kortyzol niższy o 25%%"
+            "value" : "Zasypianie szybsze o 23 min, kortyzol niższy o 25%"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O sono começa 23 min mais cedo e o cortisol cai 25%%"
+            "value" : "O sono começa 23 min mais cedo e o cortisol cai 25%"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Засыпание на 23 минуты раньше, кортизол ниже на 25%%"
+            "value" : "Засыпание на 23 минуты раньше, кортизол ниже на 25%"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Du somnar 23 min tidigare, kortisol 25%% lägre"
+            "value" : "Du somnar 23 min tidigare, kortisol 25% lägre"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "หลับเร็วขึ้น 23 นาที คอร์ติซอลลดลง 25%%"
+            "value" : "หลับเร็วขึ้น 23 นาที คอร์ติซอลลดลง 25%"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uykuya dalma 23 dk öne gelir, kortizol %%25 azalır"
+            "value" : "Uykuya dalma 23 dk öne gelir, kortizol %25 azalır"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vào giấc sớm hơn 23 phút, cortisol giảm 25%%"
+            "value" : "Vào giấc sớm hơn 23 phút, cortisol giảm 25%"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "入睡时间提前23分钟，皮质醇下降25%%"
+            "value" : "入睡时间提前23分钟，皮质醇下降25%"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "入睡時間提早 23 分鐘，皮質醇降低 25%%"
+            "value" : "入睡時間提早 23 分鐘，皮質醇降低 25%"
           }
         }
       }
@@ -21159,151 +21459,151 @@
         }
       }
     },
-    "연구에 따르면 하루 15분 햇빛으로 세로토닌 분비가 시작되고, 30분이면 수면 시간이 23분 빨라지며 코르티솔이 25%% 감소합니다. 45분 이상이면 우울증 치료에 최적 효과를 보입니다." : {
-      "comment" : "SettingsView.swift:38",
+    "연구에 따르면 하루 15분 햇빛으로 세로토닌 분비가 시작되고, 30분이면 수면 시간이 23분 빨라지며 코르티솔이 25% 감소합니다. 45분 이상이면 우울증 치료에 최적 효과를 보입니다." : {
+      "comment" : "SettingsView.swift:38 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Podle studií se při 15 minutách slunce denně začne uvolňovat serotonin, 30 minut zkrátí usínání o 23 minut a sníží kortizol o 25%%. Od 45 minut je účinek při léčbě deprese nejlepší."
+            "value" : "Podle studií se při 15 minutách slunce denně začne uvolňovat serotonin, 30 minut zkrátí usínání o 23 minut a sníží kortizol o 25%. Od 45 minut je účinek při léčbě deprese nejlepší."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ifølge forskning begynder serotonin at blive udskilt efter 15 minutters sol om dagen. Efter 30 minutter falder man i søvn 23 minutter tidligere, og kortisol falder 25%%. 45 minutter eller mere har den bedste virkning mod depression."
+            "value" : "Ifølge forskning begynder serotonin at blive udskilt efter 15 minutters sol om dagen. Efter 30 minutter falder man i søvn 23 minutter tidligere, og kortisol falder 25%. 45 minutter eller mere har den bedste virkning mod depression."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Studien zufolge beginnt schon nach 15 Minuten Sonne am Tag die Serotonin-Ausschüttung. Nach 30 Minuten schläfst du 23 Minuten früher ein und das Cortisol sinkt um 25%%. Ab 45 Minuten ist die Wirkung bei Depression optimal."
+            "value" : "Studien zufolge beginnt schon nach 15 Minuten Sonne am Tag die Serotonin-Ausschüttung. Nach 30 Minuten schläfst du 23 Minuten früher ein und das Cortisol sinkt um 25%. Ab 45 Minuten ist die Wirkung bei Depression optimal."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Σύμφωνα με έρευνες, 15 λεπτά ήλιου την ημέρα ξεκινούν την έκκριση σεροτονίνης, ενώ με 30 λεπτά ο ύπνος έρχεται 23 λεπτά νωρίτερα και η κορτιζόλη μειώνεται κατά 25%%. Από 45 λεπτά και πάνω, η δράση στην κατάθλιψη είναι βέλτιστη."
+            "value" : "Σύμφωνα με έρευνες, 15 λεπτά ήλιου την ημέρα ξεκινούν την έκκριση σεροτονίνης, ενώ με 30 λεπτά ο ύπνος έρχεται 23 λεπτά νωρίτερα και η κορτιζόλη μειώνεται κατά 25%. Από 45 λεπτά και πάνω, η δράση στην κατάθλιψη είναι βέλτιστη."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Research shows 15 minutes of sun a day starts serotonin release, and 30 minutes brings sleep onset 23 minutes earlier with 25%% lower cortisol. 45 minutes or more works best for depression."
+            "value" : "Research shows 15 minutes of sun a day starts serotonin release, and 30 minutes brings sleep onset 23 minutes earlier with 25% lower cortisol. 45 minutes or more works best for depression."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Research suggests 15 minutes of sun a day starts serotonin release, and 30 minutes brings sleep forward by 23 minutes and lowers cortisol by 25%%. 45 minutes or more works best for depression."
+            "value" : "Research suggests 15 minutes of sun a day starts serotonin release, and 30 minutes brings sleep forward by 23 minutes and lowers cortisol by 25%. 45 minutes or more works best for depression."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Según los estudios, con 15 minutos de sol al día empieza a liberarse serotonina; con 30, te duermes 23 minutos antes y el cortisol baja un 25%%. A partir de 45 minutos se logra el mejor efecto contra la depresión."
+            "value" : "Según los estudios, con 15 minutos de sol al día empieza a liberarse serotonina; con 30, te duermes 23 minutos antes y el cortisol baja un 25%. A partir de 45 minutos se logra el mejor efecto contra la depresión."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tutkimusten mukaan 15 minuuttia auringonvaloa päivässä käynnistää serotoniinin erityksen. 30 minuutissa nukahtaminen aikaistuu 23 minuutilla ja kortisoli laskee 25 %%. Yli 45 minuuttia tehoaa parhaiten masennuksen hoidossa."
+            "value" : "Tutkimusten mukaan 15 minuuttia auringonvaloa päivässä käynnistää serotoniinin erityksen. 30 minuutissa nukahtaminen aikaistuu 23 minuutilla ja kortisoli laskee 25 %. Yli 45 minuuttia tehoaa parhaiten masennuksen hoidossa."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Selon les études, 15 min de soleil par jour déclenchent la sécrétion de sérotonine ; à 30 min, l’endormissement avance de 23 min et le cortisol baisse de 25 %%. À partir de 45 min, l’effet sur le moral est optimal."
+            "value" : "Selon les études, 15 min de soleil par jour déclenchent la sécrétion de sérotonine ; à 30 min, l’endormissement avance de 23 min et le cortisol baisse de 25 %. À partir de 45 min, l’effet sur le moral est optimal."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Menurut penelitian, sinar matahari 15 menit sehari memicu produksi serotonin, 30 menit membuat waktu mulai tidur 23 menit lebih awal dan menurunkan kortisol 25%%. Dengan 45 menit atau lebih, efeknya paling optimal untuk penanganan depresi."
+            "value" : "Menurut penelitian, sinar matahari 15 menit sehari memicu produksi serotonin, 30 menit membuat waktu mulai tidur 23 menit lebih awal dan menurunkan kortisol 25%. Dengan 45 menit atau lebih, efeknya paling optimal untuk penanganan depresi."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Secondo gli studi, con 15 minuti di sole al giorno inizia la produzione di serotonina; con 30 minuti ci si addormenta 23 minuti prima e il cortisolo cala del 25%%. Da 45 minuti in su l'effetto contro la depressione è ottimale."
+            "value" : "Secondo gli studi, con 15 minuti di sole al giorno inizia la produzione di serotonina; con 30 minuti ci si addormenta 23 minuti prima e il cortisolo cala del 25%. Da 45 minuti in su l'effetto contro la depressione è ottimale."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "研究によると、1日15分の日光でセロトニンの分泌が始まり、30分で寝つきが23分早まり、コルチゾールが25%%減ります。45分以上では、うつへの最適な効果が見られます。"
+            "value" : "研究によると、1日15分の日光でセロトニンの分泌が始まり、30分で寝つきが23分早まり、コルチゾールが25%減ります。45分以上では、うつへの最適な効果が見られます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "연구에 따르면 하루 15분 햇빛으로 세로토닌 분비가 시작되고, 30분이면 수면 시간이 23분 빨라지며 코르티솔이 25%% 감소합니다. 45분 이상이면 우울증 치료에 최적 효과를 보입니다."
+            "value" : "연구에 따르면 하루 15분 햇빛으로 세로토닌 분비가 시작되고, 30분이면 수면 시간이 23분 빨라지며 코르티솔이 25% 감소합니다. 45분 이상이면 우울증 치료에 최적 효과를 보입니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ifølge forskning begynner serotoninet å strømme etter 15 minutter sol om dagen. Etter 30 minutter sovner du 23 minutter tidligere, og kortisolet synker med 25%%. Fra 45 minutter og mer er effekten best mot depresjon."
+            "value" : "Ifølge forskning begynner serotoninet å strømme etter 15 minutter sol om dagen. Etter 30 minutter sovner du 23 minutter tidligere, og kortisolet synker med 25%. Fra 45 minutter og mer er effekten best mot depresjon."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uit onderzoek blijkt dat 15 minuten zon per dag de aanmaak van serotonine op gang brengt. Met 30 minuten val je 23 minuten eerder in slaap en daalt je cortisol met 25%%. Vanaf 45 minuten werkt zon optimaal bij depressieve klachten."
+            "value" : "Uit onderzoek blijkt dat 15 minuten zon per dag de aanmaak van serotonine op gang brengt. Met 30 minuten val je 23 minuten eerder in slaap en daalt je cortisol met 25%. Vanaf 45 minuten werkt zon optimaal bij depressieve klachten."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Badania pokazują, że 15 minut słońca dziennie uruchamia wydzielanie serotoniny, 30 minut przyspiesza zasypianie o 23 minuty i obniża kortyzol o 25%%. Ponad 45 minut działa najlepiej w leczeniu depresji."
+            "value" : "Badania pokazują, że 15 minut słońca dziennie uruchamia wydzielanie serotoniny, 30 minut przyspiesza zasypianie o 23 minuty i obniża kortyzol o 25%. Ponad 45 minut działa najlepiej w leczeniu depresji."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Segundo estudos, 15 minutos de sol por dia já iniciam a liberação de serotonina; com 30 minutos, o sono vem 23 minutos mais cedo e o cortisol cai 25%%. A partir de 45 minutos, o efeito contra a depressão é o melhor."
+            "value" : "Segundo estudos, 15 minutos de sol por dia já iniciam a liberação de serotonina; com 30 minutos, o sono vem 23 minutos mais cedo e o cortisol cai 25%. A partir de 45 minutos, o efeito contra a depressão é o melhor."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "По данным исследований, 15 минут солнца в день запускают выработку серотонина, а 30 минут сдвигают засыпание на 23 минуты раньше и снижают кортизол на 25%%. Более 45 минут дают оптимальный эффект при депрессии."
+            "value" : "По данным исследований, 15 минут солнца в день запускают выработку серотонина, а 30 минут сдвигают засыпание на 23 минуты раньше и снижают кортизол на 25%. Более 45 минут дают оптимальный эффект при депрессии."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Enligt forskning börjar serotonin frigöras efter 15 minuters solljus om dagen. Efter 30 minuter somnar du 23 minuter tidigare och kortisolet minskar med 25%%. Från 45 minuter ger solen bäst effekt mot depression."
+            "value" : "Enligt forskning börjar serotonin frigöras efter 15 minuters solljus om dagen. Efter 30 minuter somnar du 23 minuter tidigare och kortisolet minskar med 25%. Från 45 minuter ger solen bäst effekt mot depression."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "จากงานวิจัย แดด 15 นาทีต่อวันทำให้เริ่มหลั่งเซโรโทนิน 30 นาทีช่วยให้หลับเร็วขึ้น 23 นาทีและคอร์ติซอลลดลง 25%% ส่วน 45 นาทีขึ้นไปให้ผลดีที่สุดต่อภาวะซึมเศร้า"
+            "value" : "จากงานวิจัย แดด 15 นาทีต่อวันทำให้เริ่มหลั่งเซโรโทนิน 30 นาทีช่วยให้หลับเร็วขึ้น 23 นาทีและคอร์ติซอลลดลง 25% ส่วน 45 นาทีขึ้นไปให้ผลดีที่สุดต่อภาวะซึมเศร้า"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Araştırmalara göre günde 15 dakika güneşle serotonin salgısı başlar, 30 dakikada uykuya dalma 23 dakika öne gelir ve kortizol %%25 azalır. 45 dakika ve üzeri depresyon tedavisinde en iyi etkiyi gösterir."
+            "value" : "Araştırmalara göre günde 15 dakika güneşle serotonin salgısı başlar, 30 dakikada uykuya dalma 23 dakika öne gelir ve kortizol %25 azalır. 45 dakika ve üzeri depresyon tedavisinde en iyi etkiyi gösterir."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Theo nghiên cứu, chỉ 15 phút nắng mỗi ngày là serotonin bắt đầu được tiết ra; với 30 phút, bạn vào giấc sớm hơn 23 phút và cortisol giảm 25%%. Từ 45 phút trở lên cho hiệu quả tốt nhất với trầm cảm."
+            "value" : "Theo nghiên cứu, chỉ 15 phút nắng mỗi ngày là serotonin bắt đầu được tiết ra; với 30 phút, bạn vào giấc sớm hơn 23 phút và cortisol giảm 25%. Từ 45 phút trở lên cho hiệu quả tốt nhất với trầm cảm."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "研究表明，每天晒15分钟太阳，血清素就会开始分泌；晒30分钟，入睡时间可提前23分钟，皮质醇下降25%%；45分钟以上，对改善抑郁的效果最佳。"
+            "value" : "研究表明，每天晒15分钟太阳，血清素就会开始分泌；晒30分钟，入睡时间可提前23分钟，皮质醇下降25%；45分钟以上，对改善抑郁的效果最佳。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "研究顯示，每天曬 15 分鐘太陽，血清素就會開始分泌；曬 30 分鐘，入睡時間可提早 23 分鐘，皮質醇也會降低 25%%；曬 45 分鐘以上，對憂鬱症的改善效果最佳。"
+            "value" : "研究顯示，每天曬 15 分鐘太陽，血清素就會開始分泌；曬 30 分鐘，入睡時間可提早 23 分鐘，皮質醇也會降低 25%；曬 45 分鐘以上，對憂鬱症的改善效果最佳。"
           }
         }
       }
@@ -25778,151 +26078,151 @@
         }
       }
     },
-    "자연광은 인지 기능과 집중력을 향상시킵니다. 실내에서 일할 때도 창가 자리를 선택하면 업무 효율이 15%% 증가합니다." : {
-      "comment" : "Models.swift:261",
+    "자연광은 인지 기능과 집중력을 향상시킵니다. 실내에서 일할 때도 창가 자리를 선택하면 업무 효율이 15% 증가합니다." : {
+      "comment" : "Models.swift:261 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Přirozené světlo zlepšuje kognitivní funkce a soustředění. I když pracuješ uvnitř, místo u okna zvýší pracovní efektivitu o 15%%."
+            "value" : "Přirozené světlo zlepšuje kognitivní funkce a soustředění. I když pracuješ uvnitř, místo u okna zvýší pracovní efektivitu o 15%."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Naturligt lys forbedrer kognitive evner og koncentration. Selv når du arbejder indendørs, øger en plads ved vinduet effektiviteten med 15%%."
+            "value" : "Naturligt lys forbedrer kognitive evner og koncentration. Selv når du arbejder indendørs, øger en plads ved vinduet effektiviteten med 15%."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Natürliches Licht verbessert Denkvermögen und Konzentration. Auch drinnen steigert ein Platz am Fenster die Arbeitseffizienz um 15%%."
+            "value" : "Natürliches Licht verbessert Denkvermögen und Konzentration. Auch drinnen steigert ein Platz am Fenster die Arbeitseffizienz um 15%."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Το φυσικό φως βελτιώνει τις γνωστικές λειτουργίες και τη συγκέντρωση. Ακόμη και αν δουλεύεις μέσα, μια θέση δίπλα στο παράθυρο αυξάνει την απόδοση κατά 15%%."
+            "value" : "Το φυσικό φως βελτιώνει τις γνωστικές λειτουργίες και τη συγκέντρωση. Ακόμη και αν δουλεύεις μέσα, μια θέση δίπλα στο παράθυρο αυξάνει την απόδοση κατά 15%."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Natural light sharpens cognition and focus. Even indoors, working by a window boosts productivity by 15%%."
+            "value" : "Natural light sharpens cognition and focus. Even indoors, working by a window boosts productivity by 15%."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Natural light boosts cognitive function and concentration. Even when working indoors, a seat by the window can raise productivity by 15%%."
+            "value" : "Natural light boosts cognitive function and concentration. Even when working indoors, a seat by the window can raise productivity by 15%."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La luz natural mejora la función cognitiva y la concentración. Incluso si trabajas en interiores, sentarte junto a una ventana aumenta tu productividad un 15%%."
+            "value" : "La luz natural mejora la función cognitiva y la concentración. Incluso si trabajas en interiores, sentarte junto a una ventana aumenta tu productividad un 15%."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Luonnonvalo parantaa tiedonkäsittelyä ja keskittymiskykyä. Sisätyössäkin ikkunapaikka lisää työtehoa 15 %%."
+            "value" : "Luonnonvalo parantaa tiedonkäsittelyä ja keskittymiskykyä. Sisätyössäkin ikkunapaikka lisää työtehoa 15 %."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La lumière naturelle améliore les fonctions cognitives et la concentration. Même au bureau, une place près de la fenêtre augmente l’efficacité au travail de 15 %%."
+            "value" : "La lumière naturelle améliore les fonctions cognitives et la concentration. Même au bureau, une place près de la fenêtre augmente l’efficacité au travail de 15 %."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cahaya alami meningkatkan fungsi kognitif dan fokus. Saat bekerja di dalam ruangan pun, memilih tempat dekat jendela dapat meningkatkan efisiensi kerja 15%%."
+            "value" : "Cahaya alami meningkatkan fungsi kognitif dan fokus. Saat bekerja di dalam ruangan pun, memilih tempat dekat jendela dapat meningkatkan efisiensi kerja 15%."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La luce naturale migliora le funzioni cognitive e la concentrazione. Anche se lavori al chiuso, scegliere un posto vicino alla finestra aumenta l'efficienza del 15%%."
+            "value" : "La luce naturale migliora le funzioni cognitive e la concentrazione. Anche se lavori al chiuso, scegliere un posto vicino alla finestra aumenta l'efficienza del 15%."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自然光は、認知機能と集中力を高めます。室内で働くときも窓際の席を選ぶと、仕事の効率が15%%上がります。"
+            "value" : "自然光は、認知機能と集中力を高めます。室内で働くときも窓際の席を選ぶと、仕事の効率が15%上がります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "자연광은 인지 기능과 집중력을 향상시킵니다. 실내에서 일할 때도 창가 자리를 선택하면 업무 효율이 15%% 증가합니다."
+            "value" : "자연광은 인지 기능과 집중력을 향상시킵니다. 실내에서 일할 때도 창가 자리를 선택하면 업무 효율이 15% 증가합니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Naturlig lys bedrer tankevirksomhet og konsentrasjon. Selv når du jobber inne, gir en plass ved vinduet 15%% bedre effektivitet."
+            "value" : "Naturlig lys bedrer tankevirksomhet og konsentrasjon. Selv når du jobber inne, gir en plass ved vinduet 15% bedre effektivitet."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Natuurlijk licht verbetert je denkvermogen en concentratie. Ook als je binnen werkt: een plek bij het raam verhoogt je productiviteit met 15%%."
+            "value" : "Natuurlijk licht verbetert je denkvermogen en concentratie. Ook als je binnen werkt: een plek bij het raam verhoogt je productiviteit met 15%."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Naturalne światło poprawia funkcje poznawcze i koncentrację. Nawet przy pracy w pomieszczeniu miejsce przy oknie zwiększa wydajność o 15%%."
+            "value" : "Naturalne światło poprawia funkcje poznawcze i koncentrację. Nawet przy pracy w pomieszczeniu miejsce przy oknie zwiększa wydajność o 15%."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A luz natural melhora a cognição e a concentração. Mesmo trabalhando em ambiente fechado, escolher um lugar junto à janela aumenta a produtividade em 15%%."
+            "value" : "A luz natural melhora a cognição e a concentração. Mesmo trabalhando em ambiente fechado, escolher um lugar junto à janela aumenta a produtividade em 15%."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Естественный свет улучшает когнитивные функции и концентрацию. Даже при работе в помещении место у окна повышает продуктивность на 15%%."
+            "value" : "Естественный свет улучшает когнитивные функции и концентрацию. Даже при работе в помещении место у окна повышает продуктивность на 15%."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Naturligt ljus förbättrar kognitionen och koncentrationen. Även inomhus ökar effektiviteten på jobbet med 15%% om du sitter vid ett fönster."
+            "value" : "Naturligt ljus förbättrar kognitionen och koncentrationen. Även inomhus ökar effektiviteten på jobbet med 15% om du sitter vid ett fönster."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "แสงธรรมชาติช่วยเสริมการรับรู้และสมาธิ แม้ทำงานในอาคาร การนั่งริมหน้าต่างก็ช่วยให้ประสิทธิภาพการทำงานเพิ่มขึ้น 15%%"
+            "value" : "แสงธรรมชาติช่วยเสริมการรับรู้และสมาธิ แม้ทำงานในอาคาร การนั่งริมหน้าต่างก็ช่วยให้ประสิทธิภาพการทำงานเพิ่มขึ้น 15%"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Doğal ışık bilişsel işlevleri ve odaklanmayı geliştirir. İçeride çalışırken bile pencere kenarını seçmek iş verimini %%15 artırır."
+            "value" : "Doğal ışık bilişsel işlevleri ve odaklanmayı geliştirir. İçeride çalışırken bile pencere kenarını seçmek iş verimini %15 artırır."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ánh sáng tự nhiên cải thiện nhận thức và khả năng tập trung. Ngay cả khi làm việc trong nhà, ngồi gần cửa sổ cũng giúp tăng hiệu suất làm việc 15%%."
+            "value" : "Ánh sáng tự nhiên cải thiện nhận thức và khả năng tập trung. Ngay cả khi làm việc trong nhà, ngồi gần cửa sổ cũng giúp tăng hiệu suất làm việc 15%."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自然光能提升认知功能和专注力。在室内工作时选靠窗的位置，工作效率可提高15%%。"
+            "value" : "自然光能提升认知功能和专注力。在室内工作时选靠窗的位置，工作效率可提高15%。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自然光能提升認知功能與專注力。在室內工作時選擇靠窗的位置，工作效率可提高 15%%。"
+            "value" : "自然光能提升認知功能與專注力。在室內工作時選擇靠窗的位置，工作效率可提高 15%。"
           }
         }
       }
@@ -37400,151 +37700,151 @@
         }
       }
     },
-    "햇빛은 깊은 수면(REM 수면) 비율을 높여줍니다. 낮에 충분한 햇빛을 받으면 야간 수면의 질이 30%% 향상됩니다." : {
-      "comment" : "Models.swift:277",
+    "햇빛은 깊은 수면(REM 수면) 비율을 높여줍니다. 낮에 충분한 햇빛을 받으면 야간 수면의 질이 30% 향상됩니다." : {
+      "comment" : "Models.swift:277 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Slunce zvyšuje podíl hlubokého spánku (REM). Když přes den dostaneš dost slunce, kvalita nočního spánku se zlepší o 30%%."
+            "value" : "Slunce zvyšuje podíl hlubokého spánku (REM). Když přes den dostaneš dost slunce, kvalita nočního spánku se zlepší o 30%."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sollys øger andelen af dyb søvn (REM-søvn). Hvis du får nok sol om dagen, bliver søvnkvaliteten om natten 30%% bedre."
+            "value" : "Sollys øger andelen af dyb søvn (REM-søvn). Hvis du får nok sol om dagen, bliver søvnkvaliteten om natten 30% bedre."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sonnenlicht erhöht den Anteil des Tiefschlafs (REM-Schlaf). Wer tagsüber genug Sonne bekommt, verbessert die Schlafqualität in der Nacht um 30%%."
+            "value" : "Sonnenlicht erhöht den Anteil des Tiefschlafs (REM-Schlaf). Wer tagsüber genug Sonne bekommt, verbessert die Schlafqualität in der Nacht um 30%."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ο ήλιος αυξάνει το ποσοστό του βαθιού ύπνου (ύπνος REM). Αν πάρεις αρκετό ήλιο τη μέρα, η ποιότητα του νυχτερινού ύπνου βελτιώνεται κατά 30%%."
+            "value" : "Ο ήλιος αυξάνει το ποσοστό του βαθιού ύπνου (ύπνος REM). Αν πάρεις αρκετό ήλιο τη μέρα, η ποιότητα του νυχτερινού ύπνου βελτιώνεται κατά 30%."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sunlight increases the share of deep (REM) sleep. Getting enough sun during the day improves nighttime sleep quality by 30%%."
+            "value" : "Sunlight increases the share of deep (REM) sleep. Getting enough sun during the day improves nighttime sleep quality by 30%."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sunlight increases the share of deep (REM) sleep. Getting enough sun during the day improves night-time sleep quality by 30%%."
+            "value" : "Sunlight increases the share of deep (REM) sleep. Getting enough sun during the day improves night-time sleep quality by 30%."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "El sol aumenta la proporción de sueño profundo (fase REM). Recibir suficiente sol durante el día mejora un 30%% la calidad del sueño nocturno."
+            "value" : "El sol aumenta la proporción de sueño profundo (fase REM). Recibir suficiente sol durante el día mejora un 30% la calidad del sueño nocturno."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Auringonvalo lisää syvän unen (REM-unen) osuutta. Kun saat päivällä riittävästi valoa, yöunen laatu paranee 30 %%."
+            "value" : "Auringonvalo lisää syvän unen (REM-unen) osuutta. Kun saat päivällä riittävästi valoa, yöunen laatu paranee 30 %."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Le soleil augmente la part de sommeil profond (sommeil paradoxal). Une bonne dose de lumière en journée améliore la qualité du sommeil de 30 %% la nuit."
+            "value" : "Le soleil augmente la part de sommeil profond (sommeil paradoxal). Une bonne dose de lumière en journée améliore la qualité du sommeil de 30 % la nuit."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sinar matahari menambah porsi tidur nyenyak (tidur REM). Jika cukup terpapar sinar matahari di siang hari, kualitas tidur malam meningkat 30%%."
+            "value" : "Sinar matahari menambah porsi tidur nyenyak (tidur REM). Jika cukup terpapar sinar matahari di siang hari, kualitas tidur malam meningkat 30%."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Il sole aumenta la quota di sonno profondo (sonno REM). Con abbastanza luce durante il giorno, la qualità del sonno notturno migliora del 30%%."
+            "value" : "Il sole aumenta la quota di sonno profondo (sonno REM). Con abbastanza luce durante il giorno, la qualità del sonno notturno migliora del 30%."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "日光は深い眠り(レム睡眠)の割合を高めます。昼間に十分な日光を浴びると、夜の睡眠の質が30%%向上します。"
+            "value" : "日光は深い眠り(レム睡眠)の割合を高めます。昼間に十分な日光を浴びると、夜の睡眠の質が30%向上します。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "햇빛은 깊은 수면(REM 수면) 비율을 높여줍니다. 낮에 충분한 햇빛을 받으면 야간 수면의 질이 30%% 향상됩니다."
+            "value" : "햇빛은 깊은 수면(REM 수면) 비율을 높여줍니다. 낮에 충분한 햇빛을 받으면 야간 수면의 질이 30% 향상됩니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sollys øker andelen dyp søvn (REM-søvn). Nok sol på dagtid gir 30%% bedre søvnkvalitet om natten."
+            "value" : "Sollys øker andelen dyp søvn (REM-søvn). Nok sol på dagtid gir 30% bedre søvnkvalitet om natten."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zonlicht verhoogt het aandeel diepe slaap (REM-slaap). Genoeg zon overdag verbetert de kwaliteit van je nachtrust met 30%%."
+            "value" : "Zonlicht verhoogt het aandeel diepe slaap (REM-slaap). Genoeg zon overdag verbetert de kwaliteit van je nachtrust met 30%."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Słońce zwiększa udział snu głębokiego (REM). Odpowiednia dawka światła w ciągu dnia poprawia jakość nocnego snu o 30%%."
+            "value" : "Słońce zwiększa udział snu głębokiego (REM). Odpowiednia dawka światła w ciągu dnia poprawia jakość nocnego snu o 30%."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O sol aumenta a proporção de sono profundo (sono REM). Com sol suficiente durante o dia, a qualidade do sono à noite melhora 30%%."
+            "value" : "O sol aumenta a proporção de sono profundo (sono REM). Com sol suficiente durante o dia, a qualidade do sono à noite melhora 30%."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Солнечный свет увеличивает долю глубокого сна (REM-фазы). Если днём достаточно бывать на солнце, качество ночного сна улучшается на 30%%."
+            "value" : "Солнечный свет увеличивает долю глубокого сна (REM-фазы). Если днём достаточно бывать на солнце, качество ночного сна улучшается на 30%."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Solljus ökar andelen djupsömn (REM-sömn). Får du tillräckligt med sol på dagen blir sömnkvaliteten på natten 30%% bättre."
+            "value" : "Solljus ökar andelen djupsömn (REM-sömn). Får du tillräckligt med sol på dagen blir sömnkvaliteten på natten 30% bättre."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "แสงแดดช่วยเพิ่มสัดส่วนการหลับลึก (หลับ REM) การได้รับแดดเพียงพอในตอนกลางวันช่วยให้คุณภาพการนอนตอนกลางคืนดีขึ้น 30%%"
+            "value" : "แสงแดดช่วยเพิ่มสัดส่วนการหลับลึก (หลับ REM) การได้รับแดดเพียงพอในตอนกลางวันช่วยให้คุณภาพการนอนตอนกลางคืนดีขึ้น 30%"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Güneş ışığı derin uyku (REM uykusu) oranını artırır. Gün içinde yeterince güneş almak gece uyku kalitesini %%30 yükseltir."
+            "value" : "Güneş ışığı derin uyku (REM uykusu) oranını artırır. Gün içinde yeterince güneş almak gece uyku kalitesini %30 yükseltir."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ánh nắng làm tăng tỷ lệ giấc ngủ sâu (giấc ngủ REM). Nhận đủ nắng ban ngày giúp chất lượng giấc ngủ ban đêm cải thiện 30%%."
+            "value" : "Ánh nắng làm tăng tỷ lệ giấc ngủ sâu (giấc ngủ REM). Nhận đủ nắng ban ngày giúp chất lượng giấc ngủ ban đêm cải thiện 30%."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "阳光能提高深度睡眠（REM睡眠）的比例。白天晒足太阳，夜间睡眠质量可提升30%%。"
+            "value" : "阳光能提高深度睡眠（REM睡眠）的比例。白天晒足太阳，夜间睡眠质量可提升30%。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陽光能提高深層睡眠（REM 睡眠）的比例。白天曬足太陽，夜間睡眠品質可提升 30%%。"
+            "value" : "陽光能提高深層睡眠（REM 睡眠）的比例。白天曬足太陽，夜間睡眠品質可提升 30%。"
           }
         }
       }
@@ -37847,300 +38147,300 @@
         }
       }
     },
-    "햇빛은 코르티솔(스트레스 호르몬) 수치를 25%% 낮춰줍니다. 점심시간 햇빛 산책은 오후 업무 스트레스를 줄이는데 도움이 됩니다." : {
-      "comment" : "Models.swift:260",
+    "햇빛은 코르티솔(스트레스 호르몬) 수치를 25% 낮춰줍니다. 점심시간 햇빛 산책은 오후 업무 스트레스를 줄이는데 도움이 됩니다." : {
+      "comment" : "Models.swift:260 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Slunce snižuje hladinu kortizolu (stresového hormonu) o 25%%. Procházka na slunci v poledne pomáhá zmírnit stres při odpoledních úkolech."
+            "value" : "Slunce snižuje hladinu kortizolu (stresového hormonu) o 25%. Procházka na slunci v poledne pomáhá zmírnit stres při odpoledních úkolech."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sollys sænker niveauet af kortisol (stresshormonet) med 25%%. En solrig gåtur i frokostpausen kan hjælpe med at mindske stress om eftermiddagen."
+            "value" : "Sollys sænker niveauet af kortisol (stresshormonet) med 25%. En solrig gåtur i frokostpausen kan hjælpe med at mindske stress om eftermiddagen."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sonnenlicht senkt den Cortisolspiegel (Stresshormon) um 25%%. Ein Sonnenspaziergang in der Mittagspause hilft, den Stress am Nachmittag zu verringern."
+            "value" : "Sonnenlicht senkt den Cortisolspiegel (Stresshormon) um 25%. Ein Sonnenspaziergang in der Mittagspause hilft, den Stress am Nachmittag zu verringern."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ο ήλιος μειώνει κατά 25%% την κορτιζόλη (την ορμόνη του στρες). Μια βόλτα στον ήλιο στο διάλειμμα του μεσημεριού βοηθά να μειωθεί το στρες του απογεύματος."
+            "value" : "Ο ήλιος μειώνει κατά 25% την κορτιζόλη (την ορμόνη του στρες). Μια βόλτα στον ήλιο στο διάλειμμα του μεσημεριού βοηθά να μειωθεί το στρες του απογεύματος."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sunlight lowers cortisol (the stress hormone) by 25%%. A sunny walk at lunchtime can help ease afternoon work stress."
+            "value" : "Sunlight lowers cortisol (the stress hormone) by 25%. A sunny walk at lunchtime can help ease afternoon work stress."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sunlight lowers cortisol (the stress hormone) by 25%%. A lunchtime walk in the sun can help ease afternoon work stress."
+            "value" : "Sunlight lowers cortisol (the stress hormone) by 25%. A lunchtime walk in the sun can help ease afternoon work stress."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "El sol reduce un 25%% el cortisol, la hormona del estrés. Un paseo al sol a la hora de comer ayuda a bajar el estrés de la tarde."
+            "value" : "El sol reduce un 25% el cortisol, la hormona del estrés. Un paseo al sol a la hora de comer ayuda a bajar el estrés de la tarde."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Auringonvalo laskee kortisolin (stressihormonin) tasoa 25 %%. Lounastauon aurinkokävely auttaa vähentämään iltapäivän työstressiä."
+            "value" : "Auringonvalo laskee kortisolin (stressihormonin) tasoa 25 %. Lounastauon aurinkokävely auttaa vähentämään iltapäivän työstressiä."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Le soleil fait baisser le cortisol (hormone du stress) de 25 %%. Une balade au soleil à la pause déj aide à réduire le stress de l’après-midi."
+            "value" : "Le soleil fait baisser le cortisol (hormone du stress) de 25 %. Une balade au soleil à la pause déj aide à réduire le stress de l’après-midi."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sinar matahari menurunkan kadar kortisol (hormon stres) hingga 25%%. Jalan santai di bawah matahari saat istirahat makan siang membantu mengurangi stres kerja di sore hari."
+            "value" : "Sinar matahari menurunkan kadar kortisol (hormon stres) hingga 25%. Jalan santai di bawah matahari saat istirahat makan siang membantu mengurangi stres kerja di sore hari."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Il sole abbassa del 25%% i livelli di cortisolo (l'ormone dello stress). Una passeggiata al sole in pausa pranzo aiuta a ridurre lo stress del pomeriggio."
+            "value" : "Il sole abbassa del 25% i livelli di cortisolo (l'ormone dello stress). Una passeggiata al sole in pausa pranzo aiuta a ridurre lo stress del pomeriggio."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "日光は、コルチゾール(ストレスホルモン)の値を25%%下げてくれます。お昼休みの日なた散歩は、午後の仕事のストレスを減らすのに役立ちます。"
+            "value" : "日光は、コルチゾール(ストレスホルモン)の値を25%下げてくれます。お昼休みの日なた散歩は、午後の仕事のストレスを減らすのに役立ちます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "햇빛은 코르티솔(스트레스 호르몬) 수치를 25%% 낮춰줍니다. 점심시간 햇빛 산책은 오후 업무 스트레스를 줄이는데 도움이 됩니다."
+            "value" : "햇빛은 코르티솔(스트레스 호르몬) 수치를 25% 낮춰줍니다. 점심시간 햇빛 산책은 오후 업무 스트레스를 줄이는데 도움이 됩니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sollys senker nivået av kortisol (stresshormonet) med 25%%. En solrik gåtur i lunsjen kan gi mindre stress utover ettermiddagen."
+            "value" : "Sollys senker nivået av kortisol (stresshormonet) med 25%. En solrik gåtur i lunsjen kan gi mindre stress utover ettermiddagen."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zonlicht verlaagt je cortisol (stresshormoon) met 25%%. Een wandeling in de zon tijdens de lunch helpt stress in de middag te verminderen."
+            "value" : "Zonlicht verlaagt je cortisol (stresshormoon) met 25%. Een wandeling in de zon tijdens de lunch helpt stress in de middag te verminderen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Słońce obniża poziom kortyzolu (hormonu stresu) o 25%%. Spacer w słońcu w porze lunchu pomaga ograniczyć popołudniowy stres w pracy."
+            "value" : "Słońce obniża poziom kortyzolu (hormonu stresu) o 25%. Spacer w słońcu w porze lunchu pomaga ograniczyć popołudniowy stres w pracy."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O sol reduz o cortisol (hormônio do estresse) em 25%%. Uma caminhada ao sol na hora do almoço ajuda a aliviar o estresse da tarde de trabalho."
+            "value" : "O sol reduz o cortisol (hormônio do estresse) em 25%. Uma caminhada ao sol na hora do almoço ajuda a aliviar o estresse da tarde de trabalho."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Солнечный свет снижает уровень кортизола (гормона стресса) на 25%%. Прогулка на солнце в обеденный перерыв помогает уменьшить стресс во второй половине дня."
+            "value" : "Солнечный свет снижает уровень кортизола (гормона стресса) на 25%. Прогулка на солнце в обеденный перерыв помогает уменьшить стресс во второй половине дня."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Solljus sänker nivåerna av kortisol (stresshormon) med 25%%. En solpromenad på lunchen kan minska stressen under eftermiddagen."
+            "value" : "Solljus sänker nivåerna av kortisol (stresshormon) med 25%. En solpromenad på lunchen kan minska stressen under eftermiddagen."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "แสงแดดช่วยลดระดับคอร์ติซอล (ฮอร์โมนความเครียด) ลง 25%% การเดินรับแดดตอนพักเที่ยงช่วยลดความเครียดจากงานช่วงบ่าย"
+            "value" : "แสงแดดช่วยลดระดับคอร์ติซอล (ฮอร์โมนความเครียด) ลง 25% การเดินรับแดดตอนพักเที่ยงช่วยลดความเครียดจากงานช่วงบ่าย"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Güneş ışığı kortizol (stres hormonu) düzeyini %%25 düşürür. Öğle arasında güneşli bir yürüyüş, öğleden sonraki iş stresini azaltmaya yardımcı olur."
+            "value" : "Güneş ışığı kortizol (stres hormonu) düzeyini %25 düşürür. Öğle arasında güneşli bir yürüyüş, öğleden sonraki iş stresini azaltmaya yardımcı olur."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ánh nắng làm giảm 25%% cortisol (hormone căng thẳng). Đi dạo dưới nắng giờ nghỉ trưa giúp bớt căng thẳng khi làm việc buổi chiều."
+            "value" : "Ánh nắng làm giảm 25% cortisol (hormone căng thẳng). Đi dạo dưới nắng giờ nghỉ trưa giúp bớt căng thẳng khi làm việc buổi chiều."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "阳光能使皮质醇（压力激素）水平降低25%%。午休时晒着太阳散散步，有助于缓解下午的工作压力。"
+            "value" : "阳光能使皮质醇（压力激素）水平降低25%。午休时晒着太阳散散步，有助于缓解下午的工作压力。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陽光能讓皮質醇（壓力荷爾蒙）濃度降低 25%%。午休時曬太陽散步，有助於減輕下午的工作壓力。"
+            "value" : "陽光能讓皮質醇（壓力荷爾蒙）濃度降低 25%。午休時曬太陽散步，有助於減輕下午的工作壓力。"
           }
         }
       }
     },
-    "햇빛은 혈관을 확장시켜 혈압을 낮춰줍니다. 60분의 햇빛 노출은 수축기 혈압을 11%% 감소시키는 효과가 있습니다." : {
-      "comment" : "Models.swift:265",
+    "햇빛은 혈관을 확장시켜 혈압을 낮춰줍니다. 60분의 햇빛 노출은 수축기 혈압을 11% 감소시키는 효과가 있습니다." : {
+      "comment" : "Models.swift:265 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Slunce rozšiřuje cévy a snižuje krevní tlak. 60 minut na slunci sníží systolický tlak o 11%%."
+            "value" : "Slunce rozšiřuje cévy a snižuje krevní tlak. 60 minut na slunci sníží systolický tlak o 11%."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sollys udvider blodkarrene og sænker blodtrykket. 60 minutters sol kan sænke det systoliske blodtryk med 11%%."
+            "value" : "Sollys udvider blodkarrene og sænker blodtrykket. 60 minutters sol kan sænke det systoliske blodtryk med 11%."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sonnenlicht weitet die Blutgefäße und senkt den Blutdruck. 60 Minuten Sonne können den systolischen Blutdruck um 11%% senken."
+            "value" : "Sonnenlicht weitet die Blutgefäße und senkt den Blutdruck. 60 Minuten Sonne können den systolischen Blutdruck um 11% senken."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ο ήλιος διαστέλλει τα αγγεία και μειώνει την πίεση. 60 λεπτά έκθεσης μειώνουν τη συστολική πίεση κατά 11%%."
+            "value" : "Ο ήλιος διαστέλλει τα αγγεία και μειώνει την πίεση. 60 λεπτά έκθεσης μειώνουν τη συστολική πίεση κατά 11%."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sunlight widens blood vessels and lowers blood pressure. 60 minutes of sun can reduce systolic blood pressure by 11%%."
+            "value" : "Sunlight widens blood vessels and lowers blood pressure. 60 minutes of sun can reduce systolic blood pressure by 11%."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sunlight widens blood vessels and lowers blood pressure. 60 minutes of sun can reduce systolic blood pressure by 11%%."
+            "value" : "Sunlight widens blood vessels and lowers blood pressure. 60 minutes of sun can reduce systolic blood pressure by 11%."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "El sol dilata los vasos sanguíneos y ayuda a bajar la presión arterial. 60 minutos de sol reducen la presión sistólica un 11%%."
+            "value" : "El sol dilata los vasos sanguíneos y ayuda a bajar la presión arterial. 60 minutos de sol reducen la presión sistólica un 11%."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Auringonvalo laajentaa verisuonia ja laskee verenpainetta. 60 minuuttia auringonvaloa laskee systolista verenpainetta 11 %%."
+            "value" : "Auringonvalo laajentaa verisuonia ja laskee verenpainetta. 60 minuuttia auringonvaloa laskee systolista verenpainetta 11 %."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Le soleil dilate les vaisseaux sanguins et fait baisser la tension. 60 min de soleil réduisent la pression systolique de 11 %%."
+            "value" : "Le soleil dilate les vaisseaux sanguins et fait baisser la tension. 60 min de soleil réduisent la pression systolique de 11 %."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sinar matahari melebarkan pembuluh darah sehingga tekanan darah turun. Paparan 60 menit dapat menurunkan tekanan darah sistolik hingga 11%%."
+            "value" : "Sinar matahari melebarkan pembuluh darah sehingga tekanan darah turun. Paparan 60 menit dapat menurunkan tekanan darah sistolik hingga 11%."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Il sole dilata i vasi sanguigni e abbassa la pressione. 60 minuti di sole riducono la pressione sistolica dell'11%%."
+            "value" : "Il sole dilata i vasi sanguigni e abbassa la pressione. 60 minuti di sole riducono la pressione sistolica dell'11%."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "日光は血管を広げて、血圧を下げてくれます。60分の日光で、収縮期血圧が11%%下がる効果があります。"
+            "value" : "日光は血管を広げて、血圧を下げてくれます。60分の日光で、収縮期血圧が11%下がる効果があります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "햇빛은 혈관을 확장시켜 혈압을 낮춰줍니다. 60분의 햇빛 노출은 수축기 혈압을 11%% 감소시키는 효과가 있습니다."
+            "value" : "햇빛은 혈관을 확장시켜 혈압을 낮춰줍니다. 60분의 햇빛 노출은 수축기 혈압을 11% 감소시키는 효과가 있습니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sollys utvider blodårene og senker blodtrykket. 60 minutter sol kan senke det systoliske blodtrykket med 11%%."
+            "value" : "Sollys utvider blodårene og senker blodtrykket. 60 minutter sol kan senke det systoliske blodtrykket med 11%."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zonlicht verwijdt de bloedvaten en verlaagt zo de bloeddruk. 60 minuten zonlicht verlaagt de systolische bloeddruk met 11%%."
+            "value" : "Zonlicht verwijdt de bloedvaten en verlaagt zo de bloeddruk. 60 minuten zonlicht verlaagt de systolische bloeddruk met 11%."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Słońce rozszerza naczynia krwionośne i obniża ciśnienie. 60 minut słońca może obniżyć ciśnienie skurczowe o 11%%."
+            "value" : "Słońce rozszerza naczynia krwionośne i obniża ciśnienie. 60 minut słońca może obniżyć ciśnienie skurczowe o 11%."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "O sol dilata os vasos sanguíneos e reduz a pressão arterial. 60 minutos de sol diminuem a pressão sistólica em 11%%."
+            "value" : "O sol dilata os vasos sanguíneos e reduz a pressão arterial. 60 minutos de sol diminuem a pressão sistólica em 11%."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Солнечный свет расширяет сосуды и снижает давление. 60 минут на солнце уменьшают систолическое давление на 11%%."
+            "value" : "Солнечный свет расширяет сосуды и снижает давление. 60 минут на солнце уменьшают систолическое давление на 11%."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Solljus vidgar blodkärlen och sänker blodtrycket. 60 minuter i solen kan sänka det systoliska blodtrycket med 11%%."
+            "value" : "Solljus vidgar blodkärlen och sänker blodtrycket. 60 minuter i solen kan sänka det systoliska blodtrycket med 11%."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "แสงแดดช่วยขยายหลอดเลือดและลดความดันโลหิต การรับแดด 60 นาทีช่วยลดความดันตัวบนลง 11%%"
+            "value" : "แสงแดดช่วยขยายหลอดเลือดและลดความดันโลหิต การรับแดด 60 นาทีช่วยลดความดันตัวบนลง 11%"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Güneş ışığı damarları genişleterek tansiyonu düşürür. 60 dakikalık güneşlenme sistolik tansiyonu %%11 azaltır."
+            "value" : "Güneş ışığı damarları genişleterek tansiyonu düşürür. 60 dakikalık güneşlenme sistolik tansiyonu %11 azaltır."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ánh nắng làm giãn mạch máu và giúp hạ huyết áp. Tắm nắng 60 phút có tác dụng giảm huyết áp tâm thu 11%%."
+            "value" : "Ánh nắng làm giãn mạch máu và giúp hạ huyết áp. Tắm nắng 60 phút có tác dụng giảm huyết áp tâm thu 11%."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "阳光能扩张血管，帮助降低血压。晒60分钟太阳，可使收缩压下降11%%。"
+            "value" : "阳光能扩张血管，帮助降低血压。晒60分钟太阳，可使收缩压下降11%。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陽光能使血管擴張、降低血壓。曬 60 分鐘太陽，可使收縮壓下降 11%%。"
+            "value" : "陽光能使血管擴張、降低血壓。曬 60 分鐘太陽，可使收縮壓下降 11%。"
           }
         }
       }

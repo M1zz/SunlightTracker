@@ -8,8 +8,12 @@ struct AppConfig {
     /// 빌드 번호
     static let buildNumber = "1"
 
-    /// 앱 이름
-    static let appName = "햇빛바라기"
+    /// 앱 이름 — 홈 화면 이름(InfoPlist.xcstrings 의 CFBundleDisplayName)을 그 언어로 따른다.
+    static var appName: String {
+        Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String
+            ?? Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+            ?? "햇빛바라기"
+    }
 
     /// 전체 버전 문자열
     static var fullVersion: String {

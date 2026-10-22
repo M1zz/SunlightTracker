@@ -6,6 +6,15 @@ struct DashboardView: View {
     @State private var showManualEntry = false
     @State private var manualMinutes: Double = 15
     @State private var hasAutoStarted = false
+
+    /// 스토어 스크린샷용: Debug 빌드에서만 `-ScreenshotIdle YES` 로 열자마자 감지를 시작하지 않는다(대기 화면을 찍는다).
+    private static var screenshotIdle: Bool {
+        #if DEBUG
+        return UserDefaults.standard.bool(forKey: "ScreenshotIdle")
+        #else
+        return false
+        #endif
+    }
     @State private var showBatteryTransfer = false
     @State private var transferAmount: Double = 0
     @State private var transferMax: Double = 1   // 시트 오픈 시점 스냅샷 (라이브 변경으로 인한 Slider 범위 붕괴 방지)
@@ -74,7 +83,7 @@ struct DashboardView: View {
             manager.requestLocation()
             // 센서는 SunlightManager init에서 자동 시작됨
             // 트래킹(햇빛 감지)은 사용자가 시작하거나 자동 감지로 전환
-            if !hasAutoStarted && manager.trackingPhase == .idle {
+            if !hasAutoStarted && manager.trackingPhase == .idle && !Self.screenshotIdle {
                 manager.startTracking()
                 hasAutoStarted = true
             }

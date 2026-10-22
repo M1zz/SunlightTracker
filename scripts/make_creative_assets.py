@@ -18,14 +18,16 @@
 
 ⚠️ 가격 · 할인 · 주소(URL) · 수상 · 다른 플랫폼 이름은 넣지 않는다(Apple 가이드).
 """
-import subprocess, sys, pathlib, tempfile
+import subprocess, sys, pathlib, tempfile, time
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from screenshot_copy import HEADER, SEARCH, font_stack
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW = ROOT / "docs" / "screenshots" / "raw" / "creative"
 OUT = ROOT / "docs" / "screenshots" / "creative"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
-# 앱 언어 코드 → App Store Connect 로케일. 스토어에는 한국어만 있다.
+# 폴더 이름이 곧 스토어 로케일이다.
 STORE = {}
 
 # (가로, 세로, 안전 영역 left, top, right, bottom)
@@ -34,22 +36,14 @@ SPEC = {
     "search": (3840, 2560, (836, 765, 3004, 1795)),
 }
 
-# 검색 결과: 눈썹글(그 나라 검색어) · 헤드라인 · 보조 한 줄. 기기 화면(오늘 화면)과 같은 이야기다.
-SEARCH = {
-    "ko": ("햇빛 산책 기록", "오늘 받은 햇빛,<br>알아서 기록", "밖에 나가 햇빛을 쬐면 하루 목표까지 채워져요"),
-}
-
-# 헤더는 처음 온 사람에게 한 가지 약속만 한다: 햇빛을 모아 나의 해바라기를 키운다.
-HEADER = {
-    "ko": ("하루 한 줌의 햇빛", "햇빛을 모아<br>해바라기를 키워요"),
-}
+# 문구(HEADER · SEARCH)는 screenshot_copy.py 에 언어마다 따로 쓴다.
 
 # 바탕은 앱 아이콘의 하늘색 → 살구빛 그라데이션과 앱의 주황(.tint(.orange))을 따른다.
 BASE_CSS = """
 * { margin:0; padding:0; box-sizing:border-box; }
 html,body { width:%(W)dpx; height:%(H)dpx; overflow:hidden; }
 body { background:linear-gradient(155deg, #c9ecfa 0%%, #fff3dc 52%%, #ffcfb4 100%%); position:relative;
-  font-family:-apple-system, "SF Pro Display", "Apple SD Gothic Neo", sans-serif; }
+  font-family:%(FONT)s; }
 .glow { position:absolute; border-radius:50%%; filter:blur(160px); pointer-events:none; }
 .sun { position:absolute; border-radius:50%%;
   background:radial-gradient(circle, #fffbe8 0%%, #ffe36e 38%%, rgba(255,200,60,.55) 52%%, rgba(255,190,60,0) 72%%); }
@@ -94,6 +88,15 @@ document.fonts.ready.then(() => {
 """
 
 
+def raw(lang, name):
+    """기기 화면 재료: raw/creative/<언어>/ 가 있으면 그것, 없으면 스크린샷 원본 raw/<언어>/."""
+    p = RAW / lang / name
+    if p.exists():
+        return p.as_uri()
+    alt = {"01-today.png": "01-today.png", "02-records.png": "02-calendar.png"}[name]
+    return (RAW.parent / lang / alt).as_uri()
+
+
 def phone(img, left, top, width, rotate=0):
     return (f'<div class="phone" style="left:{left}px;top:{top}px;width:{width}px;'
             f'transform:rotate({rotate}deg)"><img src="{img}"></div>')
@@ -112,7 +115,7 @@ def search_html(lang):
     # 기기는 안전 영역 오른쪽 몫에 서서, 위아래로 넘쳐 화면 밖까지 이어진다(기기 그림은 잘려도 된다).
     ph_w = 1040
     ph_left = l + col + int(sw * 0.04)
-    img = (RAW / lang / "01-today.png").as_uri()
+    img = raw(lang, "01-today.png")
     return f"""
 <div class="sun" style="left:2700px;top:-900px;width:2000px;height:2000px"></div>
 <div class="glow" style="left:{l - 700}px;top:{t - 300}px;width:1600px;height:1200px;background:rgba(255,255,255,.45)"></div>
@@ -129,8 +132,8 @@ def header_html(lang):
     W, H, (l, t, r, b) = SPEC["header"]
     eyebrow, headline = HEADER[lang]
     sw, sh = r - l, b - t
-    left_img = (RAW / lang / "01-today.png").as_uri()
-    right_img = (RAW / lang / "02-records.png").as_uri()
+    left_img = raw(lang, "01-today.png")
+    right_img = raw(lang, "02-records.png")
     return f"""
 <div class="sun" style="left:2950px;top:-950px;width:1700px;height:1700px"></div>
 <div class="glow" style="left:{l - 200}px;top:{t - 300}px;width:{sw + 400}px;height:{sh + 600}px;background:rgba(255,255,255,.5)"></div>
@@ -147,13 +150,22 @@ def render(lang, kind):
     W, H, _ = SPEC[kind]
     body = search_html(lang) if kind == "search" else header_html(lang)
     page = (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><style>'
-            f'{BASE_CSS % {"W": W, "H": H}}</style></head><body>{body}{FIT_JS}</body></html>')
+            f'{BASE_CSS % {"W": W, "H": H, "FONT": font_stack(lang)}}</style></head><body>{body}{FIT_JS}</body></html>')
     html_path = pathlib.Path(tempfile.gettempdir()) / f"sunflower-creative-{lang}-{kind}.html"
     html_path.write_text(page, encoding="utf-8")
     # 글이 끝까지 안 맞으면 그림을 만들지 않는다(잘린 글이 스토어에 올라가는 것보다 낫다).
-    dom = subprocess.run([CHROME, "--headless=new", "--dump-dom", f"--window-size={W},{H}",
-                          "--force-device-scale-factor=1", "--disable-gpu", "--virtual-time-budget=3000",
-                          html_path.as_uri()], capture_output=True, text=True, timeout=90).stdout
+    # ⚠️ 머신이 바쁘면 Chrome 이 멈춘 채로 끝나지 않기도 한다. 새 프로필로 다시 한다.
+    dom = ""
+    for _ in range(4):
+        try:
+            dom = subprocess.run([CHROME, "--headless=new", f"--user-data-dir={tempfile.mkdtemp(prefix='sunflower-chrome-')}",
+                                  "--dump-dom", f"--window-size={W},{H}", "--force-device-scale-factor=1", "--disable-gpu",
+                                  "--virtual-time-budget=3000", "--allow-file-access-from-files", html_path.as_uri()],
+                                 capture_output=True, text=True, timeout=150).stdout
+        except subprocess.TimeoutExpired:
+            continue
+        if 'data-done="1"' in dom:
+            break
     if 'data-done="1"' not in dom:
         raise SystemExit(f"글 맞추기가 끝나지 않았다: {lang} {kind}")
     if 'data-overflow="1"' in dom:
@@ -162,16 +174,18 @@ def render(lang, kind):
     out_dir.mkdir(parents=True, exist_ok=True)
     out_png = out_dir / f"{kind}.png"
     # ⚠️ Chrome 은 가끔 아무것도 안 그리고 끝나거나 멈춘다. 세 번까지 한다.
-    for _ in range(3):
+    for _ in range(4):
+        started = time.time()
         try:
-            r = subprocess.run([CHROME, "--headless=new", f"--screenshot={out_png}",
+            r = subprocess.run([CHROME, "--headless=new", f"--user-data-dir={tempfile.mkdtemp(prefix='sunflower-chrome-')}", f"--screenshot={out_png}",
                                 f"--window-size={W},{H}", "--force-device-scale-factor=1",
                                 "--hide-scrollbars", "--disable-gpu", "--virtual-time-budget=3000",
                                 "--allow-file-access-from-files", html_path.as_uri()],
-                               capture_output=True, timeout=90)
+                               capture_output=True, timeout=150)
         except subprocess.TimeoutExpired:
             continue
-        if r.returncode == 0:
+        # 다 그린 뒤 정리 단계에서 죽어도(Teardown watchdog) 그림은 이미 저장돼 있다 — 파일로 판단한다.
+        if r.returncode == 0 or (out_png.exists() and out_png.stat().st_mtime >= started - 1 and out_png.stat().st_size > 0):
             break
     else:
         raise SystemExit(f"Chrome 이 그리지 못했다: {out_png}")

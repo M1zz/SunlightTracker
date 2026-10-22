@@ -115,3 +115,8 @@ footer {
 table { border-collapse: collapse; width: 100%; margin: 12px 0; }
 th, td { border: 1px solid #eee0c8; padding: 8px 10px; font-size: 14px; text-align: left; }
 th { background: #fff8e0; color: var(--brown); }
+
+/* 언어 전환 */
+nav.langs { display:flex; flex-wrap:wrap; justify-content:center; gap:4px 2px; font-size:13px; color:#a08a6a; margin:-6px 0 18px; line-height:1.6; }
+nav.langs a { color:#8a6a40; text-decoration:none; padding:0 4px; }
+nav.langs a[aria-current="page"] { font-weight:700; color:var(--brown); }
