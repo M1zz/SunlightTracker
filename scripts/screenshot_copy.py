@@ -200,7 +200,7 @@ SEARCH = {
     "fi": ("Auringonvalon seuranta", "Päivän aurinko<br>kirjautuu itsestään", "Lähde ulos aurinkoon ja täytä päivätavoitteesi"),
     "id": ("Pencatat berjemur", "Berjemur hari ini<br>tercatat otomatis", "Keluar dan berjemur, target harianmu pun terpenuhi"),
     "nb": ("Sollys-sporing", "Dagens sol<br>logges automatisk", "Gå ut i sola og fyll opp dagsmålet ditt"),
-    "nl": ("Zonlicht tracker", "Je zon van vandaag,<br>vanzelf bijgehouden", "Ga naar buiten en vul je dagdoel met zonlicht"),
+    "nl": ("Zonlicht tracker", "Zon van vandaag,<br>vanzelf genoteerd", "Ga naar buiten en vul je dagdoel met zonlicht"),
     "pl": ("Licznik słońca", "Dzisiejsze słońce<br>zapisane samo", "Wyjdź na słońce i wypełnij swój dzienny cel"),
     "sv": ("Solljus tracker", "Dagens sol<br>loggas av sig själv", "Gå ut i solen och fyll ditt dagsmål"),
     "tr": ("Güneş takibi", "Bugünün güneşi<br>otomatik kayıtta", "Dışarı çık, güneşlen ve günlük hedefini doldur"),
