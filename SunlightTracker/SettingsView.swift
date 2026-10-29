@@ -159,6 +159,8 @@ struct SettingsView: View {
                     LeeoSupportSection<SunlightTrackerSpec>()
                     NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
                     LeeoShareAppLink<SunlightTrackerSpec>()
+                    // 개발자 응원하기 — 판매 중인 팁이 있어야 선다.
+                    LeeoTipJarLink<SunlightTrackerSpec>(tipJar: SunlightTrackerSpec.tipJar)
                 } header: {
                     Label("지원", systemImage: "heart.text.square")
                 }

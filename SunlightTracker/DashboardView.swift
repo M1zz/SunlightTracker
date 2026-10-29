@@ -1,4 +1,5 @@
 import SwiftUI
+import LeeoKit
 
 struct DashboardView: View {
     @ObservedObject var manager: SunlightManager
@@ -55,6 +56,12 @@ struct DashboardView: View {
 
                 // 오늘 햇빛 진행도 (컴팩트)
                 todayProgressCard
+
+                // 목표를 채운 날이 쌓였을 때만, 드물게 응원을 부탁한다. 햇빛을 재는 동안에는 묻지 않는다 (모달 아님)
+                if manager.trackingPhase == .idle {
+                    LeeoTipAskSlot<SunlightTrackerSpec>(tipJar: SunlightTrackerSpec.tipJar,
+                                                        reached: SunlightTipMoments.reached(goalDays: manager.weeklyRecords.filter(\.goalAchieved).count))
+                }
 
                 // 트래킹: 진행 중 카드 or 시작 버튼
                 if manager.trackingPhase == .confirmed {
