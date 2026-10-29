@@ -1367,3 +1367,23 @@ Bildirimler
 Seçtiğin saatte güneşe çıkmanı hatırlatır, hedefini tamamlayınca da haber verir.
 
 Uygulamanın sunucusu yok. Güneş kayıtların ve notların yalnızca cihazında saklanır.
+
+## 손쉬운 사용
+
+<!-- DeployBar 가 App Store Connect '앱의 손쉬운 사용' 에 올린다. 실제로 확인한 것만 적는다. -->
+
+### iPhone
+voiceOver
+voiceControl
+largerText
+darkInterface
+differentiateWithoutColor
+reducedMotion
+
+### iPad
+voiceOver
+voiceControl
+largerText
+darkInterface
+differentiateWithoutColor
+reducedMotion

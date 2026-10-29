@@ -63,11 +63,13 @@ struct CalendarView: View {
                     .font(.title3)
                     .foregroundColor(.primary)
             }
+            .accessibilityLabel(Text("이전 달"))
 
             Spacer()
 
             Text(monthYearString)
                 .font(.title2.bold())
+                .accessibilityAddTraits(.isHeader)
 
             Spacer()
 
@@ -76,6 +78,7 @@ struct CalendarView: View {
                     .font(.title3)
                     .foregroundColor(.primary)
             }
+            .accessibilityLabel(Text("다음 달"))
             .disabled(calendar.isDate(currentMonth, equalTo: Date(), toGranularity: .month))
         }
         .padding(.horizontal, 20)
@@ -94,6 +97,7 @@ struct CalendarView: View {
                         .frame(maxWidth: .infinity)
                 }
             }
+            .accessibilityHidden(true)  // 요일은 날짜 칸마다 읽어 준다
 
             // 날짜 그리드
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 12) {
@@ -104,18 +108,22 @@ struct CalendarView: View {
 
                 // 날짜
                 ForEach(daysInMonth, id: \.self) { date in
-                    DayCell(
-                        date: date,
-                        isToday: calendar.isDateInToday(date),
-                        isSelected: calendar.isDate(date, inSameDayAs: selectedDate),
-                        record: manager.weeklyRecords.first(where: { calendar.isDate($0.date, inSameDayAs: date) })
-                    )
-                    .onTapGesture {
+                    Button {
                         selectedDate = date
+                    } label: {
+                        DayCell(
+                            date: date,
+                            isToday: calendar.isDateInToday(date),
+                            isSelected: calendar.isDate(date, inSameDayAs: selectedDate),
+                            record: manager.weeklyRecords.first(where: { calendar.isDate($0.date, inSameDayAs: date) })
+                        )
                     }
+                    .buttonStyle(.plain)
                 }
             }
         }
+        // 7칸 달력은 너무 커지면 깨진다. 자세한 내용은 아래 상세 카드가 끝까지 커진다
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
         .padding(.horizontal, 20)
         .padding(.vertical, 16)
         .background(Color(.secondarySystemGroupedBackground))
@@ -149,6 +157,7 @@ struct CalendarView: View {
                 }) {
                     HStack(spacing: 4) {
                         Image(systemName: "square.and.pencil")
+                            .accessibilityHidden(true)
                         Text(record?.mood != nil || record?.note != nil ? String(localized: "수정") : String(localized: "기록"))
                     }
                     .font(.caption)
@@ -166,6 +175,7 @@ struct CalendarView: View {
                     HStack(spacing: 8) {
                         Text(mood.rawValue)
                             .font(.title)
+                            .accessibilityHidden(true)
                         Text(mood.description)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
@@ -195,10 +205,12 @@ struct CalendarView: View {
                             Image(systemName: "sun.max.fill")
                                 .font(.caption)
                                 .foregroundColor(.orange)
+                                .accessibilityHidden(true)
                             Text("\(record.totalMinutes)분")
                                 .font(.title3.bold())
                         }
                     }
+                    .accessibilityElement(children: .combine)
 
                     VStack(alignment: .leading, spacing: 4) {
                         Text("세션")
@@ -207,6 +219,7 @@ struct CalendarView: View {
                         Text("\(record.sessions.count)회")
                             .font(.title3.bold())
                     }
+                    .accessibilityElement(children: .combine)
 
                     if record.peakLux > 0 {
                         VStack(alignment: .leading, spacing: 4) {
@@ -217,10 +230,12 @@ struct CalendarView: View {
                                 Image(systemName: "light.max")
                                     .font(.caption)
                                     .foregroundColor(.yellow)
+                                    .accessibilityHidden(true)
                                 Text(record.peakLux.luxFormatted + " lx")
                                     .font(.title3.bold())
                             }
                         }
+                        .accessibilityElement(children: .combine)
                     }
                 }
 
@@ -236,11 +251,13 @@ struct CalendarView: View {
                     }
                 }
                 .frame(height: 8)
+                .accessibilityHidden(true)
 
                 if record.goalAchieved {
                     HStack(spacing: 6) {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundColor(.green)
+                            .accessibilityHidden(true)
                         Text("목표 달성!")
                             .font(.caption.bold())
                             .foregroundColor(.green)
@@ -273,6 +290,7 @@ struct CalendarView: View {
         return VStack(alignment: .leading, spacing: 12) {
             Text("이번 달 요약")
                 .font(.headline)
+                .accessibilityAddTraits(.isHeader)
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                 SummaryCard2(title: String(localized: "총 일조량"), value: String(localized: "\(totalMinutes)분"), icon: "sun.max.fill", color: .orange)
@@ -307,17 +325,23 @@ struct DayCell: View {
         VStack(spacing: 4) {
             // 날짜
             Text("\(day)")
-                .font(.system(size: 14, weight: isToday ? .bold : .regular))
+                .font(.subheadline.weight(isToday ? .bold : .regular))
                 .foregroundColor(isToday ? .white : (isSelected ? .white : .primary))
 
             // 기분 이모지
             if let mood = record?.mood {
                 Text(mood.rawValue)
-                    .font(.system(size: 16))
-            } else if record != nil && record!.totalMinutes > 0 {
-                Circle()
-                    .fill(record!.goalAchieved ? Color.green : Color.orange)
-                    .frame(width: 4, height: 4)
+                    .font(.callout)
+            } else if let record, record.totalMinutes > 0 {
+                // 색만으로 구별하지 않게: 달성은 꽉 찬 점, 미달은 빈 고리
+                Group {
+                    if record.goalAchieved {
+                        Circle().fill(Color.green)
+                    } else {
+                        Circle().strokeBorder(Color.orange, lineWidth: 1.5)
+                    }
+                }
+                .frame(width: 6, height: 6)
             } else {
                 Spacer().frame(height: 18)
             }
@@ -325,11 +349,18 @@ struct DayCell: View {
             // 일조량 (작은 텍스트)
             if let minutes = record?.totalMinutes, minutes > 0 {
                 Text("\(minutes)분")
-                    .font(.system(size: 9))
+                    .font(.caption2)
                     .foregroundColor(.secondary)
+                    .minimumScaleFactor(0.7)
+                    .lineLimit(1)
             }
         }
         .frame(maxWidth: .infinity, minHeight: 70)
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(date.formatted(date: .complete, time: .omitted)))
+        .accessibilityValue(accessibilityValue)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .fill(isSelected ? Color.blue : (isToday ? Color.green : Color.clear))
@@ -338,6 +369,20 @@ struct DayCell: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(isToday && !isSelected ? Color.green : Color.clear, lineWidth: 2)
         )
+    }
+}
+
+extension DayCell {
+    /// 이 날 기록을 한 문장으로: "오늘, 30분, 목표 달성, 좋음"
+    private var accessibilityValue: Text {
+        var parts: [Text] = []
+        if isToday { parts.append(Text("오늘")) }
+        if let record, record.totalMinutes > 0 {
+            parts.append(Text("\(record.totalMinutes)분"))
+            if record.goalAchieved { parts.append(Text("목표 달성")) }
+        }
+        if let mood = record?.mood { parts.append(Text(mood.description)) }
+        return parts.dropFirst().reduce(parts.first ?? Text(verbatim: "")) { $0 + Text(verbatim: ", ") + $1 }
     }
 }
 
@@ -367,29 +412,36 @@ struct MoodNoteSheet: View {
                 Section {
                     LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 5), spacing: 16) {
                         ForEach(DailyMood.allCases, id: \.self) { mood in
-                            VStack(spacing: 4) {
-                                Text(mood.rawValue)
-                                    .font(.system(size: 32))
-                                    .padding(8)
-                                    .background(
-                                        Circle()
-                                            .fill(selectedMood == mood ? Color.blue.opacity(0.2) : Color.clear)
-                                    )
-                                    .overlay(
-                                        Circle()
-                                            .stroke(selectedMood == mood ? Color.blue : Color.clear, lineWidth: 2)
-                                    )
-                                    .onTapGesture {
-                                        selectedMood = mood
-                                    }
+                            Button {
+                                selectedMood = mood
+                            } label: {
+                                VStack(spacing: 4) {
+                                    Text(mood.rawValue)
+                                        .font(.largeTitle)
+                                        .padding(8)
+                                        .background(
+                                            Circle()
+                                                .fill(selectedMood == mood ? Color.blue.opacity(0.2) : Color.clear)
+                                        )
+                                        .overlay(
+                                            Circle()
+                                                .stroke(selectedMood == mood ? Color.blue : Color.clear, lineWidth: 2)
+                                        )
 
-                                Text(mood.description)
-                                    .font(.system(size: 9))
-                                    .foregroundColor(.secondary)
+                                    Text(mood.description)
+                                        .font(.caption2)
+                                        .foregroundColor(.secondary)
+                                        .minimumScaleFactor(0.7)
+                                }
                             }
+                            .buttonStyle(.plain)
+                            .accessibilityElement(children: .ignore)
+                            .accessibilityLabel(Text(mood.description))
+                            .accessibilityAddTraits(selectedMood == mood ? .isSelected : [])
                         }
                     }
                     .padding(.vertical, 8)
+                    .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 } header: {
                     Text("오늘의 기분")
                 }

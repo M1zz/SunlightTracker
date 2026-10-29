@@ -69,6 +69,7 @@ struct HistoryView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("일별 일조량 & 조도")
                 .font(.headline)
+                .accessibilityAddTraits(.isHeader)
             
             let data = getChartData()
             
@@ -84,16 +85,16 @@ struct HistoryView: View {
                                 // 목표 달성 시 해바라기 아이콘
                                 if item.minutes >= manager.settings.dailyGoalMinutes {
                                     Image(systemName: "leaf.circle.fill")
-                                        .font(.system(size: 10))
+                                        .font(.caption2)
                                         .foregroundColor(Color(red: 0.3, green: 0.7, blue: 0.2))
                                 } else if item.peakLux > 0 {
                                     Text(item.peakLux.luxFormatted)
-                                        .font(.system(size: 8))
+                                        .font(.caption2)
                                         .foregroundColor(.orange.opacity(0.7))
                                 }
 
                                 Text("\(item.minutes)")
-                                    .font(.system(size: 9))
+                                    .font(.caption2)
                                     .foregroundColor(.secondary)
 
                                 RoundedRectangle(cornerRadius: 4)
@@ -107,9 +108,15 @@ struct HistoryView: View {
                                     )
 
                                 Text(item.dayLabel)
-                                    .font(.system(size: 9))
+                                    .font(.caption2)
                                     .foregroundColor(.secondary)
                             }
+                            // 막대 하나 = "10월 3일, 30분, 목표 달성"
+                            .accessibilityElement(children: .ignore)
+                            .accessibilityLabel(Text(item.date.formatted(.dateTime.month().day())))
+                            .accessibilityValue(item.minutes >= manager.settings.dailyGoalMinutes
+                                ? Text("\(item.minutes)분") + Text(verbatim: ", ") + Text("목표 달성")
+                                : Text("\(item.minutes)분"))
                         }
                     }
                     .frame(minHeight: 160)
@@ -128,6 +135,7 @@ struct HistoryView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("상세 기록")
                 .font(.headline)
+                .accessibilityAddTraits(.isHeader)
                 .padding(.horizontal, 20)
             
             if filteredRecords.isEmpty {
@@ -189,6 +197,7 @@ struct SummaryCard2: View {
                 .font(.title3)
                 .foregroundColor(color)
                 .frame(width: 32)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text(title).font(.caption).foregroundColor(.secondary)
                 Text(value).font(.headline)
@@ -198,6 +207,7 @@ struct SummaryCard2: View {
         .padding(14)
         .background(Color(.secondarySystemGroupedBackground))
         .cornerRadius(12)
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -215,7 +225,7 @@ struct DayRecordRow: View {
                 let weekday = Calendar.current.shortWeekdaySymbols[(comps.weekday ?? 1) - 1]
                 Text(weekday).font(.caption2).foregroundColor(.secondary)
             }
-            .frame(width: 40)
+            .frame(minWidth: 40)
             
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
@@ -232,6 +242,7 @@ struct DayRecordRow: View {
                     if record.goalAchieved {
                         Image(systemName: "leaf.circle.fill")
                             .foregroundColor(Color(red: 0.3, green: 0.7, blue: 0.2)).font(.caption)
+                            .accessibilityLabel(Text("목표 달성"))
                     }
                     Text("\(record.sessions.count)세션").font(.caption).foregroundColor(.secondary)
                 }
@@ -246,10 +257,12 @@ struct DayRecordRow: View {
                     }
                 }
                 .frame(height: 6)
+                .accessibilityHidden(true)
             }
         }
         .padding(14)
         .background(Color(.secondarySystemGroupedBackground))
         .cornerRadius(12)
+        .accessibilityElement(children: .combine)
     }
 }

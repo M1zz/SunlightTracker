@@ -41,6 +41,7 @@ struct FriendsView: View {
         HStack(spacing: 10) {
             Text("\u{1F31E}")
                 .font(.title3)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text("지금 \(manager.nearbyManager.connectedPeerCount)명과 함께 햇빛 받는 중!")
                     .font(.subheadline.weight(.bold))
@@ -53,6 +54,7 @@ struct FriendsView: View {
             }
             Spacer()
         }
+        .accessibilityElement(children: .combine)
         .padding(16)
         .background(
             RoundedRectangle(cornerRadius: 20)
@@ -66,6 +68,7 @@ struct FriendsView: View {
         VStack(spacing: 12) {
             Text("\u{1F331}")
                 .font(.system(size: 56))
+                .accessibilityHidden(true)
             Text("아직 함께한 친구가 없어요")
                 .font(.headline)
             Text("친구와 가까이에서 같이 햇빛을 받으면\n자동으로 여기에 기록돼요!")
@@ -91,8 +94,10 @@ struct FriendsView: View {
                     .foregroundColor(.secondary)
             }
 
+            // 그림은 보기용. 같은 내용을 아래 친구 목록이 글로 읽어 준다
             FriendGraphView(friends: Array(friends.prefix(8)))
                 .frame(height: 300)
+                .accessibilityHidden(true)
         }
         .padding(16)
         .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
@@ -105,11 +110,11 @@ struct FriendsView: View {
                 HStack(spacing: 12) {
                     Text(flowerEmoji(for: friend))
                         .font(.title3)
+                        .accessibilityHidden(true)
 
                     VStack(alignment: .leading, spacing: 2) {
                         Text(friend.name)
                             .font(.subheadline.weight(.semibold))
-                            .lineLimit(1)
                         Text("마지막 만남 \(friend.lastMet.friendDateString)")
                             .font(.caption)
                             .foregroundColor(.secondary)
@@ -125,6 +130,7 @@ struct FriendsView: View {
                         .background(Capsule().fill(Color.orange.opacity(0.12)))
                 }
                 .padding(.vertical, 12)
+                .accessibilityElement(children: .combine)
 
                 if index < friends.count - 1 {
                     Divider()
@@ -182,7 +188,7 @@ struct FriendGraphView: View {
                             .lineLimit(1)
                             .frame(maxWidth: 76)
                         Text("\(friend.meetCount)번")
-                            .font(.system(size: 9, design: .rounded))
+                            .font(.system(.caption2, design: .rounded))
                             .foregroundColor(.secondary)
                     }
                     .position(pos)

@@ -12,6 +12,7 @@ struct SunAnimationView: View {
     @State private var auraScale2: CGFloat = 1.0
     @State private var auraScale3: CGFloat = 1.0
     @State private var auraOpacity: Double = 0.0
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var healthState: SunflowerHealth.HealthState {
         if health >= 80 { return .thriving }
@@ -329,9 +330,9 @@ struct SunAnimationView: View {
                 Text("\u{1F49B}")
                     .font(.system(size: 20))
                     .offset(x: 26, y: -6)
-                    .scaleEffect(heartPulse ? 1.2 : 0.85)
-                    .opacity(heartPulse ? 1.0 : 0.5)
-                    .animation(.easeInOut(duration: 1.0).repeatForever(autoreverses: true), value: heartPulse)
+                    .scaleEffect(heartPulse && !reduceMotion ? 1.2 : 1.0)
+                    .opacity(heartPulse || reduceMotion ? 1.0 : 0.5)
+                    .animation(reduceMotion ? nil : .easeInOut(duration: 1.0).repeatForever(autoreverses: true), value: heartPulse)
                     .onAppear { heartPulse = true }
                     .onDisappear { heartPulse = false }
                     .transition(.scale.combined(with: .opacity))
@@ -404,13 +405,16 @@ struct SunAnimationView: View {
         }
     }
 
+    // 동작 줄이기: 흔들림·반짝임·오라 맥동 없이 멈춘 그림으로 보여 준다
     private func startSwayAnimation() {
+        guard !reduceMotion else { return }
         withAnimation(.easeInOut(duration: 2.5).repeatForever(autoreverses: true)) {
             swayAngle = 4
         }
     }
 
     private func startSparkle() {
+        guard !reduceMotion else { sparkleOpacity = 1.0; return }
         withAnimation(.easeInOut(duration: 1.2).repeatForever(autoreverses: true)) {
             sparkleOpacity = 1.0
         }
@@ -421,6 +425,7 @@ struct SunAnimationView: View {
         withAnimation(.easeIn(duration: 0.5)) {
             auraOpacity = 1.0
         }
+        guard !reduceMotion else { return }
 
         // 오라 1 - 느린 펄스
         withAnimation(.easeInOut(duration: 2.5).repeatForever(autoreverses: true)) {

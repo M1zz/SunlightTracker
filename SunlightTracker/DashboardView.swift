@@ -20,6 +20,9 @@ struct DashboardView: View {
     @State private var transferAmount: Double = 0
     @State private var transferMax: Double = 1   // 시트 오픈 시점 스냅샷 (라이브 변경으로 인한 Slider 범위 붕괴 방지)
     @State private var sensingPulse = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    /// 큰 숫자도 글자 크기 설정을 따라 커지게
+    @ScaledMetric(relativeTo: .largeTitle) private var bigNumberSize: CGFloat = 48
 
     private var currentSessionMinutes: Int {
         guard let session = manager.currentSession else { return 0 }
@@ -154,6 +157,7 @@ struct DashboardView: View {
         HStack(spacing: 10) {
             Text(luxEmoji)
                 .font(.title3)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text(displayLightLevel)
                     .font(.subheadline.weight(.bold))
@@ -168,6 +172,7 @@ struct DashboardView: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
         .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
+        .accessibilityElement(children: .combine)
     }
 
     // 측정 상태 배지 (측정 중 펄스 / 쉬는 중)
@@ -179,7 +184,7 @@ struct DashboardView: View {
                         .fill(Color.green)
                         .frame(width: 7, height: 7)
                         .opacity(sensingPulse ? 1.0 : 0.3)
-                        .animation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true), value: sensingPulse)
+                        .animation(reduceMotion ? nil : .easeInOut(duration: 0.8).repeatForever(autoreverses: true), value: sensingPulse)
                         .onAppear { sensingPulse = true }
                         .onDisappear { sensingPulse = false }
                     Text("측정 중")
@@ -230,9 +235,11 @@ struct DashboardView: View {
                 }
             }
             .frame(height: 12)
+            .accessibilityHidden(true)
         }
         .padding(16)
         .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: - 트래킹 진행 중 카드
@@ -250,10 +257,12 @@ struct DashboardView: View {
                 Text("\(manager.confirmedElapsedMinutes)분")
                     .font(.system(.title3, design: .rounded).weight(.bold))
             }
+            .accessibilityElement(children: .combine)
 
             HStack {
                 HStack(spacing: 6) {
                     Text(luxEmoji)
+                        .accessibilityHidden(true)
                     VStack(alignment: .leading, spacing: 1) {
                         Text(displayLightLevel)
                             .font(.caption.weight(.semibold))
@@ -274,6 +283,7 @@ struct DashboardView: View {
             }
             .padding(12)
             .background(RoundedRectangle(cornerRadius: 14).fill(Color.green.opacity(0.08)))
+            .accessibilityElement(children: .combine)
 
             Button(action: {
                 withAnimation(.spring(duration: 0.3)) { manager.finishTracking() }
@@ -305,6 +315,7 @@ struct DashboardView: View {
                     .font(.system(.title3, design: .rounded).weight(.bold))
                     .foregroundColor(.green)
             }
+            .accessibilityElement(children: .combine)
 
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
@@ -321,6 +332,7 @@ struct DashboardView: View {
                 }
             }
             .frame(height: 12)
+            .accessibilityHidden(true)
 
             if manager.batteryStatus.chargedAmount > 0 {
                 Button(action: {
@@ -338,6 +350,7 @@ struct DashboardView: View {
                             startPoint: .leading, endPoint: .trailing
                         )))
                 }
+                .accessibilityInputLabels([Text("해바라기에게 주기")])
             }
         }
         .padding(16)
@@ -404,21 +417,17 @@ struct DashboardView: View {
                     }
                 }
                 .contentShape(Rectangle())
-                .onTapGesture(count: 2) {
-                    // 더블탭으로 트래킹 종료 또는 센서 재시작
-                    if manager.isConfirmedOutdoor {
-                        // 트래킹 중이면 종료
-                        hasUsedDoubleTap = true  // 사용 기록 저장
-                        withAnimation(.spring(duration: 0.3)) {
-                            manager.finishTracking()
-                        }
-                    } else if !manager.isTracking {
-                        // 센서가 꺼져있으면 다시 시작
-                        withAnimation(.spring(duration: 0.3)) {
-                            manager.startTracking()
-                        }
-                    }
-                }
+                .onTapGesture(count: 2) { handleSunflowerDoubleTap() }
+                // VoiceOver·음성 명령에선 더블탭 대신 이름 붙은 동작으로 같은 일을 한다
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(Text("해바라기 에너지"))
+                .accessibilityValue(Text(LocalizedStringKey(manager.sunflowerHealth.healthState.rawValue)) + Text(verbatim: ", \(Int(manager.sunflowerHealth.currentEnergy))%"))
+                .accessibilityAddTraits(.isImage)
+                .modifier(SunflowerActions(
+                    isOutdoor: manager.isConfirmedOutdoor,
+                    isTracking: manager.isTracking,
+                    action: handleSunflowerDoubleTap
+                ))
                 .scaleEffect(isSunflowerPressed ? 0.95 : 1.0)
                 .animation(.spring(response: 0.3, dampingFraction: 0.6), value: isSunflowerPressed)
 
@@ -439,7 +448,8 @@ struct DashboardView: View {
                                     .shadow(color: .black.opacity(0.3), radius: 8, y: 4)
                             )
                             .padding(.horizontal, 20)
-                            .transition(.move(edge: .bottom).combined(with: .opacity))
+                            .transition(reduceMotion ? .opacity : .move(edge: .bottom).combined(with: .opacity))
+                            .accessibilityHidden(true)
                     }
                     .frame(maxHeight: 280)
                 }
@@ -458,6 +468,7 @@ struct DashboardView: View {
             // 해바라기 상태 (귀여운 캡슐)
             HStack(spacing: 6) {
                 Text(healthEmoji)
+                    .accessibilityHidden(true)
                 Text(LocalizedStringKey(manager.sunflowerHealth.healthState.rawValue))
                     .font(.subheadline.weight(.bold))
                     .foregroundColor(healthColor)
@@ -468,6 +479,7 @@ struct DashboardView: View {
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
             .background(Capsule().fill(healthColor.opacity(0.12)))
+            .accessibilityElement(children: .combine)
         }
         .padding(.vertical, 8)
     }
@@ -519,6 +531,7 @@ struct DashboardView: View {
 
                         Image(systemName: "arrow.right")
                             .foregroundColor(.secondary)
+                            .accessibilityHidden(true)
 
                         Spacer()
 
@@ -536,11 +549,15 @@ struct DashboardView: View {
                     .cornerRadius(12)
 
                     Text("전달량: \(formattedPercent(transferAmount))%")
-                        .font(.system(size: 48, weight: .bold, design: .rounded))
+                        .font(.system(size: bigNumberSize, weight: .bold, design: .rounded))
                         .foregroundColor(.green)
+                        .minimumScaleFactor(0.5)
+                        .accessibilityHidden(true)
 
                     Slider(value: $transferAmount, in: 0...transferMax)
                         .tint(.green)
+                        .accessibilityLabel(Text("배터리 전달"))
+                        .accessibilityValue(Text(verbatim: formattedPercent(transferAmount) + "%"))
 
                     HStack {
                         Text("0%").font(.caption2).foregroundColor(.secondary)
@@ -605,6 +622,7 @@ struct DashboardView: View {
                 } else {
                     Text("\u{2600}\u{FE0F}")
                         .font(.title3)
+                        .accessibilityHidden(true)
                     Text("햇빛 받으러 가기")
                         .font(.headline)
                 }
@@ -629,6 +647,7 @@ struct DashboardView: View {
             HStack(spacing: 6) {
                 Image(systemName: "plus.circle.fill")
                     .font(.footnote)
+                    .accessibilityHidden(true)
                 Text("야외 시간 직접 추가")
                     .font(.footnote.weight(.medium))
             }
@@ -647,11 +666,14 @@ struct DashboardView: View {
 
                 VStack(spacing: 8) {
                     Text("\(Int(manualMinutes))분")
-                        .font(.system(size: 48, weight: .bold, design: .rounded))
+                        .font(.system(size: bigNumberSize, weight: .bold, design: .rounded))
                         .foregroundColor(.orange)
+                        .accessibilityHidden(true)
 
                     Slider(value: $manualMinutes, in: 5...120, step: 5)
                         .tint(.orange)
+                        .accessibilityLabel(Text("수동 입력"))
+                        .accessibilityValue(Text("\(Int(manualMinutes))분"))
 
                     HStack {
                         Text("5분").font(.caption2).foregroundColor(.secondary)
@@ -690,6 +712,20 @@ struct DashboardView: View {
     }
 
     // MARK: - Helpers
+    /// 해바라기 더블탭: 햇빛 받는 중이면 끝내고, 센서가 꺼져 있으면 다시 켠다
+    private func handleSunflowerDoubleTap() {
+        if manager.isConfirmedOutdoor {
+            hasUsedDoubleTap = true  // 사용 기록 저장
+            withAnimation(.spring(duration: 0.3)) {
+                manager.finishTracking()
+            }
+        } else if !manager.isTracking {
+            withAnimation(.spring(duration: 0.3)) {
+                manager.startTracking()
+            }
+        }
+    }
+
     private func startFloatingTipTimer() {
         // 트래킹 중이 아니거나 이미 더블탭 사용한 적 있으면 타이머 시작 안함
         guard manager.isConfirmedOutdoor, !hasUsedDoubleTap else { return }
@@ -732,13 +768,31 @@ struct DashboardView: View {
 // MARK: - Pulse Modifier
 struct PulseModifier: ViewModifier {
     @State private var isPulsing = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     func body(content: Content) -> some View {
         content
-            .scaleEffect(isPulsing ? 1.3 : 1.0)
-            .opacity(isPulsing ? 0.5 : 1.0)
-            .animation(.easeInOut(duration: 1).repeatForever(autoreverses: true), value: isPulsing)
+            .scaleEffect(isPulsing && !reduceMotion ? 1.3 : 1.0)
+            .opacity(isPulsing && !reduceMotion ? 0.5 : 1.0)
+            .animation(reduceMotion ? nil : .easeInOut(duration: 1).repeatForever(autoreverses: true), value: isPulsing)
             .onAppear { isPulsing = true }
+    }
+}
+
+// MARK: - 해바라기 접근성 동작 (더블탭 대신)
+private struct SunflowerActions: ViewModifier {
+    let isOutdoor: Bool
+    let isTracking: Bool
+    let action: () -> Void
+
+    func body(content: Content) -> some View {
+        if isOutdoor {
+            content.accessibilityAction(named: Text("오늘은 그만 받기"), action)
+        } else if !isTracking {
+            content.accessibilityAction(named: Text("햇빛 받으러 가기"), action)
+        } else {
+            content
+        }
     }
 }
 
@@ -759,12 +813,12 @@ struct NearbyActivityBadge: View {
         HStack(spacing: 10) {
             Text("\u{1F33B}\u{1F49B}\u{1F33B}")
                 .font(.subheadline)
+                .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.subheadline.weight(.bold))
                     .foregroundColor(Color(red: 0.85, green: 0.5, blue: 0.1))
-                    .lineLimit(1)
                 if let dist = distance {
                     Text("바로 옆 \(dist, specifier: "%.1f")m \u{1F31E}")
                         .font(.caption)
@@ -778,7 +832,9 @@ struct NearbyActivityBadge: View {
                 .fill(Color.orange)
                 .frame(width: 9, height: 9)
                 .modifier(PulseModifier())
+                .accessibilityHidden(true)
         }
+        .accessibilityElement(children: .combine)
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
         .background(

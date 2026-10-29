@@ -26,6 +26,8 @@ struct SettingsView: View {
                             in: 10...120, step: 5
                         )
                         .tint(.orange)
+                        .accessibilityLabel(Text("일일 목표"))
+                        .accessibilityValue(Text("\(manager.settings.dailyGoalMinutes)분"))
                         HStack {
                             Text("10분").font(.caption2).foregroundColor(.secondary)
                             Spacer()
@@ -57,6 +59,8 @@ struct SettingsView: View {
                             in: 100...2000, step: 50
                         )
                         .tint(.cyan)
+                        .accessibilityLabel(Text("실외 판정 기준"))
+                        .accessibilityValue(Text(verbatim: "\(Int(manager.settings.outdoorThresholdLux)) Lux"))
                         HStack {
                             Text("100 (흐림)").font(.caption2).foregroundColor(.secondary)
                             Spacer()
@@ -76,6 +80,8 @@ struct SettingsView: View {
                             in: 500...5000, step: 100
                         )
                         .tint(.orange)
+                        .accessibilityLabel(Text("햇빛 판정 기준"))
+                        .accessibilityValue(Text(verbatim: "\(Int(manager.settings.sunlightThresholdLux)) Lux"))
                         HStack {
                             Text("500").font(.caption2).foregroundColor(.secondary)
                             Spacer()
@@ -230,11 +236,12 @@ struct LuxReferenceRow: View {
     
     var body: some View {
         HStack {
-            Text(emoji).frame(width: 24)
+            Text(emoji).frame(width: 24).accessibilityHidden(true)
             Text(level).font(.subheadline)
             Spacer()
             Text(range).font(.caption).foregroundColor(.secondary)
         }
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -248,5 +255,6 @@ struct InfoRow: View {
             Text(detail).font(.caption).foregroundColor(.secondary)
         }
         .padding(.vertical, 2)
+        .accessibilityElement(children: .combine)
     }
 }
