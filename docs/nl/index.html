@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunny Sunflower</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunny Sunflower: houd je tijd in de zon bij en laat een zonnebloem groeien</title>
+  <meta name="description" content="Ga naar buiten en je tijd in de zon telt vanzelf op, zodat je zonnebloem groeit. Gratis, en je gegevens blijven op je apparaat.">
+  <meta name="theme-color" content="#B45309" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6758931631">
   <link rel="canonical" href="https://m1zz.github.io/SunlightTracker/nl/">
-<!--HREFLANG-->
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/SunlightTracker/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/SunlightTracker/en/">
   <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/SunlightTracker/zh-Hans/">
@@ -30,54 +33,143 @@
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/SunlightTracker/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/SunlightTracker/tr/">
   <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/SunlightTracker/">
-  <!--/HREFLANG-->
-  <link rel="stylesheet" href="../style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sunny Sunflower: houd je tijd in de zon bij en laat een zonnebloem groeien">
+  <meta property="og:description" content="Ga naar buiten en je tijd in de zon telt vanzelf op, zodat je zonnebloem groeit. Gratis, en je gegevens blijven op je apparaat.">
+  <meta property="og:url" content="https://m1zz.github.io/SunlightTracker/nl/">
+  <meta property="og:image" content="https://m1zz.github.io/SunlightTracker/img/nl/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../sitegen.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B45309}@media (prefers-color-scheme:dark){:root{--accent:#FF9F0A}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="emoji">🌻</div>
-      <h1>Sunny Sunflower</h1>
-      <p class="tagline">Elke dag een beetje zon laat je zonnebloem groeien (SunlightTracker)</p>
-    </header>
+  <a class="skip" href="#main">Naar de inhoud</a>
+  <header class="bar">
+    <a class="brand" href="../nl/"><img src="../icon.png" alt="" width="32" height="32">Sunny Sunflower</a>
+    <a class="lang-link" href="#languages">Taal</a>
+  </header>
 
-    <nav class="top">
-      <a href="privacy.html">Privacybeleid</a>
-      <a href="support.html">Hulp en contact</a>
-      <a href="https://github.com/M1zz/SunlightTracker">GitHub</a>
-    </nav>
-<!--LANGSWITCH-->
-    <nav class="langs"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl" aria-current="page">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-    <!--/LANGSWITCH-->
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>De zon van vandaag<br>laat je zonnebloem groeien</h1>
+        <p class="lead">Zodra je buiten bent, telt je tijd in de zon vanzelf op. Geef de verzamelde zon aan je zonnebloem en hij staat er fris bij. Vergeet je hem een paar dagen, dan begint hij te verwelken.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6758931631">Gratis downloaden</a><a class="try" href="#try">Verzamel wat zon ↓</a></div>
+        <p class="muted small">Alle functies zijn gratis. Je gegevens blijven op je apparaat.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/01-today.jpg" alt="De zon van vandaag laat je zonnebloem groeien" width="600" height="1303" decoding="async"></div>
+    </section>
 
-    <div class="card">
-      <h2>Wat is het voor app?</h2>
-      <p>
-        Sunny Sunflower is een iOS-app die met de lichtmeting van je camera herkent wanneer je echt in de zon staat, en dat automatisch bijhoudt.
-        Hoe meer zon je pakt, hoe voller je batterij raakt, en met die energie laat je je eigen zonnebloem groeien.
-        Vergeet je hem te verzorgen, dan verwelkt hij. 🌱
-      </p>
-      <ul>
-        <li>☀️ Zonlicht automatisch herkennen en bijhouden op basis van lichtsterkte</li>
-        <li>🌻 Batterij opladen en je zonnebloem laten groeien</li>
-        <li>📅 Je logboek bekijken in agenda en statistieken, met stemming en notities</li>
-        <li>👥 Samen met vrienden in de buurt zonnen, en de bloemblaadjes kleuren vrolijk mee</li>
-        <li>📱 Widgets op je beginscherm, Live Activity op je toegangsscherm en Dynamic Island</li>
-      </ul>
-    </div>
 
-    <div class="card">
-      <h2>En je privacy?</h2>
-      <span class="badge">Geen server · alles blijft op je eigen apparaat</span>
-      <p>
-        Wat je in Sunny Sunflower bijhoudt, verlaat je apparaat nooit. Alleen feedback die je zelf verstuurt, komt bij de ontwikkelaar terecht.
-        Lees er meer over in het <a class="link" href="privacy.html">privacybeleid</a>.
-      </p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Verzamel wat zon</h2>
+      <p class="muted">Kies hoe licht het is en hoe lang, vang wat zon en geef die aan een zonnebloem die al wat begint te hangen.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Verzamel wat zon&quot;, &quot;lead&quot;: &quot;Kies hoe licht het is en hoe lang, vang wat zon en geef die aan een zonnebloem die al wat begint te hangen.&quot;, &quot;places&quot;: [&quot;Zwak licht&quot;, &quot;Buiten/bewolkt&quot;, &quot;Zon&quot;, &quot;Felle zon&quot;], &quot;minutes&quot;: &quot;{n} minuten lang&quot;, &quot;gain&quot;: &quot;Verzamelde zon&quot;, &quot;none&quot;: &quot;Zo weinig licht telt niet als buiten, dus er komt niets bij&quot;, &quot;go&quot;: &quot;Zon vangen&quot;, &quot;give&quot;: &quot;Geef aan zonnebloem&quot;, &quot;day&quot;: &quot;Er gaat een dag voorbij&quot;, &quot;energy&quot;: &quot;Energie&quot;, &quot;states&quot;: [&quot;Fris&quot;, &quot;Gezond&quot;, &quot;Verwelkend&quot;, &quot;Gevaar&quot;], &quot;note&quot;: &quot;De lichtniveaus zijn voorbeelden. De app meet het echte licht waar je bent.&quot;}"></div>
+    </section>
 
-    <footer>
-      © 2026 Sunny Sunflower · <a class="link" href="mailto:leeo@kakao.com">leeo@kakao.com</a>
-    </footer>
-  </div>
+    <section class="problem reveal">
+      <h2>Hoeveel minuten zon heb je vandaag eigenlijk gehad?</h2>
+      <p>Een paar stappen naar je werk, even snel naar buiten voor de lunch. Wie de hele dag binnen zit, merkt pas 's avonds dat er nauwelijks daglicht was. Sunny Sunflower zet je tijd buiten om in cijfers, en je zonnebloem wacht al op de wandeling van morgen.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Ga naar buiten, hij meet vanzelf</h2>
+        <p>Tik op <code>De zon opzoeken</code> en ga naar buiten. De app schat de helderheid om je heen met de belichtingsgegevens van de camera aan de voorkant. Blijft het ongeveer 30 seconden zo licht als buiten, dan begint de registratie. Er worden nooit foto's gemaakt of bewaard.<br>Daarna gaat de sensor maar 20 seconden per 2 minuten aan om de batterij te sparen.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/04-goal.jpg" alt="Ga naar buiten, hij meet vanzelf" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Zon en stemming, dag na dag</h2>
+        <p>In de kalender krijgt elke dag zijn tijd in de zon, een stemmings-emoji en een korte notitie. Buiten geweest zonder te meten? Met <code>Buitentijd zelf toevoegen</code> voeg je 5 tot 120 minuten toe.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/02-calendar.jpg" alt="Zon en stemming, dag na dag" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Je week en maand in één oogopslag</h2>
+        <p>Week- en maandoverzichten laten zien op welke dagen je je doel haalde en hoeveel zon je gemiddeld krijgt. Stel een dagdoel in van 10 tot 120 minuten en zie meteen op het hoofdscherm hoeveel er vandaag nog ontbreekt.<br>Widgets op het beginscherm en het toegangsscherm, en het Dynamic Island, tonen de zon van vandaag en hoe je zonnebloem erbij staat.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/03-stats.jpg" alt="Je week en maand in één oogopslag" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>In drie stappen aan de slag</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Stel een dagdoel in</h3><p>Standaard is het 30 minuten. In de instellingen kies je 10 tot 120.</p></li>
+<li class="card"><span class="n">2</span><h3>Ga de zon in</h3><p>Tik op <code>De zon opzoeken</code> en ga naar buiten met de app open. Toegang tot de camera wordt maar één keer gevraagd.</p></li>
+<li class="card"><span class="n">3</span><h3>Voed je zonnebloem</h3><p>Tik op <code>Geef aan zonnebloem</code> om de verzamelde zon om te zetten in energie.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Zo wordt licht verzamelde zon</h2>
+      <div class="card table">
+        <dl><div><dt>Onder 300 lux</dt><dd>Zwak licht: telt niet als tijd in de zon</dd></div><div><dt>300–1.000 lux</dt><dd>Buiten/bewolkt: 1–3% per 10 minuten</dd></div><div><dt>1.000–10.000 lux</dt><dd>Zon: 3–33% per 10 minuten</dd></div><div><dt>Vanaf 10.000 lux</dt><dd>Felle zon: meer dan 33% per 10 minuten</dd></div><div><dt>Verzamelde zon</dt><dd>minuten × gemiddelde lux ÷ 3.000 (maximaal 100% per keer)</dd></div><div><dt>Energie van de zonnebloem</dt><dd>daalt 2,5% per uur, ongeveer 60% per dag</dd></div></dl>
+      </div>
+      <p class="muted">De drempel voor buiten stel je in de instellingen in tussen 100 en 2.000 lux. Standaard is 300 lux.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Veelgestelde vragen</h2>
+      <div class="faq"><details><summary>Hoe meet de app de zon?</summary><p>De app schat de helderheid om je heen (de verlichtingssterkte) met de belichtingsgegevens van de camera aan de voorkant. Blijft het een tijdje zo licht als buiten, dan start de registratie vanzelf. Er worden geen foto's gemaakt of bewaard.</p></details>
+<details><summary>Kost het meten veel batterij?</summary><p>Zodra de zon bevestigd is, blijft de sensor niet aan. Hij wordt elke 2 minuten ongeveer 20 seconden wakker om opnieuw te meten; de rest doet een simpele timer.</p></details>
+<details><summary>Mijn zonnebloem verwelkt steeds.</summary><p>De zonnebloem verliest elk uur 2,5% energie. Verzamel zon en tik op <code>Geef aan zonnebloem</code>. Op een heldere dag is 15 tot 20 minuten in de volle zon genoeg voor een hele dag.</p></details>
+<details><summary>Ik was buiten, maar er is niets geregistreerd.</summary><p>Gebruik <code>Buitentijd zelf toevoegen</code> onderaan het hoofdscherm om 5 tot 120 minuten toe te voegen. Komt de registratie op bewolkte dagen moeilijk op gang, verlaag dan de drempel voor buiten in de instellingen.</p></details>
+<details><summary>Hoe werkt de vriendenfunctie?</summary><p>Als jij en een vriend dicht bij elkaar zijn (binnen zo'n 10 meter) en allebei de zon meten, maken jullie vanzelf verbinding. Met iemand nieuw bevestig je eerst dat jullie samen de zon in gaan, daarna gaat het automatisch. De bloemblaadjes kleuren vrolijk en krijgen in 3 dagen hun eigen kleur terug, en jullie tijd samen komt in het tabblad Vrienden. Jullie hebben allebei de app nodig, plus toegang tot Bluetooth en het lokale netwerk.</p></details>
+<details><summary>Is het echt gratis?</summary><p>Ja. Geen advertenties, geen aankopen, alle functies inbegrepen. Vind je de app fijn, dan kun je een fooi geven, maar die ontgrendelt niets extra's.</p></details>
+<details><summary>Kan ik een back-up maken of mijn gegevens overzetten?</summary><p>Alles blijft zonder server op je apparaat, en de laatste 90 dagen worden bewaard. Er is geen aparte export, maar je gegevens zitten in de gewone iPhone-back-up via iCloud of je computer.</p></details>
+<details><summary>Hoe wis ik al mijn gegevens?</summary><p>Tik in de instellingen van de app op <code>Gegevens wissen</code>, of verwijder de app. Dit kan niet ongedaan worden gemaakt.</p></details>
+<details><summary>Waar meld ik een fout?</summary><p>Mail naar het adres hieronder of open een issue op GitHub (github.com/M1zz/SunlightTracker/issues). Het model van je apparaat, de iOS-versie en wat er gebeurde helpen ons enorm. Meestal antwoorden we binnen een paar dagen.</p></details></div>
+      <p class="contact">Vragen of feedback? Mail naar <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Neem je zonnebloem<br>vandaag mee de zon in</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6758931631">Gratis downloaden</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Taal"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl" aria-current="page">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Privacybeleid</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Sunny Sunflower</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

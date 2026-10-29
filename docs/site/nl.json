@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: houd je tijd in de zon bij en laat een zonnebloem groeien",
+  "description": "Ga naar buiten en je tijd in de zon telt vanzelf op, zodat je zonnebloem groeit. Gratis, en je gegevens blijven op je apparaat.",
+  "hero": {
+    "headline": "De zon van vandaag\nlaat je zonnebloem groeien",
+    "lead": "Zodra je buiten bent, telt je tijd in de zon vanzelf op. Geef de verzamelde zon aan je zonnebloem en hij staat er fris bij. Vergeet je hem een paar dagen, dan begint hij te verwelken.",
+    "cta": "Gratis downloaden",
+    "note": "Alle functies zijn gratis. Je gegevens blijven op je apparaat."
+  },
+  "demo": {
+    "title": "Verzamel wat zon",
+    "lead": "Kies hoe licht het is en hoe lang, vang wat zon en geef die aan een zonnebloem die al wat begint te hangen.",
+    "places": [
+      "Zwak licht",
+      "Buiten/bewolkt",
+      "Zon",
+      "Felle zon"
+    ],
+    "minutes": "{n} minuten lang",
+    "gain": "Verzamelde zon",
+    "none": "Zo weinig licht telt niet als buiten, dus er komt niets bij",
+    "go": "Zon vangen",
+    "give": "Geef aan zonnebloem",
+    "day": "Er gaat een dag voorbij",
+    "energy": "Energie",
+    "states": [
+      "Fris",
+      "Gezond",
+      "Verwelkend",
+      "Gevaar"
+    ],
+    "note": "De lichtniveaus zijn voorbeelden. De app meet het echte licht waar je bent."
+  },
+  "problem": {
+    "title": "Hoeveel minuten zon heb je vandaag eigenlijk gehad?",
+    "text": "Een paar stappen naar je werk, even snel naar buiten voor de lunch. Wie de hele dag binnen zit, merkt pas 's avonds dat er nauwelijks daglicht was. Sunny Sunflower zet je tijd buiten om in cijfers, en je zonnebloem wacht al op de wandeling van morgen."
+  },
+  "features": [
+    {
+      "title": "Ga naar buiten, hij meet vanzelf",
+      "text": "Tik op `De zon opzoeken` en ga naar buiten. De app schat de helderheid om je heen met de belichtingsgegevens van de camera aan de voorkant. Blijft het ongeveer 30 seconden zo licht als buiten, dan begint de registratie. Er worden nooit foto's gemaakt of bewaard.\nDaarna gaat de sensor maar 20 seconden per 2 minuten aan om de batterij te sparen.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Zon en stemming, dag na dag",
+      "text": "In de kalender krijgt elke dag zijn tijd in de zon, een stemmings-emoji en een korte notitie. Buiten geweest zonder te meten? Met `Buitentijd zelf toevoegen` voeg je 5 tot 120 minuten toe.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Je week en maand in één oogopslag",
+      "text": "Week- en maandoverzichten laten zien op welke dagen je je doel haalde en hoeveel zon je gemiddeld krijgt. Stel een dagdoel in van 10 tot 120 minuten en zie meteen op het hoofdscherm hoeveel er vandaag nog ontbreekt.\nWidgets op het beginscherm en het toegangsscherm, en het Dynamic Island, tonen de zon van vandaag en hoe je zonnebloem erbij staat.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "In drie stappen aan de slag",
+    "items": [
+      {
+        "title": "Stel een dagdoel in",
+        "text": "Standaard is het 30 minuten. In de instellingen kies je 10 tot 120."
+      },
+      {
+        "title": "Ga de zon in",
+        "text": "Tik op `De zon opzoeken` en ga naar buiten met de app open. Toegang tot de camera wordt maar één keer gevraagd."
+      },
+      {
+        "title": "Voed je zonnebloem",
+        "text": "Tik op `Geef aan zonnebloem` om de verzamelde zon om te zetten in energie."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Zo wordt licht verzamelde zon",
+    "rows": [
+      [
+        "Onder 300 lux",
+        "Zwak licht: telt niet als tijd in de zon"
+      ],
+      [
+        "300–1.000 lux",
+        "Buiten/bewolkt: 1–3% per 10 minuten"
+      ],
+      [
+        "1.000–10.000 lux",
+        "Zon: 3–33% per 10 minuten"
+      ],
+      [
+        "Vanaf 10.000 lux",
+        "Felle zon: meer dan 33% per 10 minuten"
+      ],
+      [
+        "Verzamelde zon",
+        "minuten × gemiddelde lux ÷ 3.000 (maximaal 100% per keer)"
+      ],
+      [
+        "Energie van de zonnebloem",
+        "daalt 2,5% per uur, ongeveer 60% per dag"
+      ]
+    ],
+    "note": "De drempel voor buiten stel je in de instellingen in tussen 100 en 2.000 lux. Standaard is 300 lux."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": [
+      {
+        "q": "Hoe meet de app de zon?",
+        "a": "De app schat de helderheid om je heen (de verlichtingssterkte) met de belichtingsgegevens van de camera aan de voorkant. Blijft het een tijdje zo licht als buiten, dan start de registratie vanzelf. Er worden geen foto's gemaakt of bewaard."
+      },
+      {
+        "q": "Kost het meten veel batterij?",
+        "a": "Zodra de zon bevestigd is, blijft de sensor niet aan. Hij wordt elke 2 minuten ongeveer 20 seconden wakker om opnieuw te meten; de rest doet een simpele timer."
+      },
+      {
+        "q": "Mijn zonnebloem verwelkt steeds.",
+        "a": "De zonnebloem verliest elk uur 2,5% energie. Verzamel zon en tik op `Geef aan zonnebloem`. Op een heldere dag is 15 tot 20 minuten in de volle zon genoeg voor een hele dag."
+      },
+      {
+        "q": "Ik was buiten, maar er is niets geregistreerd.",
+        "a": "Gebruik `Buitentijd zelf toevoegen` onderaan het hoofdscherm om 5 tot 120 minuten toe te voegen. Komt de registratie op bewolkte dagen moeilijk op gang, verlaag dan de drempel voor buiten in de instellingen."
+      },
+      {
+        "q": "Hoe werkt de vriendenfunctie?",
+        "a": "Als jij en een vriend dicht bij elkaar zijn (binnen zo'n 10 meter) en allebei de zon meten, maken jullie vanzelf verbinding. Met iemand nieuw bevestig je eerst dat jullie samen de zon in gaan, daarna gaat het automatisch. De bloemblaadjes kleuren vrolijk en krijgen in 3 dagen hun eigen kleur terug, en jullie tijd samen komt in het tabblad Vrienden. Jullie hebben allebei de app nodig, plus toegang tot Bluetooth en het lokale netwerk."
+      },
+      {
+        "q": "Is het echt gratis?",
+        "a": "Ja. Geen advertenties, geen aankopen, alle functies inbegrepen. Vind je de app fijn, dan kun je een fooi geven, maar die ontgrendelt niets extra's."
+      },
+      {
+        "q": "Kan ik een back-up maken of mijn gegevens overzetten?",
+        "a": "Alles blijft zonder server op je apparaat, en de laatste 90 dagen worden bewaard. Er is geen aparte export, maar je gegevens zitten in de gewone iPhone-back-up via iCloud of je computer."
+      },
+      {
+        "q": "Hoe wis ik al mijn gegevens?",
+        "a": "Tik in de instellingen van de app op `Gegevens wissen`, of verwijder de app. Dit kan niet ongedaan worden gemaakt."
+      },
+      {
+        "q": "Waar meld ik een fout?",
+        "a": "Mail naar het adres hieronder of open een issue op GitHub (github.com/M1zz/SunlightTracker/issues). Het model van je apparaat, de iOS-versie en wat er gebeurde helpen ons enorm. Meestal antwoorden we binnen een paar dagen."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Neem je zonnebloem\nvandaag mee de zon in",
+    "cta": "Gratis downloaden"
+  },
+  "ui": {
+    "skip": "Naar de inhoud",
+    "languages": "Taal",
+    "privacy": "Privacybeleid",
+    "contact": "Vragen of feedback? Mail naar {email}."
+  }
+}

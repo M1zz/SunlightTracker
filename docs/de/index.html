@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunny Sunflower</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunny Sunflower: Sonnenzeit festhalten und eine Sonnenblume großziehen</title>
+  <meta name="description" content="Geh nach draußen, und deine Sonnenzeit sammelt sich von selbst. Damit wächst deine Sonnenblume. Kostenlos, Daten bleiben auf dem Gerät.">
+  <meta name="theme-color" content="#B45309" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6758931631">
   <link rel="canonical" href="https://m1zz.github.io/SunlightTracker/de/">
-<!--HREFLANG-->
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/SunlightTracker/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/SunlightTracker/en/">
   <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/SunlightTracker/zh-Hans/">
@@ -30,54 +33,143 @@
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/SunlightTracker/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/SunlightTracker/tr/">
   <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/SunlightTracker/">
-  <!--/HREFLANG-->
-  <link rel="stylesheet" href="../style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sunny Sunflower: Sonnenzeit festhalten und eine Sonnenblume großziehen">
+  <meta property="og:description" content="Geh nach draußen, und deine Sonnenzeit sammelt sich von selbst. Damit wächst deine Sonnenblume. Kostenlos, Daten bleiben auf dem Gerät.">
+  <meta property="og:url" content="https://m1zz.github.io/SunlightTracker/de/">
+  <meta property="og:image" content="https://m1zz.github.io/SunlightTracker/img/de/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../sitegen.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B45309}@media (prefers-color-scheme:dark){:root{--accent:#FF9F0A}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="emoji">🌻</div>
-      <h1>Sunny Sunflower</h1>
-      <p class="tagline">Jeden Tag ein bisschen Sonne – und deine Sonnenblume wächst</p>
-    </header>
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+  <header class="bar">
+    <a class="brand" href="../de/"><img src="../icon.png" alt="" width="32" height="32">Sunny Sunflower</a>
+    <a class="lang-link" href="#languages">Sprache</a>
+  </header>
 
-    <nav class="top">
-      <a href="privacy.html">Datenschutzerklärung</a>
-      <a href="support.html">Support &amp; Kontakt</a>
-      <a href="https://github.com/M1zz/SunlightTracker">GitHub</a>
-    </nav>
-<!--LANGSWITCH-->
-    <nav class="langs"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de" aria-current="page">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-    <!--/LANGSWITCH-->
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Mit der Sonne von heute<br>wächst deine Sonnenblume</h1>
+        <p class="lead">Sobald du draußen bist, zählt deine Sonnenzeit von allein mit. Gib die gesammelte Sonne deiner Sonnenblume, dann blüht sie auf. Vergisst du sie ein paar Tage, beginnt sie zu welken.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6758931631">Kostenlos laden</a><a class="try" href="#try">Sammle ein bisschen Sonne ↓</a></div>
+        <p class="muted small">Alle Funktionen sind kostenlos. Deine Daten bleiben auf dem Gerät.</p>
+      </div>
+      <div class="phone"><img src="../img/de/01-today.jpg" alt="Mit der Sonne von heute wächst deine Sonnenblume" width="600" height="1303" decoding="async"></div>
+    </section>
 
-    <div class="card">
-      <h2>Was ist das für eine App?</h2>
-      <p>
-        Sunny Sunflower ist eine iOS-App, die echtes Sonnenlicht über den Helligkeitssensor der Kamera automatisch erkennt und aufzeichnet.
-        Je mehr Sonne du tankst, desto voller wird deine Batterie – und mit dieser Energie ziehst du deine eigene Sonnenblume groß.
-        Kümmerst du dich nicht um sie, lässt sie den Kopf hängen. 🌱
-      </p>
-      <ul>
-        <li>☀️ Automatische Sonnenlicht-Erkennung &amp; Aufzeichnung per Helligkeitsmessung</li>
-        <li>🌻 Batterie aufladen → Sonnenblume großziehen</li>
-        <li>📅 Kalender und Statistiken im Blick, dazu Stimmung und Notizen festhalten</li>
-        <li>👥 Tankst du Sonne mit Freunden in der Nähe, färben sich die Blütenblätter bunt</li>
-        <li>📱 Widgets für den Home-Bildschirm, Live-Aktivität auf dem Sperrbildschirm und Dynamic Island</li>
-      </ul>
-    </div>
 
-    <div class="card">
-      <h2>Und meine Daten?</h2>
-      <span class="badge">Kein Server · Alle Aufzeichnungen bleiben auf deinem Gerät</span>
-      <p>
-        Deine Aufzeichnungen in Sunny Sunflower verlassen dein Gerät nicht. Nur Feedback, das du selbst abschickst, erreicht den Entwickler.
-        Alle Details findest du in der <a class="link" href="privacy.html">Datenschutzerklärung</a>.
-      </p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Sammle ein bisschen Sonne</h2>
+      <p class="muted">Wähle, wie hell es ist und wie lange, tank Sonne und gib sie einer Sonnenblume, die schon die Blätter hängen lässt.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Sammle ein bisschen Sonne&quot;, &quot;lead&quot;: &quot;Wähle, wie hell es ist und wie lange, tank Sonne und gib sie einer Sonnenblume, die schon die Blätter hängen lässt.&quot;, &quot;places&quot;: [&quot;Schwaches Licht&quot;, &quot;Draußen/bewölkt&quot;, &quot;Sonne&quot;, &quot;Starke Sonne&quot;], &quot;minutes&quot;: &quot;{n} Minuten lang&quot;, &quot;gain&quot;: &quot;Gesammelte Sonne&quot;, &quot;none&quot;: &quot;So wenig Licht zählt nicht als draußen, also kommt nichts dazu&quot;, &quot;go&quot;: &quot;Sonne tanken&quot;, &quot;give&quot;: &quot;Der Sonnenblume geben&quot;, &quot;day&quot;: &quot;Ein Tag vergeht&quot;, &quot;energy&quot;: &quot;Energie&quot;, &quot;states&quot;: [&quot;Topfit&quot;, &quot;Gesund&quot;, &quot;Welkt&quot;, &quot;Kritisch&quot;], &quot;note&quot;: &quot;Die Helligkeitswerte sind Beispiele. Die App misst das echte Licht dort, wo du bist.&quot;}"></div>
+    </section>
 
-    <footer>
-      © 2026 Sunny Sunflower · <a class="link" href="mailto:leeo@kakao.com">leeo@kakao.com</a>
-    </footer>
-  </div>
+    <section class="problem reveal">
+      <h2>Wie viele Minuten Sonne hattest du heute?</h2>
+      <p>Ein paar Schritte auf dem Weg zur Arbeit, kurz raus zum Mittagessen. Wer den ganzen Tag drinnen ist, merkt oft erst abends, dass er kaum Tageslicht gesehen hat. Sunny Sunflower macht deine Zeit draußen sichtbar, und deine Sonnenblume wartet schon auf den Spaziergang morgen.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Raus gehen genügt, sie misst von selbst</h2>
+        <p>Tippe auf <code>Ab in die Sonne</code> und geh nach draußen. Die App schätzt die Helligkeit um dich herum anhand der Belichtungsdaten der Frontkamera. Bleibt es etwa 30 Sekunden lang so hell wie draußen, beginnt die Aufzeichnung. Es werden nie Fotos gemacht oder gespeichert.<br>Danach schaltet sich der Sensor nur alle 2 Minuten für 20 Sekunden ein und schont so den Akku.</p>
+      </div>
+      <div class="phone"><img src="../img/de/04-goal.jpg" alt="Raus gehen genügt, sie misst von selbst" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Sonne und Stimmung, Tag für Tag</h2>
+        <p>Im Kalender bekommt jeder Tag seine Sonnenzeit, ein Stimmungs-Emoji und eine kurze Notiz. Warst du draußen, ohne zu messen? Mit <code>Zeit draußen ergänzen</code> trägst du 5 bis 120 Minuten nach.</p>
+      </div>
+      <div class="phone"><img src="../img/de/02-calendar.jpg" alt="Sonne und Stimmung, Tag für Tag" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Woche und Monat auf einen Blick</h2>
+        <p>Wochen- und Monatsstatistiken zeigen, an welchen Tagen du dein Ziel erreicht hast und wie viel Sonne du im Schnitt bekommst. Setz dir ein Tagesziel zwischen 10 und 120 Minuten und sieh direkt auf dem Startbildschirm, wie viel heute noch fehlt.<br>Widgets auf Home- und Sperrbildschirm sowie die Dynamic Island zeigen die Sonne von heute und wie es deiner Sonnenblume geht.</p>
+      </div>
+      <div class="phone"><img src="../img/de/03-stats.jpg" alt="Woche und Monat auf einen Blick" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>In drei Schritten startklar</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Tagesziel festlegen</h3><p>Voreingestellt sind 30 Minuten. In den Einstellungen geht alles von 10 bis 120.</p></li>
+<li class="card"><span class="n">2</span><h3>Raus in die Sonne</h3><p>Tippe auf <code>Ab in die Sonne</code> und geh mit geöffneter App nach draußen. Der Kamerazugriff wird nur einmal abgefragt.</p></li>
+<li class="card"><span class="n">3</span><h3>Sonnenblume füttern</h3><p>Mit <code>Der Sonnenblume geben</code> wird aus gesammelter Sonne Energie.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>So wird aus Licht gesammelte Sonne</h2>
+      <div class="card table">
+        <dl><div><dt>Unter 300 Lux</dt><dd>Schwaches Licht: zählt nicht als Sonnenzeit</dd></div><div><dt>300 bis 1.000 Lux</dt><dd>Draußen/bewölkt: 1 bis 3 % pro 10 Minuten</dd></div><div><dt>1.000 bis 10.000 Lux</dt><dd>Sonne: 3 bis 33 % pro 10 Minuten</dd></div><div><dt>Ab 10.000 Lux</dt><dd>Starke Sonne: über 33 % pro 10 Minuten</dd></div><div><dt>Gesammelte Sonne</dt><dd>Minuten × durchschnittliche Lux ÷ 3.000 (höchstens 100 % pro Sitzung)</dd></div><div><dt>Energie der Sonnenblume</dt><dd>sinkt um 2,5 % pro Stunde, etwa 60 % pro Tag</dd></div></dl>
+      </div>
+      <p class="muted">Den Schwellenwert für draußen kannst du in den Einstellungen zwischen 100 und 2.000 Lux wählen. Voreingestellt sind 300 Lux.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Häufige Fragen</h2>
+      <div class="faq"><details><summary>Wie misst die App die Sonne?</summary><p>Sie schätzt die Helligkeit um dich herum (Beleuchtungsstärke) anhand der Belichtungsdaten der Frontkamera. Bleibt es eine Weile so hell wie draußen, startet die Aufzeichnung von selbst. Es werden keine Fotos gemacht oder gespeichert.</p></details>
+<details><summary>Kostet das Messen viel Akku?</summary><p>Sobald Sonne erkannt ist, bleibt der Sensor nicht dauerhaft an. Er misst alle 2 Minuten etwa 20 Sekunden lang nach, den Rest übernimmt ein einfacher Timer.</p></details>
+<details><summary>Meine Sonnenblume welkt ständig.</summary><p>Die Sonnenblume verliert pro Stunde 2,5 % Energie. Sammle Sonne und tippe auf <code>Der Sonnenblume geben</code>. An einem klaren Tag reichen 15 bis 20 Minuten in direkter Sonne, um einen ganzen Tag auszugleichen.</p></details>
+<details><summary>Ich war draußen, aber nichts wurde aufgezeichnet.</summary><p>Mit <code>Zeit draußen ergänzen</code> unten auf dem Startbildschirm kannst du 5 bis 120 Minuten nachtragen. Startet die Aufzeichnung an bewölkten Tagen schlecht, senk den Schwellenwert für draußen in den Einstellungen.</p></details>
+<details><summary>Wie funktioniert die Freunde-Funktion?</summary><p>Seid ihr nah beieinander (etwa 10 m) und messt beide gerade Sonne, verbindet ihr euch automatisch. Bei neuen Personen müsst ihr das gemeinsame Sonnentanken erst bestätigen, danach geht es automatisch. Eure Blütenblätter werden bunt und bekommen über 3 Tage ihre Farbe zurück, und eure gemeinsame Zeit landet im Tab Freunde. Ihr braucht beide die App sowie Zugriff auf Bluetooth und das lokale Netzwerk.</p></details>
+<details><summary>Ist das wirklich kostenlos?</summary><p>Ja. Keine Werbung, keine Käufe, alle Funktionen inklusive. Wenn dir die App gefällt, kannst du ein Trinkgeld geben, es schaltet aber nichts zusätzlich frei.</p></details>
+<details><summary>Kann ich meine Daten sichern oder übertragen?</summary><p>Alles bleibt ohne Server auf deinem Gerät, gespeichert werden die letzten 90 Tage. Einen eigenen Export gibt es nicht, deine Daten sind aber im normalen iPhone-Backup über iCloud oder den Computer enthalten.</p></details>
+<details><summary>Wie lösche ich alle Daten?</summary><p>Tippe in den Einstellungen der App auf <code>Daten zurücksetzen</code> oder lösche die App. Das lässt sich nicht rückgängig machen.</p></details>
+<details><summary>Wo melde ich einen Fehler?</summary><p>Schreib an die Adresse unten oder eröffne ein Issue auf GitHub (github.com/M1zz/SunlightTracker/issues). Gerätemodell, iOS-Version und was genau passiert ist, helfen sehr. Meist antworten wir innerhalb weniger Tage.</p></details></div>
+      <p class="contact">Fragen oder Feedback? Schreib an <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Nimm deine Sonnenblume<br>heute mit in die Sonne</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6758931631">Kostenlos laden</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Sprache"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de" aria-current="page">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Datenschutzerklärung</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Sunny Sunflower</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

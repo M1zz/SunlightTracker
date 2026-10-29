@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: güneşte geçen süreni kaydet, bir ayçiçeği büyüt",
+  "description": "Dışarı çık, güneşte geçen süren kendiliğinden birikir ve ayçiçeğini büyütür. Ücretsiz, kayıtların cihazında kalır.",
+  "hero": {
+    "headline": "Bugünün güneşi\nayçiçeğini büyütür",
+    "lead": "Dışarı çıkman yeter, güneşte geçen süre kendiliğinden birikir. Topladığın güneşi ayçiçeğine verirsen capcanlı olur. Birkaç gün unutursan solmaya başlar.",
+    "cta": "Ücretsiz indir",
+    "note": "Tüm özellikler ücretsiz. Kayıtlar yalnızca cihazında kalır."
+  },
+  "demo": {
+    "title": "Biraz güneş topla",
+    "lead": "Ne kadar aydınlık olduğunu ve ne kadar süreceğini seç, güneşlen, sonra boynunu bükmeye başlamış ayçiçeğine ver.",
+    "places": [
+      "Zayıf ışık",
+      "Dışarısı/bulutlu",
+      "Güneş",
+      "Güçlü güneş"
+    ],
+    "minutes": "{n} dakika boyunca",
+    "gain": "Biriken güneş",
+    "none": "Bu kadar zayıf ışık dış mekân sayılmaz, bu yüzden bir şey birikmez",
+    "go": "Güneşlen",
+    "give": "Ayçiçeğine ver",
+    "day": "Bir gün geçsin",
+    "energy": "Enerji",
+    "states": [
+      "Capcanlı",
+      "Sağlıklı",
+      "Solmakta",
+      "Tehlikede"
+    ],
+    "note": "Buradaki ışık seviyeleri örnektir. Uygulama bulunduğun yerdeki gerçek ışığı ölçer."
+  },
+  "problem": {
+    "title": "Bugün kaç dakika güneş gördün?",
+    "text": "İşe giderken birkaç adım, öğle yemeği için kısa bir çıkış. Bütün gün içeride kalınca, gün ışığını neredeyse hiç görmediğini ancak akşam fark edersin. Sunny Sunflower dışarıda geçen süreni rakamlarla gösterir, ayçiçeğin de yarınki yürüyüşü bekler."
+  },
+  "features": [
+    {
+      "title": "Dışarı çık, kendisi ölçsün",
+      "text": "`Güneşe çık` düğmesine dokun ve dışarı çık. Uygulama ön kameranın pozlama bilgisinden çevredeki aydınlığı tahmin eder. Işık yaklaşık 30 saniye dış mekân seviyesinde kalınca kayıt başlar. Hiçbir zaman fotoğraf çekmez veya kaydetmez.\nSonrasında sensör pil tasarrufu için 2 dakikada bir yalnızca 20 saniye açılır.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Her gün güneş ve ruh hâli",
+      "text": "Takvimde her günün güneşte geçen süresi, bir ruh hâli emojisi ve kısa bir notu olur. Dışarıdaydın ama ölçmedin mi? `Dışarıda geçen süreyi ekle` ile 5 ila 120 dakika ekleyebilirsin.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Haftan ve ayın tek bakışta",
+      "text": "Haftalık ve aylık istatistikler hedefe ulaştığın günleri ve ortalama güneş süreni gösterir. Günlük hedefi 10 ila 120 dakika arasında belirle, bugün kaç dakika kaldığını ana ekranda hemen gör.\nAna ekran ve kilit ekranı widget'ları ile Dynamic Island da bugünkü güneşi ve ayçiçeğinin durumunu gösterir.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Üç adımda başla",
+    "items": [
+      {
+        "title": "Günlük hedefini belirle",
+        "text": "Başlangıçta 30 dakikadır. Ayarlar'dan 10 ile 120 arasında seçebilirsin."
+      },
+      {
+        "title": "Güneşe çık",
+        "text": "`Güneşe çık` düğmesine dokun ve uygulama açıkken dışarı çık. Kamera izni yalnızca bir kez sorulur."
+      },
+      {
+        "title": "Ayçiçeğini besle",
+        "text": "Topladığın güneşi enerjiye çevirmek için `Ayçiçeğine ver` düğmesine dokun."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Işık nasıl güneşe dönüşür",
+    "rows": [
+      [
+        "300 lüksün altı",
+        "Zayıf ışık: güneş süresi sayılmaz"
+      ],
+      [
+        "300–1.000 lüks",
+        "Dışarısı/bulutlu: 10 dakikada %1–3"
+      ],
+      [
+        "1.000–10.000 lüks",
+        "Güneş: 10 dakikada %3–33"
+      ],
+      [
+        "10.000 lüks ve üstü",
+        "Güçlü güneş: 10 dakikada %33'ten fazla"
+      ],
+      [
+        "Biriken güneş",
+        "dakika × ortalama lüks ÷ 3.000 (her seferde en fazla %100)"
+      ],
+      [
+        "Ayçiçeğinin enerjisi",
+        "saatte %2,5, günde yaklaşık %60 azalır"
+      ]
+    ],
+    "note": "Dış mekân eşiğini Ayarlar'dan 100 ile 2.000 lüks arasında değiştirebilirsin. Varsayılan 300 lükstür."
+  },
+  "faq": {
+    "title": "Sık sorulan sorular",
+    "items": [
+      {
+        "q": "Güneş nasıl ölçülüyor?",
+        "a": "Uygulama ön kameranın pozlama bilgisinden çevredeki aydınlığı (aydınlanma şiddetini) tahmin eder. Işık bir süre dış mekân seviyesinde kalınca kayıt kendiliğinden başlar. Fotoğraf çekilmez veya kaydedilmez."
+      },
+      {
+        "q": "Ölçüm çok pil yer mi?",
+        "a": "Güneş doğrulandıktan sonra sensör sürekli açık kalmaz. Yeniden ölçmek için 2 dakikada bir yaklaşık 20 saniye uyanır, gerisini basit bir zamanlayıcı halleder."
+      },
+      {
+        "q": "Ayçiçeğim sürekli soluyor.",
+        "a": "Ayçiçeği her saat enerjisinin %2,5'ini kaybeder. Güneş topla ve `Ayçiçeğine ver` düğmesine dokun. Açık bir günde doğrudan güneşte 15–20 dakika, bütün günün kaybını karşılamaya yeter."
+      },
+      {
+        "q": "Dışarıdaydım ama hiçbir şey kaydedilmedi.",
+        "a": "Ana ekranın altındaki `Dışarıda geçen süreyi ekle` ile 5 ila 120 dakika ekleyebilirsin. Bulutlu günlerde kayıt zor başlıyorsa Ayarlar'dan dış mekân eşiğini düşür."
+      },
+      {
+        "q": "Arkadaş özelliği nasıl çalışıyor?",
+        "a": "Sen ve bir arkadaşın birbirinize yakınken (yaklaşık 10 metre içinde) ve ikiniz de güneşi ölçüyorken otomatik olarak bağlanırsınız. Yeni biriyle önce birlikte güneşlenmeyi onaylamanız gerekir, sonrası otomatiktir. Taç yapraklar rengârenk olur ve 3 gün içinde kendi rengine döner, birlikte geçirdiğiniz süre Arkadaşlar sekmesine kaydedilir. İkinizde de uygulama yüklü olmalı, Bluetooth ve yerel ağ izni verilmelidir."
+      },
+      {
+        "q": "Gerçekten ücretsiz mi?",
+        "a": "Evet. Reklam yok, satın alma yok, tüm özellikler dahil. Beğenirsen uygulama içinden bahşiş bırakabilirsin ama bahşiş fazladan bir şey açmaz."
+      },
+      {
+        "q": "Kayıtlarımı yedekleyebilir ya da taşıyabilir miyim?",
+        "a": "Her şey sunucu olmadan cihazında kalır ve son 90 gün saklanır. Ayrı bir dışa aktarma yoktur, ancak kayıtların iCloud'daki ya da bilgisayardaki normal iPhone yedeğine dahildir."
+      },
+      {
+        "q": "Tüm verilerimi nasıl silerim?",
+        "a": "Uygulamanın ayarlarında `Verileri sıfırla` düğmesine dokun ya da uygulamayı sil. Bu işlem geri alınamaz."
+      },
+      {
+        "q": "Bir hatayı nereye bildiririm?",
+        "a": "Aşağıdaki adrese e-posta gönder ya da GitHub'da bir issue aç (github.com/M1zz/SunlightTracker/issues). Cihaz modeli, iOS sürümü ve ne olduğu çok yardımcı olur. Genellikle birkaç gün içinde yanıtlıyoruz."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Bugün ayçiçeğini\ngüneşe çıkar",
+    "cta": "Ücretsiz indir"
+  },
+  "ui": {
+    "skip": "İçeriğe geç",
+    "languages": "Dil",
+    "privacy": "Gizlilik Politikası",
+    "contact": "Soruların ya da önerilerin mi var? {email} adresine yaz."
+  }
+}

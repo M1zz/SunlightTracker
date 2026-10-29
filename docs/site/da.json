@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: hold styr på din tid i solen, og få en solsikke til at gro",
+  "description": "Gå udenfor, så tæller din tid i solen op af sig selv, og din solsikke gror af lyset. Gratis, og dine data bliver på enheden.",
+  "hero": {
+    "headline": "Dagens sol\nfår din solsikke til at gro",
+    "lead": "Bare du går udenfor, tæller din tid i solen op af sig selv. Giv solsikken det sollys, du har samlet, så står den frisk. Glemmer du den et par dage, begynder den at visne.",
+    "cta": "Hent gratis",
+    "note": "Alle funktioner er gratis. Dine data bliver på din enhed."
+  },
+  "demo": {
+    "title": "Saml lidt sol",
+    "lead": "Vælg hvor lyst der er og hvor længe, få noget sol, og giv det til en solsikke, der er begyndt at hænge med hovedet.",
+    "places": [
+      "Svagt lys",
+      "Ude/overskyet",
+      "Sol",
+      "Stærk sol"
+    ],
+    "minutes": "I {n} minutter",
+    "gain": "Opsamlet sol",
+    "none": "Så svagt lys tæller ikke som udendørs, så der lægges ikke noget til",
+    "go": "Få noget sol",
+    "give": "Giv til solsikken",
+    "day": "Der går en dag",
+    "energy": "Energi",
+    "states": [
+      "Frisk",
+      "Sund",
+      "Visner",
+      "Kritisk"
+    ],
+    "note": "Lysniveauerne her er eksempler. Appen måler det faktiske lys, hvor du er."
+  },
+  "problem": {
+    "title": "Hvor mange minutter sol fik du egentlig i dag?",
+    "text": "Et par skridt på vej til arbejde, en hurtig tur ud efter frokost. Er man inde hele dagen, opdager man først om aftenen, at man næsten ikke har set dagslys. Sunny Sunflower viser din tid udenfor i tal, og din solsikke venter på morgendagens gåtur."
+  },
+  "features": [
+    {
+      "title": "Gå ud, så måler den selv",
+      "text": "Tryk på `Gå ud i solen`, og gå udenfor. Appen vurderer lyset omkring dig ud fra frontkameraets eksponeringsdata. Når lyset holder sig på udendørs niveau i cirka 30 sekunder, starter registreringen. Der bliver aldrig taget eller gemt billeder.\nBagefter tænder sensoren kun i 20 sekunder hvert 2. minut for at spare på batteriet.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Sol og humør, dag for dag",
+      "text": "I kalenderen får hver dag sin tid i solen, en humør-emoji og en kort note. Var du ude uden at måle? Med `Tilføj tid udendørs` lægger du 5 til 120 minutter til.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Uge og måned på et øjeblik",
+      "text": "Uge- og månedsstatistik viser, hvilke dage du nåede dit mål, og hvor meget sol du får i snit. Sæt et dagligt mål på 10 til 120 minutter, og se direkte på forsiden, hvor meget der mangler i dag.\nWidgets på hjemmeskærmen og låseskærmen samt Dynamic Island viser dagens sol, og hvordan solsikken har det.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Kom i gang i tre trin",
+    "items": [
+      {
+        "title": "Sæt et dagligt mål",
+        "text": "Det starter på 30 minutter. I indstillinger kan du vælge 10 til 120."
+      },
+      {
+        "title": "Gå ud i solen",
+        "text": "Tryk på `Gå ud i solen`, og gå ud med appen åben. Den spørger kun én gang om adgang til kameraet."
+      },
+      {
+        "title": "Giv solsikken energi",
+        "text": "Tryk på `Giv til solsikken` for at gøre det opsamlede sollys til energi."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Sådan bliver lys til sol",
+    "rows": [
+      [
+        "Under 300 lux",
+        "Svagt lys: tæller ikke som tid i solen"
+      ],
+      [
+        "300–1.000 lux",
+        "Ude/overskyet: 1–3 % pr. 10 minutter"
+      ],
+      [
+        "1.000–10.000 lux",
+        "Sol: 3–33 % pr. 10 minutter"
+      ],
+      [
+        "Fra 10.000 lux",
+        "Stærk sol: over 33 % pr. 10 minutter"
+      ],
+      [
+        "Opsamlet sol",
+        "minutter × gennemsnitlig lux ÷ 3.000 (højst 100 % pr. gang)"
+      ],
+      [
+        "Solsikkens energi",
+        "falder 2,5 % i timen, omkring 60 % i døgnet"
+      ]
+    ],
+    "note": "Grænsen for udendørs kan sættes mellem 100 og 2.000 lux i indstillinger. Standard er 300 lux."
+  },
+  "faq": {
+    "title": "Spørgsmål og svar",
+    "items": [
+      {
+        "q": "Hvordan måler appen sol?",
+        "a": "Den vurderer lysstyrken omkring dig (belysningsstyrken) ud fra frontkameraets eksponeringsdata. Når lyset holder sig på udendørs niveau et stykke tid, starter registreringen af sig selv. Der bliver ikke taget eller gemt billeder."
+      },
+      {
+        "q": "Bruger det meget strøm?",
+        "a": "Når solen er bekræftet, er sensoren ikke tændt hele tiden. Den vågner i cirka 20 sekunder hvert 2. minut for at måle igen, og resten klarer en simpel timer."
+      },
+      {
+        "q": "Min solsikke visner hele tiden.",
+        "a": "Solsikken mister 2,5 % energi i timen. Saml sol, og tryk på `Giv til solsikken`. På en klar dag er 15 til 20 minutter i direkte sol nok til at dække et helt døgn."
+      },
+      {
+        "q": "Jeg var ude, men intet blev registreret.",
+        "a": "Brug `Tilføj tid udendørs` nederst på forsiden til at lægge 5 til 120 minutter til. Har registreringen svært ved at starte på overskyede dage, så sænk grænsen for udendørs i indstillinger."
+      },
+      {
+        "q": "Hvordan virker venne-funktionen?",
+        "a": "Når du og en ven er tæt på hinanden (inden for cirka 10 m) og begge måler sol, forbinder I automatisk. Med en ny person skal I først bekræfte, at I tager sol sammen, derefter sker det af sig selv. Kronbladene bliver farverige og får deres egen farve tilbage over 3 dage, og jeres tid sammen gemmes på fanen Venner. I skal begge have appen og give adgang til Bluetooth og lokalt netværk."
+      },
+      {
+        "q": "Er det virkelig gratis?",
+        "a": "Ja. Ingen reklamer, ingen køb, alle funktioner med. Kan du lide appen, kan du give drikkepenge, men de låser ikke noget ekstra op."
+      },
+      {
+        "q": "Kan jeg tage backup eller flytte mine data?",
+        "a": "Alt bliver på enheden uden server, og de seneste 90 dage gemmes. Der er ingen separat eksport, men dine data er med i den almindelige iPhone-backup på iCloud eller computeren."
+      },
+      {
+        "q": "Hvordan sletter jeg alle data?",
+        "a": "Tryk på `Nulstil data` i appens indstillinger, eller slet appen. Det kan ikke fortrydes."
+      },
+      {
+        "q": "Hvor melder jeg en fejl?",
+        "a": "Skriv til adressen nedenfor, eller opret et issue på GitHub (github.com/M1zz/SunlightTracker/issues). Enhedsmodel, iOS-version og hvad der skete hjælper meget. Vi svarer som regel inden for få dage."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Tag din solsikke\nmed ud i solen i dag",
+    "cta": "Hent gratis"
+  },
+  "ui": {
+    "skip": "Gå til indhold",
+    "languages": "Sprog",
+    "privacy": "Privatlivspolitik",
+    "contact": "Spørgsmål eller idéer? Skriv til {email}."
+  }
+}

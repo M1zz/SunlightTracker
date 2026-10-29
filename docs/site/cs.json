@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: zapisujte čas na slunci a pěstujte slunečnici",
+  "description": "Vyjděte ven a čas na slunci se načítá sám. Z toho slunce roste vaše slunečnice. Zdarma, záznamy zůstávají v zařízení.",
+  "hero": {
+    "headline": "Dnešní slunce\nkrmí vaši slunečnici",
+    "lead": "Stačí vyjít ven a čas na slunci se načítá sám. Dejte nasbírané slunce slunečnici a bude svěží. Když na ni pár dní zapomenete, začne vadnout.",
+    "cta": "Stáhnout zdarma",
+    "note": "Všechny funkce jsou zdarma. Záznamy zůstávají ve vašem zařízení."
+  },
+  "demo": {
+    "title": "Nasbírejte si trochu slunce",
+    "lead": "Vyberte, jak je světlo silné a jak dlouho, nachytejte slunce a dejte ho slunečnici, která už věší hlavu.",
+    "places": [
+      "Slabé světlo",
+      "Venku / zataženo",
+      "Slunce",
+      "Silné slunce"
+    ],
+    "minutes": "{n} minut",
+    "gain": "Nasbírané slunce",
+    "none": "Tak slabé světlo se nepočítá jako venku, nic se nenačte",
+    "go": "Chytat slunce",
+    "give": "Dát slunečnici",
+    "day": "Uběhne den",
+    "energy": "Energie",
+    "states": [
+      "Svěží",
+      "Zdravá",
+      "Vadne",
+      "Ohrožená"
+    ],
+    "note": "Úrovně světla jsou jen příklady. Aplikace měří skutečné světlo tam, kde jste."
+  },
+  "problem": {
+    "title": "Kolik minut slunce jste dnes dostali?",
+    "text": "Pár kroků cestou do práce, rychlé zaběhnutí na oběd. Když strávíte den uvnitř, až večer zjistíte, že jste denní světlo skoro neviděli. Sunny Sunflower ukáže váš čas venku v číslech a slunečnice už čeká na zítřejší procházku."
+  },
+  "features": [
+    {
+      "title": "Vyjděte ven a měří sama",
+      "text": "Klepněte na `Jdu na slunce` a vyjděte ven. Aplikace odhaduje jas kolem vás z údajů o expozici přední kamery. Když světlo zůstane na venkovní úrovni asi 30 sekund, začne záznam. Žádné fotky nepořizuje ani neukládá.\nPotom se senzor zapíná jen na 20 sekund každé 2 minuty, aby šetřil baterii.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Slunce a nálada den po dni",
+      "text": "V kalendáři má každý den svůj čas na slunci, emoji nálady a krátkou poznámku. Byli jste venku a neměřili? Přes `Přidat čas venku ručně` doplníte 5 až 120 minut.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Týden a měsíc na první pohled",
+      "text": "Týdenní a měsíční statistiky ukazují, které dny jste splnili cíl a kolik slunce máte v průměru. Denní cíl nastavíte od 10 do 120 minut a na hlavní obrazovce hned vidíte, kolik dnes ještě chybí.\nWidgety na ploše a zamčené obrazovce i Dynamic Island ukazují dnešní slunce a stav slunečnice.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Začněte ve třech krocích",
+    "items": [
+      {
+        "title": "Nastavte denní cíl",
+        "text": "Výchozí je 30 minut. V nastavení zvolíte 10 až 120."
+      },
+      {
+        "title": "Vyjděte na slunce",
+        "text": "Klepněte na `Jdu na slunce` a vyjděte ven s otevřenou aplikací. O přístup ke kameře požádá jen jednou."
+      },
+      {
+        "title": "Nakrmte slunečnici",
+        "text": "Klepnutím na `Dát slunečnici` proměníte nasbírané slunce v energii."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Jak se ze světla stává slunce",
+    "rows": [
+      [
+        "Pod 300 lx",
+        "Slabé světlo: nepočítá se jako čas na slunci"
+      ],
+      [
+        "300–1 000 lx",
+        "Venku / zataženo: 1–3 % za 10 minut"
+      ],
+      [
+        "1 000–10 000 lx",
+        "Slunce: 3–33 % za 10 minut"
+      ],
+      [
+        "Od 10 000 lx",
+        "Silné slunce: přes 33 % za 10 minut"
+      ],
+      [
+        "Nasbírané slunce",
+        "minuty × průměrný jas ÷ 3 000 (nejvýš 100 % za jedno měření)"
+      ],
+      [
+        "Energie slunečnice",
+        "klesá o 2,5 % za hodinu, asi o 60 % za den"
+      ]
+    ],
+    "note": "Hranici pro venek nastavíte v nastavení mezi 100 a 2 000 lx. Výchozí je 300 lx."
+  },
+  "faq": {
+    "title": "Časté otázky",
+    "items": [
+      {
+        "q": "Jak se slunce měří?",
+        "a": "Aplikace odhaduje jas kolem vás (osvětlenost) z údajů o expozici přední kamery. Když světlo chvíli zůstane na venkovní úrovni, záznam začne sám. Fotky nepořizuje ani neukládá."
+      },
+      {
+        "q": "Nevybíjí měření hodně baterii?",
+        "a": "Jakmile je slunce potvrzené, senzor nezůstává zapnutý. Každé 2 minuty se asi na 20 sekund probudí a změří znovu, zbytek obstará obyčejný časovač."
+      },
+      {
+        "q": "Moje slunečnice pořád vadne.",
+        "a": "Slunečnice ztrácí každou hodinu 2,5 % energie. Nasbírejte slunce a klepněte na `Dát slunečnici`. Za jasného dne stačí 15 až 20 minut na přímém slunci, aby se vyrovnal celý den."
+      },
+      {
+        "q": "Byl(a) jsem venku, ale nic se nezaznamenalo.",
+        "a": "Dole na hlavní obrazovce je `Přidat čas venku ručně`, kde doplníte 5 až 120 minut. Pokud se za zataženého počasí záznam nerozbíhá, snižte v nastavení hranici pro venek."
+      },
+      {
+        "q": "Jak funguje funkce přátel?",
+        "a": "Když jste s kamarádem blízko sebe (zhruba do 10 m) a oba právě měříte slunce, spojíte se automaticky. S novým člověkem je potřeba nejdřív potvrdit společné slunění, pak už to jde samo. Okvětní lístky se zbarví a během 3 dnů se vrátí k původní barvě, společný čas se uloží na kartě Přátelé. Oba potřebujete aplikaci a povolený přístup k Bluetooth a místní síti."
+      },
+      {
+        "q": "Je to opravdu zdarma?",
+        "a": "Ano. Bez reklam a bez nákupů, se všemi funkcemi. Pokud se vám líbí, můžete v aplikaci nechat spropitné, ale nic dalšího neodemyká."
+      },
+      {
+        "q": "Můžu si záznamy zálohovat nebo přenést?",
+        "a": "Vše zůstává v zařízení bez serveru a uchovává se posledních 90 dní. Samostatný export není, ale záznamy jsou součástí běžné zálohy iPhonu na iCloud nebo do počítače."
+      },
+      {
+        "q": "Jak smažu všechna data?",
+        "a": "V nastavení aplikace klepněte na `Reset dat`, nebo aplikaci smažte. Nelze to vrátit zpět."
+      },
+      {
+        "q": "Kam nahlásit chybu?",
+        "a": "Napište na adresu níže nebo založte issue na GitHubu (github.com/M1zz/SunlightTracker/issues). Hodně pomůže model zařízení, verze iOS a popis, co se stalo. Obvykle odpovídáme do několika dní."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Vezměte dnes slunečnici\nna sluníčko",
+    "cta": "Stáhnout zdarma"
+  },
+  "ui": {
+    "skip": "Přejít na obsah",
+    "languages": "Jazyk",
+    "privacy": "Zásady ochrany osobních údajů",
+    "contact": "Dotazy nebo náměty posílejte na {email}."
+  }
+}

@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunny Sunflower</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunny Sunflower: zapisujte čas na slunci a pěstujte slunečnici</title>
+  <meta name="description" content="Vyjděte ven a čas na slunci se načítá sám. Z toho slunce roste vaše slunečnice. Zdarma, záznamy zůstávají v zařízení.">
+  <meta name="theme-color" content="#B45309" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6758931631">
   <link rel="canonical" href="https://m1zz.github.io/SunlightTracker/cs/">
-<!--HREFLANG-->
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/SunlightTracker/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/SunlightTracker/en/">
   <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/SunlightTracker/zh-Hans/">
@@ -30,54 +33,143 @@
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/SunlightTracker/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/SunlightTracker/tr/">
   <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/SunlightTracker/">
-  <!--/HREFLANG-->
-  <link rel="stylesheet" href="../style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sunny Sunflower: zapisujte čas na slunci a pěstujte slunečnici">
+  <meta property="og:description" content="Vyjděte ven a čas na slunci se načítá sám. Z toho slunce roste vaše slunečnice. Zdarma, záznamy zůstávají v zařízení.">
+  <meta property="og:url" content="https://m1zz.github.io/SunlightTracker/cs/">
+  <meta property="og:image" content="https://m1zz.github.io/SunlightTracker/img/cs/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../sitegen.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B45309}@media (prefers-color-scheme:dark){:root{--accent:#FF9F0A}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="emoji">🌻</div>
-      <h1>Sunny Sunflower</h1>
-      <p class="tagline">Každý den hrst slunce – a vaše slunečnice roste</p>
-    </header>
+  <a class="skip" href="#main">Přejít na obsah</a>
+  <header class="bar">
+    <a class="brand" href="../cs/"><img src="../icon.png" alt="" width="32" height="32">Sunny Sunflower</a>
+    <a class="lang-link" href="#languages">Jazyk</a>
+  </header>
 
-    <nav class="top">
-      <a href="privacy.html">Ochrana soukromí</a>
-      <a href="support.html">Podpora a kontakt</a>
-      <a href="https://github.com/M1zz/SunlightTracker">GitHub</a>
-    </nav>
-<!--LANGSWITCH-->
-    <nav class="langs"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs" aria-current="page">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-    <!--/LANGSWITCH-->
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Dnešní slunce<br>krmí vaši slunečnici</h1>
+        <p class="lead">Stačí vyjít ven a čas na slunci se načítá sám. Dejte nasbírané slunce slunečnici a bude svěží. Když na ni pár dní zapomenete, začne vadnout.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6758931631">Stáhnout zdarma</a><a class="try" href="#try">Nasbírejte si trochu slunce ↓</a></div>
+        <p class="muted small">Všechny funkce jsou zdarma. Záznamy zůstávají ve vašem zařízení.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/01-today.jpg" alt="Dnešní slunce krmí vaši slunečnici" width="600" height="1303" decoding="async"></div>
+    </section>
 
-    <div class="card">
-      <h2>Co je to za aplikaci?</h2>
-      <p>
-        Sunny Sunflower je aplikace pro iOS, která pomocí měření jasu přes fotoaparát sama pozná, kdy jste na skutečném slunci, a zaznamená to.
-        Čím víc slunce chytíte, tím víc se nabije baterie – a z té energie roste vaše vlastní slunečnice.
-        Když se o ni nestaráte, uvadá. 🌱
-      </p>
-      <ul>
-        <li>☀️ Automatické rozpoznání a záznam slunce podle jasu</li>
-        <li>🌻 Nabijte baterii → pěstujte slunečnici</li>
-        <li>📅 Přehled v kalendáři a statistikách, nálada a poznámky ke každému dni</li>
-        <li>👥 Když se s kamarády slunite blízko sebe, okvětní lístky se zbarví do pestrých barev</li>
-        <li>📱 Widgety na ploše, živé aktivity na zamčené obrazovce a Dynamic Island</li>
-      </ul>
-    </div>
 
-    <div class="card">
-      <h2>A co soukromí?</h2>
-      <span class="badge">Žádný server · všechny záznamy zůstávají jen ve vašem zařízení</span>
-      <p>
-        Záznamy ze Sunny Sunflower se nikam neodesílají. Vývojáři dorazí jen zpětná vazba, kterou sami pošlete.
-        Podrobnosti najdete v <a class="link" href="privacy.html">zásadách ochrany soukromí</a>.
-      </p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Nasbírejte si trochu slunce</h2>
+      <p class="muted">Vyberte, jak je světlo silné a jak dlouho, nachytejte slunce a dejte ho slunečnici, která už věší hlavu.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Nasbírejte si trochu slunce&quot;, &quot;lead&quot;: &quot;Vyberte, jak je světlo silné a jak dlouho, nachytejte slunce a dejte ho slunečnici, která už věší hlavu.&quot;, &quot;places&quot;: [&quot;Slabé světlo&quot;, &quot;Venku / zataženo&quot;, &quot;Slunce&quot;, &quot;Silné slunce&quot;], &quot;minutes&quot;: &quot;{n} minut&quot;, &quot;gain&quot;: &quot;Nasbírané slunce&quot;, &quot;none&quot;: &quot;Tak slabé světlo se nepočítá jako venku, nic se nenačte&quot;, &quot;go&quot;: &quot;Chytat slunce&quot;, &quot;give&quot;: &quot;Dát slunečnici&quot;, &quot;day&quot;: &quot;Uběhne den&quot;, &quot;energy&quot;: &quot;Energie&quot;, &quot;states&quot;: [&quot;Svěží&quot;, &quot;Zdravá&quot;, &quot;Vadne&quot;, &quot;Ohrožená&quot;], &quot;note&quot;: &quot;Úrovně světla jsou jen příklady. Aplikace měří skutečné světlo tam, kde jste.&quot;}"></div>
+    </section>
 
-    <footer>
-      © 2026 Sunny Sunflower · <a class="link" href="mailto:leeo@kakao.com">leeo@kakao.com</a>
-    </footer>
-  </div>
+    <section class="problem reveal">
+      <h2>Kolik minut slunce jste dnes dostali?</h2>
+      <p>Pár kroků cestou do práce, rychlé zaběhnutí na oběd. Když strávíte den uvnitř, až večer zjistíte, že jste denní světlo skoro neviděli. Sunny Sunflower ukáže váš čas venku v číslech a slunečnice už čeká na zítřejší procházku.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Vyjděte ven a měří sama</h2>
+        <p>Klepněte na <code>Jdu na slunce</code> a vyjděte ven. Aplikace odhaduje jas kolem vás z údajů o expozici přední kamery. Když světlo zůstane na venkovní úrovni asi 30 sekund, začne záznam. Žádné fotky nepořizuje ani neukládá.<br>Potom se senzor zapíná jen na 20 sekund každé 2 minuty, aby šetřil baterii.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/04-goal.jpg" alt="Vyjděte ven a měří sama" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Slunce a nálada den po dni</h2>
+        <p>V kalendáři má každý den svůj čas na slunci, emoji nálady a krátkou poznámku. Byli jste venku a neměřili? Přes <code>Přidat čas venku ručně</code> doplníte 5 až 120 minut.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/02-calendar.jpg" alt="Slunce a nálada den po dni" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Týden a měsíc na první pohled</h2>
+        <p>Týdenní a měsíční statistiky ukazují, které dny jste splnili cíl a kolik slunce máte v průměru. Denní cíl nastavíte od 10 do 120 minut a na hlavní obrazovce hned vidíte, kolik dnes ještě chybí.<br>Widgety na ploše a zamčené obrazovce i Dynamic Island ukazují dnešní slunce a stav slunečnice.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/03-stats.jpg" alt="Týden a měsíc na první pohled" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Začněte ve třech krocích</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Nastavte denní cíl</h3><p>Výchozí je 30 minut. V nastavení zvolíte 10 až 120.</p></li>
+<li class="card"><span class="n">2</span><h3>Vyjděte na slunce</h3><p>Klepněte na <code>Jdu na slunce</code> a vyjděte ven s otevřenou aplikací. O přístup ke kameře požádá jen jednou.</p></li>
+<li class="card"><span class="n">3</span><h3>Nakrmte slunečnici</h3><p>Klepnutím na <code>Dát slunečnici</code> proměníte nasbírané slunce v energii.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Jak se ze světla stává slunce</h2>
+      <div class="card table">
+        <dl><div><dt>Pod 300 lx</dt><dd>Slabé světlo: nepočítá se jako čas na slunci</dd></div><div><dt>300–1 000 lx</dt><dd>Venku / zataženo: 1–3 % za 10 minut</dd></div><div><dt>1 000–10 000 lx</dt><dd>Slunce: 3–33 % za 10 minut</dd></div><div><dt>Od 10 000 lx</dt><dd>Silné slunce: přes 33 % za 10 minut</dd></div><div><dt>Nasbírané slunce</dt><dd>minuty × průměrný jas ÷ 3 000 (nejvýš 100 % za jedno měření)</dd></div><div><dt>Energie slunečnice</dt><dd>klesá o 2,5 % za hodinu, asi o 60 % za den</dd></div></dl>
+      </div>
+      <p class="muted">Hranici pro venek nastavíte v nastavení mezi 100 a 2 000 lx. Výchozí je 300 lx.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Časté otázky</h2>
+      <div class="faq"><details><summary>Jak se slunce měří?</summary><p>Aplikace odhaduje jas kolem vás (osvětlenost) z údajů o expozici přední kamery. Když světlo chvíli zůstane na venkovní úrovni, záznam začne sám. Fotky nepořizuje ani neukládá.</p></details>
+<details><summary>Nevybíjí měření hodně baterii?</summary><p>Jakmile je slunce potvrzené, senzor nezůstává zapnutý. Každé 2 minuty se asi na 20 sekund probudí a změří znovu, zbytek obstará obyčejný časovač.</p></details>
+<details><summary>Moje slunečnice pořád vadne.</summary><p>Slunečnice ztrácí každou hodinu 2,5 % energie. Nasbírejte slunce a klepněte na <code>Dát slunečnici</code>. Za jasného dne stačí 15 až 20 minut na přímém slunci, aby se vyrovnal celý den.</p></details>
+<details><summary>Byl(a) jsem venku, ale nic se nezaznamenalo.</summary><p>Dole na hlavní obrazovce je <code>Přidat čas venku ručně</code>, kde doplníte 5 až 120 minut. Pokud se za zataženého počasí záznam nerozbíhá, snižte v nastavení hranici pro venek.</p></details>
+<details><summary>Jak funguje funkce přátel?</summary><p>Když jste s kamarádem blízko sebe (zhruba do 10 m) a oba právě měříte slunce, spojíte se automaticky. S novým člověkem je potřeba nejdřív potvrdit společné slunění, pak už to jde samo. Okvětní lístky se zbarví a během 3 dnů se vrátí k původní barvě, společný čas se uloží na kartě Přátelé. Oba potřebujete aplikaci a povolený přístup k Bluetooth a místní síti.</p></details>
+<details><summary>Je to opravdu zdarma?</summary><p>Ano. Bez reklam a bez nákupů, se všemi funkcemi. Pokud se vám líbí, můžete v aplikaci nechat spropitné, ale nic dalšího neodemyká.</p></details>
+<details><summary>Můžu si záznamy zálohovat nebo přenést?</summary><p>Vše zůstává v zařízení bez serveru a uchovává se posledních 90 dní. Samostatný export není, ale záznamy jsou součástí běžné zálohy iPhonu na iCloud nebo do počítače.</p></details>
+<details><summary>Jak smažu všechna data?</summary><p>V nastavení aplikace klepněte na <code>Reset dat</code>, nebo aplikaci smažte. Nelze to vrátit zpět.</p></details>
+<details><summary>Kam nahlásit chybu?</summary><p>Napište na adresu níže nebo založte issue na GitHubu (github.com/M1zz/SunlightTracker/issues). Hodně pomůže model zařízení, verze iOS a popis, co se stalo. Obvykle odpovídáme do několika dní.</p></details></div>
+      <p class="contact">Dotazy nebo náměty posílejte na <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Vezměte dnes slunečnici<br>na sluníčko</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6758931631">Stáhnout zdarma</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Jazyk"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs" aria-current="page">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Zásady ochrany osobních údajů</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Sunny Sunflower</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

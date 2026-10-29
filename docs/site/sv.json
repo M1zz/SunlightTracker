@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: logga din tid i solen och låt en solros växa",
+  "description": "Gå ut så räknas tiden i solen upp av sig själv och din solros växer. Gratis, och din data stannar på enheten.",
+  "hero": {
+    "headline": "Dagens sol\nfår din solros att växa",
+    "lead": "Bara du går ut räknas tiden i solen upp av sig själv. Ge solrosen solljuset du samlat så blir den pigg. Glömmer du den några dagar börjar den hänga.",
+    "cta": "Hämta gratis",
+    "note": "Alla funktioner är gratis. Din data stannar på enheten."
+  },
+  "demo": {
+    "title": "Samla lite sol",
+    "lead": "Välj hur ljust det är och hur länge, ta in sol och ge den till en solros som börjat sloka.",
+    "places": [
+      "Svagt ljus",
+      "Ute/mulet",
+      "Sol",
+      "Stark sol"
+    ],
+    "minutes": "I {n} minuter",
+    "gain": "Insamlad sol",
+    "none": "Så svagt ljus räknas inte som utomhus, så inget samlas in",
+    "go": "Ta in sol",
+    "give": "Ge till solrosen",
+    "day": "En dag går",
+    "energy": "Energi",
+    "states": [
+      "Pigg",
+      "Frisk",
+      "Hängig",
+      "Kritisk"
+    ],
+    "note": "Ljusnivåerna här är exempel. Appen mäter det verkliga ljuset där du är."
+  },
+  "problem": {
+    "title": "Hur många minuter sol fick du i dag?",
+    "text": "Några steg till jobbet, en snabb sväng ut för att äta lunch. Är du inne hela dagen märker du först på kvällen att du knappt sett dagsljus. Sunny Sunflower visar din tid ute i siffror, och solrosen väntar på morgondagens promenad."
+  },
+  "features": [
+    {
+      "title": "Gå ut så mäter den själv",
+      "text": "Tryck på `Gå ut i solen` och gå ut. Appen uppskattar ljusstyrkan runt dig utifrån frontkamerans exponeringsdata. När ljuset håller sig på utomhusnivå i ungefär 30 sekunder börjar loggningen. Inga bilder tas eller sparas någonsin.\nSedan slås sensorn bara på i 20 sekunder varannan minut för att spara batteri.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Sol och humör, dag för dag",
+      "text": "I kalendern får varje dag sin tid i solen, en humör-emoji och en kort anteckning. Var du ute utan att mäta? Med `Lägg till tid utomhus` lägger du till 5 till 120 minuter.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Vecka och månad i en blick",
+      "text": "Vecko- och månadsstatistik visar vilka dagar du nådde målet och hur mycket sol du får i snitt. Sätt ett dagligt mål på 10 till 120 minuter och se direkt på startsidan hur mycket som fattas i dag.\nWidgetar på hemskärmen och låsskärmen, och Dynamic Island, visar dagens sol och hur solrosen mår.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Kom igång i tre steg",
+    "items": [
+      {
+        "title": "Sätt ett dagligt mål",
+        "text": "Det börjar på 30 minuter. I inställningarna väljer du 10 till 120."
+      },
+      {
+        "title": "Gå ut i solen",
+        "text": "Tryck på `Gå ut i solen` och gå ut med appen öppen. Den frågar bara en gång om kameran."
+      },
+      {
+        "title": "Ge solrosen energi",
+        "text": "Tryck på `Ge till solrosen` för att göra insamlad sol till energi."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Så blir ljus till sol",
+    "rows": [
+      [
+        "Under 300 lux",
+        "Svagt ljus: räknas inte som tid i solen"
+      ],
+      [
+        "300–1 000 lux",
+        "Ute/mulet: 1–3 % per 10 minuter"
+      ],
+      [
+        "1 000–10 000 lux",
+        "Sol: 3–33 % per 10 minuter"
+      ],
+      [
+        "Från 10 000 lux",
+        "Stark sol: över 33 % per 10 minuter"
+      ],
+      [
+        "Insamlad sol",
+        "minuter × genomsnittlig lux ÷ 3 000 (högst 100 % per gång)"
+      ],
+      [
+        "Solrosens energi",
+        "sjunker 2,5 % i timmen, ungefär 60 % per dygn"
+      ]
+    ],
+    "note": "Gränsen för utomhus kan ställas in mellan 100 och 2 000 lux i inställningarna. Standard är 300 lux."
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "items": [
+      {
+        "q": "Hur mäter appen sol?",
+        "a": "Den uppskattar ljusstyrkan runt dig (belysningsstyrkan) utifrån frontkamerans exponeringsdata. När ljuset håller sig på utomhusnivå en stund startar loggningen av sig själv. Inga bilder tas eller sparas."
+      },
+      {
+        "q": "Drar det mycket batteri?",
+        "a": "När solen är bekräftad är sensorn inte på hela tiden. Den vaknar i ungefär 20 sekunder varannan minut för att mäta igen, och en enkel timer sköter resten."
+      },
+      {
+        "q": "Min solros hänger hela tiden.",
+        "a": "Solrosen tappar 2,5 % energi i timmen. Samla sol och tryck på `Ge till solrosen`. En klar dag räcker 15 till 20 minuter i direkt sol för att täcka ett helt dygn."
+      },
+      {
+        "q": "Jag var ute men inget loggades.",
+        "a": "Använd `Lägg till tid utomhus` längst ner på startsidan för att lägga till 5 till 120 minuter. Om loggningen har svårt att starta mulna dagar kan du sänka gränsen för utomhus i inställningarna."
+      },
+      {
+        "q": "Hur fungerar vänfunktionen?",
+        "a": "När du och en vän är nära varandra (inom ungefär 10 m) och båda mäter sol kopplas ni ihop automatiskt. Med en ny person behöver ni först bekräfta att ni solar tillsammans, sedan sker det av sig självt. Kronbladen blir färgglada och får tillbaka sin egen färg under 3 dagar, och er tid tillsammans sparas under fliken Vänner. Båda behöver appen och åtkomst till Bluetooth och lokalt nätverk."
+      },
+      {
+        "q": "Är det verkligen gratis?",
+        "a": "Ja. Ingen reklam, inga köp, alla funktioner ingår. Gillar du appen kan du ge dricks, men det låser inte upp något extra."
+      },
+      {
+        "q": "Kan jag säkerhetskopiera eller flytta min data?",
+        "a": "Allt stannar på enheten utan server, och de senaste 90 dagarna sparas. Det finns ingen separat export, men din data ingår i den vanliga iPhone-säkerhetskopian i iCloud eller på datorn."
+      },
+      {
+        "q": "Hur raderar jag all data?",
+        "a": "Tryck på `Återställ data` i appens inställningar, eller radera appen. Det går inte att ångra."
+      },
+      {
+        "q": "Var rapporterar jag ett fel?",
+        "a": "Skriv till adressen nedan eller skapa en issue på GitHub (github.com/M1zz/SunlightTracker/issues). Enhetsmodell, iOS-version och vad som hände hjälper mycket. Vi svarar oftast inom några dagar."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Ta med solrosen\nut i solen i dag",
+    "cta": "Hämta gratis"
+  },
+  "ui": {
+    "skip": "Hoppa till innehållet",
+    "languages": "Språk",
+    "privacy": "Integritetspolicy",
+    "contact": "Frågor eller synpunkter? Skriv till {email}."
+  }
+}

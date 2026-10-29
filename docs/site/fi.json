@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: kirjaa aurinkoaikasi ja kasvata auringonkukka",
+  "description": "Mene ulos, niin aurinkoaika kertyy itsestään ja kasvattaa oman auringonkukkasi. Ilmainen, ja tiedot pysyvät laitteellasi.",
+  "hero": {
+    "headline": "Tämän päivän aurinko\nkasvattaa auringonkukkasi",
+    "lead": "Kun menet ulos, aurinkoaika kertyy itsestään. Anna kerätty aurinko auringonkukalle, niin se pysyy hehkeänä. Jos unohdat sen muutamaksi päiväksi, se alkaa kuihtua.",
+    "cta": "Lataa ilmaiseksi",
+    "note": "Kaikki ominaisuudet ovat ilmaisia. Tiedot pysyvät laitteellasi."
+  },
+  "demo": {
+    "title": "Kerää vähän aurinkoa",
+    "lead": "Valitse valon määrä ja kesto, ota aurinkoa ja anna se auringonkukalle, joka alkaa jo nuokkua.",
+    "places": [
+      "Heikko valo",
+      "Ulkona/pilvistä",
+      "Aurinkoa",
+      "Kirkas aurinko"
+    ],
+    "minutes": "{n} minuuttia",
+    "gain": "Kerätty aurinko",
+    "none": "Näin heikkoa valoa ei lasketa ulkotilaksi, joten mitään ei kerry",
+    "go": "Ota aurinkoa",
+    "give": "Anna auringonkukalle",
+    "day": "Päivä kuluu",
+    "energy": "Energia",
+    "states": [
+      "Hehkeä",
+      "Terve",
+      "Kuihtuu",
+      "Vaarassa"
+    ],
+    "note": "Valon määrät ovat esimerkkejä. Sovellus mittaa todellisen valon siellä, missä olet."
+  },
+  "problem": {
+    "title": "Montako minuuttia aurinkoa sait tänään?",
+    "text": "Muutama askel töihin, pikainen lounaskäynti. Kun vietät päivän sisällä, huomaat vasta illalla, ettet juuri nähnyt päivänvaloa. Sunny Sunflower näyttää ulkona vietetyn ajan lukuina, ja auringonkukka odottaa jo huomista kävelyä."
+  },
+  "features": [
+    {
+      "title": "Mene ulos, se mittaa itse",
+      "text": "Napauta `Mene auringonvaloon` ja lähde ulos. Sovellus arvioi ympäristön valoisuuden etukameran valotustiedoista. Kun valo pysyy ulkotason kirkkaana noin 30 sekuntia, kirjaus alkaa. Kuvia ei koskaan oteta eikä tallenneta.\nSen jälkeen anturi käynnistyy vain 20 sekunniksi kahden minuutin välein akkua säästääkseen.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Aurinko ja mieliala päivä päivältä",
+      "text": "Kalenterissa jokaisella päivällä on oma aurinkoaikansa, mieliala-emoji ja lyhyt muistiinpano. Olitko ulkona mittaamatta? `Lisää ulkoaika itse` lisää 5–120 minuuttia.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Viikko ja kuukausi yhdellä silmäyksellä",
+      "text": "Viikko- ja kuukausitilastot näyttävät, minä päivinä saavutit tavoitteen ja paljonko aurinkoa saat keskimäärin. Aseta päivätavoite 10–120 minuuttiin ja näe heti etusivulta, paljonko tänään vielä puuttuu.\nKoti- ja lukitusnäytön widgetit sekä Dynamic Island näyttävät päivän auringon ja auringonkukan voinnin.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Aloita kolmella askeleella",
+    "items": [
+      {
+        "title": "Aseta päivätavoite",
+        "text": "Oletus on 30 minuuttia. Asetuksista voit valita 10–120."
+      },
+      {
+        "title": "Mene aurinkoon",
+        "text": "Napauta `Mene auringonvaloon` ja mene ulos sovellus auki. Kameran käyttöoikeutta kysytään vain kerran."
+      },
+      {
+        "title": "Ruoki auringonkukka",
+        "text": "Napauta `Anna auringonkukalle`, niin kerätty aurinko muuttuu energiaksi."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Näin valo muuttuu auringoksi",
+    "rows": [
+      [
+        "Alle 300 luksia",
+        "Heikko valo: ei laske aurinkoajaksi"
+      ],
+      [
+        "300–1 000 luksia",
+        "Ulkona/pilvistä: 1–3 % 10 minuutissa"
+      ],
+      [
+        "1 000–10 000 luksia",
+        "Aurinkoa: 3–33 % 10 minuutissa"
+      ],
+      [
+        "Yli 10 000 luksia",
+        "Kirkas aurinko: yli 33 % 10 minuutissa"
+      ],
+      [
+        "Kerätty aurinko",
+        "minuutit × keskimääräinen valoisuus ÷ 3 000 (enintään 100 % kerrallaan)"
+      ],
+      [
+        "Auringonkukan energia",
+        "laskee 2,5 % tunnissa, noin 60 % vuorokaudessa"
+      ]
+    ],
+    "note": "Ulkotilan rajan voi asettaa 100–2 000 luksiin asetuksista. Oletus on 300 luksia."
+  },
+  "faq": {
+    "title": "Usein kysyttyä",
+    "items": [
+      {
+        "q": "Miten aurinkoa mitataan?",
+        "a": "Sovellus arvioi ympäristön valoisuuden (valaistusvoimakkuuden) etukameran valotustiedoista. Kun valo pysyy hetken ulkotason kirkkaana, kirjaus alkaa itsestään. Kuvia ei oteta eikä tallenneta."
+      },
+      {
+        "q": "Kuluttaako mittaus paljon akkua?",
+        "a": "Kun aurinko on varmistettu, anturi ei ole jatkuvasti päällä. Se herää noin 20 sekunniksi kahden minuutin välein mittaamaan uudelleen, ja muun ajan hoitaa tavallinen ajastin."
+      },
+      {
+        "q": "Auringonkukkani kuihtuu jatkuvasti.",
+        "a": "Auringonkukka menettää 2,5 % energiastaan tunnissa. Kerää aurinkoa ja napauta `Anna auringonkukalle`. Selkeänä päivänä 15–20 minuuttia suorassa auringossa riittää kattamaan koko päivän."
+      },
+      {
+        "q": "Olin ulkona, mutta mitään ei kirjattu.",
+        "a": "Lisää 5–120 minuuttia etusivun alalaidan kohdasta `Lisää ulkoaika itse`. Jos kirjaus ei pilvisinä päivinä tahdo käynnistyä, laske ulkotilan rajaa asetuksista."
+      },
+      {
+        "q": "Miten ystävätoiminto toimii?",
+        "a": "Kun sinä ja ystäväsi olette lähellä toisianne (noin 10 metrin sisällä) ja mittaatte molemmat aurinkoa, yhteys syntyy itsestään. Uuden ihmisen kanssa yhteinen auringonotto pitää ensin vahvistaa, sen jälkeen kaikki käy automaattisesti. Terälehdet värittyvät ja palaavat omaan väriinsä 3 päivän kuluessa, ja yhteinen aikanne tallentuu Ystävät-välilehdelle. Molemmat tarvitsevat sovelluksen sekä Bluetoothin ja paikallisverkon käyttöoikeuden."
+      },
+      {
+        "q": "Onko tämä oikeasti ilmainen?",
+        "a": "On. Ei mainoksia eikä ostoja, kaikki ominaisuudet mukana. Jos pidät sovelluksesta, voit jättää tipin, mutta se ei avaa mitään lisää."
+      },
+      {
+        "q": "Voinko varmuuskopioida tai siirtää tietoni?",
+        "a": "Kaikki pysyy laitteella ilman palvelinta, ja viimeiset 90 päivää säilytetään. Erillistä vientiä ei ole, mutta tiedot sisältyvät tavalliseen iPhonen varmuuskopioon iCloudissa tai tietokoneella."
+      },
+      {
+        "q": "Miten poistan kaikki tiedot?",
+        "a": "Napauta sovelluksen asetuksissa `Nollaa tiedot` tai poista sovellus. Toimintoa ei voi perua."
+      },
+      {
+        "q": "Mihin ilmoitan virheestä?",
+        "a": "Kirjoita alla olevaan osoitteeseen tai avaa issue GitHubissa (github.com/M1zz/SunlightTracker/issues). Laitteen malli, iOS-versio ja kuvaus tapahtuneesta auttavat paljon. Vastaamme yleensä muutamassa päivässä."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Vie auringonkukkasi\ntänään aurinkoon",
+    "cta": "Lataa ilmaiseksi"
+  },
+  "ui": {
+    "skip": "Siirry sisältöön",
+    "languages": "Kieli",
+    "privacy": "Tietosuojakäytäntö",
+    "contact": "Kysyttävää tai palautetta? Kirjoita osoitteeseen {email}."
+  }
+}

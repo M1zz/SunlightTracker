@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: zapisuj czas na słońcu i wyhoduj słonecznik",
+  "description": "Wyjdź na dwór, a czas na słońcu nalicza się sam i karmi Twój słonecznik. Za darmo, dane zostają na urządzeniu.",
+  "hero": {
+    "headline": "Dzisiejsze słońce\nkarmi Twój słonecznik",
+    "lead": "Wystarczy wyjść na dwór, a czas na słońcu nalicza się sam. Oddaj zebrane słońce słonecznikowi, a będzie kwitł. Zapomnisz o nim na kilka dni, a zacznie więdnąć.",
+    "cta": "Pobierz za darmo",
+    "note": "Wszystkie funkcje są bezpłatne. Dane zostają na urządzeniu."
+  },
+  "demo": {
+    "title": "Zbierz trochę słońca",
+    "lead": "Wybierz, jak jest jasno i jak długo, złap słońce i oddaj je słonecznikowi, który już zaczyna zwieszać głowę.",
+    "places": [
+      "Słabe światło",
+      "Dwór/pochmurno",
+      "Słońce",
+      "Mocne słońce"
+    ],
+    "minutes": "Przez {n} min",
+    "gain": "Zebrane słońce",
+    "none": "Przy tak słabym świetle to nie jest jeszcze dwór, więc nic się nie zbiera",
+    "go": "Łap słońce",
+    "give": "Daj słonecznikowi",
+    "day": "Mija dzień",
+    "energy": "Energia",
+    "states": [
+      "Kwitnie",
+      "Zdrowy",
+      "Więdnie",
+      "Zagrożony"
+    ],
+    "note": "Poziomy światła są tu przykładowe. Aplikacja mierzy prawdziwe światło tam, gdzie jesteś."
+  },
+  "problem": {
+    "title": "Ile minut słońca złapałeś dzisiaj?",
+    "text": "Kilka kroków do pracy, szybkie wyjście po lunch. Kiedy cały dzień siedzisz w środku, dopiero wieczorem orientujesz się, że prawie nie widziałeś dziennego światła. Sunny Sunflower pokazuje Twój czas na dworze w liczbach, a słonecznik czeka na jutrzejszy spacer."
+  },
+  "features": [
+    {
+      "title": "Wyjdź, a zmierzy sam",
+      "text": "Stuknij `Idę na słońce` i wyjdź na dwór. Aplikacja szacuje jasność wokół Ciebie na podstawie danych o ekspozycji przedniego aparatu. Gdy światło utrzymuje się na poziomie dworu przez około 30 sekund, zaczyna się pomiar. Nigdy nie robi ani nie zapisuje zdjęć.\nPotem czujnik włącza się tylko na 20 sekund co 2 minuty, żeby oszczędzać baterię.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Słońce i nastrój, dzień po dniu",
+      "text": "W kalendarzu każdy dzień ma swój czas na słońcu, emoji nastroju i krótką notatkę. Byłeś na dworze, ale nie mierzyłeś? Przez `Dodaj czas na dworze` dopiszesz od 5 do 120 minut.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Tydzień i miesiąc w jednym spojrzeniu",
+      "text": "Statystyki tygodniowe i miesięczne pokazują, w które dni udało się osiągnąć cel i ile słońca łapiesz średnio. Ustaw cel dzienny od 10 do 120 minut i od razu na ekranie głównym zobacz, ile jeszcze brakuje dzisiaj.\nWidżety na ekranie początkowym i blokady oraz Dynamic Island pokazują dzisiejsze słońce i stan słonecznika.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Zacznij w trzech krokach",
+    "items": [
+      {
+        "title": "Ustaw cel dzienny",
+        "text": "Na start to 30 minut. W ustawieniach wybierzesz od 10 do 120."
+      },
+      {
+        "title": "Wyjdź na słońce",
+        "text": "Stuknij `Idę na słońce` i wyjdź z otwartą aplikacją. O dostęp do aparatu zapyta tylko raz."
+      },
+      {
+        "title": "Nakarm słonecznik",
+        "text": "Stuknij `Daj słonecznikowi`, żeby zamienić zebrane słońce w energię."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Jak światło zamienia się w słońce",
+    "rows": [
+      [
+        "Poniżej 300 lx",
+        "Słabe światło: nie liczy się jako czas na słońcu"
+      ],
+      [
+        "300–1000 lx",
+        "Dwór/pochmurno: 1–3% na 10 minut"
+      ],
+      [
+        "1000–10 000 lx",
+        "Słońce: 3–33% na 10 minut"
+      ],
+      [
+        "Od 10 000 lx",
+        "Mocne słońce: ponad 33% na 10 minut"
+      ],
+      [
+        "Zebrane słońce",
+        "minuty × średnia jasność ÷ 3000 (najwyżej 100% za jednym razem)"
+      ],
+      [
+        "Energia słonecznika",
+        "spada o 2,5% na godzinę, czyli około 60% na dobę"
+      ]
+    ],
+    "note": "Próg dla dworu ustawisz w ustawieniach od 100 do 2000 lx. Domyślnie to 300 lx."
+  },
+  "faq": {
+    "title": "Najczęstsze pytania",
+    "items": [
+      {
+        "q": "Jak mierzone jest słońce?",
+        "a": "Aplikacja szacuje jasność wokół Ciebie (natężenie oświetlenia) na podstawie danych o ekspozycji przedniego aparatu. Gdy światło przez chwilę utrzymuje się na poziomie dworu, pomiar zaczyna się sam. Nie robi ani nie zapisuje zdjęć."
+      },
+      {
+        "q": "Czy pomiar mocno zużywa baterię?",
+        "a": "Po potwierdzeniu słońca czujnik nie działa bez przerwy. Budzi się na około 20 sekund co 2 minuty, żeby zmierzyć ponownie, a resztę liczy zwykły minutnik."
+      },
+      {
+        "q": "Mój słonecznik ciągle więdnie.",
+        "a": "Słonecznik traci 2,5% energii co godzinę. Zbierz słońce i stuknij `Daj słonecznikowi`. W pogodny dzień 15–20 minut w pełnym słońcu wystarczy, by wyrównać całą dobę."
+      },
+      {
+        "q": "Byłem na dworze, ale nic się nie zapisało.",
+        "a": "Użyj `Dodaj czas na dworze` na dole ekranu głównego, aby dopisać od 5 do 120 minut. Jeśli w pochmurne dni pomiar nie chce ruszyć, obniż w ustawieniach próg dla dworu."
+      },
+      {
+        "q": "Jak działają znajomi?",
+        "a": "Gdy Ty i znajomy jesteście blisko siebie (w promieniu około 10 m) i oboje mierzycie słońce, łączycie się automatycznie. Z nową osobą trzeba najpierw potwierdzić wspólne łapanie słońca, potem dzieje się to samo. Płatki robią się kolorowe i w ciągu 3 dni wracają do swojego koloru, a wspólny czas zapisuje się w karcie Znajomi. Oboje potrzebujecie aplikacji oraz dostępu do Bluetooth i sieci lokalnej."
+      },
+      {
+        "q": "Czy to naprawdę za darmo?",
+        "a": "Tak. Bez reklam i zakupów, ze wszystkimi funkcjami. Jeśli aplikacja Ci się podoba, możesz zostawić napiwek, ale niczego dodatkowo nie odblokowuje."
+      },
+      {
+        "q": "Czy mogę zrobić kopię zapasową albo przenieść dane?",
+        "a": "Wszystko zostaje na urządzeniu, bez serwera, przechowywane są ostatnie 90 dni. Nie ma osobnego eksportu, ale dane są w zwykłej kopii zapasowej iPhone’a w iCloud lub na komputerze."
+      },
+      {
+        "q": "Jak usunąć wszystkie dane?",
+        "a": "W ustawieniach aplikacji stuknij `Resetuj dane` albo usuń aplikację. Tego nie da się cofnąć."
+      },
+      {
+        "q": "Gdzie zgłosić błąd?",
+        "a": "Napisz na adres poniżej albo załóż issue na GitHubie (github.com/M1zz/SunlightTracker/issues). Bardzo pomoże model urządzenia, wersja iOS i opis tego, co się stało. Zwykle odpowiadamy w ciągu kilku dni."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Zabierz dziś słonecznik\nna słońce",
+    "cta": "Pobierz za darmo"
+  },
+  "ui": {
+    "skip": "Przejdź do treści",
+    "languages": "Język",
+    "privacy": "Polityka prywatności",
+    "contact": "Pytania lub uwagi? Napisz na {email}."
+  }
+}

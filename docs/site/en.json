@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: log your time in the sun and grow a sunflower",
+  "description": "Head outside and your sun time adds up on its own, then use it to grow your own sunflower. Free, and your history stays on your device.",
+  "hero": {
+    "headline": "Grow a sunflower\nwith today's sunshine",
+    "lead": "Step outside and your sun time adds up by itself. Give the sunlight you collect to your sunflower to keep it thriving. Forget it for a few days and it starts to wilt.",
+    "cta": "Get it free on the App Store",
+    "note": "Every feature is free. Your history stays on your device."
+  },
+  "demo": {
+    "title": "Collect some sun",
+    "lead": "Pick how bright it is and for how long, soak it up, then give it to a sunflower that's starting to droop.",
+    "places": [
+      "Dim light",
+      "Outdoor/Cloudy",
+      "Sunlight",
+      "Strong sun"
+    ],
+    "minutes": "For {n} minutes",
+    "gain": "Sunlight collected",
+    "none": "This is too dim to count as outdoors, so nothing adds up",
+    "go": "Soak it up",
+    "give": "Give to sunflower",
+    "day": "Skip a day",
+    "energy": "Energy",
+    "states": [
+      "Thriving",
+      "Healthy",
+      "Wilting",
+      "Critical"
+    ],
+    "note": "The light levels here are examples. The app measures the actual light where you are."
+  },
+  "problem": {
+    "title": "How many minutes of sun did you actually get today?",
+    "text": "A few steps on the way to work, a quick lunch run. Spend the day indoors and you only realize in the evening that you barely saw daylight. Sunny Sunflower puts your outdoor time into numbers, and your sunflower is there waiting for tomorrow's walk."
+  },
+  "features": [
+    {
+      "title": "It measures on its own once you're out",
+      "text": "Tap `Go get some sun` and head outside. The app reads the brightness around you from the front camera's exposure data. Once the light stays outdoor-bright for about 30 seconds, tracking begins. No photos are ever taken or saved.\nAfter that, the sensor wakes for just 20 seconds every 2 minutes to save battery.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Keep a daily log of sun and mood",
+      "text": "In the calendar, each day gets its sun time, a mood emoji and a short note. Spent time outside without tracking it? Use `Add outdoor time` to add anywhere from 5 to 120 minutes.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "See your week and month at a glance",
+      "text": "Weekly and monthly stats show the days you hit your goal and your average sun time. Set a daily goal from 10 to 120 minutes and see right on the home screen how many more minutes you need today.\nWidgets on the Home Screen and Lock Screen, plus the Dynamic Island, show today's sun and how your sunflower is doing.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Three steps to start",
+    "items": [
+      {
+        "title": "Set a daily goal",
+        "text": "It starts at 30 minutes. Change it anywhere from 10 to 120 in Settings."
+      },
+      {
+        "title": "Head out into the sun",
+        "text": "Tap `Go get some sun` and keep the app open as you step outside. It asks for camera access once."
+      },
+      {
+        "title": "Feed your sunflower",
+        "text": "Tap `Give to sunflower` to turn the sunlight you collected into energy."
+      }
+    ]
+  },
+  "reference": {
+    "title": "How light turns into sunlight",
+    "rows": [
+      [
+        "Under 300 lux",
+        "Dim light: doesn't count as sun time"
+      ],
+      [
+        "300 to 1,000 lux",
+        "Outdoor/Cloudy: 1 to 3% per 10 minutes"
+      ],
+      [
+        "1,000 to 10,000 lux",
+        "Sunlight: 3 to 33% per 10 minutes"
+      ],
+      [
+        "10,000 lux and up",
+        "Strong sun: over 33% per 10 minutes"
+      ],
+      [
+        "Sunlight collected",
+        "minutes × average lux ÷ 3,000 (up to 100% per session)"
+      ],
+      [
+        "Sunflower energy",
+        "drops 2.5% an hour, about 60% a day"
+      ]
+    ],
+    "note": "You can set the outdoor threshold anywhere from 100 to 2,000 lux in Settings. The default is 300 lux."
+  },
+  "faq": {
+    "title": "Questions",
+    "items": [
+      {
+        "q": "How does it measure sunlight?",
+        "a": "It estimates the brightness around you from the front camera's exposure data. When the light stays outdoor-bright for a short while, tracking starts by itself. No photos are taken or saved."
+      },
+      {
+        "q": "Doesn't tracking drain my battery?",
+        "a": "Once sunlight is confirmed, the sensor doesn't stay on. It wakes for about 20 seconds every 2 minutes to re-check, and a simple timer covers the rest."
+      },
+      {
+        "q": "My sunflower keeps wilting.",
+        "a": "Your sunflower loses 2.5% of its energy every hour. Collect some sun, then tap `Give to sunflower`. On a clear day, 15 to 20 minutes in direct sun is enough to make up for a full day."
+      },
+      {
+        "q": "I was outside but nothing was logged.",
+        "a": "Use `Add outdoor time` at the bottom of the home screen to add 5 to 120 minutes. If tracking struggles to start on cloudy days, lower the outdoor threshold in Settings."
+      },
+      {
+        "q": "How does the friends feature work?",
+        "a": "When you and a friend are close (within about 10 m) and both tracking sunlight, you connect automatically. Someone new has to confirm sharing the sun first; after that it's automatic. Your petals turn colorful and fade back over 3 days, and your time together is saved in the Friends tab. Both of you need the app, plus Bluetooth and Local Network access."
+      },
+      {
+        "q": "Is it really free?",
+        "a": "Yes. No ads, no purchases, every feature included. If you like it you can leave a tip in the app, but tipping doesn't unlock anything extra."
+      },
+      {
+        "q": "Can I back up or move my history?",
+        "a": "Everything stays on your device with no server involved, and the last 90 days are kept. There's no separate export, but your history is included in your regular iCloud or computer backup."
+      },
+      {
+        "q": "How do I delete all my data?",
+        "a": "Go to Settings > Data > `Reset data` in the app, or delete the app. This can't be undone."
+      },
+      {
+        "q": "Where do I report a bug?",
+        "a": "Email us at the address below or open an issue at github.com/M1zz/SunlightTracker/issues. Your device model, iOS version and what happened help a lot. We usually reply within a few days."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Take your sunflower\nout for some sun today",
+    "cta": "Get it free on the App Store"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "languages": "Language",
+    "privacy": "Privacy Policy",
+    "contact": "Questions or feedback? Write to {email}."
+  }
+}

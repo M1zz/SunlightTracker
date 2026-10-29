@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nb">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunny Sunflower</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunny Sunflower: logg tiden i solen og la en solsikke vokse</title>
+  <meta name="description" content="Gå ut, så teller tiden i solen opp av seg selv, og solsikken din vokser. Gratis, og dataene blir på enheten.">
+  <meta name="theme-color" content="#B45309" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6758931631">
   <link rel="canonical" href="https://m1zz.github.io/SunlightTracker/nb/">
-<!--HREFLANG-->
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/SunlightTracker/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/SunlightTracker/en/">
   <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/SunlightTracker/zh-Hans/">
@@ -30,54 +33,143 @@
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/SunlightTracker/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/SunlightTracker/tr/">
   <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/SunlightTracker/">
-  <!--/HREFLANG-->
-  <link rel="stylesheet" href="../style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sunny Sunflower: logg tiden i solen og la en solsikke vokse">
+  <meta property="og:description" content="Gå ut, så teller tiden i solen opp av seg selv, og solsikken din vokser. Gratis, og dataene blir på enheten.">
+  <meta property="og:url" content="https://m1zz.github.io/SunlightTracker/nb/">
+  <meta property="og:image" content="https://m1zz.github.io/SunlightTracker/img/nb/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../sitegen.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B45309}@media (prefers-color-scheme:dark){:root{--accent:#FF9F0A}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="emoji">🌻</div>
-      <h1>Sunny Sunflower</h1>
-      <p class="tagline">Litt sol hver dag får solsikken din til å vokse (SunlightTracker)</p>
-    </header>
+  <a class="skip" href="#main">Gå til innholdet</a>
+  <header class="bar">
+    <a class="brand" href="../nb/"><img src="../icon.png" alt="" width="32" height="32">Sunny Sunflower</a>
+    <a class="lang-link" href="#languages">Språk</a>
+  </header>
 
-    <nav class="top">
-      <a href="privacy.html">Personvernerklæring</a>
-      <a href="support.html">Hjelp og kontakt</a>
-      <a href="https://github.com/M1zz/SunlightTracker">GitHub</a>
-    </nav>
-<!--LANGSWITCH-->
-    <nav class="langs"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb" aria-current="page">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-    <!--/LANGSWITCH-->
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Dagens sol<br>får solsikken din til å vokse</h1>
+        <p class="lead">Bare du går ut, teller tiden i solen opp av seg selv. Gi solsikken sollyset du har samlet, så blir den strålende. Glemmer du den noen dager, begynner den å visne.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6758931631">Last ned gratis</a><a class="try" href="#try">Samle litt sol ↓</a></div>
+        <p class="muted small">Alle funksjoner er gratis. Dataene blir på enheten din.</p>
+      </div>
+      <div class="phone"><img src="../img/nb/01-today.jpg" alt="Dagens sol får solsikken din til å vokse" width="600" height="1303" decoding="async"></div>
+    </section>
 
-    <div class="card">
-      <h2>Hva er dette for en app?</h2>
-      <p>
-        Sunny Sunflower er en iOS-app som bruker lysmålingen fra kameraet til å oppdage når du faktisk er ute i sola, og logger det automatisk.
-        Jo mer sol du får, desto mer lades batteriet, og den energien bruker du til å la din egen solsikke vokse.
-        Men glemmer du å stelle den, visner den. 🌱
-      </p>
-      <ul>
-        <li>☀️ Automatisk soldeteksjon og logging basert på lysstyrke</li>
-        <li>🌻 Lad batteriet og få solsikken til å vokse</li>
-        <li>📅 Se loggen i kalender og statistikk, og legg til humør og notater</li>
-        <li>👥 Sol sammen med venner i nærheten, og kronbladene får nye farger</li>
-        <li>📱 Widgeter på Hjem-skjermen, Live Activity på låseskjermen og Dynamic Island</li>
-      </ul>
-    </div>
 
-    <div class="card">
-      <h2>Hva med personvernet?</h2>
-      <span class="badge">Ingen server · alt blir liggende på enheten din</span>
-      <p>
-        Loggen din i Sunny Sunflower sendes aldri ut av enheten. Det eneste utvikleren mottar, er tilbakemeldinger du selv velger å sende.
-        Les mer i <a class="link" href="privacy.html">personvernerklæringen</a>.
-      </p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Samle litt sol</h2>
+      <p class="muted">Velg hvor lyst det er og hvor lenge, ta inn sol, og gi den til en solsikke som har begynt å henge med hodet.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Samle litt sol&quot;, &quot;lead&quot;: &quot;Velg hvor lyst det er og hvor lenge, ta inn sol, og gi den til en solsikke som har begynt å henge med hodet.&quot;, &quot;places&quot;: [&quot;Svakt lys&quot;, &quot;Ute/overskyet&quot;, &quot;Sol&quot;, &quot;Sterk sol&quot;], &quot;minutes&quot;: &quot;I {n} minutter&quot;, &quot;gain&quot;: &quot;Samlet sollys&quot;, &quot;none&quot;: &quot;Så svakt lys teller ikke som utendørs, så ingenting legges til&quot;, &quot;go&quot;: &quot;Ta inn sol&quot;, &quot;give&quot;: &quot;Gi til solsikken&quot;, &quot;day&quot;: &quot;Det går en dag&quot;, &quot;energy&quot;: &quot;Energi&quot;, &quot;states&quot;: [&quot;Strålende&quot;, &quot;Frisk&quot;, &quot;Visner&quot;, &quot;Kritisk&quot;], &quot;note&quot;: &quot;Lysnivåene her er eksempler. Appen måler det faktiske lyset der du er.&quot;}"></div>
+    </section>
 
-    <footer>
-      © 2026 Sunny Sunflower · <a class="link" href="mailto:leeo@kakao.com">leeo@kakao.com</a>
-    </footer>
-  </div>
+    <section class="problem reveal">
+      <h2>Hvor mange minutter sol fikk du i dag?</h2>
+      <p>Noen skritt på vei til jobb, en rask tur ut etter lunsj. Er du inne hele dagen, merker du først om kvelden at du nesten ikke har sett dagslys. Sunny Sunflower viser tiden din ute i tall, og solsikken venter på morgendagens tur.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Gå ut, så måler den selv</h2>
+        <p>Trykk på <code>Gå ut i solen</code> og gå ut. Appen anslår lysstyrken rundt deg ut fra eksponeringsdataene til frontkameraet. Når lyset holder seg på utendørsnivå i rundt 30 sekunder, starter loggingen. Det blir aldri tatt eller lagret bilder.<br>Deretter slår sensoren seg bare på i 20 sekunder hvert annet minutt for å spare batteri.</p>
+      </div>
+      <div class="phone"><img src="../img/nb/04-goal.jpg" alt="Gå ut, så måler den selv" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Sol og humør, dag for dag</h2>
+        <p>I kalenderen får hver dag sin tid i solen, en humør-emoji og et kort notat. Var du ute uten å måle? Med <code>Legg til tid ute</code> legger du til 5 til 120 minutter.</p>
+      </div>
+      <div class="phone"><img src="../img/nb/02-calendar.jpg" alt="Sol og humør, dag for dag" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Uke og måned med ett blikk</h2>
+        <p>Uke- og månedsstatistikk viser hvilke dager du nådde målet, og hvor mye sol du får i snitt. Sett et dagsmål på 10 til 120 minutter, og se rett på forsiden hvor mye som mangler i dag.<br>Widgeter på Hjem-skjermen og låseskjermen, og Dynamic Island, viser dagens sol og hvordan solsikken har det.</p>
+      </div>
+      <div class="phone"><img src="../img/nb/03-stats.jpg" alt="Uke og måned med ett blikk" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Kom i gang på tre steg</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Sett et dagsmål</h3><p>Det starter på 30 minutter. I innstillingene kan du velge 10 til 120.</p></li>
+<li class="card"><span class="n">2</span><h3>Gå ut i solen</h3><p>Trykk på <code>Gå ut i solen</code> og gå ut med appen åpen. Den spør bare én gang om tilgang til kameraet.</p></li>
+<li class="card"><span class="n">3</span><h3>Gi solsikken energi</h3><p>Trykk på <code>Gi til solsikken</code> for å gjøre det samlede sollyset om til energi.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Slik blir lys til sol</h2>
+      <div class="card table">
+        <dl><div><dt>Under 300 lux</dt><dd>Svakt lys: teller ikke som tid i solen</dd></div><div><dt>300–1000 lux</dt><dd>Ute/overskyet: 1–3 % per 10 minutter</dd></div><div><dt>1000–10 000 lux</dt><dd>Sol: 3–33 % per 10 minutter</dd></div><div><dt>Fra 10 000 lux</dt><dd>Sterk sol: over 33 % per 10 minutter</dd></div><div><dt>Samlet sollys</dt><dd>minutter × gjennomsnittlig lux ÷ 3000 (høyst 100 % per økt)</dd></div><div><dt>Solsikkens energi</dt><dd>synker 2,5 % i timen, rundt 60 % i døgnet</dd></div></dl>
+      </div>
+      <p class="muted">Grensen for utendørs kan settes mellom 100 og 2000 lux i innstillingene. Standard er 300 lux.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Spørsmål og svar</h2>
+      <div class="faq"><details><summary>Hvordan måler appen sol?</summary><p>Den anslår lysstyrken rundt deg (belysningsstyrken) ut fra eksponeringsdataene til frontkameraet. Når lyset holder seg på utendørsnivå en stund, starter loggingen av seg selv. Det blir ikke tatt eller lagret bilder.</p></details>
+<details><summary>Bruker det mye batteri?</summary><p>Når solen er bekreftet, står ikke sensoren på hele tiden. Den våkner i rundt 20 sekunder hvert annet minutt for å måle på nytt, og en enkel tidtaker tar seg av resten.</p></details>
+<details><summary>Solsikken min visner hele tiden.</summary><p>Solsikken mister 2,5 % energi i timen. Samle sol og trykk på <code>Gi til solsikken</code>. En klar dag holder 15 til 20 minutter i direkte sol til å dekke et helt døgn.</p></details>
+<details><summary>Jeg var ute, men ingenting ble logget.</summary><p>Bruk <code>Legg til tid ute</code> nederst på forsiden for å legge til 5 til 120 minutter. Hvis loggingen har vanskelig for å starte på overskyede dager, kan du senke grensen for utendørs i innstillingene.</p></details>
+<details><summary>Hvordan fungerer vennefunksjonen?</summary><p>Når du og en venn er nær hverandre (innen rundt 10 m) og begge måler sol, kobler dere til automatisk. Med en ny person må dere først bekrefte at dere tar sol sammen, deretter skjer det av seg selv. Kronbladene blir fargerike og får tilbake sin egen farge i løpet av 3 dager, og tiden deres sammen lagres i Venner-fanen. Begge trenger appen og tilgang til Bluetooth og lokalt nettverk.</p></details>
+<details><summary>Er det virkelig gratis?</summary><p>Ja. Ingen reklame, ingen kjøp, alle funksjoner er med. Liker du appen, kan du gi tips, men det låser ikke opp noe ekstra.</p></details>
+<details><summary>Kan jeg ta sikkerhetskopi eller flytte dataene mine?</summary><p>Alt blir på enheten uten server, og de siste 90 dagene lagres. Det finnes ingen egen eksport, men dataene er med i den vanlige iPhone-sikkerhetskopien i iCloud eller på datamaskinen.</p></details>
+<details><summary>Hvordan sletter jeg alle data?</summary><p>Trykk på <code>Nullstill data</code> i appens innstillinger, eller slett appen. Det kan ikke angres.</p></details>
+<details><summary>Hvor melder jeg fra om feil?</summary><p>Skriv til adressen nedenfor, eller opprett en issue på GitHub (github.com/M1zz/SunlightTracker/issues). Enhetsmodell, iOS-versjon og hva som skjedde hjelper mye. Vi svarer vanligvis i løpet av noen dager.</p></details></div>
+      <p class="contact">Spørsmål eller tilbakemeldinger? Skriv til <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Ta med solsikken<br>ut i solen i dag</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6758931631">Last ned gratis</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Språk"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb" aria-current="page">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Personvernerklæring</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Sunny Sunflower</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

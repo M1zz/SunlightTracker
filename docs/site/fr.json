@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower : notez votre temps au soleil et faites pousser un tournesol",
+  "description": "Sortez, et votre temps au soleil s'additionne tout seul pour faire pousser votre tournesol. Gratuit, vos données restent sur l'appareil.",
+  "hero": {
+    "headline": "Le soleil d'aujourd'hui\nfait pousser votre tournesol",
+    "lead": "Dès que vous sortez, votre temps au soleil se compte tout seul. Donnez le soleil récolté à votre tournesol et il resplendit. Oubliez-le quelques jours et il commence à se faner.",
+    "cta": "Télécharger gratuitement",
+    "note": "Toutes les fonctions sont gratuites. Vos données restent sur votre appareil."
+  },
+  "demo": {
+    "title": "Récoltez un peu de soleil",
+    "lead": "Choisissez la luminosité et la durée, prenez le soleil, puis donnez-le à un tournesol qui commence à piquer du nez.",
+    "places": [
+      "Lumière faible",
+      "Dehors / nuageux",
+      "Soleil",
+      "Plein soleil"
+    ],
+    "minutes": "Pendant {n} min",
+    "gain": "Soleil récolté",
+    "none": "Trop sombre pour compter comme dehors : rien ne s'ajoute",
+    "go": "Prendre le soleil",
+    "give": "Donner au tournesol",
+    "day": "Un jour passe",
+    "energy": "Énergie",
+    "states": [
+      "Resplendissant",
+      "En forme",
+      "Se fane",
+      "En danger"
+    ],
+    "note": "Les niveaux de lumière sont des exemples. L'app mesure la lumière réelle là où vous êtes."
+  },
+  "problem": {
+    "title": "Combien de minutes de soleil avez-vous pris aujourd'hui ?",
+    "text": "Quelques pas pour aller au travail, une sortie rapide à midi. Quand on passe la journée à l'intérieur, on se rend compte le soir qu'on n'a presque pas vu la lumière du jour. Sunny Sunflower traduit votre temps dehors en chiffres, et votre tournesol attend la balade de demain."
+  },
+  "features": [
+    {
+      "title": "Sortez, il mesure tout seul",
+      "text": "Touchez `Aller prendre le soleil` et sortez. L'app estime la luminosité autour de vous grâce aux données d'exposition de la caméra avant. Quand la lumière reste aussi forte que dehors pendant une trentaine de secondes, l'enregistrement démarre. Aucune photo n'est prise ni enregistrée.\nEnsuite, le capteur ne s'allume que 20 secondes toutes les 2 minutes pour économiser la batterie.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Soleil et humeur, jour après jour",
+      "text": "Dans le calendrier, chaque jour garde son temps au soleil, un emoji d'humeur et une petite note. Vous étiez dehors sans enregistrer ? Avec `Ajouter du temps dehors`, ajoutez de 5 à 120 minutes.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Votre semaine et votre mois d'un coup d'œil",
+      "text": "Les statistiques hebdomadaires et mensuelles montrent les jours où vous avez atteint votre objectif et votre moyenne au soleil. Fixez un objectif quotidien de 10 à 120 minutes et voyez sur l'écran principal combien il vous reste aujourd'hui.\nLes widgets de l'écran d'accueil et de l'écran verrouillé, ainsi que la Dynamic Island, affichent le soleil du jour et l'état de votre tournesol.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Trois étapes pour commencer",
+    "items": [
+      {
+        "title": "Fixez votre objectif",
+        "text": "Il est de 30 minutes au départ. Réglez-le entre 10 et 120 dans les réglages."
+      },
+      {
+        "title": "Sortez au soleil",
+        "text": "Touchez `Aller prendre le soleil` et sortez avec l'app ouverte. L'accès à la caméra n'est demandé qu'une fois."
+      },
+      {
+        "title": "Nourrissez le tournesol",
+        "text": "Touchez `Donner au tournesol` pour transformer le soleil récolté en énergie."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Comment la lumière devient du soleil",
+    "rows": [
+      [
+        "Moins de 300 lux",
+        "Lumière faible : ne compte pas comme temps au soleil"
+      ],
+      [
+        "De 300 à 1 000 lux",
+        "Dehors / nuageux : 1 à 3 % toutes les 10 minutes"
+      ],
+      [
+        "De 1 000 à 10 000 lux",
+        "Soleil : 3 à 33 % toutes les 10 minutes"
+      ],
+      [
+        "À partir de 10 000 lux",
+        "Plein soleil : plus de 33 % toutes les 10 minutes"
+      ],
+      [
+        "Soleil récolté",
+        "minutes × lux moyens ÷ 3 000 (100 % au maximum par séance)"
+      ],
+      [
+        "Énergie du tournesol",
+        "baisse de 2,5 % par heure, environ 60 % par jour"
+      ]
+    ],
+    "note": "Le seuil « dehors » se règle entre 100 et 2 000 lux dans les réglages. Par défaut, il est de 300 lux."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "q": "Comment le soleil est-il mesuré ?",
+        "a": "L'app estime la luminosité autour de vous (l'éclairement) grâce aux données d'exposition de la caméra avant. Quand la lumière reste aussi forte que dehors un petit moment, l'enregistrement démarre tout seul. Aucune photo n'est prise ni enregistrée."
+      },
+      {
+        "q": "Est-ce que ça vide la batterie ?",
+        "a": "Une fois le soleil confirmé, le capteur ne reste pas allumé : il se réveille environ 20 secondes toutes les 2 minutes pour vérifier, et un simple minuteur fait le reste."
+      },
+      {
+        "q": "Mon tournesol fane sans arrêt.",
+        "a": "Le tournesol perd 2,5 % d'énergie par heure. Récoltez du soleil puis touchez `Donner au tournesol`. Par temps clair, 15 à 20 minutes en plein soleil suffisent à compenser une journée entière."
+      },
+      {
+        "q": "J'étais dehors mais rien n'a été enregistré.",
+        "a": "Utilisez `Ajouter du temps dehors`, en bas de l'écran principal, pour ajouter de 5 à 120 minutes. Si l'enregistrement a du mal à démarrer par temps couvert, baissez le seuil « dehors » dans les réglages."
+      },
+      {
+        "q": "Comment fonctionne la fonction amis ?",
+        "a": "Si vous êtes proches (à 10 m environ) et que vous mesurez tous les deux le soleil, vous êtes connectés automatiquement. Avec une nouvelle personne, il faut d'abord confirmer que vous prenez le soleil ensemble ; ensuite c'est automatique. Vos pétales se colorent puis retrouvent leur couleur en 3 jours, et votre temps partagé s'affiche dans l'onglet Amis. Vous avez besoin tous les deux de l'app et d'autoriser l'accès au Bluetooth et au réseau local."
+      },
+      {
+        "q": "C'est vraiment gratuit ?",
+        "a": "Oui. Ni publicité ni achat, toutes les fonctions sont incluses. Si l'app vous plaît, vous pouvez laisser un pourboire, mais il ne débloque rien de plus."
+      },
+      {
+        "q": "Puis-je sauvegarder ou transférer mes données ?",
+        "a": "Tout reste sur votre appareil, sans serveur, et les 90 derniers jours sont conservés. Il n'y a pas d'export séparé, mais vos données sont incluses dans la sauvegarde habituelle de l'iPhone sur iCloud ou sur ordinateur."
+      },
+      {
+        "q": "Comment tout effacer ?",
+        "a": "Dans les réglages de l'app, touchez `Réinitialiser les données`, ou supprimez l'app. C'est définitif."
+      },
+      {
+        "q": "Où signaler un bug ?",
+        "a": "Écrivez à l'adresse ci-dessous ou ouvrez une issue sur GitHub (github.com/M1zz/SunlightTracker/issues). Le modèle de l'appareil, la version d'iOS et ce qui s'est passé nous aident beaucoup. Nous répondons généralement sous quelques jours."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Emmenez votre tournesol\nprendre le soleil aujourd'hui",
+    "cta": "Télécharger gratuitement"
+  },
+  "ui": {
+    "skip": "Aller au contenu",
+    "languages": "Langue",
+    "privacy": "Politique de confidentialité",
+    "contact": "Une question, une idée ? Écrivez à {email}."
+  }
+}

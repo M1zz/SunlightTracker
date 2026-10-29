@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunny Sunflower</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunny Sunflower: kirjaa aurinkoaikasi ja kasvata auringonkukka</title>
+  <meta name="description" content="Mene ulos, niin aurinkoaika kertyy itsestään ja kasvattaa oman auringonkukkasi. Ilmainen, ja tiedot pysyvät laitteellasi.">
+  <meta name="theme-color" content="#B45309" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6758931631">
   <link rel="canonical" href="https://m1zz.github.io/SunlightTracker/fi/">
-<!--HREFLANG-->
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/SunlightTracker/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/SunlightTracker/en/">
   <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/SunlightTracker/zh-Hans/">
@@ -30,54 +33,143 @@
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/SunlightTracker/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/SunlightTracker/tr/">
   <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/SunlightTracker/">
-  <!--/HREFLANG-->
-  <link rel="stylesheet" href="../style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sunny Sunflower: kirjaa aurinkoaikasi ja kasvata auringonkukka">
+  <meta property="og:description" content="Mene ulos, niin aurinkoaika kertyy itsestään ja kasvattaa oman auringonkukkasi. Ilmainen, ja tiedot pysyvät laitteellasi.">
+  <meta property="og:url" content="https://m1zz.github.io/SunlightTracker/fi/">
+  <meta property="og:image" content="https://m1zz.github.io/SunlightTracker/img/fi/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../sitegen.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B45309}@media (prefers-color-scheme:dark){:root{--accent:#FF9F0A}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="emoji">🌻</div>
-      <h1>Sunny Sunflower</h1>
-      <p class="tagline">Kourallinen aurinkoa päivässä kasvattaa oman auringonkukkasi</p>
-    </header>
+  <a class="skip" href="#main">Siirry sisältöön</a>
+  <header class="bar">
+    <a class="brand" href="../fi/"><img src="../icon.png" alt="" width="32" height="32">Sunny Sunflower</a>
+    <a class="lang-link" href="#languages">Kieli</a>
+  </header>
 
-    <nav class="top">
-      <a href="privacy.html">Tietosuojakäytäntö</a>
-      <a href="support.html">Tuki ja yhteydenotot</a>
-      <a href="https://github.com/M1zz/SunlightTracker">GitHub</a>
-    </nav>
-<!--LANGSWITCH-->
-    <nav class="langs"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi" aria-current="page">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-    <!--/LANGSWITCH-->
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Tämän päivän aurinko<br>kasvattaa auringonkukkasi</h1>
+        <p class="lead">Kun menet ulos, aurinkoaika kertyy itsestään. Anna kerätty aurinko auringonkukalle, niin se pysyy hehkeänä. Jos unohdat sen muutamaksi päiväksi, se alkaa kuihtua.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6758931631">Lataa ilmaiseksi</a><a class="try" href="#try">Kerää vähän aurinkoa ↓</a></div>
+        <p class="muted small">Kaikki ominaisuudet ovat ilmaisia. Tiedot pysyvät laitteellasi.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/01-today.jpg" alt="Tämän päivän aurinko kasvattaa auringonkukkasi" width="600" height="1303" decoding="async"></div>
+    </section>
 
-    <div class="card">
-      <h2>Mikä sovellus tämä on?</h2>
-      <p>
-        Sunny Sunflower on iOS-sovellus, joka tunnistaa kameran valoisuusmittauksen avulla automaattisesti, milloin olet oikeassa auringonvalossa, ja kirjaa sen.
-        Mitä enemmän saat aurinkoa, sitä enemmän akku latautuu – ja sillä energialla kasvatat omaa auringonkukkaasi.
-        Jos et hoida sitä, se nuutuu. 🌱
-      </p>
-      <ul>
-        <li>☀️ Auringonvalon automaattinen tunnistus ja kirjaus valoisuuden perusteella</li>
-        <li>🌻 Lataa akku → kasvata auringonkukka</li>
-        <li>📅 Seuraa kirjauksia kalenterista ja tilastoista, lisää mieliala ja muistiinpanoja</li>
-        <li>👥 Kun otatte aurinkoa ystävän kanssa lähekkäin, terälehdet saavat kirjavat värit</li>
-        <li>📱 Widgetit kotinäytöllä, Live Activities -toiminnot lukitusnäytöllä ja Dynamic Island</li>
-      </ul>
-    </div>
 
-    <div class="card">
-      <h2>Entä tietosuoja?</h2>
-      <span class="badge">Ei palvelinta · kaikki kirjaukset pysyvät vain omalla laitteellasi</span>
-      <p>
-        Sunny Sunflowerin kirjauksia ei lähetetä minnekään. Kehittäjälle päätyy vain palaute, jonka itse lähetät.
-        Lisätietoja löydät <a class="link" href="privacy.html">tietosuojakäytännöstä</a>.
-      </p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Kerää vähän aurinkoa</h2>
+      <p class="muted">Valitse valon määrä ja kesto, ota aurinkoa ja anna se auringonkukalle, joka alkaa jo nuokkua.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Kerää vähän aurinkoa&quot;, &quot;lead&quot;: &quot;Valitse valon määrä ja kesto, ota aurinkoa ja anna se auringonkukalle, joka alkaa jo nuokkua.&quot;, &quot;places&quot;: [&quot;Heikko valo&quot;, &quot;Ulkona/pilvistä&quot;, &quot;Aurinkoa&quot;, &quot;Kirkas aurinko&quot;], &quot;minutes&quot;: &quot;{n} minuuttia&quot;, &quot;gain&quot;: &quot;Kerätty aurinko&quot;, &quot;none&quot;: &quot;Näin heikkoa valoa ei lasketa ulkotilaksi, joten mitään ei kerry&quot;, &quot;go&quot;: &quot;Ota aurinkoa&quot;, &quot;give&quot;: &quot;Anna auringonkukalle&quot;, &quot;day&quot;: &quot;Päivä kuluu&quot;, &quot;energy&quot;: &quot;Energia&quot;, &quot;states&quot;: [&quot;Hehkeä&quot;, &quot;Terve&quot;, &quot;Kuihtuu&quot;, &quot;Vaarassa&quot;], &quot;note&quot;: &quot;Valon määrät ovat esimerkkejä. Sovellus mittaa todellisen valon siellä, missä olet.&quot;}"></div>
+    </section>
 
-    <footer>
-      © 2026 Sunny Sunflower · <a class="link" href="mailto:leeo@kakao.com">leeo@kakao.com</a>
-    </footer>
-  </div>
+    <section class="problem reveal">
+      <h2>Montako minuuttia aurinkoa sait tänään?</h2>
+      <p>Muutama askel töihin, pikainen lounaskäynti. Kun vietät päivän sisällä, huomaat vasta illalla, ettet juuri nähnyt päivänvaloa. Sunny Sunflower näyttää ulkona vietetyn ajan lukuina, ja auringonkukka odottaa jo huomista kävelyä.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Mene ulos, se mittaa itse</h2>
+        <p>Napauta <code>Mene auringonvaloon</code> ja lähde ulos. Sovellus arvioi ympäristön valoisuuden etukameran valotustiedoista. Kun valo pysyy ulkotason kirkkaana noin 30 sekuntia, kirjaus alkaa. Kuvia ei koskaan oteta eikä tallenneta.<br>Sen jälkeen anturi käynnistyy vain 20 sekunniksi kahden minuutin välein akkua säästääkseen.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/04-goal.jpg" alt="Mene ulos, se mittaa itse" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Aurinko ja mieliala päivä päivältä</h2>
+        <p>Kalenterissa jokaisella päivällä on oma aurinkoaikansa, mieliala-emoji ja lyhyt muistiinpano. Olitko ulkona mittaamatta? <code>Lisää ulkoaika itse</code> lisää 5–120 minuuttia.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/02-calendar.jpg" alt="Aurinko ja mieliala päivä päivältä" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Viikko ja kuukausi yhdellä silmäyksellä</h2>
+        <p>Viikko- ja kuukausitilastot näyttävät, minä päivinä saavutit tavoitteen ja paljonko aurinkoa saat keskimäärin. Aseta päivätavoite 10–120 minuuttiin ja näe heti etusivulta, paljonko tänään vielä puuttuu.<br>Koti- ja lukitusnäytön widgetit sekä Dynamic Island näyttävät päivän auringon ja auringonkukan voinnin.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/03-stats.jpg" alt="Viikko ja kuukausi yhdellä silmäyksellä" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Aloita kolmella askeleella</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Aseta päivätavoite</h3><p>Oletus on 30 minuuttia. Asetuksista voit valita 10–120.</p></li>
+<li class="card"><span class="n">2</span><h3>Mene aurinkoon</h3><p>Napauta <code>Mene auringonvaloon</code> ja mene ulos sovellus auki. Kameran käyttöoikeutta kysytään vain kerran.</p></li>
+<li class="card"><span class="n">3</span><h3>Ruoki auringonkukka</h3><p>Napauta <code>Anna auringonkukalle</code>, niin kerätty aurinko muuttuu energiaksi.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Näin valo muuttuu auringoksi</h2>
+      <div class="card table">
+        <dl><div><dt>Alle 300 luksia</dt><dd>Heikko valo: ei laske aurinkoajaksi</dd></div><div><dt>300–1 000 luksia</dt><dd>Ulkona/pilvistä: 1–3 % 10 minuutissa</dd></div><div><dt>1 000–10 000 luksia</dt><dd>Aurinkoa: 3–33 % 10 minuutissa</dd></div><div><dt>Yli 10 000 luksia</dt><dd>Kirkas aurinko: yli 33 % 10 minuutissa</dd></div><div><dt>Kerätty aurinko</dt><dd>minuutit × keskimääräinen valoisuus ÷ 3 000 (enintään 100 % kerrallaan)</dd></div><div><dt>Auringonkukan energia</dt><dd>laskee 2,5 % tunnissa, noin 60 % vuorokaudessa</dd></div></dl>
+      </div>
+      <p class="muted">Ulkotilan rajan voi asettaa 100–2 000 luksiin asetuksista. Oletus on 300 luksia.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Usein kysyttyä</h2>
+      <div class="faq"><details><summary>Miten aurinkoa mitataan?</summary><p>Sovellus arvioi ympäristön valoisuuden (valaistusvoimakkuuden) etukameran valotustiedoista. Kun valo pysyy hetken ulkotason kirkkaana, kirjaus alkaa itsestään. Kuvia ei oteta eikä tallenneta.</p></details>
+<details><summary>Kuluttaako mittaus paljon akkua?</summary><p>Kun aurinko on varmistettu, anturi ei ole jatkuvasti päällä. Se herää noin 20 sekunniksi kahden minuutin välein mittaamaan uudelleen, ja muun ajan hoitaa tavallinen ajastin.</p></details>
+<details><summary>Auringonkukkani kuihtuu jatkuvasti.</summary><p>Auringonkukka menettää 2,5 % energiastaan tunnissa. Kerää aurinkoa ja napauta <code>Anna auringonkukalle</code>. Selkeänä päivänä 15–20 minuuttia suorassa auringossa riittää kattamaan koko päivän.</p></details>
+<details><summary>Olin ulkona, mutta mitään ei kirjattu.</summary><p>Lisää 5–120 minuuttia etusivun alalaidan kohdasta <code>Lisää ulkoaika itse</code>. Jos kirjaus ei pilvisinä päivinä tahdo käynnistyä, laske ulkotilan rajaa asetuksista.</p></details>
+<details><summary>Miten ystävätoiminto toimii?</summary><p>Kun sinä ja ystäväsi olette lähellä toisianne (noin 10 metrin sisällä) ja mittaatte molemmat aurinkoa, yhteys syntyy itsestään. Uuden ihmisen kanssa yhteinen auringonotto pitää ensin vahvistaa, sen jälkeen kaikki käy automaattisesti. Terälehdet värittyvät ja palaavat omaan väriinsä 3 päivän kuluessa, ja yhteinen aikanne tallentuu Ystävät-välilehdelle. Molemmat tarvitsevat sovelluksen sekä Bluetoothin ja paikallisverkon käyttöoikeuden.</p></details>
+<details><summary>Onko tämä oikeasti ilmainen?</summary><p>On. Ei mainoksia eikä ostoja, kaikki ominaisuudet mukana. Jos pidät sovelluksesta, voit jättää tipin, mutta se ei avaa mitään lisää.</p></details>
+<details><summary>Voinko varmuuskopioida tai siirtää tietoni?</summary><p>Kaikki pysyy laitteella ilman palvelinta, ja viimeiset 90 päivää säilytetään. Erillistä vientiä ei ole, mutta tiedot sisältyvät tavalliseen iPhonen varmuuskopioon iCloudissa tai tietokoneella.</p></details>
+<details><summary>Miten poistan kaikki tiedot?</summary><p>Napauta sovelluksen asetuksissa <code>Nollaa tiedot</code> tai poista sovellus. Toimintoa ei voi perua.</p></details>
+<details><summary>Mihin ilmoitan virheestä?</summary><p>Kirjoita alla olevaan osoitteeseen tai avaa issue GitHubissa (github.com/M1zz/SunlightTracker/issues). Laitteen malli, iOS-versio ja kuvaus tapahtuneesta auttavat paljon. Vastaamme yleensä muutamassa päivässä.</p></details></div>
+      <p class="contact">Kysyttävää tai palautetta? Kirjoita osoitteeseen <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Vie auringonkukkasi<br>tänään aurinkoon</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6758931631">Lataa ilmaiseksi</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Kieli"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi" aria-current="page">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Tietosuojakäytäntö</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Sunny Sunflower</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

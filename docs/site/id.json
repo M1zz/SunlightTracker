@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: catat waktu berjemur dan rawat bunga matahari",
+  "description": "Keluar rumah dan waktu berjemur terkumpul sendiri untuk merawat bunga mataharimu. Gratis, dan catatan tetap di perangkatmu.",
+  "hero": {
+    "headline": "Sinar matahari hari ini\nmembuat bungamu tumbuh",
+    "lead": "Cukup keluar rumah, waktu berjemur terkumpul sendiri. Berikan sinar yang terkumpul ke bunga matahari supaya tetap segar. Kalau terlupa beberapa hari, bunganya mulai layu.",
+    "cta": "Unduh gratis",
+    "note": "Semua fitur gratis. Catatan tersimpan di perangkatmu saja."
+  },
+  "demo": {
+    "title": "Coba kumpulkan sinar",
+    "lead": "Pilih seberapa terang dan berapa lama, berjemur, lalu berikan ke bunga matahari yang mulai layu.",
+    "places": [
+      "Cahaya redup",
+      "Luar ruangan/berawan",
+      "Sinar matahari",
+      "Matahari terik"
+    ],
+    "minutes": "Selama {n} menit",
+    "gain": "Sinar terkumpul",
+    "none": "Cahaya seredup ini tidak dihitung sebagai luar ruangan, jadi tidak ada yang terkumpul",
+    "go": "Berjemur",
+    "give": "Beri ke bunga matahari",
+    "day": "Lewati sehari",
+    "energy": "Energi",
+    "states": [
+      "Segar",
+      "Sehat",
+      "Layu",
+      "Bahaya"
+    ],
+    "note": "Tingkat cahaya di sini hanya contoh. Aplikasi mengukur cahaya sebenarnya di tempatmu."
+  },
+  "problem": {
+    "title": "Hari ini kamu kena matahari berapa menit?",
+    "text": "Beberapa langkah ke kantor, keluar sebentar beli makan siang. Kalau seharian di dalam ruangan, baru sadar malam harinya bahwa hampir tidak kena sinar matahari. Sunny Sunflower menunjukkan waktumu di luar dalam angka, dan bunga mataharimu menunggu jalan-jalan besok."
+  },
+  "features": [
+    {
+      "title": "Keluar saja, langsung terukur",
+      "text": "Ketuk `Yuk, berjemur` lalu keluar. Aplikasi memperkirakan terang di sekitarmu dari data eksposur kamera depan. Begitu cahaya bertahan seterang luar ruangan sekitar 30 detik, pencatatan dimulai. Tidak pernah mengambil atau menyimpan foto.\nSetelah itu sensor hanya menyala 20 detik setiap 2 menit agar hemat baterai.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Catat sinar dan suasana hati setiap hari",
+      "text": "Di kalender, setiap hari punya waktu berjemur, emoji suasana hati, dan catatan singkat. Sempat di luar tapi tidak terukur? Pakai `Tambah waktu di luar ruangan` untuk menambah 5 sampai 120 menit.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Seminggu dan sebulan dalam sekali lihat",
+      "text": "Statistik mingguan dan bulanan menunjukkan hari-hari target tercapai dan rata-rata waktu berjemurmu. Atur target harian 10 sampai 120 menit dan lihat langsung di layar utama berapa menit lagi yang kurang hari ini.\nWidget di Layar Utama dan Layar Terkunci, juga Dynamic Island, menampilkan sinar hari ini dan kondisi bungamu.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Mulai dalam tiga langkah",
+    "items": [
+      {
+        "title": "Atur target harian",
+        "text": "Awalnya 30 menit. Di Pengaturan bisa diubah antara 10 dan 120."
+      },
+      {
+        "title": "Keluar dan berjemur",
+        "text": "Ketuk `Yuk, berjemur` dan biarkan aplikasi terbuka saat keluar. Izin kamera hanya diminta sekali."
+      },
+      {
+        "title": "Beri ke bunga",
+        "text": "Ketuk `Beri ke bunga matahari` untuk mengubah sinar terkumpul menjadi energi."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Bagaimana cahaya jadi sinar terkumpul",
+    "rows": [
+      [
+        "Di bawah 300 lux",
+        "Cahaya redup: tidak dihitung sebagai waktu berjemur"
+      ],
+      [
+        "300–1.000 lux",
+        "Luar ruangan/berawan: 1–3% per 10 menit"
+      ],
+      [
+        "1.000–10.000 lux",
+        "Sinar matahari: 3–33% per 10 menit"
+      ],
+      [
+        "10.000 lux ke atas",
+        "Matahari terik: lebih dari 33% per 10 menit"
+      ],
+      [
+        "Sinar terkumpul",
+        "menit × rata-rata lux ÷ 3.000 (maksimal 100% sekali catat)"
+      ],
+      [
+        "Energi bunga matahari",
+        "turun 2,5% per jam, sekitar 60% sehari"
+      ]
+    ],
+    "note": "Batas luar ruangan bisa diatur antara 100 dan 2.000 lux di Pengaturan. Bawaannya 300 lux."
+  },
+  "faq": {
+    "title": "Pertanyaan umum",
+    "items": [
+      {
+        "q": "Bagaimana sinar matahari diukur?",
+        "a": "Aplikasi memperkirakan terang di sekitarmu (iluminansi) dari data eksposur kamera depan. Kalau cahaya bertahan seterang luar ruangan sebentar, pencatatan dimulai sendiri. Tidak ada foto yang diambil atau disimpan."
+      },
+      {
+        "q": "Apakah boros baterai?",
+        "a": "Setelah sinar matahari terkonfirmasi, sensor tidak menyala terus. Sensor bangun sekitar 20 detik setiap 2 menit untuk mengukur ulang, sisanya cukup dihitung dengan timer."
+      },
+      {
+        "q": "Bunga matahariku sering layu.",
+        "a": "Bunga matahari kehilangan 2,5% energi setiap jam. Kumpulkan sinar lalu ketuk `Beri ke bunga matahari`. Saat cerah, 15–20 menit di bawah matahari langsung cukup untuk menutup kebutuhan sehari."
+      },
+      {
+        "q": "Aku di luar tapi tidak tercatat.",
+        "a": "Pakai `Tambah waktu di luar ruangan` di bagian bawah layar utama untuk menambah 5 sampai 120 menit. Kalau saat mendung pencatatan sulit dimulai, turunkan batas luar ruangan di Pengaturan."
+      },
+      {
+        "q": "Bagaimana fitur teman bekerja?",
+        "a": "Kalau kamu dan teman berdekatan (sekitar 10 m) dan sama-sama sedang mengukur sinar, kalian terhubung otomatis. Dengan orang baru, kalian perlu mengonfirmasi berjemur bersama dulu, setelah itu otomatis. Kelopak bunga jadi warna-warni lalu kembali ke warna asal dalam 3 hari, dan waktu bersama tersimpan di tab Teman. Keduanya perlu aplikasi ini serta izin Bluetooth dan jaringan lokal."
+      },
+      {
+        "q": "Benar-benar gratis?",
+        "a": "Ya. Tanpa iklan dan tanpa pembelian, semua fitur bisa dipakai. Kalau suka, kamu bisa memberi tip di aplikasi, tapi tip tidak membuka fitur tambahan."
+      },
+      {
+        "q": "Bisakah catatan dicadangkan atau dipindahkan?",
+        "a": "Semuanya tersimpan di perangkat tanpa server, dan 90 hari terakhir disimpan. Tidak ada fitur ekspor tersendiri, tapi catatanmu ikut dalam cadangan iPhone biasa di iCloud atau komputer."
+      },
+      {
+        "q": "Bagaimana menghapus semua data?",
+        "a": "Di pengaturan aplikasi, ketuk `Reset data`, atau hapus aplikasinya. Tindakan ini tidak bisa dibatalkan."
+      },
+      {
+        "q": "Ke mana melaporkan masalah?",
+        "a": "Kirim email ke alamat di bawah atau buka issue di GitHub (github.com/M1zz/SunlightTracker/issues). Sebutkan model perangkat, versi iOS, dan apa yang terjadi agar lebih mudah dicek. Biasanya kami membalas dalam beberapa hari."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Ajak bunga mataharimu\nberjemur hari ini",
+    "cta": "Unduh gratis"
+  },
+  "ui": {
+    "skip": "Langsung ke konten",
+    "languages": "Bahasa",
+    "privacy": "Kebijakan Privasi",
+    "contact": "Ada pertanyaan atau masukan? Kirim ke {email}."
+  }
+}

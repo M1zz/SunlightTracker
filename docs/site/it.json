@@ -1,0 +1,153 @@
+{
+  "title": "Sunny Sunflower: registra il tempo al sole e fai crescere un girasole",
+  "description": "Esci e il tempo al sole si accumula da solo, facendo crescere il tuo girasole. Gratis, e i dati restano sul tuo dispositivo.",
+  "hero": {
+    "headline": "Il sole di oggi\nfa crescere il tuo girasole",
+    "lead": "Appena esci, il tempo al sole si conta da solo. Dai al girasole il sole raccolto e diventa rigoglioso. Se te ne dimentichi per qualche giorno, comincia ad appassire.",
+    "cta": "Scaricala gratis",
+    "note": "Tutte le funzioni sono gratuite. I dati restano sul tuo dispositivo."
+  },
+  "demo": {
+    "title": "Raccogli un po' di sole",
+    "lead": "Scegli quanta luce c'è e per quanto tempo, prendi il sole e dallo a un girasole che sta già piegando la testa.",
+    "places": [
+      "Luce debole",
+      "Esterno/nuvoloso",
+      "Sole",
+      "Sole forte"
+    ],
+    "minutes": "Per {n} minuti",
+    "gain": "Sole raccolto",
+    "none": "Con così poca luce non conta come esterno, quindi non si accumula nulla",
+    "go": "Prendi il sole",
+    "give": "Dai al girasole",
+    "day": "Passa un giorno",
+    "energy": "Energia",
+    "states": [
+      "Rigoglioso",
+      "In salute",
+      "Appassito",
+      "A rischio"
+    ],
+    "note": "I livelli di luce sono esempi. L'app misura la luce reale nel punto in cui ti trovi."
+  },
+  "problem": {
+    "title": "Quanti minuti di sole hai preso oggi?",
+    "text": "Due passi per andare al lavoro, una pausa pranzo veloce. Se passi la giornata al chiuso, ti accorgi solo la sera di aver visto a malapena la luce del giorno. Sunny Sunflower trasforma il tempo all'aperto in numeri, e il tuo girasole ti aspetta per la passeggiata di domani."
+  },
+  "features": [
+    {
+      "title": "Esci e misura da sola",
+      "text": "Tocca `Vai a prendere il sole` ed esci. L'app stima la luminosità intorno a te dai dati di esposizione della fotocamera anteriore. Quando la luce resta da esterno per circa 30 secondi, inizia la registrazione. Non scatta né salva mai foto.\nDopo, il sensore si accende solo 20 secondi ogni 2 minuti per risparmiare batteria.",
+      "shot": "04-goal"
+    },
+    {
+      "title": "Sole e umore, giorno per giorno",
+      "text": "Nel calendario ogni giorno ha il suo tempo al sole, un'emoji dell'umore e una breve nota. Eri fuori senza registrare? Con `Aggiungi tempo all'aperto` aggiungi da 5 a 120 minuti.",
+      "shot": "02-calendar"
+    },
+    {
+      "title": "Settimana e mese a colpo d'occhio",
+      "text": "Le statistiche settimanali e mensili mostrano i giorni in cui hai raggiunto l'obiettivo e la tua media al sole. Imposta un obiettivo giornaliero da 10 a 120 minuti e vedi subito nella schermata principale quanto ti manca oggi.\nI widget della schermata Home e di blocco, e la Dynamic Island, mostrano il sole di oggi e come sta il tuo girasole.",
+      "shot": "03-stats"
+    }
+  ],
+  "steps": {
+    "title": "Tre passi per iniziare",
+    "items": [
+      {
+        "title": "Scegli l'obiettivo",
+        "text": "Si parte da 30 minuti. Nelle impostazioni puoi scegliere da 10 a 120."
+      },
+      {
+        "title": "Esci al sole",
+        "text": "Tocca `Vai a prendere il sole` ed esci con l'app aperta. L'accesso alla fotocamera viene chiesto una volta sola."
+      },
+      {
+        "title": "Nutri il girasole",
+        "text": "Tocca `Dai al girasole` per trasformare il sole raccolto in energia."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Come la luce diventa sole",
+    "rows": [
+      [
+        "Sotto i 300 lux",
+        "Luce debole: non conta come tempo al sole"
+      ],
+      [
+        "Da 300 a 1.000 lux",
+        "Esterno/nuvoloso: dall'1 al 3% ogni 10 minuti"
+      ],
+      [
+        "Da 1.000 a 10.000 lux",
+        "Sole: dal 3 al 33% ogni 10 minuti"
+      ],
+      [
+        "Da 10.000 lux in su",
+        "Sole forte: oltre il 33% ogni 10 minuti"
+      ],
+      [
+        "Sole raccolto",
+        "minuti × lux medi ÷ 3.000 (al massimo 100% per sessione)"
+      ],
+      [
+        "Energia del girasole",
+        "cala del 2,5% all'ora, circa il 60% al giorno"
+      ]
+    ],
+    "note": "Nelle impostazioni puoi regolare la soglia per l'esterno tra 100 e 2.000 lux. Il valore predefinito è 300 lux."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "items": [
+      {
+        "q": "Come misura il sole?",
+        "a": "Stima la luminosità intorno a te (l'illuminamento) dai dati di esposizione della fotocamera anteriore. Quando la luce resta da esterno per un po', la registrazione parte da sola. Non scatta né salva foto."
+      },
+      {
+        "q": "Consuma molta batteria?",
+        "a": "Una volta confermato il sole, il sensore non resta acceso: si attiva per circa 20 secondi ogni 2 minuti per ricontrollare, e per il resto basta un timer."
+      },
+      {
+        "q": "Il mio girasole appassisce di continuo.",
+        "a": "Il girasole perde il 2,5% di energia ogni ora. Raccogli sole e tocca `Dai al girasole`. In una giornata limpida, 15-20 minuti sotto il sole diretto bastano a recuperare un giorno intero."
+      },
+      {
+        "q": "Ero fuori ma non è stato registrato niente.",
+        "a": "Usa `Aggiungi tempo all'aperto`, in fondo alla schermata principale, per aggiungere da 5 a 120 minuti. Se nei giorni nuvolosi la registrazione fatica a partire, abbassa la soglia per l'esterno nelle impostazioni."
+      },
+      {
+        "q": "Come funziona la funzione amici?",
+        "a": "Se tu e un amico siete vicini (entro 10 m circa) e state entrambi misurando il sole, vi collegate da soli. Con una persona nuova bisogna prima confermare che prendete il sole insieme, poi è automatico. I petali si colorano e in 3 giorni tornano al loro colore, e il tempo passato insieme resta nella scheda Amici. Servono l'app su entrambi i telefoni e l'accesso a Bluetooth e rete locale."
+      },
+      {
+        "q": "È davvero gratis?",
+        "a": "Sì. Niente pubblicità né acquisti, tutte le funzioni incluse. Se ti piace puoi lasciare una mancia nell'app, ma non sblocca niente in più."
+      },
+      {
+        "q": "Posso fare un backup o trasferire i dati?",
+        "a": "Tutto resta sul dispositivo, senza server, e vengono conservati gli ultimi 90 giorni. Non c'è un'esportazione a parte, ma i dati sono inclusi nel normale backup dell'iPhone su iCloud o sul computer."
+      },
+      {
+        "q": "Come cancello tutti i dati?",
+        "a": "Nelle impostazioni dell'app tocca `Azzera i dati`, oppure elimina l'app. Non si può annullare."
+      },
+      {
+        "q": "Dove segnalo un problema?",
+        "a": "Scrivi all'indirizzo qui sotto o apri una issue su GitHub (github.com/M1zz/SunlightTracker/issues). Modello del dispositivo, versione di iOS e cosa è successo ci aiutano molto. Di solito rispondiamo entro pochi giorni."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Porta il tuo girasole\nal sole, oggi",
+    "cta": "Scaricala gratis"
+  },
+  "ui": {
+    "skip": "Vai al contenuto",
+    "languages": "Lingua",
+    "privacy": "Informativa sulla privacy",
+    "contact": "Domande o suggerimenti? Scrivi a {email}."
+  }
+}

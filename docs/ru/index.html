@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Подсолнушек</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Подсолнушек: дневник солнца, который растит подсолнух</title>
+  <meta name="description" content="Выходите на улицу, и время на солнце копится само, а из него растёт ваш подсолнух. Бесплатно, записи хранятся на устройстве.">
+  <meta name="theme-color" content="#B45309" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6758931631">
   <link rel="canonical" href="https://m1zz.github.io/SunlightTracker/ru/">
-<!--HREFLANG-->
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/SunlightTracker/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/SunlightTracker/en/">
   <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/SunlightTracker/zh-Hans/">
@@ -30,54 +33,143 @@
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/SunlightTracker/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/SunlightTracker/tr/">
   <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/SunlightTracker/">
-  <!--/HREFLANG-->
-  <link rel="stylesheet" href="../style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Подсолнушек: дневник солнца, который растит подсолнух">
+  <meta property="og:description" content="Выходите на улицу, и время на солнце копится само, а из него растёт ваш подсолнух. Бесплатно, записи хранятся на устройстве.">
+  <meta property="og:url" content="https://m1zz.github.io/SunlightTracker/ru/">
+  <meta property="og:image" content="https://m1zz.github.io/SunlightTracker/img/ru/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../sitegen.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#B45309}@media (prefers-color-scheme:dark){:root{--accent:#FF9F0A}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="emoji">🌻</div>
-      <h1>Подсолнушек</h1>
-      <p class="tagline">Каждый день немного солнца, и ваш подсолнух растёт</p>
-    </header>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="bar">
+    <a class="brand" href="../ru/"><img src="../icon.png" alt="" width="32" height="32">Подсолнушек</a>
+    <a class="lang-link" href="#languages">Язык</a>
+  </header>
 
-    <nav class="top">
-      <a href="privacy.html">Политика конфиденциальности</a>
-      <a href="support.html">Поддержка</a>
-      <a href="https://github.com/M1zz/SunlightTracker">GitHub</a>
-    </nav>
-<!--LANGSWITCH-->
-    <nav class="langs"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../ru/index.html" hreflang="ru" lang="ru" aria-current="page">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-    <!--/LANGSWITCH-->
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Сегодняшнее солнце<br>растит ваш подсолнух</h1>
+        <p class="lead">Стоит выйти на улицу, и время на солнце считается само. Отдайте собранное солнце подсолнуху, и он расцветёт. Забудете о нём на пару дней, и он начнёт вянуть.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6758931631">Скачать бесплатно</a><a class="try" href="#try">Соберите немного солнца ↓</a></div>
+        <p class="muted small">Все функции бесплатны. Записи хранятся только на устройстве.</p>
+      </div>
+      <div class="phone"><img src="../img/ru/01-today.jpg" alt="Сегодняшнее солнце растит ваш подсолнух" width="600" height="1303" decoding="async"></div>
+    </section>
 
-    <div class="card">
-      <h2>Что это за приложение?</h2>
-      <p>
-        Подсолнушек — приложение для iOS, которое по уровню освещённости с камеры само распознаёт настоящий солнечный свет и ведёт его учёт.
-        Чем больше солнца вы получаете, тем сильнее заряжается батарейка, а её энергия помогает расти вашему собственному подсолнуху.
-        Без заботы подсолнух начинает вянуть. 🌱
-      </p>
-      <ul>
-        <li>☀️ Автоматическое распознавание и учёт солнца по уровню освещённости</li>
-        <li>🌻 Заряжайте батарейку и растите подсолнух</li>
-        <li>📅 Календарь и статистика, отметки настроения и заметки</li>
-        <li>👥 Грейтесь на солнце рядом с другом, и лепестки раскрасятся в яркие цвета</li>
-        <li>📱 Виджеты на экране «Домой», Live Activities на экране блокировки и Dynamic Island</li>
-      </ul>
-    </div>
 
-    <div class="card">
-      <h2>А что с личными данными?</h2>
-      <span class="badge">Никаких серверов · все записи хранятся только на вашем устройстве</span>
-      <p>
-        Записи Подсолнушка никуда не передаются. Разработчик получает только тот отзыв, который вы отправили сами.
-        Подробности — в <a class="link" href="privacy.html">Политике конфиденциальности</a>.
-      </p>
-    </div>
+    <section class="reveal" id="try">
+      <h2>Соберите немного солнца</h2>
+      <p class="muted">Выберите, насколько светло и как долго, наберите солнца и отдайте его подсолнуху, который уже начал вянуть.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Соберите немного солнца&quot;, &quot;lead&quot;: &quot;Выберите, насколько светло и как долго, наберите солнца и отдайте его подсолнуху, который уже начал вянуть.&quot;, &quot;places&quot;: [&quot;Слабый свет&quot;, &quot;Улица / облачно&quot;, &quot;Солнце&quot;, &quot;Яркое солнце&quot;], &quot;minutes&quot;: &quot;{n} мин&quot;, &quot;gain&quot;: &quot;Собранное солнце&quot;, &quot;none&quot;: &quot;Слишком темно, чтобы считаться улицей, поэтому ничего не копится&quot;, &quot;go&quot;: &quot;Погреться&quot;, &quot;give&quot;: &quot;Отдать подсолнуху&quot;, &quot;day&quot;: &quot;Прошли сутки&quot;, &quot;energy&quot;: &quot;Энергия&quot;, &quot;states&quot;: [&quot;Свеж&quot;, &quot;Здоров&quot;, &quot;Увядает&quot;, &quot;Опасность&quot;], &quot;note&quot;: &quot;Уровни освещённости здесь для примера. Приложение измеряет реальный свет там, где вы находитесь.&quot;}"></div>
+    </section>
 
-    <footer>
-      © 2026 Подсолнушек · <a class="link" href="mailto:leeo@kakao.com">leeo@kakao.com</a>
-    </footer>
-  </div>
+    <section class="problem reveal">
+      <h2>Сколько минут солнца вы получили сегодня?</h2>
+      <p>Пара шагов до метро, быстрый выход за обедом. Если весь день провести в помещении, только к вечеру понимаешь, что солнца почти не видел. Подсолнушек показывает время на улице в цифрах, а подсолнух ждёт завтрашней прогулки.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Выходите, и он сам всё измерит</h2>
+        <p>Нажмите <code>Пойти на солнце</code> и выходите на улицу. Приложение оценивает яркость вокруг по данным экспозиции фронтальной камеры. Когда свет держится на уровне улицы около 30 секунд, начинается запись. Фото не делаются и не сохраняются.<br>После этого датчик включается всего на 20 секунд раз в 2 минуты, чтобы беречь батарею.</p>
+      </div>
+      <div class="phone"><img src="../img/ru/04-goal.jpg" alt="Выходите, и он сам всё измерит" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Солнце и настроение каждый день</h2>
+        <p>В календаре у каждого дня есть время на солнце, эмодзи настроения и короткая заметка. Были на улице, но не включили запись? Через <code>Добавить время на улице</code> можно добавить от 5 до 120 минут.</p>
+      </div>
+      <div class="phone"><img src="../img/ru/02-calendar.jpg" alt="Солнце и настроение каждый день" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Неделя и месяц как на ладони</h2>
+        <p>Недельная и месячная статистика показывает, в какие дни вы выполнили цель и сколько в среднем были на солнце. Цель на день можно выбрать от 10 до 120 минут, а на главном экране сразу видно, сколько осталось сегодня.<br>Виджеты на экране «Домой» и экране блокировки, а также Dynamic Island показывают сегодняшнее солнце и состояние подсолнуха.</p>
+      </div>
+      <div class="phone"><img src="../img/ru/03-stats.jpg" alt="Неделя и месяц как на ладони" width="600" height="1303" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Три шага, чтобы начать</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Задайте цель на день</h3><p>По умолчанию 30 минут. В настройках можно выбрать от 10 до 120.</p></li>
+<li class="card"><span class="n">2</span><h3>Выйдите на солнце</h3><p>Нажмите <code>Пойти на солнце</code> и выходите, не закрывая приложение. Доступ к камере спросят один раз.</p></li>
+<li class="card"><span class="n">3</span><h3>Покормите подсолнух</h3><p>Нажмите <code>Отдать подсолнуху</code>, и собранное солнце станет энергией.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Как свет превращается в солнце</h2>
+      <div class="card table">
+        <dl><div><dt>Меньше 300 лк</dt><dd>Слабый свет: не считается временем на солнце</dd></div><div><dt>300–1 000 лк</dt><dd>Улица / облачно: 1–3% за 10 минут</dd></div><div><dt>1 000–10 000 лк</dt><dd>Солнце: 3–33% за 10 минут</dd></div><div><dt>От 10 000 лк</dt><dd>Яркое солнце: больше 33% за 10 минут</dd></div><div><dt>Собранное солнце</dt><dd>минуты × средняя освещённость ÷ 3 000 (не больше 100% за раз)</dd></div><div><dt>Энергия подсолнуха</dt><dd>убывает на 2,5% в час, примерно на 60% в сутки</dd></div></dl>
+      </div>
+      <p class="muted">Порог «улицы» можно задать в настройках от 100 до 2 000 лк. По умолчанию 300 лк.</p>
+    </section>
+
+
+
+    <section class="reveal" id="faq">
+      <h2>Вопросы и ответы</h2>
+      <div class="faq"><details><summary>Как измеряется солнце?</summary><p>Приложение оценивает яркость вокруг (освещённость) по данным экспозиции фронтальной камеры. Если свет какое-то время держится на уровне улицы, запись начинается сама. Фото не делаются и не сохраняются.</p></details>
+<details><summary>Запись сильно расходует батарею?</summary><p>Когда солнце подтверждено, датчик не работает постоянно: он включается примерно на 20 секунд раз в 2 минуты, а остальное время считает простой таймер.</p></details>
+<details><summary>Подсолнух всё время вянет.</summary><p>Подсолнух теряет 2,5% энергии каждый час. Наберите солнца и нажмите <code>Отдать подсолнуху</code>. В ясный день 15–20 минут под прямым солнцем восполняют потерю за целые сутки.</p></details>
+<details><summary>Я был на улице, но ничего не записалось.</summary><p>Внизу главного экрана есть <code>Добавить время на улице</code>: можно добавить от 5 до 120 минут. Если в пасмурные дни запись не начинается, снизьте порог «улицы» в настройках.</p></details>
+<details><summary>Как работает функция друзей?</summary><p>Если вы с другом рядом (примерно в пределах 10 м) и оба записываете солнце, телефоны соединяются сами. С новым человеком нужно сначала подтвердить совместное загорание, дальше всё автоматически. Лепестки становятся разноцветными и за 3 дня возвращаются к своему цвету, а совместное время сохраняется во вкладке друзей. Приложение нужно обоим, а также доступ к Bluetooth и локальной сети.</p></details>
+<details><summary>Это правда бесплатно?</summary><p>Да. Без рекламы и покупок, все функции доступны. Если приложение нравится, можно оставить чаевые, но они ничего дополнительно не открывают.</p></details>
+<details><summary>Можно ли сделать резервную копию или перенести записи?</summary><p>Записи хранятся только на устройстве, без серверов, за последние 90 дней. Отдельной функции копирования нет, но записи входят в обычную резервную копию iPhone в iCloud или на компьютере.</p></details>
+<details><summary>Как удалить все записи?</summary><p>В настройках приложения нажмите <code>Сбросить данные</code> или удалите приложение. Отменить это нельзя.</p></details>
+<details><summary>Куда сообщить об ошибке?</summary><p>Напишите на почту ниже или создайте issue на GitHub (github.com/M1zz/SunlightTracker/issues). Очень поможет, если укажете модель устройства, версию iOS и что именно произошло. Обычно отвечаем в течение нескольких дней.</p></details></div>
+      <p class="contact">Вопросы и пожелания присылайте на <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Выведите подсолнух<br>на солнце сегодня</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6758931631">Скачать бесплатно</a>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="languages" class="langs" aria-label="Язык"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../ru/" hreflang="ru" lang="ru" aria-current="page">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Политика конфиденциальности</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Sunny Sunflower</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>
