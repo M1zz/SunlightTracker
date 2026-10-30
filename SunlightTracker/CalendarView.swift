@@ -459,15 +459,19 @@ struct MoodNoteSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("취소") {
+                    Button {
                         isPresented = false
+                    } label: {
+                        Label("취소", systemImage: "xmark")
                     }
                 }
 
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("저장") {
+                    Button {
                         saveRecord()
                         isPresented = false
+                    } label: {
+                        Label("저장", systemImage: "checkmark")
                     }
                 }
             }

@@ -595,7 +595,7 @@ struct DashboardView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("취소") { showBatteryTransfer = false }
+                    Button { showBatteryTransfer = false } label: { Label("취소", systemImage: "xmark") }
                 }
             }
         }
@@ -704,7 +704,7 @@ struct DashboardView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("취소") { showManualEntry = false }
+                    Button { showManualEntry = false } label: { Label("취소", systemImage: "xmark") }
                 }
             }
         }
