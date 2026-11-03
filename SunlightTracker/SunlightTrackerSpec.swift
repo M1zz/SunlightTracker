@@ -18,6 +18,9 @@ enum SunlightTrackerSpec: LeeoAppSpec {
     /// 결제 없음 — 앱 안에 StoreKit·페이월 코드가 존재하지 않는다.
     static let monetization = LeeoMonetization.free
 
+    /// 백업 금고가 함께 떠 두는 공유 저장소 (위젯과 나누는 것).
+    static let appGroups = ["group.com.leeo.sunflower"]
+
     /// 익명 사용 통계 → FeedbackHub. 없으면 bootstrap 이 스냅샷·app_open 을 건너뛴다.
     static let analytics: any LeeoAnalytics = LeeoUsageAnalytics(spec: SunlightTrackerSpec.self)
 }
