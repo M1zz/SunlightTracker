@@ -69,6 +69,9 @@ extension SunlightTrackerSpec {
         .init(id: "autosave", status: .planned,
               title: NSLocalizedString("재던 기록 이어서 하기", comment: "Roadmap item: keep in-progress session"),
               detail: NSLocalizedString("재는 중에 앱이 꺼져도 그때까지 쬔 햇빛이 남아 있어요.", comment: "Roadmap item detail: keep in-progress session")),
+        .init(id: "siri-ai", status: .planned,
+              title: NSLocalizedString("Siri에게 그냥 말하기", comment: "Roadmap item: ask Siri without naming the app"),
+              detail: NSLocalizedString("앱 이름을 말하지 않아도 Siri가 오늘 받은 햇빛을 바로 알려 줘요.", comment: "Roadmap item detail: ask Siri without naming the app")),
     ]}
 }
 
