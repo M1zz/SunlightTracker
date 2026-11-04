@@ -43090,6 +43090,1049 @@
           }
         }
       }
+    },
+    "Apple Watch 햇빛 시간 받기" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Čas na denním světle z Apple Watch"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagslys fra Apple Watch"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeit im Tageslicht von der Apple Watch"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χρόνος στο φως της μέρας από το Apple Watch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daylight time from Apple Watch"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daylight time from Apple Watch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiempo con luz natural del Apple Watch"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivänvalossa vietetty aika Apple Watchista"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temps à la lumière du jour (Apple Watch)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waktu di bawah cahaya siang dari Apple Watch"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo alla luce del giorno da Apple Watch"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchの日光下の時間を使う"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch 햇빛 시간 받기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagslys fra Apple Watch"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tijd in daglicht van Apple Watch"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czas w świetle dziennym z Apple Watch"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempo à luz do dia do Apple Watch"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время на дневном свету с Apple Watch"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagsljus från Apple Watch"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เวลากลางแจ้งจาก Apple Watch"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch’tan gün ışığında geçen süre"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thời gian dưới ánh sáng ban ngày từ Apple Watch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 Apple Watch 记录的日光下时间"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 Apple Watch 記錄的日光下時間"
+          }
+        }
+      }
+    },
+    "건강 앱" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikace Zdraví"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sundhed"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Health-App"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Υγεία"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Health app"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Health app"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Salud"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terveys"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Santé"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Kesehatan"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Salute"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ヘルスケア"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건강 앱"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helse"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gezondheid"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikacja Zdrowie"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Saúde"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Здоровье"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hälsa"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แอปสุขภาพ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sağlık"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sức khỏe"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康"
+          }
+        }
+      }
+    },
+    "Apple Watch가 잰 ‘햇빛 아래 있었던 시간’을 건강 앱에서 읽어 오늘 햇빛에 더해요. 앱을 켜 두지 않아도 배터리가 차요. 카메라로 잰 시간과 겹치면 한 번만 세고, 건강 데이터는 기기 밖으로 나가지 않아요." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Načte z aplikace Zdraví čas na denním světle, který zaznamenají Apple Watch, a přičte ho k dnešnímu slunci. Baterie se nabíjí, i když je aplikace zavřená. Čas, který se kryje s měřením kamerou, se započítá jen jednou a zdravotní data nikdy neopustí zařízení."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henter den tid i dagslys, som dit Apple Watch registrerer i Sundhed, og lægger den til dagens sol. Batteriet lades op, selv når appen er lukket. Tid, der overlapper med måling via kameraet, tæller kun én gang, og sundhedsdata forlader aldrig din enhed."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liest die Zeit im Tageslicht, die deine Apple Watch in der Health-App erfasst, und rechnet sie zur heutigen Sonne hinzu. Die Batterie lädt sich auch bei geschlossener App. Zeiten, die sich mit der Kameramessung überschneiden, zählen nur einmal, und Gesundheitsdaten verlassen nie dein Gerät."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαβάζει από την Υγεία τον χρόνο στο φως της μέρας που καταγράφει το Apple Watch και τον προσθέτει στον σημερινό ήλιο. Η μπαταρία φορτίζει ακόμη κι όταν η εφαρμογή είναι κλειστή. Ο χρόνος που συμπίπτει με τη μέτρηση της κάμερας μετράει μία φορά και τα δεδομένα υγείας δεν φεύγουν ποτέ από τη συσκευή σου."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reads the time in daylight your Apple Watch records in the Health app and adds it to today’s sunlight. Your battery charges even when the app is closed. Time that overlaps with camera tracking counts only once, and health data never leaves your device."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reads the time in daylight your Apple Watch records in the Health app and adds it to today’s sunlight. Your battery charges even when the app is closed. Time that overlaps with camera tracking counts only once, and health data never leaves your device."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lee en la app Salud el tiempo con luz natural que registra tu Apple Watch y lo suma al sol de hoy. La batería se carga aunque la app esté cerrada. El tiempo que coincide con la medición de la cámara cuenta una sola vez y tus datos de salud nunca salen del dispositivo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lukee Terveys-apista Apple Watchin tallentaman päivänvalossa vietetyn ajan ja lisää sen päivän auringonvaloon. Akku latautuu, vaikka appi olisi suljettu. Kameran mittauksen kanssa päällekkäinen aika lasketaan vain kerran, eivätkä terveystiedot koskaan poistu laitteeltasi."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lit dans l’app Santé le temps passé à la lumière du jour mesuré par ton Apple Watch et l’ajoute au soleil du jour. La batterie se recharge même app fermée. Le temps qui chevauche une mesure par la caméra n’est compté qu’une fois, et tes données de santé ne quittent jamais ton appareil."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membaca waktu di bawah cahaya siang yang dicatat Apple Watch di app Kesehatan, lalu menambahkannya ke sinar matahari hari ini. Baterai tetap terisi meski app ditutup. Waktu yang bertumpuk dengan pengukuran kamera hanya dihitung sekali, dan data kesehatan tidak pernah keluar dari perangkatmu."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legge dall’app Salute il tempo alla luce del giorno registrato da Apple Watch e lo aggiunge al sole di oggi. La batteria si ricarica anche ad app chiusa. Il tempo che coincide con la misurazione della fotocamera conta una volta sola e i dati sulla salute non lasciano mai il dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchが記録した「日光下の時間」をヘルスケアから読み込み、今日の日ざしに加えます。アプリを開いていなくてもバッテリーがたまります。カメラで測った時間と重なる分は一度だけ数え、健康データがデバイスの外に出ることはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch가 잰 ‘햇빛 아래 있었던 시간’을 건강 앱에서 읽어 오늘 햇빛에 더해요. 앱을 켜 두지 않아도 배터리가 차요. 카메라로 잰 시간과 겹치면 한 번만 세고, 건강 데이터는 기기 밖으로 나가지 않아요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henter tiden i dagslys som Apple Watch registrerer i Helse, og legger den til dagens sol. Batteriet lades selv når appen er lukket. Tid som overlapper med kameramåling telles bare én gang, og helsedata forlater aldri enheten din."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leest de tijd in daglicht die je Apple Watch in Gezondheid registreert en telt die op bij de zon van vandaag. Je batterij laadt op, ook als de app dicht is. Tijd die overlapt met meten via de camera telt maar één keer, en gezondheidsgegevens verlaten je apparaat nooit."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odczytuje z aplikacji Zdrowie czas w świetle dziennym zapisany przez Apple Watch i dodaje go do dzisiejszego słońca. Bateria ładuje się nawet przy zamkniętej aplikacji. Czas pokrywający się z pomiarem aparatem liczy się tylko raz, a dane o zdrowiu nigdy nie opuszczają urządzenia."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lê no app Saúde o tempo à luz do dia registrado pelo Apple Watch e soma ao sol de hoje. A bateria carrega mesmo com o app fechado. O tempo que coincide com a medição pela câmera conta só uma vez, e os dados de saúde nunca saem do seu aparelho."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Берёт из приложения «Здоровье» время на дневном свету, которое записывают Apple Watch, и добавляет его к сегодняшнему солнцу. Батарея заряжается, даже когда приложение закрыто. Время, совпавшее с замером камерой, учитывается один раз, а данные о здоровье не покидают устройство."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Läser tiden i dagsljus som din Apple Watch registrerar i Hälsa och lägger till den i dagens sol. Batteriet laddas även när appen är stängd. Tid som överlappar med kameramätning räknas bara en gång, och hälsodata lämnar aldrig din enhet."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่านเวลากลางแจ้งที่ Apple Watch บันทึกไว้ในแอปสุขภาพ แล้วรวมเข้ากับแดดของวันนี้ แบตเตอรี่ชาร์จได้แม้ไม่ได้เปิดแอป ช่วงเวลาที่ซ้อนกับการวัดด้วยกล้องจะนับเพียงครั้งเดียว และข้อมูลสุขภาพจะไม่ออกไปนอกอุปกรณ์ของคุณ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch’un Sağlık uygulamasına kaydettiği gün ışığında geçen süreyi okur ve bugünkü güneşe ekler. Uygulama kapalıyken de pil dolar. Kamerayla ölçülen süreyle çakışan zaman yalnızca bir kez sayılır ve sağlık verileri cihazından asla çıkmaz."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đọc thời gian dưới ánh sáng ban ngày mà Apple Watch ghi trong ứng dụng Sức khỏe và cộng vào lượng nắng hôm nay. Pin vẫn được sạc dù bạn không mở ứng dụng. Thời gian trùng với lúc đo bằng camera chỉ được tính một lần, và dữ liệu sức khỏe không bao giờ rời khỏi thiết bị của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从“健康”App 读取 Apple Watch 记录的日光下时间，计入今天的阳光。即使不打开 App，电量也会增加。与相机测量重叠的时间只算一次，健康数据绝不会离开你的设备。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從「健康」App 讀取 Apple Watch 記錄的日光下時間，計入今天的陽光。即使沒開 App，電量也會增加。與相機測量重疊的時間只算一次，健康資料絕不會離開你的裝置。"
+          }
+        }
+      }
+    },
+    "Apple Watch에서 %lld분" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min z Apple Watch"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min fra Apple Watch"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Min. von der Apple Watch"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld λεπ. από το Apple Watch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min from Apple Watch"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min from Apple Watch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min del Apple Watch"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min Apple Watchista"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min via l’Apple Watch"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mnt dari Apple Watch"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min da Apple Watch"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchから%lld分"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch에서 %lld분"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min fra Apple Watch"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min van Apple Watch"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min z Apple Watch"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min do Apple Watch"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld мин с Apple Watch"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min från Apple Watch"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld นาทีจาก Apple Watch"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch’tan %lld dk"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld phút từ Apple Watch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "来自 Apple Watch 的 %lld 分钟"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "來自 Apple Watch 的 %lld 分鐘"
+          }
+        }
+      }
+    },
+    "Apple Watch에서 해바라기 보기" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slunečnice na Apple Watch"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din solsikke på Apple Watch"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Sonnenblume auf der Apple Watch"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το ηλιοτρόπιό σου στο Apple Watch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sunflower on Apple Watch"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sunflower on Apple Watch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu girasol en el Apple Watch"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auringonkukka Apple Watchissa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton tournesol sur l’Apple Watch"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bunga matahari di Apple Watch"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tuo girasole su Apple Watch"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchでひまわりを見る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch에서 해바라기 보기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solsikken din på Apple Watch"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je zonnebloem op Apple Watch"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twój słonecznik na Apple Watch"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seu girassol no Apple Watch"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подсолнух на Apple Watch"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din solros på Apple Watch"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทานตะวันบน Apple Watch"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayçiçeğin Apple Watch’ta"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoa hướng dương trên Apple Watch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Apple Watch 上看向日葵"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Apple Watch 上看向日葵"
+          }
+        }
+      }
+    },
+    "손목을 들면 해바라기와 오늘 받은 햇빛이 보이고, 워치에서 바로 배터리를 전달할 수 있어요." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zvedni zápěstí a uvidíš slunečnici i dnešní slunce. Baterii jí předáš přímo z hodinek."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Løft håndleddet for at se din solsikke og dagens sol, og giv den batteri direkte fra uret."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heb das Handgelenk, um Sonnenblume und heutige Sonne zu sehen, und gib ihr die Batterie direkt von der Uhr."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σήκωσε τον καρπό για να δεις το ηλιοτρόπιο και τον σημερινό ήλιο, και δώσ’ του μπαταρία κατευθείαν από το ρολόι."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raise your wrist to see your sunflower and today’s sunlight, and give it battery right from your watch."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raise your wrist to see your sunflower and today’s sunlight, and give it battery right from your watch."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levanta la muñeca para ver tu girasol y el sol de hoy, y dale batería desde el reloj."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nosta rannetta, niin näet auringonkukan ja päivän auringon. Anna sille akkua suoraan kellosta."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lève le poignet pour voir ton tournesol et le soleil du jour, et donne-lui la batterie depuis la montre."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angkat pergelangan untuk melihat bunga matahari dan sinar matahari hari ini, lalu beri baterai langsung dari jam."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alza il polso per vedere il girasole e il sole di oggi, e dagli la batteria direttamente dall’orologio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手首を上げるとひまわりと今日の日ざしが見え、ウォッチからそのままバッテリーを届けられます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "손목을 들면 해바라기와 오늘 받은 햇빛이 보이고, 워치에서 바로 배터리를 전달할 수 있어요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Løft håndleddet for å se solsikken og dagens sol, og gi den batteri rett fra klokken."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Til je pols op om je zonnebloem en de zon van vandaag te zien, en geef hem batterij vanaf je horloge."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unieś nadgarstek, by zobaczyć słonecznik i dzisiejsze słońce, i przekaż mu baterię prosto z zegarka."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levante o pulso para ver seu girassol e o sol de hoje, e passe a bateria direto do relógio."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поднимите запястье — и увидите подсолнух и сегодняшнее солнце, а заряд можно передать прямо с часов."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyft handleden för att se din solros och dagens sol, och ge den batteri direkt från klockan."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยกข้อมือก็เห็นทานตะวันและแดดของวันนี้ แล้วส่งแบตเตอรี่ให้ได้จากนาฬิกาเลย"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bileğini kaldırınca ayçiçeğini ve bugünkü güneşi görürsün, pili de doğrudan saatten verebilirsin."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giơ cổ tay là thấy hoa hướng dương và lượng nắng hôm nay, có thể trao pin ngay từ đồng hồ."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "抬起手腕就能看到向日葵和今天的阳光，还能直接在手表上传递电量。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "抬起手腕就能看到向日葵和今天的陽光，還能直接在手錶上傳遞電量。"
+          }
+        }
+      }
+    },
+    "Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 해바라기 배터리가 차요." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Čas na denním světle změřený Apple Watch nabíjí baterii slunečnice, i když je aplikace zavřená."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagslys målt af Apple Watch lader solsikkens batteri op, selv når appen er lukket."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die von der Apple Watch gemessene Zeit im Tageslicht lädt die Batterie deiner Sonnenblume – auch bei geschlossener App."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ο χρόνος στο φως της μέρας από το Apple Watch φορτίζει την μπαταρία του ηλιοτρόπιου, ακόμη κι όταν η εφαρμογή είναι κλειστή."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time in daylight measured by Apple Watch charges your sunflower’s battery, even when the app is closed."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time in daylight measured by Apple Watch charges your sunflower’s battery, even when the app is closed."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El tiempo con luz natural que mide el Apple Watch carga la batería de tu girasol, aunque la app esté cerrada."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchin mittaama päivänvaloaika lataa auringonkukan akkua, vaikka appi olisi suljettu."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le temps à la lumière du jour mesuré par l’Apple Watch recharge la batterie du tournesol, même app fermée."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waktu di bawah cahaya siang dari Apple Watch mengisi baterai bunga matahari, meski app ditutup."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tempo alla luce del giorno misurato da Apple Watch ricarica la batteria del girasole, anche ad app chiusa."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchが測った日光下の時間で、アプリを開いていなくてもひまわりのバッテリーがたまります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 해바라기 배터리가 차요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagslys målt av Apple Watch lader solsikkens batteri, selv når appen er lukket."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tijd in daglicht gemeten door Apple Watch laadt de batterij van je zonnebloem op, ook als de app dicht is."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czas w świetle dziennym zmierzony przez Apple Watch ładuje baterię słonecznika, nawet gdy aplikacja jest zamknięta."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O tempo à luz do dia medido pelo Apple Watch carrega a bateria do girassol, mesmo com o app fechado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время на дневном свету, измеренное Apple Watch, заряжает батарею подсолнуха, даже когда приложение закрыто."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagsljus som Apple Watch mäter laddar solrosens batteri, även när appen är stängd."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เวลากลางแจ้งที่ Apple Watch วัดได้จะชาร์จแบตเตอรี่ให้ทานตะวัน แม้ไม่ได้เปิดแอป"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch’un ölçtüğü gün ışığı süresi, uygulama kapalıyken bile ayçiçeğinin pilini doldurur."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thời gian dưới ánh sáng ban ngày do Apple Watch đo sẽ sạc pin cho hoa hướng dương, kể cả khi không mở ứng dụng."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch 测得的日光下时间会为向日葵充电，即使没打开 App 也一样。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch 測得的日光下時間會為向日葵充電，即使沒開 App 也一樣。"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

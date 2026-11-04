@@ -40,6 +40,23 @@ struct SettingsView: View {
                     Text(String(localized: "연구에 따르면 하루 15분 햇빛으로 세로토닌 분비가 시작되고, 30분이면 수면 시간이 23분 빨라지며 코르티솔이 25% 감소합니다. 45분 이상이면 우울증 치료에 최적 효과를 보입니다."))
                 }
                 
+                // 건강 앱: Apple Watch 가 잰 햇빛 시간
+                if DaylightHealth.isAvailable {
+                    Section {
+                        Toggle(isOn: Binding(
+                            get: { manager.daylightFromHealth },
+                            set: { on in Task { await manager.setDaylightFromHealth(on) } }
+                        )) {
+                            Label("Apple Watch 햇빛 시간 받기", systemImage: "applewatch")
+                        }
+                        .tint(.orange)
+                    } header: {
+                        Label("건강 앱", systemImage: "heart.text.square")
+                    } footer: {
+                        Text("Apple Watch가 잰 ‘햇빛 아래 있었던 시간’을 건강 앱에서 읽어 오늘 햇빛에 더해요. 앱을 켜 두지 않아도 배터리가 차요. 카메라로 잰 시간과 겹치면 한 번만 세고, 건강 데이터는 기기 밖으로 나가지 않아요.")
+                    }
+                }
+
                 // 조도 센서 설정
                 Section {
                     Toggle(isOn: $manager.settings.autoTrackingEnabled) {

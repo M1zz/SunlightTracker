@@ -7,9 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013F9D31A457BF65CC013665 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF433E553259A20EBC35D8D /* Foundation.framework */; };
 		058E5E3CAB6ACE7DBD0099DD /* AppShortcuts.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 81F15E8F72E224A46178F1EE /* AppShortcuts.xcstrings */; };
+		0A28A68382E3F32E88FB6B86 /* WatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FAE4231BE88832CDAC2700 /* WatchModel.swift */; };
+		18E909D912AC149BA109CBD8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 06469C992FF13AD7A1FFB90A /* Localizable.xcstrings */; };
+		199F16777B73E21BD0CCD06F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D00BBA62FFC54B9B57855E /* Assets.xcassets */; };
+		45045D122949E9CC1E6367C8 /* WatchShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8AA991E3E8BC083241149 /* WatchShared.swift */; };
+		488F351BB5A1962D27F17D91 /* WatchSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D3C9AAF85C60F007041439 /* WatchSnapshot.swift */; };
+		50F5D5C773A909B2E85E61EA /* SunlightWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6C7EA24EE2BB99ACFEFF0049 /* SunlightWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5C6C29C557C56E9AFAA210D2 /* SunlightTrackerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20443605DAE908C006A57059 /* SunlightTrackerSpec.swift */; };
 		605D7E6696B14E0F91898ED7 /* SunlightTrackerRoadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C778FAAFE428C90B8F5B8 /* SunlightTrackerRoadmap.swift */; };
+		6737F96D50ACAD0CB8240FC5 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1C71796ED8CC7B2A356A7DB5 /* InfoPlist.xcstrings */; };
+		730C383110A90B2CD7466E8B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 06469C992FF13AD7A1FFB90A /* Localizable.xcstrings */; };
+		7D85F7272E97CFA61A966D5F /* WatchShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8AA991E3E8BC083241149 /* WatchShared.swift */; };
+		8F29465A8214DA28F40BCC02 /* SunlightWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20969CC2FBD2CFE5AF44B79 /* SunlightWatchApp.swift */; };
+		9373B401FFAA4C94BFC9E20C /* SunlightWatchWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9AC3879EED3D5E3D03CDA06A /* SunlightWatchWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		96E2C8F137F2A1CAB57BC44D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF433E553259A20EBC35D8D /* Foundation.framework */; };
+		996763772823CE90D75D22E2 /* DaylightHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85D583AFB49FFBED42286A /* DaylightHealth.swift */; };
 		9C1EAE8C2F39771100CB151B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1EAE8B2F39771100CB151B /* WidgetKit.framework */; };
 		9C1EAE8E2F39771100CB151B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1EAE8D2F39771100CB151B /* SwiftUI.framework */; };
 		9C1EAE9F2F39771200CB151B /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9C1EAE892F39771100CB151B /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -32,12 +46,31 @@
 		AA00000F /* RecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001E /* RecordsView.swift */; };
 		AA0000F0 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000F1 /* FriendsView.swift */; };
 		AA285CF8DD6B476F9EE186A9 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FBEC8A6BFB4656D628631923 /* Localizable.xcstrings */; };
+		B05B89C964BD7B2460E71DDA /* WatchBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E171FDB259D7CEFE9B8EF /* WatchBridge.swift */; };
 		B1A0C0DE0000000000000002 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B1A0C0DE0000000000000001 /* InfoPlist.xcstrings */; };
+		B7B1B6135FA64CD129F51D25 /* SunflowerComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C082C04EE2D64F3CCED3AE /* SunflowerComplication.swift */; };
 		B95BC96D8CD49C12E83B7BE9 /* SunlightIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4053E5FA9D9061C9D155BE /* SunlightIntents.swift */; };
+		CB41891DD0617131C027D16F /* WatchSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D3C9AAF85C60F007041439 /* WatchSnapshot.swift */; };
+		D097652450325692B5D2C54C /* DaylightHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85D583AFB49FFBED42286A /* DaylightHealth.swift */; };
+		DEC0868852B698404555BD27 /* WatchSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D3C9AAF85C60F007041439 /* WatchSnapshot.swift */; };
 		FBC45F3A312118C10E40AC1F /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB03F15BDBFF968BF42A9E33 /* LeeoKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		09108692D33C8FBF4CC33913 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA000070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 163C8F1919EF25DB540AA9F5;
+			remoteInfo = SunlightWatch;
+		};
+		27E2EBA3585C7319A359244B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA000070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D37B829320B03CD35FA7B123;
+			remoteInfo = SunlightWatchWidget;
+		};
 		9C1EAE9D2F39771200CB151B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA000070 /* Project object */;
@@ -48,6 +81,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1BB37DD13A8CCE04F4909F15 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9373B401FFAA4C94BFC9E20C /* SunlightWatchWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		264BAAA223D33DD5013097E0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				50F5D5C773A909B2E85E61EA /* SunlightWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C1EAEA02F39771200CB151B /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,9 +117,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04F4A555856C81A74E508DEE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06469C992FF13AD7A1FFB90A /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		06C082C04EE2D64F3CCED3AE /* SunflowerComplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunflowerComplication.swift; sourceTree = "<group>"; };
+		0B85D583AFB49FFBED42286A /* DaylightHealth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DaylightHealth.swift; sourceTree = "<group>"; };
+		1C71796ED8CC7B2A356A7DB5 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		20443605DAE908C006A57059 /* SunlightTrackerSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightTrackerSpec.swift; sourceTree = "<group>"; };
+		20D00BBA62FFC54B9B57855E /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45D3C9AAF85C60F007041439 /* WatchSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WatchSnapshot.swift; sourceTree = "<group>"; };
+		596E171FDB259D7CEFE9B8EF /* WatchBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WatchBridge.swift; sourceTree = "<group>"; };
+		6C7EA24EE2BB99ACFEFF0049 /* SunlightWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunlightWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		795C778FAAFE428C90B8F5B8 /* SunlightTrackerRoadmap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightTrackerRoadmap.swift; sourceTree = "<group>"; };
+		7BF433E553259A20EBC35D8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		81F15E8F72E224A46178F1EE /* AppShortcuts.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json.xcstrings; path = AppShortcuts.xcstrings; sourceTree = "<group>"; };
+		883D500562D76C23F6D7B874 /* SunlightWatch.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = SunlightWatch.entitlements; sourceTree = "<group>"; };
+		9AC3879EED3D5E3D03CDA06A /* SunlightWatchWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SunlightWatchWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1EAE892F39771100CB151B /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1EAE8B2F39771100CB151B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9C1EAE8D2F39771100CB151B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -72,6 +139,7 @@
 		9C1EAEA62F39773C00CB151B /* widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtension.entitlements; sourceTree = "<group>"; };
 		9C1EB0EB2F397AC900CB151B /* SharedWidgetTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWidgetTypes.swift; sourceTree = "<group>"; };
 		9C1EB1042F398A1500CB151B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		A37CEFD204B753F0E1119391 /* SunlightWatchWidget.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = SunlightWatchWidget.entitlements; sourceTree = "<group>"; };
 		AA000010 /* SunlightTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunlightTrackerApp.swift; sourceTree = "<group>"; };
 		AA000011 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA000012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +159,10 @@
 		AA000021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA000022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA0000F1 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		ADA8AA991E3E8BC083241149 /* WatchShared.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WatchShared.swift; sourceTree = "<group>"; };
 		B1A0C0DE0000000000000001 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		C5FAE4231BE88832CDAC2700 /* WatchModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WatchModel.swift; sourceTree = "<group>"; };
+		D20969CC2FBD2CFE5AF44B79 /* SunlightWatchApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightWatchApp.swift; sourceTree = "<group>"; };
 		DD4053E5FA9D9061C9D155BE /* SunlightIntents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightIntents.swift; sourceTree = "<group>"; };
 		FBEC8A6BFB4656D628631923 /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +193,14 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		852F4890DA02EAD010EFD3AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				013F9D31A457BF65CC013665 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C1EAE862F39771100CB151B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,14 +218,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D104BAD8D8B5CB80531C664D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E2C8F137F2A1CAB57BC44D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033D6C3BF994B1CF4BFFB4C7 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				7BF433E553259A20EBC35D8D /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		489ECF36081138BABF7A4AA1 /* SunlightWatch */ = {
+			isa = PBXGroup;
+			children = (
+				D20969CC2FBD2CFE5AF44B79 /* SunlightWatchApp.swift */,
+				C5FAE4231BE88832CDAC2700 /* WatchModel.swift */,
+				ADA8AA991E3E8BC083241149 /* WatchShared.swift */,
+				20D00BBA62FFC54B9B57855E /* Assets.xcassets */,
+				06469C992FF13AD7A1FFB90A /* Localizable.xcstrings */,
+				1C71796ED8CC7B2A356A7DB5 /* InfoPlist.xcstrings */,
+				883D500562D76C23F6D7B874 /* SunlightWatch.entitlements */,
+			);
+			name = SunlightWatch;
+			path = SunlightWatch;
+			sourceTree = "<group>";
+		};
 		9C1EAE8A2F39771100CB151B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				9C1EAE8B2F39771100CB151B /* WidgetKit.framework */,
 				9C1EAE8D2F39771100CB151B /* SwiftUI.framework */,
+				033D6C3BF994B1CF4BFFB4C7 /* watchOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +270,9 @@
 				9C1EAE8F2F39771100CB151B /* widget */,
 				9C1EAE8A2F39771100CB151B /* Frameworks */,
 				AA000042 /* Products */,
+				D3C9E39097C3A76375A8322F /* Shared */,
+				489ECF36081138BABF7A4AA1 /* SunlightWatch */,
+				FA6C7F8DD1DE60239C597822 /* SunlightWatchWidget */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +306,7 @@
 				B1A0C0DE0000000000000001 /* InfoPlist.xcstrings */,
 				DD4053E5FA9D9061C9D155BE /* SunlightIntents.swift */,
 				81F15E8F72E224A46178F1EE /* AppShortcuts.xcstrings */,
+				596E171FDB259D7CEFE9B8EF /* WatchBridge.swift */,
 			);
 			path = SunlightTracker;
 			sourceTree = "<group>";
@@ -201,6 +316,8 @@
 			children = (
 				AA000020 /* SunlightTracker.app */,
 				9C1EAE892F39771100CB151B /* widgetExtension.appex */,
+				6C7EA24EE2BB99ACFEFF0049 /* SunlightWatch.app */,
+				9AC3879EED3D5E3D03CDA06A /* SunlightWatchWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,9 +330,49 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D3C9E39097C3A76375A8322F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0B85D583AFB49FFBED42286A /* DaylightHealth.swift */,
+				45D3C9AAF85C60F007041439 /* WatchSnapshot.swift */,
+			);
+			name = Shared;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FA6C7F8DD1DE60239C597822 /* SunlightWatchWidget */ = {
+			isa = PBXGroup;
+			children = (
+				06C082C04EE2D64F3CCED3AE /* SunflowerComplication.swift */,
+				04F4A555856C81A74E508DEE /* Info.plist */,
+				A37CEFD204B753F0E1119391 /* SunlightWatchWidget.entitlements */,
+			);
+			name = SunlightWatchWidget;
+			path = SunlightWatchWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		163C8F1919EF25DB540AA9F5 /* SunlightWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C933A99C8EB7370E66796FC /* Build configuration list for PBXNativeTarget "SunlightWatch" */;
+			buildPhases = (
+				516DE0D76D197571D6B3FC8F /* Sources */,
+				852F4890DA02EAD010EFD3AD /* Frameworks */,
+				019159EB0E4BFC52F35747F0 /* Resources */,
+				1BB37DD13A8CCE04F4909F15 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7F1D40E5F25E903B3F93830 /* PBXTargetDependency */,
+			);
+			name = SunlightWatch;
+			productName = SunlightWatch;
+			productReference = 6C7EA24EE2BB99ACFEFF0049 /* SunlightWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
 		9C1EAE882F39771100CB151B /* widgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C1EAEA42F39771200CB151B /* Build configuration list for PBXNativeTarget "widgetExtension" */;
@@ -244,11 +401,13 @@
 				AA000030 /* Frameworks */,
 				AA000052 /* Resources */,
 				9C1EAEA02F39771200CB151B /* Embed Foundation Extensions */,
+				264BAAA223D33DD5013097E0 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				9C1EAE9E2F39771200CB151B /* PBXTargetDependency */,
+				F5B55472E45621B7E5280CA2 /* PBXTargetDependency */,
 			);
 			name = SunlightTracker;
 			packageProductDependencies = (
@@ -257,6 +416,23 @@
 			productName = SunlightTracker;
 			productReference = AA000020 /* SunlightTracker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D37B829320B03CD35FA7B123 /* SunlightWatchWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F65EA0AD1C30E043CFA0AFC /* Build configuration list for PBXNativeTarget "SunlightWatchWidget" */;
+			buildPhases = (
+				3693313FCD14FE25EC5F7F4C /* Sources */,
+				D104BAD8D8B5CB80531C664D /* Frameworks */,
+				657A7FBEB88D3025E33114A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SunlightWatchWidget;
+			productName = SunlightWatchWidget;
+			productReference = 9AC3879EED3D5E3D03CDA06A /* SunlightWatchWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -317,11 +493,31 @@
 			targets = (
 				AA000050 /* SunlightTracker */,
 				9C1EAE882F39771100CB151B /* widgetExtension */,
+				163C8F1919EF25DB540AA9F5 /* SunlightWatch */,
+				D37B829320B03CD35FA7B123 /* SunlightWatchWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		019159EB0E4BFC52F35747F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199F16777B73E21BD0CCD06F /* Assets.xcassets in Resources */,
+				18E909D912AC149BA109CBD8 /* Localizable.xcstrings in Resources */,
+				6737F96D50ACAD0CB8240FC5 /* InfoPlist.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657A7FBEB88D3025E33114A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730C383110A90B2CD7466E8B /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C1EAE872F39771100CB151B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +539,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3693313FCD14FE25EC5F7F4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7B1B6135FA64CD129F51D25 /* SunflowerComplication.swift in Sources */,
+				7D85F7272E97CFA61A966D5F /* WatchShared.swift in Sources */,
+				488F351BB5A1962D27F17D91 /* WatchSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		516DE0D76D197571D6B3FC8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F29465A8214DA28F40BCC02 /* SunlightWatchApp.swift in Sources */,
+				0A28A68382E3F32E88FB6B86 /* WatchModel.swift in Sources */,
+				45045D122949E9CC1E6367C8 /* WatchShared.swift in Sources */,
+				996763772823CE90D75D22E2 /* DaylightHealth.swift in Sources */,
+				CB41891DD0617131C027D16F /* WatchSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C1EAE852F39771100CB151B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +592,9 @@
 				5C6C29C557C56E9AFAA210D2 /* SunlightTrackerSpec.swift in Sources */,
 				605D7E6696B14E0F91898ED7 /* SunlightTrackerRoadmap.swift in Sources */,
 				B95BC96D8CD49C12E83B7BE9 /* SunlightIntents.swift in Sources */,
+				D097652450325692B5D2C54C /* DaylightHealth.swift in Sources */,
+				DEC0868852B698404555BD27 /* WatchSnapshot.swift in Sources */,
+				B05B89C964BD7B2460E71DDA /* WatchBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,9 +606,119 @@
 			target = 9C1EAE882F39771100CB151B /* widgetExtension */;
 			targetProxy = 9C1EAE9D2F39771200CB151B /* PBXContainerItemProxy */;
 		};
+		D7F1D40E5F25E903B3F93830 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SunlightWatchWidget;
+			target = D37B829320B03CD35FA7B123 /* SunlightWatchWidget */;
+			targetProxy = 27E2EBA3585C7319A359244B /* PBXContainerItemProxy */;
+		};
+		F5B55472E45621B7E5280CA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SunlightWatch;
+			target = 163C8F1919EF25DB540AA9F5 /* SunlightWatch */;
+			targetProxy = 09108692D33C8FBF4CC33913 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1816A24572D0B859C24C15C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SunlightWatch/SunlightWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leeo.sunflower;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		24798E38679FE6729965ED0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = SunlightWatchWidget/SunlightWatchWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SunlightWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower.watchkitapp.complication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		8291C873CC8A254FCCDDF502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SunlightWatch/SunlightWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leeo.sunflower;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		9C1EAEA12F39771200CB151B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,7 +738,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -439,7 +770,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -587,6 +918,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -597,7 +929,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -624,6 +956,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -634,7 +967,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -645,9 +978,57 @@
 			};
 			name = Release;
 		};
+		C07F5490F9C02FFE8CD84BB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = SunlightWatchWidget/SunlightWatchWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SunlightWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leeo.sunflower.watchkitapp.complication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F65EA0AD1C30E043CFA0AFC /* Build configuration list for PBXNativeTarget "SunlightWatchWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07F5490F9C02FFE8CD84BB8 /* Release */,
+				24798E38679FE6729965ED0C /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C933A99C8EB7370E66796FC /* Build configuration list for PBXNativeTarget "SunlightWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8291C873CC8A254FCCDDF502 /* Release */,
+				1816A24572D0B859C24C15C6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9C1EAEA42F39771200CB151B /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

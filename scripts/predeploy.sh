@@ -17,8 +17,9 @@ SCHEME="SunlightTracker"
 PROJECT_FLAG="-project"
 PROJECT="SunlightTracker.xcodeproj"
 
-# 테스트 타겟이 없다(SunlightTracker · widgetExtension 뿐). Release 빌드가 깨지지 않는지까지만 확인한다.
-echo "🔨 Release 빌드 확인 ($SCHEME · 위젯 포함)"
+# 테스트 타겟이 없다(SunlightTracker · widgetExtension · SunlightWatch · SunlightWatchWidget). Release 빌드가 깨지지 않는지까지만 확인한다.
+# 워치 앱 · 컴플리케이션은 아이폰 앱에 들어 있어 같은 빌드에서 함께 확인된다.
+echo "🔨 Release 빌드 확인 ($SCHEME · 위젯 · 워치 포함)"
 xcodebuild build \
   "$PROJECT_FLAG" "$PROJECT" \
   -scheme "$SCHEME" \

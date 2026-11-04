@@ -2,7 +2,7 @@ import SwiftUI
 import LeeoKit
 
 struct ContentView: View {
-    @StateObject private var manager = SunlightManager()
+    @StateObject private var manager = SunlightManager.shared
     @StateObject private var weatherService = WeatherService()
     @StateObject private var notificationManager = NotificationManager.shared
     /// 스토어 스크린샷용: Debug 빌드에서만 `-ScreenshotTab <번호>` 실행 인자로 처음 탭을 고른다.

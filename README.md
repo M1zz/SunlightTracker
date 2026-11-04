@@ -28,7 +28,8 @@
 ## 개발
 
 - iOS 17+, SwiftUI
-- 타겟: `SunlightTracker` (앱), `widgetExtension` (위젯/라이브 액티비티)
+- 타겟: `SunlightTracker` (앱), `widgetExtension` (위젯/라이브 액티비티), `SunlightWatch` (워치 앱, watchOS 10+), `SunlightWatchWidget` (워치 컴플리케이션)
+- 건강 앱: '햇빛 아래 있었던 시간'(HealthKit `timeInDaylight`)을 읽기만 한다. 설정에서 켤 때만 권한을 묻는다 (`Shared/DaylightHealth.swift`)
 
 ```bash
 xcodebuild -project SunlightTracker.xcodeproj -scheme SunlightTracker \

@@ -7,7 +7,10 @@ import WidgetKit
 
 @MainActor
 class SunlightManager: NSObject, ObservableObject {
-    
+
+    /// 앱 하나에 하나. 건강 앱이 앱을 뒤에서 깨울 때도 같은 기록을 고치도록 화면 밖에서 만든다.
+    static let shared = SunlightManager()
+
     // MARK: - Published
     @Published var todayRecord: SunlightRecord
     @Published var weeklyRecords: [SunlightRecord] = []
@@ -24,6 +27,8 @@ class SunlightManager: NSObject, ObservableObject {
     @Published var batteryStatus: BatteryStatus = BatteryStatus()
     @Published var sunflowerHealth: SunflowerHealth = SunflowerHealth()
     @Published var estimatedBatteryGain: Double = 0  // 트래킹 중 예상 획득량 (UI용)
+    /// 건강 앱의 '햇빛 아래 있었던 시간'(Apple Watch)을 오늘 햇빛에 더하는가. 사용자가 켤 때만 켜진다.
+    @Published private(set) var daylightFromHealth = UserDefaults.standard.bool(forKey: "health_daylight_enabled")
     
     // Nearby Activity
     let nearbyManager = NearbyActivityManager()
@@ -100,6 +105,8 @@ class SunlightManager: NSObject, ObservableObject {
         setupNearbyObserving()
         startHealthUpdateTimer()
         restorePetalFade()
+        connectWatch()
+        if daylightFromHealth { observeHealthDaylight() }
     }
     
     // MARK: - Lux Sensor Observation
@@ -427,6 +434,8 @@ class SunlightManager: NSObject, ObservableObject {
         }
 
         currentSession = nil
+        // 카메라가 잰 구간과 겹친 건강 앱 시간은 빼고 다시 센다
+        if daylightFromHealth { Task { await syncDaylightFromHealth() } }
         isSunlightDetected = false
         sunlightStartTime = nil
         estimatedBatteryGain = 0
@@ -556,8 +565,60 @@ class SunlightManager: NSObject, ObservableObject {
         
         saveRecords()
         calculateStreak()
+        if daylightFromHealth { Task { await syncDaylightFromHealth() } }
     }
-    
+
+    // MARK: - 건강 앱 '햇빛 아래 있었던 시간'
+
+    /// 설정의 스위치. 켤 때 처음이면 권한을 묻는다. 거절해도 앱은 카메라 측정으로 그대로 돈다.
+    func setDaylightFromHealth(_ on: Bool) async {
+        daylightFromHealth = on
+        userDefaults.set(on, forKey: "health_daylight_enabled")
+        if on {
+            await DaylightHealth.shared.requestAccess()
+            observeHealthDaylight()
+            await syncDaylightFromHealth()
+        } else {
+            DaylightHealth.shared.stopObserving()
+            applyHealthMinutes(0)
+        }
+    }
+
+    private func observeHealthDaylight() {
+        DaylightHealth.shared.startObserving { [weak self] in
+            await self?.syncDaylightFromHealth()
+        }
+    }
+
+    /// 건강 앱 햇빛 시간 중 카메라로 잰 구간과 겹치지 않는 몫을 오늘 기록에 맞춘다.
+    func syncDaylightFromHealth() async {
+        guard daylightFromHealth else { return }
+        let pieces = await DaylightHealth.shared.todayPieces()
+        guard daylightFromHealth else { return }
+        if !Calendar.current.isDateInToday(todayRecord.date) { loadTodayRecord() }
+        var camera = todayRecord.sessions.map { DateInterval(start: $0.startTime, end: max($0.startTime, $0.endTime ?? Date())) }
+        if let live = currentSession { camera.append(DateInterval(start: live.startTime, end: max(live.startTime, Date()))) }
+        applyHealthMinutes(DaylightPiece.minutes(pieces, excluding: camera))
+    }
+
+    /// 오늘 기록의 건강 앱 몫을 `minutes` 로 바꾼다. 처음 받은 분만큼만 배터리를 채운다(같은 시간으로 두 번 충전하지 않게).
+    private func applyHealthMinutes(_ minutes: Int) {
+        let old = todayRecord.healthMinutes ?? 0
+        let charged = todayRecord.healthChargedMinutes ?? 0
+        guard minutes != old || minutes > charged else { return }
+        todayRecord.totalMinutes = max(0, todayRecord.totalMinutes + minutes - old)
+        todayRecord.healthMinutes = minutes
+        if minutes > charged {
+            // 워치는 조도를 주지 않는다 — 수동 기록과 같은 맑은 날 밝기로 친다
+            chargeBattery(amount: calculateChargeAmount(minutes: minutes - charged, averageLux: 5000))
+            todayRecord.healthChargedMinutes = minutes
+        }
+        saveRecords()
+        saveStatus()
+        calculateStreak()
+        updateWidgetData()
+    }
+
     // MARK: - Location
     func requestLocation() {
         locationManager.requestWhenInUseAuthorization()
@@ -812,6 +873,7 @@ class SunlightManager: NSObject, ObservableObject {
         luxSensor.sunlightThresholdLux = settings.sunlightThresholdLux
         luxSensor.outdoorThresholdLux = settings.outdoorThresholdLux
         saveRecords()
+        updateWidgetData()
     }
     
     // MARK: - Stats
@@ -917,6 +979,28 @@ class SunlightManager: NSObject, ObservableObject {
 
         SharedDataManager.shared.saveWidgetData(widgetData)
         WidgetCenter.shared.reloadAllTimelines()
+        sendToWatch()
+    }
+
+    // MARK: - Apple Watch
+
+    private func connectWatch() {
+        WatchBridge.shared.onGive = { [weak self] in self?.transferAllBattery() }
+        WatchBridge.shared.onActivate = { [weak self] in self?.sendToWatch() }
+        WatchBridge.shared.activate()
+    }
+
+    private func sendToWatch() {
+        WatchBridge.shared.send(WatchSnapshot(
+            energy: sunflowerHealth.currentEnergy,
+            energyAt: sunflowerHealth.lastUpdateTime,
+            decayPerHour: sunflowerHealth.decayRatePerHour,
+            battery: batteryStatus.chargedAmount,
+            todayMinutes: todayRecord.totalMinutes,
+            goalMinutes: settings.dailyGoalMinutes,
+            day: todayRecord.date,
+            daylightFromHealth: daylightFromHealth
+        ))
     }
 
     // MARK: - Live Activity Integration

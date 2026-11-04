@@ -55,6 +55,9 @@ https://m1zz.github.io/SunlightTracker/
 알림
 원하는 시간에 햇빛을 받으러 나가라고 알려 주고, 목표를 채우면 알려 줘요.
 
+Apple Watch와 건강 앱
+Apple Watch가 잰 ‘햇빛 아래 있었던 시간’을 건강 앱에서 받아 오늘 햇빛에 더해요. 앱을 켜 두지 않아도 배터리가 차고, 카메라로 잰 시간과 겹치면 한 번만 세요. 워치 화면과 컴플리케이션에서 해바라기와 오늘 진행률을 보고, 손목에서 바로 배터리를 전달해요.
+
 서버가 없는 앱이에요. 햇빛 기록과 메모는 모두 기기 안에만 저장됩니다.
 
 ## en
@@ -111,6 +114,9 @@ Check today's sunlight and your sunflower's health right from the Home Screen, t
 
 Reminders
 Get a nudge at the time you choose to go out and enjoy some sun, and another when you reach your goal.
+
+Apple Watch and Health
+Turn it on and the time in daylight your Apple Watch records in the Health app is added to today's sunlight, so your battery charges even when the app is closed. Time already counted by the camera is never counted twice. See your sunflower and today's progress on your watch face, and give it battery right from your wrist.
 
 There's no server involved. Your sunlight history and notes stay on your device and nowhere else.
 
@@ -169,6 +175,9 @@ Check today's sunlight and your sunflower's condition straight from the Home Scr
 Reminders
 Get a nudge at the time you choose to go and enjoy some sun, and another when you reach your goal.
 
+Apple Watch and Health
+Turn it on and the time in daylight your Apple Watch records in the Health app is added to today's sunlight, so your battery charges even when the app is closed. Time already counted by the camera is never counted twice. See your sunflower and today's progress on your watch face, and give it battery right from your wrist.
+
 There's no server involved. Your sunlight history and notes stay on your device and nowhere else.
 
 ## zh-Hans
@@ -225,6 +234,9 @@ https://m1zz.github.io/SunlightTracker/zh-Hans/
 
 提醒
 在你设定的时间提醒你出门晒太阳，完成目标时也会通知你。
+
+Apple Watch 与“健康”
+开启后，Apple Watch 在“健康”App 中记录的日光下时间会计入今天的阳光，不打开 App 电量也会增加。与相机测量重叠的时间只算一次。在表盘复杂功能和手表 App 上查看向日葵和今日进度，抬手就能传递电量。
 
 这款应用没有服务器。你的日照记录和备忘，全部只保存在设备上。
 
@@ -283,6 +295,9 @@ https://m1zz.github.io/SunlightTracker/zh-Hant/
 通知
 在你設定的時間提醒你出門曬太陽，達成目標時也會通知你。
 
+Apple Watch 與「健康」
+開啟後，Apple Watch 在「健康」App 記錄的日光下時間會計入今天的陽光，不開 App 電量也會增加。與相機測量重疊的時間只算一次。在錶面複雜功能和手錶 App 上查看向日葵和今日進度，抬手就能傳遞電量。
+
 這是一款不需要伺服器的 App。曬太陽的記錄和備忘都只會儲存在你的裝置上。
 
 ## ja
@@ -339,6 +354,9 @@ https://m1zz.github.io/SunlightTracker/ja/
 
 通知
 好きな時刻に「日ざしを浴びに行こう」とお知らせし、目標を達成したときにもお知らせします。
+
+Apple Watchとヘルスケア
+オンにすると、Apple Watchがヘルスケアに記録した「日光下の時間」が今日の日ざしに加わり、アプリを開いていなくてもバッテリーがたまります。カメラで測った時間と重なる分は一度だけ数えます。文字盤のコンプリケーションとウォッチのアプリでひまわりと今日の進み具合を確かめ、手首からそのままバッテリーを届けられます。
 
 サーバーを使わないアプリです。日ざしの記録やメモは、すべてお使いのデバイスの中だけに保存されます。
 
@@ -397,6 +415,9 @@ https://m1zz.github.io/SunlightTracker/ru/
 Уведомления
 Напомним выйти на солнце в удобное для вас время и сообщим, когда цель выполнена.
 
+Apple Watch и «Здоровье»
+Включите — и время на дневном свету, которое Apple Watch записывают в «Здоровье», добавится к сегодняшнему солнцу. Батарея заряжается, даже когда приложение закрыто, а время, уже учтённое камерой, не считается дважды. Подсолнух и прогресс за день видны на циферблате и в приложении на часах, а заряд можно передать прямо с запястья.
+
 У приложения нет сервера. Все записи о солнце и заметки хранятся только на вашем устройстве.
 
 ## es
@@ -453,6 +474,9 @@ Consulta el sol de hoy y el estado de tu girasol desde los widgets de la pantall
 
 Recordatorios
 Te avisamos a la hora que elijas para que salgas a tomar el sol, y también cuando cumplas tu meta.
+
+Apple Watch y Salud
+Al activarlo, el tiempo con luz natural que tu Apple Watch registra en la app Salud se suma al sol de hoy, así que la batería se carga aunque la app esté cerrada. El tiempo que ya midió la cámara no se cuenta dos veces. Mira tu girasol y el progreso del día en la esfera del reloj y dale batería desde la muñeca.
 
 Esta app no usa ningún servidor. Tus registros de sol y tus notas se guardan solo en tu dispositivo.
 
@@ -511,6 +535,9 @@ Mit Widgets auf dem Home-Bildschirm und dem Sperrbildschirm sowie der Dynamic Is
 Erinnerungen
 Zur gewünschten Uhrzeit erinnert dich die App daran, rauszugehen und Sonne zu tanken. Sobald du dein Ziel erreicht hast, bekommst du ebenfalls Bescheid.
 
+Apple Watch und Health
+Schalte es ein und die Zeit im Tageslicht, die deine Apple Watch in der Health-App erfasst, zählt zur heutigen Sonne. So lädt sich die Batterie auch bei geschlossener App. Was die Kamera schon gemessen hat, zählt nie doppelt. Sonnenblume und Tagesfortschritt siehst du auf dem Zifferblatt, und die Batterie gibst du direkt vom Handgelenk weiter.
+
 Ganz ohne Server: Deine Sonnenzeiten und Notizen bleiben ausschließlich auf deinem Gerät gespeichert.
 
 ## fr
@@ -567,6 +594,9 @@ Sur l’écran d’accueil, l’écran verrouillé et la Dynamic Island, retrouv
 
 Rappels
 Choisis l’heure à laquelle l’app te propose de sortir au soleil, et reçois une alerte quand ton objectif est atteint.
+
+Apple Watch et Santé
+Active l’option et le temps à la lumière du jour enregistré par ton Apple Watch dans l’app Santé s’ajoute au soleil du jour : la batterie se recharge même app fermée. Le temps déjà mesuré par la caméra n’est jamais compté deux fois. Retrouve ton tournesol et ta progression sur le cadran, et donne-lui la batterie depuis ton poignet.
 
 Pas de serveur : tes données de soleil et tes notes restent uniquement sur ton appareil.
 
@@ -625,6 +655,9 @@ Con i widget per la schermata Home e per la schermata di blocco e con la Dynamic
 Notifiche
 Scegli l'orario in cui ricevere il promemoria per uscire al sole e ricevi un avviso quando raggiungi l'obiettivo.
 
+Apple Watch e Salute
+Attivalo e il tempo alla luce del giorno che Apple Watch registra nell’app Salute si aggiunge al sole di oggi: la batteria si ricarica anche ad app chiusa. Il tempo già misurato dalla fotocamera non viene mai contato due volte. Guarda il girasole e i progressi del giorno sul quadrante e dagli la batteria direttamente dal polso.
+
 Nessun server: le tue registrazioni e le tue note restano solo sul tuo dispositivo.
 
 ## pt-BR
@@ -681,6 +714,9 @@ Veja o sol de hoje e como está o girassol direto na tela de início, na tela bl
 
 Lembretes
 Escolha o horário em que o app avisa que é hora de sair para tomar sol, e receba um aviso quando bater a meta.
+
+Apple Watch e Saúde
+Ao ativar, o tempo à luz do dia que o Apple Watch registra no app Saúde entra no sol de hoje, e a bateria carrega mesmo com o app fechado. O tempo já medido pela câmera nunca conta duas vezes. Veja o girassol e o progresso do dia no mostrador e passe a bateria direto do pulso.
 
 Sem servidor. Seus registros de sol e suas notas ficam guardados somente no seu aparelho.
 
@@ -739,6 +775,9 @@ https://m1zz.github.io/SunlightTracker/th/
 การแจ้งเตือน
 เตือนให้ออกไปรับแดดตามเวลาที่คุณต้องการ และแจ้งเมื่อทำถึงเป้าหมายแล้ว
 
+Apple Watch และแอปสุขภาพ
+เปิดใช้แล้วเวลากลางแจ้งที่ Apple Watch บันทึกไว้ในแอปสุขภาพจะรวมเข้ากับแดดของวันนี้ แบตเตอรี่จึงชาร์จได้แม้ไม่ได้เปิดแอป ช่วงที่กล้องวัดไปแล้วจะไม่นับซ้ำ ดูทานตะวันและความคืบหน้าของวันได้บนหน้าปัดนาฬิกา และส่งแบตเตอรี่ให้ได้จากข้อมือเลย
+
 แอปนี้ไม่มีเซิร์ฟเวอร์ บันทึกแดดและโน้ตทั้งหมดเก็บไว้ในอุปกรณ์ของคุณเท่านั้น
 
 ## vi
@@ -795,6 +834,9 @@ Xem ngay nắng hôm nay và tình trạng hoa hướng dương ngay trên widge
 
 Thông báo
 Nhắc bạn ra ngoài đón nắng vào giờ bạn chọn, và báo cho bạn khi đã đạt mục tiêu.
+
+Apple Watch và Sức khỏe
+Khi bật, thời gian dưới ánh sáng ban ngày mà Apple Watch ghi trong ứng dụng Sức khỏe sẽ được cộng vào lượng nắng hôm nay, nên pin vẫn được sạc dù không mở ứng dụng. Thời gian camera đã đo không bao giờ bị tính hai lần. Xem hoa hướng dương và tiến độ trong ngày ngay trên mặt đồng hồ, và trao pin ngay từ cổ tay.
 
 Ứng dụng không dùng máy chủ. Mọi ghi chép nắng và ghi chú của bạn chỉ được lưu ngay trên thiết bị.
 
@@ -853,6 +895,9 @@ Dnešní slunce a stav slunečnice uvidíš hned na widgetech na domovské obraz
 Oznámení
 V čas, který si vybereš, ti aplikace připomene, že je čas vyrazit na slunce. A když splníš cíl, dá ti vědět.
 
+Apple Watch a Zdraví
+Po zapnutí se čas na denním světle, který Apple Watch zapisují do aplikace Zdraví, přičte k dnešnímu slunci, takže se baterie nabíjí i se zavřenou aplikací. Čas už změřený kamerou se nikdy nepočítá dvakrát. Slunečnici a dnešní pokrok uvidíš na ciferníku a baterii jí předáš přímo ze zápěstí.
+
 Aplikace nepoužívá žádný server. Záznamy slunce i poznámky zůstávají jen v tvém zařízení.
 
 ## da
@@ -909,6 +954,9 @@ Se dagens sol og solsikkens tilstand direkte på startskærmen og låseskærmen 
 
 Påmindelser
 Få en venlig påmindelse på det tidspunkt, du selv vælger, om at komme ud i solen, og få besked, når du har nået dit mål.
+
+Apple Watch og Sundhed
+Slå det til, så bliver den tid i dagslys, dit Apple Watch registrerer i Sundhed, lagt til dagens sol. Batteriet lades op, selv når appen er lukket, og tid, kameraet allerede har målt, tæller aldrig dobbelt. Se din solsikke og dagens fremskridt på urskiven, og giv den batteri direkte fra håndleddet.
 
 Her er ingen server. Dine solregistreringer og notater bliver kun gemt på din egen enhed.
 
@@ -967,6 +1015,9 @@ Widget και ζωντανή εικόνα
 Ειδοποιήσεις
 Η εφαρμογή σού θυμίζει την ώρα που διαλέγεις να βγεις στον ήλιο και σε ειδοποιεί όταν πετύχεις τον στόχο σου.
 
+Apple Watch και Υγεία
+Αν το ενεργοποιήσεις, ο χρόνος στο φως της μέρας που καταγράφει το Apple Watch στην Υγεία προστίθεται στον σημερινό ήλιο, οπότε η μπαταρία φορτίζει ακόμη κι όταν η εφαρμογή είναι κλειστή. Ο χρόνος που έχει ήδη μετρήσει η κάμερα δεν μετριέται ποτέ δύο φορές. Δες το ηλιοτρόπιο και την πρόοδο της μέρας στην πρόσοψη του ρολογιού και δώσ’ του μπαταρία από τον καρπό.
+
 Δεν υπάρχει διακομιστής. Οι καταγραφές και οι σημειώσεις σου μένουν μόνο στη συσκευή σου.
 
 ## fi
@@ -1023,6 +1074,9 @@ Näet päivän auringon ja auringonkukan vointi kotinäytön ja lukitusnäytön 
 
 Ilmoitukset
 Sovellus muistuttaa sinua lähtemään ulos valitsemanasi aikana ja kertoo, kun päivätavoite täyttyy.
+
+Apple Watch ja Terveys
+Kun otat sen käyttöön, Apple Watchin Terveys-appiin tallentama päivänvaloaika lisätään päivän auringonvaloon, joten akku latautuu, vaikka appi olisi suljettu. Kameran jo mittaamaa aikaa ei lasketa kahdesti. Näet auringonkukan ja päivän edistymisen kellotaulusta ja annat sille akkua suoraan ranteesta.
 
 Sovellus ei käytä palvelinta. Aurinkokirjaukset ja muistiinpanot tallentuvat vain laitteellesi.
 
@@ -1081,6 +1135,9 @@ Cek sinar hari ini dan kondisi bunga matahari langsung dari widget layar utama, 
 Notifikasi
 Dapatkan pengingat untuk keluar berjemur di waktu yang kamu pilih, dan kabar saat target hari ini tercapai.
 
+Apple Watch dan Kesehatan
+Setelah diaktifkan, waktu di bawah cahaya siang yang dicatat Apple Watch di app Kesehatan ditambahkan ke sinar matahari hari ini, jadi baterai tetap terisi meski app ditutup. Waktu yang sudah diukur kamera tidak pernah dihitung dua kali. Lihat bunga matahari dan progres harian di wajah jam, lalu beri baterai langsung dari pergelangan tangan.
+
 Tanpa server. Semua catatan sinar matahari dan memo tersimpan hanya di perangkatmu.
 
 ## nb
@@ -1137,6 +1194,9 @@ Se dagens sol og solsikkens tilstand rett fra widgets på hjem- og låseskjermen
 
 Varsler
 Få en påminnelse når du vil om å gå ut i solen, og et varsel når du har nådd målet.
+
+Apple Watch og Helse
+Slå det på, så legges tiden i dagslys som Apple Watch registrerer i Helse, til dagens sol. Batteriet lades selv når appen er lukket, og tid kameraet allerede har målt, telles aldri dobbelt. Se solsikken og dagens fremgang på urskiven, og gi den batteri rett fra håndleddet.
 
 Appen bruker ingen server. Sollogg og notater lagres bare på enheten din.
 
@@ -1195,6 +1255,9 @@ Met widgets op je beginscherm en toegangsscherm en in het Dynamic Island zie je 
 Herinneringen
 Op een tijdstip naar keuze krijg je een seintje om de zon op te zoeken, en een melding zodra je je doel hebt gehaald.
 
+Apple Watch en Gezondheid
+Zet het aan en de tijd in daglicht die je Apple Watch in Gezondheid registreert, telt mee voor de zon van vandaag. Zo laadt je batterij op, ook als de app dicht is. Tijd die de camera al heeft gemeten, telt nooit dubbel. Bekijk je zonnebloem en de voortgang van vandaag op je wijzerplaat en geef hem batterij vanaf je pols.
+
 Er is geen server: je zonlichtgegevens en notities blijven helemaal op je eigen toestel.
 
 ## pl
@@ -1251,6 +1314,9 @@ Widżety na ekranie głównym i ekranie blokady oraz Dynamic Island pokazują od
 
 Powiadomienia
 O wybranej godzinie przypomnimy Ci, by wyjść na słońce, a gdy osiągniesz cel, damy Ci znać.
+
+Apple Watch i Zdrowie
+Po włączeniu czas w świetle dziennym, który Apple Watch zapisuje w aplikacji Zdrowie, dolicza się do dzisiejszego słońca, więc bateria ładuje się nawet przy zamkniętej aplikacji. Czas zmierzony już aparatem nigdy nie liczy się podwójnie. Słonecznik i dzisiejsze postępy widać na tarczy zegarka, a baterię przekażesz prosto z nadgarstka.
 
 To aplikacja bez serwera. Wszystkie zapisy o słońcu i notatki są przechowywane wyłącznie na Twoim urządzeniu.
 
@@ -1309,6 +1375,9 @@ Se dagens sol och hur solrosen mår direkt i widgetar på hemskärmen och låssk
 Aviseringar
 Välj en tid då appen ska påminna dig om att gå ut i solen, och få en avisering när du nått ditt mål.
 
+Apple Watch och Hälsa
+Slå på det så läggs tiden i dagsljus som din Apple Watch registrerar i Hälsa till dagens sol. Batteriet laddas även när appen är stängd, och tid som kameran redan mätt räknas aldrig dubbelt. Se din solros och dagens framsteg på urtavlan och ge den batteri direkt från handleden.
+
 Appen har ingen server. All din solloggning och alla dina anteckningar sparas bara på din enhet.
 
 ## tr
@@ -1365,6 +1434,9 @@ Ana ekran ve kilit ekranı widget'ları ile Dynamic Island'dan bugünkü güneş
 
 Bildirimler
 Seçtiğin saatte güneşe çıkmanı hatırlatır, hedefini tamamlayınca da haber verir.
+
+Apple Watch ve Sağlık
+Açtığında Apple Watch’un Sağlık uygulamasına kaydettiği gün ışığında geçen süre bugünkü güneşe eklenir; uygulama kapalıyken bile pil dolar. Kameranın zaten ölçtüğü süre asla iki kez sayılmaz. Ayçiçeğini ve günün ilerlemesini saat kadranında gör, pili doğrudan bileğinden ver.
 
 Uygulamanın sunucusu yok. Güneş kayıtların ve notların yalnızca cihazında saklanır.
 

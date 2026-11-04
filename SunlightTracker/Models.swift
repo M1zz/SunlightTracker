@@ -13,6 +13,10 @@ struct SunlightRecord: Identifiable, Codable {
     var averageLux: Double
     var mood: DailyMood?        // 오늘의 기분
     var note: String?           // 한마디 메모
+    /// 그중 건강 앱(Apple Watch)에서 받은 분 — 카메라로 잰 구간과 겹치지 않는 몫. 없으면 연동 전 기록.
+    var healthMinutes: Int? = nil
+    /// 건강 앱 몫으로 배터리를 채워 준 분(가장 많았던 때). 같은 시간으로 두 번 충전하지 않게.
+    var healthChargedMinutes: Int? = nil
 
     var goalProgress: Double {
         guard goalMinutes > 0 else { return 0 }

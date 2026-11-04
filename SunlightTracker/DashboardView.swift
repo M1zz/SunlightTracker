@@ -236,6 +236,13 @@ struct DashboardView: View {
             }
             .frame(height: 12)
             .accessibilityHidden(true)
+
+            if let fromWatch = manager.todayRecord.healthMinutes, fromWatch > 0 {
+                Label("Apple Watch에서 \(fromWatch)분", systemImage: "applewatch")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
         .padding(16)
         .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))

@@ -447,6 +447,156 @@
           }
         }
       }
+    },
+    "NSHealthShareUsageDescription" : {
+      "comment" : "Health permission: reads Time in Daylight",
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Načítá čas na denním světle změřený Apple Watch a přičítá ho k dnešnímu slunci. Zdravotní data nikdy neopustí tvoje zařízení."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen læser den tid i dagslys, som dit Apple Watch måler, og lægger den til dagens sol. Sundhedsdata forlader aldrig din enhed."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liest die von deiner Apple Watch gemessene Zeit im Tageslicht und rechnet sie zur heutigen Sonne hinzu. Gesundheitsdaten verlassen nie dein Gerät."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαβάζει τον χρόνο στο φως της μέρας που μετρά το Apple Watch και τον προσθέτει στον σημερινό ήλιο. Τα δεδομένα υγείας δεν φεύγουν ποτέ από τη συσκευή."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower reads the time in daylight measured by your Apple Watch and adds it to today’s sunlight. Health data never leaves your device."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower reads the time in daylight measured by your Apple Watch and adds it to today’s sunlight. Health data never leaves your device."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lee el tiempo con luz natural que mide tu Apple Watch y lo suma al sol de hoy. Los datos de salud nunca salen de tu dispositivo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lukee Apple Watchin mittaaman päivänvalossa vietetyn ajan ja lisää sen päivän auringonvaloon. Terveystiedot eivät koskaan poistu laitteelta."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lit le temps passé à la lumière du jour mesuré par ton Apple Watch et l’ajoute au soleil du jour. Tes données de santé ne quittent jamais ton appareil."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membaca waktu di bawah cahaya siang yang diukur Apple Watch dan menambahkannya ke sinar matahari hari ini. Data kesehatan tidak pernah keluar dari perangkatmu."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legge il tempo alla luce del giorno misurato da Apple Watch e lo aggiunge al sole di oggi. I dati sulla salute non lasciano mai il dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchが測った「日光下の時間」を読み込み、今日の日ざしに加えます。健康データがデバイスの外に送られることはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leser tiden i dagslys som Apple Watch måler, og legger den til dagens sol. Helsedata forlater aldri enheten din."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leest de tijd in daglicht die je Apple Watch meet en telt die op bij de zon van vandaag. Gezondheidsgegevens verlaten je apparaat nooit."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odczytuje czas w świetle dziennym zmierzony przez Apple Watch i dodaje go do dzisiejszego słońca. Dane o zdrowiu nigdy nie opuszczają urządzenia."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lê o tempo à luz do dia medido pelo Apple Watch e soma ao sol de hoje. Os dados de saúde nunca saem do seu aparelho."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Считывает время на дневном свету, измеренное Apple Watch, и добавляет его к сегодняшнему солнцу. Данные о здоровье не покидают устройство."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Läser tiden i dagsljus som din Apple Watch mäter och lägger till den i dagens sol. Hälsodata lämnar aldrig din enhet."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อ่านเวลากลางแจ้งที่ Apple Watch วัดได้ แล้วรวมเข้ากับแดดของวันนี้ ข้อมูลสุขภาพจะไม่ถูกส่งออกนอกอุปกรณ์"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch’un ölçtüğü gün ışığında geçen süreyi okuyup bugünkü güneşe ekler. Sağlık verileri cihazından asla çıkmaz."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đọc thời gian dưới ánh sáng ban ngày do Apple Watch đo và cộng vào lượng nắng hôm nay. Dữ liệu sức khỏe không bao giờ rời khỏi thiết bị."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "读取 Apple Watch 测得的日光下时间，计入今天的阳光。健康数据绝不会离开你的设备。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "讀取 Apple Watch 測得的日光下時間，計入今天的陽光。健康資料絕不會離開你的裝置。"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
