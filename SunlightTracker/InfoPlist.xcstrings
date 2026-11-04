@@ -597,6 +597,156 @@
           }
         }
       }
+    },
+    "NSHealthUpdateUsageDescription" : {
+      "comment" : "Health permission text required by App Store; the app never writes to Health",
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikace do Zdraví nic nezapisuje. Jen čte čas na denním světle."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen skriver aldrig noget i Sundhed. Den læser kun din tid i dagslys."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die App schreibt nichts in Health. Sie liest nur deine Zeit im Tageslicht."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η εφαρμογή δεν γράφει τίποτα στην Υγεία. Διαβάζει μόνο τον χρόνο σου στο φως της μέρας."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower never writes anything to Health. It only reads your time in daylight."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower never writes anything to Health. It only reads your time in daylight."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La app no escribe nada en Salud. Solo lee tu tiempo con luz natural."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appi ei kirjoita Terveyteen mitään. Se vain lukee päivänvalossa vietetyn ajan."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’app n’écrit rien dans Santé. Elle lit seulement ton temps à la lumière du jour."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App ini tidak menulis apa pun ke Kesehatan. Hanya membaca waktu di bawah cahaya siang."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’app non scrive nulla in Salute. Legge solo il tempo alla luce del giorno."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ひなたひまわりはヘルスケアに何も書き込みません。日光下の時間を読み取るだけです。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen skriver aldri noe til Helse. Den leser bare tiden din i dagslys."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De app schrijft niets naar Gezondheid. Hij leest alleen je tijd in daglicht."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikacja niczego nie zapisuje w Zdrowiu. Tylko odczytuje czas w świetle dziennym."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O app não grava nada no Saúde. Ele só lê seu tempo à luz do dia."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приложение ничего не записывает в «Здоровье». Оно только считывает время на дневном свету."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appen skriver aldrig något till Hälsa. Den läser bara din tid i dagsljus."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แอปไม่เขียนข้อมูลใดๆ ลงในแอปสุขภาพ เพียงอ่านเวลากลางแจ้งของคุณเท่านั้น"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulama Sağlık’a hiçbir şey yazmaz. Yalnızca gün ışığında geçen süreni okur."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng không ghi gì vào Sức khỏe. Chỉ đọc thời gian dưới ánh sáng ban ngày của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向阳小葵不会向“健康”写入任何数据，只读取你的日光下时间。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向陽小葵不會在「健康」寫入任何資料，只讀取你的日光下時間。"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

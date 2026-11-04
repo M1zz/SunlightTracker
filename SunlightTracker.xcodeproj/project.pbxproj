@@ -629,12 +629,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SunlightWatch/SunlightWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leeo.sunflower;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
@@ -661,7 +662,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SunlightWatchWidget/SunlightWatchWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SunlightWatchWidget/Info.plist;
@@ -692,12 +693,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SunlightWatch/SunlightWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leeo.sunflower;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
@@ -726,7 +728,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = widget/Info.plist;
@@ -758,7 +760,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = widget/Info.plist;
@@ -909,7 +911,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SunlightTracker/SunlightTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"SunlightTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
@@ -919,6 +921,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -947,7 +950,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SunlightTracker/SunlightTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"SunlightTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
@@ -957,6 +960,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSCameraUsageDescription = "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -984,7 +988,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = SunlightWatchWidget/SunlightWatchWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SunlightWatchWidget/Info.plist;
