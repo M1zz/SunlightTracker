@@ -431,6 +431,8 @@ class SunlightManager: NSObject, ObservableObject {
             saveRecords()
             saveStatus()
             calculateStreak()
+            // 무료로 쓰는 사람에게 첫 세션이 끝났을 때 한 번, 잠금화면에 흐르는 현황을 미리 보인다.
+            SunflowerPro.shared.offerOnce(.liveActivity)
         }
 
         currentSession = nil
@@ -1006,7 +1008,8 @@ class SunlightManager: NSObject, ObservableObject {
     // MARK: - Live Activity Integration
     private func startLiveActivity() {
         #if canImport(ActivityKit)
-        guard ActivityAuthorizationInfo().areActivitiesEnabled else { return }
+        // 잠금화면 · 다이나믹 아일랜드 실시간 현황은 Pro (→ SunflowerPro)
+        guard SunflowerPro.shared.isOpen, ActivityAuthorizationInfo().areActivitiesEnabled else { return }
 
         let attributes = SunlightTrackingAttributes(
             sessionStartTime: Date(),

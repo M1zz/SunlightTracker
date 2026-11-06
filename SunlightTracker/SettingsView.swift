@@ -1,4 +1,5 @@
 import SwiftUI
+import CoreTransferable
 import LeeoKit
 
 struct SettingsView: View {
@@ -177,6 +178,9 @@ struct SettingsView: View {
                     Text("출처: Huberman Lab, BMC Public Health 2025, PMC, Anderson 2024, University of Southampton 연구")
                 }
 
+                // 햇빛바라기 Pro · 구독 관리 · 평생으로 바꾸기 · 구매 복원
+                ProSettingsSection()
+
                 // 지원
                 Section {
                     LeeoSupportSection<SunlightTrackerSpec>()
@@ -190,6 +194,13 @@ struct SettingsView: View {
 
                 // Data Section
                 Section {
+                    // 기본 내보내기는 늘 무료다.
+                    ShareLink(item: SunlightCSV(records: manager.weeklyRecords),
+                              preview: SharePreview(String(localized: "햇빛 기록"))) {
+                        Label("기록 내보내기 (CSV)", systemImage: "square.and.arrow.up")
+                    }
+                    .disabled(manager.weeklyRecords.isEmpty)
+
                     Button(role: .destructive) {
                         showingResetAlert = true
                     } label: {
@@ -197,6 +208,8 @@ struct SettingsView: View {
                     }
                 } header: {
                     Label("데이터", systemImage: "externaldrive")
+                } footer: {
+                    Text("최근 90일 기록을 날짜마다 한 줄씩 표로 내보내요. 숫자 앱이나 엑셀에서 열 수 있어요.")
                 }
                 
                 Section {
@@ -273,5 +286,55 @@ struct InfoRow: View {
         }
         .padding(.vertical, 2)
         .accessibilityElement(children: .combine)
+    }
+}
+
+// MARK: - 기록 내보내기
+
+/// 날짜마다 한 줄인 CSV. 머리줄은 그 언어로, 날짜는 ISO(yyyy-MM-dd)로 적어 어느 표 앱에서도 정렬된다.
+struct SunlightCSV: Transferable {
+    let records: [SunlightRecord]
+
+    static var transferRepresentation: some TransferRepresentation {
+        DataRepresentation(exportedContentType: .commaSeparatedText) { csv in
+            Data(csv.text.utf8)
+        }
+        .suggestedFileName("Sunlight.csv")
+    }
+
+    var text: String {
+        let header = [
+            String(localized: "날짜", comment: "CSV column: date"),
+            String(localized: "햇빛 시간(분)", comment: "CSV column: minutes of sunlight"),
+            String(localized: "목표(분)", comment: "CSV column: daily goal in minutes"),
+            String(localized: "목표 달성", comment: "CSV column: goal met (yes/no)"),
+            String(localized: "세션 수", comment: "CSV column: number of sessions"),
+            String(localized: "최고 조도(lx)", comment: "CSV column: peak lux"),
+            String(localized: "평균 조도(lx)", comment: "CSV column: average lux"),
+            String(localized: "기분", comment: "CSV column: mood"),
+            String(localized: "한마디", comment: "CSV column: note"),
+        ]
+        let dayFormat = Date.ISO8601FormatStyle(timeZone: .current).year().month().day()
+        let rows = records.sorted { $0.date < $1.date }.map { r in
+            [
+                r.date.formatted(dayFormat),
+                "\(r.totalMinutes)",
+                "\(r.goalMinutes)",
+                r.goalAchieved ? String(localized: "예", comment: "CSV value: yes") : String(localized: "아니요", comment: "CSV value: no"),
+                "\(r.sessions.count)",
+                "\(Int(r.peakLux))",
+                "\(Int(r.averageLux))",
+                r.mood?.description ?? "",
+                r.note ?? "",
+            ]
+        }
+        // 엑셀이 한글을 깨뜨리지 않게 BOM 을 앞에 둔다.
+        return "\u{FEFF}" + ([header] + rows).map { $0.map(Self.escape).joined(separator: ",") }.joined(separator: "\r\n")
+    }
+
+    /// 쉼표 · 따옴표 · 줄바꿈이 든 칸은 따옴표로 감싼다.
+    private static func escape(_ field: String) -> String {
+        guard field.contains(where: { $0 == "," || $0 == "\"" || $0.isNewline }) else { return field }
+        return "\"" + field.replacingOccurrences(of: "\"", with: "\"\"") + "\""
     }
 }

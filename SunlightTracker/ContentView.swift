@@ -5,6 +5,7 @@ struct ContentView: View {
     @StateObject private var manager = SunlightManager.shared
     @StateObject private var weatherService = WeatherService()
     @StateObject private var notificationManager = NotificationManager.shared
+    @ObservedObject private var pro = SunflowerPro.shared
     /// 스토어 스크린샷용: Debug 빌드에서만 `-ScreenshotTab <번호>` 실행 인자로 처음 탭을 고른다.
     @State private var selectedTab: Int = {
         #if DEBUG
@@ -48,6 +49,35 @@ struct ContentView: View {
         .modifier(FoldTodayTabRedirect(selectedTab: $selectedTab))
         // 창 크기로 접힘을 재서 아래로 흘린다. 시트 · 알림창도 접힌 선을 비킨다 (LeeoKit Fold).
         .foldAware()
+        // 페이월은 여기 한 곳에서만 뜬다. 오늘 화면이 펼친 화면에 두 번 서도 시트는 하나다.
+        .sheet(item: $pro.moment) { ProPaywallView(moment: $0) }
+        .sheet(isPresented: $pro.showsGraduation) {
+            ProGraduationSheet().onAppear { pro.markGraduationOffered() }
+        }
+        #if DEBUG
+        // 스토어 스크린샷 · 화면 확인용: `-ScreenshotPaywall liveActivity` 처럼 실행 인자로 페이월을 바로 띄운다.
+        .task {
+            switch UserDefaults.standard.string(forKey: "ScreenshotPaywall") {
+            case "widget": pro.moment = .widget
+            case "liveActivity": pro.moment = .liveActivity
+            case "monthlyStats": pro.moment = .monthlyStats
+            case "weekGoal": pro.moment = .weekGoal(minutes: 210)
+            case "settings": pro.moment = .settings
+            default: break
+            }
+        }
+        #endif
+        // 잠긴 위젯을 누르면 sunflower://pro 로 온다.
+        .onOpenURL { url in
+            if url.scheme == "sunflower", url.host == "pro", !pro.isOpen { pro.present(.widget) }
+        }
+        // 하루 목표를 처음 일곱 번 채운 날, 한 번만.
+        .onChange(of: manager.todayRecord.goalAchieved) { _, achieved in
+            guard achieved, manager.weeklyRecords.filter(\.goalAchieved).count >= 7 else { return }
+            let weekAgo = Calendar.current.date(byAdding: .day, value: -6, to: Date().startOfDay) ?? Date()
+            let minutes = manager.weeklyRecords.filter { $0.date >= weekAgo }.reduce(0) { $0 + $1.totalMinutes }
+            pro.offerOnce(.weekGoal(minutes: minutes))
+        }
     }
 
     /// 펼친 화면의 결과 쪽: 오늘 탭 화면 그대로. 해바라기 · 오늘 받은 햇빛 · 배터리가 늘 보인다.

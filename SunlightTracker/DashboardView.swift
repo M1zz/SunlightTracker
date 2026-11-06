@@ -4,6 +4,7 @@ import LeeoKit
 struct DashboardView: View {
     @ObservedObject var manager: SunlightManager
     @ObservedObject var weatherService: WeatherService
+    @ObservedObject private var pro = SunflowerPro.shared
     @State private var showManualEntry = false
     @State private var manualMinutes: Double = 15
     @State private var hasAutoStarted = false
@@ -61,7 +62,8 @@ struct DashboardView: View {
                 todayProgressCard
 
                 // 목표를 채운 날이 쌓였을 때만, 드물게 응원을 부탁한다. 햇빛을 재는 동안에는 묻지 않는다 (모달 아님)
-                if manager.trackingPhase == .idle {
+                // 응원 부탁은 이미 Pro 를 가진 사람에게만 — 무료로 쓰는 사람에게 돈 이야기를 두 번 하지 않는다.
+                if manager.trackingPhase == .idle, pro.hasPro {
                     LeeoTipAskSlot<SunlightTrackerSpec>(tipJar: SunlightTrackerSpec.tipJar,
                                                         reached: SunlightTipMoments.reached(goalDays: manager.weeklyRecords.filter(\.goalAchieved).count))
                 }

@@ -466,6 +466,13 @@ class SharedDataManager {
         }
         return decoded
     }
+    /// 위젯이 열려 있는가(Pro · 페이월 전 설치자 · 아직 팔지 않는 기기). 앱(`SunflowerPro`)이 적고 위젯이 읽는다.
+    /// 한 번도 적지 않았으면 열려 있다 — 업데이트 뒤 앱을 열기 전에 올려 둔 위젯이 잠기지 않게.
+    var widgetsOpen: Bool {
+        get { sharedDefaults?.object(forKey: widgetsOpenKey) as? Bool ?? true }
+        set { sharedDefaults?.set(newValue, forKey: widgetsOpenKey) }
+    }
+    private let widgetsOpenKey = "pro_widgets_open"
 }
 
 // MARK: - Widget Data Model

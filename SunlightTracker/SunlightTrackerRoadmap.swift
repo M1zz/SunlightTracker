@@ -79,6 +79,9 @@ extension SunlightTrackerSpec {
         .init(id: "siri-ai", status: .planned,
               title: NSLocalizedString("Siri에게 그냥 말하기", comment: "Roadmap item: ask Siri without naming the app"),
               detail: NSLocalizedString("앱 이름을 말하지 않아도 Siri가 오늘 받은 햇빛을 바로 알려 줘요.", comment: "Roadmap item detail: ask Siri without naming the app")),
+        .init(id: "control.start", status: .planned,
+              title: NSLocalizedString("제어 센터에서 햇빛 재기", comment: "Roadmap item: Control Center button to start measuring sunlight (Pro)"),
+              detail: NSLocalizedString("제어 센터의 단추 하나로 앱을 열지 않고 햇빛 재기를 시작해요.", comment: "Roadmap item detail: Control Center button to start measuring sunlight (Pro)")),
     ]}
 }
 

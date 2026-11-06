@@ -2,7 +2,19 @@ import SwiftUI
 
 struct HistoryView: View {
     @ObservedObject var manager: SunlightManager
+    @ObservedObject private var pro = SunflowerPro.shared
     @State private var selectedPeriod: Period = .week
+
+    /// 월간은 Pro. 막혀 있으면 주간에 머물고 페이월을 띄운다. 지난 날들은 캘린더에서 그대로 보인다.
+    private var period: Binding<Period> {
+        Binding(get: { selectedPeriod }, set: { new in
+            if new == .month, !pro.isOpen {
+                pro.present(.monthlyStats)
+            } else {
+                selectedPeriod = new
+            }
+        })
+    }
     
     enum Period: String, CaseIterable {
         case week = "주간"
@@ -38,7 +50,7 @@ struct HistoryView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                Picker("기간", selection: $selectedPeriod) {
+                Picker("기간", selection: period) {
                     ForEach(Period.allCases, id: \.self) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
                 }
                 .pickerStyle(.segmented)
@@ -51,6 +63,7 @@ struct HistoryView: View {
             .padding(.bottom, 30)
         }
         .background(Color(.systemGroupedBackground))
+        .onChange(of: pro.isOpen) { _, open in if !open { selectedPeriod = .week } }
     }
     
     // MARK: - Summary

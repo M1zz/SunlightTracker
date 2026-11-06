@@ -15,7 +15,9 @@ struct SunflowerWidgetProvider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SunflowerEntry) -> Void) {
-        let entry = loadEntry()
+        var entry = loadEntry()
+        // 위젯 갤러리에서는 무엇이 생기는지 그대로 보인다. 홈 화면에 올린 뒤에 잠긴다.
+        if context.isPreview { entry.isOpen = true }
         completion(entry)
     }
 
@@ -30,7 +32,7 @@ struct SunflowerWidgetProvider: TimelineProvider {
         guard let data = SharedDataManager.shared.loadWidgetData() else {
             return SunflowerEntry.placeholder
         }
-        return SunflowerEntry(date: Date(), widgetData: data)
+        return SunflowerEntry(date: Date(), widgetData: data, isOpen: SharedDataManager.shared.widgetsOpen)
     }
 }
 
@@ -38,6 +40,8 @@ struct SunflowerWidgetProvider: TimelineProvider {
 struct SunflowerEntry: TimelineEntry {
     let date: Date
     let widgetData: WidgetData
+    /// 홈 화면 위젯은 Pro. 앱이 App Group 에 적은 답을 따른다 (→ SunflowerPro).
+    var isOpen: Bool = true
 
     static let placeholder = SunflowerEntry(
         date: Date(),
@@ -565,6 +569,39 @@ struct Petal: Shape {
     }
 }
 
+// MARK: - Pro 잠금
+
+/// 무료로 쓰는 사람이 올린 위젯: 흐린 해바라기 위에 '탭해서 Pro 열기'. 누르면 앱에서 페이월이 뜬다.
+struct ProLockedWidget<Content: View>: View {
+    let isOpen: Bool
+    @ViewBuilder let content: () -> Content
+
+    var body: some View {
+        if isOpen {
+            content()
+        } else {
+            content()
+                .blur(radius: 6)
+                .opacity(0.4)
+                .accessibilityHidden(true)
+                .overlay {
+                    VStack(spacing: 6) {
+                        Image(systemName: "lock.fill")
+                            .font(.title3)
+                            .foregroundStyle(.orange)
+                            .accessibilityHidden(true)
+                        Text("탭해서 Pro 열기")
+                            .font(.body.weight(.semibold))
+                            .multilineTextAlignment(.center)
+                            .minimumScaleFactor(0.7)
+                    }
+                    .padding(8)
+                }
+                .widgetURL(URL(string: "sunflower://pro/widget"))
+        }
+    }
+}
+
 // MARK: - 위젯 설정들
 
 struct SunflowerWidget: Widget {
@@ -572,7 +609,7 @@ struct SunflowerWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
-            SunflowerWidgetView(entry: entry)
+            ProLockedWidget(isOpen: entry.isOpen) { SunflowerWidgetView(entry: entry) }
         }
         .configurationDisplayName("해바라기")
         .description("해바라기의 건강 상태를 확인하세요")
@@ -585,7 +622,7 @@ struct BatteryWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
-            BatteryWidgetView(entry: entry)
+            ProLockedWidget(isOpen: entry.isOpen) { BatteryWidgetView(entry: entry) }
         }
         .configurationDisplayName("배터리")
         .description("충전된 배터리 양을 확인하세요")
@@ -598,7 +635,7 @@ struct TodayProgressWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
-            TodayProgressWidgetView(entry: entry)
+            ProLockedWidget(isOpen: entry.isOpen) { TodayProgressWidgetView(entry: entry) }
         }
         .configurationDisplayName("오늘 진행도")
         .description("오늘의 햇빛 목표 달성 현황")
@@ -611,7 +648,7 @@ struct CompactInfoWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
-            CompactInfoWidgetView(entry: entry)
+            ProLockedWidget(isOpen: entry.isOpen) { CompactInfoWidgetView(entry: entry) }
         }
         .configurationDisplayName("종합 정보")
         .description("해바라기, 오늘 햇빛, 배터리를 한눈에")
@@ -624,7 +661,7 @@ struct DashboardWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
-            DashboardWidgetView(entry: entry)
+            ProLockedWidget(isOpen: entry.isOpen) { DashboardWidgetView(entry: entry) }
         }
         .configurationDisplayName("대시보드")
         .description("전체 정보를 한눈에 확인")

@@ -54,6 +54,8 @@
 		D097652450325692B5D2C54C /* DaylightHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85D583AFB49FFBED42286A /* DaylightHealth.swift */; };
 		DEC0868852B698404555BD27 /* WatchSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D3C9AAF85C60F007041439 /* WatchSnapshot.swift */; };
 		FBC45F3A312118C10E40AC1F /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = FB03F15BDBFF968BF42A9E33 /* LeeoKit */; };
+		5F1A0C0DE000000000000011 /* SunflowerPro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A0C0DE000000000000001 /* SunflowerPro.swift */; };
+		5F1A0C0DE000000000000012 /* ProPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A0C0DE000000000000002 /* ProPaywallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +167,9 @@
 		D20969CC2FBD2CFE5AF44B79 /* SunlightWatchApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightWatchApp.swift; sourceTree = "<group>"; };
 		DD4053E5FA9D9061C9D155BE /* SunlightIntents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunlightIntents.swift; sourceTree = "<group>"; };
 		FBEC8A6BFB4656D628631923 /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5F1A0C0DE000000000000001 /* SunflowerPro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunflowerPro.swift; sourceTree = "<group>"; };
+		5F1A0C0DE000000000000002 /* ProPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPaywallView.swift; sourceTree = "<group>"; };
+		5F1A0C0DE000000000000003 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -307,6 +312,9 @@
 				DD4053E5FA9D9061C9D155BE /* SunlightIntents.swift */,
 				81F15E8F72E224A46178F1EE /* AppShortcuts.xcstrings */,
 				596E171FDB259D7CEFE9B8EF /* WatchBridge.swift */,
+				5F1A0C0DE000000000000003 /* Products.storekit */,
+				5F1A0C0DE000000000000002 /* ProPaywallView.swift */,
+				5F1A0C0DE000000000000001 /* SunflowerPro.swift */,
 			);
 			path = SunlightTracker;
 			sourceTree = "<group>";
@@ -588,6 +596,8 @@
 				AA00000D /* NearbyActivityManager.swift in Sources */,
 				AA00000E /* AppConfig.swift in Sources */,
 				AA00000F /* RecordsView.swift in Sources */,
+				5F1A0C0DE000000000000012 /* ProPaywallView.swift in Sources */,
+				5F1A0C0DE000000000000011 /* SunflowerPro.swift in Sources */,
 				AA0000F0 /* FriendsView.swift in Sources */,
 				5C6C29C557C56E9AFAA210D2 /* SunlightTrackerSpec.swift in Sources */,
 				605D7E6696B14E0F91898ED7 /* SunlightTrackerRoadmap.swift in Sources */,

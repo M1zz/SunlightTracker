@@ -30,6 +30,11 @@ class SharedDataManager {
         }
         return decoded
     }
+    /// 위젯이 열려 있는가. 앱(`SunflowerPro`)이 적는다. 한 번도 적지 않았으면 열려 있다.
+    var widgetsOpen: Bool {
+        sharedDefaults?.object(forKey: widgetsOpenKey) as? Bool ?? true
+    }
+    private let widgetsOpenKey = "pro_widgets_open"
 }
 
 // MARK: - Widget Data Model

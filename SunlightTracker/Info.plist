@@ -16,6 +16,17 @@
 	<array>
 		<string>_suntracker-ni._tcp</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.leeo.sunflower</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>sunflower</string>
+			</array>
+		</dict>
+	</array>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 </dict>

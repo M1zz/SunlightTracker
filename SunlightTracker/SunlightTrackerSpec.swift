@@ -15,8 +15,18 @@ enum SunlightTrackerSpec: LeeoAppSpec {
         marketingURL: URL(string: "https://m1zz.github.io/SunlightTracker/")!
     )
 
-    /// 결제 없음 — 앱 안에 StoreKit·페이월 코드가 존재하지 않는다.
-    static let monetization = LeeoMonetization.free
+    /// **햇빛 모으기는 전부 무료, 앱을 열지 않아도 해바라기가 보이는 것은 Pro.**
+    ///
+    /// 무료 · Pro 두 칸. Pro 는 주 · 월 · 연 구독(한 구독 그룹)과 평생, 구독 졸업 평생.
+    /// 무엇이 열리는지는 `ProGate`, 상품 ID 는 `ProProduct`, 열려 있는지는 `SunflowerPro.isOpen` 한 곳에 있다.
+    /// 1.1.0(빌드 9)까지 받은 사람은 Pro 를 그대로 쓴다(`SunflowerPro.lastBuildBeforePaywall`).
+    static let monetization = LeeoMonetization.freemiumSubscription(
+        LeeoSubscriptionConfig(
+            productIDs: ProProduct.all,
+            // 자체 약관이 없으므로 애플 표준 사용권 계약(EULA)을 건다.
+            termsURL: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!,
+            gate: LeeoGatePolicy(proOnly: Set(ProGate.allCases.map(\.rawValue))),
+            cacheSuiteName: "group.com.leeo.sunflower"))
 
     /// 백업 금고가 함께 떠 두는 공유 저장소 (위젯과 나누는 것).
     static let appGroups = ["group.com.leeo.sunflower"]
@@ -26,8 +36,9 @@ enum SunlightTrackerSpec: LeeoAppSpec {
 }
 
 extension SunlightTrackerSpec {
-    /// 무료 앱이라 LeeoStore 가 없다 — 팁만 혼자 받는다(앱을 열 때 `startStandalone()`, → SunlightTrackerApp).
-    /// 소모성 상품 셋, 작은 것부터. ⚠️ 기능을 여는 상품이 아니다.
+    /// 팁은 Pro 와 따로 혼자 받는다(앱을 열 때 `startStandalone()`, → SunlightTrackerApp).
+    /// 지금까지 센 팁이 이 기기의 기본 저장소에 있어서 그대로 둔다.
+    /// 소모성 상품 셋, 작은 것부터. ⚠️ 기능을 여는 상품이 아니다 — `ProProduct` 에 넣지 않는다.
     @MainActor static let tipJar = LeeoTipJar(config: LeeoTipJarConfig(productIDs: [
         "com.leeo.sunflower.tip.small",
         "com.leeo.sunflower.tip.medium",

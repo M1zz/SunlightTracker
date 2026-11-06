@@ -16,11 +16,15 @@ struct SunlightTrackerApp: App {
         WindowGroup {
             ContentView()
                 .leeoSatisfactionCheck(SunlightTrackerSpec.self)
-                // 팁 상품을 불러오고 끝나지 않은 팁을 마저 센다 (무료 앱이라 LeeoStore 대신 혼자)
+                // 팁 상품을 불러오고 끝나지 않은 팁을 마저 센다 (팁은 Pro 의 LeeoStore 와 따로 혼자)
                 .task { await SunlightTrackerSpec.tipJar.startStandalone() }
+                .task { await SunflowerPro.shared.refresh() }
         }
         .onChange(of: scenePhase) { _, phase in
-            if phase == .active { Task { await SunlightManager.shared.syncDaylightFromHealth() } }
+            guard phase == .active else { return }
+            Task { await SunlightManager.shared.syncDaylightFromHealth() }
+            // 영수증 · 상품을 다시 읽고 위젯에 같은 답을 비춘다. 구독 졸업 때가 됐으면 여기서 뜬다.
+            Task { await SunflowerPro.shared.refresh() }
         }
     }
 }

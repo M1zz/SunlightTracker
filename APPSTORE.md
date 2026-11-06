@@ -60,6 +60,9 @@ Apple Watch가 잰 ‘햇빛 아래 있었던 시간’을 건강 앱에서 받�
 
 서버가 없는 앱이에요. 햇빛 기록과 메모는 모두 기기 안에만 저장됩니다.
 
+햇빛바라기 Pro
+햇빛을 재고 해바라기를 키우고 목표를 채우는 모든 것은 무료예요. 홈 화면 위젯, 잠금화면과 다이나믹 아일랜드의 실시간 현황, 월간 통계는 햇빛바라기 Pro에서 열려요. 주·월·연 구독이나 한 번 결제하는 평생 중에 고를 수 있어요.
+
 ## en
 
 ### 지원 URL
@@ -119,6 +122,9 @@ Apple Watch and Health
 Turn it on and the time in daylight your Apple Watch records in the Health app is added to today's sunlight, so your battery charges even when the app is closed. Time already counted by the camera is never counted twice. See your sunflower and today's progress on your watch face, and give it battery right from your wrist.
 
 There's no server involved. Your sunlight history and notes stay on your device and nowhere else.
+
+Sunny Sunflower Pro
+Tracking sun, growing your sunflower and hitting your goal are all free. Home Screen widgets, live updates on the Lock Screen and Dynamic Island, and monthly stats come with Sunny Sunflower Pro. Choose a weekly, monthly or yearly subscription, or pay once for lifetime.
 
 ## en-GB
 
@@ -180,6 +186,9 @@ Turn it on and the time in daylight your Apple Watch records in the Health app i
 
 There's no server involved. Your sunlight history and notes stay on your device and nowhere else.
 
+Sunny Sunflower Pro
+Tracking sun, growing your sunflower and hitting your goal are all free. Home Screen widgets, live updates on the Lock Screen and Dynamic Island, and monthly stats come with Sunny Sunflower Pro. Choose a weekly, monthly or yearly subscription, or pay once for lifetime.
+
 ## zh-Hans
 
 ### 지원 URL
@@ -239,6 +248,9 @@ Apple Watch 与“健康”
 开启后，Apple Watch 在“健康”App 中记录的日光下时间会计入今天的阳光，不打开 App 电量也会增加。与相机测量重叠的时间只算一次。在表盘复杂功能和手表 App 上查看向日葵和今日进度，抬手就能传递电量。
 
 这款应用没有服务器。你的日照记录和备忘，全部只保存在设备上。
+
+向阳小葵 Pro
+测量阳光、养向日葵、完成目标，这些全都免费。主屏幕小组件、锁定屏幕与灵动岛的实时进度以及月度统计需要向阳小葵 Pro。可选择按周、按月、按年订阅，或一次买断终身版。
 
 ## zh-Hant
 
@@ -300,6 +312,9 @@ Apple Watch 與「健康」
 
 這是一款不需要伺服器的 App。曬太陽的記錄和備忘都只會儲存在你的裝置上。
 
+向陽小葵 Pro
+測量陽光、養向日葵、完成目標，這些全都免費。主畫面小工具、鎖定畫面與動態島的即時進度以及每月統計需要向陽小葵 Pro。可選擇週、月、年訂閱，或一次買斷終身版。
+
 ## ja
 
 ### 지원 URL
@@ -359,6 +374,9 @@ Apple Watchとヘルスケア
 オンにすると、Apple Watchがヘルスケアに記録した「日光下の時間」が今日の日ざしに加わり、アプリを開いていなくてもバッテリーがたまります。カメラで測った時間と重なる分は一度だけ数えます。文字盤のコンプリケーションとウォッチのアプリでひまわりと今日の進み具合を確かめ、手首からそのままバッテリーを届けられます。
 
 サーバーを使わないアプリです。日ざしの記録やメモは、すべてお使いのデバイスの中だけに保存されます。
+
+ひなたひまわり Pro
+日光の計測、ひまわりの世話、目標の達成はすべて無料です。ホーム画面ウィジェット、ロック画面とDynamic Islandのリアルタイム表示、月間統計はひなたひまわり Proで使えます。週額・月額・年額のサブスクリプションか、1回払いの買い切りから選べます。
 
 ## ru
 
@@ -420,6 +438,9 @@ Apple Watch и «Здоровье»
 
 У приложения нет сервера. Все записи о солнце и заметки хранятся только на вашем устройстве.
 
+Подсолнушек Pro
+Замер солнца, уход за подсолнухом и дневная цель полностью бесплатны. Виджеты на экране «Домой», прогресс на экране блокировки и в Dynamic Island, а также статистика за месяц доступны в Подсолнушек Pro. Выберите подписку на неделю, месяц или год либо разовую покупку навсегда.
+
 ## es
 
 ### 지원 URL
@@ -479,6 +500,9 @@ Apple Watch y Salud
 Al activarlo, el tiempo con luz natural que tu Apple Watch registra en la app Salud se suma al sol de hoy, así que la batería se carga aunque la app esté cerrada. El tiempo que ya midió la cámara no se cuenta dos veces. Mira tu girasol y el progreso del día en la esfera del reloj y dale batería desde la muñeca.
 
 Esta app no usa ningún servidor. Tus registros de sol y tus notas se guardan solo en tu dispositivo.
+
+Sunny Sunflower Pro
+Medir el sol, cuidar tu girasol y cumplir tu meta es totalmente gratis. Los widgets de inicio, el progreso en directo en la pantalla bloqueada y la Dynamic Island, y las estadísticas mensuales vienen con Sunny Sunflower Pro. Elige una suscripción semanal, mensual o anual, o paga una sola vez para siempre.
 
 ## de
 
@@ -540,6 +564,9 @@ Schalte es ein und die Zeit im Tageslicht, die deine Apple Watch in der Health-A
 
 Ganz ohne Server: Deine Sonnenzeiten und Notizen bleiben ausschließlich auf deinem Gerät gespeichert.
 
+Sunny Sunflower Pro
+Sonne messen, die Sonnenblume pflegen und dein Ziel erreichen ist komplett kostenlos. Home-Bildschirm-Widgets, Live-Fortschritt auf dem Sperrbildschirm und in der Dynamic Island sowie die Monatsstatistik gibt es mit Sunny Sunflower Pro. Wähle ein Wochen-, Monats- oder Jahresabo oder zahle einmal für immer.
+
 ## fr
 
 ### 지원 URL
@@ -599,6 +626,9 @@ Apple Watch et Santé
 Active l’option et le temps à la lumière du jour enregistré par ton Apple Watch dans l’app Santé s’ajoute au soleil du jour : la batterie se recharge même app fermée. Le temps déjà mesuré par la caméra n’est jamais compté deux fois. Retrouve ton tournesol et ta progression sur le cadran, et donne-lui la batterie depuis ton poignet.
 
 Pas de serveur : tes données de soleil et tes notes restent uniquement sur ton appareil.
+
+Sunny Sunflower Pro
+Mesurer le soleil, faire pousser votre tournesol et atteindre votre objectif, tout cela est gratuit. Les widgets d’accueil, le suivi en direct sur l’écran verrouillé et dans la Dynamic Island, et les statistiques mensuelles sont inclus dans Sunny Sunflower Pro. Choisissez un abonnement à la semaine, au mois ou à l’année, ou payez une seule fois pour toujours.
 
 ## it
 
@@ -660,6 +690,9 @@ Attivalo e il tempo alla luce del giorno che Apple Watch registra nell’app Sal
 
 Nessun server: le tue registrazioni e le tue note restano solo sul tuo dispositivo.
 
+Sunny Sunflower Pro
+Misurare il sole, far crescere il girasole e raggiungere l’obiettivo è tutto gratis. I widget Home, l’avanzamento in tempo reale sulla schermata di blocco e nella Dynamic Island e le statistiche mensili sono inclusi in Sunny Sunflower Pro. Scegli un abbonamento settimanale, mensile o annuale, oppure paga una volta per sempre.
+
 ## pt-BR
 
 ### 지원 URL
@@ -719,6 +752,9 @@ Apple Watch e Saúde
 Ao ativar, o tempo à luz do dia que o Apple Watch registra no app Saúde entra no sol de hoje, e a bateria carrega mesmo com o app fechado. O tempo já medido pela câmera nunca conta duas vezes. Veja o girassol e o progresso do dia no mostrador e passe a bateria direto do pulso.
 
 Sem servidor. Seus registros de sol e suas notas ficam guardados somente no seu aparelho.
+
+Sunny Sunflower Pro
+Medir o sol, cuidar do girassol e bater a meta é tudo grátis. Os widgets da Tela de Início, o progresso ao vivo na Tela Bloqueada e na Dynamic Island e as estatísticas mensais vêm com o Sunny Sunflower Pro. Escolha uma assinatura semanal, mensal ou anual, ou pague uma vez para sempre.
 
 ## th
 
@@ -780,6 +816,9 @@ Apple Watch และแอปสุขภาพ
 
 แอปนี้ไม่มีเซิร์ฟเวอร์ บันทึกแดดและโน้ตทั้งหมดเก็บไว้ในอุปกรณ์ของคุณเท่านั้น
 
+ทานตะวันชอบแดด Pro
+การวัดแดด ปลูกทานตะวัน และทำเป้าหมายให้สำเร็จ ใช้ได้ฟรีทั้งหมด วิดเจ็ตหน้าจอโฮม ความคืบหน้าสดบนหน้าจอล็อกและ Dynamic Island และสถิติรายเดือนใช้ได้ใน ทานตะวันชอบแดด Pro เลือกสมัครรายสัปดาห์ รายเดือน รายปี หรือจ่ายครั้งเดียวใช้ตลอดไป
+
 ## vi
 
 ### 지원 URL
@@ -839,6 +878,9 @@ Apple Watch và Sức khỏe
 Khi bật, thời gian dưới ánh sáng ban ngày mà Apple Watch ghi trong ứng dụng Sức khỏe sẽ được cộng vào lượng nắng hôm nay, nên pin vẫn được sạc dù không mở ứng dụng. Thời gian camera đã đo không bao giờ bị tính hai lần. Xem hoa hướng dương và tiến độ trong ngày ngay trên mặt đồng hồ, và trao pin ngay từ cổ tay.
 
 Ứng dụng không dùng máy chủ. Mọi ghi chép nắng và ghi chú của bạn chỉ được lưu ngay trên thiết bị.
+
+Sunny Sunflower Pro
+Đo nắng, chăm hoa hướng dương và hoàn thành mục tiêu đều miễn phí. Tiện ích Màn hình chính, tiến độ trực tiếp trên Màn hình khóa và Dynamic Island cùng thống kê tháng có trong Sunny Sunflower Pro. Chọn gói theo tuần, tháng, năm hoặc trả một lần dùng trọn đời.
 
 ## cs
 
@@ -900,6 +942,9 @@ Po zapnutí se čas na denním světle, který Apple Watch zapisují do aplikace
 
 Aplikace nepoužívá žádný server. Záznamy slunce i poznámky zůstávají jen v tvém zařízení.
 
+Sunny Sunflower Pro
+Měření slunce, péče o slunečnici i plnění cíle jsou zcela zdarma. Widgety na ploše, průběh na zamčené obrazovce a v Dynamic Islandu a měsíční statistiky jsou součástí Sunny Sunflower Pro. Vyberte si týdenní, měsíční nebo roční předplatné, nebo jednorázový nákup navždy.
+
 ## da
 
 ### 지원 URL
@@ -959,6 +1004,9 @@ Apple Watch og Sundhed
 Slå det til, så bliver den tid i dagslys, dit Apple Watch registrerer i Sundhed, lagt til dagens sol. Batteriet lades op, selv når appen er lukket, og tid, kameraet allerede har målt, tæller aldrig dobbelt. Se din solsikke og dagens fremskridt på urskiven, og giv den batteri direkte fra håndleddet.
 
 Her er ingen server. Dine solregistreringer og notater bliver kun gemt på din egen enhed.
+
+Sunny Sunflower Pro
+At måle sol, passe din solsikke og nå dit mål er helt gratis. Widgets på hjemmeskærmen, live-status på låseskærmen og i Dynamic Island samt månedsstatistik følger med Sunny Sunflower Pro. Vælg et uge-, måneds- eller årsabonnement, eller betal én gang for altid.
 
 ## el
 
@@ -1020,6 +1068,9 @@ Apple Watch και Υγεία
 
 Δεν υπάρχει διακομιστής. Οι καταγραφές και οι σημειώσεις σου μένουν μόνο στη συσκευή σου.
 
+Ηλιοτρόπιο Pro
+Η μέτρηση του ήλιου, η φροντίδα του ηλιοτρόπιου και ο ημερήσιος στόχος είναι εντελώς δωρεάν. Τα widget της οθόνης Αφετηρίας, η ζωντανή πρόοδος στην οθόνη κλειδώματος και στο Dynamic Island και τα μηνιαία στατιστικά περιλαμβάνονται στο Ηλιοτρόπιο Pro. Επιλέξτε εβδομαδιαία, μηνιαία ή ετήσια συνδρομή ή πληρώστε μία φορά για πάντα.
+
 ## fi
 
 ### 지원 URL
@@ -1079,6 +1130,9 @@ Apple Watch ja Terveys
 Kun otat sen käyttöön, Apple Watchin Terveys-appiin tallentama päivänvaloaika lisätään päivän auringonvaloon, joten akku latautuu, vaikka appi olisi suljettu. Kameran jo mittaamaa aikaa ei lasketa kahdesti. Näet auringonkukan ja päivän edistymisen kellotaulusta ja annat sille akkua suoraan ranteesta.
 
 Sovellus ei käytä palvelinta. Aurinkokirjaukset ja muistiinpanot tallentuvat vain laitteellesi.
+
+Sunny Sunflower Pro
+Auringon mittaus, auringonkukan hoito ja päivätavoite ovat täysin ilmaisia. Koti-valikon widgetit, reaaliaikainen tila lukitulla näytöllä ja Dynamic Islandissa sekä kuukausitilastot kuuluvat Sunny Sunflower Pro -versioon. Valitse viikko-, kuukausi- tai vuositilaus tai maksa kerran ikuisesti.
 
 ## id
 
@@ -1140,6 +1194,9 @@ Setelah diaktifkan, waktu di bawah cahaya siang yang dicatat Apple Watch di app 
 
 Tanpa server. Semua catatan sinar matahari dan memo tersimpan hanya di perangkatmu.
 
+Sunny Sunflower Pro
+Mengukur sinar matahari, merawat bunga matahari, dan mencapai target semuanya gratis. Widget Layar Utama, progres langsung di Layar Terkunci dan Dynamic Island, serta statistik bulanan tersedia di Sunny Sunflower Pro. Pilih langganan mingguan, bulanan, atau tahunan, atau bayar sekali untuk selamanya.
+
 ## nb
 
 ### 지원 URL
@@ -1199,6 +1256,9 @@ Apple Watch og Helse
 Slå det på, så legges tiden i dagslys som Apple Watch registrerer i Helse, til dagens sol. Batteriet lades selv når appen er lukket, og tid kameraet allerede har målt, telles aldri dobbelt. Se solsikken og dagens fremgang på urskiven, og gi den batteri rett fra håndleddet.
 
 Appen bruker ingen server. Sollogg og notater lagres bare på enheten din.
+
+Sunny Sunflower Pro
+Å måle sol, stelle solsikken og nå målet ditt er helt gratis. Widgeter på Hjem-skjermen, direkte status på låseskjermen og i Dynamic Island og månedsstatistikk følger med Sunny Sunflower Pro. Velg uke-, måneds- eller årsabonnement, eller betal én gang for alltid.
 
 ## nl
 
@@ -1260,6 +1320,9 @@ Zet het aan en de tijd in daglicht die je Apple Watch in Gezondheid registreert,
 
 Er is geen server: je zonlichtgegevens en notities blijven helemaal op je eigen toestel.
 
+Sunny Sunflower Pro
+Zon meten, je zonnebloem verzorgen en je doel halen is helemaal gratis. Beginschermwidgets, live voortgang op het toegangsscherm en in het Dynamic Island en maandstatistieken horen bij Sunny Sunflower Pro. Kies een week-, maand- of jaarabonnement, of betaal eenmalig voor altijd.
+
 ## pl
 
 ### 지원 URL
@@ -1319,6 +1382,9 @@ Apple Watch i Zdrowie
 Po włączeniu czas w świetle dziennym, który Apple Watch zapisuje w aplikacji Zdrowie, dolicza się do dzisiejszego słońca, więc bateria ładuje się nawet przy zamkniętej aplikacji. Czas zmierzony już aparatem nigdy nie liczy się podwójnie. Słonecznik i dzisiejsze postępy widać na tarczy zegarka, a baterię przekażesz prosto z nadgarstka.
 
 To aplikacja bez serwera. Wszystkie zapisy o słońcu i notatki są przechowywane wyłącznie na Twoim urządzeniu.
+
+Sunny Sunflower Pro
+Pomiar słońca, dbanie o słonecznik i realizacja celu są całkowicie za darmo. Widżety na ekranie początkowym, postęp na żywo na ekranie blokady i w Dynamic Island oraz statystyki miesięczne są w Sunny Sunflower Pro. Wybierz subskrypcję tygodniową, miesięczną lub roczną albo zapłać raz na zawsze.
 
 ## sv
 
@@ -1380,6 +1446,9 @@ Slå på det så läggs tiden i dagsljus som din Apple Watch registrerar i Häls
 
 Appen har ingen server. All din solloggning och alla dina anteckningar sparas bara på din enhet.
 
+Sunny Sunflower Pro
+Att mäta sol, ta hand om solrosen och nå ditt mål är helt gratis. Hemskärmswidgetar, liveförlopp på låsskärmen och i Dynamic Island samt månadsstatistik ingår i Sunny Sunflower Pro. Välj vecko-, månads- eller årsabonnemang, eller betala en gång för alltid.
+
 ## tr
 
 ### 지원 URL
@@ -1439,6 +1508,9 @@ Apple Watch ve Sağlık
 Açtığında Apple Watch’un Sağlık uygulamasına kaydettiği gün ışığında geçen süre bugünkü güneşe eklenir; uygulama kapalıyken bile pil dolar. Kameranın zaten ölçtüğü süre asla iki kez sayılmaz. Ayçiçeğini ve günün ilerlemesini saat kadranında gör, pili doğrudan bileğinden ver.
 
 Uygulamanın sunucusu yok. Güneş kayıtların ve notların yalnızca cihazında saklanır.
+
+Sunny Sunflower Pro
+Güneşi ölçmek, ayçiçeğini büyütmek ve hedefini tutturmak tamamen ücretsiz. Ana ekran widget'ları, kilitli ekranda ve Dynamic Island'da canlı durum ve aylık istatistikler Sunny Sunflower Pro'da. Haftalık, aylık ya da yıllık abonelik seçin veya bir kez ödeyip ömür boyu kullanın.
 
 ## 손쉬운 사용
 
