@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: log your time in the sun and grow a sunflower",
-  "description": "Head outside and your sun time adds up on its own, then use it to grow your own sunflower. Free, and your history stays on your device.",
+  "description": "Head outside and your sun time adds up on its own, then use it to grow your own sunflower. Collecting sun is free, and your history stays on your device.",
   "hero": {
     "headline": "Grow a sunflower\nwith today's sunshine",
     "lead": "Step outside and your sun time adds up by itself. Give the sunlight you collect to your sunflower to keep it thriving. Forget it for a few days and it starts to wilt.",
     "cta": "Get it free on the App Store",
-    "note": "Every feature is free. Your history stays on your device."
+    "note": "Collecting sun and growing your sunflower are free. Your history stays on your device."
   },
   "demo": {
     "title": "Collect some sun",
@@ -123,8 +123,8 @@
         "a": "When you and a friend are close (within about 10 m) and both tracking sunlight, you connect automatically. Someone new has to confirm sharing the sun first; after that it's automatic. Your petals turn colorful and fade back over 3 days, and your time together is saved in the Friends tab. Both of you need the app, plus Bluetooth and Local Network access."
       },
       {
-        "q": "Is it really free?",
-        "a": "Yes. No ads, no purchases, every feature included. If you like it you can leave a tip in the app, but tipping doesn't unlock anything extra."
+        "q": "What's free?",
+        "a": "Tracking sun, growing your sunflower, daily goals and reminders, UV tips, the calendar, weekly stats and sunning with friends are all free, with no ads. Home Screen widgets, live updates on the Lock Screen and Dynamic Island, and monthly stats come with Sunny Sunflower Pro, which you can get weekly, monthly, yearly or once for lifetime. You can also leave a tip, but tips don't unlock anything."
       },
       {
         "q": "Can I back up or move my history?",

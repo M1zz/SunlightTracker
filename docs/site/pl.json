@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: zapisuj czas na słońcu i wyhoduj słonecznik",
-  "description": "Wyjdź na dwór, a czas na słońcu nalicza się sam i karmi Twój słonecznik. Za darmo, dane zostają na urządzeniu.",
+  "description": "Wyjdź na dwór, a czas na słońcu nalicza się sam i karmi Twój słonecznik. Zbieranie słońca jest za darmo, dane zostają na urządzeniu.",
   "hero": {
     "headline": "Dzisiejsze słońce\nkarmi Twój słonecznik",
     "lead": "Wystarczy wyjść na dwór, a czas na słońcu nalicza się sam. Oddaj zebrane słońce słonecznikowi, a będzie kwitł. Zapomnisz o nim na kilka dni, a zacznie więdnąć.",
     "cta": "Pobierz za darmo",
-    "note": "Wszystkie funkcje są bezpłatne. Dane zostają na urządzeniu."
+    "note": "Zbieranie słońca i hodowanie słonecznika są za darmo. Dane zostają na urządzeniu."
   },
   "demo": {
     "title": "Zbierz trochę słońca",
@@ -123,8 +123,8 @@
         "a": "Gdy Ty i znajomy jesteście blisko siebie (w promieniu około 10 m) i oboje mierzycie słońce, łączycie się automatycznie. Z nową osobą trzeba najpierw potwierdzić wspólne łapanie słońca, potem dzieje się to samo. Płatki robią się kolorowe i w ciągu 3 dni wracają do swojego koloru, a wspólny czas zapisuje się w karcie Znajomi. Oboje potrzebujecie aplikacji oraz dostępu do Bluetooth i sieci lokalnej."
       },
       {
-        "q": "Czy to naprawdę za darmo?",
-        "a": "Tak. Bez reklam i zakupów, ze wszystkimi funkcjami. Jeśli aplikacja Ci się podoba, możesz zostawić napiwek, ale niczego dodatkowo nie odblokowuje."
+        "q": "Co jest za darmo?",
+        "a": "Pomiar słońca, słonecznik, cel dzienny i przypomnienia, wskazówki o UV, kalendarz, statystyki tygodniowe i słońce ze znajomymi są za darmo i bez reklam. Widżety na ekranie początkowym, postęp na żywo na ekranie blokady i w Dynamic Island oraz statystyki miesięczne są w Sunny Sunflower Pro – tygodniowo, miesięcznie, rocznie albo raz na zawsze. Możesz też dać napiwek, ale niczego on nie odblokowuje."
       },
       {
         "q": "Czy mogę zrobić kopię zapasową albo przenieść dane?",

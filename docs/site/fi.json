@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: kirjaa aurinkoaikasi ja kasvata auringonkukka",
-  "description": "Mene ulos, niin aurinkoaika kertyy itsestään ja kasvattaa oman auringonkukkasi. Ilmainen, ja tiedot pysyvät laitteellasi.",
+  "description": "Mene ulos, niin aurinkoaika kertyy itsestään ja kasvattaa oman auringonkukkasi. Auringon keräys on ilmaista, ja tiedot pysyvät laitteellasi.",
   "hero": {
     "headline": "Tämän päivän aurinko\nkasvattaa auringonkukkasi",
     "lead": "Kun menet ulos, aurinkoaika kertyy itsestään. Anna kerätty aurinko auringonkukalle, niin se pysyy hehkeänä. Jos unohdat sen muutamaksi päiväksi, se alkaa kuihtua.",
     "cta": "Lataa ilmaiseksi",
-    "note": "Kaikki ominaisuudet ovat ilmaisia. Tiedot pysyvät laitteellasi."
+    "note": "Auringon keräys ja auringonkukan hoito ovat ilmaisia. Tiedot pysyvät laitteellasi."
   },
   "demo": {
     "title": "Kerää vähän aurinkoa",
@@ -123,8 +123,8 @@
         "a": "Kun sinä ja ystäväsi olette lähellä toisianne (noin 10 metrin sisällä) ja mittaatte molemmat aurinkoa, yhteys syntyy itsestään. Uuden ihmisen kanssa yhteinen auringonotto pitää ensin vahvistaa, sen jälkeen kaikki käy automaattisesti. Terälehdet värittyvät ja palaavat omaan väriinsä 3 päivän kuluessa, ja yhteinen aikanne tallentuu Ystävät-välilehdelle. Molemmat tarvitsevat sovelluksen sekä Bluetoothin ja paikallisverkon käyttöoikeuden."
       },
       {
-        "q": "Onko tämä oikeasti ilmainen?",
-        "a": "On. Ei mainoksia eikä ostoja, kaikki ominaisuudet mukana. Jos pidät sovelluksesta, voit jättää tipin, mutta se ei avaa mitään lisää."
+        "q": "Mikä on ilmaista?",
+        "a": "Auringon mittaus, auringonkukka, päivätavoite ja muistutukset, UV-vinkit, kalenteri, viikkotilastot ja aurinko ystävien kanssa ovat ilmaisia ja mainoksettomia. Koti-valikon widgetit, reaaliaikainen tila lukitulla näytöllä ja Dynamic Islandissa sekä kuukausitilastot kuuluvat Sunny Sunflower Pro -versioon, jonka saa viikoksi, kuukaudeksi, vuodeksi tai kerralla ikuisesti. Voit myös antaa tipin, mutta se ei avaa mitään."
       },
       {
         "q": "Voinko varmuuskopioida tai siirtää tietoni?",

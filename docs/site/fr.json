@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower : notez votre temps au soleil et faites pousser un tournesol",
-  "description": "Sortez, et votre temps au soleil s'additionne tout seul pour faire pousser votre tournesol. Gratuit, vos données restent sur l'appareil.",
+  "description": "Sortez, et votre temps au soleil s'additionne tout seul pour faire pousser votre tournesol. Collecter du soleil est gratuit, et vos données restent sur l'appareil.",
   "hero": {
     "headline": "Le soleil d'aujourd'hui\nfait pousser votre tournesol",
     "lead": "Dès que vous sortez, votre temps au soleil se compte tout seul. Donnez le soleil récolté à votre tournesol et il resplendit. Oubliez-le quelques jours et il commence à se faner.",
     "cta": "Télécharger gratuitement",
-    "note": "Toutes les fonctions sont gratuites. Vos données restent sur votre appareil."
+    "note": "Collecter du soleil et faire pousser votre tournesol, c'est gratuit. Vos données restent sur votre appareil."
   },
   "demo": {
     "title": "Récoltez un peu de soleil",
@@ -123,8 +123,8 @@
         "a": "Si vous êtes proches (à 10 m environ) et que vous mesurez tous les deux le soleil, vous êtes connectés automatiquement. Avec une nouvelle personne, il faut d'abord confirmer que vous prenez le soleil ensemble ; ensuite c'est automatique. Vos pétales se colorent puis retrouvent leur couleur en 3 jours, et votre temps partagé s'affiche dans l'onglet Amis. Vous avez besoin tous les deux de l'app et d'autoriser l'accès au Bluetooth et au réseau local."
       },
       {
-        "q": "C'est vraiment gratuit ?",
-        "a": "Oui. Ni publicité ni achat, toutes les fonctions sont incluses. Si l'app vous plaît, vous pouvez laisser un pourboire, mais il ne débloque rien de plus."
+        "q": "Qu'est-ce qui est gratuit ?",
+        "a": "La mesure du soleil, le tournesol, l'objectif quotidien et les rappels, les conseils UV, le calendrier, les statistiques hebdomadaires et le soleil entre amis sont gratuits et sans publicité. Les widgets d'accueil, le suivi en direct sur l'écran verrouillé et dans la Dynamic Island, et les statistiques mensuelles sont inclus dans Sunny Sunflower Pro, à la semaine, au mois, à l'année ou en un seul achat pour toujours. Vous pouvez aussi laisser un pourboire, mais il ne débloque rien."
       },
       {
         "q": "Puis-je sauvegarder ou transférer mes données ?",

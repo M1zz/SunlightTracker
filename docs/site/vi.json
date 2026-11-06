@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: ghi lại thời gian tắm nắng và nuôi hoa hướng dương",
-  "description": "Ra ngoài là thời gian tắm nắng tự cộng dồn để nuôi hoa hướng dương của bạn. Miễn phí, dữ liệu chỉ nằm trên máy bạn.",
+  "description": "Ra ngoài là thời gian tắm nắng tự cộng dồn để nuôi hoa hướng dương của bạn. Gom nắng miễn phí, dữ liệu chỉ nằm trên máy bạn.",
   "hero": {
     "headline": "Nắng hôm nay\nnuôi hoa hướng dương",
     "lead": "Chỉ cần ra ngoài, thời gian tắm nắng tự cộng dồn. Tặng nắng đã gom cho hoa hướng dương để hoa tươi tắn. Quên vài ngày là hoa bắt đầu héo.",
     "cta": "Tải miễn phí",
-    "note": "Mọi tính năng đều miễn phí. Dữ liệu chỉ lưu trên máy bạn."
+    "note": "Gom nắng và chăm hoa hướng dương đều miễn phí. Dữ liệu chỉ lưu trên máy bạn."
   },
   "demo": {
     "title": "Thử gom nắng",
@@ -123,8 +123,8 @@
         "a": "Khi bạn và một người bạn ở gần nhau (trong khoảng 10 m) và cả hai đang đo nắng, hai máy tự kết nối. Với người mới gặp lần đầu, cần xác nhận cùng tắm nắng trước, sau đó sẽ tự động. Cánh hoa chuyển sang nhiều màu rồi trở lại màu cũ trong 3 ngày, và thời gian bên nhau được lưu ở tab Bạn bè. Cả hai cần cài ứng dụng và cho phép Bluetooth cùng mạng cục bộ."
       },
       {
-        "q": "Có thật là miễn phí không?",
-        "a": "Có. Không quảng cáo, không mua hàng, dùng được mọi tính năng. Nếu thích, bạn có thể gửi tiền tip trong ứng dụng, nhưng tip không mở thêm gì."
+        "q": "Những gì miễn phí?",
+        "a": "Đo nắng, chăm hoa hướng dương, mục tiêu ngày và nhắc nhở, gợi ý tia UV, lịch, thống kê tuần và đón nắng cùng bạn bè đều miễn phí, không quảng cáo. Tiện ích Màn hình chính, tiến độ trực tiếp trên Màn hình khóa và Dynamic Island cùng thống kê tháng có trong Sunny Sunflower Pro, theo tuần, tháng, năm hoặc trả một lần dùng mãi. Bạn cũng có thể gửi tiền tip, nhưng tip không mở thêm tính năng nào."
       },
       {
         "q": "Có sao lưu hay chuyển dữ liệu được không?",

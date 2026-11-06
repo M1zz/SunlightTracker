@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: logga din tid i solen och låt en solros växa",
-  "description": "Gå ut så räknas tiden i solen upp av sig själv och din solros växer. Gratis, och din data stannar på enheten.",
+  "description": "Gå ut så räknas tiden i solen upp av sig själv och din solros växer. Att samla sol är gratis, och din data stannar på enheten.",
   "hero": {
     "headline": "Dagens sol\nfår din solros att växa",
     "lead": "Bara du går ut räknas tiden i solen upp av sig själv. Ge solrosen solljuset du samlat så blir den pigg. Glömmer du den några dagar börjar den hänga.",
     "cta": "Hämta gratis",
-    "note": "Alla funktioner är gratis. Din data stannar på enheten."
+    "note": "Att samla sol och ta hand om solrosen är gratis. Din data stannar på enheten."
   },
   "demo": {
     "title": "Samla lite sol",
@@ -123,8 +123,8 @@
         "a": "När du och en vän är nära varandra (inom ungefär 10 m) och båda mäter sol kopplas ni ihop automatiskt. Med en ny person behöver ni först bekräfta att ni solar tillsammans, sedan sker det av sig självt. Kronbladen blir färgglada och får tillbaka sin egen färg under 3 dagar, och er tid tillsammans sparas under fliken Vänner. Båda behöver appen och åtkomst till Bluetooth och lokalt nätverk."
       },
       {
-        "q": "Är det verkligen gratis?",
-        "a": "Ja. Ingen reklam, inga köp, alla funktioner ingår. Gillar du appen kan du ge dricks, men det låser inte upp något extra."
+        "q": "Vad är gratis?",
+        "a": "Solmätning, solrosen, dagligt mål och påminnelser, UV-tips, kalendern, veckostatistik och sol med vänner är gratis och utan reklam. Hemskärmswidgetar, liveförlopp på låsskärmen och i Dynamic Island samt månadsstatistik ingår i Sunny Sunflower Pro, per vecka, månad, år eller en gång för alltid. Du kan också ge dricks, men den låser inte upp något."
       },
       {
         "q": "Kan jag säkerhetskopiera eller flytta min data?",

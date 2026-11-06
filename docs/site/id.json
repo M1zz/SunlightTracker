@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: catat waktu berjemur dan rawat bunga matahari",
-  "description": "Keluar rumah dan waktu berjemur terkumpul sendiri untuk merawat bunga mataharimu. Gratis, dan catatan tetap di perangkatmu.",
+  "description": "Keluar rumah dan waktu berjemur terkumpul sendiri untuk merawat bunga mataharimu. Mengumpulkan sinar matahari gratis, dan catatan tetap di perangkatmu.",
   "hero": {
     "headline": "Sinar matahari hari ini\nmembuat bungamu tumbuh",
     "lead": "Cukup keluar rumah, waktu berjemur terkumpul sendiri. Berikan sinar yang terkumpul ke bunga matahari supaya tetap segar. Kalau terlupa beberapa hari, bunganya mulai layu.",
     "cta": "Unduh gratis",
-    "note": "Semua fitur gratis. Catatan tersimpan di perangkatmu saja."
+    "note": "Mengumpulkan sinar matahari dan merawat bunga matahari gratis. Catatan tersimpan di perangkatmu saja."
   },
   "demo": {
     "title": "Coba kumpulkan sinar",
@@ -123,8 +123,8 @@
         "a": "Kalau kamu dan teman berdekatan (sekitar 10 m) dan sama-sama sedang mengukur sinar, kalian terhubung otomatis. Dengan orang baru, kalian perlu mengonfirmasi berjemur bersama dulu, setelah itu otomatis. Kelopak bunga jadi warna-warni lalu kembali ke warna asal dalam 3 hari, dan waktu bersama tersimpan di tab Teman. Keduanya perlu aplikasi ini serta izin Bluetooth dan jaringan lokal."
       },
       {
-        "q": "Benar-benar gratis?",
-        "a": "Ya. Tanpa iklan dan tanpa pembelian, semua fitur bisa dipakai. Kalau suka, kamu bisa memberi tip di aplikasi, tapi tip tidak membuka fitur tambahan."
+        "q": "Apa saja yang gratis?",
+        "a": "Mengukur sinar matahari, merawat bunga matahari, target harian dan pengingat, info UV, kalender, statistik mingguan, dan berjemur bersama teman semuanya gratis tanpa iklan. Widget Layar Utama, progres langsung di Layar Terkunci dan Dynamic Island, serta statistik bulanan ada di Sunny Sunflower Pro, yang bisa mingguan, bulanan, tahunan, atau sekali bayar selamanya. Kamu juga bisa memberi tip, tapi tip tidak membuka fitur apa pun."
       },
       {
         "q": "Bisakah catatan dicadangkan atau dipindahkan?",

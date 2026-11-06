@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: Sonnenzeit festhalten und eine Sonnenblume großziehen",
-  "description": "Geh nach draußen, und deine Sonnenzeit sammelt sich von selbst. Damit wächst deine Sonnenblume. Kostenlos, Daten bleiben auf dem Gerät.",
+  "description": "Geh nach draußen, und deine Sonnenzeit sammelt sich von selbst. Damit wächst deine Sonnenblume. Sonne sammeln ist kostenlos, Daten bleiben auf dem Gerät.",
   "hero": {
     "headline": "Mit der Sonne von heute\nwächst deine Sonnenblume",
     "lead": "Sobald du draußen bist, zählt deine Sonnenzeit von allein mit. Gib die gesammelte Sonne deiner Sonnenblume, dann blüht sie auf. Vergisst du sie ein paar Tage, beginnt sie zu welken.",
     "cta": "Kostenlos laden",
-    "note": "Alle Funktionen sind kostenlos. Deine Daten bleiben auf dem Gerät."
+    "note": "Sonne sammeln und die Sonnenblume pflegen ist kostenlos. Deine Daten bleiben auf dem Gerät."
   },
   "demo": {
     "title": "Sammle ein bisschen Sonne",
@@ -123,8 +123,8 @@
         "a": "Seid ihr nah beieinander (etwa 10 m) und messt beide gerade Sonne, verbindet ihr euch automatisch. Bei neuen Personen müsst ihr das gemeinsame Sonnentanken erst bestätigen, danach geht es automatisch. Eure Blütenblätter werden bunt und bekommen über 3 Tage ihre Farbe zurück, und eure gemeinsame Zeit landet im Tab Freunde. Ihr braucht beide die App sowie Zugriff auf Bluetooth und das lokale Netzwerk."
       },
       {
-        "q": "Ist das wirklich kostenlos?",
-        "a": "Ja. Keine Werbung, keine Käufe, alle Funktionen inklusive. Wenn dir die App gefällt, kannst du ein Trinkgeld geben, es schaltet aber nichts zusätzlich frei."
+        "q": "Was ist kostenlos?",
+        "a": "Sonnenmessung, Sonnenblume, Tagesziel und Erinnerungen, UV-Hinweise, Kalender, Wochenstatistik und Sonne mit Freunden sind kostenlos und werbefrei. Home-Bildschirm-Widgets, Live-Fortschritt auf dem Sperrbildschirm und in der Dynamic Island sowie die Monatsstatistik gibt es mit Sunny Sunflower Pro – wöchentlich, monatlich, jährlich oder einmal für immer. Trinkgeld kannst du auch geben, es schaltet aber nichts frei."
       },
       {
         "q": "Kann ich meine Daten sichern oder übertragen?",

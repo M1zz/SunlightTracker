@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: hold styr på din tid i solen, og få en solsikke til at gro",
-  "description": "Gå udenfor, så tæller din tid i solen op af sig selv, og din solsikke gror af lyset. Gratis, og dine data bliver på enheden.",
+  "description": "Gå udenfor, så tæller din tid i solen op af sig selv, og din solsikke gror af lyset. Det er gratis at samle sol, og dine data bliver på enheden.",
   "hero": {
     "headline": "Dagens sol\nfår din solsikke til at gro",
     "lead": "Bare du går udenfor, tæller din tid i solen op af sig selv. Giv solsikken det sollys, du har samlet, så står den frisk. Glemmer du den et par dage, begynder den at visne.",
     "cta": "Hent gratis",
-    "note": "Alle funktioner er gratis. Dine data bliver på din enhed."
+    "note": "Det er gratis at samle sol og passe din solsikke. Dine data bliver på din enhed."
   },
   "demo": {
     "title": "Saml lidt sol",
@@ -123,8 +123,8 @@
         "a": "Når du og en ven er tæt på hinanden (inden for cirka 10 m) og begge måler sol, forbinder I automatisk. Med en ny person skal I først bekræfte, at I tager sol sammen, derefter sker det af sig selv. Kronbladene bliver farverige og får deres egen farve tilbage over 3 dage, og jeres tid sammen gemmes på fanen Venner. I skal begge have appen og give adgang til Bluetooth og lokalt netværk."
       },
       {
-        "q": "Er det virkelig gratis?",
-        "a": "Ja. Ingen reklamer, ingen køb, alle funktioner med. Kan du lide appen, kan du give drikkepenge, men de låser ikke noget ekstra op."
+        "q": "Hvad er gratis?",
+        "a": "Solmåling, din solsikke, dagligt mål og påmindelser, UV-tips, kalenderen, ugestatistik og sol med venner er gratis og uden reklamer. Widgets på hjemmeskærmen, live-status på låseskærmen og i Dynamic Island samt månedsstatistik følger med Sunny Sunflower Pro, som fås ugentligt, månedligt, årligt eller én gang for altid. Du kan også give drikkepenge, men de låser ikke noget op."
       },
       {
         "q": "Kan jeg tage backup eller flytte mine data?",

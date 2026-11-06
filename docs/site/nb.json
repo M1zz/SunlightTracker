@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: logg tiden i solen og la en solsikke vokse",
-  "description": "Gå ut, så teller tiden i solen opp av seg selv, og solsikken din vokser. Gratis, og dataene blir på enheten.",
+  "description": "Gå ut, så teller tiden i solen opp av seg selv, og solsikken din vokser. Det er gratis å samle sol, og dataene blir på enheten.",
   "hero": {
     "headline": "Dagens sol\nfår solsikken din til å vokse",
     "lead": "Bare du går ut, teller tiden i solen opp av seg selv. Gi solsikken sollyset du har samlet, så blir den strålende. Glemmer du den noen dager, begynner den å visne.",
     "cta": "Last ned gratis",
-    "note": "Alle funksjoner er gratis. Dataene blir på enheten din."
+    "note": "Det er gratis å samle sol og stelle solsikken. Dataene blir på enheten din."
   },
   "demo": {
     "title": "Samle litt sol",
@@ -123,8 +123,8 @@
         "a": "Når du og en venn er nær hverandre (innen rundt 10 m) og begge måler sol, kobler dere til automatisk. Med en ny person må dere først bekrefte at dere tar sol sammen, deretter skjer det av seg selv. Kronbladene blir fargerike og får tilbake sin egen farge i løpet av 3 dager, og tiden deres sammen lagres i Venner-fanen. Begge trenger appen og tilgang til Bluetooth og lokalt nettverk."
       },
       {
-        "q": "Er det virkelig gratis?",
-        "a": "Ja. Ingen reklame, ingen kjøp, alle funksjoner er med. Liker du appen, kan du gi tips, men det låser ikke opp noe ekstra."
+        "q": "Hva er gratis?",
+        "a": "Solmåling, solsikken, daglig mål og påminnelser, UV-tips, kalenderen, ukestatistikk og sol med venner er gratis og uten reklame. Widgeter på Hjem-skjermen, direkte status på låseskjermen og i Dynamic Island og månedsstatistikk følger med Sunny Sunflower Pro, ukentlig, månedlig, årlig eller én gang for alltid. Du kan også gi tips, men det låser ikke opp noe."
       },
       {
         "q": "Kan jeg ta sikkerhetskopi eller flytte dataene mine?",

@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: güneşte geçen süreni kaydet, bir ayçiçeği büyüt",
-  "description": "Dışarı çık, güneşte geçen süren kendiliğinden birikir ve ayçiçeğini büyütür. Ücretsiz, kayıtların cihazında kalır.",
+  "description": "Dışarı çık, güneşte geçen süren kendiliğinden birikir ve ayçiçeğini büyütür. Güneş toplamak ücretsiz, kayıtların cihazında kalır.",
   "hero": {
     "headline": "Bugünün güneşi\nayçiçeğini büyütür",
     "lead": "Dışarı çıkman yeter, güneşte geçen süre kendiliğinden birikir. Topladığın güneşi ayçiçeğine verirsen capcanlı olur. Birkaç gün unutursan solmaya başlar.",
     "cta": "Ücretsiz indir",
-    "note": "Tüm özellikler ücretsiz. Kayıtlar yalnızca cihazında kalır."
+    "note": "Güneş toplamak ve ayçiçeğini büyütmek ücretsiz. Kayıtlar yalnızca cihazında kalır."
   },
   "demo": {
     "title": "Biraz güneş topla",
@@ -123,8 +123,8 @@
         "a": "Sen ve bir arkadaşın birbirinize yakınken (yaklaşık 10 metre içinde) ve ikiniz de güneşi ölçüyorken otomatik olarak bağlanırsınız. Yeni biriyle önce birlikte güneşlenmeyi onaylamanız gerekir, sonrası otomatiktir. Taç yapraklar rengârenk olur ve 3 gün içinde kendi rengine döner, birlikte geçirdiğiniz süre Arkadaşlar sekmesine kaydedilir. İkinizde de uygulama yüklü olmalı, Bluetooth ve yerel ağ izni verilmelidir."
       },
       {
-        "q": "Gerçekten ücretsiz mi?",
-        "a": "Evet. Reklam yok, satın alma yok, tüm özellikler dahil. Beğenirsen uygulama içinden bahşiş bırakabilirsin ama bahşiş fazladan bir şey açmaz."
+        "q": "Neler ücretsiz?",
+        "a": "Güneş ölçümü, ayçiçeği, günlük hedef ve hatırlatmalar, UV önerileri, takvim, haftalık istatistikler ve arkadaşlarla güneşlenme ücretsiz ve reklamsız. Ana ekran widget'ları, kilitli ekranda ve Dynamic Island'da canlı durum ve aylık istatistikler Sunny Sunflower Pro'da; haftalık, aylık, yıllık ya da bir kez ödeyip ömür boyu. Bahşiş de bırakabilirsin ama bahşiş hiçbir şeyin kilidini açmaz."
       },
       {
         "q": "Kayıtlarımı yedekleyebilir ya da taşıyabilir miyim?",

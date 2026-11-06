@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: zapisujte čas na slunci a pěstujte slunečnici",
-  "description": "Vyjděte ven a čas na slunci se načítá sám. Z toho slunce roste vaše slunečnice. Zdarma, záznamy zůstávají v zařízení.",
+  "description": "Vyjděte ven a čas na slunci se načítá sám. Z toho slunce roste vaše slunečnice. Sbírání slunce je zdarma a záznamy zůstávají v zařízení.",
   "hero": {
     "headline": "Dnešní slunce\nkrmí vaši slunečnici",
     "lead": "Stačí vyjít ven a čas na slunci se načítá sám. Dejte nasbírané slunce slunečnici a bude svěží. Když na ni pár dní zapomenete, začne vadnout.",
     "cta": "Stáhnout zdarma",
-    "note": "Všechny funkce jsou zdarma. Záznamy zůstávají ve vašem zařízení."
+    "note": "Sbírání slunce a pěstování slunečnice je zdarma. Záznamy zůstávají ve vašem zařízení."
   },
   "demo": {
     "title": "Nasbírejte si trochu slunce",
@@ -123,8 +123,8 @@
         "a": "Když jste s kamarádem blízko sebe (zhruba do 10 m) a oba právě měříte slunce, spojíte se automaticky. S novým člověkem je potřeba nejdřív potvrdit společné slunění, pak už to jde samo. Okvětní lístky se zbarví a během 3 dnů se vrátí k původní barvě, společný čas se uloží na kartě Přátelé. Oba potřebujete aplikaci a povolený přístup k Bluetooth a místní síti."
       },
       {
-        "q": "Je to opravdu zdarma?",
-        "a": "Ano. Bez reklam a bez nákupů, se všemi funkcemi. Pokud se vám líbí, můžete v aplikaci nechat spropitné, ale nic dalšího neodemyká."
+        "q": "Co je zdarma?",
+        "a": "Měření slunce, pěstování slunečnice, denní cíl a připomínky, tipy k UV, kalendář, týdenní statistiky i sluníčko s přáteli jsou zdarma a bez reklam. Widgety na ploše, průběh na zamčené obrazovce a v Dynamic Islandu a měsíční statistiky jsou v Sunny Sunflower Pro, které můžete mít týdně, měsíčně, ročně nebo jednou navždy. Můžete také poslat spropitné, ale nic tím neodemknete."
       },
       {
         "q": "Můžu si záznamy zálohovat nebo přenést?",

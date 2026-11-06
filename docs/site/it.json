@@ -1,11 +1,11 @@
 {
   "title": "Sunny Sunflower: registra il tempo al sole e fai crescere un girasole",
-  "description": "Esci e il tempo al sole si accumula da solo, facendo crescere il tuo girasole. Gratis, e i dati restano sul tuo dispositivo.",
+  "description": "Esci e il tempo al sole si accumula da solo, facendo crescere il tuo girasole. Raccogliere sole è gratis, e i dati restano sul tuo dispositivo.",
   "hero": {
     "headline": "Il sole di oggi\nfa crescere il tuo girasole",
     "lead": "Appena esci, il tempo al sole si conta da solo. Dai al girasole il sole raccolto e diventa rigoglioso. Se te ne dimentichi per qualche giorno, comincia ad appassire.",
     "cta": "Scaricala gratis",
-    "note": "Tutte le funzioni sono gratuite. I dati restano sul tuo dispositivo."
+    "note": "Raccogliere sole e far crescere il girasole è gratis. I dati restano sul tuo dispositivo."
   },
   "demo": {
     "title": "Raccogli un po' di sole",
@@ -123,8 +123,8 @@
         "a": "Se tu e un amico siete vicini (entro 10 m circa) e state entrambi misurando il sole, vi collegate da soli. Con una persona nuova bisogna prima confermare che prendete il sole insieme, poi è automatico. I petali si colorano e in 3 giorni tornano al loro colore, e il tempo passato insieme resta nella scheda Amici. Servono l'app su entrambi i telefoni e l'accesso a Bluetooth e rete locale."
       },
       {
-        "q": "È davvero gratis?",
-        "a": "Sì. Niente pubblicità né acquisti, tutte le funzioni incluse. Se ti piace puoi lasciare una mancia nell'app, ma non sblocca niente in più."
+        "q": "Cosa è gratis?",
+        "a": "La misurazione del sole, il girasole, l'obiettivo giornaliero e i promemoria, i consigli sugli UV, il calendario, le statistiche settimanali e il sole con gli amici sono gratis e senza pubblicità. I widget Home, l'avanzamento in tempo reale sulla schermata di blocco e nella Dynamic Island e le statistiche mensili sono in Sunny Sunflower Pro, a settimana, mese, anno o con un solo acquisto per sempre. Puoi anche lasciare una mancia, ma non sblocca nulla."
       },
       {
         "q": "Posso fare un backup o trasferire i dati?",
