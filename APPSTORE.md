@@ -63,6 +63,11 @@ Apple Watch가 잰 ‘햇빛 아래 있었던 시간’을 건강 앱에서 받�
 햇빛바라기 Pro
 햇빛을 재고 해바라기를 키우고 목표를 채우는 모든 것은 무료예요. 홈 화면 위젯, 잠금화면과 다이나믹 아일랜드의 실시간 현황, 월간 통계는 햇빛바라기 Pro에서 열려요. 주·월·연 구독이나 한 번 결제하는 평생 중에 고를 수 있어요.
 
+구독 안내
+햇빛바라기 Pro 구독은 자동 갱신 구독입니다. 갱신일 24시간 전까지 해지하지 않으면 Apple 계정으로 자동 결제되며, 설정의 구독 관리에서 언제든 해지할 수 있습니다.
+이용약관(EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+개인정보처리방침: https://m1zz.github.io/SunlightTracker/privacy.html
+
 ## en
 
 ### 지원 URL
@@ -125,6 +130,11 @@ There's no server involved. Your sunlight history and notes stay on your device 
 
 Sunny Sunflower Pro
 Tracking sun, growing your sunflower and hitting your goal are all free. Home Screen widgets, live updates on the Lock Screen and Dynamic Island, and monthly stats come with Sunny Sunflower Pro. Choose a weekly, monthly or yearly subscription, or pay once for lifetime.
+
+Subscriptions
+Sunny Sunflower Pro is an auto-renewing subscription. Payment is charged to your Apple Account, and the subscription renews unless canceled at least 24 hours before the current period ends. Manage or cancel anytime in Settings.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/SunlightTracker/en/privacy.html
 
 ## en-GB
 
@@ -189,6 +199,11 @@ There's no server involved. Your sunlight history and notes stay on your device 
 Sunny Sunflower Pro
 Tracking sun, growing your sunflower and hitting your goal are all free. Home Screen widgets, live updates on the Lock Screen and Dynamic Island, and monthly stats come with Sunny Sunflower Pro. Choose a weekly, monthly or yearly subscription, or pay once for lifetime.
 
+Subscriptions
+Sunny Sunflower Pro is an auto-renewing subscription. Payment is charged to your Apple Account, and the subscription renews unless cancelled at least 24 hours before the current period ends. Manage or cancel any time in Settings.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/SunlightTracker/en/privacy.html
+
 ## zh-Hans
 
 ### 지원 URL
@@ -251,6 +266,11 @@ Apple Watch 与“健康”
 
 向阳小葵 Pro
 测量阳光、养向日葵、完成目标，这些全都免费。主屏幕小组件、锁定屏幕与灵动岛的实时进度以及月度统计需要向阳小葵 Pro。可选择按周、按月、按年订阅，或一次买断终身版。
+
+订阅说明
+向阳小葵 Pro 为自动续期订阅。 费用从你的 Apple 账户扣除，除非在当期结束前至少 24 小时取消，否则将自动续期。可随时在“设置”中管理或取消。
+使用条款（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隐私政策: https://m1zz.github.io/SunlightTracker/zh-Hans/privacy.html
 
 ## zh-Hant
 
@@ -315,6 +335,11 @@ Apple Watch 與「健康」
 向陽小葵 Pro
 測量陽光、養向日葵、完成目標，這些全都免費。主畫面小工具、鎖定畫面與動態島的即時進度以及每月統計需要向陽小葵 Pro。可選擇週、月、年訂閱，或一次買斷終身版。
 
+訂閱說明
+向陽小葵 Pro 為自動續訂訂閱。 費用會從你的 Apple 帳號扣款，除非在當期結束前至少 24 小時取消，否則將自動續訂。可隨時在「設定」中管理或取消。
+使用條款（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隱私權政策: https://m1zz.github.io/SunlightTracker/zh-Hant/privacy.html
+
 ## ja
 
 ### 지원 URL
@@ -377,6 +402,11 @@ Apple Watchとヘルスケア
 
 ひなたひまわり Pro
 日光の計測、ひまわりの世話、目標の達成はすべて無料です。ホーム画面ウィジェット、ロック画面とDynamic Islandのリアルタイム表示、月間統計はひなたひまわり Proで使えます。週額・月額・年額のサブスクリプションか、1回払いの買い切りから選べます。
+
+サブスクリプションについて
+ひなたひまわり Pro は自動更新のサブスクリプションです。 期間終了の24時間前までに解約しない限り、Apple Account に自動で請求され更新されます。設定のサブスクリプション管理からいつでも解約できます。
+利用規約（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+プライバシーポリシー: https://m1zz.github.io/SunlightTracker/ja/privacy.html
 
 ## ru
 
@@ -441,6 +471,11 @@ Apple Watch и «Здоровье»
 Подсолнушек Pro
 Замер солнца, уход за подсолнухом и дневная цель полностью бесплатны. Виджеты на экране «Домой», прогресс на экране блокировки и в Dynamic Island, а также статистика за месяц доступны в Подсолнушек Pro. Выберите подписку на неделю, месяц или год либо разовую покупку навсегда.
 
+Подписки
+Подсолнушек Pro — подписка с автопродлением. Оплата списывается с вашего Аккаунта Apple, и подписка продлевается, если не отменить её минимум за 24 часа до конца периода. Управлять подпиской и отменить её можно в Настройках.
+Условия использования (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Политика конфиденциальности: https://m1zz.github.io/SunlightTracker/ru/privacy.html
+
 ## es
 
 ### 지원 URL
@@ -503,6 +538,11 @@ Esta app no usa ningún servidor. Tus registros de sol y tus notas se guardan so
 
 Sunny Sunflower Pro
 Medir el sol, cuidar tu girasol y cumplir tu meta es totalmente gratis. Los widgets de inicio, el progreso en directo en la pantalla bloqueada y la Dynamic Island, y las estadísticas mensuales vienen con Sunny Sunflower Pro. Elige una suscripción semanal, mensual o anual, o paga una sola vez para siempre.
+
+Suscripciones
+La suscripción a Sunny Sunflower Pro es de renovación automática. El cargo se realiza en tu cuenta de Apple y la suscripción se renueva salvo que la canceles al menos 24 horas antes de que termine el periodo. Puedes gestionarla o cancelarla cuando quieras en Ajustes.
+Términos de uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de privacidad: https://m1zz.github.io/SunlightTracker/es/privacy.html
 
 ## de
 
@@ -567,6 +607,11 @@ Ganz ohne Server: Deine Sonnenzeiten und Notizen bleiben ausschließlich auf dei
 Sunny Sunflower Pro
 Sonne messen, die Sonnenblume pflegen und dein Ziel erreichen ist komplett kostenlos. Home-Bildschirm-Widgets, Live-Fortschritt auf dem Sperrbildschirm und in der Dynamic Island sowie die Monatsstatistik gibt es mit Sunny Sunflower Pro. Wähle ein Wochen-, Monats- oder Jahresabo oder zahle einmal für immer.
 
+Abonnements
+Sunny Sunflower Pro ist ein sich automatisch verlängerndes Abo. Die Zahlung erfolgt über deinen Apple Account. Das Abo verlängert sich, sofern du nicht mindestens 24 Stunden vor Ablauf des Zeitraums kündigst. Verwalten oder kündigen kannst du jederzeit in den Einstellungen.
+Nutzungsbedingungen (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Datenschutzerklärung: https://m1zz.github.io/SunlightTracker/de/privacy.html
+
 ## fr
 
 ### 지원 URL
@@ -629,6 +674,11 @@ Pas de serveur : tes données de soleil et tes notes restent uniquement sur ton
 
 Sunny Sunflower Pro
 Mesurer le soleil, faire pousser votre tournesol et atteindre votre objectif, tout cela est gratuit. Les widgets d’accueil, le suivi en direct sur l’écran verrouillé et dans la Dynamic Island, et les statistiques mensuelles sont inclus dans Sunny Sunflower Pro. Choisissez un abonnement à la semaine, au mois ou à l’année, ou payez une seule fois pour toujours.
+
+Abonnements
+L’abonnement Sunny Sunflower Pro est à renouvellement automatique. Le paiement est débité sur ton compte Apple, et l’abonnement est reconduit sauf résiliation au moins 24 heures avant la fin de la période en cours. Gère-le ou résilie-le à tout moment dans Réglages.
+Conditions d’utilisation (EULA) : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Politique de confidentialité : https://m1zz.github.io/SunlightTracker/fr/privacy.html
 
 ## it
 
@@ -693,6 +743,11 @@ Nessun server: le tue registrazioni e le tue note restano solo sul tuo dispositi
 Sunny Sunflower Pro
 Misurare il sole, far crescere il girasole e raggiungere l’obiettivo è tutto gratis. I widget Home, l’avanzamento in tempo reale sulla schermata di blocco e nella Dynamic Island e le statistiche mensili sono inclusi in Sunny Sunflower Pro. Scegli un abbonamento settimanale, mensile o annuale, oppure paga una volta per sempre.
 
+Abbonamenti
+L’abbonamento Sunny Sunflower Pro si rinnova automaticamente. Il pagamento viene addebitato sul tuo Account Apple e l’abbonamento si rinnova se non lo disdici almeno 24 ore prima della fine del periodo. Puoi gestirlo o disdirlo in qualsiasi momento in Impostazioni.
+Condizioni d’uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Informativa sulla privacy: https://m1zz.github.io/SunlightTracker/it/privacy.html
+
 ## pt-BR
 
 ### 지원 URL
@@ -755,6 +810,11 @@ Sem servidor. Seus registros de sol e suas notas ficam guardados somente no seu 
 
 Sunny Sunflower Pro
 Medir o sol, cuidar do girassol e bater a meta é tudo grátis. Os widgets da Tela de Início, o progresso ao vivo na Tela Bloqueada e na Dynamic Island e as estatísticas mensais vêm com o Sunny Sunflower Pro. Escolha uma assinatura semanal, mensal ou anual, ou pague uma vez para sempre.
+
+Assinaturas
+A assinatura Sunny Sunflower Pro é renovada automaticamente. A cobrança é feita na sua Conta Apple, e a assinatura é renovada a menos que você cancele pelo menos 24 horas antes do fim do período. Gerencie ou cancele quando quiser em Ajustes.
+Termos de Uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de Privacidade: https://m1zz.github.io/SunlightTracker/pt-BR/privacy.html
 
 ## th
 
@@ -819,6 +879,11 @@ Apple Watch และแอปสุขภาพ
 ทานตะวันชอบแดด Pro
 การวัดแดด ปลูกทานตะวัน และทำเป้าหมายให้สำเร็จ ใช้ได้ฟรีทั้งหมด วิดเจ็ตหน้าจอโฮม ความคืบหน้าสดบนหน้าจอล็อกและ Dynamic Island และสถิติรายเดือนใช้ได้ใน ทานตะวันชอบแดด Pro เลือกสมัครรายสัปดาห์ รายเดือน รายปี หรือจ่ายครั้งเดียวใช้ตลอดไป
 
+การสมัครสมาชิก
+ทานตะวันชอบแดด Pro เป็นการสมัครสมาชิกที่ต่ออายุอัตโนมัติ ระบบจะเรียกเก็บเงินจากบัญชี Apple ของคุณและต่ออายุให้ เว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดรอบ จัดการหรือยกเลิกได้ทุกเมื่อในการตั้งค่า
+ข้อกำหนดการใช้งาน (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+นโยบายความเป็นส่วนตัว: https://m1zz.github.io/SunlightTracker/th/privacy.html
+
 ## vi
 
 ### 지원 URL
@@ -881,6 +946,11 @@ Khi bật, thời gian dưới ánh sáng ban ngày mà Apple Watch ghi trong �
 
 Sunny Sunflower Pro
 Đo nắng, chăm hoa hướng dương và hoàn thành mục tiêu đều miễn phí. Tiện ích Màn hình chính, tiến độ trực tiếp trên Màn hình khóa và Dynamic Island cùng thống kê tháng có trong Sunny Sunflower Pro. Chọn gói theo tuần, tháng, năm hoặc trả một lần dùng trọn đời.
+
+Gói đăng ký
+Sunny Sunflower Pro là gói đăng ký tự động gia hạn. Phí được tính vào Tài khoản Apple của bạn và gói sẽ tự gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kỳ hạn kết thúc. Bạn có thể quản lý hoặc hủy bất cứ lúc nào trong Cài đặt.
+Điều khoản sử dụng (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Chính sách quyền riêng tư: https://m1zz.github.io/SunlightTracker/vi/privacy.html
 
 ## cs
 
@@ -945,6 +1015,11 @@ Aplikace nepoužívá žádný server. Záznamy slunce i poznámky zůstávají 
 Sunny Sunflower Pro
 Měření slunce, péče o slunečnici i plnění cíle jsou zcela zdarma. Widgety na ploše, průběh na zamčené obrazovce a v Dynamic Islandu a měsíční statistiky jsou součástí Sunny Sunflower Pro. Vyberte si týdenní, měsíční nebo roční předplatné, nebo jednorázový nákup navždy.
 
+Předplatné
+Sunny Sunflower Pro je automaticky obnovované předplatné. Platba se strhává z tvého Apple účtu a předplatné se obnoví, pokud ho nezrušíš alespoň 24 hodin před koncem období. Spravovat nebo zrušit ho můžeš kdykoli v Nastavení.
+Podmínky použití (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Zásady ochrany osobních údajů: https://m1zz.github.io/SunlightTracker/cs/privacy.html
+
 ## da
 
 ### 지원 URL
@@ -1007,6 +1082,11 @@ Her er ingen server. Dine solregistreringer og notater bliver kun gemt på din e
 
 Sunny Sunflower Pro
 At måle sol, passe din solsikke og nå dit mål er helt gratis. Widgets på hjemmeskærmen, live-status på låseskærmen og i Dynamic Island samt månedsstatistik følger med Sunny Sunflower Pro. Vælg et uge-, måneds- eller årsabonnement, eller betal én gang for altid.
+
+Abonnementer
+Sunny Sunflower Pro er et abonnement, der fornyes automatisk. Betalingen trækkes på din Apple-konto, og abonnementet fornyes, medmindre du opsiger det mindst 24 timer før perioden slutter. Administrer eller opsig når som helst i Indstillinger.
+Brugsvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privatlivspolitik: https://m1zz.github.io/SunlightTracker/da/privacy.html
 
 ## el
 
@@ -1071,6 +1151,11 @@ Apple Watch και Υγεία
 Ηλιοτρόπιο Pro
 Η μέτρηση του ήλιου, η φροντίδα του ηλιοτρόπιου και ο ημερήσιος στόχος είναι εντελώς δωρεάν. Τα widget της οθόνης Αφετηρίας, η ζωντανή πρόοδος στην οθόνη κλειδώματος και στο Dynamic Island και τα μηνιαία στατιστικά περιλαμβάνονται στο Ηλιοτρόπιο Pro. Επιλέξτε εβδομαδιαία, μηνιαία ή ετήσια συνδρομή ή πληρώστε μία φορά για πάντα.
 
+Συνδρομές
+Το Ηλιοτρόπιο Pro είναι συνδρομή με αυτόματη ανανέωση. Η χρέωση γίνεται στον λογαριασμό Apple σου και η συνδρομή ανανεώνεται, εκτός αν την ακυρώσεις τουλάχιστον 24 ώρες πριν λήξει η περίοδος. Διαχειρίσου ή ακύρωσε τη συνδρομή οποτεδήποτε από τις Ρυθμίσεις.
+Όροι χρήσης (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Πολιτική απορρήτου: https://m1zz.github.io/SunlightTracker/el/privacy.html
+
 ## fi
 
 ### 지원 URL
@@ -1133,6 +1218,11 @@ Sovellus ei käytä palvelinta. Aurinkokirjaukset ja muistiinpanot tallentuvat v
 
 Sunny Sunflower Pro
 Auringon mittaus, auringonkukan hoito ja päivätavoite ovat täysin ilmaisia. Koti-valikon widgetit, reaaliaikainen tila lukitulla näytöllä ja Dynamic Islandissa sekä kuukausitilastot kuuluvat Sunny Sunflower Pro -versioon. Valitse viikko-, kuukausi- tai vuositilaus tai maksa kerran ikuisesti.
+
+Tilaukset
+Sunny Sunflower Pro on automaattisesti uusiutuva tilaus. Maksu veloitetaan Apple-tililtäsi, ja tilaus uusiutuu, ellei sitä peruta vähintään 24 tuntia ennen jakson päättymistä. Hallitse tai peru tilaus milloin tahansa Asetuksissa.
+Käyttöehdot (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Tietosuojakäytäntö: https://m1zz.github.io/SunlightTracker/fi/privacy.html
 
 ## id
 
@@ -1197,6 +1287,11 @@ Tanpa server. Semua catatan sinar matahari dan memo tersimpan hanya di perangkat
 Sunny Sunflower Pro
 Mengukur sinar matahari, merawat bunga matahari, dan mencapai target semuanya gratis. Widget Layar Utama, progres langsung di Layar Terkunci dan Dynamic Island, serta statistik bulanan tersedia di Sunny Sunflower Pro. Pilih langganan mingguan, bulanan, atau tahunan, atau bayar sekali untuk selamanya.
 
+Langganan
+Sunny Sunflower Pro adalah langganan yang diperpanjang otomatis. Pembayaran ditagihkan ke Akun Apple Anda dan langganan diperpanjang kecuali dibatalkan paling lambat 24 jam sebelum periode berakhir. Kelola atau batalkan kapan saja di Pengaturan.
+Ketentuan Penggunaan (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Kebijakan Privasi: https://m1zz.github.io/SunlightTracker/id/privacy.html
+
 ## nb
 
 ### 지원 URL
@@ -1259,6 +1354,11 @@ Appen bruker ingen server. Sollogg og notater lagres bare på enheten din.
 
 Sunny Sunflower Pro
 Å måle sol, stelle solsikken og nå målet ditt er helt gratis. Widgeter på Hjem-skjermen, direkte status på låseskjermen og i Dynamic Island og månedsstatistikk følger med Sunny Sunflower Pro. Velg uke-, måneds- eller årsabonnement, eller betal én gang for alltid.
+
+Abonnementer
+Sunny Sunflower Pro er et abonnement som fornyes automatisk. Betalingen belastes Apple-kontoen din, og abonnementet fornyes med mindre du sier det opp minst 24 timer før perioden er over. Administrer eller si opp når som helst i Innstillinger.
+Bruksvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Personvernerklæring: https://m1zz.github.io/SunlightTracker/nb/privacy.html
 
 ## nl
 
@@ -1323,6 +1423,11 @@ Er is geen server: je zonlichtgegevens en notities blijven helemaal op je eigen 
 Sunny Sunflower Pro
 Zon meten, je zonnebloem verzorgen en je doel halen is helemaal gratis. Beginschermwidgets, live voortgang op het toegangsscherm en in het Dynamic Island en maandstatistieken horen bij Sunny Sunflower Pro. Kies een week-, maand- of jaarabonnement, of betaal eenmalig voor altijd.
 
+Abonnementen
+Sunny Sunflower Pro is een automatisch verlengend abonnement. De betaling loopt via je Apple Account en het abonnement wordt verlengd, tenzij je minstens 24 uur voor het einde van de periode opzegt. Beheer of zeg op wanneer je wilt in Instellingen.
+Gebruiksvoorwaarden (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacybeleid: https://m1zz.github.io/SunlightTracker/nl/privacy.html
+
 ## pl
 
 ### 지원 URL
@@ -1385,6 +1490,11 @@ To aplikacja bez serwera. Wszystkie zapisy o słońcu i notatki są przechowywan
 
 Sunny Sunflower Pro
 Pomiar słońca, dbanie o słonecznik i realizacja celu są całkowicie za darmo. Widżety na ekranie początkowym, postęp na żywo na ekranie blokady i w Dynamic Island oraz statystyki miesięczne są w Sunny Sunflower Pro. Wybierz subskrypcję tygodniową, miesięczną lub roczną albo zapłać raz na zawsze.
+
+Subskrypcje
+Sunny Sunflower Pro to subskrypcja odnawiana automatycznie. Opłata jest pobierana z Twojego konta Apple, a subskrypcja odnawia się, jeśli nie anulujesz jej co najmniej 24 godziny przed końcem okresu. Zarządzaj subskrypcją lub anuluj ją w dowolnej chwili w Ustawieniach.
+Warunki korzystania (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Polityka prywatności: https://m1zz.github.io/SunlightTracker/pl/privacy.html
 
 ## sv
 
@@ -1449,6 +1559,11 @@ Appen har ingen server. All din solloggning och alla dina anteckningar sparas ba
 Sunny Sunflower Pro
 Att mäta sol, ta hand om solrosen och nå ditt mål är helt gratis. Hemskärmswidgetar, liveförlopp på låsskärmen och i Dynamic Island samt månadsstatistik ingår i Sunny Sunflower Pro. Välj vecko-, månads- eller årsabonnemang, eller betala en gång för alltid.
 
+Prenumerationer
+Sunny Sunflower Pro är en prenumeration som förnyas automatiskt. Betalningen dras från ditt Apple-konto och prenumerationen förnyas om du inte avslutar den minst 24 timmar innan perioden slutar. Hantera eller avsluta när som helst i Inställningar.
+Användarvillkor (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Integritetspolicy: https://m1zz.github.io/SunlightTracker/sv/privacy.html
+
 ## tr
 
 ### 지원 URL
@@ -1511,6 +1626,11 @@ Uygulamanın sunucusu yok. Güneş kayıtların ve notların yalnızca cihazınd
 
 Sunny Sunflower Pro
 Güneşi ölçmek, ayçiçeğini büyütmek ve hedefini tutturmak tamamen ücretsiz. Ana ekran widget'ları, kilitli ekranda ve Dynamic Island'da canlı durum ve aylık istatistikler Sunny Sunflower Pro'da. Haftalık, aylık ya da yıllık abonelik seçin veya bir kez ödeyip ömür boyu kullanın.
+
+Abonelikler
+Sunny Sunflower Pro otomatik yenilenen bir aboneliktir. Ödeme Apple Hesabınızdan alınır ve dönem bitmeden en az 24 saat önce iptal edilmezse abonelik yenilenir. Ayarlar'dan istediğiniz zaman yönetebilir veya iptal edebilirsiniz.
+Kullanım Koşulları (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Gizlilik Politikası: https://m1zz.github.io/SunlightTracker/tr/privacy.html
 
 ## 손쉬운 사용
 
