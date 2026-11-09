@@ -16,6 +16,8 @@ struct SunlightTrackerApp: App {
         WindowGroup {
             ContentView()
                 .leeoSatisfactionCheck(SunlightTrackerSpec.self)
+                // 개발자가 보낸 의견에 답장하면, 앱이 앞으로 올 때 답장을 시트로 보여 준다 (LeeoKit).
+                .leeoFeedbackReplyNotice(SunlightTrackerSpec.self)
                 // 팁 상품을 불러오고 끝나지 않은 팁을 마저 센다 (팁은 Pro 의 LeeoStore 와 따로 혼자)
                 .task { await SunlightTrackerSpec.tipJar.startStandalone() }
                 .task { await SunflowerPro.shared.refresh() }
