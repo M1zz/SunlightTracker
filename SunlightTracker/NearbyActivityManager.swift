@@ -266,7 +266,7 @@ class NearbyActivityManager: NSObject, ObservableObject {
 
     #if canImport(NearbyInteraction)
     private func startNISession(with peerToken: NIDiscoveryToken) {
-        guard NISession.isSupported else { return }
+        guard NISession.deviceCapabilities.supportsPreciseDistanceMeasurement else { return }
 
         if niSession == nil {
             niSession = NISession()
@@ -298,7 +298,7 @@ extension NearbyActivityManager: MCSessionDelegate {
 
                 // NI 토큰 교환
                 #if canImport(NearbyInteraction)
-                if NISession.isSupported {
+                if NISession.deviceCapabilities.supportsPreciseDistanceMeasurement {
                     if self.niSession == nil {
                         self.niSession = NISession()
                         self.niSession?.delegate = self

@@ -26,7 +26,7 @@ struct SunflowerEntry: TimelineEntry {
         SunflowerEntry(date: date,
                        minutes: WatchStore.todayMinutes(at: date),
                        goal: WatchStore.goalMinutes(),
-                       energy: WatchStore.snapshot?.energy(at: date) ?? 100)
+                       energy: WatchStore.snapshot?.energy(at: date) ?? 0)
     }
 }
 

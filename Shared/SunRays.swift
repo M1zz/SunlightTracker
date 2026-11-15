@@ -11,6 +11,8 @@ enum SunPalette {
     static let skyTop = Color(red: 0.16, green: 0.51, blue: 0.94)
     static let skyBottom = Color(red: 0.43, green: 0.75, blue: 1.0)
     static let sun = Color(red: 1.0, green: 0.84, blue: 0.16)
+    /// 빈 해: 하늘이 비치지 않는 옅은 흰빛 (반투명이면 파랑과 섞여 초록빛이 돈다)
+    static let emptySun = Color(red: 0.86, green: 0.93, blue: 1.0)
     /// 해 위의 숫자
     static let ink = Color(red: 0.08, green: 0.22, blue: 0.48)
     static var sky: LinearGradient {
@@ -43,8 +45,10 @@ struct SunRays<Center: View>: View {
                         .offset(y: -side * 0.38)
                         .rotationEffect(.degrees(Double(i) * 360 / Double(Self.rayCount)))
                 }
+                // 비어 있으면 흐린 해, 찰수록 노랗게 밝아진다
                 Circle()
-                    .fill(SunPalette.sun)
+                    .fill(SunPalette.emptySun)
+                    .overlay(Circle().fill(SunPalette.sun).opacity(min(max(level, 0), 100) / 100))
                     .frame(width: side * 0.48, height: side * 0.48)
                 center()
                     .frame(width: side * 0.44, height: side * 0.44)

@@ -17,7 +17,6 @@ struct DashboardView: View {
         return false
         #endif
     }
-    @State private var sensingPulse = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     /// 큰 숫자도 글자 크기 설정을 따라 커지게
     @ScaledMetric(relativeTo: .largeTitle) private var bigNumberSize: CGFloat = 48
@@ -42,7 +41,7 @@ struct DashboardView: View {
     var body: some View {
         NavigationStack {
         ScrollView {
-            VStack(spacing: 16) {
+            VStack(spacing: 20) {
                 // 햇빛 배터리 (히어로)
                 sunGauge
 
@@ -55,8 +54,8 @@ struct DashboardView: View {
                     )
                 }
 
-                // 오늘 햇빛 진행도 (컴팩트)
-                todayProgressCard
+                // 오늘 밖에 있던 시간
+                todayCard
 
                 // 목표를 채운 날이 쌓였을 때만, 드물게 응원을 부탁한다. 햇빛을 재는 동안에는 묻지 않는다 (모달 아님)
                 // 응원 부탁은 이미 Pro 를 가진 사람에게만 — 무료로 쓰는 사람에게 돈 이야기를 두 번 하지 않는다.
@@ -65,15 +64,8 @@ struct DashboardView: View {
                                                         reached: SunlightTipMoments.reached(goalDays: manager.weeklyRecords.filter(\.goalAchieved).count))
                 }
 
-                // 트래킹: 진행 중 카드 or 시작 버튼
-                if manager.trackingPhase == .confirmed {
-                    trackingCard
-                } else {
-                    trackingButton
-                    if manager.trackingPhase == .detecting {
-                        compactLuxCard
-                    }
-                }
+                // 하나의 큰 버튼: 나가기 · 찾는 중 · 그만 받기
+                actionButton
 
                 // 수동 입력 (보조 액션)
                 manualEntryButton
@@ -115,195 +107,6 @@ struct DashboardView: View {
         } // NavigationStack
     }
 
-    // MARK: - 조도 배터리 게이지
-    private var displayLux: Double {
-        manager.isConfirmedOutdoor ? manager.lastKnownLux : manager.luxSensor.currentLux
-    }
-
-    private var displayLightLevel: String {
-        if manager.isConfirmedOutdoor {
-            if manager.lastKnownLux >= 10000 { return String(localized: "강한 햇빛") }
-            if manager.lastKnownLux >= 1000 { return String(localized: "햇빛") }
-            return String(localized: "실외")
-        }
-        return String(localized: String.LocalizationValue(manager.luxSensor.lightLevel.rawValue))
-    }
-
-    private var batteryColor: Color {
-        if displayLux >= manager.settings.outdoorThresholdLux { return Color(red: 0.3, green: 0.7, blue: 0.2) }
-        if displayLux >= 50 { return .orange }
-        return .gray
-    }
-
-    private var luxEmoji: String {
-        switch displayLux {
-        case ..<50: return "\u{1F319}"
-        case 50..<300: return "\u{1F4A1}"
-        case 300..<1000: return "\u{26C5}"
-        case 1000..<10000: return "\u{2600}\u{FE0F}"
-        default: return "\u{1F506}"
-        }
-    }
-
-    // 지금 밝기 카드 (감지 중)
-    private var compactLuxCard: some View {
-        HStack(spacing: 10) {
-            Text(luxEmoji)
-                .font(.title3)
-                .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(displayLightLevel)
-                    .font(.subheadline.weight(.bold))
-                    .foregroundColor(batteryColor)
-                Text("\(displayLux.luxFormatted) Lux")
-                    .font(.system(.caption, design: .rounded))
-                    .foregroundColor(.secondary)
-            }
-            Spacer()
-            sensingBadge
-        }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
-        .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
-        .accessibilityElement(children: .combine)
-    }
-
-    // 측정 상태 배지 (측정 중 펄스 / 쉬는 중)
-    private var sensingBadge: some View {
-        Group {
-            if manager.luxSensor.isActive {
-                HStack(spacing: 5) {
-                    Circle()
-                        .fill(Color.green)
-                        .frame(width: 7, height: 7)
-                        .opacity(sensingPulse ? 1.0 : 0.3)
-                        .animation(reduceMotion ? nil : .easeInOut(duration: 0.8).repeatForever(autoreverses: true), value: sensingPulse)
-                        .onAppear { sensingPulse = true }
-                        .onDisappear { sensingPulse = false }
-                    Text("측정 중")
-                        .font(.caption2.weight(.semibold))
-                        .foregroundColor(.green)
-                }
-            } else {
-                Text("잠시 쉬는 중 \u{1F4A4}")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-            }
-        }
-    }
-
-    // MARK: - 오늘 햇빛 진행도 (컴팩트)
-    private var todayProgressCard: some View {
-        VStack(spacing: 10) {
-            HStack {
-                Text("\u{2600}\u{FE0F} 오늘의 햇빛")
-                    .font(.subheadline.weight(.bold))
-                Spacer()
-                if displayProgress >= 1.0 {
-                    Text("목표 달성! \u{1F389}")
-                        .font(.system(.subheadline, design: .rounded).weight(.bold))
-                        .foregroundColor(.green)
-                } else {
-                    Text("\(displayMinutes) / \(manager.settings.dailyGoalMinutes)분")
-                        .font(.system(.subheadline, design: .rounded).weight(.bold))
-                        .foregroundColor(.orange)
-                }
-            }
-
-            GeometryReader { geo in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(Color.orange.opacity(0.12))
-                    Capsule()
-                        .fill(
-                            LinearGradient(
-                                colors: displayProgress >= 1.0 ?
-                                    [Color(red: 0.4, green: 0.75, blue: 0.25), .green] :
-                                    [.yellow, .orange],
-                                startPoint: .leading, endPoint: .trailing
-                            )
-                        )
-                        .frame(width: max(12, geo.size.width * displayProgress))
-                        .animation(.easeInOut(duration: 0.8), value: displayProgress)
-                }
-            }
-            .frame(height: 12)
-            .accessibilityHidden(true)
-
-            if let fromWatch = manager.todayRecord.healthMinutes, fromWatch > 0 {
-                Label("Apple Watch에서 \(fromWatch)분", systemImage: "applewatch")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-        }
-        .padding(16)
-        .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
-        .accessibilityElement(children: .combine)
-    }
-
-    // MARK: - 트래킹 진행 중 카드
-    private var trackingCard: some View {
-        VStack(spacing: 14) {
-            HStack(spacing: 8) {
-                Circle()
-                    .fill(Color.green)
-                    .frame(width: 10, height: 10)
-                    .modifier(PulseModifier())
-                Text("햇빛 받는 중 \u{1F31E}")
-                    .font(.headline)
-                    .foregroundColor(Color(red: 0.3, green: 0.65, blue: 0.2))
-                Spacer()
-                Text("\(manager.confirmedElapsedMinutes)분")
-                    .font(.system(.title3, design: .rounded).weight(.bold))
-            }
-            .accessibilityElement(children: .combine)
-
-            HStack {
-                HStack(spacing: 6) {
-                    Text(luxEmoji)
-                        .accessibilityHidden(true)
-                    VStack(alignment: .leading, spacing: 1) {
-                        Text(displayLightLevel)
-                            .font(.caption.weight(.semibold))
-                        Text("\(displayLux.luxFormatted) Lux")
-                            .font(.system(.caption2, design: .rounded))
-                            .foregroundColor(.secondary)
-                    }
-                }
-                Spacer()
-                sensingBadge
-                Spacer()
-                HStack(spacing: 4) {
-                    Text("\u{26A1}")
-                    Text("+\(Int(manager.estimatedBatteryGain))%")
-                        .font(.system(.subheadline, design: .rounded).weight(.bold))
-                        .foregroundColor(.green)
-                }
-            }
-            .padding(12)
-            .background(RoundedRectangle(cornerRadius: 14).fill(Color.green.opacity(0.08)))
-            .accessibilityElement(children: .combine)
-
-            Button(action: {
-                withAnimation(.spring(duration: 0.3)) { manager.finishTracking() }
-            }) {
-                Text("오늘은 그만 받기")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 12)
-                    .background(Capsule().fill(Color(red: 0.3, green: 0.7, blue: 0.2)))
-            }
-        }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color(.secondarySystemGroupedBackground))
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.green.opacity(0.35), lineWidth: 1.5))
-        )
-    }
-
     // MARK: - 햇빛 배터리
     /// 밖에 있는 동안은 지금까지 받은 만큼 미리 채워 보인다.
     private var liveEnergy: Double {
@@ -321,42 +124,86 @@ struct DashboardView: View {
         .padding(.top, 8)
     }
 
-    // MARK: - Tracking Button (감지 or 대기 상태)
-    private var trackingButton: some View {
-        Button(action: {
-            if manager.trackingPhase == .detecting {
-                manager.cancelDetecting()
-            } else {
-                manager.startTracking()
-            }
-        }) {
-            HStack(spacing: 10) {
-                if manager.trackingPhase == .detecting {
-                    Circle()
-                        .fill(Color.white.opacity(0.7))
-                        .frame(width: 10, height: 10)
-                        .modifier(PulseModifier())
-                    Text("햇빛 찾는 중... 탭하면 중지")
+    // MARK: - 오늘 밖에 있던 시간 (글자 없이 숫자와 막대로)
+    private var todayCard: some View {
+        let done = displayProgress >= 1.0
+        return VStack(spacing: 14) {
+            HStack(alignment: .firstTextBaseline, spacing: 10) {
+                Image(systemName: done ? "checkmark.circle.fill" : "figure.walk")
+                    .font(.system(size: 30, weight: .semibold))
+                    .foregroundStyle(done ? .green : SunPalette.skyTop)
+                    .accessibilityHidden(true)
+                Text(verbatim: "\(displayMinutes)")
+                    .font(.system(size: bigNumberSize * 1.2, weight: .bold, design: .rounded))
+                    .monospacedDigit()
+                    .contentTransition(.numericText())
+                (Text(verbatim: "/ ") + Text("\(manager.settings.dailyGoalMinutes)분"))
+                    .font(.system(.title2, design: .rounded).weight(.semibold))
+                    .foregroundStyle(.secondary)
+                Spacer()
+                if let fromWatch = manager.todayRecord.healthMinutes, fromWatch > 0 {
+                    Label { Text(verbatim: "\(fromWatch)") } icon: { Image(systemName: "applewatch") }
                         .font(.headline)
-                } else {
-                    Text("\u{2600}\u{FE0F}")
-                        .font(.title3)
-                        .accessibilityHidden(true)
-                    Text("햇빛 받으러 가기")
-                        .font(.headline)
+                        .foregroundStyle(.secondary)
                 }
             }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .foregroundColor(.white)
-            .background(
-                Capsule()
-                    .fill(manager.trackingPhase == .detecting ?
-                          LinearGradient(colors: [.blue, .cyan], startPoint: .leading, endPoint: .trailing) :
-                          LinearGradient(colors: [.orange, Color(red: 1.0, green: 0.75, blue: 0.1)], startPoint: .leading, endPoint: .trailing)
-                    )
-            )
-            .shadow(color: (manager.trackingPhase == .detecting ? Color.blue : Color.orange).opacity(0.3), radius: 8, y: 4)
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(SunPalette.skyTop.opacity(0.12))
+                    Capsule()
+                        .fill(done ? AnyShapeStyle(Color.green) : AnyShapeStyle(SunPalette.sky))
+                        .frame(width: max(20, geo.size.width * displayProgress))
+                        .animation(.easeInOut(duration: 0.8), value: displayProgress)
+                }
+            }
+            .frame(height: 20)
+            .accessibilityHidden(true)
+        }
+        .padding(20)
+        .background(RoundedRectangle(cornerRadius: 28, style: .continuous).fill(Color(.secondarySystemGroupedBackground)))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(Text("오늘의 햇빛"))
+        .accessibilityValue(Text("\(displayMinutes) / \(manager.settings.dailyGoalMinutes)분"))
+    }
+
+    // MARK: - 큰 버튼 하나: 나가기 → 찾는 중 → 받는 중(그만 받기)
+    private var actionButton: some View {
+        let phase = manager.trackingPhase
+        let icon: String
+        let title: LocalizedStringKey
+        let colors: [Color]
+        switch phase {
+        case .confirmed:
+            icon = "stop.fill"; title = "오늘은 그만 받기"
+            colors = [Color(red: 0.25, green: 0.65, blue: 0.3), .green]
+        case .detecting:
+            icon = "sun.max.fill"; title = "햇빛 찾는 중"
+            colors = [SunPalette.skyTop, SunPalette.skyBottom]
+        default:
+            icon = "sun.max.fill"; title = "햇빛 받으러 가기"
+            colors = [.orange, Color(red: 1.0, green: 0.75, blue: 0.1)]
+        }
+        return Button {
+            withAnimation(.spring(duration: 0.3)) {
+                switch phase {
+                case .confirmed: manager.finishTracking()
+                case .detecting: manager.cancelDetecting()
+                default: manager.startTracking()
+                }
+            }
+        } label: {
+            HStack(spacing: 12) {
+                Image(systemName: icon)
+                    .font(.title.weight(.bold))
+                    .symbolEffect(.pulse, isActive: phase == .detecting && !reduceMotion)
+                    .accessibilityHidden(true)
+                Text(title)
+                    .font(.title2.weight(.bold))
+            }
+            .frame(maxWidth: .infinity, minHeight: 72)
+            .foregroundStyle(.white)
+            .background(Capsule().fill(LinearGradient(colors: colors, startPoint: .leading, endPoint: .trailing)))
+            .shadow(color: colors[0].opacity(0.3), radius: 10, y: 5)
         }
     }
 

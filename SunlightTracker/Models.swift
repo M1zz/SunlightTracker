@@ -132,7 +132,7 @@ struct BatteryStatus: Codable {
 struct SunflowerHealth: Codable {
     var currentEnergy: Double   // 현재 에너지 (0~100%)
     var lastUpdateTime: Date    // 마지막 업데이트 시간
-    var decayRatePerHour: Double // 시간당 감소율 (기본 10%)
+    var decayRatePerHour: Double // 시간당 감소율 (기본 2.5%)
 
     var healthState: HealthState {
         if currentEnergy >= 80 { return .thriving }      // 싱싱
@@ -148,7 +148,7 @@ struct SunflowerHealth: Codable {
         case critical = "위험"
     }
 
-    init(currentEnergy: Double = 100, lastUpdateTime: Date = Date(), decayRatePerHour: Double = 2.5) {
+    init(currentEnergy: Double = 0, lastUpdateTime: Date = Date(), decayRatePerHour: Double = 2.5) {
         self.currentEnergy = currentEnergy
         self.lastUpdateTime = lastUpdateTime
         self.decayRatePerHour = decayRatePerHour

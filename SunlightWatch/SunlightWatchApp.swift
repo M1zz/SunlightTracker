@@ -37,7 +37,7 @@ struct WatchHomeView: View {
             let minutes = model.todayMinutes(at: context.date)
             let goal = WatchStore.goalMinutes()
             let progress = goal > 0 ? min(Double(minutes) / Double(goal), 1) : 0
-            let level = model.snapshot?.energy(at: context.date) ?? 100
+            let level = model.snapshot?.energy(at: context.date) ?? 0
 
             ScrollView {
                 VStack(spacing: 8) {

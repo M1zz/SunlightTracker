@@ -17,35 +17,32 @@ struct SunGaugeView: View {
     private var clamped: Double { min(max(level, 0), 100) }
 
     var body: some View {
-        VStack(spacing: 18) {
-            SunRays(level: clamped, rayColor: rayColor) {
-                GeometryReader { geo in
-                    let side = geo.size.width
+        SunRays(level: clamped, rayColor: rayColor) {
+            GeometryReader { geo in
+                let side = geo.size.width
+                VStack(spacing: 0) {
+                    if isCharging {
+                        Image(systemName: "bolt.fill")
+                            .font(.system(size: side * 0.16, weight: .bold))
+                            .symbolEffect(.pulse, isActive: !reduceMotion)
+                    }
                     (Text(verbatim: "\(Int(clamped.rounded()))")
                         .font(.system(size: side * 0.36, weight: .bold, design: .rounded))
                     + Text(verbatim: "%")
                         .font(.system(size: side * 0.16, weight: .semibold, design: .rounded)))
                     .monospacedDigit()
-                    .foregroundStyle(SunPalette.ink)
-                    .frame(width: geo.size.width, height: geo.size.height)
+                    .contentTransition(.numericText())
                 }
+                .foregroundStyle(SunPalette.ink)
+                .frame(width: geo.size.width, height: geo.size.height)
             }
-            .shadow(color: .white.opacity(glow ? 0.6 : 0), radius: glow ? 18 : 0)
-            .frame(height: 240)
-            .animation(.easeInOut(duration: 0.6), value: clamped)
-
-            VStack(spacing: 4) {
-                Text("햇빛 배터리")
-                    .font(.headline)
-                Text(caption)
-                    .font(.subheadline)
-                    .opacity(0.85)
-            }
-            .foregroundStyle(.white)
         }
-        .padding(.vertical, 24)
+        .shadow(color: .white.opacity(glow ? 0.6 : 0), radius: glow ? 24 : 0)
+        .frame(height: 320)
+        .animation(.easeInOut(duration: 0.6), value: clamped)
+        .padding(.vertical, 28)
         .frame(maxWidth: .infinity)
-        .background(RoundedRectangle(cornerRadius: 28, style: .continuous).fill(SunPalette.sky))
+        .background(RoundedRectangle(cornerRadius: 32, style: .continuous).fill(SunPalette.sky))
         .onAppear { updateGlow() }
         .onChange(of: isCharging) { _, _ in updateGlow() }
         .accessibilityElement(children: .ignore)
@@ -53,8 +50,10 @@ struct SunGaugeView: View {
         .accessibilityValue(Text(verbatim: "\(Int(clamped.rounded()))%, ") + Text(caption))
     }
 
+    /// 화면에는 그림과 숫자만. 말은 VoiceOver 로만 전한다.
     private var caption: LocalizedStringKey {
         if isCharging { return "충전 중" }
+        if clamped < 0.5 { return "밖에 나가면 차올라요" }
         if hoursLeft < 1 { return "곧 바닥나요" }
         return "약 \(Int(hoursLeft))시간 남음"
     }
@@ -73,7 +72,7 @@ struct SunGaugeView: View {
 #Preview {
     VStack {
         SunGaugeView(level: 67, hoursLeft: 26, isCharging: false)
-        SunGaugeView(level: 8, hoursLeft: 0.5, isCharging: true)
+        SunGaugeView(level: 0, hoursLeft: 0, isCharging: false)
     }
     .padding()
 }
