@@ -415,7 +415,7 @@ class SunlightManager: NSObject, ObservableObject {
         let duration = session.durationMinutes
         if duration >= 1 { // 최소 1분 이상인 세션만 기록
             // 배터리 충전
-            let batteryEarned = calculateChargeAmount(minutes: duration, averageLux: session.averageLux)
+            let batteryEarned = calculateChargeAmount(minutes: duration)
             session.batteryEarned = batteryEarned
             chargeBattery(amount: batteryEarned)
 
@@ -561,6 +561,9 @@ class SunlightManager: NSObject, ObservableObject {
         
         todayRecord.totalMinutes += minutes
         todayRecord.sessions.append(session)
+        chargeBattery(amount: calculateChargeAmount(minutes: minutes))
+        saveStatus()
+        updateWidgetData()
         if estimatedLux > todayRecord.peakLux {
             todayRecord.peakLux = estimatedLux
         }
@@ -611,8 +614,7 @@ class SunlightManager: NSObject, ObservableObject {
         todayRecord.totalMinutes = max(0, todayRecord.totalMinutes + minutes - old)
         todayRecord.healthMinutes = minutes
         if minutes > charged {
-            // 워치는 조도를 주지 않는다 — 수동 기록과 같은 맑은 날 밝기로 친다
-            chargeBattery(amount: calculateChargeAmount(minutes: minutes - charged, averageLux: 5000))
+            chargeBattery(amount: calculateChargeAmount(minutes: minutes - charged))
             todayRecord.healthChargedMinutes = minutes
         }
         saveRecords()
@@ -712,36 +714,20 @@ class SunlightManager: NSObject, ObservableObject {
         return (next, next.minuteThreshold - minutes)
     }
 
-    var motivationalMessage: String {
-        let health = sunflowerHealth.currentEnergy
-        let battery = batteryStatus.chargedAmount
-
-        if health < 20 {
-            return String(localized: "해바라기가 위험해요! 지금 배터리를 전달하세요!")
-        }
-        if health < 50 && battery >= 20 {
-            return String(localized: "해바라기가 시들어가고 있어요. 배터리를 전달해주세요")
-        }
-        if battery >= 50 {
-            return String(localized: "충분한 배터리를 모았어요! 해바라기에게 전달해주세요")
-        }
-        if isTracking {
-            return String(localized: "햇빛을 받아 배터리를 충전하는 중이에요")
-        }
-        return String(localized: "햇빛을 받아 배터리를 충전하세요")
-    }
-
     // MARK: - Battery & Health Management
 
-    /// 배터리 충전량 계산
-    private func calculateChargeAmount(minutes: Int, averageLux: Double) -> Double {
-        // 공식: (분 × lux / 3000) capped at 100
-        return min(100, Double(minutes) * averageLux / 3000.0)
+    /// 햇빛 배터리는 밖에 있던 시간으로만 찬다. 하루 목표 시간을 채우면 100%.
+    /// 조도는 밖인지 가리는 데만 쓰고, 얼마나 밝았는지는 따지지 않는다.
+    private func calculateChargeAmount(minutes: Int) -> Double {
+        let goal = Double(max(settings.dailyGoalMinutes, 1))
+        return min(100, Double(minutes) * 100 / goal)
     }
 
-    /// 배터리 충전
+    /// 햇빛 배터리 충전: 지금까지 줄어든 만큼 먼저 깎고 더한다.
     private func chargeBattery(amount: Double) {
-        batteryStatus.chargedAmount = min(100, batteryStatus.chargedAmount + amount)
+        updateSunflowerHealth()
+        sunflowerHealth.currentEnergy = min(100, sunflowerHealth.currentEnergy + amount)
+        sunflowerHealth.lastUpdateTime = Date()
         batteryStatus.lastChargeTime = Date()
     }
 
@@ -752,10 +738,7 @@ class SunlightManager: NSObject, ObservableObject {
             return
         }
         let elapsed = Int(Date().timeIntervalSince(session.startTime) / 60)
-        estimatedBatteryGain = calculateChargeAmount(
-            minutes: elapsed,
-            averageLux: session.averageLux > 0 ? session.averageLux : lastKnownLux
-        )
+        estimatedBatteryGain = calculateChargeAmount(minutes: elapsed)
     }
 
     /// 해바라기 에너지 업데이트 (시들음)
@@ -819,6 +802,13 @@ class SunlightManager: NSObject, ObservableObject {
 
         // 앱 재시작 시 시간 경과만큼 에너지 감소
         updateSunflowerHealth()
+
+        // 예전엔 모은 햇빛을 따로 두었다가 전달했다. 이제 배터리는 하나 — 남은 것은 한 번에 옮긴다.
+        if batteryStatus.chargedAmount > 0 {
+            sunflowerHealth.currentEnergy = min(100, sunflowerHealth.currentEnergy + batteryStatus.chargedAmount)
+            batteryStatus.chargedAmount = 0
+            saveStatus()
+        }
     }
 
     private func saveStatus() {

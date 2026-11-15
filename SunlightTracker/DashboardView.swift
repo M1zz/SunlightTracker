@@ -17,9 +17,6 @@ struct DashboardView: View {
         return false
         #endif
     }
-    @State private var showBatteryTransfer = false
-    @State private var transferAmount: Double = 0
-    @State private var transferMax: Double = 1   // 시트 오픈 시점 스냅샷 (라이브 변경으로 인한 Slider 범위 붕괴 방지)
     @State private var sensingPulse = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     /// 큰 숫자도 글자 크기 설정을 따라 커지게
@@ -46,8 +43,8 @@ struct DashboardView: View {
         NavigationStack {
         ScrollView {
             VStack(spacing: 16) {
-                // 해바라기 (히어로)
-                sunProgressSection
+                // 햇빛 배터리 (히어로)
+                sunGauge
 
                 // 함께 트래킹 배지
                 if manager.nearbyManager.isSharedActivityActive {
@@ -78,9 +75,6 @@ struct DashboardView: View {
                     }
                 }
 
-                // 배터리 (전달 버튼 내장)
-                batteryCard
-
                 // 수동 입력 (보조 액션)
                 manualEntryButton
             }
@@ -104,9 +98,6 @@ struct DashboardView: View {
         }
         .sheet(isPresented: $showManualEntry) {
             manualEntrySheet
-        }
-        .sheet(isPresented: $showBatteryTransfer) {
-            batteryTransferSheet
         }
         // 처음 만나는 친구와 함께 받기 전 확인
         .alert(
@@ -313,302 +304,21 @@ struct DashboardView: View {
         )
     }
 
-    // MARK: - 배터리 카드 (전달 버튼 내장)
-    private var batteryCard: some View {
-        VStack(spacing: 12) {
-            HStack {
-                Text("\u{26A1} 모은 햇빛")
-                    .font(.subheadline.weight(.bold))
-                Spacer()
-                Text(formattedPercent(manager.batteryStatus.chargedAmount) + "%")
-                    .font(.system(.title3, design: .rounded).weight(.bold))
-                    .foregroundColor(.green)
-            }
-            .accessibilityElement(children: .combine)
-
-            GeometryReader { geo in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(Color.green.opacity(0.12))
-                    Capsule()
-                        .fill(LinearGradient(
-                            colors: [Color(red: 0.5, green: 0.85, blue: 0.3), .green],
-                            startPoint: .leading, endPoint: .trailing
-                        ))
-                        .frame(width: manager.batteryStatus.chargedAmount > 0 ?
-                               max(12, geo.size.width * manager.batteryStatus.chargedAmount / 100) : 0)
-                        .animation(.easeInOut(duration: 0.3), value: manager.batteryStatus.chargedAmount)
-                }
-            }
-            .frame(height: 12)
-            .accessibilityHidden(true)
-
-            if manager.batteryStatus.chargedAmount > 0 {
-                Button(action: {
-                    transferAmount = manager.batteryStatus.chargedAmount
-                    transferMax = max(manager.batteryStatus.chargedAmount, 0.1)
-                    showBatteryTransfer = true
-                }) {
-                    Text("\u{1F33B} 해바라기에게 주기")
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 12)
-                        .background(Capsule().fill(LinearGradient(
-                            colors: [Color(red: 0.3, green: 0.7, blue: 0.2), .green],
-                            startPoint: .leading, endPoint: .trailing
-                        )))
-                }
-                .accessibilityInputLabels([Text("해바라기에게 주기")])
-            }
-        }
-        .padding(16)
-        .background(RoundedRectangle(cornerRadius: 20).fill(Color(.secondarySystemGroupedBackground)))
+    // MARK: - 햇빛 배터리
+    /// 밖에 있는 동안은 지금까지 받은 만큼 미리 채워 보인다.
+    private var liveEnergy: Double {
+        let base = manager.sunflowerHealth.currentEnergy
+        return manager.isConfirmedOutdoor ? min(100, base + manager.estimatedBatteryGain) : base
     }
 
-    // MARK: - Sun Progress (Sunflower)
-    @State private var isSunflowerPressed = false
-    @State private var showFloatingTip = false
-    @State private var currentFloatingTip = ""
-    @AppStorage("hasUsedDoubleTapToFinish") private var hasUsedDoubleTap = false
-
-    private let floatingTips = [
-        String(localized: "햇빛 충전을 다 했으면 나를 더블탭해서 오늘의 일광욕을 마치자! 🌻"),
-        String(localized: "실내로 돌아왔다면 해바라기를 더블탭해봐요 👆👆"),
-        String(localized: "충분히 받았다면 나를 더블탭! 😊"),
-        String(localized: "목표 달성했어? 그럼 나를 두 번 터치해서 끝내자! 🎯"),
-        String(localized: "오늘의 일광욕을 마치려면 나를 더블탭! ☀️"),
-        String(localized: "이제 그만 들어가도 괜찮아. 나를 두 번 눌러줘! 🏠")
-    ]
-
-    private var sunProgressSection: some View {
-        VStack(spacing: 16) {
-            // 해바라기 애니메이션
-            ZStack {
-                VStack(spacing: 8) {
-                    SunAnimationView(
-                        health: manager.sunflowerHealth.currentEnergy,
-                        isTracking: manager.isSunlightDetected || manager.isConfirmedOutdoor,
-                        petalColorState: manager.petalColorState,
-                        friendName: manager.nearbyManager.isSharedActivityActive ?
-                            manager.nearbyManager.connectedPeerNames.first : nil
-                    )
-                    .frame(height: 280)
-                    .scaleEffect(isSunflowerPressed ? 1.15 : 1.2)
-                    .frame(maxWidth: .infinity)
-                    .animation(.spring(response: 0.3, dampingFraction: 0.6), value: isSunflowerPressed)
-
-                    // 트래킹 중일 때 더블탭 힌트 (한 번도 사용 안 한 경우만)
-                    if manager.isConfirmedOutdoor && !showFloatingTip && !hasUsedDoubleTap {
-                        HStack(spacing: 6) {
-                            Image(systemName: "hand.tap.fill")
-                                .font(.caption)
-                                .foregroundColor(.red)
-                            Image(systemName: "hand.tap.fill")
-                                .font(.caption)
-                                .foregroundColor(.red)
-                                .offset(x: -4)
-                            Text("더블탭하여 종료")
-                                .font(.caption.bold())
-                                .foregroundColor(.red)
-                        }
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        .background(
-                            Capsule()
-                                .fill(Color.red.opacity(0.15))
-                                .overlay(
-                                    Capsule()
-                                        .stroke(Color.red.opacity(0.3), lineWidth: 1)
-                                )
-                        )
-                        .transition(.scale.combined(with: .opacity))
-                    }
-                }
-                .contentShape(Rectangle())
-                .onTapGesture(count: 2) { handleSunflowerDoubleTap() }
-                // VoiceOver·음성 명령에선 더블탭 대신 이름 붙은 동작으로 같은 일을 한다
-                .accessibilityElement(children: .ignore)
-                .accessibilityLabel(Text("해바라기 에너지"))
-                .accessibilityValue(Text(LocalizedStringKey(manager.sunflowerHealth.healthState.rawValue)) + Text(verbatim: ", \(Int(manager.sunflowerHealth.currentEnergy))%"))
-                .accessibilityAddTraits(.isImage)
-                .modifier(SunflowerActions(
-                    isOutdoor: manager.isConfirmedOutdoor,
-                    isTracking: manager.isTracking,
-                    action: handleSunflowerDoubleTap
-                ))
-                .scaleEffect(isSunflowerPressed ? 0.95 : 1.0)
-                .animation(.spring(response: 0.3, dampingFraction: 0.6), value: isSunflowerPressed)
-
-                // 플로팅 팁 (가끔 나타났다 사라짐)
-                if showFloatingTip {
-                    VStack {
-                        Spacer()
-
-                        Text(currentFloatingTip)
-                            .font(.callout)
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 12)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(Color.black.opacity(0.75))
-                                    .shadow(color: .black.opacity(0.3), radius: 8, y: 4)
-                            )
-                            .padding(.horizontal, 20)
-                            .transition(reduceMotion ? .opacity : .move(edge: .bottom).combined(with: .opacity))
-                            .accessibilityHidden(true)
-                    }
-                    .frame(maxHeight: 280)
-                }
-            }
-            .onAppear {
-                startFloatingTipTimer()
-            }
-            .onChange(of: manager.isConfirmedOutdoor) { _, isTracking in
-                if isTracking {
-                    startFloatingTipTimer()
-                } else {
-                    showFloatingTip = false
-                }
-            }
-
-            // 해바라기 상태 (귀여운 캡슐)
-            HStack(spacing: 6) {
-                Text(healthEmoji)
-                    .accessibilityHidden(true)
-                Text(LocalizedStringKey(manager.sunflowerHealth.healthState.rawValue))
-                    .font(.subheadline.weight(.bold))
-                    .foregroundColor(healthColor)
-                Text("에너지 \(Int(manager.sunflowerHealth.currentEnergy))%")
-                    .font(.system(.subheadline, design: .rounded))
-                    .foregroundColor(.secondary)
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 8)
-            .background(Capsule().fill(healthColor.opacity(0.12)))
-            .accessibilityElement(children: .combine)
-        }
-        .padding(.vertical, 8)
-    }
-
-    private var healthEmoji: String {
-        switch manager.sunflowerHealth.healthState {
-        case .thriving: return "\u{2728}"
-        case .healthy: return "\u{1F331}"
-        case .wilting: return "\u{1F622}"
-        case .critical: return "\u{1F940}"
-        }
-    }
-
-    private var healthColor: Color {
-        switch manager.sunflowerHealth.healthState {
-        case .thriving: return .green
-        case .healthy: return Color(red: 0.5, green: 0.7, blue: 0.3)
-        case .wilting: return .orange
-        case .critical: return .red
-        }
-    }
-
-    /// 1% 미만은 소수점 한 자리로 표기 (0.4% 등)
-    private func formattedPercent(_ value: Double) -> String {
-        if value > 0 && value < 1 { return String(format: "%.1f", value) }
-        return "\(Int(value))"
-    }
-
-    // MARK: - Battery Transfer Sheet
-    private var batteryTransferSheet: some View {
-        NavigationStack {
-            VStack(spacing: 24) {
-                Text("해바라기에게 배터리를 전달합니다")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-
-                VStack(spacing: 8) {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("현재 배터리")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("\(Int(manager.batteryStatus.chargedAmount))%")
-                                .font(.title3.bold())
-                                .foregroundColor(.green)
-                        }
-
-                        Spacer()
-
-                        Image(systemName: "arrow.right")
-                            .foregroundColor(.secondary)
-                            .accessibilityHidden(true)
-
-                        Spacer()
-
-                        VStack(alignment: .trailing) {
-                            Text("해바라기 에너지")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            Text("\(Int(min(100, manager.sunflowerHealth.currentEnergy + transferAmount)))%")
-                                .font(.title3.bold())
-                                .foregroundColor(Color(red: 0.3, green: 0.7, blue: 0.2))
-                        }
-                    }
-                    .padding()
-                    .background(Color(.tertiarySystemGroupedBackground))
-                    .cornerRadius(12)
-
-                    Text("전달량: \(formattedPercent(transferAmount))%")
-                        .font(.system(size: bigNumberSize, weight: .bold, design: .rounded))
-                        .foregroundColor(.green)
-                        .minimumScaleFactor(0.5)
-                        .accessibilityHidden(true)
-
-                    Slider(value: $transferAmount, in: 0...transferMax)
-                        .tint(.green)
-                        .accessibilityLabel(Text("배터리 전달"))
-                        .accessibilityValue(Text(verbatim: formattedPercent(transferAmount) + "%"))
-
-                    HStack {
-                        Text("0%").font(.caption2).foregroundColor(.secondary)
-                        Spacer()
-                        Button("전체") {
-                            transferAmount = transferMax
-                        }
-                        .font(.caption.bold())
-                        .foregroundColor(.green)
-                        Spacer()
-                        Text(formattedPercent(transferMax) + "%").font(.caption2).foregroundColor(.secondary)
-                    }
-                }
-                .padding(.horizontal)
-
-                Button(action: {
-                    manager.transferBattery(amount: transferAmount)
-                    showBatteryTransfer = false
-                }) {
-                    Text("전달하기")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                        .background(Color.green)
-                        .cornerRadius(12)
-                }
-                .padding(.horizontal)
-                .disabled(transferAmount <= 0)
-
-                Spacer()
-            }
-            .padding(.top, 20)
-            .navigationTitle("배터리 전달")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button { showBatteryTransfer = false } label: { Label("취소", systemImage: "xmark") }
-                }
-            }
-        }
-        .presentationDetents([.medium, .large])
+    private var sunGauge: some View {
+        SunGaugeView(
+            level: liveEnergy,
+            hoursLeft: liveEnergy / max(manager.sunflowerHealth.decayRatePerHour, 0.1),
+            isCharging: manager.isConfirmedOutdoor,
+            petals: manager.petalColorState
+        )
+        .padding(.top, 8)
     }
 
     // MARK: - Tracking Button (감지 or 대기 상태)
@@ -720,58 +430,6 @@ struct DashboardView: View {
         .presentationDetents([.medium])
     }
 
-    // MARK: - Helpers
-    /// 해바라기 더블탭: 햇빛 받는 중이면 끝내고, 센서가 꺼져 있으면 다시 켠다
-    private func handleSunflowerDoubleTap() {
-        if manager.isConfirmedOutdoor {
-            hasUsedDoubleTap = true  // 사용 기록 저장
-            withAnimation(.spring(duration: 0.3)) {
-                manager.finishTracking()
-            }
-        } else if !manager.isTracking {
-            withAnimation(.spring(duration: 0.3)) {
-                manager.startTracking()
-            }
-        }
-    }
-
-    private func startFloatingTipTimer() {
-        // 트래킹 중이 아니거나 이미 더블탭 사용한 적 있으면 타이머 시작 안함
-        guard manager.isConfirmedOutdoor, !hasUsedDoubleTap else { return }
-
-        // 30~60초 후 첫 팁 표시
-        let initialDelay = Double.random(in: 30...60)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + initialDelay) {
-            self.showRandomFloatingTip()
-        }
-    }
-
-    private func showRandomFloatingTip() {
-        // 트래킹 중이 아니거나 이미 더블탭 사용한 적 있으면 표시 안함
-        guard manager.isConfirmedOutdoor, !hasUsedDoubleTap else { return }
-
-        // 랜덤 팁 선택
-        currentFloatingTip = floatingTips.randomElement() ?? floatingTips[0]
-
-        // 팁 표시
-        withAnimation(.spring(duration: 0.5)) {
-            showFloatingTip = true
-        }
-
-        // 4초 후 숨김
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            withAnimation(.spring(duration: 0.5)) {
-                self.showFloatingTip = false
-            }
-
-            // 다음 팁을 위해 40~80초 후 다시 표시
-            let nextDelay = Double.random(in: 40...80)
-            DispatchQueue.main.asyncAfter(deadline: .now() + nextDelay) {
-                self.showRandomFloatingTip()
-            }
-        }
-    }
 }
 
 // MARK: - Pulse Modifier
@@ -785,23 +443,6 @@ struct PulseModifier: ViewModifier {
             .opacity(isPulsing && !reduceMotion ? 0.5 : 1.0)
             .animation(reduceMotion ? nil : .easeInOut(duration: 1).repeatForever(autoreverses: true), value: isPulsing)
             .onAppear { isPulsing = true }
-    }
-}
-
-// MARK: - 해바라기 접근성 동작 (더블탭 대신)
-private struct SunflowerActions: ViewModifier {
-    let isOutdoor: Bool
-    let isTracking: Bool
-    let action: () -> Void
-
-    func body(content: Content) -> some View {
-        if isOutdoor {
-            content.accessibilityAction(named: Text("오늘은 그만 받기"), action)
-        } else if !isTracking {
-            content.accessibilityAction(named: Text("햇빛 받으러 가기"), action)
-        } else {
-            content
-        }
     }
 }
 
