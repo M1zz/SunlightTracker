@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A11A7500000000000000011 /* SunRays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11A7500000000000000001 /* SunRays.swift */; };
+		5A11A7500000000000000012 /* SunRays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11A7500000000000000001 /* SunRays.swift */; };
+		5A11A7500000000000000013 /* SunRays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11A7500000000000000001 /* SunRays.swift */; };
+		5A11A7500000000000000014 /* SunRays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11A7500000000000000001 /* SunRays.swift */; };
 		013F9D31A457BF65CC013665 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF433E553259A20EBC35D8D /* Foundation.framework */; };
 		058E5E3CAB6ACE7DBD0099DD /* AppShortcuts.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 81F15E8F72E224A46178F1EE /* AppShortcuts.xcstrings */; };
 		0A28A68382E3F32E88FB6B86 /* WatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FAE4231BE88832CDAC2700 /* WatchModel.swift */; };
@@ -119,6 +123,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A11A7500000000000000001 /* SunRays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunRays.swift; sourceTree = "<group>"; };
 		04F4A555856C81A74E508DEE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06469C992FF13AD7A1FFB90A /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		06C082C04EE2D64F3CCED3AE /* SunflowerComplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SunflowerComplication.swift; sourceTree = "<group>"; };
@@ -343,6 +348,7 @@
 			children = (
 				0B85D583AFB49FFBED42286A /* DaylightHealth.swift */,
 				45D3C9AAF85C60F007041439 /* WatchSnapshot.swift */,
+				5A11A7500000000000000001 /* SunRays.swift */,
 			);
 			name = Shared;
 			path = Shared;
@@ -551,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A11A7500000000000000011 /* SunRays.swift in Sources */,
 				B7B1B6135FA64CD129F51D25 /* SunflowerComplication.swift in Sources */,
 				7D85F7272E97CFA61A966D5F /* WatchShared.swift in Sources */,
 				488F351BB5A1962D27F17D91 /* WatchSnapshot.swift in Sources */,
@@ -561,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A11A7500000000000000012 /* SunRays.swift in Sources */,
 				8F29465A8214DA28F40BCC02 /* SunlightWatchApp.swift in Sources */,
 				0A28A68382E3F32E88FB6B86 /* WatchModel.swift in Sources */,
 				45045D122949E9CC1E6367C8 /* WatchShared.swift in Sources */,
@@ -573,6 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A11A7500000000000000013 /* SunRays.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A11A7500000000000000014 /* SunRays.swift in Sources */,
 				AA000001 /* SunlightTrackerApp.swift in Sources */,
 				AA000002 /* ContentView.swift in Sources */,
 				AA000004 /* SunlightManager.swift in Sources */,

@@ -19,10 +19,15 @@ extension SunlightTrackerSpec {
         // MARK: 1.1.0 에 나간 것
         .init(id: "health.daylight", status: .shipped("1.1.0"),
               title: NSLocalizedString("Apple Watch 햇빛 시간 받기", comment: "Roadmap item: daylight time from Apple Watch via Health"),
-              detail: NSLocalizedString("Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 해바라기 배터리가 차요.", comment: "Roadmap item detail: daylight time from Apple Watch via Health")),
+              detail: NSLocalizedString("Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 햇빛 배터리가 차요.", comment: "Roadmap item detail: daylight time from Apple Watch via Health")),
         .init(id: "watch", status: .shipped("1.1.0"),
-              title: NSLocalizedString("Apple Watch에서 해바라기 보기", comment: "Roadmap item: Apple Watch app and complication"),
-              detail: NSLocalizedString("손목을 들면 해바라기와 오늘 받은 햇빛이 보이고, 워치에서 바로 배터리를 전달할 수 있어요.", comment: "Roadmap item detail: Apple Watch app and complication")),
+              title: NSLocalizedString("Apple Watch에서 햇빛 배터리 보기", comment: "Roadmap item: Apple Watch app and complication"),
+              detail: NSLocalizedString("손목을 들면 햇빛 배터리와 오늘 받은 햇빛이 보여요.", comment: "Roadmap item detail: Apple Watch app and complication")),
+
+        // MARK: 만드는 중
+        .init(id: "battery.single", status: .building,
+              title: NSLocalizedString("햇빛 배터리 하나로", comment: "Roadmap item: one sunlight battery filled by time outside, shown as a sun gauge"),
+              detail: NSLocalizedString("밖에 있던 시간만큼 바로 차고, 첫 화면에서 얼마나 남았는지 보여요.", comment: "Roadmap item detail: one sunlight battery filled by time outside")),
 
         // MARK: 다음에 만들어요
         .init(id: "a11y.voiceover", status: .shipped("1.1.0"),

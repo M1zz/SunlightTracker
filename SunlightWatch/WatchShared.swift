@@ -12,7 +12,7 @@ enum WatchStore {
     private static let minutesKey = "watch_daylight_minutes"
     private static let minutesDayKey = "watch_daylight_day"
 
-    /// 아이폰이 마지막으로 보내 준 해바라기 상태.
+    /// 아이폰이 마지막으로 보내 준 햇빛 배터리 상태.
     static var snapshot: WatchSnapshot? {
         get { WatchSnapshot.decode(defaults.data(forKey: snapshotKey)) }
         set { defaults.set(newValue?.encoded, forKey: snapshotKey) }
@@ -37,64 +37,4 @@ enum WatchStore {
     }
 
     static func goalMinutes() -> Int { snapshot?.goalMinutes ?? 30 }
-}
-
-/// 해바라기 기분 — 아이폰 앱과 같은 경계(80 · 50 · 20).
-enum SunflowerMood {
-    case thriving, healthy, wilting, critical
-
-    init(energy: Double) {
-        switch energy {
-        case 80...: self = .thriving
-        case 50...: self = .healthy
-        case 20...: self = .wilting
-        default: self = .critical
-        }
-    }
-
-    var title: LocalizedStringKey {
-        switch self {
-        case .thriving: "싱싱함"
-        case .healthy: "건강함"
-        case .wilting: "시들어감"
-        case .critical: "위험"
-        }
-    }
-
-    var color: Color {
-        switch self {
-        case .thriving: .yellow
-        case .healthy: .orange
-        case .wilting: Color(red: 0.8, green: 0.6, blue: 0.3)
-        case .critical: .red
-        }
-    }
-}
-
-/// 손목 크기의 해바라기. 에너지가 줄면 꽃잎이 짧아지고 빛이 바랜다.
-struct SunflowerMark: View {
-    var energy: Double
-
-    var body: some View {
-        GeometryReader { geo in
-            let size = min(geo.size.width, geo.size.height)
-            let vigor = 0.6 + 0.4 * min(max(energy, 0), 100) / 100
-            ZStack {
-                ForEach(0..<12, id: \.self) { i in
-                    Ellipse()
-                        .fill(LinearGradient(colors: [.yellow, .orange], startPoint: .top, endPoint: .bottom))
-                        .frame(width: size * 0.2, height: size * 0.36 * vigor)
-                        .offset(y: -size * (0.2 + 0.14 * vigor))
-                        .rotationEffect(.degrees(Double(i) * 30))
-                }
-                Circle()
-                    .fill(Color(red: 0.45, green: 0.27, blue: 0.1))
-                    .frame(width: size * 0.42, height: size * 0.42)
-            }
-            .saturation(0.35 + 0.65 * min(max(energy, 0), 100) / 100)
-            .frame(width: size, height: size)
-            .position(x: geo.size.width / 2, y: geo.size.height / 2)
-        }
-        .accessibilityHidden(true)
-    }
 }

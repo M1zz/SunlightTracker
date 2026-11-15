@@ -20,8 +20,6 @@ struct WatchSnapshot: Codable, Equatable {
     var daylightFromHealth: Bool
 
     static let messageKey = "snapshot"
-    /// 워치에서 "해바라기에게 주기" 를 눌렀다는 표시.
-    static let giveKey = "giveBattery"
 
     func energy(at date: Date) -> Double {
         max(0, energy - decayPerHour * max(0, date.timeIntervalSince(energyAt)) / 3600)

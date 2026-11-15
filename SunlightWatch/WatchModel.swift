@@ -50,17 +50,6 @@ final class WatchModel: NSObject, ObservableObject {
         WidgetCenter.shared.reloadAllTimelines()
     }
 
-    /// 모은 햇빛 배터리를 해바라기에게. 폰이 멀리 있으면 가까워질 때 전해진다.
-    func give() {
-        guard var next = snapshot, next.battery >= 1 else { return }
-        let now = Date()
-        next.energy = min(100, next.energy(at: now) + next.battery)
-        next.energyAt = now
-        next.battery = 0
-        save(next)
-        WCSession.default.transferUserInfo([WatchSnapshot.giveKey: true])
-    }
-
     private func save(_ next: WatchSnapshot) {
         WatchStore.snapshot = next
         snapshot = next

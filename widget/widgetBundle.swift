@@ -12,8 +12,7 @@ import SwiftUI
 struct SunflowerWidgetBundle: WidgetBundle {
     var body: some Widget {
         // Small 위젯들
-        SunflowerWidget()
-        BatteryWidget()
+        SunflowerWidget()       // 햇빛 배터리
         TodayProgressWidget()
 
         // Medium 위젯

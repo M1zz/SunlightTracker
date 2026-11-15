@@ -36,7 +36,7 @@ struct SettingsView: View {
                         }
                     }
                 } header: {
-                    Label("해바라기 목표", systemImage: "leaf.fill")
+                    Label("일일 목표", systemImage: "sun.max.fill")
                 } footer: {
                     Text(String(localized: "연구에 따르면 하루 15분 햇빛으로 세로토닌 분비가 시작되고, 30분이면 수면 시간이 23분 빨라지며 코르티솔이 25% 감소합니다. 45분 이상이면 우울증 치료에 최적 효과를 보입니다."))
                 }
@@ -133,7 +133,7 @@ struct SettingsView: View {
                 } header: {
                     Label("소셜", systemImage: "person.2")
                 } footer: {
-                    Text("근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 해바라기 꽃잎이 알록달록하게 물들고, 친구 탭에 함께한 기록이 쌓입니다. 물든 색은 3일에 걸쳐 서서히 원래 색으로 돌아옵니다.")
+                    Text("근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 햇살이 알록달록하게 물들고, 친구 탭에 함께한 기록이 쌓입니다. 물든 색은 3일에 걸쳐 서서히 원래 색으로 돌아옵니다.")
                 }
 
                 // Notification Section

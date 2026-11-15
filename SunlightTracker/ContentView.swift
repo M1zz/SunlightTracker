@@ -19,11 +19,11 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             DashboardView(manager: manager, weatherService: weatherService)
                 .tabItem {
-                    Label("오늘", systemImage: "leaf.fill")
+                    Label("오늘", systemImage: "sun.max.fill")
                 }
                 .tag(0)
 
-            // 아이폰 듀오를 펴면 왼쪽(세로면 아래)에 이 탭, 오른쪽(위)에 오늘 해바라기가 선다.
+            // 아이폰 듀오를 펴면 왼쪽(세로면 아래)에 이 탭, 오른쪽(위)에 오늘의 햇빛 배터리가 선다.
             // 접혀 있거나 보통 아이폰이면 `FoldTab` 은 이 탭만 그린다. 지금 화면 그대로다.
             FoldTab { RecordsView(manager: manager) } today: { todayPane }
                 .tabItem {
@@ -80,7 +80,7 @@ struct ContentView: View {
         }
     }
 
-    /// 펼친 화면의 결과 쪽: 오늘 탭 화면 그대로. 해바라기 · 오늘 받은 햇빛 · 배터리가 늘 보인다.
+    /// 펼친 화면의 결과 쪽: 오늘 탭 화면 그대로. 햇빛 배터리 · 오늘 받은 햇빛이 늘 보인다.
     private var todayPane: some View {
         DashboardView(manager: manager, weatherService: weatherService)
     }

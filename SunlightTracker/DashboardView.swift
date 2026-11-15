@@ -110,7 +110,7 @@ struct DashboardView: View {
             Button("같이 받기 \u{1F49B}") { manager.nearbyManager.approvePendingFriend() }
             Button("다음에", role: .cancel) { manager.nearbyManager.declinePendingFriend() }
         } message: {
-            Text("같이 받으면 꽃잎이 알록달록 물들고, 친구 탭에 함께한 기록이 남아요.")
+            Text("같이 받으면 햇살이 알록달록 물들고, 친구 탭에 함께한 기록이 남아요.")
         }
         } // NavigationStack
     }
@@ -461,8 +461,9 @@ struct NearbyActivityBadge: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            Text("\u{1F33B}\u{1F49B}\u{1F33B}")
+            Image(systemName: "person.2.fill")
                 .font(.subheadline)
+                .foregroundStyle(.orange)
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 2) {

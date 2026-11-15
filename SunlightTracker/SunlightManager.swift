@@ -55,7 +55,7 @@ class SunlightManager: NSObject, ObservableObject {
     private let activationThreshold = 3        // 3회 연속 감지 시 세션 시작 (~30초)
     private let deactivationThreshold = 6      // 6회 연속 미감지 시 세션 종료
     private var elapsedTimer: Timer?           // 확인 후 경과 시간 타이머
-    private var healthUpdateTimer: Timer?      // 해바라기 건강도 업데이트 타이머
+    private var healthUpdateTimer: Timer?      // 햇빛 배터리 줄이는 타이머
 
     // 확인 후 센서 주기 재측정 (실시간 추적 피드백 + 세션 조도 정확도)
     private var postConfirmSensorTimer: Timer? // 확인 후 센서 유지 종료 타이머
@@ -741,7 +741,7 @@ class SunlightManager: NSObject, ObservableObject {
         estimatedBatteryGain = calculateChargeAmount(minutes: elapsed)
     }
 
-    /// 해바라기 에너지 업데이트 (시들음)
+    /// 햇빛 배터리: 지난 시간만큼 줄인다
     func updateSunflowerHealth() {
         let now = Date()
         let elapsed = now.timeIntervalSince(sunflowerHealth.lastUpdateTime)
@@ -755,33 +755,13 @@ class SunlightManager: NSObject, ObservableObject {
         saveStatus()
     }
 
-    /// 해바라기 건강도 타이머 시작
+    /// 햇빛 배터리 타이머 시작
     private func startHealthUpdateTimer() {
         healthUpdateTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
             Task { @MainActor [weak self] in
                 self?.updateSunflowerHealth()
             }
         }
-    }
-
-    /// 배터리를 해바라기에 전달
-    func transferBattery(amount: Double) {
-        guard amount > 0, amount <= batteryStatus.chargedAmount else { return }
-
-        // 배터리 차감
-        batteryStatus.chargedAmount -= amount
-
-        // 해바라기 에너지 증가
-        sunflowerHealth.currentEnergy = min(100, sunflowerHealth.currentEnergy + amount)
-        sunflowerHealth.lastUpdateTime = Date()
-
-        saveStatus()
-        updateWidgetData()
-    }
-
-    /// 전체 배터리 전달
-    func transferAllBattery() {
-        transferBattery(amount: batteryStatus.chargedAmount)
     }
 
     // MARK: - Persistence
@@ -977,7 +957,6 @@ class SunlightManager: NSObject, ObservableObject {
     // MARK: - Apple Watch
 
     private func connectWatch() {
-        WatchBridge.shared.onGive = { [weak self] in self?.transferAllBattery() }
         WatchBridge.shared.onActivate = { [weak self] in self?.sendToWatch() }
         WatchBridge.shared.activate()
     }

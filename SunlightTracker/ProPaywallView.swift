@@ -96,7 +96,7 @@ struct ProPaywallView: View {
             Text("햇빛바라기 Pro")
                 .font(.largeTitle.bold())
                 .accessibilityAddTraits(.isHeader)
-            Text("앱을 열지 않아도 해바라기가 먼저 불러요. 연 구독이나 평생 중에 고르세요.")
+            Text("앱을 열지 않아도 햇빛 배터리가 먼저 불러요. 연 구독이나 평생 중에 고르세요.")
                 .font(.body)
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -133,7 +133,7 @@ struct ProPaywallView: View {
             .accessibilityHidden(true)
             Divider()
             freeRow("햇빛 자동 측정 · 기준 조정")
-            freeRow("해바라기 키우기")
+            freeRow("햇빛 배터리")
             freeRow("하루 목표 · 알림")
             freeRow("자외선 · 선크림 안내")
             freeRow("캘린더 기분 · 한마디")
@@ -378,25 +378,21 @@ private struct ProPreviewCard: View {
         .accessibilityElement(children: .combine)
     }
 
-    /// 홈 화면 작은 위젯: 해바라기 · 오늘 진행도.
+    /// 홈 화면 작은 위젯: 햇빛 배터리.
     private var homeWidget: some View {
-        let goal = max(manager.settings.dailyGoalMinutes, 1)
-        let today = manager.todayRecord.totalMinutes
+        let level = manager.sunflowerHealth.currentEnergy
         return HStack(spacing: 16) {
-            VStack(spacing: 6) {
-                Text(verbatim: "🌻")
-                    .font(.system(size: 44))
-                    .accessibilityHidden(true)
-                ProgressView(value: min(Double(today) / Double(goal), 1))
-                    .tint(.orange)
-                Text("\(today) / \(goal)분")
-                    .font(.headline.monospacedDigit())
+            SunRays(level: level) {
+                Text(verbatim: "\(Int(level))%")
+                    .font(.system(.headline, design: .rounded).weight(.bold))
+                    .minimumScaleFactor(0.5)
+                    .foregroundStyle(SunPalette.ink)
             }
             .padding(14)
             .frame(width: 150, height: 150)
-            .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 26, style: .continuous))
+            .background(SunPalette.sky, in: RoundedRectangle(cornerRadius: 26, style: .continuous))
             .shadow(color: .black.opacity(0.08), radius: 8, y: 2)
-            Text("앱을 열지 않아도 홈 화면의 해바라기가 오늘 햇빛을 알려 줘요.")
+            Text("앱을 열지 않아도 홈 화면에서 햇빛 배터리를 볼 수 있어요.")
                 .font(.body)
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)

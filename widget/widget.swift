@@ -62,123 +62,43 @@ struct SunflowerEntry: TimelineEntry {
     )
 }
 
-// MARK: - 해바라기 위젯 (Small)
+// MARK: - 지금 남은 햇빛 배터리
+extension WidgetData {
+    /// 저장된 값은 마지막으로 잰 때의 것 — 위젯이 그려지는 시각까지 줄어든 만큼 뺀다. 밖에 있으면 받는 중인 몫을 더한다.
+    func batteryLevel(at date: Date) -> Double {
+        if isConfirmedOutdoor { return min(100, sunflowerEnergy + estimatedBatteryGain) }
+        return SunBattery.level(sunflowerEnergy, at: lastUpdate, now: date)
+    }
+}
+
+/// 해 위에 남은 %를 얹은 빛살 게이지
+struct WidgetSunGauge: View {
+    let level: Double
+    var body: some View {
+        SunRays(level: level) {
+            GeometryReader { geo in
+                Text(verbatim: "\(Int(level.rounded()))%")
+                    .font(.system(size: geo.size.width * 0.30, weight: .bold, design: .rounded))
+                    .monospacedDigit()
+                    .minimumScaleFactor(0.5)
+                    .foregroundStyle(SunPalette.ink)
+                    .frame(width: geo.size.width, height: geo.size.height)
+            }
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("햇빛 배터리"))
+        .accessibilityValue(Text(verbatim: "\(Int(level.rounded()))%"))
+    }
+}
+
+// MARK: - 햇빛 배터리 (Small)
 struct SunflowerWidgetView: View {
     var entry: SunflowerEntry
 
     var body: some View {
-        VStack(spacing: 8) {
-            // 미니 해바라기
-            MiniSunflowerView(energy: entry.widgetData.sunflowerEnergy, size: 80)
-
-            // 건강 상태
-            VStack(spacing: 4) {
-                Text(healthStateText)
-                    .font(.caption.bold())
-                    .foregroundColor(healthColor)
-
-                Text("에너지 \(Int(entry.widgetData.sunflowerEnergy))%")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-            }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
-        .containerBackground(.fill.tertiary, for: .widget)
-    }
-
-    private var healthStateText: String {
-        switch entry.widgetData.healthState {
-        case "thriving": return String(localized: "싱싱함")
-        case "healthy": return String(localized: "건강함")
-        case "wilting": return String(localized: "시들어감")
-        case "critical": return String(localized: "위험")
-        default: return String(localized: "건강함")
-        }
-    }
-
-    private var healthColor: Color {
-        switch entry.widgetData.healthState {
-        case "thriving": return .green
-        case "healthy": return Color(red: 0.5, green: 0.7, blue: 0.3)
-        case "wilting": return .orange
-        case "critical": return .red
-        default: return .green
-        }
-    }
-}
-
-// MARK: - 배터리 위젯 (Small)
-struct BatteryWidgetView: View {
-    var entry: SunflowerEntry
-
-    var body: some View {
-        VStack(spacing: 8) {
-            Spacer(minLength: 0)
-
-            // 제목
-            HStack {
-                Image(systemName: "bolt.fill")
-                    .foregroundColor(.green)
-                    .font(.caption)
-                Text("충전된 배터리")
-                    .font(.caption.bold())
-            }
-
-            // 배터리 퍼센트 (큰 숫자)
-            Text("\(Int(entry.widgetData.batteryPercentage))%")
-                .font(.system(size: 40, weight: .bold))
-                .foregroundColor(.green)
-
-            // 5등분 배터리 세그먼트
-            HStack(spacing: 3) {
-                ForEach(0..<5, id: \.self) { index in
-                    let segmentThreshold = Double((index + 1) * 20)
-                    let isFilled = entry.widgetData.batteryPercentage >= segmentThreshold - 10
-
-                    if index == 4 {
-                        // 마지막 칸 - 배터리 팁
-                        HStack(spacing: 0) {
-                            RoundedRectangle(cornerRadius: 2)
-                                .fill(isFilled ? Color.green : Color.gray.opacity(0.3))
-                                .frame(height: 14)
-
-                            RoundedRectangle(cornerRadius: 1)
-                                .fill(isFilled ? Color.green : Color.gray.opacity(0.3))
-                                .frame(width: 2, height: 7)
-                        }
-                    } else {
-                        RoundedRectangle(cornerRadius: 2)
-                            .fill(isFilled ? Color.green : Color.gray.opacity(0.3))
-                            .frame(height: 14)
-                    }
-                }
-            }
-
-            // 마지막 충전 시간
-            Text(timeAgo(from: entry.widgetData.lastChargeTime))
-                .font(.system(size: 9))
-                .foregroundColor(.secondary)
-
-            Spacer(minLength: 0)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
-        .containerBackground(.fill.tertiary, for: .widget)
-    }
-
-    private func timeAgo(from date: Date) -> String {
-        let interval = Date().timeIntervalSince(date)
-        let hours = Int(interval / 3600)
-
-        if hours < 1 {
-            return String(localized: "방금 충전")
-        } else if hours < 24 {
-            return String(localized: "\(hours)시간 전")
-        } else {
-            let days = hours / 24
-            return String(localized: "\(days)일 전")
-        }
+        WidgetSunGauge(level: entry.widgetData.batteryLevel(at: entry.date))
+            .padding(4)
+            .containerBackground(SunPalette.sky, for: .widget)
     }
 }
 
@@ -186,55 +106,30 @@ struct BatteryWidgetView: View {
 struct TodayProgressWidgetView: View {
     var entry: SunflowerEntry
 
-    private var progress: Double {
-        guard entry.widgetData.goalMinutes > 0 else { return 0 }
-        return min(Double(entry.widgetData.todayMinutes) / Double(entry.widgetData.goalMinutes), 1.0)
-    }
+    private var progress: Double { entry.widgetData.goalProgress }
 
     var body: some View {
-        VStack(spacing: 6) {
-            Spacer(minLength: 0)
-
-            // 원형 진행도
+        VStack(spacing: 8) {
             ZStack {
                 Circle()
-                    .stroke(Color.gray.opacity(0.2), lineWidth: 12)
-                    .frame(width: 95, height: 95)
-
+                    .stroke(Color.white.opacity(0.3), lineWidth: 12)
                 Circle()
                     .trim(from: 0, to: progress)
-                    .stroke(
-                        progress >= 1.0 ? Color.green : Color.orange,
-                        style: StrokeStyle(lineWidth: 12, lineCap: .round)
-                    )
-                    .frame(width: 95, height: 95)
+                    .stroke(SunPalette.sun, style: StrokeStyle(lineWidth: 12, lineCap: .round))
                     .rotationEffect(.degrees(-90))
-
-                VStack(spacing: 2) {
-                    Text("\(Int(progress * 100))%")
-                        .font(.system(size: 28, weight: .bold))
-                        .foregroundColor(progress >= 1.0 ? .green : .orange)
-
-                    if progress >= 1.0 {
-                        Image(systemName: "checkmark.circle.fill")
-                            .font(.caption)
-                            .foregroundColor(.green)
-                    }
-                }
+                Text("\(entry.widgetData.todayMinutes)분")
+                    .font(.system(size: 26, weight: .bold, design: .rounded))
+                    .minimumScaleFactor(0.6)
+                    .foregroundStyle(.white)
             }
-            .padding(.vertical, 4)
+            .frame(width: 96, height: 96)
 
-            // 시간 정보
-            Text("\(entry.widgetData.todayMinutes) / \(entry.widgetData.goalMinutes)분")
+            Text("목표: \(entry.widgetData.goalMinutes)분")
                 .font(.caption.bold())
-                .foregroundColor(.secondary)
-
-            Spacer(minLength: 0)
+                .foregroundStyle(.white.opacity(0.85))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
-        .containerBackground(.fill.tertiary, for: .widget)
+        .containerBackground(SunPalette.sky, for: .widget)
     }
 }
 
@@ -242,62 +137,14 @@ struct TodayProgressWidgetView: View {
 struct CompactInfoWidgetView: View {
     var entry: SunflowerEntry
 
-    private var progress: Double {
-        guard entry.widgetData.goalMinutes > 0 else { return 0 }
-        return min(Double(entry.widgetData.todayMinutes) / Double(entry.widgetData.goalMinutes), 1.0)
-    }
-
     var body: some View {
-        HStack(spacing: 16) {
-            // 해바라기
-            VStack(spacing: 4) {
-                MiniSunflowerView(energy: entry.widgetData.sunflowerEnergy, size: 60)
-                Text("\(Int(entry.widgetData.sunflowerEnergy))%")
-                    .font(.caption.bold())
-                    .foregroundColor(.green)
-            }
-
-            Divider()
-
-            // 오늘 진행도
-            VStack(spacing: 8) {
-                HStack {
-                    Image(systemName: "sun.max.fill")
-                        .foregroundColor(.orange)
-                        .font(.caption)
-                    Text("오늘의 햇빛")
-                        .font(.caption.bold())
-                }
-
-                Text("\(entry.widgetData.todayMinutes)분")
-                    .font(.system(size: 32, weight: .bold))
-                    .foregroundColor(progress >= 1.0 ? .green : .orange)
-
-                Text("목표: \(entry.widgetData.goalMinutes)분")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-            }
-
-            Divider()
-
-            // 배터리
-            VStack(spacing: 4) {
-                Image(systemName: "bolt.circle.fill")
-                    .font(.largeTitle)
-                    .foregroundColor(.green)
-
-                Text("\(Int(entry.widgetData.batteryPercentage))%")
-                    .font(.headline.bold())
-                    .foregroundColor(.green)
-
-                Text("충전량")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-            }
+        HStack(spacing: 20) {
+            WidgetSunGauge(level: entry.widgetData.batteryLevel(at: entry.date))
+            TodayMinutes(data: entry.widgetData)
         }
+        .padding(.vertical, 4)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
-        .containerBackground(.fill.tertiary, for: .widget)
+        .containerBackground(SunPalette.sky, for: .widget)
     }
 }
 
@@ -305,273 +152,46 @@ struct CompactInfoWidgetView: View {
 struct DashboardWidgetView: View {
     var entry: SunflowerEntry
 
-    private var progress: Double {
-        guard entry.widgetData.goalMinutes > 0 else { return 0 }
-        return min(Double(entry.widgetData.todayMinutes) / Double(entry.widgetData.goalMinutes), 1.0)
-    }
-
     var body: some View {
-        VStack(spacing: 12) {
-            // 상단: 해바라기 + 배터리
-            HStack(spacing: 16) {
-                // 해바라기
-                VStack(spacing: 8) {
-                    MiniSunflowerView(energy: entry.widgetData.sunflowerEnergy, size: 80)
-                    Text(healthStateText)
-                        .font(.caption.bold())
-                        .foregroundColor(healthColor)
-                    Text("에너지 \(Int(entry.widgetData.sunflowerEnergy))%")
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
-                }
-                .frame(maxWidth: .infinity)
-
-                // 배터리
-                VStack(spacing: 8) {
-                    Image(systemName: "bolt.circle.fill")
-                        .font(.system(size: 50))
-                        .foregroundColor(.green)
-
-                    Text("\(Int(entry.widgetData.batteryPercentage))%")
-                        .font(.system(size: 28, weight: .bold))
-                        .foregroundColor(.green)
-
-                    HStack(spacing: 2) {
-                        ForEach(0..<5, id: \.self) { index in
-                            let threshold = Double((index + 1) * 20)
-                            let filled = entry.widgetData.batteryPercentage >= threshold - 10
-
-                            if index == 4 {
-                                HStack(spacing: 0) {
-                                    RoundedRectangle(cornerRadius: 2)
-                                        .fill(filled ? Color.green : Color.gray.opacity(0.3))
-                                        .frame(height: 12)
-                                    RoundedRectangle(cornerRadius: 1)
-                                        .fill(filled ? Color.green : Color.gray.opacity(0.3))
-                                        .frame(width: 2, height: 6)
-                                }
-                            } else {
-                                RoundedRectangle(cornerRadius: 2)
-                                    .fill(filled ? Color.green : Color.gray.opacity(0.3))
-                                    .frame(height: 12)
-                            }
-                        }
-                    }
-                }
-                .frame(maxWidth: .infinity)
-            }
-
-            Divider()
-
-            // 하단: 오늘 진행도
-            VStack(spacing: 8) {
-                HStack {
-                    Image(systemName: "sun.max.fill")
-                        .foregroundColor(.orange)
-                    Text("오늘의 햇빛")
-                        .font(.headline)
-                    Spacer()
-                    Text("\(entry.widgetData.todayMinutes) / \(entry.widgetData.goalMinutes)분")
-                        .font(.subheadline.bold())
-                        .foregroundColor(progress >= 1.0 ? .green : .orange)
-                }
-
-                // 진행도 바
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.gray.opacity(0.2))
-
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(progress >= 1.0 ? Color.green : Color.orange)
-                            .frame(width: geo.size.width * progress)
-                    }
-                }
-                .frame(height: 16)
-
-                if progress >= 1.0 {
-                    HStack {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundColor(.green)
-                        Text("목표 달성!")
-                            .font(.caption.bold())
-                            .foregroundColor(.green)
-                    }
-                }
-            }
+        VStack(spacing: 20) {
+            WidgetSunGauge(level: entry.widgetData.batteryLevel(at: entry.date))
+                .padding(.horizontal, 30)
+            TodayMinutes(data: entry.widgetData)
         }
+        .padding(.vertical, 8)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding()
-        .containerBackground(.fill.tertiary, for: .widget)
-    }
-
-    private var healthStateText: String {
-        switch entry.widgetData.healthState {
-        case "thriving": return String(localized: "싱싱함")
-        case "healthy": return String(localized: "건강함")
-        case "wilting": return String(localized: "시들어감")
-        case "critical": return String(localized: "위험")
-        default: return String(localized: "건강함")
-        }
-    }
-
-    private var healthColor: Color {
-        switch entry.widgetData.healthState {
-        case "thriving": return .green
-        case "healthy": return Color(red: 0.5, green: 0.7, blue: 0.3)
-        case "wilting": return .orange
-        case "critical": return .red
-        default: return .green
-        }
+        .containerBackground(SunPalette.sky, for: .widget)
     }
 }
 
-// MARK: - Mini Sunflower Component
-struct MiniSunflowerView: View {
-    let energy: Double
-    let size: CGFloat
-
-    init(energy: Double, size: CGFloat = 60) {
-        self.energy = energy
-        self.size = size
-    }
-
-    private var healthState: String {
-        if energy >= 80 { return "thriving" }
-        if energy >= 50 { return "healthy" }
-        if energy >= 20 { return "wilting" }
-        return "critical"
-    }
-
-    private var petalColor: Color {
-        switch healthState {
-        case "thriving": return Color(red: 1.0, green: 0.84, blue: 0.0)
-        case "healthy": return Color(red: 1.0, green: 0.75, blue: 0.2)
-        case "wilting": return Color(red: 0.8, green: 0.6, blue: 0.3)
-        case "critical": return Color(red: 0.6, green: 0.4, blue: 0.2)
-        default: return .yellow
-        }
-    }
-
-    private var faceColor: Color {
-        switch healthState {
-        case "thriving": return Color(red: 1.0, green: 0.82, blue: 0.15)
-        case "healthy": return Color(red: 0.97, green: 0.76, blue: 0.2)
-        case "wilting": return Color(red: 0.8, green: 0.62, blue: 0.25)
-        case "critical": return Color(red: 0.55, green: 0.44, blue: 0.24)
-        default: return .yellow
-        }
-    }
-
-    // 진갈색 테두리/눈/입 (로고 스타일)
-    private var outlineColor: Color {
-        Color(red: 0.42, green: 0.26, blue: 0.13)
-    }
-
-    private var isHappy: Bool {
-        healthState == "thriving" || healthState == "healthy"
-    }
-
-    private var petalDroop: Double {
-        switch healthState {
-        case "thriving": return 0
-        case "healthy": return 0.15
-        case "wilting": return 0.35
-        case "critical": return 0.5
-        default: return 0
-        }
-    }
+/// 오늘 밖에서 받은 시간과 목표 막대
+struct TodayMinutes: View {
+    let data: WidgetData
 
     var body: some View {
-        ZStack {
-            // 8개의 꽃잎
-            ForEach(0..<8, id: \.self) { index in
-                Petal(droop: petalDroop)
-                    .fill(petalColor)
-                    .frame(width: size * 0.35, height: size * 0.55)
-                    .offset(y: -size * 0.28)
-                    .rotationEffect(.degrees(Double(index) * 45))
-            }
-
-            // 중앙 얼굴 (귀여운 캐릭터 - 노란 얼굴 + 진갈색 테두리)
-            ZStack {
-                Circle()
-                    .fill(faceColor)
-                    .overlay(
-                        Circle().strokeBorder(outlineColor, lineWidth: size * 0.028)
-                    )
-
-                // 눈
-                HStack(spacing: size * 0.08) {
-                    Circle().fill(outlineColor)
-                        .frame(width: size * 0.045, height: size * 0.045)
-                    Circle().fill(outlineColor)
-                        .frame(width: size * 0.045, height: size * 0.045)
+        VStack(alignment: .leading, spacing: 8) {
+            Text("오늘의 햇빛")
+                .font(.caption.bold())
+                .foregroundStyle(.white.opacity(0.85))
+            Text("\(data.todayMinutes) / \(data.goalMinutes)분")
+                .font(.system(.title2, design: .rounded).weight(.bold))
+                .foregroundStyle(.white)
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(Color.white.opacity(0.3))
+                    Capsule().fill(SunPalette.sun)
+                        .frame(width: max(8, geo.size.width * data.goalProgress))
                 }
-                .offset(y: -size * 0.03)
-
-                // 입 (웃음/시무룩)
-                MiniMouth(happy: isHappy)
-                    .stroke(outlineColor, style: StrokeStyle(lineWidth: size * 0.02, lineCap: .round))
-                    .frame(width: size * 0.1, height: size * 0.05)
-                    .offset(y: size * 0.07)
             }
-            .frame(width: size * 0.42, height: size * 0.42)
+            .frame(height: 10)
         }
-        .frame(width: size, height: size)
-    }
-}
-
-// 미니 해바라기 입 모양 (웃음/시무룩 아치)
-struct MiniMouth: Shape {
-    let happy: Bool
-
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        if happy {
-            path.move(to: CGPoint(x: 0, y: 0))
-            path.addQuadCurve(
-                to: CGPoint(x: rect.width, y: 0),
-                control: CGPoint(x: rect.width / 2, y: rect.height * 2)
-            )
-        } else {
-            path.move(to: CGPoint(x: 0, y: rect.height))
-            path.addQuadCurve(
-                to: CGPoint(x: rect.width, y: rect.height),
-                control: CGPoint(x: rect.width / 2, y: -rect.height)
-            )
-        }
-        return path
-    }
-}
-
-struct Petal: Shape {
-    let droop: Double
-
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let width = rect.width
-        let height = rect.height
-        let droopOffset = height * droop * 0.3
-
-        path.move(to: CGPoint(x: width / 2, y: height + droopOffset))
-        path.addQuadCurve(
-            to: CGPoint(x: width / 2, y: droopOffset),
-            control: CGPoint(x: 0, y: height / 2 + droopOffset)
-        )
-        path.addQuadCurve(
-            to: CGPoint(x: width / 2, y: height + droopOffset),
-            control: CGPoint(x: width, y: height / 2 + droopOffset)
-        )
-        path.closeSubpath()
-
-        return path
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
 // MARK: - Pro 잠금
 
-/// 무료로 쓰는 사람이 올린 위젯: 흐린 해바라기 위에 '탭해서 Pro 열기'. 누르면 앱에서 페이월이 뜬다.
+/// 무료로 쓰는 사람이 올린 위젯: 흐린 게이지 위에 '탭해서 Pro 열기'. 누르면 앱에서 페이월이 뜬다.
 struct ProLockedWidget<Content: View>: View {
     let isOpen: Bool
     @ViewBuilder let content: () -> Content
@@ -588,12 +208,13 @@ struct ProLockedWidget<Content: View>: View {
                     VStack(spacing: 6) {
                         Image(systemName: "lock.fill")
                             .font(.title3)
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(.white)
                             .accessibilityHidden(true)
                         Text("탭해서 Pro 열기")
                             .font(.body.weight(.semibold))
                             .multilineTextAlignment(.center)
                             .minimumScaleFactor(0.7)
+                            .foregroundStyle(.white)
                     }
                     .padding(8)
                 }
@@ -611,21 +232,8 @@ struct SunflowerWidget: Widget {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
             ProLockedWidget(isOpen: entry.isOpen) { SunflowerWidgetView(entry: entry) }
         }
-        .configurationDisplayName("해바라기")
-        .description("해바라기의 건강 상태를 확인하세요")
-        .supportedFamilies([.systemSmall])
-    }
-}
-
-struct BatteryWidget: Widget {
-    let kind: String = "BatteryWidget"
-
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
-            ProLockedWidget(isOpen: entry.isOpen) { BatteryWidgetView(entry: entry) }
-        }
-        .configurationDisplayName("배터리")
-        .description("충전된 배터리 양을 확인하세요")
+        .configurationDisplayName("햇빛 배터리")
+        .description("남은 햇빛 배터리를 확인하세요")
         .supportedFamilies([.systemSmall])
     }
 }
@@ -651,7 +259,7 @@ struct CompactInfoWidget: Widget {
             ProLockedWidget(isOpen: entry.isOpen) { CompactInfoWidgetView(entry: entry) }
         }
         .configurationDisplayName("종합 정보")
-        .description("해바라기, 오늘 햇빛, 배터리를 한눈에")
+        .description("햇빛 배터리와 오늘의 햇빛을 한눈에")
         .supportedFamilies([.systemMedium])
     }
 }
@@ -672,12 +280,6 @@ struct DashboardWidget: Widget {
 // MARK: - Preview
 #Preview(as: .systemSmall) {
     SunflowerWidget()
-} timeline: {
-    SunflowerEntry.placeholder
-}
-
-#Preview(as: .systemSmall) {
-    BatteryWidget()
 } timeline: {
     SunflowerEntry.placeholder
 }

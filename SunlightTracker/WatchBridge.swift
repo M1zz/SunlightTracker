@@ -2,7 +2,7 @@
 //  WatchBridge.swift
 //  SunlightTracker
 //
-//  워치 앱과 잇는다. 해바라기 상태를 보내고, 워치에서 누른 "해바라기에게 주기" 를 받는다.
+//  워치 앱과 잇는다. 햇빛 배터리와 오늘 받은 햇빛을 보낸다.
 //
 
 import Foundation
@@ -12,8 +12,6 @@ import WatchConnectivity
 final class WatchBridge: NSObject {
     static let shared = WatchBridge()
 
-    /// 워치에서 "주기" 를 누르면 부른다 (SunlightManager 가 단다).
-    var onGive: (() -> Void)?
     /// 연결이 열리거나 워치 앱이 깔리면 지금 상태를 다시 보내게 부른다.
     var onActivate: (() -> Void)?
     private var lastSent: WatchSnapshot?
@@ -54,8 +52,4 @@ extension WatchBridge: WCSessionDelegate {
         Task { @MainActor in self.lastSent = nil; self.onActivate?() }
     }
 
-    nonisolated func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
-        guard userInfo[WatchSnapshot.giveKey] != nil else { return }
-        Task { @MainActor in self.onGive?() }
-    }
 }

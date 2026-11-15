@@ -4024,6 +4024,302 @@
         }
       }
     },
+    "Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 햇빛 배터리가 차요." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Čas na denním světle změřený Apple Watch nabíjí sluneční baterii, i když je aplikace zavřená."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagslys målt af Apple Watch oplader dit sollysbatteri, også når appen er lukket."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit der von der Apple Watch gemessenen Tageslichtzeit lädt dein Sonnenakku auch bei geschlossener App."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ο χρόνος στο φως της ημέρας που μετρά το Apple Watch φορτίζει την μπαταρία ήλιου, ακόμη κι αν η εφαρμογή είναι κλειστή."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time in daylight measured by Apple Watch charges your sunlight battery, even when the app is closed."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time in daylight measured by Apple Watch charges your sunlight battery, even when the app is closed."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El tiempo a la luz medido por el Apple Watch carga tu batería de sol, aunque la app esté cerrada."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchin mittaama aika päivänvalossa lataa auringonvaloakkua, vaikka sovellus olisi kiinni."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le temps à la lumière mesuré par l’Apple Watch recharge votre batterie solaire, même app fermée."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waktu di bawah cahaya siang yang diukur Apple Watch mengisi baterai sinar matahari, meski aplikasi tertutup."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tempo alla luce misurato da Apple Watch ricarica la batteria di sole, anche ad app chiusa."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchが測った日光の時間で、アプリを開いていなくてもひかりバッテリーが貯まります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 햇빛 배터리가 차요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagslys målt av Apple Watch lader sollysbatteriet, også når appen er lukket."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daglichttijd gemeten door de Apple Watch laadt je zonlichtbatterij op, ook als de app dicht is."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czas w świetle dziennym zmierzony przez Apple Watch ładuje baterię słońca, nawet gdy aplikacja jest zamknięta."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O tempo na luz do dia medido pelo Apple Watch carrega sua bateria de sol, mesmo com o app fechado."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время на дневном свету, измеренное Apple Watch, заряжает солнечную батарею, даже когда приложение закрыто."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid i dagsljus som Apple Watch mäter laddar solljusbatteriet, även när appen är stängd."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เวลาที่อยู่กลางแดดซึ่ง Apple Watch วัดได้ จะชาร์จแบตเตอรี่แสงแดดแม้ไม่ได้เปิดแอป"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch’ın ölçtüğü gün ışığı süresi, uygulama kapalıyken bile güneş pilini doldurur."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thời gian dưới ánh sáng ban ngày do Apple Watch đo sẽ sạc pin nắng, kể cả khi ứng dụng đóng."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "凭 Apple Watch 测得的日照时间，即使不开 App，阳光电量也会增加。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "憑 Apple Watch 測得的日照時間，即使不開 App，陽光電量也會增加。"
+          }
+        }
+      }
+    },
+    "Apple Watch에서 햇빛 배터리 보기" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluneční baterie na Apple Watch"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit sollysbatteri på Apple Watch"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonnenakku auf der Apple Watch"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η μπαταρία ήλιου στο Apple Watch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sunlight battery on Apple Watch"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sunlight battery on Apple Watch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu batería de sol en el Apple Watch"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auringonvaloakku Apple Watchissa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre batterie solaire sur Apple Watch"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baterai sinar matahari di Apple Watch"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La batteria di sole su Apple Watch"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watchでひかりバッテリーを見る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Watch에서 햇빛 배터리 보기"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sollysbatteriet på Apple Watch"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je zonlichtbatterij op de Apple Watch"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bateria słońca na Apple Watch"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sua bateria de sol no Apple Watch"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Солнечный заряд на Apple Watch"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solljusbatteriet på Apple Watch"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูแบตเตอรี่แสงแดดบน Apple Watch"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Güneş pilin Apple Watch’ta"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin nắng trên Apple Watch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Apple Watch 上查看阳光电量"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 Apple Watch 上查看陽光電量"
+          }
+        }
+      }
+    },
     "Face ID 잠금" : {
       "comment" : "Roadmap item: Face ID lock",
       "localizations" : {
@@ -5218,155 +5514,6 @@
         }
       }
     },
-    "⚡ 모은 햇빛" : {
-      "comment" : "DashboardView.swift:285",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Nasbírané slunce"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Opsamlet sol"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Gesammelte Sonne"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Συλλεγμένος ήλιος"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Sunlight collected"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Sunlight collected"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Sol acumulado"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Kerätty aurinko"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Soleil récolté"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Sinar terkumpul"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Sole raccolto"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ ためた日ざし"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ 모은 햇빛"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Samlet sollys"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Verzamelde zon"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Zebrane słońce"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Sol coletado"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Собранное солнце"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Insamlad sol"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ แดดที่สะสมไว้"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Biriken güneş"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ Nắng đã gom"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ 已收集的阳光"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⚡ 收集的陽光"
-          }
-        }
-      }
-    },
     "강한 햇빛" : {
       "comment" : "DashboardView.swift:113",
       "localizations" : {
@@ -5665,151 +5812,150 @@
         }
       }
     },
-    "같이 받으면 꽃잎이 알록달록 물들고, 친구 탭에 함께한 기록이 남아요." : {
-      "comment" : "DashboardView.swift:101",
+    "같이 받으면 햇살이 알록달록 물들고, 친구 탭에 함께한 기록이 남아요." : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Když se budete slunit spolu, okvětní lístky se zbarví do pestrých barev a společné chvíle se zapíšou na kartu Kamarádi."
+            "value" : "Když se slunníte spolu, paprsky se zbarví a čas se uloží do karty Přátelé."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når I soler jer sammen, får blomsterbladene farver, og jeres tid sammen bliver gemt under Venner."
+            "value" : "Får I sol sammen, bliver strålerne farverige, og tiden gemmes under Venner."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gemeinsam in der Sonne färben sich die Blütenblätter bunt, und im Freunde-Tab landet euer gemeinsamer Eintrag."
+            "value" : "Tankt ihr zusammen Sonne, werden deine Strahlen bunt und die Zeit landet im Tab „Freunde“."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Αν λιαστείτε μαζί, τα πέταλα παίρνουν χρώματα και η στιγμή αποθηκεύεται στην καρτέλα Φίλοι."
+            "value" : "Μαζί στον ήλιο οι ακτίνες γεμίζουν χρώματα και ο χρόνος μπαίνει στην καρτέλα Φίλοι."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sun together and your petals turn colorful, with the time saved in your Friends tab."
+            "value" : "Sun together and your rays turn colorful, with the time saved in your Friends tab."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Share the sun and your petals turn colourful, with your time together saved in the Friends tab."
+            "value" : "Sun together and your rays turn colourful, with the time saved in your Friends tab."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si toman el sol juntos, los pétalos se llenan de color y el momento queda guardado en la pestaña Amigos."
+            "value" : "Al tomar el sol juntos, tus rayos se llenan de color y el tiempo se guarda en Amigos."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yhdessä auringossa terälehdet värjäytyvät kirjaviksi, ja yhteiset hetket tallentuvat Ystävät-välilehdelle."
+            "value" : "Yhdessä aurinkoa ottaessa säteet värittyvät ja aika tallentuu Kaverit-välilehdelle."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prenez le soleil ensemble : les pétales se colorent et vos moments partagés s’affichent dans l’onglet Amis."
+            "value" : "Au soleil ensemble, vos rayons se colorent et le moment s’ajoute à l’onglet Amis."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kalau berjemur bareng, kelopakmu jadi berwarna-warni dan catatannya tersimpan di tab Teman."
+            "value" : "Berjemur bersama membuat sinarmu warna-warni dan waktunya tersimpan di tab Teman."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prendendo il sole insieme, i petali si tingono di mille colori e nella scheda Amici resta il ricordo."
+            "value" : "Al sole insieme i tuoi raggi si colorano e il tempo finisce nella scheda Amici."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "いっしょに浴びると花びらがカラフルに染まり、友だちタブに思い出が残ります。"
+            "value" : "一緒に浴びると光の筋がカラフルに色づき、友達タブに記録が残ります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "같이 받으면 꽃잎이 알록달록 물들고, 친구 탭에 함께한 기록이 남아요."
+            "value" : "같이 받으면 햇살이 알록달록 물들고, 친구 탭에 함께한 기록이 남아요."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når dere soler dere sammen, får kronbladene fine farger, og turen havner i vennefanen."
+            "value" : "Tar dere sol sammen, blir strålene fargerike og tiden lagres under Venner."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zonnen jullie samen, dan kleuren je bloemblaadjes vrolijk en komt er een herinnering in het tabblad Vrienden."
+            "value" : "Samen in de zon kleuren je stralen vrolijk en komt de tijd in het tabblad Vrienden."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gdy łapiecie słońce razem, płatki mienią się kolorami, a wspólne chwile zapisują się w zakładce Znajomi."
+            "value" : "Razem w słońcu promienie stają się kolorowe, a czas trafia do karty Znajomi."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tomando sol juntos, as pétalas ganham cores e o registro fica guardado na aba Amigos."
+            "value" : "Pegando sol juntos, seus raios ficam coloridos e o tempo vai para a aba Amigos."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Когда вы вместе на солнце, лепестки раскрашиваются в яркие цвета, а совместные встречи сохраняются во вкладке «Друзья»."
+            "value" : "Вместе на солнце лучи станут разноцветными, а время сохранится во вкладке «Друзья»."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Solar ni ihop färgas kronbladen i fina färger, och ert sällskap sparas under fliken Vänner."
+            "value" : "Tar ni sol ihop blir strålarna färgglada och tiden sparas under Vänner."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "รับแดดด้วยกัน กลีบดอกจะเปลี่ยนสีสันสดใส และบันทึกจะเก็บไว้ในแท็บเพื่อน"
+            "value" : "รับแดดด้วยกันแล้วแสงจะกลายเป็นหลากสี และเวลาจะถูกบันทึกในแท็บเพื่อน"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Birlikte güneşlenirseniz yapraklar rengârenk olur, ortak kaydınız Arkadaşlar sekmesinde birikir."
+            "value" : "Birlikte güneşlenince ışınların renklenir, süre Arkadaşlar sekmesine kaydedilir."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tắm nắng cùng nhau, cánh hoa sẽ nhuộm nhiều sắc màu và lần gặp gỡ được lưu ở tab Bạn bè."
+            "value" : "Cùng tắm nắng, tia nắng sẽ đổi màu và thời gian được lưu ở tab Bạn bè."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "一起晒太阳，花瓣会染上缤纷色彩，相伴的记录也会留在“朋友”标签页。"
+            "value" : "一起晒太阳，光芒会变得五彩缤纷，还会记录在“朋友”标签里。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "一起曬太陽，花瓣會染上繽紛色彩，「朋友」分頁也會留下共度的記錄。"
+            "value" : "一起曬太陽，光芒會變得五彩繽紛，還會記錄在「朋友」標籤裡。"
           }
         }
       }
@@ -6558,151 +6704,150 @@
         }
       }
     },
-    "근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 해바라기 꽃잎이 알록달록하게 물들고, 친구 탭에 함께한 기록이 쌓입니다. 물든 색은 3일에 걸쳐 서서히 원래 색으로 돌아옵니다." : {
-      "comment" : "SettingsView.swift:112",
+    "근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 햇살이 알록달록하게 물들고, 친구 탭에 함께한 기록이 쌓입니다. 물든 색은 3일에 걸쳐 서서히 원래 색으로 돌아옵니다." : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Když se slunís s někým poblíž, kdo má stejnou aplikaci, okvětní lístky slunečnice se zbarví do pestrých barev a společné záznamy se ukládají na kartu Kamarádi. Barvy se během 3 dnů postupně vrátí do původní podoby."
+            "value" : "Když se slunníš poblíž někoho, kdo aplikaci taky používá, tvoje paprsky se zbarví a společný čas se uloží do karty Přátelé. Barvy během 3 dnů postupně vyblednou."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når du soler dig sammen med en anden, der bruger appen i nærheden, får solsikkens blomsterblade farver, og jeres tid sammen bliver samlet under Venner. Farverne vender gradvist tilbage til det normale over 3 dage."
+            "value" : "Når du får sol i nærheden af en anden, der bruger appen, bliver dine solstråler farverige, og tiden sammen gemmes under Venner. Farverne falmer tilbage over 3 dage."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wenn du in der Nähe mit jemandem, der dieselbe App nutzt, gemeinsam Sonne tankst, färben sich die Blütenblätter deiner Sonnenblume bunt, und im Freunde-Tab sammeln sich eure gemeinsamen Einträge. Die Farben verblassen innerhalb von 3 Tagen langsam wieder."
+            "value" : "Wenn du in der Nähe von jemandem Sonne tankst, der die App auch nutzt, werden deine Sonnenstrahlen bunt und die gemeinsame Zeit landet im Tab „Freunde“. Die Farben verblassen über 3 Tage wieder."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Όταν λιάζεσαι μαζί με κάποιον που έχει την εφαρμογή και βρίσκεται κοντά, τα πέταλα του ηλιοτρόπιου παίρνουν χρώματα και οι κοινές στιγμές αποθηκεύονται στην καρτέλα Φίλοι. Τα χρώματα επανέρχονται σταδιακά στο αρχικό σε 3 ημέρες."
+            "value" : "Όταν λιάζεσαι κοντά σε κάποιον που χρησιμοποιεί κι αυτός την εφαρμογή, οι ακτίνες σου γεμίζουν χρώματα και ο κοινός χρόνος καταγράφεται στην καρτέλα Φίλοι. Τα χρώματα ξεθωριάζουν μέσα σε 3 ημέρες."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "When you soak up sun near someone else using the app, your sunflower’s petals turn colorful and the time together is added to your Friends tab. The colors fade back to normal over 3 days."
+            "value" : "When you soak up sun near someone else using the app, your sun rays turn colorful and the time together is added to your Friends tab. The colors fade back to normal over 3 days."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "When you soak up the sun near someone else using the app, your sunflower’s petals turn colourful and your time together is saved in the Friends tab. The colours fade back to normal over 3 days."
+            "value" : "When you soak up sun near someone else using the app, your sun rays turn colourful and the time together is added to your Friends tab. The colours fade back to normal over 3 days."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Si tomas el sol junto a alguien que use esta app, los pétalos de tu girasol se llenan de color y el momento se guarda en la pestaña Amigos. El color vuelve poco a poco a la normalidad a lo largo de 3 días."
+            "value" : "Si tomas el sol cerca de alguien que también usa la app, tus rayos se llenan de color y el tiempo juntos se guarda en la pestaña Amigos. Los colores vuelven a la normalidad en 3 días."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kun otat aurinkoa yhdessä lähellä olevan saman sovelluksen käyttäjän kanssa, auringonkukan terälehdet värjäytyvät kirjaviksi ja yhteiset hetket kertyvät Ystävät-välilehdelle. Värit palaavat entiselleen vähitellen 3 päivässä."
+            "value" : "Kun otat aurinkoa lähellä toista sovelluksen käyttäjää, auringonsäteesi värittyvät ja yhteinen aika tallentuu Kaverit-välilehdelle. Värit haalistuvat takaisin 3 päivässä."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quand tu prends le soleil à côté d’une autre personne qui utilise l’app, les pétales du tournesol se colorent et vos moments partagés s’ajoutent à l’onglet Amis. Les couleurs reviennent doucement à la normale en 3 jours."
+            "value" : "Quand vous prenez le soleil près d’une autre personne qui utilise l’app, vos rayons se colorent et ce moment s’ajoute à l’onglet Amis. Les couleurs s’estompent en 3 jours."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kalau kamu berjemur bareng orang di dekatmu yang memakai aplikasi ini, kelopak bunga matahari jadi berwarna-warni dan catatan kebersamaan menumpuk di tab Teman. Warnanya perlahan kembali normal dalam 3 hari."
+            "value" : "Saat berjemur di dekat orang lain yang memakai aplikasi ini, sinarmu jadi warna-warni dan waktu bersama tercatat di tab Teman. Warnanya memudar kembali dalam 3 hari."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Se prendi il sole insieme a qualcuno nei paraggi che usa la stessa app, i petali del girasole si tingono di mille colori e nella scheda Amici si accumulano i vostri momenti insieme. I colori tornano poco a poco normali nell'arco di 3 giorni."
+            "value" : "Se prendi il sole vicino a qualcuno che usa l’app, i tuoi raggi si colorano e il tempo insieme finisce nella scheda Amici. I colori tornano normali in 3 giorni."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "近くで同じアプリを使っている人といっしょに日ざしを浴びると、ひまわりの花びらがカラフルに染まり、友だちタブに思い出がたまります。染まった色は3日かけて少しずつ元の色に戻ります。"
+            "value" : "近くで同じアプリを使っている人と一緒に日光を浴びると、光の筋がカラフルに色づき、友達タブに一緒に過ごした記録が残ります。色は3日かけて少しずつ元に戻ります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 해바라기 꽃잎이 알록달록하게 물들고, 친구 탭에 함께한 기록이 쌓입니다. 물든 색은 3일에 걸쳐 서서히 원래 색으로 돌아옵니다."
+            "value" : "근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 햇살이 알록달록하게 물들고, 친구 탭에 함께한 기록이 쌓입니다. 물든 색은 3일에 걸쳐 서서히 원래 색으로 돌아옵니다."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Når du soler deg sammen med noen i nærheten som bruker samme app, får solsikkens kronblader fine farger, og dere samler felles turer i vennefanen. Fargene går gradvis tilbake til normalt i løpet av 3 dager."
+            "value" : "Når du tar sol i nærheten av en annen som bruker appen, blir solstrålene dine fargerike, og tiden sammen lagres under Venner. Fargene blekner tilbake over 3 dager."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zonnen met iemand die de app in de buurt ook gebruikt? Dan kleuren de bloemblaadjes van je zonnebloem vrolijk en komt er een herinnering in het tabblad Vrienden. De kleur zakt in 3 dagen langzaam terug naar normaal."
+            "value" : "Als je zon pakt in de buurt van iemand die de app ook gebruikt, kleuren je zonnestralen vrolijk en komt de tijd samen in het tabblad Vrienden. De kleuren vervagen in 3 dagen."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gdy łapiesz słońce razem z kimś w pobliżu, kto też używa aplikacji, płatki słonecznika mienią się kolorami, a wspólne chwile zapisują się w zakładce Znajomi. Kolor w ciągu 3 dni stopniowo wraca do normy."
+            "value" : "Gdy łapiesz słońce w pobliżu kogoś, kto też używa aplikacji, twoje promienie stają się kolorowe, a wspólny czas trafia do karty Znajomi. Kolory blakną w ciągu 3 dni."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quando você toma sol perto de quem usa o mesmo app, as pétalas do girassol ganham cores e os encontros ficam registrados na aba Amigos. As cores voltam ao normal aos poucos, ao longo de 3 dias."
+            "value" : "Ao pegar sol perto de alguém que também usa o app, seus raios ficam coloridos e o tempo juntos vai para a aba Amigos. As cores voltam ao normal em 3 dias."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Когда вы греетесь на солнце рядом с человеком, который тоже пользуется приложением, лепестки подсолнуха раскрашиваются в яркие цвета, а совместные встречи накапливаются во вкладке «Друзья». Цвет постепенно возвращается к обычному в течение 3 дней."
+            "value" : "Если загорать рядом с другим пользователем приложения, лучи станут разноцветными, а совместное время сохранится во вкладке «Друзья». Цвета постепенно вернутся за 3 дня."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Solar du tillsammans med någon i närheten som också använder appen färgas solrosens kronblad i fina färger, och ert sällskap samlas under fliken Vänner. Färgerna bleknar tillbaka till det vanliga under tre dagar."
+            "value" : "När du tar sol nära någon som också använder appen blir dina solstrålar färgglada och tiden ihop sparas under Vänner. Färgerna bleknar tillbaka på 3 dagar."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "เมื่อรับแดดพร้อมกับคนที่ใช้แอปนี้อยู่ใกล้ ๆ กลีบทานตะวันจะเปลี่ยนสีสันสดใส และบันทึกจะสะสมไว้ในแท็บเพื่อน สีที่เปลี่ยนไปจะค่อย ๆ กลับเป็นสีเดิมภายใน 3 วัน"
+            "value" : "เมื่อรับแดดใกล้กับคนที่ใช้แอปเดียวกัน แสงของคุณจะกลายเป็นหลากสี และเวลาที่อยู่ด้วยกันจะถูกบันทึกในแท็บเพื่อน สีจะค่อยๆ กลับเป็นปกติภายใน 3 วัน"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Yakınında bu uygulamayı kullanan biriyle birlikte güneşlenirsen ayçiçeğinin yaprakları rengârenk olur ve ortak kaydınız Arkadaşlar sekmesinde birikir. Renkler 3 günde yavaşça eski haline döner."
+            "value" : "Uygulamayı kullanan biriyle yakınlarda güneşlendiğinde ışınların renklenir ve birlikte geçen süre Arkadaşlar sekmesine eklenir. Renkler 3 gün içinde yavaş yavaş eski hâline döner."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Khi bạn tắm nắng cùng người đang dùng app này ở gần, cánh hoa hướng dương sẽ nhuộm nhiều sắc màu và những lần gặp gỡ được lưu ở tab Bạn bè. Màu đó sẽ phai dần về màu ban đầu trong 3 ngày."
+            "value" : "Khi tắm nắng gần người khác cũng dùng ứng dụng, tia nắng của bạn sẽ đổi màu rực rỡ và thời gian bên nhau được lưu ở tab Bạn bè. Màu sẽ nhạt dần về như cũ trong 3 ngày."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "和附近同样在用这款应用的人一起晒太阳，向日葵的花瓣会染上缤纷色彩，相伴的记录也会累积在“朋友”标签页。染上的颜色会在3天内慢慢褪回原样。"
+            "value" : "和附近使用同一款 App 的人一起晒太阳，光芒会染上缤纷的颜色，一起的时光会记录在“朋友”标签里。颜色会在 3 天内慢慢恢复原样。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "和附近同樣使用這個 App 的人一起曬太陽，向日葵的花瓣會染上繽紛色彩，「朋友」分頁也會累積共度的記錄。染上的顏色會在 3 天內慢慢恢復原狀。"
+            "value" : "和附近使用同一款 App 的人一起曬太陽，光芒會染上繽紛的顏色，一起的時光會記錄在「朋友」標籤裡。顏色會在 3 天內慢慢恢復原樣。"
           }
         }
       }
@@ -9538,155 +9683,6 @@
         }
       }
     },
-    "더블탭하여 종료" : {
-      "comment" : "DashboardView.swift:373",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ukonči dvojitým klepnutím"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dobbelttryk for at afslutte"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Doppeltippen zum Beenden"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Διπλό πάτημα για λήξη"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Double-tap to finish"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Double-tap to finish"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toca dos veces para terminar"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lopeta kaksoisnapautuksella"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Double-tape pour terminer"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ketuk dua kali untuk selesai"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Doppio tocco per finire"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ダブルタップで終了"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "더블탭하여 종료"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dobbelttrykk for å avslutte"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dubbeltik om te stoppen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stuknij dwa razy, aby zakończyć"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toque duplo para encerrar"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дважды нажмите, чтобы завершить"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dubbeltryck för att avsluta"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "แตะสองครั้งเพื่อจบ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bitirmek için çift dokun"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chạm đúp để kết thúc"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "双击结束"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "點兩下結束"
-          }
-        }
-      }
-    },
     "데이터" : {
       "comment" : "SettingsView.swift:173",
       "localizations" : {
@@ -11922,155 +11918,6 @@
         }
       }
     },
-    "목표 달성했어? 그럼 나를 두 번 터치해서 끝내자! 🎯" : {
-      "comment" : "DashboardView.swift:341",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cíl splněn? Tak na mě dvakrát klepni a hotovo! 🎯"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nået dit mål? Så tryk to gange på mig, og så slutter vi! 🎯"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ziel geschafft? Dann tipp mich zweimal an und wir sind fertig! 🎯"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Πέτυχες τον στόχο; Άγγιξέ με δύο φορές να τελειώσουμε! 🎯"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hit your goal? Tap me twice to call it a day! 🎯"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hit your goal? Then tap me twice to wrap up! 🎯"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Meta cumplida? ¡Toca dos veces y lo dejamos aquí! 🎯"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tavoite täynnä? Napauta minua kahdesti, niin lopetetaan! 🎯"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Objectif atteint ? Alors double-tape sur moi pour terminer ! 🎯"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Target sudah tercapai? Ketuk aku dua kali untuk selesai! 🎯"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obiettivo raggiunto? Allora toccami due volte e chiudiamo! 🎯"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "目標は達成できた? じゃあぼくを2回タッチして終わりにしよう! 🎯"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "목표 달성했어? 그럼 나를 두 번 터치해서 끝내자! 🎯"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nådd målet? Trykk to ganger på meg, så er vi ferdige! 🎯"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Doel gehaald? Tik dan twee keer op mij om af te ronden! 🎯"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cel osiągnięty? To stuknij mnie dwa razy i kończymy! 🎯"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bateu a meta? Então toque duas vezes em mim para terminar! 🎯"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Цель выполнена? Тогда коснитесь меня дважды, и закончим! 🎯"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nått målet? Tryck två gånger på mig så avslutar vi! 🎯"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ถึงเป้าหมายแล้วเหรอ? งั้นแตะฉันสองครั้งเพื่อจบกัน! 🎯"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hedefe ulaştın mı? O zaman bana iki kez dokunup bitirelim! 🎯"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Đạt mục tiêu rồi hả? Chạm đúp vào mình để kết thúc nào! 🎯"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "目标达成了吗？双击我，我们收工吧！🎯"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "目標達成了嗎？那就點我兩下收工吧！🎯"
-          }
-        }
-      }
-    },
     "바로 옆 %.1fm 🌞" : {
       "comment" : "DashboardView.swift: distance to friend (meters)",
       "localizations" : {
@@ -12220,151 +12067,150 @@
         }
       }
     },
-    "배터리 전달" : {
-      "comment" : "DashboardView.swift:561",
+    "밖에 있던 시간만큼 바로 차고, 첫 화면에서 얼마나 남았는지 보여요." : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Předat baterii"
+            "value" : "Nabíjí se rovnou časem venku a první obrazovka ukáže, kolik zbývá."
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Giv batteri"
+            "value" : "Det oplades direkte med din tid udenfor, og første skærm viser, hvor meget der er tilbage."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Batterie übergeben"
+            "value" : "Er lädt direkt mit deiner Zeit draußen, und der Startbildschirm zeigt, wie viel noch übrig ist."
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Μεταφορά μπαταρίας"
+            "value" : "Γεμίζει αμέσως με τον χρόνο σου έξω, και η πρώτη οθόνη δείχνει πόσο απομένει."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Give battery"
+            "value" : "It fills right up with your time outside, and the first screen shows how much is left."
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Give battery"
+            "value" : "It fills right up with your time outside, and the first screen shows how much is left."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Enviar batería"
+            "value" : "Se llena con tu tiempo al aire libre y la primera pantalla muestra cuánto queda."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Siirrä akkua"
+            "value" : "Se latautuu suoraan ulkona vietetyllä ajalla, ja aloitusnäkymä näyttää, paljonko on jäljellä."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Transfert de batterie"
+            "value" : "Elle se remplit avec votre temps dehors, et le premier écran montre ce qu’il reste."
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kirim baterai"
+            "value" : "Langsung terisi sesuai waktumu di luar, dan layar pertama menunjukkan sisanya."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dai la batteria"
+            "value" : "Si ricarica con il tempo passato fuori e la prima schermata mostra quanto resta."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "バッテリーを届ける"
+            "value" : "外にいた時間だけすぐに貯まり、最初の画面で残りがわかります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "배터리 전달"
+            "value" : "밖에 있던 시간만큼 바로 차고, 첫 화면에서 얼마나 남았는지 보여요."
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gi batteri"
+            "value" : "Det lades rett opp med tiden din ute, og første skjerm viser hvor mye som er igjen."
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Batterij doorgeven"
+            "value" : "Hij laadt direct op met je tijd buiten, en het eerste scherm toont hoeveel er nog is."
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Przekaż baterię"
+            "value" : "Ładuje się od razu czasem na dworze, a pierwszy ekran pokazuje, ile zostało."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Enviar bateria"
+            "value" : "Ela enche com o seu tempo ao ar livre, e a primeira tela mostra quanto resta."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Передача заряда"
+            "value" : "Заряжается сразу от времени на улице, а первый экран показывает, сколько осталось."
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ge batteri"
+            "value" : "Det laddas direkt med din tid ute, och första skärmen visar hur mycket som är kvar."
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ส่งแบตเตอรี่"
+            "value" : "ชาร์จทันทีตามเวลาที่อยู่ข้างนอก และหน้าแรกบอกว่ายังเหลือเท่าไร"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pili aktar"
+            "value" : "Dışarıda geçirdiğin süreyle hemen dolar, ilk ekran ne kadar kaldığını gösterir."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chuyển pin"
+            "value" : "Sạc ngay theo thời gian bạn ở ngoài trời, màn hình đầu tiên cho biết còn bao nhiêu."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "传递电量"
+            "value" : "在户外待多久就立刻充多少，首页一眼看出还剩多少。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "傳送電量"
+            "value" : "在戶外待多久就立刻充多少，首頁一眼看出還剩多少。"
           }
         }
       }
@@ -15349,6 +15195,154 @@
         }
       }
     },
+    "손목을 들면 햇빛 배터리와 오늘 받은 햇빛이 보여요." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zvedni zápěstí a uvidíš sluneční baterii i dnešní slunce."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Løft håndleddet for at se dit sollysbatteri og dagens sollys."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heb das Handgelenk, um Sonnenakku und heutiges Sonnenlicht zu sehen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σήκωσε τον καρπό για να δεις την μπαταρία ήλιου και τον σημερινό ήλιο."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raise your wrist to see your sunlight battery and today’s sunlight."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raise your wrist to see your sunlight battery and today’s sunlight."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levanta la muñeca para ver tu batería de sol y el sol de hoy."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nosta rannetta, niin näet auringonvaloakun ja päivän auringonvalon."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levez le poignet pour voir votre batterie solaire et le soleil du jour."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angkat pergelangan tangan untuk melihat baterai sinar matahari dan sinar hari ini."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alza il polso per vedere la batteria di sole e il sole di oggi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手首を上げると、ひかりバッテリーと今日浴びた日光が見えます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "손목을 들면 햇빛 배터리와 오늘 받은 햇빛이 보여요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Løft håndleddet for å se sollysbatteriet og dagens sollys."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Til je pols op om je zonlichtbatterij en het zonlicht van vandaag te zien."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podnieś nadgarstek, by zobaczyć baterię słońca i dzisiejsze słońce."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levante o pulso para ver sua bateria de sol e o sol de hoje."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поднимите запястье, чтобы увидеть солнечный заряд и солнце за сегодня."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyft handleden för att se solljusbatteriet och dagens solljus."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยกข้อมือเพื่อดูแบตเตอรี่แสงแดดและแสงแดดที่ได้รับวันนี้"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bileğini kaldır, güneş pilini ve bugünkü güneşi gör."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nâng cổ tay để xem pin nắng và nắng đã nhận hôm nay."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "抬起手腕，就能看到阳光电量和今天晒到的阳光。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "抬起手腕，就能看到陽光電量和今天曬到的陽光。"
+          }
+        }
+      }
+    },
     "수" : {
       "comment" : "CalendarView.swift: calendar column header for Wednesday — one short character/abbreviation (max 3 chars), Monday-first row",
       "localizations" : {
@@ -17282,155 +17276,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "室內"
-          }
-        }
-      }
-    },
-    "실내로 돌아왔다면 해바라기를 더블탭해봐요 👆👆" : {
-      "comment" : "DashboardView.swift:339",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jsi zpátky uvnitř? Dvakrát klepni na slunečnici 👆👆"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Er du kommet indendørs igen? Dobbelttryk på solsikken 👆👆"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wieder drinnen? Dann doppeltipp auf die Sonnenblume 👆👆"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Γύρισες μέσα; Πάτα δύο φορές το ηλιοτρόπιο 👆👆"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Back inside? Double-tap your sunflower 👆👆"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Back indoors? Double-tap your sunflower 👆👆"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si ya estás dentro, toca dos veces el girasol 👆👆"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oletko jo sisällä? Napauta auringonkukkaa kahdesti 👆👆"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De retour à l’intérieur ? Double-tape sur ton tournesol 👆👆"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sudah kembali ke dalam ruangan? Ketuk bunga matahari dua kali 👆👆"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sei tornato al chiuso? Tocca due volte il girasole 👆👆"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "室内に戻ったら、ひまわりをダブルタップしてね 👆👆"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "실내로 돌아왔다면 해바라기를 더블탭해봐요 👆👆"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tilbake inne? Dobbelttrykk på solsikken 👆👆"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weer binnen? Dubbeltik op de zonnebloem 👆👆"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jesteś już w środku? Stuknij słonecznik dwa razy 👆👆"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voltou para dentro? Toque duas vezes no girassol 👆👆"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вернулись в помещение? Дважды нажмите на подсолнух 👆👆"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Är du inne igen? Dubbeltryck på solrosen 👆👆"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "กลับเข้าข้างในแล้ว ลองแตะทานตะวันสองครั้งนะ 👆👆"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İçeri döndüysen ayçiçeğine çift dokun 👆👆"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vào trong nhà rồi thì chạm đúp vào hoa hướng dương nhé 👆👆"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "回到室内后，双击向日葵就好 👆👆"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "回到室內後，點兩下向日葵吧 👆👆"
           }
         }
       }
@@ -19968,6 +19813,302 @@
         }
       }
     },
+    "앱을 열지 않아도 햇빛 배터리가 먼저 불러요. 연 구독이나 평생 중에 고르세요." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluneční baterie tě zavolá ven, aniž bys otevíral aplikaci. Vyber si roční předplatné nebo navždy."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit sollysbatteri kalder dig ud uden at du åbner appen. Vælg årligt eller for altid."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Sonnenakku ruft dich nach draußen, ohne dass du die App öffnest. Jährlich oder einmalig für immer."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η μπαταρία ήλιου σε καλεί έξω χωρίς να ανοίξεις την εφαρμογή. Διάλεξε ετήσια ή εφ’ όρου ζωής."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sunlight battery calls you outside before you even open the app. Pay yearly or once for life."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sunlight battery calls you outside before you even open the app. Pay yearly or once for life."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu batería de sol te llama a salir sin abrir la app. Elige pago anual o de por vida."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auringonvaloakku kutsuu ulos avaamatta sovellusta. Valitse vuositilaus tai elinikäinen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre batterie solaire vous appelle dehors sans même ouvrir l’app. Abonnement annuel ou achat à vie."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baterai sinar matahari mengajakmu keluar tanpa membuka aplikasi. Pilih tahunan atau seumur hidup."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tua batteria di sole ti chiama fuori senza aprire l’app. Scegli l’anno o per sempre."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリを開かなくても、ひかりバッテリーが外へ誘ってくれます。年額か買い切りを選べます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱을 열지 않아도 햇빛 배터리가 먼저 불러요. 연 구독이나 평생 중에 고르세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sollysbatteriet lokker deg ut uten at du åpner appen. Velg årlig eller for alltid."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je zonlichtbatterij roept je naar buiten zonder dat je de app opent. Kies per jaar of voor altijd."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bateria słońca woła cię na dwór, zanim otworzysz aplikację. Wybierz rok albo dożywotnio."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sua bateria de sol chama você para fora sem abrir o app. Escolha anual ou vitalício."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Солнечный заряд зовёт на улицу, даже если приложение закрыто. Выберите год или навсегда."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solljusbatteriet lockar ut dig utan att du öppnar appen. Välj årsvis eller för alltid."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แบตเตอรี่แสงแดดชวนคุณออกไปข้างนอกได้แม้ไม่ต้องเปิดแอป เลือกแบบรายปีหรือตลอดชีพ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Güneş pilin, uygulamayı açmadan seni dışarı çağırır. Yıllık ya da ömür boyu seç."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin nắng gọi bạn ra ngoài mà không cần mở ứng dụng. Chọn gói năm hoặc trọn đời."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不用打开 App，阳光电量也会先提醒你出门。可选年度订阅或终身买断。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不用打開 App，陽光電量也會先提醒你出門。可選年度訂閱或終身買斷。"
+          }
+        }
+      }
+    },
+    "앱을 열지 않아도 홈 화면에서 햇빛 배터리를 볼 수 있어요." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uvidíš sluneční baterii na ploše, aniž bys otevíral aplikaci."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se dit sollysbatteri på hjemmeskærmen uden at åbne appen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sieh deinen Sonnenakku auf dem Home-Bildschirm, ohne die App zu öffnen."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δες την μπαταρία ήλιου στην οθόνη Αφετηρίας χωρίς να ανοίξεις την εφαρμογή."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See your sunlight battery on the Home Screen without opening the app."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See your sunlight battery on the Home Screen without opening the app."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mira tu batería de sol en la pantalla de inicio sin abrir la app."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näe auringonvaloakkusi kotivalikossa avaamatta sovellusta."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voyez votre batterie solaire sur l’écran d’accueil sans ouvrir l’app."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat baterai sinar matahari di Layar Utama tanpa membuka aplikasi."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vedi la tua batteria di sole nella schermata Home senza aprire l’app."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリを開かなくても、ホーム画面でひかりバッテリーを確認できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱을 열지 않아도 홈 화면에서 햇빛 배터리를 볼 수 있어요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se sollysbatteriet på Hjem-skjermen uten å åpne appen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zie je zonlichtbatterij op het beginscherm zonder de app te openen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobacz baterię słońca na ekranie początkowym bez otwierania aplikacji."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veja sua bateria de sol na Tela de Início sem abrir o app."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Солнечный заряд виден на экране «Домой» без открытия приложения."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se ditt solljusbatteri på hemskärmen utan att öppna appen."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูแบตเตอรี่แสงแดดบนหน้าจอโฮมได้โดยไม่ต้องเปิดแอป"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulamayı açmadan güneş pilini ana ekranda gör."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem pin nắng ngay trên Màn hình chính mà không cần mở ứng dụng."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不用打开 App，就能在主屏幕上看到阳光电量。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不用打開 App，就能在主畫面上看到陽光電量。"
+          }
+        }
+      }
+    },
     "앱을 영어로도 쓸 수 있어요." : {
       "comment" : "Roadmap item detail: English",
       "localizations" : {
@@ -21606,155 +21747,6 @@
         }
       }
     },
-    "에너지 %lld%%" : {
-      "comment" : "DashboardView.swift:448",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energie %lld%%"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energi %lld%%"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energie %lld%%"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ενέργεια %lld%%"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energy %lld%%"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energy %lld%%"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energía %lld%%"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energia %lld %%"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Énergie %lld %%"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energi %lld%%"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energia %lld%%"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "エネルギー %lld%%"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "에너지 %lld%%"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energi %lld%%"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energie %lld%%"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energia %lld%%"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energia %lld%%"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Энергия %lld%%"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energi %lld%%"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "พลัง %lld%%"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enerji %lld%%"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Năng lượng %lld%%"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "能量 %lld%%"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "能量 %lld%%"
-          }
-        }
-      }
-    },
     "연구에 따르면 하루 15분 햇빛으로 세로토닌 분비가 시작되고, 30분이면 수면 시간이 23분 빨라지며 코르티솔이 25% 감소합니다. 45분 이상이면 우울증 치료에 최적 효과를 보입니다." : {
       "comment" : "SettingsView.swift:38 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
@@ -22649,6 +22641,154 @@
         }
       }
     },
+    "오늘 햇빛 목표를 채웠어요" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnešní sluneční cíl je splněný"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har nået dagens sollysmål"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heutiges Sonnenziel erreicht"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Έπιασες τον σημερινό στόχο ήλιου"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You hit today’s sunlight goal"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You’ve hit today’s sunlight goal"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Has cumplido tu meta de sol de hoy"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivän auringonvalotavoite täynnä"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objectif soleil du jour atteint"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Target sinar matahari hari ini tercapai"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hai raggiunto l’obiettivo di sole di oggi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の日光目標を達成しました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 햇빛 목표를 채웠어요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har nådd dagens sollysmål"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je zonlichtdoel voor vandaag is gehaald"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dzisiejszy cel słońca osiągnięty"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você bateu a meta de sol de hoje"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Цель по солнцу на сегодня выполнена"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens solljusmål är nått"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถึงเป้าหมายแสงแดดของวันนี้แล้ว"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugünkü güneş hedefine ulaştın"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bạn đã đạt mục tiêu nắng hôm nay"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天的阳光目标完成了"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天的陽光目標完成了"
+          }
+        }
+      }
+    },
     "오늘은 그만 받기" : {
       "comment" : "DashboardView.swift:265",
       "localizations" : {
@@ -22943,155 +23083,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天的心情"
-          }
-        }
-      }
-    },
-    "오늘의 일광욕을 마치려면 나를 더블탭! ☀️" : {
-      "comment" : "DashboardView.swift:342",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dnešní sluníčkování ukončíš dvojitým klepnutím na mě! ☀️"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dobbelttryk på mig for at slutte dagens solbad! ☀️"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Doppeltipp auf mich, um dein Sonnenbad zu beenden! ☀️"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Για να τελειώσεις το σημερινό λιάσιμο, πάτα με δύο φορές! ☀️"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Double-tap me to wrap up today’s sunbath! ☀️"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Double-tap me to finish today’s sunbathing! ☀️"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Tócame dos veces para terminar el baño de sol de hoy! ☀️"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lopeta päivän aurinkoilu napauttamalla minua kahdesti! ☀️"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pour finir ta séance de soleil, double-tape sur moi ! ☀️"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mau selesai berjemur hari ini? Ketuk aku dua kali! ☀️"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Per chiudere il bagno di sole di oggi, toccami due volte! ☀️"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今日の日光浴を終えるなら、ぼくをダブルタップ! ☀️"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오늘의 일광욕을 마치려면 나를 더블탭! ☀️"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dobbelttrykk på meg for å avslutte dagens solbad! ☀️"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Klaar met zonnen? Dubbeltik op mij! ☀️"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stuknij mnie dwa razy, by zakończyć dzisiejszą słoneczną kąpiel! ☀️"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Para encerrar o banho de sol de hoje, toque duas vezes em mim! ☀️"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Закончить солнечную ванну на сегодня? Дважды нажмите на меня! ☀️"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dubbeltryck på mig när solbadet är klart! ☀️"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "อยากจบการอาบแดดวันนี้ แตะฉันสองครั้ง! ☀️"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bugünkü güneşlenmeyi bitirmek için bana çift dokun! ☀️"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Muốn kết thúc buổi tắm nắng hôm nay, chạm đúp vào mình nhé! ☀️"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "想结束今天的日光浴，就双击我！☀️"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "想結束今天的日光浴，就點我兩下！☀️"
           }
         }
       }
@@ -24731,155 +24722,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "本月摘要"
-          }
-        }
-      }
-    },
-    "이제 그만 들어가도 괜찮아. 나를 두 번 눌러줘! 🏠" : {
-      "comment" : "DashboardView.swift:343",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Už můžeš jít dovnitř. Klepni na mě dvakrát! 🏠"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du kan roligt gå ind nu. Tryk to gange på mig! 🏠"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du kannst jetzt wieder reingehen. Tipp mich zweimal an! 🏠"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Μπορείς πια να μπεις μέσα. Πάτα με δύο φορές! 🏠"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You can head back in now. Just tap me twice! 🏠"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You can head back in now. Tap me twice! 🏠"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ya puedes entrar. ¡Tócame dos veces! 🏠"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voit jo mennä sisälle. Napauta minua kahdesti! 🏠"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu peux rentrer, c’est bon. Double-tape sur moi ! 🏠"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kamu boleh masuk sekarang. Ketuk aku dua kali ya! 🏠"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Puoi anche rientrare, va bene! Toccami due volte! 🏠"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "もう中に入っても大丈夫だよ。ぼくを2回タップしてね! 🏠"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이제 그만 들어가도 괜찮아. 나를 두 번 눌러줘! 🏠"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du kan gå inn nå. Trykk to ganger på meg! 🏠"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je mag wel weer naar binnen. Tik twee keer op mij! 🏠"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Możesz już wracać do środka. Stuknij mnie dwa razy! 🏠"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Já pode entrar, tá? Toque duas vezes em mim! 🏠"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Можно возвращаться домой. Нажмите на меня два раза! 🏠"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nu kan du gå in. Tryck två gånger på mig! 🏠"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "เข้าบ้านได้แล้วนะ แตะฉันสองครั้งเลย! 🏠"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Artık içeri girebilirsin. Bana iki kez dokun! 🏠"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vào nhà được rồi đó. Chạm đúp vào mình nhé! 🏠"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "可以回屋啦，双击我就好！🏠"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "可以回屋裡囉，快點我兩下！🏠"
           }
         }
       }
@@ -28460,453 +28302,6 @@
         }
       }
     },
-    "전달량: %@%%" : {
-      "comment" : "DashboardView.swift:522",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Předáno: %@%%"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mængde: %@%%"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Menge: %@%%"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Μεταφορά: %@%%"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Amount: %@%%"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Amount: %@%%"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cantidad: %@%%"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Siirretään: %@ %%"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quantité : %@ %%"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jumlah dikirim: %@%%"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quantità: %@%%"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "届ける量: %@%%"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "전달량: %@%%"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mengde: %@%%"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Doorgeven: %@%%"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Do przekazania: %@%%"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quantidade: %@%%"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Передать: %@%%"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mängd att ge: %@%%"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ปริมาณที่ส่ง: %@%%"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktarılacak: %@%%"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lượng chuyển: %@%%"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "传递量：%@%%"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "傳送量：%@%%"
-          }
-        }
-      }
-    },
-    "전달하기" : {
-      "comment" : "DashboardView.swift:547",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Předat"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Giv"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Übergeben"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Μεταφορά"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Give"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Give"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviar"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Siirrä"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Donner"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kirim"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dai"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "届ける"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "전달하기"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gi"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Doorgeven"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Przekaż"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enviar"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Передать"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ge"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ส่งเลย"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktar"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chuyển"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "传递"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "傳送"
-          }
-        }
-      }
-    },
-    "전체" : {
-      "comment" : "DashboardView.swift:532",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vše"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alt"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alles"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Όλα"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todo"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kaikki"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tout"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Semua"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tutto"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "すべて"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "전체"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alt"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alles"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wszystko"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tudo"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Всё"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Allt"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ทั้งหมด"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hepsi"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tất cả"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全部"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全部"
-          }
-        }
-      }
-    },
     "정보" : {
       "comment" : "SettingsView.swift:189",
       "localizations" : {
@@ -32032,304 +31427,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "資料來源：Huberman Lab、BMC Public Health 2025、PMC、Anderson 2024、University of Southampton 研究"
-          }
-        }
-      }
-    },
-    "충분한 배터리를 모았어요! 해바라기에게 전달해주세요" : {
-      "comment" : "SunlightManager.swift:663",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Máš dost baterie! Předej ji slunečnici"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du har samlet nok batteri! Giv det til solsikken"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Genug Batterie gesammelt! Gib sie deiner Sonnenblume"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Μάζεψες αρκετή μπαταρία! Δώσ' την στο ηλιοτρόπιο"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You’ve got enough battery! Give it to your sunflower"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You’ve collected enough battery! Give it to your sunflower"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Ya tienes batería de sobra! Dásela a tu girasol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Akku on täynnä! Siirrä se auringonkukalle"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batterie bien remplie ! Donne-la à ton tournesol"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baterai sudah cukup terkumpul! Kirim ke bunga mataharimu ya"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hai raccolto abbastanza batteria! Portala al girasole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "バッテリーがたっぷりたまりました! ひまわりに届けてあげてね"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "충분한 배터리를 모았어요! 해바라기에게 전달해주세요"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du har samlet nok batteri! Gi det til solsikken"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je hebt genoeg batterij verzameld! Geef die aan je zonnebloem"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Masz dość baterii! Przekaż ją słonecznikowi"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bateria cheia! Envie para o girassol"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Батарея заряжена! Передайте её подсолнуху"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du har samlat nog med batteri! Ge det till solrosen"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "สะสมแบตเตอรี่ได้เยอะแล้ว! ส่งให้ทานตะวันได้เลย"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yeterince pil biriktirdin! Ayçiçeğine aktar"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Đã gom đủ pin rồi! Hãy chuyển cho hoa hướng dương nhé"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "电量攒够啦！快传递给向日葵吧"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "電量收集夠了！快傳送給向日葵吧"
-          }
-        }
-      }
-    },
-    "충분히 받았다면 나를 더블탭! 😊" : {
-      "comment" : "DashboardView.swift:340",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Máš dost? Dvakrát na mě klepni! 😊"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Har du fået nok sol? Dobbelttryk på mig! 😊"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Genug Sonne getankt? Dann doppeltipp auf mich! 😊"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Αν πήρες αρκετό ήλιο, πάτα με δύο φορές! 😊"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Had enough sun? Double-tap me! 😊"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Had enough sun? Double-tap me! 😊"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si ya has tenido suficiente, ¡tócame dos veces! 😊"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jos sait jo tarpeeksi, napauta minua kahdesti! 😊"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu en as eu assez ? Double-tape sur moi ! 😊"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kalau sudah cukup, ketuk aku dua kali! 😊"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se hai preso abbastanza sole, toccami due volte! 😊"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "たっぷり浴びたら、ぼくをダブルタップ! 😊"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "충분히 받았다면 나를 더블탭! 😊"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fått nok sol? Dobbelttrykk på meg! 😊"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Genoeg zon gehad? Dubbeltik op mij! 😊"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Masz dość słońca? Stuknij mnie dwa razy! 😊"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Já pegou sol o bastante? Toque duas vezes em mim! 😊"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Солнца хватит? Дважды нажмите на меня! 😊"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fått nog med sol? Dubbeltryck på mig! 😊"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ได้แดดพอแล้ว แตะฉันสองครั้งนะ! 😊"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Yeterince güneş aldıysan bana çift dokun! 😊"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nắng đủ rồi thì chạm đúp vào mình nhé! 😊"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "晒够了的话，双击我哦！😊"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "曬夠了的話，就點我兩下！😊"
           }
         }
       }
@@ -36058,751 +35155,6 @@
         }
       }
     },
-    "해바라기 목표" : {
-      "comment" : "SettingsView.swift:36",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cíl pro slunečnici"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikkens mål"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sonnenblumen-Ziel"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Στόχος ηλιοτρόπιου"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sunflower goal"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sunflower goal"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Meta del girasol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auringonkukan tavoite"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Objectif du tournesol"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Target bunga matahari"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obiettivo del girasole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ひまわりの目標"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "해바라기 목표"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikkemål"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zonnebloemdoel"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cel słonecznika"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Meta do girassol"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Цель подсолнуха"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solrosens mål"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "เป้าหมายทานตะวัน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayçiçeği hedefi"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mục tiêu hoa hướng dương"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向日葵目标"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向日葵目標"
-          }
-        }
-      }
-    },
-    "해바라기 에너지" : {
-      "comment" : "DashboardView.swift:510",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energie slunečnice"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikkens energi"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sonnenblumen-Energie"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ενέργεια ηλιοτρόπιου"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sunflower energy"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sunflower energy"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energía del girasol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auringonkukan energia"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Énergie du tournesol"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energi bunga matahari"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energia del girasole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ひまわりのエネルギー"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "해바라기 에너지"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikkens energi"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zonnebloemenergie"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energia słonecznika"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Energia do girassol"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Энергия подсолнуха"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solrosens energi"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "พลังทานตะวัน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayçiçeği enerjisi"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Năng lượng hoa hướng dương"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向日葵能量"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向日葵能量"
-          }
-        }
-      }
-    },
-    "해바라기가 시들어가고 있어요. 배터리를 전달해주세요" : {
-      "comment" : "SunlightManager.swift:660",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slunečnice vadne. Předej jí baterii"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikken er ved at visne. Giv den batteri"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deine Sonnenblume welkt. Gib ihr die Batterie"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Το ηλιοτρόπιο μαραίνεται. Δώσε του μπαταρία"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower is wilting. Give it some battery"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower is wilting. Please give it some battery"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu girasol se está marchitando. Dale batería"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auringonkukka kuihtuu. Siirrä sille akkua"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ton tournesol se fane. Donne-lui de la batterie"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bunga mataharimu mulai layu. Kirimkan baterai ya"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il girasole sta appassendo. Dagli un po' di batteria"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ひまわりがしおれかけています。バッテリーを届けてあげてね"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "해바라기가 시들어가고 있어요. 배터리를 전달해주세요"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikken holder på å visne. Gi den batteri"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je zonnebloem begint te verwelken. Geef hem snel batterij"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Słonecznik więdnie. Przekaż mu baterię"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O girassol está murchando. Envie a bateria"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Подсолнух вянет. Передайте ему заряд"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solrosen håller på att vissna. Ge den lite batteri"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ทานตะวันกำลังเหี่ยวเฉา ช่วยส่งแบตเตอรี่ให้หน่อยนะ"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayçiçeğin soluyor. Pili aktar"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoa hướng dương đang héo dần. Hãy chuyển pin cho hoa nhé"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向日葵快蔫了，快把电量传递给它吧"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向日葵快要枯萎了，請傳送電量給它"
-          }
-        }
-      }
-    },
-    "해바라기가 위험해요! 지금 배터리를 전달하세요!" : {
-      "comment" : "SunlightManager.swift:657",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slunečnice je v ohrožení! Předej jí baterii hned!"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikken er i fare! Giv den batteri nu!"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deine Sonnenblume ist in Gefahr! Gib ihr jetzt die Batterie!"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Το ηλιοτρόπιο κινδυνεύει! Δώσε του μπαταρία τώρα!"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower is in trouble! Give it battery now!"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower is in trouble! Give it battery now!"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Tu girasol está en peligro! ¡Dale batería ahora!"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auringonkukka on vaarassa! Siirrä akkua heti!"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ton tournesol est en danger ! Donne-lui de la batterie maintenant !"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bunga mataharimu dalam bahaya! Kirim baterai sekarang!"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il girasole è in pericolo! Dagli la batteria adesso!"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ひまわりが大ピンチ! いますぐバッテリーを届けてあげて!"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "해바라기가 위험해요! 지금 배터리를 전달하세요!"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikken er i fare! Gi den batteri nå!"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je zonnebloem is in gevaar! Geef nu batterij door!"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Słonecznik jest w niebezpieczeństwie! Przekaż mu baterię teraz!"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O girassol está em risco! Envie a bateria agora!"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Подсолнуху плохо! Передайте заряд прямо сейчас!"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solrosen är i fara! Ge den batteri nu!"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ทานตะวันอยู่ในอันตราย! ส่งแบตเตอรี่ให้เดี๋ยวนี้!"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayçiçeğin tehlikede! Pili hemen aktar!"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoa hướng dương nguy kịch rồi! Chuyển pin ngay nhé!"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向日葵告急！快传递电量吧！"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向日葵有危險了！快傳送電量給它！"
-          }
-        }
-      }
-    },
-    "해바라기에게 배터리를 전달합니다" : {
-      "comment" : "DashboardView.swift:487",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Předej baterii své slunečnici"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Giv batteri til solsikken"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gib deiner Sonnenblume die Batterie"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Δώσε μπαταρία στο ηλιοτρόπιό σου"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pass your battery to your sunflower"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Give battery to your sunflower"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dale batería a tu girasol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Siirrä akku auringonkukalle"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Donne de la batterie à ton tournesol"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kirim baterai ke bunga mataharimu"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dai la batteria al tuo girasole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ひまわりにバッテリーを届けます"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "해바라기에게 배터리를 전달합니다"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gi batteri til solsikken"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geef je zonnebloem een portie batterij"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Przekaż baterię słonecznikowi"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envia bateria para o girassol"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Передать заряд подсолнуху"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ge batteri till solrosen"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ส่งแบตเตอรี่ให้ทานตะวัน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pili ayçiçeğine aktar"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chuyển pin cho hoa hướng dương"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "把电量传递给向日葵"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "把電量傳送給向日葵"
-          }
-        }
-      }
-    },
     "햇빛" : {
       "comment" : "DashboardView.swift:114",
       "localizations" : {
@@ -37547,6 +35899,302 @@
         }
       }
     },
+    "햇빛 배터리 하나로" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jedna sluneční baterie"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ét sollysbatteri"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein einziger Sonnenakku"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μία μπαταρία ήλιου"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One sunlight battery"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One sunlight battery"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una sola batería de sol"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yksi auringonvaloakku"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une seule batterie solaire"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satu baterai sinar matahari"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un’unica batteria di sole"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ひかりバッテリーをひとつに"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "햇빛 배터리 하나로"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ett sollysbatteri"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eén zonlichtbatterij"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jedna bateria słońca"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma só bateria de sol"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Единый солнечный заряд"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ett enda solljusbatteri"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แบตเตอรี่แสงแดดหนึ่งเดียว"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tek bir güneş pili"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một pin nắng duy nhất"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合而为一的阳光电量"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合而為一的陽光電量"
+          }
+        }
+      }
+    },
+    "햇빛 배터리가 줄어들고 있어요" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tvoje sluneční baterie dochází"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit sollysbatteri er ved at løbe tørt"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Sonnenakku wird schwächer"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η μπαταρία ήλιου σου αδειάζει"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sunlight battery is running low"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your sunlight battery is running low"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu batería de sol se está agotando"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auringonvaloakkusi on hiipumassa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre batterie solaire baisse"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baterai sinar mataharimu mulai menipis"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tua batteria di sole si sta scaricando"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ひかりバッテリーが減ってきています"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "햇빛 배터리가 줄어들고 있어요"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sollysbatteriet ditt begynner å bli tomt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je zonlichtbatterij raakt op"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twoja bateria słońca się wyczerpuje"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sua bateria de sol está acabando"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Солнечный заряд на исходе"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ditt solljusbatteri börjar ta slut"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แบตเตอรี่แสงแดดของคุณกำลังลดลง"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Güneş pilin azalıyor"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin nắng của bạn đang cạn dần"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阳光电量正在减少"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陽光電量正在減少"
+          }
+        }
+      }
+    },
     "햇빛 찾는 중... 탭하면 중지" : {
       "comment" : "DashboardView.swift:587",
       "localizations" : {
@@ -37692,155 +36340,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "尋找陽光中… 點一下即可停止"
-          }
-        }
-      }
-    },
-    "햇빛 충전을 다 했으면 나를 더블탭해서 오늘의 일광욕을 마치자! 🌻" : {
-      "comment" : "DashboardView.swift:338",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slunce nabrané? Dvakrát na mě klepni a dnešní sluníčkování skončí! 🌻"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Er du fuldt opladet med sol? Dobbelttryk på mig, så slutter vi dagens solbad! 🌻"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voll aufgeladen? Doppeltipp auf mich und beende das heutige Sonnenbad! 🌻"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Γέμισες με ήλιο; Πάτα με δύο φορές να κλείσουμε το σημερινό λιάσιμο! 🌻"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All charged up? Double-tap me to finish today’s sunbath! 🌻"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All charged up? Double-tap me to end today’s sunbathing! 🌻"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si ya te has cargado de sol, ¡tócame dos veces y terminamos por hoy! 🌻"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aurinko ladattu? Napauta minua kahdesti, niin päivän aurinkoilu päättyy! 🌻"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batterie solaire pleine ? Double-tape sur moi pour finir ta séance de soleil ! 🌻"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sudah puas mengisi sinar matahari? Ketuk aku dua kali untuk mengakhiri berjemur hari ini! 🌻"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Carica di sole completata? Toccami due volte per chiudere la sessione di oggi! 🌻"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "日ざしの充電が終わったら、ぼくをダブルタップして今日の日光浴をおしまいにしよう! 🌻"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "햇빛 충전을 다 했으면 나를 더블탭해서 오늘의 일광욕을 마치자! 🌻"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ferdig ladet? Dobbelttrykk på meg for å avslutte dagens solbad! 🌻"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zonlicht opgeladen? Dubbeltik op mij om je zonnebad af te sluiten! 🌻"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Naładowano się słońcem? Stuknij mnie dwa razy i zakończ dzisiejszą słoneczną kąpiel! 🌻"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recarga de sol completa? Toque duas vezes em mim para encerrar o banho de sol de hoje! 🌻"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Зарядились солнцем? Дважды нажмите на меня, и закончим сегодняшнюю солнечную ванну! 🌻"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fulladdad av sol? Dubbeltryck på mig så avslutar vi dagens solbad! 🌻"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ชาร์จแดดเต็มแล้ว แตะฉันสองครั้งเพื่อจบการอาบแดดวันนี้กัน! 🌻"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Güneş şarjın tamamsa bana çift dokun, bugünkü güneşlenmeyi bitirelim! 🌻"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sạc nắng xong rồi thì chạm đúp vào mình để kết thúc buổi tắm nắng nhé! 🌻"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "阳光充满电啦，双击我，结束今天的日光浴吧！🌻"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "陽光充飽電了，就點我兩下結束今天的日光浴吧！🌻"
           }
         }
       }
@@ -39037,304 +37536,6 @@
         }
       }
     },
-    "햇빛을 받아 배터리를 충전하는 중이에요" : {
-      "comment" : "SunlightManager.swift:666",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baterie se nabíjí sluncem"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du får sol, og batteriet lader op"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Die Batterie lädt gerade mit Sonne auf"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Η μπαταρία φορτίζει με τον ήλιο"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charging your battery with sunlight"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charging your battery with sunlight"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cargando la batería con el sol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Akku latautuu auringonvalosta"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ta batterie se recharge au soleil"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sedang mengisi baterai dari sinar matahari"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stai ricaricando la batteria con il sole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "日ざしを浴びてバッテリーを充電中です"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "햇빛을 받아 배터리를 충전하는 중이에요"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batteriet lades med sollys"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je batterij wordt opgeladen met zonlicht"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Łapiesz słońce i ładujesz baterię"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recarregando a bateria com o sol"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Заряжаю батарею солнцем"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batteriet laddas av solen"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "กำลังรับแดดชาร์จแบตเตอรี่อยู่"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Güneşle pil doluyor"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Đang tắm nắng để sạc pin"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "正在晒太阳充电中"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "正在曬太陽充電中"
-          }
-        }
-      }
-    },
-    "햇빛을 받아 배터리를 충전하세요" : {
-      "comment" : "SunlightManager.swift:668",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nabíjej baterii sluncem"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Få sol og lad batteriet op"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tanke Sonne und lade die Batterie auf"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Λιάσου για να φορτίσεις την μπαταρία"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Soak up sun to charge your battery"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Soak up some sun to charge your battery"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Carga tu batería con el sol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lataa akku auringonvalolla"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prends le soleil pour recharger ta batterie"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Berjemurlah untuk mengisi baterai"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prendi il sole e ricarica la batteria"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "日ざしを浴びてバッテリーを充電しましょう"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "햇빛을 받아 배터리를 충전하세요"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lad batteriet med sollys"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Laad je batterij op met zonlicht"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Łap słońce, by naładować baterię"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tome sol para recarregar a bateria"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Заряжайте батарею солнцем"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sola och ladda batteriet"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "รับแดดเพื่อชาร์จแบตเตอรี่"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Güneşlenip pilini doldur"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hãy tắm nắng để sạc pin nhé"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "晒晒太阳，给电量充电吧"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "曬曬太陽，為電量充電吧"
-          }
-        }
-      }
-    },
     "햇빛을 쐬러 나가볼까요? 15분이면 세로토닌이 분비되기 시작해요." : {
       "comment" : "NotificationManager.swift:20",
       "localizations" : {
@@ -39629,155 +37830,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "陽光的健康效益"
-          }
-        }
-      }
-    },
-    "현재 배터리" : {
-      "comment" : "DashboardView.swift:494",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktuální baterie"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nuværende batteri"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktuelle Batterie"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Τρέχουσα μπαταρία"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Current battery"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Current battery"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batería actual"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Akun varaus nyt"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batterie actuelle"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baterai saat ini"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batteria attuale"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "現在のバッテリー"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "현재 배터리"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batteri nå"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Huidige batterij"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bateria teraz"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bateria atual"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Текущий заряд"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batteri just nu"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "แบตเตอรี่ตอนนี้"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mevcut pil"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pin hiện có"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "当前电量"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "目前電量"
           }
         }
       }
@@ -40974,453 +39026,6 @@
         }
       }
     },
-    "🌻 해바라기가 시들어가고 있어요!" : {
-      "comment" : "NotificationManager.swift:19",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Slunečnice začíná vadnout!"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Solsikken er ved at visne!"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Deine Sonnenblume lässt die Blätter hängen!"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Το ηλιοτρόπιό σου μαραίνεται!"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Your sunflower is wilting!"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Your sunflower is wilting!"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 ¡Tu girasol se está marchitando!"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Auringonkukka alkaa kuihtua!"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Ton tournesol se fane !"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Bunga mataharimu mulai layu!"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Il girasole sta appassendo!"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 ひまわりがしおれかけています!"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 해바라기가 시들어가고 있어요!"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Solsikken din holder på å visne!"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Je zonnebloem begint te verwelken!"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Twój słonecznik więdnie!"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 O girassol está murchando!"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Подсолнух вянет!"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Solrosen håller på att vissna!"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 ทานตะวันกำลังเหี่ยวเฉา!"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Ayçiçeğin solmaya başladı!"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Hoa hướng dương đang héo dần!"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 向日葵快蔫啦！"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 向日葵快要枯萎了！"
-          }
-        }
-      }
-    },
-    "🌻 해바라기가 활짝 폈어요!" : {
-      "comment" : "NotificationManager.swift:38",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Slunečnice je v plném květu!"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Solsikken står i fuld blomst!"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Deine Sonnenblume blüht voll auf!"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Το ηλιοτρόπιό σου άνθισε!"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Your sunflower is in full bloom!"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Your sunflower is in full bloom!"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 ¡Tu girasol ha florecido!"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Auringonkukka kukkii täydessä loistossa!"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Ton tournesol est en pleine floraison !"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Bunga mataharimu mekar sempurna!"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Il girasole è sbocciato!"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 ひまわりが満開です!"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 해바라기가 활짝 폈어요!"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Solsikken din er i full blomst!"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Je zonnebloem staat in volle bloei!"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Słonecznik w pełnym rozkwicie!"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 O girassol floresceu!"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Подсолнух расцвёл!"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Solrosen blommar för fullt!"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 ทานตะวันบานสะพรั่งแล้ว!"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Ayçiçeğin tam çiçek açtı!"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Hoa hướng dương nở rộ rồi!"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 向日葵盛开啦！"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 向日葵盛開囉！"
-          }
-        }
-      }
-    },
-    "🌻 해바라기에게 주기" : {
-      "comment" : "DashboardView.swift:315",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Dát slunečnici"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Giv til solsikken"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Der Sonnenblume geben"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Δώσε στο ηλιοτρόπιο"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Give to sunflower"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Give to sunflower"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Dárselo al girasol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Anna auringonkukalle"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Donner au tournesol"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Beri ke bunga matahari"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Dai al girasole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 ひまわりにあげる"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 해바라기에게 주기"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Gi til solsikken"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Geef aan zonnebloem"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Daj słonecznikowi"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Dar ao girassol"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Отдать подсолнуху"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Ge till solrosen"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 ให้ทานตะวัน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Ayçiçeğine ver"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 Tặng cho hoa hướng dương"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 送给向日葵"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🌻 送給向日葵"
-          }
-        }
-      }
-    },
     "📅 캘린더" : {
       "comment" : "RecordsView.swift: enum display raw value",
       "localizations" : {
@@ -42378,149 +39983,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sonraki ay"
-          }
-        }
-      }
-    },
-    "해바라기에게 주기" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dát slunečnici"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Giv til solsikken"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der Sonnenblume geben"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Δώσε στο ηλιοτρόπιο"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Give to sunflower"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Give to sunflower"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dárselo al girasol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anna auringonkukalle"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Donner au tournesol"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beri ke bunga matahari"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dai al girasole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ひまわりにあげる"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gi til solsikken"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geef aan zonnebloem"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Daj słonecznikowi"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dar ao girassol"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отдать подсолнуху"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ge till solrosen"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ให้ทานตะวัน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayçiçeğine ver"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tặng cho hoa hướng dương"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "送给向日葵"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "送給向日葵"
           }
         }
       }
@@ -44279,453 +41741,6 @@
         }
       }
     },
-    "Apple Watch에서 해바라기 보기" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slunečnice na Apple Watch"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Din solsikke på Apple Watch"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deine Sonnenblume auf der Apple Watch"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Το ηλιοτρόπιό σου στο Apple Watch"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower on Apple Watch"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower on Apple Watch"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu girasol en el Apple Watch"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auringonkukka Apple Watchissa"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ton tournesol sur l’Apple Watch"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bunga matahari di Apple Watch"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il tuo girasole su Apple Watch"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Watchでひまわりを見る"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Watch에서 해바라기 보기"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikken din på Apple Watch"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je zonnebloem op Apple Watch"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Twój słonecznik na Apple Watch"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seu girassol no Apple Watch"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Подсолнух на Apple Watch"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Din solros på Apple Watch"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ทานตะวันบน Apple Watch"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayçiçeğin Apple Watch’ta"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoa hướng dương trên Apple Watch"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在 Apple Watch 上看向日葵"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在 Apple Watch 上看向日葵"
-          }
-        }
-      }
-    },
-    "손목을 들면 해바라기와 오늘 받은 햇빛이 보이고, 워치에서 바로 배터리를 전달할 수 있어요." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zvedni zápěstí a uvidíš slunečnici i dnešní slunce. Baterii jí předáš přímo z hodinek."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Løft håndleddet for at se din solsikke og dagens sol, og giv den batteri direkte fra uret."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heb das Handgelenk, um Sonnenblume und heutige Sonne zu sehen, und gib ihr die Batterie direkt von der Uhr."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Σήκωσε τον καρπό για να δεις το ηλιοτρόπιο και τον σημερινό ήλιο, και δώσ’ του μπαταρία κατευθείαν από το ρολόι."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Raise your wrist to see your sunflower and today’s sunlight, and give it battery right from your watch."
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Raise your wrist to see your sunflower and today’s sunlight, and give it battery right from your watch."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Levanta la muñeca para ver tu girasol y el sol de hoy, y dale batería desde el reloj."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nosta rannetta, niin näet auringonkukan ja päivän auringon. Anna sille akkua suoraan kellosta."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lève le poignet pour voir ton tournesol et le soleil du jour, et donne-lui la batterie depuis la montre."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Angkat pergelangan untuk melihat bunga matahari dan sinar matahari hari ini, lalu beri baterai langsung dari jam."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alza il polso per vedere il girasole e il sole di oggi, e dagli la batteria direttamente dall’orologio."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手首を上げるとひまわりと今日の日ざしが見え、ウォッチからそのままバッテリーを届けられます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "손목을 들면 해바라기와 오늘 받은 햇빛이 보이고, 워치에서 바로 배터리를 전달할 수 있어요."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Løft håndleddet for å se solsikken og dagens sol, og gi den batteri rett fra klokken."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Til je pols op om je zonnebloem en de zon van vandaag te zien, en geef hem batterij vanaf je horloge."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unieś nadgarstek, by zobaczyć słonecznik i dzisiejsze słońce, i przekaż mu baterię prosto z zegarka."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Levante o pulso para ver seu girassol e o sol de hoje, e passe a bateria direto do relógio."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Поднимите запястье — и увидите подсолнух и сегодняшнее солнце, а заряд можно передать прямо с часов."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lyft handleden för att se din solros och dagens sol, och ge den batteri direkt från klockan."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ยกข้อมือก็เห็นทานตะวันและแดดของวันนี้ แล้วส่งแบตเตอรี่ให้ได้จากนาฬิกาเลย"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bileğini kaldırınca ayçiçeğini ve bugünkü güneşi görürsün, pili de doğrudan saatten verebilirsin."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Giơ cổ tay là thấy hoa hướng dương và lượng nắng hôm nay, có thể trao pin ngay từ đồng hồ."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "抬起手腕就能看到向日葵和今天的阳光，还能直接在手表上传递电量。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "抬起手腕就能看到向日葵和今天的陽光，還能直接在手錶上傳遞電量。"
-          }
-        }
-      }
-    },
-    "Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 해바라기 배터리가 차요." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Čas na denním světle změřený Apple Watch nabíjí baterii slunečnice, i když je aplikace zavřená."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tid i dagslys målt af Apple Watch lader solsikkens batteri op, selv når appen er lukket."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Die von der Apple Watch gemessene Zeit im Tageslicht lädt die Batterie deiner Sonnenblume – auch bei geschlossener App."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ο χρόνος στο φως της μέρας από το Apple Watch φορτίζει την μπαταρία του ηλιοτρόπιου, ακόμη κι όταν η εφαρμογή είναι κλειστή."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Time in daylight measured by Apple Watch charges your sunflower’s battery, even when the app is closed."
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Time in daylight measured by Apple Watch charges your sunflower’s battery, even when the app is closed."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El tiempo con luz natural que mide el Apple Watch carga la batería de tu girasol, aunque la app esté cerrada."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Watchin mittaama päivänvaloaika lataa auringonkukan akkua, vaikka appi olisi suljettu."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le temps à la lumière du jour mesuré par l’Apple Watch recharge la batterie du tournesol, même app fermée."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Waktu di bawah cahaya siang dari Apple Watch mengisi baterai bunga matahari, meski app ditutup."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il tempo alla luce del giorno misurato da Apple Watch ricarica la batteria del girasole, anche ad app chiusa."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Watchが測った日光下の時間で、アプリを開いていなくてもひまわりのバッテリーがたまります。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 해바라기 배터리가 차요."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tid i dagslys målt av Apple Watch lader solsikkens batteri, selv når appen er lukket."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tijd in daglicht gemeten door Apple Watch laadt de batterij van je zonnebloem op, ook als de app dicht is."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Czas w świetle dziennym zmierzony przez Apple Watch ładuje baterię słonecznika, nawet gdy aplikacja jest zamknięta."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O tempo à luz do dia medido pelo Apple Watch carrega a bateria do girassol, mesmo com o app fechado."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Время на дневном свету, измеренное Apple Watch, заряжает батарею подсолнуха, даже когда приложение закрыто."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tid i dagsljus som Apple Watch mäter laddar solrosens batteri, även när appen är stängd."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "เวลากลางแจ้งที่ Apple Watch วัดได้จะชาร์จแบตเตอรี่ให้ทานตะวัน แม้ไม่ได้เปิดแอป"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Watch’un ölçtüğü gün ışığı süresi, uygulama kapalıyken bile ayçiçeğinin pilini doldurur."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thời gian dưới ánh sáng ban ngày do Apple Watch đo sẽ sạc pin cho hoa hướng dương, kể cả khi không mở ứng dụng."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Watch 测得的日光下时间会为向日葵充电，即使没打开 App 也一样。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Watch 測得的日光下時間會為向日葵充電，即使沒開 App 也一樣。"
-          }
-        }
-      }
-    },
     "햇빛바라기 Pro를 쓰고 있어요. 고마워요." : {
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
@@ -45172,156 +42187,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "回復購買項目"
-          }
-        }
-      }
-    },
-    "앱을 열지 않아도 해바라기가 먼저 불러요. 연 구독이나 평생 중에 고르세요." : {
-      "comment" : "Pro paywall / settings (SunflowerPro)",
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slunečnice vás zavolá ven dřív, než aplikaci vůbec otevřete. Plaťte ročně, nebo jednou navždy."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Din solsikke kalder dig ud, før du overhovedet åbner appen. Betal årligt eller én gang for altid."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deine Sonnenblume ruft dich nach draußen, noch bevor du die App öffnest. Jährlich zahlen oder einmal für immer."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Το ηλιοτρόπιό σας σάς καλεί έξω πριν καν ανοίξετε την εφαρμογή. Πληρώστε ετήσια ή μία φορά για πάντα."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower calls you outside before you even open the app. Pay yearly or once for life."
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower calls you outside before you even open the app. Pay yearly or once for life."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu girasol te llama a salir antes incluso de abrir la app. Paga al año o una sola vez para siempre."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auringonkukkasi kutsuu sinut ulos jo ennen kuin avaat apin. Maksa vuosittain tai kerran ikuisesti."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Votre tournesol vous appelle dehors avant même que vous n’ouvriez l’app. Payez à l’année ou une fois pour toujours."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bunga mataharimu memanggilmu keluar bahkan sebelum kamu membuka app. Bayar tahunan atau sekali untuk selamanya."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il tuo girasole ti chiama fuori prima ancora che tu apra l’app. Paga ogni anno o una volta per sempre."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アプリを開かなくても、ひまわりが先に外へ誘ってくれます。年額か買い切りを選べます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱을 열지 않아도 해바라기가 먼저 불러요. 연 구독이나 평생 중에 고르세요."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikken din roper deg ut før du i det hele tatt åpner appen. Betal årlig eller én gang for alltid."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je zonnebloem roept je naar buiten nog voordat je de app opent. Betaal per jaar of eenmalig voor altijd."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Słonecznik zawoła Cię na zewnątrz, zanim w ogóle otworzysz aplikację. Płać co rok albo raz na zawsze."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seu girassol chama você para sair antes mesmo de abrir o app. Pague por ano ou uma vez para sempre."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Подсолнух позовёт вас на улицу, даже если вы не открыли приложение. Подписка на год или покупка навсегда."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Din solros lockar ut dig innan du ens öppnar appen. Betala per år eller en gång för alltid."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ทานตะวันจะชวนคุณออกไปรับแดดก่อน แม้ยังไม่ได้เปิดแอป เลือกจ่ายรายปีหรือจ่ายครั้งเดียวใช้ตลอดไป"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayçiçeğiniz siz uygulamayı açmadan sizi dışarı çağırır. Yıllık ödeyin ya da bir kez ödeyip ömür boyu kullanın."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoa hướng dương gọi bạn ra ngoài ngay cả khi bạn chưa mở ứng dụng. Trả theo năm hoặc một lần dùng mãi."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不用打开 App，向日葵就会先叫你出门晒太阳。可选择按年订阅或一次买断终身版。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不用打開 App，向日葵就會先叫你出門曬太陽。可選擇年訂閱或一次買斷終身版。"
           }
         }
       }
@@ -46072,156 +42937,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自動測量陽光 · 調整標準"
-          }
-        }
-      }
-    },
-    "해바라기 키우기" : {
-      "comment" : "Pro paywall / settings (SunflowerPro)",
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pěstování slunečnice"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pas din solsikke"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sonnenblume großziehen"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Φροντίδα του ηλιοτρόπιου"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grow your sunflower"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Grow your sunflower"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cuidar tu girasol"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auringonkukan kasvatus"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Faire pousser le tournesol"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merawat bunga matahari"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Far crescere il girasole"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ひまわりを育てる"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "해바라기 키우기"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stell solsikken"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je zonnebloem verzorgen"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hodowanie słonecznika"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cuidar do girassol"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выращивание подсолнуха"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ta hand om solrosen"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ปลูกทานตะวัน"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ayçiçeği büyütme"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chăm hoa hướng dương"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "养向日葵"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "養向日葵"
           }
         }
       }
@@ -49972,156 +46687,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在曬太陽"
-          }
-        }
-      }
-    },
-    "앱을 열지 않아도 홈 화면의 해바라기가 오늘 햇빛을 알려 줘요." : {
-      "comment" : "Pro paywall / settings (SunflowerPro)",
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Slunečnice na ploše ukáže dnešní slunce, aniž byste otevírali aplikaci."
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikken på hjemmeskærmen viser dagens sol, uden at du åbner appen."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deine Sonnenblume auf dem Home-Bildschirm zeigt dir die Sonne von heute, ohne dass du die App öffnest."
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Το ηλιοτρόπιο στην οθόνη Αφετηρίας δείχνει τον σημερινό ήλιο χωρίς να ανοίξετε την εφαρμογή."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower on the Home Screen shows today's sun without opening the app."
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your sunflower on the Home Screen shows today's sun without opening the app."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu girasol en la pantalla de inicio te muestra el sol de hoy sin abrir la app."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Koti-valikon auringonkukka näyttää tämän päivän auringon avaamatta appia."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Votre tournesol sur l’écran d’accueil montre le soleil du jour sans ouvrir l’app."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bunga matahari di Layar Utama menunjukkan sinar matahari hari ini tanpa membuka app."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il girasole nella schermata Home ti mostra il sole di oggi senza aprire l’app."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アプリを開かなくても、ホーム画面のひまわりが今日の日光を教えてくれます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱을 열지 않아도 홈 화면의 해바라기가 오늘 햇빛을 알려 줘요."
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solsikken på Hjem-skjermen viser dagens sol uten at du åpner appen."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Je zonnebloem op het beginscherm laat de zon van vandaag zien zonder dat je de app opent."
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Słonecznik na ekranie początkowym pokaże dzisiejsze słońce bez otwierania aplikacji."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seu girassol na Tela de Início mostra o sol de hoje sem abrir o app."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Подсолнух на экране «Домой» покажет сегодняшнее солнце без открытия приложения."
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solrosen på hemskärmen visar dagens sol utan att du öppnar appen."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ทานตะวันบนหน้าจอโฮมจะบอกแดดของวันนี้ โดยไม่ต้องเปิดแอป"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ana ekrandaki ayçiçeği, uygulamayı açmadan bugünkü güneşi gösterir."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoa hướng dương trên Màn hình chính cho bạn biết nắng hôm nay mà không cần mở ứng dụng."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不用打开 App，主屏幕上的向日葵就会告诉你今天晒了多少太阳。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不用打開 App，主畫面上的向日葵就會告訴你今天曬了多少太陽。"
           }
         }
       }
