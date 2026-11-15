@@ -3,6 +3,176 @@
 App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이다.
 평문만 쓴다. 한 줄에 한 문장, 3~5줄, 한 줄 40자 이내.
 
+## 1.2.0
+
+### 앱스토어 (한국어)
+
+새 아이콘과 함께 화면이 크고 단순해졌어요
+밖에 있던 시간만큼 햇빛 배터리가 바로 차요
+해의 빛살로 배터리가 얼마나 남았는지 보여요
+위젯과 Apple Watch도 같은 모습으로 바뀌었어요
+
+### 앱스토어 (English · en)
+
+A new icon and a bigger, simpler screen
+Time outside fills your sunlight battery
+Sun rays show how much battery is left
+Widgets and Apple Watch got the new look
+
+### 앱스토어 (English (UK) · en-GB)
+
+A new icon and a bigger, simpler screen
+Time outside fills your sunlight battery
+Sun rays show how much battery is left
+Widgets and Apple Watch got the new look
+
+### 앱스토어 (简体中文 · zh-Hans)
+
+全新图标，界面更大更简洁
+在户外待多久，阳光电量就充多少
+太阳的光芒显示还剩多少电量
+小组件和 Apple Watch 也换上新样子
+
+### 앱스토어 (繁體中文 · zh-Hant)
+
+全新圖示，畫面更大更簡潔
+在戶外待多久，陽光電量就充多少
+太陽的光芒顯示還剩多少電量
+小工具和 Apple Watch 也換上新樣子
+
+### 앱스토어 (日本語 · ja)
+
+新しいアイコンと大きくシンプルな画面
+外にいた時間だけひかりバッテリーが貯まります
+太陽の光の筋で残りがひと目でわかります
+ウィジェットとApple Watchも新しい見た目に
+
+### 앱스토어 (Русский · ru)
+
+Новая иконка и крупный простой экран
+Время на улице заряжает батарею
+Лучи солнца показывают остаток заряда
+Виджеты и Apple Watch в новом стиле
+
+### 앱스토어 (Español · es)
+
+Nuevo icono y pantalla más simple
+El tiempo al aire libre carga tu batería
+Los rayos del sol muestran cuánto queda
+Widgets y Apple Watch con nuevo diseño
+
+### 앱스토어 (Deutsch · de)
+
+Neues Symbol, größer und klarer
+Zeit draußen lädt deinen Sonnenakku
+Sonnenstrahlen zeigen, was übrig ist
+Widgets und Apple Watch im neuen Look
+
+### 앱스토어 (Français · fr)
+
+Nouvelle icône et écran plus simple
+Le temps dehors recharge votre batterie
+Les rayons montrent ce qui reste
+Widgets et Apple Watch au nouveau style
+
+### 앱스토어 (Italiano · it)
+
+Nuova icona e schermata più semplice
+Il tempo fuori ricarica la batteria
+I raggi del sole mostrano quanto resta
+Widget e Apple Watch con il nuovo look
+
+### 앱스토어 (Português (Brasil) · pt-BR)
+
+Novo ícone e tela maior e mais simples
+O tempo ao ar livre carrega a bateria
+Os raios do sol mostram quanto resta
+Widgets e Apple Watch com novo visual
+
+### 앱스토어 (ไทย · th)
+
+ไอคอนใหม่ หน้าจอใหญ่และเรียบง่ายขึ้น
+เวลาข้างนอกชาร์จแบตเตอรี่แสงแดด
+แสงของดวงอาทิตย์บอกว่าแบตเหลือเท่าไร
+วิดเจ็ตและ Apple Watch ได้หน้าตาใหม่
+
+### 앱스토어 (Tiếng Việt · vi)
+
+Biểu tượng mới, màn hình lớn và gọn hơn
+Thời gian ở ngoài trời sạc pin nắng
+Tia nắng cho biết pin còn bao nhiêu
+Tiện ích và Apple Watch có giao diện mới
+
+### 앱스토어 (Čeština · cs)
+
+Nová ikona a větší, jednodušší obrazovka
+Čas venku nabíjí sluneční baterii
+Sluneční paprsky ukážou, kolik zbývá
+Widgety a Apple Watch v novém vzhledu
+
+### 앱스토어 (Dansk · da)
+
+Nyt ikon og en større, enklere skærm
+Tid udenfor oplader dit sollysbatteri
+Strålerne viser, hvad der er tilbage
+Widgets og Apple Watch i nyt look
+
+### 앱스토어 (Ελληνικά · el)
+
+Νέο εικονίδιο και πιο απλή οθόνη
+Ο χρόνος έξω φορτίζει την μπαταρία
+Οι ακτίνες δείχνουν πόση μπαταρία μένει
+Νέα εμφάνιση σε widget και Apple Watch
+
+### 앱스토어 (Suomi · fi)
+
+Uusi kuvake ja isompi, selkeämpi näkymä
+Ulkona vietetty aika lataa akkua
+Säteet näyttävät, paljonko on jäljellä
+Widgetit ja Apple Watch uudessa asussa
+
+### 앱스토어 (Bahasa Indonesia · id)
+
+Ikon baru, layar lebih besar dan simpel
+Waktu di luar mengisi baterai matahari
+Sinar matahari menunjukkan sisa baterai
+Widget dan Apple Watch tampil baru
+
+### 앱스토어 (Norsk bokmål · nb)
+
+Nytt ikon og en større, enklere skjerm
+Tid ute lader sollysbatteriet ditt
+Solstrålene viser hvor mye som er igjen
+Widgeter og Apple Watch i ny drakt
+
+### 앱스토어 (Nederlands · nl)
+
+Nieuw icoon en een groter, simpel scherm
+Tijd buiten laadt je zonlichtbatterij
+Zonnestralen tonen hoeveel er nog is
+Widgets en Apple Watch in nieuw jasje
+
+### 앱스토어 (Polski · pl)
+
+Nowa ikona i większy, prostszy ekran
+Czas na dworze ładuje baterię słońca
+Promienie pokazują, ile zostało
+Widżety i Apple Watch w nowym wyglądzie
+
+### 앱스토어 (Svenska · sv)
+
+Ny symbol och en större, enklare skärm
+Tid ute laddar ditt solljusbatteri
+Strålarna visar hur mycket som är kvar
+Widgetar och Apple Watch i ny stil
+
+### 앱스토어 (Türkçe · tr)
+
+Yeni simge, daha büyük ve sade ekran
+Dışarıdaki süre güneş pilini doldurur
+Işınlar ne kadar kaldığını gösterir
+Widgetlar ve Apple Watch yeni görünümde
+
 ## 1.1.0
 
 ### 앱스토어 (한국어)
