@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>햇빛바라기</string>
+	<string>Sunny Sunflower</string>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
 		<string>com.sunlighttracker.refresh</string>
 	</array>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>주변 친구를 찾아 함께 햇빛 트래킹을 하기 위해 로컬 네트워크 접근이 필요합니다.</string>
+	<string>Sunny Sunflower uses your local network to find friends nearby so you can get sunlight together.</string>
 	<key>NSNearbyInteractionUsageDescription</key>
-	<string>가까이 있는 친구와 함께 햇빛 트래킹 활동을 하기 위해 사용됩니다.</string>
+	<string>Sunny Sunflower checks how close your friends are so you can get sunlight together.</string>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_suntracker-ni._tcp</string>

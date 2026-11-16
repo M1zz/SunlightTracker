@@ -1,5 +1,5 @@
 {
-  "sourceLanguage" : "ko",
+  "sourceLanguage" : "en",
   "strings" : {
     "CFBundleDisplayName" : {
       "comment" : "App display name on the home screen (CFBundleDisplayName). Short (<=15 chars ideal)",
@@ -615,10 +615,148 @@
       "comment" : "Privacy - Local Network Usage Description",
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místní síť slouží k hledání přátel poblíž, se kterými můžete být spolu na slunci."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruger dit lokale netværk til at finde venner i nærheden, så I kan få sollys sammen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzt dein lokales Netzwerk, um Freunde in der Nähe zu finden, damit ihr gemeinsam Sonne tanken könnt."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χρησιμοποιεί το τοπικό δίκτυο για να βρει φίλους κοντά σας, ώστε να απολαμβάνετε μαζί τον ήλιο."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower uses your local network to find friends nearby so you can get sunlight together."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower uses your local network to find friends nearby so you can get sunlight together."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa tu red local para encontrar amigos cerca y tomar el sol juntos."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käyttää paikallisverkkoa lähellä olevien ystävien löytämiseen, jotta voitte olla auringossa yhdessä."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utilise votre réseau local pour trouver des amis à proximité et profiter du soleil ensemble."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menggunakan jaringan lokal untuk menemukan teman di dekat Anda agar bisa berjemur bersama."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa la rete locale per trovare amici nelle vicinanze e prendere il sole insieme."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近くの友だちを見つけて一緒に日ざしを浴びるために、ローカルネットワークを使います。"
+          }
+        },
         "ko" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "주변 친구를 찾아 함께 햇빛 트래킹을 하기 위해 로컬 네트워크 접근이 필요합니다."
+            "state" : "translated",
+            "value" : "근처 친구를 찾아 함께 햇빛을 받을 수 있게 로컬 네트워크를 사용합니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruker det lokale nettverket for å finne venner i nærheten, så dere kan få sollys sammen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebruikt je lokale netwerk om vrienden in de buurt te vinden, zodat jullie samen zon kunnen tanken."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Używa sieci lokalnej, aby znaleźć znajomych w pobliżu i razem łapać słońce."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa sua rede local para encontrar amigos por perto e tomar sol juntos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Использует локальную сеть, чтобы найти друзей поблизости и вместе бывать на солнце."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Använder ditt lokala nätverk för att hitta vänner i närheten så att ni kan få solljus tillsammans."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้เครือข่ายท้องถิ่นเพื่อค้นหาเพื่อนที่อยู่ใกล้ๆ เพื่อรับแสงแดดด้วยกัน"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yakındaki arkadaşlarını bulup birlikte güneşlenebilmeniz için yerel ağı kullanır."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng mạng cục bộ để tìm bạn bè ở gần, để cùng nhau đón nắng."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用本地网络查找附近的朋友，一起晒太阳。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用區域網路尋找附近的朋友，一起曬太陽。"
           }
         }
       }
@@ -776,10 +914,148 @@
       "comment" : "Privacy - Nearby Interaction Usage Description",
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zjišťuje, jak blízko jsou vaši přátelé, abyste mohli být spolu na slunci."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ser, hvor tæt dine venner er, så I kan få sollys sammen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erkennt, wie nah deine Freunde sind, damit ihr gemeinsam Sonne tanken könnt."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ελέγχει πόσο κοντά είναι οι φίλοι σας, ώστε να απολαμβάνετε μαζί τον ήλιο."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower checks how close your friends are so you can get sunlight together."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunny Sunflower checks how close your friends are so you can get sunlight together."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprueba lo cerca que están tus amigos para tomar el sol juntos."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarkistaa, kuinka lähellä ystäväsi ovat, jotta voitte olla auringossa yhdessä."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vérifie la distance de vos amis pour profiter du soleil ensemble."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memeriksa seberapa dekat teman Anda agar bisa berjemur bersama."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controlla quanto sono vicini i tuoi amici per prendere il sole insieme."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一緒に日ざしを浴びるために、友だちがどれくらい近くにいるかを確かめます。"
+          }
+        },
         "ko" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "가까이 있는 친구와 함께 햇빛 트래킹 활동을 하기 위해 사용됩니다."
+            "state" : "translated",
+            "value" : "가까이 있는 친구와 함께 햇빛을 받을 때 서로 얼마나 가까운지 알아봅니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ser hvor nær vennene dine er, så dere kan få sollys sammen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kijkt hoe dichtbij je vrienden zijn, zodat jullie samen zon kunnen tanken."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprawdza, jak blisko są Twoi znajomi, abyście mogli razem łapać słońce."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verifica a distância dos seus amigos para vocês tomarem sol juntos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Определяет, насколько близко друзья, чтобы вы могли вместе бывать на солнце."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ser hur nära dina vänner är så att ni kan få solljus tillsammans."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตรวจดูว่าเพื่อนอยู่ใกล้แค่ไหน เพื่อรับแสงแดดด้วยกัน"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Birlikte güneşlenebilmeniz için arkadaşlarının ne kadar yakında olduğunu kontrol eder."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kiểm tra bạn bè ở gần đến đâu để cùng nhau đón nắng."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看朋友离你有多近，方便一起晒太阳。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看朋友離你有多近，方便一起曬太陽。"
           }
         }
       }

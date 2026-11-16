@@ -1,5 +1,5 @@
 {
-  "sourceLanguage" : "ko",
+  "sourceLanguage" : "en",
   "strings" : {
     "%@이(가) 옆에서 같이 받는 중!" : {
       "comment" : "DashboardView.swift:737",
@@ -12188,6 +12188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "次の月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음 달"
           }
         },
         "nb" : {
@@ -26799,6 +26805,12 @@
             "value" : "今日の日光"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 받은 햇빛"
+          }
+        },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26940,6 +26952,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日浴びた日光と目標まであとどれくらいかを教えます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 받은 햇빛과 목표까지 남은 시간을 알려 줍니다."
           }
         },
         "nb" : {
@@ -27234,6 +27252,12 @@
             "value" : "今日は日光%1$lld分。目標まであと%2$lld分です。"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 햇빛 %lld분 받았어요. 목표까지 %lld분 남았어요."
+          }
+        },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27375,6 +27399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日は日光%lld分、目標達成です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 햇빛 %lld분, 목표를 채웠어요."
           }
         },
         "nb" : {
@@ -27815,6 +27845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日はまだ日光を浴びていません。少し外に出てみませんか？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘은 아직 햇빛을 받지 않았어요. 잠깐 나가 볼까요?"
           }
         },
         "nb" : {
@@ -31248,6 +31284,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "前の月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이전 달"
           }
         },
         "nb" : {

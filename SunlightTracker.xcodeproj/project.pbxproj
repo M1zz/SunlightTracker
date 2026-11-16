@@ -653,9 +653,9 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다.";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sunny Sunflower";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Sunny Sunflower reads the time in daylight measured by your Apple Watch and adds it to today’s sunlight. Health data never leaves your device.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Sunny Sunflower never writes anything to Health. It only reads your time in daylight.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leeo.sunflower;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
@@ -686,7 +686,7 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SunlightWatchWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sunny Sunflower";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -717,9 +717,9 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다.";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sunny Sunflower";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Sunny Sunflower reads the time in daylight measured by your Apple Watch and adds it to today’s sunlight. Health data never leaves your device.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Sunny Sunflower never writes anything to Health. It only reads your time in daylight.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leeo.sunflower;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
@@ -752,7 +752,7 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sunny Sunflower";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -784,7 +784,7 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sunny Sunflower";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -937,12 +937,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SunlightTracker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sunny Sunflower";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				INFOPLIST_KEY_NSCameraUsageDescription = "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다.";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sunny Sunflower reads the brightness around you through the camera to detect and log your real sun exposure automatically. No photos are taken or saved.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Sunny Sunflower reads the time in daylight measured by your Apple Watch and adds it to today’s sunlight. Health data never leaves your device.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Sunny Sunflower never writes anything to Health. It only reads your time in daylight.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to work out sunrise and sunset times and to track your sunlight more accurately.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -976,12 +976,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SunlightTracker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sunny Sunflower";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				INFOPLIST_KEY_NSCameraUsageDescription = "주변 밝기(조도)를 측정하여 실제 햇빛 노출을 자동으로 감지하고 기록합니다.";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Apple Watch가 잰 '햇빛 아래 있었던 시간'을 읽어 오늘 받은 햇빛에 더합니다. 건강 데이터는 기기 밖으로 보내지 않습니다.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "햇빛바라기는 건강 앱에 아무것도 기록하지 않습니다. 햇빛 아래 있었던 시간을 읽기만 합니다.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "일출/일몰 시간 계산과 정확한 일조량 추적을 위해 위치 정보가 필요합니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sunny Sunflower reads the brightness around you through the camera to detect and log your real sun exposure automatically. No photos are taken or saved.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Sunny Sunflower reads the time in daylight measured by your Apple Watch and adds it to today’s sunlight. Health data never leaves your device.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Sunny Sunflower never writes anything to Health. It only reads your time in daylight.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to work out sunrise and sunset times and to track your sunlight more accurately.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1012,7 +1012,7 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SunlightWatchWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "햇빛바라기";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sunny Sunflower";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
