@@ -4,10 +4,6 @@
 <dict>
 	<key>CFBundleDisplayName</key>
 	<string>Sunny Sunflower</string>
-	<key>BGTaskSchedulerPermittedIdentifiers</key>
-	<array>
-		<string>com.sunlighttracker.refresh</string>
-	</array>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Sunny Sunflower uses your local network to find friends nearby so you can get sunlight together.</string>
 	<key>NSNearbyInteractionUsageDescription</key>

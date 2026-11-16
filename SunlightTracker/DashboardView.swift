@@ -3,7 +3,6 @@ import LeeoKit
 
 struct DashboardView: View {
     @ObservedObject var manager: SunlightManager
-    @ObservedObject var weatherService: WeatherService
     @ObservedObject private var pro = SunflowerPro.shared
     @State private var showManualEntry = false
     @State private var manualMinutes: Double = 15
@@ -77,8 +76,6 @@ struct DashboardView: View {
         .navigationTitle(AppConfig.appName)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            weatherService.fetchSimulatedWeather()
-            manager.requestLocation()
             // 센서는 SunlightManager init에서 자동 시작됨
             // 트래킹(햇빛 감지)은 사용자가 시작하거나 자동 감지로 전환
             if !hasAutoStarted && manager.trackingPhase == .idle && !Self.screenshotIdle {

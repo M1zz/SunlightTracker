@@ -1,6 +1,5 @@
 import Foundation
 import SwiftUI
-import CoreLocation
 import Combine
 import ActivityKit
 import WidgetKit
@@ -20,10 +19,8 @@ class SunlightManager: NSObject, ObservableObject {
     @Published var confirmedElapsedMinutes: Int = 0  // 확인 후 경과 시간 (분)
     @Published var lastKnownLux: Double = 0         // 최근 측정 조도 (게이지 표시용, 재측정 시 갱신)
     @Published var currentSession: SunlightSession?
-    @Published var sunTimes: SunTimes?
     @Published var settings: AppSettings
     @Published var streakCount: Int = 0
-    @Published var locationAuthorized = false
     @Published var batteryStatus: BatteryStatus = BatteryStatus()
     @Published var sunflowerHealth: SunflowerHealth = SunflowerHealth()
     @Published var estimatedBatteryGain: Double = 0  // 트래킹 중 예상 획득량 (UI용)
@@ -38,7 +35,6 @@ class SunlightManager: NSObject, ObservableObject {
     let luxSensor = LuxSensor()
     
     // MARK: - Private
-    private let locationManager = CLLocationManager()
     private var samplingTimer: Timer?
     private var autoTrackTimer: Timer?
     private var cancellables = Set<AnyCancellable>()
@@ -93,14 +89,10 @@ class SunlightManager: NSObject, ObservableObject {
         
         super.init()
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        
         loadRecords()
         loadTodayRecord()
         loadStatus()
         calculateStreak()
-        calculateSunTimes()
         setupLuxObserving()
         setupNearbyObserving()
         startHealthUpdateTimer()
@@ -623,42 +615,6 @@ class SunlightManager: NSObject, ObservableObject {
         updateWidgetData()
     }
 
-    // MARK: - Location
-    func requestLocation() {
-        locationManager.requestWhenInUseAuthorization()
-    }
-    
-    func calculateSunTimes() {
-        guard let location = locationManager.location else {
-            calculateSunTimesForCoordinate(latitude: 37.5665, longitude: 126.9780)
-            return
-        }
-        calculateSunTimesForCoordinate(
-            latitude: location.coordinate.latitude,
-            longitude: location.coordinate.longitude
-        )
-    }
-    
-    private func calculateSunTimesForCoordinate(latitude: Double, longitude: Double) {
-        let now = Date()
-        let calendar = Calendar.current
-        let dayOfYear = calendar.ordinality(of: .day, in: .year, for: now) ?? 1
-        
-        let latRad = latitude * .pi / 180
-        let declination = 23.45 * sin(2 * .pi * (284 + Double(dayOfYear)) / 365) * .pi / 180
-        let hourAngle = acos(-tan(latRad) * tan(declination)) * 180 / .pi
-        let solarNoon = 12.0 - longitude / 15.0 + Double(TimeZone.current.secondsFromGMT()) / 3600.0
-        
-        let sunriseHour = solarNoon - hourAngle / 15.0
-        let sunsetHour = solarNoon + hourAngle / 15.0
-        
-        let startOfDay = calendar.startOfDay(for: now)
-        let sunrise = startOfDay.addingTimeInterval(sunriseHour * 3600)
-        let sunset = startOfDay.addingTimeInterval(sunsetHour * 3600)
-        
-        self.sunTimes = SunTimes(sunrise: sunrise, sunset: sunset)
-    }
-    
     // MARK: - Health Advice System
     let healthAdvices: [SunlightHealthAdvice] = [
         SunlightHealthAdvice(
@@ -1041,31 +997,4 @@ class SunlightManager: NSObject, ObservableObject {
         #endif
     }
 
-}
-
-// MARK: - CLLocationManagerDelegate
-extension SunlightManager: CLLocationManagerDelegate {
-    nonisolated func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        Task { @MainActor in
-            switch manager.authorizationStatus {
-            case .authorizedWhenInUse, .authorizedAlways:
-                locationAuthorized = true
-                manager.requestLocation()
-            default:
-                locationAuthorized = false
-            }
-        }
-    }
-    
-    nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        Task { @MainActor in
-            calculateSunTimes()
-        }
-    }
-    
-    nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        Task { @MainActor in
-            calculateSunTimesForCoordinate(latitude: 37.5665, longitude: 126.9780)
-        }
-    }
 }

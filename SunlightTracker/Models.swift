@@ -180,22 +180,6 @@ struct WeeklySummary {
     }
 }
 
-// MARK: - 일출/일몰 정보
-struct SunTimes {
-    let sunrise: Date
-    let sunset: Date
-    
-    var daylightHours: Double {
-        sunset.timeIntervalSince(sunrise) / 3600
-    }
-    
-    var daylightDescription: String {
-        let hours = Int(daylightHours)
-        let minutes = Int((daylightHours - Double(hours)) * 60)
-        return String(localized: "\(hours)시간 \(minutes)분")
-    }
-}
-
 // MARK: - 앱 설정
 struct AppSettings: Codable {
     var dailyGoalMinutes: Int

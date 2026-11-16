@@ -3,7 +3,6 @@ import LeeoKit
 
 struct ContentView: View {
     @StateObject private var manager = SunlightManager.shared
-    @StateObject private var weatherService = WeatherService()
     @StateObject private var notificationManager = NotificationManager.shared
     @ObservedObject private var pro = SunflowerPro.shared
     /// 스토어 스크린샷용: Debug 빌드에서만 `-ScreenshotTab <번호>` 실행 인자로 처음 탭을 고른다.
@@ -17,7 +16,7 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            DashboardView(manager: manager, weatherService: weatherService)
+            DashboardView(manager: manager)
                 .tabItem {
                     Label("오늘", systemImage: "sun.max.fill")
                 }
@@ -82,7 +81,7 @@ struct ContentView: View {
 
     /// 펼친 화면의 결과 쪽: 오늘 탭 화면 그대로. 햇빛 배터리 · 오늘 받은 햇빛이 늘 보인다.
     private var todayPane: some View {
-        DashboardView(manager: manager, weatherService: weatherService)
+        DashboardView(manager: manager)
     }
 
     private var foldTabItems: [FoldTabBar<Int>.Item] {

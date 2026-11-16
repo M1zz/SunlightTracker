@@ -42,7 +42,6 @@
 		AA000007 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000016 /* HistoryView.swift */; };
 		AA000008 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000017 /* SettingsView.swift */; };
 		AA000009 /* SunGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000018 /* SunGaugeView.swift */; };
-		AA00000A /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000019 /* WeatherService.swift */; };
 		AA00000B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001A /* NotificationManager.swift */; };
 		AA00000C /* LuxSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001B /* LuxSensor.swift */; };
 		AA00000D /* NearbyActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00001C /* NearbyActivityManager.swift */; };
@@ -156,7 +155,6 @@
 		AA000016 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		AA000017 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AA000018 /* SunGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunGaugeView.swift; sourceTree = "<group>"; };
-		AA000019 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		AA00001A /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AA00001B /* LuxSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxSensor.swift; sourceTree = "<group>"; };
 		AA00001C /* NearbyActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyActivityManager.swift; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 				AA000011 /* ContentView.swift */,
 				AA000014 /* Models.swift */,
 				AA000013 /* SunlightManager.swift */,
-				AA000019 /* WeatherService.swift */,
 				AA00001A /* NotificationManager.swift */,
 				AA00001B /* LuxSensor.swift */,
 				AA00001C /* NearbyActivityManager.swift */,
@@ -600,7 +597,6 @@
 				9C1EB0EC2F397AC900CB151B /* SharedWidgetTypes.swift in Sources */,
 				AA000008 /* SettingsView.swift in Sources */,
 				AA000009 /* SunGaugeView.swift in Sources */,
-				AA00000A /* WeatherService.swift in Sources */,
 				AA00000B /* NotificationManager.swift in Sources */,
 				AA00000C /* LuxSensor.swift in Sources */,
 				AA00000D /* NearbyActivityManager.swift in Sources */,
@@ -942,7 +938,6 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sunny Sunflower reads the brightness around you through the camera to detect and log your real sun exposure automatically. No photos are taken or saved.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Sunny Sunflower reads the time in daylight measured by your Apple Watch and adds it to today’s sunlight. Health data never leaves your device.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Sunny Sunflower never writes anything to Health. It only reads your time in daylight.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to work out sunrise and sunset times and to track your sunlight more accurately.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -981,7 +976,6 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sunny Sunflower reads the brightness around you through the camera to detect and log your real sun exposure automatically. No photos are taken or saved.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Sunny Sunflower reads the time in daylight measured by your Apple Watch and adds it to today’s sunlight. Health data never leaves your device.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Sunny Sunflower never writes anything to Health. It only reads your time in daylight.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to work out sunrise and sunset times and to track your sunlight more accurately.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
