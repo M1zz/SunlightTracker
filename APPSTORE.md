@@ -92,7 +92,7 @@ Sun time grows your flower
 
 ### 키워드
 
-vitamind,serotonin,outdoor,daylight,mood,widget,walk,tracker,lux,habit,health,goal,calendar,season
+serotonin,touch grass,circadian,vitamin,morning light,seasonal,sad,uv,wellbeing,outside,vitamind,lux
 
 ### 프로모션 텍스트
 
@@ -228,7 +228,7 @@ https://m1zz.github.io/SunlightTracker/zh-Hans/
 
 ### 키워드
 
-血清素,日照,日光浴,维生素D,光合作用,照度,光照,户外,抑郁,散步,心情,治愈,季节性抑郁,习惯,打卡,健康,日历,小组件,免疫,睡眠,生物钟,紫外线,养成,植物,种花,好友,提醒,压力,焦虑
+血清素,日光浴,维生素D,光合作用,季节性抑郁,免疫,晨光,出门,养花,阳光,心理健康,生物钟,日照,照度,紫外线,抑郁,光照,植物,户外,种花,治愈,散步,压力,焦虑,好友,习惯,睡眠,健康,养成
 
 ### 프로모션 텍스트
 
@@ -364,7 +364,7 @@ https://m1zz.github.io/SunlightTracker/ja/
 
 ### 키워드
 
-セロトニン,幸せホルモン,メンタルヘルス,日照時間,日光,ビタミンD,紫外線,照度,アウトドア,散歩,気分,冬季うつ,習慣,ルーティン,健康,カレンダー,ウィジェット,リマインダー,体内時計,睡眠
+セロトニン,幸せホルモン,冬季うつ,太陽,花を育てる,朝日,植物育成,メンタル,育成,体内時計,ビタミンD,日照時間,紫外線,照度,気分,アウトドア,メンタルヘルス,習慣,ルーティン,散歩,睡眠,健康
 
 ### 프로모션 텍스트
 
