@@ -4,14 +4,6 @@
 <dict>
 	<key>CFBundleDisplayName</key>
 	<string>Sunny Sunflower</string>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>Sunny Sunflower uses your local network to find friends nearby so you can get sunlight together.</string>
-	<key>NSNearbyInteractionUsageDescription</key>
-	<string>Sunny Sunflower checks how close your friends are so you can get sunlight together.</string>
-	<key>NSBonjourServices</key>
-	<array>
-		<string>_suntracker-ni._tcp</string>
-	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -22,8 +14,24 @@
 				<string>sunflower</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.leeo.sunflower</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.leeo.sunflower</string>
+			</array>
+		</dict>
 	</array>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_suntracker-ni._tcp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Sunny Sunflower uses your local network to find friends nearby so you can get sunlight together.</string>
+	<key>NSNearbyInteractionUsageDescription</key>
+	<string>Sunny Sunflower checks how close your friends are so you can get sunlight together.</string>
 </dict>
 </plist>

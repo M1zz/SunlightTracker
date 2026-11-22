@@ -66,6 +66,10 @@ struct ContentView: View {
             }
         }
         #endif
+        // App Store 이벤트 링크(<번들 ID>://paywall)로 열리면 요금제를 띄운다 (LeeoKit).
+        .onOpenURL { url in
+            if LeeoPaywallLink.opensPaywall(url), !pro.isOpen { pro.present(.settings) }
+        }
         // 잠긴 위젯을 누르면 sunflower://pro 로 온다.
         .onOpenURL { url in
             if url.scheme == "sunflower", url.host == "pro", !pro.isOpen { pro.present(.widget) }
