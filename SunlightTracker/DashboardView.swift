@@ -300,7 +300,7 @@ struct NearbyActivityBadge: View {
         if let friendName, peerCount <= 1 {
             return String(localized: "\(friendName)이(가) 옆에서 같이 받는 중!")
         }
-        return String(localized: "\(peerCount)명이랑 같이 받는 중!")
+        return String(localized: "\(peerCount)명이랑 같이 받는 중!", locale: AppLocale.locale)
     }
 
     var body: some View {

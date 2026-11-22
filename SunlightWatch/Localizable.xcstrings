@@ -4,6 +4,12 @@
     "%lld / %lld분" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld دقيقة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -153,6 +159,48 @@
     "%lld분" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقائق"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقتان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -302,6 +350,12 @@
     "아이폰에서 햇빛바라기를 열어 주세요" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "افتح دوّار الشمس على iPhone"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -451,6 +505,12 @@
     "오늘의 햇빛" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شمس اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -600,6 +660,12 @@
     "햇빛 %lld/%lld분" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشمس %1$lld/%2$lld د"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -748,6 +814,12 @@
     },
     "햇빛 배터리" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -896,6 +968,12 @@
     },
     "햇빛 배터리와 오늘 받은 햇빛" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية الشمس وشمس اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",

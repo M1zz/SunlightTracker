@@ -45,6 +45,8 @@ struct SunRays<Center: View>: View {
                         .offset(y: -side * 0.38)
                         .rotationEffect(.degrees(Double(i) * 360 / Double(Self.rayCount)))
                 }
+                // 빛살은 12시부터 시계 방향으로 켜진다. 오른쪽에서 왼쪽으로 쓰는 언어(아랍어)에서도 같은 방향
+                .environment(\.layoutDirection, .leftToRight)
                 // 비어 있으면 흐린 해, 찰수록 노랗게 밝아진다
                 Circle()
                     .fill(SunPalette.emptySun)

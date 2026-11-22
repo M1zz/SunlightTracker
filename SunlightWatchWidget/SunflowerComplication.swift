@@ -50,6 +50,7 @@ struct SunflowerComplication: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: "SunflowerComplication", provider: SunflowerProvider()) { entry in
             SunflowerComplicationView(entry: entry)
+                .appLocale()
                 .containerBackground(.fill.tertiary, for: .widget)
         }
         .configurationDisplayName("햇빛 배터리")

@@ -113,7 +113,7 @@ struct ProPaywallView: View {
         case .monthlyStats:
             String(localized: "월간 통계는 Pro에서 열려요. 지난 기록은 캘린더에서 그대로 볼 수 있어요.", comment: "Paywall lead: picked Monthly in stats. Past days stay visible in the calendar")
         case .weekGoal(let minutes):
-            String(localized: "이번 주 햇빛 \(minutes)분을 모았어요", comment: "Paywall lead: on the day the daily goal is met for the 7th time. %lld = minutes of sunlight this week")
+            String(localized: "이번 주 햇빛 \(minutes)분을 모았어요", locale: AppLocale.locale, comment: "Paywall lead: on the day the daily goal is met for the 7th time. %lld = minutes of sunlight this week")
         case .settings:
             nil
         }

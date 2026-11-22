@@ -36,7 +36,7 @@ class NotificationManager: ObservableObject {
     func scheduleGoalAchieved(minutes: Int) {
         let content = UNMutableNotificationContent()
         content.title = String(localized: "오늘 햇빛 목표를 채웠어요")
-        content.body = String(localized: "오늘 \(minutes)분의 햇빛으로 수면의 질이 좋아질 거예요. 대단해요!")
+        content.body = String(localized: "오늘 \(minutes)분의 햇빛으로 수면의 질이 좋아질 거예요. 대단해요!", locale: AppLocale.locale)
         content.sound = .default
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)

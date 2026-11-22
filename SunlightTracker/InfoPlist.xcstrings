@@ -4,6 +4,12 @@
     "CFBundleDisplayName" : {
       "comment" : "App display name on the home screen (CFBundleDisplayName). Short (<=15 chars ideal)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دوّار الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -165,6 +171,12 @@
     "NSCameraUsageDescription" : {
       "comment" : "iOS camera permission prompt (NSCameraUsageDescription) — the camera is only used to read ambient brightness via exposure data; no photos are taken or stored",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يقيس دوّار الشمس سطوع المكان من حولك عبر الكاميرا ليكتشف وقتك تحت الشمس ويسجّله تلقائيًا. لا يلتقط أي صور ولا يحفظها."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -315,6 +327,12 @@
       "comment" : "Health permission: reads Time in Daylight",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يقرأ دوّار الشمس «الوقت في ضوء النهار» الذي تقيسه Apple Watch ويضيفه إلى شمس اليوم. بياناتك الصحية لا تغادر جهازك."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -465,6 +483,12 @@
       "comment" : "Health permission text required by App Store; the app never writes to Health",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يكتب دوّار الشمس أي شيء في تطبيق صحتي، بل يقرأ فقط وقتك في ضوء النهار."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -615,6 +639,12 @@
       "comment" : "Privacy - Local Network Usage Description",
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستخدم دوّار الشمس شبكتك المحلية للعثور على الأصدقاء القريبين لتتشمّسوا معًا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -765,6 +795,12 @@
       "comment" : "Privacy - Nearby Interaction Usage Description",
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتحقق دوّار الشمس من مدى قرب أصدقائك لتتشمّسوا معًا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",

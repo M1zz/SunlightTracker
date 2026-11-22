@@ -4,6 +4,12 @@
     "CFBundleDisplayName" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دوّار الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -166,6 +172,12 @@
       "comment" : "Health permission: reads Time in Daylight",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يقرأ دوّار الشمس «الوقت في ضوء النهار» الذي تقيسه Apple Watch ويضيفه إلى شمس اليوم. بياناتك الصحية لا تغادر جهازك."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -316,6 +328,12 @@
       "comment" : "Health permission text required by App Store; the app never writes to Health",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يكتب دوّار الشمس أي شيء في تطبيق صحتي، بل يقرأ فقط وقتك في ضوء النهار."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",

@@ -117,6 +117,8 @@ struct TodayProgressWidgetView: View {
                     .trim(from: 0, to: progress)
                     .stroke(SunPalette.sun, style: StrokeStyle(lineWidth: 12, lineCap: .round))
                     .rotationEffect(.degrees(-90))
+                    // 시계처럼 위에서 시계 방향으로 찬다. 오른쪽에서 왼쪽으로 쓰는 언어(아랍어)에서도 같은 방향
+                    .environment(\.layoutDirection, .leftToRight)
                 Text("\(entry.widgetData.todayMinutes)분")
                     .font(.system(size: 26, weight: .bold, design: .rounded))
                     .minimumScaleFactor(0.6)
@@ -231,6 +233,7 @@ struct SunflowerWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
             ProLockedWidget(isOpen: entry.isOpen) { SunflowerWidgetView(entry: entry) }
+                .appLocale()
         }
         .configurationDisplayName("햇빛 배터리")
         .description("남은 햇빛 배터리를 확인하세요")
@@ -244,6 +247,7 @@ struct TodayProgressWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
             ProLockedWidget(isOpen: entry.isOpen) { TodayProgressWidgetView(entry: entry) }
+                .appLocale()
         }
         .configurationDisplayName("오늘 진행도")
         .description("오늘의 햇빛 목표 달성 현황")
@@ -257,6 +261,7 @@ struct CompactInfoWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
             ProLockedWidget(isOpen: entry.isOpen) { CompactInfoWidgetView(entry: entry) }
+                .appLocale()
         }
         .configurationDisplayName("종합 정보")
         .description("햇빛 배터리와 오늘의 햇빛을 한눈에")
@@ -270,6 +275,7 @@ struct DashboardWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: SunflowerWidgetProvider()) { entry in
             ProLockedWidget(isOpen: entry.isOpen) { DashboardWidgetView(entry: entry) }
+                .appLocale()
         }
         .configurationDisplayName("대시보드")
         .description("전체 정보를 한눈에 확인")

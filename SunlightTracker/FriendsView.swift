@@ -236,7 +236,7 @@ struct FriendGraphView: View {
 extension Date {
     var friendDateString: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale.current
+        formatter.locale = AppLocale.locale
         formatter.setLocalizedDateFormatFromTemplate("MMMMd")
         return formatter.string(from: self)
     }

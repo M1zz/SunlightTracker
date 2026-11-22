@@ -837,7 +837,7 @@ class SunlightManager: NSObject, ObservableObject {
         let calendar = Calendar.current
         var data: [(String, Int, Double)] = []
         let formatter = DateFormatter()
-        formatter.locale = Locale.current
+        formatter.locale = AppLocale.locale
         formatter.dateFormat = "E"
 
         for i in (0..<7).reversed() {

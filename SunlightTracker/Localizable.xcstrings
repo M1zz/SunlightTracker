@@ -4,6 +4,12 @@
     "%@이(가) 옆에서 같이 받는 중!" : {
       "comment" : "DashboardView.swift:737",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ يتشمّس بجانبك الآن!"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -157,6 +163,12 @@
     "%lld / %lld분" : {
       "comment" : "DashboardView.swift:193",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld دقيقة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -307,6 +319,48 @@
     "%lld명이랑 같이 받는 중!" : {
       "comment" : "DashboardView.swift:739",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld أشخاص يتشمّسون معك الآن!"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld شخصًا يتشمّسون معك الآن!"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "شخص واحد يتشمّس معك الآن!"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld شخص يتشمّسون معك الآن!"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "شخصان يتشمّسان معك الآن!"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld شخص يتشمّسون معك الآن!"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -456,6 +510,48 @@
     "%lld번" : {
       "comment" : "FriendsView.swift:184",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld مرات"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld مرة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مرة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld مرة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مرتان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld مرة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -605,6 +701,48 @@
     "%lld번 함께" : {
       "comment" : "FriendsView.swift:120",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "معًا %lld مرات"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "معًا %lld مرة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "معًا مرة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "معًا %lld مرة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "معًا مرتين"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "معًا %lld مرة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -754,6 +892,48 @@
     "%lld분" : {
       "comment" : "CalendarView.swift:327",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقائق"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقتان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -903,6 +1083,48 @@
     "%lld세션" : {
       "comment" : "HistoryView.swift:236",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld جلسات"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld جلسة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "جلسة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld جلسة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "جلستان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld جلسة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1052,6 +1274,48 @@
     "%lld일" : {
       "comment" : "CalendarView.swift:281",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld أيام"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld يومًا"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "يوم واحد"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld يوم"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "يومان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld يوم"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1201,6 +1465,48 @@
     "%lld회" : {
       "comment" : "CalendarView.swift:207",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld مرات"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld مرة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مرة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld مرة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مرتان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld مرة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1365,6 +1671,12 @@
     },
     "밖에 나가면 차올라요" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اخرج إلى الشمس لتمتلئ"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1513,6 +1825,12 @@
     },
     "햇빛 찾는 중" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ البحث عن الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1674,6 +1992,12 @@
     "🌻 %@이(가) 옆에서 햇빛을 받고 있어요!" : {
       "comment" : "DashboardView.swift:92",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🌻 %@ يتشمّس بالقرب منك!"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1823,6 +2147,12 @@
     "🌻 함께한 친구들" : {
       "comment" : "FriendsView.swift:86",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🌻 رفاق الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1973,6 +2303,12 @@
       "comment" : "RecordsView.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📅 التقويم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2123,6 +2459,12 @@
       "comment" : "RecordsView.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📊 الإحصاءات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2272,6 +2614,12 @@
     "5분" : {
       "comment" : "DashboardView.swift:641",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 دقائق"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2421,6 +2769,12 @@
     "10분" : {
       "comment" : "SettingsView.swift:30",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 دقائق"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2570,6 +2924,12 @@
     "10분 - 체내 시계 동기화" : {
       "comment" : "SettingsView.swift:146",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 دقائق - ضبط الساعة البيولوجية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2719,6 +3079,12 @@
     "10분의 자연광으로 체내 시계가 동기화되기 시작하고, 피부에서 비타민D 생성이 시작됩니다." : {
       "comment" : "SunlightManager.swift:602",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عشر دقائق من الضوء الطبيعي تبدأ بضبط ساعتك البيولوجية، ويبدأ جلدك في إنتاج فيتامين د."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2868,6 +3234,12 @@
     "15분 - 세로토닌 활성화" : {
       "comment" : "SettingsView.swift:147",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "15 دقيقة - تنشيط السيروتونين"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3017,6 +3389,12 @@
     "15분의 햇빛 노출로 세로토닌 수치가 상승하여 기분이 개선되기 시작합니다." : {
       "comment" : "SunlightManager.swift:609",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ربع ساعة تحت الشمس ترفع مستوى السيروتونين، فيبدأ مزاجك بالتحسن."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3166,6 +3544,12 @@
     "20분 이상의 햇빛 노출 시 임상적으로 측정 가능한 수준의 기분 개선이 나타납니다." : {
       "comment" : "SunlightManager.swift:616",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مع 20 دقيقة أو أكثر تحت الشمس يصبح تحسّن المزاج قابلًا للقياس سريريًا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3315,6 +3699,12 @@
     "30분 - 수면 & 스트레스" : {
       "comment" : "SettingsView.swift:148",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 دقيقة - النوم والتوتر"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3464,6 +3854,12 @@
     "30분의 자연광 노출은 수면 시작 시간을 23분 앞당깁니다. 불면증 환자는 60분 햇빛 노출로 수면시간이 51분 증가합니다." : {
       "comment" : "Models.swift:276",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نصف ساعة من الضوء الطبيعي تجعلك تغفو أبكر بـ23 دقيقة. ولمن يعانون الأرق، تضيف 60 دقيقة من الشمس 51 دقيقة إلى نومهم."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3613,6 +4009,12 @@
     "30분의 자연광은 수면 시간을 23분 앞당기고, 코르티솔 수치를 25% 감소시킵니다. 계절성 우울증(SAD) 치료 표준량입니다." : {
       "comment" : "SunlightManager.swift:623 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نصف ساعة من الضوء الطبيعي تجعلك تغفو أبكر بـ23 دقيقة وتخفض الكورتيزول بنسبة 25%. وهي الجرعة المعتادة لعلاج الاكتئاب الموسمي."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3762,6 +4164,12 @@
     "45분 - 우울증 최적 치료" : {
       "comment" : "SettingsView.swift:149",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "45 دقيقة - الأفضل للاكتئاب"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3911,6 +4319,12 @@
     "45분의 햇빛 노출은 우울증 치료에 최적의 효과를 보입니다. 20분 대비 현저한 증상 개선이 관찰됩니다." : {
       "comment" : "SunlightManager.swift:630",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "45 دقيقة تحت الشمس هي الأنسب لعلاج الاكتئاب، مع تحسّن واضح في الأعراض مقارنةً بـ20 دقيقة."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4060,6 +4474,12 @@
     "60분 - 수면 대폭 개선" : {
       "comment" : "SettingsView.swift:150",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "60 دقيقة - نوم أفضل بكثير"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4209,6 +4629,12 @@
     "60분의 자연광 노출은 불면증 환자의 수면시간을 51분 증가시키고, 혈압을 11% 감소시킵니다." : {
       "comment" : "SunlightManager.swift:637 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساعة من الضوء الطبيعي تضيف 51 دقيقة إلى نوم من يعانون الأرق، وتخفض ضغط الدم بنسبة 11%."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4358,6 +4784,12 @@
     "100 (흐림)" : {
       "comment" : "SettingsView.swift:61",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100 (غائم)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4507,6 +4939,12 @@
     "120분" : {
       "comment" : "DashboardView.swift:643",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "120 دقيقة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4657,6 +5095,12 @@
     "2000 (맑음)" : {
       "comment" : "SettingsView.swift:63",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2000 (صافٍ)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4807,6 +5251,12 @@
     "Apple Watch 햇빛 시간 받기" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وقت الشمس من Apple Watch"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4956,6 +5406,12 @@
     "Apple Watch가 잰 ‘햇빛 아래 있었던 시간’을 건강 앱에서 읽어 오늘 햇빛에 더해요. 앱을 켜 두지 않아도 배터리가 차요. 카메라로 잰 시간과 겹치면 한 번만 세고, 건강 데이터는 기기 밖으로 나가지 않아요." : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يقرأ التطبيق «الوقت في ضوء النهار» الذي تسجّله Apple Watch في تطبيق صحتي ويضيفه إلى شمس اليوم. تمتلئ البطارية حتى والتطبيق مغلق. والوقت الذي سبق أن قاسته الكاميرا لا يُحسب مرتين، وبياناتك الصحية لا تغادر جهازك."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5105,6 +5561,12 @@
     "Apple Watch가 잰 햇빛 시간으로, 앱을 켜 두지 않아도 햇빛 배터리가 차요." : {
       "comment" : "Roadmap item detail: daylight time from Apple Watch via Health",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوقت الذي تقيسه Apple Watch تحت ضوء النهار يشحن بطارية الشمس حتى والتطبيق مغلق."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5254,6 +5716,48 @@
     "Apple Watch에서 %lld분" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "من Apple Watch: %lld دقائق"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "من Apple Watch: %lld دقيقة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "من Apple Watch: دقيقة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "من Apple Watch: %lld دقيقة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "من Apple Watch: دقيقتان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "من Apple Watch: %lld دقيقة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5403,6 +5907,12 @@
     "Apple Watch에서 햇빛 배터리 보기" : {
       "comment" : "Roadmap item: Apple Watch app and complication",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية الشمس على Apple Watch"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5552,6 +6062,12 @@
     "Face ID 잠금" : {
       "comment" : "Roadmap item: Face ID lock",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "القفل بـ Face ID"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5701,6 +6217,12 @@
     "Face ID나 Touch ID로 앱을 잠가 내 기록을 지켜요." : {
       "comment" : "Roadmap item detail: Face ID lock",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اقفل التطبيق بـ Face ID أو Touch ID لتبقى سجلاتك لك وحدك."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5851,6 +6373,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متاح في Pro"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6001,6 +6529,12 @@
       "comment" : "Roadmap item: ask Siri without naming the app",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسأل Siri مباشرة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6150,6 +6684,12 @@
     "Siri에게 물으면 오늘 쬔 햇빛 시간을 바로 알려 줘요." : {
       "comment" : "Roadmap item detail: Siri and Shortcuts",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسأل Siri وسيخبرك فورًا بالوقت الذي قضيته تحت الشمس اليوم."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6299,6 +6839,12 @@
     "Siri와 단축어" : {
       "comment" : "Roadmap item: Siri and Shortcuts",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri والاختصارات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6449,6 +6995,12 @@
       "comment" : "친구 탭 이름과 제목 (여러 명)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأصدقاء"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6599,6 +7151,12 @@
       "comment" : "기록 탭 이름과 제목 (캘린더 · 통계)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السجل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6747,6 +7305,12 @@
     },
     "Today’s Sunlight" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شمس اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6896,6 +7460,12 @@
     "VoiceOver로 더 편하게" : {
       "comment" : "Roadmap item: better VoiceOver support",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تجربة أفضل مع VoiceOver"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7045,6 +7615,12 @@
     "강한 햇빛" : {
       "comment" : "DashboardView.swift:113",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شمس قوية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7194,6 +7770,12 @@
     "같이 받기 💛" : {
       "comment" : "DashboardView.swift:98",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشمّس معه 💛"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7342,6 +7924,12 @@
     },
     "같이 받으면 햇살이 알록달록 물들고, 친구 탭에 함께한 기록이 남아요." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حين تتشمّسان معًا تتلوّن أشعة الشمس، ويُحفظ وقتكما في تبويب الأصدقاء."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7492,6 +8080,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سياسة الخصوصية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7642,6 +8236,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الصحة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7791,6 +8391,12 @@
     "건강 앱" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطبيق صحتي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7941,6 +8547,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بصحة جيدة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8089,6 +8701,12 @@
     },
     "곧 바닥나요" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أوشكت على النفاد"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8239,6 +8857,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إدارة الاشتراك"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8389,6 +9013,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتجدد الاشتراك تلقائيًا بالسعر نفسه ما لم تُلغِه قبل نهاية المدة بـ24 ساعة على الأقل، ويُحصَّل المبلغ من حساب Apple. إذا بدأت الاشتراك السنوي لأول مرة فستدفع السنة الأولى بالسعر المخفّض، ثم يتجدد بالسعر المعتاد. يمكنك إدارة الاشتراك أو إلغاؤه من إعدادات حسابك في App Store. أما «مدى الحياة» فهو دفعة واحدة وليس اشتراكًا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8539,6 +9169,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استعادة المشتريات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8688,6 +9324,12 @@
     "근육 기능" : {
       "comment" : "Models.swift:266",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وظائف العضلات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8836,6 +9478,12 @@
     },
     "근처에서 같은 앱을 사용하는 사람과 함께 햇빛을 받으면 햇살이 알록달록하게 물들고, 친구 탭에 함께한 기록이 쌓입니다. 물든 색은 3일에 걸쳐 서서히 원래 색으로 돌아옵니다." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حين تتشمّس قرب شخص آخر يستخدم التطبيق، تتلوّن أشعة الشمس ويُضاف وقتكما معًا إلى تبويب الأصدقاء. وتعود الألوان إلى طبيعتها تدريجيًا خلال 3 أيام."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -8985,6 +9633,12 @@
     "글자 크기를 키워도 잘리지 않고 보기 좋게 다시 배치돼요." : {
       "comment" : "Roadmap item detail: Dynamic Type layouts",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تتكيّف الشاشات بأناقة عند تكبير النص بدلًا من أن يُقتطع منها شيء."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9134,6 +9788,12 @@
     "금" : {
       "comment" : "CalendarView.swift: calendar column header for Friday — one short character/abbreviation (max 3 chars), Monday-first row",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9283,6 +9943,12 @@
     "기간" : {
       "comment" : "HistoryView.swift:41",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الفترة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9432,6 +10098,12 @@
     "기기 간 동기화" : {
       "comment" : "Roadmap item: iCloud sync",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزامنة بين الأجهزة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9582,6 +10254,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الميزة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9731,6 +10409,12 @@
     "기록" : {
       "comment" : "CalendarView.swift: button label — add (verb) a day record",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -9881,6 +10565,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصدير السجل (CSV)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10030,6 +10720,12 @@
     "기록 일수" : {
       "comment" : "CalendarView.swift:281",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أيام مسجّلة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10179,6 +10875,12 @@
     "기록이 없습니다" : {
       "comment" : "HistoryView.swift:134",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد بيانات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10328,6 +11030,12 @@
     "기록하기" : {
       "comment" : "CalendarView.swift:406",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجّل يومك"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10477,6 +11185,12 @@
     "기분" : {
       "comment" : "CSV column: mood",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزاج"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10626,6 +11340,12 @@
     "기분 개선" : {
       "comment" : "Models.swift:259",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحسين المزاج"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10775,6 +11495,12 @@
     "기분 개선 효과 측정 가능" : {
       "comment" : "SunlightManager.swift:615",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحسّن ملموس في المزاج"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10924,6 +11650,12 @@
     "기준 이상 조도가 3회 연속 감지되면 세션이 자동 시작됩니다" : {
       "comment" : "SettingsView.swift:137",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تبدأ الجلسة تلقائيًا بعد 3 قراءات متتالية فوق حدّ السطوع"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11073,6 +11805,12 @@
     "나" : {
       "comment" : "FriendsView.swift:195",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أنا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11223,6 +11961,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ليس الآن"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11372,6 +12116,12 @@
     "날짜" : {
       "comment" : "CSV column: date",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التاريخ"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11521,6 +12271,12 @@
     "뇌에서 세로토닌 분비가 증가하여 기분이 개선됩니다" : {
       "comment" : "SettingsView.swift:147",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يفرز دماغك مزيدًا من السيروتونين فيتحسّن مزاجك"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11671,6 +12427,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حاول مجددًا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11820,6 +12582,12 @@
     "다음 달" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشهر التالي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -11969,6 +12737,12 @@
     "다음에" : {
       "comment" : "DashboardView.swift:99",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ربما لاحقًا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12118,6 +12892,12 @@
     "대비를 높이거나 색을 구별하기 어려워도 내용을 알아볼 수 있어요." : {
       "comment" : "Roadmap item detail: contrast and color",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يبقى كل شيء سهل القراءة حتى مع زيادة التباين أو صعوبة التمييز بين الألوان."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12267,6 +13047,12 @@
     "더 많은 나라 말로 앱을 쓸 수 있게 해요." : {
       "comment" : "Roadmap item detail: more languages",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استخدم التطبيق بلغات أكثر."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12416,6 +13202,12 @@
     "더 많은 언어" : {
       "comment" : "Roadmap item: more languages",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لغات أكثر"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12565,6 +13357,12 @@
     "데이터" : {
       "comment" : "SettingsView.swift:173",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البيانات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12714,6 +13512,12 @@
     "데이터 초기화" : {
       "comment" : "SettingsView.swift:209",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مسح البيانات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -12863,6 +13667,12 @@
     "마지막 만남 %@" : {
       "comment" : "FriendsView.swift:113",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آخر لقاء: %@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13012,6 +13822,12 @@
     "만성질환 예방" : {
       "comment" : "Models.swift:272",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوقاية من الأمراض المزمنة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13161,6 +13977,12 @@
     "맑음" : {
       "comment" : "WeatherService.swift:41",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صافٍ"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13310,6 +14132,12 @@
     "매우 안 좋음" : {
       "comment" : "Models.swift:57",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيئ جدًا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13459,6 +14287,12 @@
     "매우 좋음" : {
       "comment" : "Models.swift:53",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رائع"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13609,6 +14443,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المناعة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13758,6 +14598,12 @@
     "면역력 강화" : {
       "comment" : "Models.swift:271",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مناعة أقوى"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13907,6 +14753,12 @@
     "모든 일조량 기록이 삭제됩니다. 이 작업은 되돌릴 수 없습니다." : {
       "comment" : "SettingsView.swift:217",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيُحذف سجل الشمس بالكامل. لا يمكن التراجع عن ذلك."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14056,6 +14908,12 @@
     "목" : {
       "comment" : "CalendarView.swift: calendar column header for Thursday — one short character/abbreviation (max 3 chars), Monday-first row",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14205,6 +15063,12 @@
     "목표 달성" : {
       "comment" : "CSV column: goal met (yes/no)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحقّق الهدف"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14354,6 +15218,12 @@
     "목표 달성 알림" : {
       "comment" : "SettingsView.swift:127",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنبيه عند بلوغ الهدف"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14503,6 +15373,12 @@
     "목표 달성!" : {
       "comment" : "CalendarView.swift:244",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحقّق الهدف!"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14653,6 +15529,12 @@
       "comment" : "CSV column: daily goal in minutes",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الهدف (دقيقة)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14803,6 +15685,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مجانًا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -14952,6 +15840,12 @@
     "바로 옆 %.1fm 🌞" : {
       "comment" : "DashboardView.swift: distance to friend (meters)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بجانبك تمامًا، %.1f م 🌞"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15102,6 +15996,12 @@
       "comment" : "Paywall lead: after the first sunlight session, previews the Lock Screen Live Activity",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ما دمت في الخارج، يزداد وقتك تحت الشمس أمامك على شاشة القفل."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15251,6 +16151,12 @@
     "밖에 있던 시간만큼 바로 차고, 첫 화면에서 얼마나 남았는지 보여요." : {
       "comment" : "Roadmap item detail: one sunlight battery filled by time outside",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تمتلئ فورًا بقدر وقتك في الخارج، وتُظهر الشاشة الأولى كم تبقّى منها."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15400,6 +16306,12 @@
     "배터리 절약" : {
       "comment" : "SettingsView.swift:138",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توفير البطارية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15549,6 +16461,12 @@
     "백업과 내보내기" : {
       "comment" : "Roadmap item: backup and export",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النسخ الاحتياطي والتصدير"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15698,6 +16616,12 @@
     "백혈구 활성화" : {
       "comment" : "Models.swift:280",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنشيط خلايا الدم البيضاء"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15847,6 +16771,12 @@
     "버전" : {
       "comment" : "SettingsView.swift:184",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإصدار"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15996,6 +16926,12 @@
     "보기" : {
       "comment" : "RecordsView.swift:16",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العرض"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16145,6 +17081,12 @@
     "보기 편한 색과 대비" : {
       "comment" : "Roadmap item: contrast and color",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ألوان وتباين أوضح"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16294,6 +17236,12 @@
     "보통" : {
       "comment" : "Models.swift:55",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عادي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16443,6 +17391,12 @@
     "불면증 환자 수면시간 51분 증가, 혈압 11% 감소" : {
       "comment" : "SettingsView.swift:150 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "51 دقيقة نوم إضافية لمن يعانون الأرق، وضغط دم أقل بنسبة 11%"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16593,6 +17547,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فيتامين د"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16742,6 +17702,12 @@
     "비타민D 결핍은 심혈관 질환, 당뇨병, 일부 암과 연관이 있습니다. 규칙적인 햇빛 노출로 만성질환 위험을 줄일 수 있습니다." : {
       "comment" : "Models.swift:272",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يرتبط نقص فيتامين د بأمراض القلب والأوعية الدموية والسكري وبعض أنواع السرطان. والتعرض المنتظم للشمس يساعد على خفض خطر الأمراض المزمنة."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16891,6 +17857,12 @@
     "비타민D 합성" : {
       "comment" : "Models.swift:270",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنتاج فيتامين د"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17040,6 +18012,12 @@
     "비타민D는 근육 기능과 회복에 필수적입니다. 운동 전후 햇빛 노출은 근육통을 줄이고 회복 속도를 높입니다." : {
       "comment" : "Models.swift:266",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فيتامين د ضروري لوظائف العضلات وتعافيها. والتعرض للشمس قبل التمرين أو بعده يخفف ألم العضلات ويسرّع التعافي."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17189,6 +18167,12 @@
     "비타민D는 면역세포를 활성화하여 감염 예방에 도움을 줍니다. 충분한 비타민D 수치는 감기와 독감 발생률을 40% 낮춥니다." : {
       "comment" : "Models.swift:271 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ينشّط فيتامين د الخلايا المناعية ويساعد على الوقاية من العدوى. والمستوى الجيد منه يخفض الإصابة بالزكام والإنفلونزا بنسبة 40%."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17338,6 +18322,12 @@
     "뼈 건강" : {
       "comment" : "Models.swift:264",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صحة العظام"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17487,6 +18477,12 @@
     "상세 기록" : {
       "comment" : "HistoryView.swift:129",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التفاصيل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17636,6 +18632,12 @@
     "설정" : {
       "comment" : "ContentView.swift:27",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإعدادات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17785,6 +18787,12 @@
     "세로토닌 분비 활성화" : {
       "comment" : "SunlightManager.swift:608",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنشيط السيروتونين"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -17934,6 +18942,12 @@
     "세션" : {
       "comment" : "CalendarView.swift:204",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الجلسات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18084,6 +19098,12 @@
       "comment" : "CSV column: number of sessions",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عدد الجلسات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18233,6 +19253,12 @@
     "소셜" : {
       "comment" : "SettingsView.swift:110",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اجتماعي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18382,6 +19408,12 @@
     "손끝으로 느끼는 반응" : {
       "comment" : "Roadmap item: haptics",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استجابة لمسية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18531,6 +19563,12 @@
     "손목을 들면 햇빛 배터리와 오늘 받은 햇빛이 보여요." : {
       "comment" : "Roadmap item detail: Apple Watch app and complication",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارفع معصمك لترى بطارية الشمس وشمس اليوم."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18680,6 +19718,12 @@
     "수" : {
       "comment" : "CalendarView.swift: calendar column header for Wednesday — one short character/abbreviation (max 3 chars), Monday-first row",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أر"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18829,6 +19873,12 @@
     "수동 입력" : {
       "comment" : "DashboardView.swift:665",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إدخال يدوي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18979,6 +20029,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19128,6 +20184,12 @@
     "수면 & 혈압 대폭 개선" : {
       "comment" : "SunlightManager.swift:636",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحسّن كبير في النوم وضغط الدم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19277,6 +20339,12 @@
     "수면 시간 23분 단축, 코르티솔 25% 감소 효과" : {
       "comment" : "SettingsView.swift:148 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغفو أبكر بـ23 دقيقة، مع كورتيزول أقل بنسبة 25%"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19426,6 +20494,12 @@
     "수면 시간 증가" : {
       "comment" : "Models.swift:276",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نوم أطول"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19575,6 +20649,12 @@
     "수면 질 향상 & 스트레스 감소" : {
       "comment" : "SunlightManager.swift:622",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نوم أفضل وتوتر أقل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19724,6 +20804,12 @@
     "수면의 질 향상" : {
       "comment" : "Models.swift:277",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جودة نوم أفضل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -19873,6 +20959,12 @@
     "수정" : {
       "comment" : "CalendarView.swift: button label — edit (verb) the day record",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعديل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20023,6 +21115,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التوتر"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20172,6 +21270,12 @@
     "스트레스 감소" : {
       "comment" : "Models.swift:260",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توتر أقل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20322,6 +21426,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تذبل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20472,6 +21582,12 @@
       "comment" : "LuxSensor.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "داخل المبنى"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20621,6 +21737,12 @@
     "실외" : {
       "comment" : "DashboardView.swift:115",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في الخارج"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20770,6 +21892,12 @@
     "실외 (맑음)" : {
       "comment" : "SettingsView.swift:96",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في الخارج (صافٍ)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -20919,6 +22047,12 @@
     "실외 판정 기준" : {
       "comment" : "SettingsView.swift:50",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدّ الخارج"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21068,6 +22202,12 @@
     "실외 판정 기준 이상의 조도가 감지되면 자동으로 세션이 시작됩니다. 일반적으로 실외는 300~1000 Lux, 직사광선은 10,000 Lux 이상입니다." : {
       "comment" : "SettingsView.swift:88",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تبدأ الجلسة تلقائيًا حين يتجاوز السطوع حدّ الخارج. يتراوح السطوع في الخارج عادةً بين 300 و1,000 لوكس، ويبلغ ضوء الشمس المباشر 10,000 لوكس أو أكثر."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21217,6 +22357,12 @@
     "실외/흐림" : {
       "comment" : "Models.swift:98",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خارجي/غائم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21367,6 +22513,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مزدهرة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21516,6 +22668,12 @@
     "쓰는 요령 알려 주기" : {
       "comment" : "Roadmap item: tips",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نصائح مفيدة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21666,6 +22824,12 @@
       "comment" : "CSV value: no",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21815,6 +22979,12 @@
     "아이패드에서 키보드만으로 주요 기능을 쓸 수 있어요." : {
       "comment" : "Roadmap item detail: keyboard control",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استخدم الميزات الأساسية على iPad بلوحة المفاتيح وحدها."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -21964,6 +23134,12 @@
     "아이폰과 아이패드에서 같은 햇빛 기록을 이어서 봐요." : {
       "comment" : "Roadmap item detail: iCloud sync",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اطّلع على سجل الشمس نفسه في iPhone وiPad."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22113,6 +23289,12 @@
     "아직 기록이 없습니다" : {
       "comment" : "HistoryView.swift:76",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يُسجَّل شيء بعد"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22262,6 +23444,12 @@
     "아직 함께한 친구가 없어요" : {
       "comment" : "FriendsView.swift:69",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا رفاق شمس بعد"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22411,6 +23599,12 @@
     "아침 햇빛은 생체리듬을 조절하는 멜라토닌 분비를 억제합니다. 기상 후 10분 햇빛 노출로 밤에 더 잘 잘 수 있습니다." : {
       "comment" : "Models.swift:275",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضوء الصباح يثبّط الميلاتونين، وهذا يساعد على ضبط ساعتك البيولوجية. عشر دقائق من الشمس بعد الاستيقاظ تساعدك على نوم أفضل ليلًا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22560,6 +23754,12 @@
     "안 좋음" : {
       "comment" : "Models.swift:56",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيئ"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22709,6 +23909,12 @@
     "알림" : {
       "comment" : "SettingsView.swift:131",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإشعارات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -22858,6 +24064,12 @@
     "알림 시간" : {
       "comment" : "SettingsView.swift:123",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وقت التذكير"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23007,6 +24219,12 @@
     "알아 두면 편한 기능을 알맞은 때에 살짝 알려 줘요." : {
       "comment" : "Roadmap item detail: tips",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تلميحات لطيفة عن الميزات المفيدة في الوقت المناسب."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23156,6 +24374,12 @@
     "앱 이름" : {
       "comment" : "SettingsView.swift:178",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسم التطبيق"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23306,6 +24530,12 @@
       "comment" : "Roadmap item detail: ask Siri without naming the app",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سيخبرك Siri فورًا بشمس اليوم، حتى دون أن تذكر اسم التطبيق."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23454,6 +24684,12 @@
     },
     "앱을 열지 않아도 햇빛 배터리가 먼저 불러요. 연 구독이나 평생 중에 고르세요." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية الشمس تدعوك إلى الخارج قبل أن تفتح التطبيق. ادفع سنويًا أو مرة واحدة مدى الحياة."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23602,6 +24838,12 @@
     },
     "앱을 열지 않아도 홈 화면에서 햇빛 배터리를 볼 수 있어요." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اطّلع على بطارية الشمس من الشاشة الرئيسية دون فتح التطبيق."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23751,6 +24993,12 @@
     "앱을 영어로도 쓸 수 있어요." : {
       "comment" : "Roadmap item detail: English",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استخدم التطبيق كاملًا بالإنجليزية."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23900,6 +25148,12 @@
     "야외 시간 직접 추가" : {
       "comment" : "DashboardView.swift:616",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضافة وقت في الخارج"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24049,6 +25303,12 @@
     "야외 활동 시간을 수동으로 추가합니다" : {
       "comment" : "DashboardView.swift:627",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أضف بنفسك الوقت الذي قضيته في الخارج"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24198,6 +25458,12 @@
     "약 %.1fm 옆에 있어요" : {
       "comment" : "FriendsView.swift: distance to friend (meters)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "على بُعد %.1f م تقريبًا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24346,6 +25612,48 @@
     },
     "약 %lld시간 남음" : {
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تبقّى نحو %lld ساعات"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تبقّى نحو %lld ساعة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تبقّى نحو ساعة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تبقّى نحو %lld ساعة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تبقّى نحو ساعتين"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تبقّى نحو %lld ساعة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24495,6 +25803,12 @@
     "약한 빛" : {
       "comment" : "Models.swift:99",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضوء خافت"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24644,6 +25958,12 @@
     "어두운 실내" : {
       "comment" : "SettingsView.swift:93",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "داخل مبنى معتم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24794,6 +26114,12 @@
       "comment" : "LuxSensor.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معتم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -24943,6 +26269,12 @@
     "업데이트 뒤 처음 열 때 무엇이 새로 생겼는지 알려 줘요." : {
       "comment" : "Roadmap item detail: what's new",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عند أول فتح للتطبيق بعد التحديث، تعرّف على الجديد."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25092,6 +26424,12 @@
     "업데이트 소식" : {
       "comment" : "Roadmap item: what's new",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ما الجديد"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25242,6 +26580,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ الاشتراك السنوي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25391,6 +26735,12 @@
     "연구에 따르면 하루 15분 햇빛으로 세로토닌 분비가 시작되고, 30분이면 수면 시간이 23분 빨라지며 코르티솔이 25% 감소합니다. 45분 이상이면 우울증 치료에 최적 효과를 보입니다." : {
       "comment" : "SettingsView.swift:38 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشير الأبحاث إلى أن 15 دقيقة من الشمس يوميًا تبدأ بإفراز السيروتونين، وأن 30 دقيقة تجعلك تغفو أبكر بـ23 دقيقة مع كورتيزول أقل بنسبة 25%. أما 45 دقيقة فأكثر فهي الأفضل للاكتئاب."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25540,6 +26890,12 @@
     "영어 지원" : {
       "comment" : "Roadmap item: English",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دعم كامل للإنجليزية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25690,6 +27046,12 @@
       "comment" : "CSV value: yes",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25839,6 +27201,12 @@
     "오늘" : {
       "comment" : "CalendarView.swift:136",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25988,6 +27356,48 @@
     "오늘 %lld분의 햇빛으로 수면의 질이 좋아질 거예요. 대단해요!" : {
       "comment" : "NotificationManager.swift:39",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقائق من الشمس اليوم ستساعدك على نوم أفضل الليلة. أحسنت!"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة من الشمس اليوم ستساعدك على نوم أفضل الليلة. أحسنت!"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقة واحدة من الشمس اليوم ستساعدك على نوم أفضل الليلة. أحسنت!"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة من الشمس اليوم ستساعدك على نوم أفضل الليلة. أحسنت!"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقتان من الشمس اليوم ستساعدانك على نوم أفضل الليلة. أحسنت!"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة من الشمس اليوم ستساعدك على نوم أفضل الليلة. أحسنت!"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26137,6 +27547,12 @@
     "오늘 목표를 채우면 가볍게 떨려서 알려 줘요." : {
       "comment" : "Roadmap item detail: haptics",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اهتزاز خفيف عندما تبلغ هدف اليوم."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26286,6 +27702,12 @@
     "오늘 받은 햇빛" : {
       "comment" : "Siri: how much sunlight I got today",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شمس اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26435,6 +27857,12 @@
     "오늘 받은 햇빛과 목표까지 남은 시간을 알려 줍니다." : {
       "comment" : "Siri: today's sunlight description",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يخبرك بالوقت الذي قضيته تحت الشمس اليوم وبما تبقّى لهدفك."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26584,6 +28012,12 @@
     "오늘 하루를 짧게 기록해보세요" : {
       "comment" : "CalendarView.swift:403",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دوّن ملاحظة قصيرة عن يومك"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26733,6 +28167,102 @@
     "오늘 햇빛 %lld분 받았어요. 목표까지 %lld분 남았어요." : {
       "comment" : "Siri: sunlight so far. Arguments: minutes, minutes left",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@done@ من الشمس اليوم. بقي على هدفك %#@left@."
+          },
+          "substitutions" : {
+            "done" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg دقائق"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg دقيقة"
+                    }
+                  },
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "دقيقة واحدة"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg دقيقة"
+                    }
+                  },
+                  "two" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "دقيقتان"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg دقيقة"
+                    }
+                  }
+                }
+              }
+            },
+            "left" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg دقائق"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg دقيقة"
+                    }
+                  },
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "دقيقة واحدة"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg دقيقة"
+                    }
+                  },
+                  "two" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "دقيقتان"
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg دقيقة"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26882,6 +28412,48 @@
     "오늘 햇빛 %lld분, 목표를 채웠어요." : {
       "comment" : "Siri: goal reached. Argument is minutes",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقائق من الشمس اليوم. بلغت هدفك."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة من الشمس اليوم. بلغت هدفك."
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقة واحدة من الشمس اليوم. بلغت هدفك."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة من الشمس اليوم. بلغت هدفك."
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقتان من الشمس اليوم. بلغت هدفك."
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة من الشمس اليوم. بلغت هدفك."
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27030,6 +28602,12 @@
     },
     "오늘 햇빛 목표를 채웠어요" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بلغت هدف الشمس لليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27179,6 +28757,12 @@
     "오늘은 그만 받기" : {
       "comment" : "DashboardView.swift:265",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يكفي لليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27328,6 +28912,12 @@
     "오늘은 아직 햇빛을 받지 않았어요. 잠깐 나가 볼까요?" : {
       "comment" : "Siri: no sunlight yet today",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم تتعرّض للشمس بعد اليوم. ما رأيك في جولة قصيرة في الخارج؟"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27477,6 +29067,12 @@
     "오늘의 기분" : {
       "comment" : "CalendarView.swift:394",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مزاج اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27627,6 +29223,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ تحميل الخطط…"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27777,6 +29379,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر تحميل الخطط. تحقّق من اتصالك بالإنترنت وحاول مجددًا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27926,6 +29534,12 @@
     "우울증 예방" : {
       "comment" : "Models.swift:258",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوقاية من الاكتئاب"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28075,6 +29689,12 @@
     "우울증 증상 개선에 가장 효과적인 노출 시간입니다" : {
       "comment" : "SettingsView.swift:149",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أنسب مدة لتخفيف أعراض الاكتئاب"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28224,6 +29844,12 @@
     "우울증 치료 최적 효과" : {
       "comment" : "SunlightManager.swift:629",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأفضل للاكتئاب"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28373,6 +29999,12 @@
     "움직임 줄이기" : {
       "comment" : "Roadmap item: reduce motion",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقليل الحركة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28522,6 +30154,12 @@
     "움직임 줄이기를 켜면 해가 움직이는 화면 효과가 차분해져요." : {
       "comment" : "Roadmap item detail: reduce motion",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عند تفعيل تقليل الحركة تهدأ تأثيرات الشمس المتحركة."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28671,6 +30309,12 @@
     "월" : {
       "comment" : "CalendarView.swift: calendar column header for Monday — one short character/abbreviation (max 3 chars), Monday-first row",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إث"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28821,6 +30465,12 @@
       "comment" : "Paywall: monthly plan row. %@ = price",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شهري · %@ / شهر"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28971,6 +30621,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ الاشتراك الشهري"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29121,6 +30777,12 @@
       "comment" : "HistoryView.swift: segmented control option, \"Monthly\"",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شهري"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29271,6 +30933,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إحصاءات شهرية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29421,6 +31089,12 @@
       "comment" : "Paywall lead: picked Monthly in stats. Past days stay visible in the calendar",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإحصاءات الشهرية متاحة في Pro. وأيامك السابقة كلها ما زالت في التقويم."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29571,6 +31245,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حرجة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29721,6 +31401,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الجسد"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -29871,6 +31557,12 @@
       "comment" : "Restore purchases: nothing found",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم نعثر على مشتريات لحساب Apple هذا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30020,6 +31712,12 @@
     "이 날의 기록이 없습니다" : {
       "comment" : "CalendarView.swift:250",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا شيء مسجّل لهذا اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30169,6 +31867,12 @@
     "이번 달 요약" : {
       "comment" : "CalendarView.swift:274",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذا الشهر"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30319,6 +32023,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شروط الاستخدام"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30468,6 +32178,12 @@
     "일" : {
       "comment" : "CalendarView.swift: calendar column header for Sunday — one short character/abbreviation (max 3 chars)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أح"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30618,6 +32334,48 @@
       "comment" : "Paywall lead: on the day the daily goal is met for the 7th time. %lld = minutes of sunlight this week",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "جمعت هذا الأسبوع %lld دقائق من الشمس"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "جمعت هذا الأسبوع %lld دقيقة من الشمس"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "جمعت هذا الأسبوع دقيقة واحدة من الشمس"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "جمعت هذا الأسبوع %lld دقيقة من الشمس"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "جمعت هذا الأسبوع دقيقتين من الشمس"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "جمعت هذا الأسبوع %lld دقيقة من الشمس"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30767,6 +32525,12 @@
     "이전 달" : {
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشهر السابق"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -30916,6 +32680,12 @@
     "일반 실내" : {
       "comment" : "SettingsView.swift:94",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "داخل مبنى عادي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31065,6 +32835,12 @@
     "일별 일조량 & 조도" : {
       "comment" : "HistoryView.swift:70",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشمس والسطوع يومًا بيوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31214,6 +32990,12 @@
     "일일 리마인더" : {
       "comment" : "SettingsView.swift:118",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تذكير يومي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31363,6 +33145,12 @@
     "일일 목표" : {
       "comment" : "SettingsView.swift:16",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الهدف اليومي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31512,6 +33300,12 @@
     "일조량" : {
       "comment" : "CalendarView.swift:191",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وقت الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31661,6 +33455,12 @@
     "일평균" : {
       "comment" : "CalendarView.swift:279",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المعدل اليومي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31810,6 +33610,12 @@
     "자동 세션 감지" : {
       "comment" : "SettingsView.swift:137",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتشاف الجلسات تلقائيًا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31959,6 +33765,12 @@
     "자동 트래킹" : {
       "comment" : "SettingsView.swift:44",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التتبع التلقائي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32108,6 +33920,12 @@
     "자연광 노출은 기분을 조절하는 신경전달물질을 활성화합니다. 15-20분의 햇빛만으로도 긍정적인 감정 변화를 경험할 수 있습니다." : {
       "comment" : "Models.swift:259",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُنشّط الضوء الطبيعي النواقل العصبية التي تنظّم المزاج. ويكفي 15 إلى 20 دقيقة من الشمس لترفع معنوياتك."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32257,6 +34075,12 @@
     "자연광은 인지 기능과 집중력을 향상시킵니다. 실내에서 일할 때도 창가 자리를 선택하면 업무 효율이 15% 증가합니다." : {
       "comment" : "Models.swift:261 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُحسّن الضوء الطبيعي الإدراك والتركيز. وحتى داخل المبنى، يرفع العمل بجوار النافذة الإنتاجية بنسبة 15%."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32406,6 +34230,12 @@
     "자연광이 체내 시계를 조절하고 비타민D 생성이 시작됩니다" : {
       "comment" : "SettingsView.swift:146",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يضبط الضوء الطبيعي ساعتك البيولوجية ويبدأ إنتاج فيتامين د"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32556,6 +34386,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نصائح الأشعة فوق البنفسجية وواقي الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32705,6 +34541,12 @@
     "작동 원리" : {
       "comment" : "SettingsView.swift:141",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كيف يعمل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32855,6 +34697,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شاشة القفل وDynamic Island"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33004,6 +34852,12 @@
     "재는 중에 앱이 꺼져도 그때까지 쬔 햇빛이 남아 있어요." : {
       "comment" : "Roadmap item detail: keep in-progress session",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا أُغلق التطبيق أثناء الجلسة، يبقى ما سجّلته من شمس حتى تلك اللحظة."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33153,6 +35007,12 @@
     "재던 기록 이어서 하기" : {
       "comment" : "Roadmap item: keep in-progress session",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تابع جلستك"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33302,6 +35162,12 @@
     "저녁" : {
       "comment" : "WeatherService.swift:49",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المساء"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33451,6 +35317,12 @@
     "저장" : {
       "comment" : "CalendarView.swift:416",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33600,6 +35472,12 @@
     "적절한 햇빛 노출은 여드름, 건선 등 피부 질환 개선에 도움이 됩니다. 단, 자외선 차단제 사용과 함께 적절한 시간(아침/저녁) 선택이 중요합니다." : {
       "comment" : "Models.swift:267",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الجرعة المناسبة من الشمس قد تساعد في حالات جلدية مثل حب الشباب والصدفية. احرص فقط على استخدام واقي الشمس واختيار الوقت المناسب (الصباح أو المساء)."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33749,6 +35627,12 @@
     "적절한 햇빛 노출은 체내 항산화 시스템을 강화합니다. 이는 세포 손상을 줄이고 노화를 늦추는데 기여합니다." : {
       "comment" : "Models.swift:282",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الجرعة المناسبة من الشمس تدعم جهاز مضادات الأكسدة في جسمك، ما يساعد على تقليل تلف الخلايا وإبطاء الشيخوخة."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33898,6 +35782,12 @@
     "정보" : {
       "comment" : "SettingsView.swift:189",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حول التطبيق"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34048,6 +35938,12 @@
       "comment" : "Models.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النفس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34197,6 +36093,12 @@
     "정확도" : {
       "comment" : "SettingsView.swift:139",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الدقة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34347,6 +36249,12 @@
       "comment" : "Roadmap item: Control Center button to start measuring sunlight (Pro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قِس الشمس من مركز التحكم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34497,6 +36405,12 @@
       "comment" : "Roadmap item detail: Control Center button to start measuring sunlight (Pro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ قياس الشمس بزر واحد في مركز التحكم دون فتح التطبيق."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34646,6 +36560,12 @@
     "조도 센서" : {
       "comment" : "SettingsView.swift:86",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستشعر الضوء"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34795,6 +36715,12 @@
     "조도 참고표" : {
       "comment" : "SettingsView.swift:100",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دليل السطوع"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -34944,6 +36870,12 @@
     "좋음" : {
       "comment" : "Models.swift:54",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جيد"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -35094,6 +37026,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض الخطط الأسبوعية والشهرية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -35244,6 +37182,12 @@
       "comment" : "Paywall: weekly plan row. %@ = price",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسبوعي · %@ / أسبوع"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -35394,6 +37338,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ الاشتراك الأسبوعي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -35544,6 +37494,12 @@
       "comment" : "HistoryView.swift: segmented control option, \"Weekly\"",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسبوعي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -35694,6 +37650,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إحصاءات أسبوعية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -35843,6 +37805,48 @@
     "지금 %lld명과 함께 햇빛 받는 중!" : {
       "comment" : "FriendsView.swift:45",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تتشمّس الآن مع %lld أشخاص!"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تتشمّس الآن مع %lld شخصًا!"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تتشمّس الآن مع شخص واحد!"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تتشمّس الآن مع %lld شخص!"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تتشمّس الآن مع شخصين!"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تتشمّس الآن مع %lld شخص!"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -35992,6 +37996,12 @@
     "지원" : {
       "comment" : "SettingsView.swift:162",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الدعم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -36141,6 +38151,12 @@
     "직사광선" : {
       "comment" : "SettingsView.swift:97",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضوء الشمس المباشر"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -36290,6 +38306,12 @@
     "집중력 향상" : {
       "comment" : "Models.swift:261",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تركيز أفضل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -36439,6 +38461,12 @@
     "처음 쓰는 분을 위한 안내" : {
       "comment" : "Roadmap item: onboarding",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بداية سريعة للمستخدمين الجدد"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -36588,6 +38616,12 @@
     "처음 열었을 때 햇빛을 재고 기록하는 법을 짧게 보여 줘요." : {
       "comment" : "Roadmap item detail: onboarding",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عند أول فتح للتطبيق، تعرّف على طريقة تتبّع الشمس وتسجيلها."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -36737,6 +38771,12 @@
     "체내 시계 동기화" : {
       "comment" : "Models.swift:275",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضبط الساعة البيولوجية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -36886,6 +38926,12 @@
     "체내 시계 동기화 시작" : {
       "comment" : "SunlightManager.swift:601",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يبدأ ضبط الساعة البيولوجية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -37035,6 +39081,12 @@
     "초기화" : {
       "comment" : "SettingsView.swift:211",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مسح"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -37184,6 +39236,12 @@
     "총 일조량" : {
       "comment" : "CalendarView.swift:278",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إجمالي الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -37333,6 +39391,12 @@
     "최고 조도" : {
       "comment" : "CalendarView.swift:213",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أعلى سطوع"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -37483,6 +39547,12 @@
       "comment" : "CSV column: peak lux",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أعلى سطوع (لوكس)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -37633,6 +39703,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يصدّر آخر 90 يومًا في جدول، صف لكل يوم. افتحه في Numbers أو Excel."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -37782,6 +39858,48 @@
     "최근 석 달 동안 햇빛 목표를 %lld일 채웠어요" : {
       "comment" : "Tip ask card: on how many days (within the last 90) the person met their daylight goal",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "بلغت هدف الشمس في %lld أيام خلال الأشهر الثلاثة الماضية"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "بلغت هدف الشمس في %lld يومًا خلال الأشهر الثلاثة الماضية"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "بلغت هدف الشمس في يوم واحد خلال الأشهر الثلاثة الماضية"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "بلغت هدف الشمس في %lld يوم خلال الأشهر الثلاثة الماضية"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "بلغت هدف الشمس في يومين خلال الأشهر الثلاثة الماضية"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "بلغت هدف الشمس في %lld يوم خلال الأشهر الثلاثة الماضية"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "variations" : {
             "plural" : {
@@ -38159,6 +40277,12 @@
     "최저 해상도 카메라를 사용하여 배터리 소모를 최소화합니다" : {
       "comment" : "SettingsView.swift:138",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستخدم الكاميرا بأدنى دقة ليبقى استهلاك البطارية في حدّه الأدنى"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -38308,6 +40432,12 @@
     "추가하기" : {
       "comment" : "DashboardView.swift:652",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضافة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -38457,6 +40587,12 @@
     "출처: Huberman Lab, BMC Public Health 2025, PMC, Anderson 2024, University of Southampton 연구" : {
       "comment" : "SettingsView.swift:154",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المصادر: Huberman Lab، وBMC Public Health 2025، وPMC، وAnderson 2024، وأبحاث University of Southampton"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -38605,6 +40741,12 @@
     },
     "충전 중" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُشحن"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -38754,6 +40896,12 @@
     "취소" : {
       "comment" : "CalendarView.swift:410",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إلغاء"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -38903,6 +41051,12 @@
     "측정 중" : {
       "comment" : "DashboardView.swift:169",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ القياس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -39052,6 +41206,12 @@
     "친구" : {
       "comment" : "DashboardView.swift: fallback noun \"a friend\", used as %@ in \"%@이(가) 옆에서 햇빛을 받고 있어요!\"",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صديق"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -39201,6 +41361,12 @@
     "친구와 가까이에서 같이 햇빛을 받으면\n자동으로 여기에 기록돼요!" : {
       "comment" : "FriendsView.swift:71",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تشمّس قرب صديق\nوسيُحفظ وقتكما هنا تلقائيًا!"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -39351,6 +41517,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التشمّس مع الأصدقاء"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -39500,6 +41672,12 @@
     "카메라 권한이 필요합니다. 설정에서 허용해주세요." : {
       "comment" : "LuxSensor.swift:80",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يلزم الوصول إلى الكاميرا. يُرجى السماح به من الإعدادات."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -39649,6 +41827,12 @@
     "카메라 기반 추정값으로, 전문 조도계와 차이가 있을 수 있습니다" : {
       "comment" : "SettingsView.swift:139",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قيم تقديرية من الكاميرا، لذا قد تختلف عن قراءات مقياس الضوء الاحترافي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -39798,6 +41982,12 @@
     "카메라 기반 측정" : {
       "comment" : "SettingsView.swift:136",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قياس بالكاميرا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -39947,6 +42137,12 @@
     "카메라 초기화 실패: %@" : {
       "comment" : "LuxSensor.swift:147",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر تشغيل الكاميرا: %@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -40096,6 +42292,12 @@
     "카메라를 사용할 수 없습니다." : {
       "comment" : "LuxSensor.swift:115",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الكاميرا غير متاحة."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -40246,6 +42448,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزاج والملاحظات في التقويم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -40395,6 +42603,12 @@
     "큰 글씨에 맞춘 화면" : {
       "comment" : "Roadmap item: Dynamic Type layouts",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصميم يناسب النص الكبير"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -40544,6 +42758,12 @@
     "키보드로 조작하기" : {
       "comment" : "Roadmap item: keyboard control",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التحكم بلوحة المفاتيح"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -40693,6 +42913,12 @@
     "토" : {
       "comment" : "CalendarView.swift: calendar column header for Saturday — one short character/abbreviation (max 3 chars), Monday-first row",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سب"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -40842,6 +43068,12 @@
     "펼치는 아이폰 화면" : {
       "comment" : "Roadmap item: foldable iPhone layout",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصميم لـ iPhone القابل للطي"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -40991,6 +43223,12 @@
     "펼치는 아이폰에서 넓은 화면을 두 쪽으로 나눠 써요." : {
       "comment" : "Roadmap item detail: foldable iPhone layout",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استخدم الشاشة العريضة في iPhone القابل للطي كلوحين متجاورين."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -41141,6 +43379,12 @@
       "comment" : "CSV column: average lux",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط السطوع (لوكس)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -41290,6 +43534,12 @@
     "평균 최고조도" : {
       "comment" : "HistoryView.swift:62",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط أعلى سطوع"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -41440,6 +43690,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اشترِ مدى الحياة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -41589,6 +43845,12 @@
     "피부 건강" : {
       "comment" : "Models.swift:267",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صحة البشرة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -41738,6 +44000,12 @@
     "피부가 UVB 광선에 노출되면 비타민D가 생성됩니다. 손, 팔, 다리를 노출한 상태로 15-30분이면 하루 필요량을 충족할 수 있습니다." : {
       "comment" : "Models.swift:270",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يصنع جلدك فيتامين د عند تعرّضه لأشعة UVB. ويكفي 15 إلى 30 دقيقة مع كشف اليدين والذراعين والساقين لتلبية حاجتك اليومية."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -41887,6 +44155,12 @@
     "하루 30분, 2-3번 나누어 받는 것이 가장 효과적입니다. 오전 10시~오후 3시 사이가 비타민 D 합성에 최적입니다." : {
       "comment" : "SettingsView.swift:191",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 دقيقة يوميًا مقسّمة على جلستين أو ثلاث هي الأفضل. وأنسب وقت لإنتاج فيتامين د بين 10 صباحًا و3 عصرًا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -42037,6 +44311,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الهدف اليومي والتذكيرات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -42187,6 +44467,12 @@
       "comment" : "CSV column: note",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ملاحظة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -42336,6 +44622,12 @@
     "한마디 메모" : {
       "comment" : "CalendarView.swift:401",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ملاحظة سريعة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -42485,6 +44777,12 @@
     "한여름 정오" : {
       "comment" : "SettingsView.swift:98",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ظهيرة منتصف الصيف"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -42634,6 +44932,12 @@
     "함께 트래킹" : {
       "comment" : "SettingsView.swift:106",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التتبع معًا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -42783,6 +45087,12 @@
     "함께할수록 꽃이 커져요" : {
       "comment" : "FriendsView.swift:89",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلما تشمّستما معًا كبرت زهرتكما"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -42932,6 +45242,12 @@
     "항산화 효과" : {
       "comment" : "Models.swift:282",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مضاد للأكسدة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43081,6 +45397,12 @@
     "항염 효과" : {
       "comment" : "Models.swift:281",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مضاد للالتهاب"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43230,6 +45552,12 @@
     "햇빛" : {
       "comment" : "DashboardView.swift:114",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43380,6 +45708,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجل الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43529,6 +45863,12 @@
     "햇빛 기록을 파일로 저장하고 다시 불러올 수 있어요." : {
       "comment" : "Roadmap item detail: backup and export",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "احفظ سجل الشمس في ملف واستعده لاحقًا."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43679,6 +46019,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تتشمّس الآن"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43828,6 +46174,12 @@
     "햇빛 받으러 가기" : {
       "comment" : "DashboardView.swift:592",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اخرج إلى الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43976,6 +46328,12 @@
     },
     "햇빛 배터리" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -44125,6 +46483,12 @@
     "햇빛 배터리 하나로" : {
       "comment" : "Roadmap item: one sunlight battery filled by time outside, shown as a sun gauge",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية شمس واحدة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -44273,6 +46637,12 @@
     },
     "햇빛 배터리가 줄어들고 있어요" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية الشمس تنخفض"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -44423,6 +46793,12 @@
       "comment" : "CSV column: minutes of sunlight",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وقت الشمس (دقيقة)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -44573,6 +46949,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تتبّع الشمس تلقائيًا وضبط الحدود"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -44722,6 +47104,12 @@
     "햇빛 판정 기준" : {
       "comment" : "SettingsView.swift:69",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدّ الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -44872,6 +47260,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دوّار الشمس Pro"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -45022,6 +47416,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مشترك في دوّار الشمس Pro"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -45172,6 +47572,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تستخدم دوّار الشمس Pro"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -45322,6 +47728,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دوّار الشمس Pro · مدى الحياة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -45472,6 +47884,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أنت تستخدم دوّار الشمس Pro. شكرًا لك!"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -45621,6 +48039,12 @@
     "햇빛으로 생성되는 비타민D는 칼슘 흡수를 돕습니다. 주 3-4회, 팔다리를 노출한 채 15분 햇빛을 쬐면 충분한 비타민D를 얻을 수 있습니다." : {
       "comment" : "Models.swift:264",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فيتامين د الذي يصنعه الجسم من الشمس يساعد على امتصاص الكالسيوم. و15 دقيقة من الشمس مع كشف الذراعين والساقين، 3 إلى 4 مرات أسبوعيًا، تمنحك ما يكفي من فيتامين د."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -45770,6 +48194,12 @@
     "햇빛은 T세포와 같은 면역세포를 활성화합니다. 규칙적인 햇빛 노출로 면역 반응 속도가 빨라집니다." : {
       "comment" : "Models.swift:280",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنشّط الشمس الخلايا المناعية مثل الخلايا التائية. والتعرض المنتظم لها يسرّع استجابة جهازك المناعي."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -45919,6 +48349,12 @@
     "햇빛은 깊은 수면(REM 수면) 비율을 높여줍니다. 낮에 충분한 햇빛을 받으면 야간 수면의 질이 30% 향상됩니다." : {
       "comment" : "Models.swift:277 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تزيد الشمس نسبة النوم العميق (نوم حركة العين السريعة). والحصول على شمس كافية نهارًا يحسّن جودة النوم ليلًا بنسبة 30%."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46068,6 +48504,12 @@
     "햇빛은 세로토닌 분비를 촉진하여 우울증 증상을 완화합니다. 매일 30분 이상의 햇빛 노출은 계절성 우울증(SAD) 치료에 효과적입니다." : {
       "comment" : "Models.swift:258",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعزّز الشمس السيروتونين، ما يخفف أعراض الاكتئاب. و30 دقيقة أو أكثر يوميًا فعّالة في علاج الاكتئاب الموسمي."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46217,6 +48659,12 @@
     "햇빛은 염증성 사이토카인 수치를 낮춰 만성 염증을 줄입니다. 자가면역 질환 증상 완화에도 도움이 됩니다." : {
       "comment" : "Models.swift:281",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تخفض الشمس مستويات السيتوكينات الالتهابية فتخفف الالتهاب المزمن. وقد تساعد أيضًا في تخفيف أعراض أمراض المناعة الذاتية."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46366,6 +48814,12 @@
     "햇빛은 코르티솔(스트레스 호르몬) 수치를 25% 낮춰줍니다. 점심시간 햇빛 산책은 오후 업무 스트레스를 줄이는데 도움이 됩니다." : {
       "comment" : "Models.swift:260 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تخفض الشمس الكورتيزول (هرمون التوتر) بنسبة 25%. ونزهة مشمسة وقت الغداء تساعد على تخفيف ضغط العمل بعد الظهر."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46515,6 +48969,12 @@
     "햇빛은 혈관을 확장시켜 혈압을 낮춰줍니다. 60분의 햇빛 노출은 수축기 혈압을 11% 감소시키는 효과가 있습니다." : {
       "comment" : "Models.swift:265 — 인자 없는 문자열이라 키·값의 % 는 하나로 쓴다(%% 이면 런타임 키가 안 맞아 번역이 안 뜬다)",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توسّع الشمس الأوعية الدموية وتخفض ضغط الدم. و60 دقيقة من الشمس قد تخفض ضغط الدم الانقباضي بنسبة 11%."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46664,6 +49124,12 @@
     "햇빛을 쐬러 나가볼까요? 15분이면 세로토닌이 분비되기 시작해요." : {
       "comment" : "NotificationManager.swift:20",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ما رأيك أن تخرج قليلًا إلى الشمس؟ ربع ساعة فقط تبدأ بإفراز السيروتونين."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46813,6 +49279,12 @@
     "햇빛의 건강 효과" : {
       "comment" : "SettingsView.swift:152",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فوائد الشمس الصحية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46962,6 +49434,12 @@
     "혈압 조절" : {
       "comment" : "Models.swift:265",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضغط الدم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -47112,6 +49590,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدوات الشاشة الرئيسية وتحديثات حيّة على شاشة القفل وإحصاءات شهرية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -47262,6 +49746,12 @@
       "comment" : "Pro paywall / settings (SunflowerPro)",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 أدوات للشاشة الرئيسية"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -47412,6 +49902,12 @@
       "comment" : "Paywall lead: opened from a locked Home Screen widget",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدوات الشاشة الرئيسية متاحة في Pro."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -47561,6 +50057,12 @@
     "화" : {
       "comment" : "CalendarView.swift: calendar column header for Tuesday — one short character/abbreviation (max 3 chars), Monday-first row",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -47710,6 +50212,12 @@
     "화면 읽기 기능이 단추와 햇빛 기록을 빠짐없이, 알맞은 순서로 읽어 줘요." : {
       "comment" : "Roadmap item detail: better VoiceOver support",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يقرأ VoiceOver كل زر وكل سجل شمس بالترتيب الصحيح."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -47859,6 +50367,12 @@
     "후면 카메라의 ISO/노출 데이터로 주변 조도(Lux)를 추정합니다" : {
       "comment" : "SettingsView.swift:136",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يقدّر سطوع المحيط (لوكس) من بيانات الحساسية والتعريض في الكاميرا"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -48008,6 +50522,12 @@
     "흐린 날 / 그늘" : {
       "comment" : "SettingsView.swift:95",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غائم / ظل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -48158,6 +50678,12 @@
       "comment" : "LuxSensor.swift: enum display raw value",
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غائم/ظل"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",

@@ -15,6 +15,7 @@ struct SunlightWatchApp: App {
     var body: some Scene {
         WindowGroup {
             WatchHomeView(model: model)
+                .appLocale()
                 .task { model.start(); scheduleRefresh() }
         }
         // 한 시간쯤마다 워치 건강 앱을 다시 읽어 컴플리케이션을 맞춘다 (폰이 없어도).

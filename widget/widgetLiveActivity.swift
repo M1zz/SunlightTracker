@@ -19,6 +19,7 @@ struct SunflowerLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: SunlightTrackingAttributes.self) { context in
             LockScreenLiveActivityView(state: context.state)
+                .appLocale()
                 .activityBackgroundTint(SunPalette.skyTop)
                 .activitySystemActionForegroundColor(.white)
         } dynamicIsland: { context in
@@ -41,6 +42,7 @@ struct SunflowerLiveActivity: Widget {
                             .foregroundStyle(.secondary)
                         Text("\(context.state.elapsedMinutes)분")
                             .font(.system(.title2, design: .rounded).weight(.bold))
+                            .appLocale()
                     }
                 }
             } compactLeading: {
@@ -49,6 +51,7 @@ struct SunflowerLiveActivity: Widget {
             } compactTrailing: {
                 Text("\(context.state.elapsedMinutes)분")
                     .font(.caption2.weight(.bold))
+                    .appLocale()
                     .foregroundStyle(SunPalette.sun)
             } minimal: {
                 Image(systemName: "sun.max.fill")

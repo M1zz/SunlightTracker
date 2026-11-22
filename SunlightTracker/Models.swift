@@ -396,14 +396,14 @@ extension Date {
     
     var shortDateString: String {
         let f = DateFormatter()
-        f.locale = Locale.current
+        f.locale = AppLocale.locale
         f.dateFormat = "M/d (E)"
         return f.string(from: self)
     }
     
     var timeString: String {
         let f = DateFormatter()
-        f.locale = Locale.current
+        f.locale = AppLocale.locale
         f.setLocalizedDateFormatFromTemplate("jmm")
         return f.string(from: self)
     }

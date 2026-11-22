@@ -4,6 +4,12 @@
     "${applicationName} today" : {
       "extractionState" : "stale",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${applicationName} اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -147,6 +153,16 @@
     "How much sunlight did I get in ${applicationName}" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "كم تعرّضت للشمس اليوم في ${applicationName}",
+              "${applicationName} اليوم",
+              "شمس اليوم في ${applicationName}"
+            ]
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "needs_review",

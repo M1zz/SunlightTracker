@@ -6,11 +6,11 @@ struct CalendarView: View {
     @State private var showingMoodNote = false
     @State private var currentMonth: Date = Date()
 
-    private var calendar: Calendar { Calendar.current }
+    private var calendar: Calendar { AppLocale.calendar }
 
     private var monthYearString: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale.current
+        formatter.locale = AppLocale.locale
         formatter.setLocalizedDateFormatFromTemplate("yyyyMMMM")
         return formatter.string(from: currentMonth)
     }
@@ -59,7 +59,7 @@ struct CalendarView: View {
     private var monthNavigation: some View {
         HStack {
             Button(action: { changeMonth(by: -1) }) {
-                Image(systemName: "chevron.left")
+                Image(systemName: "chevron.backward")
                     .font(.title3)
                     .foregroundColor(.primary)
             }
@@ -74,7 +74,7 @@ struct CalendarView: View {
             Spacer()
 
             Button(action: { changeMonth(by: 1) }) {
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .font(.title3)
                     .foregroundColor(.primary)
             }
@@ -293,10 +293,10 @@ struct CalendarView: View {
                 .accessibilityAddTraits(.isHeader)
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                SummaryCard2(title: String(localized: "총 일조량"), value: String(localized: "\(totalMinutes)분"), icon: "sun.max.fill", color: .orange)
-                SummaryCard2(title: String(localized: "일평균"), value: String(localized: "\(Int(avgMinutes))분"), icon: "chart.bar.fill", color: .blue)
-                SummaryCard2(title: String(localized: "목표 달성"), value: String(localized: "\(goalDays)일"), icon: "checkmark.seal.fill", color: .green)
-                SummaryCard2(title: String(localized: "기록 일수"), value: String(localized: "\(monthRecords.count)일"), icon: "calendar", color: .purple)
+                SummaryCard2(title: String(localized: "총 일조량"), value: String(localized: "\(totalMinutes)분", locale: AppLocale.locale), icon: "sun.max.fill", color: .orange)
+                SummaryCard2(title: String(localized: "일평균"), value: String(localized: "\(Int(avgMinutes))분", locale: AppLocale.locale), icon: "chart.bar.fill", color: .blue)
+                SummaryCard2(title: String(localized: "목표 달성"), value: String(localized: "\(goalDays)일", locale: AppLocale.locale), icon: "checkmark.seal.fill", color: .green)
+                SummaryCard2(title: String(localized: "기록 일수"), value: String(localized: "\(monthRecords.count)일", locale: AppLocale.locale), icon: "calendar", color: .purple)
             }
         }
         .padding(.horizontal, 20)
@@ -318,7 +318,7 @@ struct DayCell: View {
     let record: SunlightRecord?
 
     private var day: Int {
-        Calendar.current.component(.day, from: date)
+        AppLocale.calendar.component(.day, from: date)
     }
 
     var body: some View {
@@ -358,7 +358,7 @@ struct DayCell: View {
         .frame(maxWidth: .infinity, minHeight: 70)
         .contentShape(Rectangle())
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(Text(date.formatted(date: .complete, time: .omitted)))
+        .accessibilityLabel(Text(date.formatted(Date.FormatStyle(date: .complete, time: .omitted, locale: AppLocale.locale, calendar: AppLocale.calendar))))
         .accessibilityValue(accessibilityValue)
         .accessibilityAddTraits(isSelected ? .isSelected : [])
         .background(

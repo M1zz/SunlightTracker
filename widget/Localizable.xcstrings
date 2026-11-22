@@ -4,6 +4,12 @@
     "%lld / %lld분" : {
       "comment" : "widget.swift:370",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld/%2$lld دقيقة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -153,6 +159,48 @@
     "%lld분" : {
       "comment" : "widget.swift:268",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقائق"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "دقيقتان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld دقيقة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -302,6 +350,48 @@
     "%lld분 경과" : {
       "comment" : "widgetLiveActivity.swift:129",
       "localizations" : {
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مضت %lld دقائق"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مضت %lld دقيقة"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مضت دقيقة واحدة"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مضت %lld دقيقة"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مضت دقيقتان"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "مضت %lld دقيقة"
+                }
+              }
+            }
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -450,6 +540,12 @@
     },
     "남은 햇빛 배터리를 확인하세요" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اطّلع على ما تبقّى في بطارية الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -599,6 +695,12 @@
     "대시보드" : {
       "comment" : "widget.swift:629",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لوحة المعلومات"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -748,6 +850,12 @@
     "목표: %lld분" : {
       "comment" : "widget.swift:272",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الهدف: %lld دقيقة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -897,6 +1005,12 @@
     "오늘 진행도" : {
       "comment" : "widget.swift:603",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقدّم اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1046,6 +1160,12 @@
     "오늘의 햇빛" : {
       "comment" : "widget.swift:367",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شمس اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1195,6 +1315,12 @@
     "오늘의 햇빛 목표 달성 현황" : {
       "comment" : "widget.swift:604",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مدى اقترابك من هدف الشمس اليوم"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1344,6 +1470,12 @@
     "전체 정보를 한눈에 확인" : {
       "comment" : "widget.swift:630",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كل شيء في لمحة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1493,6 +1625,12 @@
     "종합 정보" : {
       "comment" : "widget.swift:616",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نظرة عامة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1643,6 +1781,12 @@
       "comment" : "Locked widget for free users: tap opens the Pro paywall in the app",
       "extractionState" : "manual",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط لفتح Pro"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1791,6 +1935,12 @@
     },
     "햇빛 배터리" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1939,6 +2089,12 @@
     },
     "햇빛 배터리와 오늘의 햇빛을 한눈에" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطارية الشمس وشمس اليوم في لمحة"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2088,6 +2244,12 @@
     "햇빛 트래킹 중" : {
       "comment" : "widgetLiveActivity.swift:126",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ تتبّع الشمس"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",

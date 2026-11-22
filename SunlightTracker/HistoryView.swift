@@ -69,9 +69,9 @@ struct HistoryView: View {
     // MARK: - Summary
     private var summarySection: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-            SummaryCard2(title: String(localized: "총 일조량"), value: String(localized: "\(totalMinutes)분"), icon: "leaf.fill", color: Color(red: 0.3, green: 0.7, blue: 0.2))
-            SummaryCard2(title: String(localized: "일평균"), value: String(localized: "\(Int(averageMinutes))분"), icon: "chart.bar.fill", color: .blue)
-            SummaryCard2(title: String(localized: "목표 달성"), value: String(localized: "\(goalDays)일"), icon: "checkmark.seal.fill", color: .green)
+            SummaryCard2(title: String(localized: "총 일조량"), value: String(localized: "\(totalMinutes)분", locale: AppLocale.locale), icon: "leaf.fill", color: Color(red: 0.3, green: 0.7, blue: 0.2))
+            SummaryCard2(title: String(localized: "일평균"), value: String(localized: "\(Int(averageMinutes))분", locale: AppLocale.locale), icon: "chart.bar.fill", color: .blue)
+            SummaryCard2(title: String(localized: "목표 달성"), value: String(localized: "\(goalDays)일", locale: AppLocale.locale), icon: "checkmark.seal.fill", color: .green)
             SummaryCard2(title: String(localized: "평균 최고조도"), value: avgPeakLux.luxFormatted + " lx", icon: "light.max", color: Color(red: 1.0, green: 0.85, blue: 0.1))
         }
         .padding(.horizontal, 20)
@@ -91,6 +91,7 @@ struct HistoryView: View {
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, minHeight: 150)
             } else {
+                // 날짜 축: 아랍어에서도 지난날 → 오늘이 왼쪽에서 오른쪽으로 (시간 축은 뒤집지 않는다)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .bottom, spacing: 6) {
                         ForEach(data, id: \.date) { item in
@@ -126,7 +127,7 @@ struct HistoryView: View {
                             }
                             // 막대 하나 = "10월 3일, 30분, 목표 달성"
                             .accessibilityElement(children: .ignore)
-                            .accessibilityLabel(Text(item.date.formatted(.dateTime.month().day())))
+                            .accessibilityLabel(Text(item.date.formatted(Date.FormatStyle(locale: AppLocale.locale, calendar: AppLocale.calendar).month().day())))
                             .accessibilityValue(item.minutes >= manager.settings.dailyGoalMinutes
                                 ? Text("\(item.minutes)분") + Text(verbatim: ", ") + Text("목표 달성")
                                 : Text("\(item.minutes)분"))
@@ -135,6 +136,7 @@ struct HistoryView: View {
                     .frame(minHeight: 160)
                     .padding(.horizontal, 4)
                 }
+                .environment(\.layoutDirection, .leftToRight)
             }
         }
         .padding(16)
@@ -175,9 +177,9 @@ struct HistoryView: View {
     }
     
     private func getChartData() -> [ChartItem] {
-        let calendar = Calendar.current
+        let calendar = AppLocale.calendar
         let formatter = DateFormatter()
-        formatter.locale = Locale.current
+        formatter.locale = AppLocale.locale
         formatter.dateFormat = "d"
         
         let days = selectedPeriod == .week ? 7 : 30
@@ -232,10 +234,10 @@ struct DayRecordRow: View {
     var body: some View {
         HStack(spacing: 14) {
             VStack(spacing: 2) {
-                let comps = Calendar.current.dateComponents([.day, .weekday], from: record.date)
+                let comps = AppLocale.calendar.dateComponents([.day, .weekday], from: record.date)
                 Text("\(comps.day ?? 0)")
                     .font(.title3.bold())
-                let weekday = Calendar.current.shortWeekdaySymbols[(comps.weekday ?? 1) - 1]
+                let weekday = AppLocale.calendar.shortWeekdaySymbols[(comps.weekday ?? 1) - 1]
                 Text(weekday).font(.caption2).foregroundColor(.secondary)
             }
             .frame(minWidth: 40)

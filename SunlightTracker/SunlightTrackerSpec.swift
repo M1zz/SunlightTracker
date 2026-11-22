@@ -55,7 +55,7 @@ enum SunlightTipMoments {
     static func reached(goalDays days: Int) -> [LeeoTipMoment] {
         goalDays.filter { days >= $0 }.map { threshold in
             LeeoTipMoment(id: "goalDays.\(threshold)",
-                          message: String(localized: "최근 석 달 동안 햇빛 목표를 \(days)일 채웠어요",
+                          message: String(localized: "최근 석 달 동안 햇빛 목표를 \(days)일 채웠어요", locale: AppLocale.locale,
                                           comment: "Tip ask card: on how many days (within the last 90) the person met their daylight goal"))
         }
     }
