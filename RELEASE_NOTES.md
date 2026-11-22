@@ -3,6 +3,158 @@
 App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이다.
 평문만 쓴다. 한 줄에 한 문장, 3~5줄, 한 줄 40자 이내.
 
+## 1.2.1
+
+### 앱스토어 (한국어)
+
+이제 아랍어로도 쓸 수 있어요
+다크 모드 홈 화면에 맞는 아이콘이 생겼어요
+위치 정보를 더 이상 쓰지 않아요
+
+### 앱스토어 (English · en)
+
+Now available in Arabic
+New app icon for Dark Mode
+The app no longer uses your location
+
+### 앱스토어 (English (UK) · en-GB)
+
+Now available in Arabic
+New app icon for Dark Mode
+The app no longer uses your location
+
+### 앱스토어 (简体中文 · zh-Hans)
+
+现已支持阿拉伯语
+新增适配深色模式的图标
+不再使用你的位置信息
+
+### 앱스토어 (繁體中文 · zh-Hant)
+
+現已支援阿拉伯文
+新增適合深色模式的圖示
+不再使用你的位置資訊
+
+### 앱스토어 (日本語 · ja)
+
+アラビア語に対応しました
+ダークモードに合うアイコンを追加しました
+位置情報を使わなくなりました
+
+### 앱스토어 (Русский · ru)
+
+Теперь приложение доступно на арабском
+Новая иконка для тёмного режима
+Геопозиция больше не используется
+
+### 앱스토어 (Español · es)
+
+Ya disponible en árabe
+Nuevo icono para el modo oscuro
+La app ya no usa tu ubicación
+
+### 앱스토어 (Deutsch · de)
+
+Jetzt auch auf Arabisch
+Neues App-Symbol für den Dunkelmodus
+Die App nutzt deinen Standort nicht mehr
+
+### 앱스토어 (Français · fr)
+
+Désormais disponible en arabe
+Nouvelle icône pour le mode sombre
+L’app n’utilise plus votre position
+
+### 앱스토어 (Italiano · it)
+
+Ora disponibile anche in arabo
+Nuova icona per la modalità scura
+L’app non usa più la tua posizione
+
+### 앱스토어 (Português (Brasil) · pt-BR)
+
+Agora disponível em árabe
+Novo ícone para o modo escuro
+O app não usa mais sua localização
+
+### 앱스토어 (ไทย · th)
+
+ใช้งานเป็นภาษาอาหรับได้แล้ว
+ไอคอนใหม่สำหรับโหมดมืด
+แอปไม่ใช้ตำแหน่งของคุณอีกต่อไป
+
+### 앱스토어 (Tiếng Việt · vi)
+
+Đã hỗ trợ tiếng Ả Rập
+Biểu tượng mới cho chế độ tối
+Ứng dụng không còn dùng vị trí của bạn
+
+### 앱스토어 (Čeština · cs)
+
+Nově také v arabštině
+Nová ikona pro tmavý režim
+Aplikace už nepoužívá vaši polohu
+
+### 앱스토어 (Dansk · da)
+
+Nu også på arabisk
+Nyt appikon til mørk tilstand
+Appen bruger ikke længere din placering
+
+### 앱스토어 (Ελληνικά · el)
+
+Τώρα και στα αραβικά
+Νέο εικονίδιο για σκοτεινή λειτουργία
+Δεν χρησιμοποιείται πια η τοποθεσία σας
+
+### 앱스토어 (Suomi · fi)
+
+Nyt myös arabiaksi
+Uusi kuvake tummaan tilaan
+Sovellus ei enää käytä sijaintiasi
+
+### 앱스토어 (Bahasa Indonesia · id)
+
+Kini tersedia dalam bahasa Arab
+Ikon baru untuk mode gelap
+Aplikasi tidak lagi memakai lokasimu
+
+### 앱스토어 (Norsk bokmål · nb)
+
+Nå også på arabisk
+Nytt appikon for mørk modus
+Appen bruker ikke lenger posisjonen din
+
+### 앱스토어 (Nederlands · nl)
+
+Nu ook in het Arabisch
+Nieuw appicoon voor donkere modus
+De app gebruikt je locatie niet meer
+
+### 앱스토어 (Polski · pl)
+
+Teraz także po arabsku
+Nowa ikona do trybu ciemnego
+Nie korzystamy już z Twojej lokalizacji
+
+### 앱스토어 (Svenska · sv)
+
+Nu även på arabiska
+Ny appsymbol för mörkt läge
+Appen använder inte längre din plats
+
+### 앱스토어 (Türkçe · tr)
+
+Artık Arapça da kullanılabilir
+Karanlık mod için yeni simge
+Uygulama artık konumunu kullanmıyor
+
+### 앱스토어 (아랍어)
+
+أصبح التطبيق متاحًا بالعربية
+أيقونة جديدة تناسب الوضع الداكن
+لم يعد التطبيق يستخدم موقعك
+
 ## 1.2.0
 
 ### 앱스토어 (한국어)
