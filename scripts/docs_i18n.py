@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""docs/ 의 언어별 페이지(index · privacy · support)에 hreflang 과 언어 전환 링크를 채운다.
+"""docs/ 의 언어별 페이지(privacy · support)에 hreflang 과 언어 전환 링크를 채운다.
+index.html 은 공용 생성기(scripts/build_site.sh)가 만들며 hreflang · 언어 전환도 거기서 채운다.
 
 루트(docs/*.html)는 한국어, docs/<언어>/*.html 은 그 언어. 다시 돌려도 같은 결과가 나온다.
 사용법: python3 scripts/docs_i18n.py
@@ -12,8 +13,8 @@ LANGS = [("ko", "한국어"), ("en", "English"), ("zh-Hans", "简体中文"), ("
          ("ru", "Русский"), ("es", "Español"), ("de", "Deutsch"), ("fr", "Français"), ("it", "Italiano"),
          ("pt-BR", "Português (Brasil)"), ("th", "ไทย"), ("vi", "Tiếng Việt"), ("cs", "Čeština"), ("da", "Dansk"),
          ("el", "Ελληνικά"), ("fi", "Suomi"), ("id", "Bahasa Indonesia"), ("nb", "Norsk bokmål"), ("nl", "Nederlands"),
-         ("pl", "Polski"), ("sv", "Svenska"), ("tr", "Türkçe")]
-PAGES = ["index.html", "privacy.html", "support.html"]
+         ("pl", "Polski"), ("sv", "Svenska"), ("tr", "Türkçe"), ("ar", "العربية")]
+PAGES = ["privacy.html", "support.html"]
 
 
 def url(lang, page):

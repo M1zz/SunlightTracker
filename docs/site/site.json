@@ -1,6 +1,6 @@
 {
   "name": {"ko": "햇빛바라기", "en": "Sunny Sunflower", "ja": "ひなたひまわり", "zh-Hans": "向阳小葵", "zh-Hant": "向陽小葵",
-           "ru": "Подсолнушек", "th": "ทานตะวันชอบแดด", "el": "Ηλιοτρόπιο"},
+           "ru": "Подсолнушек", "th": "ทานตะวันชอบแดด", "el": "Ηλιοτρόπιο", "ar": "دوّار الشمس"},
   "url": "https://m1zz.github.io/SunlightTracker/",
   "appStoreId": "6758931631",
   "email": "leeo@kakao.com",
@@ -32,6 +32,7 @@
     {"code": "nl", "path": "nl/", "name": "Nederlands"},
     {"code": "pl", "path": "pl/", "name": "Polski"},
     {"code": "sv", "path": "sv/", "name": "Svenska"},
-    {"code": "tr", "path": "tr/", "name": "Türkçe"}
+    {"code": "tr", "path": "tr/", "name": "Türkçe"},
+    {"code": "ar", "path": "ar/", "name": "العربية"}
   ]
 }
