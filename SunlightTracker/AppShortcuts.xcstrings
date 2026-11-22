@@ -154,13 +154,9 @@
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
-          "stringSet" : {
+          "stringUnit" : {
             "state" : "translated",
-            "values" : [
-              "كم تعرّضت للشمس اليوم في ${applicationName}",
-              "${applicationName} اليوم",
-              "شمس اليوم في ${applicationName}"
-            ]
+            "value" : "كم تعرّضت للشمس اليوم في ${applicationName}"
           }
         },
         "cs" : {
