@@ -17,7 +17,7 @@ import subprocess, sys, pathlib, time
 # 사용법: python3 scripts/make_marketing_screenshots.py [로케일 ...]   (없으면 전부)
 import tempfile
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from screenshot_copy import MARKETING, font_stack
+from screenshot_copy import MARKETING, font_stack, text_dir
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW = ROOT / "docs" / "screenshots" / "raw"
 MKT = ROOT / "docs" / "screenshots" / "marketing"
@@ -85,7 +85,24 @@ body { background:#131316; }
 BODY_TEXT_FIRST = '<div class="headline">{headline}</div><div class="sub">{sub}</div><div class="wrap"><div class="phone"><img src="{img}"></div></div>'
 BODY_PHONE_FIRST = '<div class="wrap"><div class="phone"><img src="{img}"></div></div><div class="headline">{headline}</div><div class="sub">{sub}</div>'
 
-HTML = """<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><style>
+# 아랍어: 글은 오른쪽 정렬, left-text 는 거울처럼(글 오른쪽 · 기기 왼쪽). 아랍 글자는 자간을 좁히면 붙어 버린다.
+RTL_CSS = """
+.headline, .sub { letter-spacing:0; }
+"""
+RTL_LAYOUT = {
+    "left-text": """
+.headline { text-align:right; margin:300px 110px 0 0; }
+.sub { text-align:right; margin:48px 114px 0 0; }
+.wrap { perspective-origin:70% 30%; left:auto; right:300px; }
+.phone { transform:rotateY(-16deg) rotateX(2deg); }
+""",
+    "flat-rotate": """
+.wrap { left:auto; right:120px; }
+.phone { transform:rotate(6deg); }
+""",
+}
+
+HTML = """<!doctype html><html lang="{lang}" dir="{dir}"><head><meta charset="utf-8"><style>
 {base}{layout}
 </style></head><body>{body}</body></html>"""
 
@@ -97,18 +114,21 @@ def main(lang):
         body = body_tpl.format(headline=headline, sub=sub, img=(RAW / lang / fname).as_uri())
         html_path = WORK / f"sunflower-{lang}-{fname.replace('.png', '.html')}"
         base = BASE_CSS.replace("{FONT}", font_stack(lang))
-        html_path.write_text(HTML.format(lang=lang, base=base, layout=LAYOUTS[layout], body=body), encoding="utf-8")
+        css = LAYOUTS[layout]
+        if text_dir(lang) == "rtl":
+            css += RTL_CSS + RTL_LAYOUT.get(layout, "")
+        html_path.write_text(HTML.format(lang=lang, dir=text_dir(lang), base=base, layout=css, body=body), encoding="utf-8")
         out_png = out / fname
         shoot(html_path, out_png, W, H)
         print(f"rendered {out_png}")
 
-IPAD_HTML = """<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><style>
+IPAD_HTML = """<!doctype html><html lang="{lang}" dir="{dir}"><head><meta charset="utf-8"><style>
 * {{ margin:0; padding:0; box-sizing:border-box; }}
 html,body {{ width:{W}px; height:{H}px; overflow:hidden; }}
 body {{ background:#FFF4D6; font-family:{font}; position:relative; }}
 .glow {{ position:absolute; left:300px; top:1300px; width:1500px; height:1500px; border-radius:50%; filter:blur(170px); background:rgba(255,190,40,.28); }}
 .text {{ position:absolute; left:140px; right:140px; top:200px; text-align:center; }}
-.headline {{ font-size:150px; font-weight:800; color:#3A2A10; letter-spacing:-0.03em; line-height:1.16; word-break:keep-all; }}
+.headline {{ font-size:150px; font-weight:800; color:#3A2A10; letter-spacing:{tracking}; line-height:1.16; word-break:keep-all; }}
 .sub {{ font-size:66px; font-weight:500; color:#8A7556; margin-top:44px; word-break:keep-all; text-wrap:balance; }}
 .ipad {{ position:absolute; left:232px; top:1000px; width:1600px; background:#202226; border:5px solid #d8d4cc; padding:40px; border-radius:100px;
   box-shadow: 0 60px 160px rgba(120,80,20,.22); }}
@@ -137,7 +157,7 @@ def shoot(html_path, out_png, w, h):
 def main_ipad(lang):
     for fname, (headline, sub) in zip(IPAD_FILES, MARKETING[lang]):
         html_path = WORK / f"sunflower-ipad-{lang}-{fname.replace('.png', '.html')}"
-        html_path.write_text(IPAD_HTML.format(W=IW, H=IH, lang=lang, font=font_stack(lang), headline=headline, sub=sub,
+        html_path.write_text(IPAD_HTML.format(W=IW, H=IH, lang=lang, dir=text_dir(lang), tracking="0" if text_dir(lang) == "rtl" else "-0.03em", font=font_stack(lang), headline=headline, sub=sub,
                                               img=(RAW / f"{lang}-ipad" / fname).as_uri()), encoding="utf-8")
         out_png = MKT / lang / f"ipad-{fname}"
         shoot(html_path, out_png, IW, IH)

@@ -20,7 +20,7 @@
 """
 import subprocess, sys, pathlib, tempfile, time
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from screenshot_copy import HEADER, SEARCH, font_stack
+from screenshot_copy import HEADER, SEARCH, font_stack, text_dir
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW = ROOT / "docs" / "screenshots" / "raw" / "creative"
@@ -115,13 +115,17 @@ def search_html(lang):
     # 기기는 안전 영역 오른쪽 몫에 서서, 위아래로 넘쳐 화면 밖까지 이어진다(기기 그림은 잘려도 된다).
     ph_w = 1040
     ph_left = l + col + int(sw * 0.04)
+    text_left = l
+    if text_dir(lang) == "rtl":   # 거울처럼: 글은 안전 영역 오른쪽, 기기는 왼쪽
+        ph_left = W - ph_left - ph_w
+        text_left = r - col
     img = raw(lang, "01-today.png")
     return f"""
 <div class="sun" style="left:2700px;top:-900px;width:2000px;height:2000px"></div>
 <div class="glow" style="left:{l - 700}px;top:{t - 300}px;width:1600px;height:1200px;background:rgba(255,255,255,.45)"></div>
 {sparks([(300, 420, 1.4), (620, 2050, 1.0), (2380, 2250, 1.2), (3600, 1500, 1.6), (180, 1500, 0.9)])}
 {phone(img, ph_left, t - 360, ph_w, 0)}
-<div class="text" style="left:{l}px;top:{t}px;width:{col}px;height:{sh}px">
+<div class="text" style="left:{text_left}px;top:{t}px;width:{col}px;height:{sh}px">
   <div class="eyebrow" style="font-size:96px">{eyebrow}</div>
   <div class="headline" data-max="250" data-min="140" style="margin-top:36px">{headline}</div>
   <div class="sub" style="font-size:84px;margin-top:52px">{sub}</div>
@@ -149,8 +153,10 @@ def header_html(lang):
 def render(lang, kind):
     W, H, _ = SPEC[kind]
     body = search_html(lang) if kind == "search" else header_html(lang)
-    page = (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><style>'
-            f'{BASE_CSS % {"W": W, "H": H, "FONT": font_stack(lang)}}</style></head><body>{body}{FIT_JS}</body></html>')
+    # 아랍 글자는 자간을 좁히면 붙어 버린다
+    rtl_css = ".headline, .sub, .eyebrow { letter-spacing:0; }" if text_dir(lang) == "rtl" else ""
+    page = (f'<!doctype html><html lang="{lang}" dir="{text_dir(lang)}"><head><meta charset="utf-8"><style>'
+            f'{BASE_CSS % {"W": W, "H": H, "FONT": font_stack(lang)}}{rtl_css}</style></head><body>{body}{FIT_JS}</body></html>')
     html_path = pathlib.Path(tempfile.gettempdir()) / f"sunflower-creative-{lang}-{kind}.html"
     html_path.write_text(page, encoding="utf-8")
     # 글이 끝까지 안 맞으면 그림을 만들지 않는다(잘린 글이 스토어에 올라가는 것보다 낫다).

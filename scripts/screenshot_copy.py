@@ -150,6 +150,12 @@ MARKETING = {
         ("Bu hafta ne kadar<br>güneş aldın?", "Güneş süresi ve hedefler grafikte"),
         ("Sana uygun<br>günlük hedef", "10 ile 120 dakika arası, hatırlatma istediğin saatte"),
     ],
+    "ar": [
+        ("وقتك في الخارج<br>يشحن بطاريتك", "اخرج إلى الشمس ويُحسب وقتك تلقائيًا"),
+        ("شمس يومك ومزاجك<br>في مكان واحد", "لكل يوم وقته تحت الشمس ومزاجه وملاحظة قصيرة"),
+        ("كم أخذت من الشمس<br>هذا الأسبوع؟", "وقتك اليومي تحت الشمس وأهدافك في رسم واحد"),
+        ("هدف يومي<br>يناسبك", "من 10 إلى 120 دقيقة، والتذكير في الوقت الذي تختاره"),
+    ],
 }
 
 HEADER = {
@@ -177,6 +183,7 @@ HEADER = {
     "pl": ("Trochę słońca każdego dnia", "Zbieraj słońce,<br>hoduj słonecznik"),
     "sv": ("Lite sol varje dag", "Samla sol,<br>låt din solros växa"),
     "tr": ("Her gün biraz güneş", "Güneşi topla,<br>ayçiçeğini büyüt"),
+    "ar": ("قليل من الشمس كل يوم", "اخرج إلى الشمس<br>واملأ بطاريتك"),
 }
 
 SEARCH = {
@@ -204,6 +211,7 @@ SEARCH = {
     "pl": ("Licznik słońca", "Dzisiejsze słońce<br>zapisane samo", "Wyjdź na słońce i wypełnij swój dzienny cel"),
     "sv": ("Solljus tracker", "Dagens sol<br>loggas av sig själv", "Gå ut i solen och fyll ditt dagsmål"),
     "tr": ("Güneş takibi", "Bugünün güneşi<br>otomatik kayıtta", "Dışarı çık, güneşlen ve günlük hedefini doldur"),
+    "ar": ("التعرض للشمس", "شمس يومك<br>تُسجَّل تلقائيًا", "اخرج وتشمّس لتبلغ هدفك اليومي"),
 }
 
 # 글꼴: 같은 한자라도 언어마다 글리프가 다르다. html lang 과 함께 쓴다.
@@ -213,7 +221,16 @@ FONTS = {
     "zh-Hant": '"PingFang TC"',
     "th": '"Sukhumvit Set", "Thonburi"',
     "ko": '"Apple SD Gothic Neo"',
+    "ar": '"SF Arabic", "Geeza Pro"',
 }
+
+# 오른쪽에서 왼쪽으로 쓰는 언어. 그림도 거울처럼 놓는다(글은 오른쪽, 기기는 왼쪽).
+RTL = {"ar"}
+
+
+def text_dir(lang):
+    return "rtl" if lang in RTL else "ltr"
+
 
 
 def font_stack(lang):
