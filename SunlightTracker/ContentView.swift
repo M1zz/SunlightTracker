@@ -70,6 +70,8 @@ struct ContentView: View {
         .onOpenURL { url in
             if LeeoPaywallLink.opensPaywall(url), !pro.isOpen { pro.present(.settings) }
         }
+        // 할인 기간이면 앱을 연 뒤 한 번 할인 배너를 띄운다. 단추는 같은 요금제를 연다 (LeeoKit).
+        .leeoSaleBanner { if !pro.isOpen { pro.present(.settings) } }
         // 잠긴 위젯을 누르면 sunflower://pro 로 온다.
         .onOpenURL { url in
             if url.scheme == "sunflower", url.host == "pro", !pro.isOpen { pro.present(.widget) }
