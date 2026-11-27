@@ -3,6 +3,7 @@ import SwiftUI
 import Combine
 import ActivityKit
 import WidgetKit
+import LeeoKit
 
 @MainActor
 class SunlightManager: NSObject, ObservableObject {
@@ -423,6 +424,7 @@ class SunlightManager: NSObject, ObservableObject {
             saveRecords()
             saveStatus()
             calculateStreak()
+            LeeoAnalyticsCenter.track(.custom(name: "sunlight_logged", parameters: [:]))
             // 무료로 쓰는 사람에게 첫 세션이 끝났을 때 한 번, 잠금화면에 흐르는 현황을 미리 보인다.
             SunflowerPro.shared.offerOnce(.liveActivity)
         }
